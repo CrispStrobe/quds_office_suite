@@ -2,6 +2,12 @@
 
 All notable changes to `quds_office_editor` are documented here.
 
+## Unreleased
+
+- Selection highlighting is visible on white pages.
+- Header and footer edits force a full relayout so typed text lands in the
+  correct band.
+
 ## 1.6.0
 
 Built on `quds_office_engine` 1.5.0 and `quds_reports` 1.5.0.

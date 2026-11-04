@@ -854,23 +854,27 @@ class WordEditorController extends OfficeController {
   /// relayout API.
   void relayout({bool localEdit = false}) {
     _syncEmptyParagraphDirection();
-    if (!localEdit) {
+    // Header/footer text is chrome, not section body content. The incremental
+    // layout path reuses page chrome, so edits there would never reach the
+    // header band. Force a full layout while editing a header or footer.
+    final bool incremental = localEdit && !isEditingHeaderFooter;
+    if (!incremental) {
       WordLink.ensureHeadingBookmarks(document);
       WordToc.refreshEmpty(document);
       WordToc.rebindHeadings(document);
     }
     final WordLayoutEngine engine = _engine;
-    final int fromSection = localEdit ? sectionIndexAtCaret : 0;
+    final int fromSection = incremental ? sectionIndexAtCaret : 0;
     documentLaidOut = engine.layout(
       document,
-      updateFields: !localEdit,
+      updateFields: !incremental,
       fromSectionIndex: fromSection,
-      reuse: localEdit ? documentLaidOut : null,
+      reuse: incremental ? documentLaidOut : null,
     );
-    if (!localEdit && WordToc.syncPageNumbers(document, documentLaidOut)) {
+    if (!incremental && WordToc.syncPageNumbers(document, documentLaidOut)) {
       documentLaidOut = engine.layout(document);
     }
-    if (!localEdit || isEditingComment) {
+    if (!incremental || isEditingComment) {
       _layoutComment();
     }
   }

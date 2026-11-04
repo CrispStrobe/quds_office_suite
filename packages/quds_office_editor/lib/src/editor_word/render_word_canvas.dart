@@ -3492,39 +3492,18 @@ class RenderWordCanvas extends RenderBox implements MouseTrackerAnnotation {
       paragraph: line.paragraphIndex,
     )) {
       final Rect box = r.inflate(0.6);
-      final Color fill = _selectionFillFor(line, box);
-      canvas.drawRect(box, Paint()..color = fill);
+      // Selection must be visible regardless of the text colour. The old
+      // code inverted the ink colour, which made black-on-white selections
+      // pure white and therefore invisible.
+      canvas.drawRect(box, Paint()..color = _theme.selectionFill);
       canvas.drawRect(
         box,
         Paint()
-          ..color = fill.withValues(alpha: 1)
+          ..color = _theme.selectionStroke
           ..style = PaintingStyle.stroke
           ..strokeWidth = 0.9,
       );
     }
-  }
-
-  Color _selectionFillFor(LaidOutLine line, Rect box) {
-    var ink = const Color(0xFF222222);
-    if (line.glyphs.isNotEmpty) {
-      for (final LaidOutGlyph glyph in line.glyphs) {
-        if (glyph.x + glyph.advance >= box.left && glyph.x <= box.right) {
-          ink = _colorFromHex(glyph.color);
-          break;
-        }
-      }
-    } else if (line.overlayColor != null && line.overlayColor!.isNotEmpty) {
-      ink = _colorFromHex(line.overlayColor!);
-    }
-    return _invertInk(ink);
-  }
-
-  static Color _invertInk(Color color) {
-    final int argb = color.toARGB32();
-    final int r = 255 - ((argb >> 16) & 0xFF);
-    final int g = 255 - ((argb >> 8) & 0xFF);
-    final int b = 255 - (argb & 0xFF);
-    return Color.fromARGB(230, r, g, b);
   }
 
   bool _paintsLineSelection(LaidOutLine line, LaidOutPage page) {
