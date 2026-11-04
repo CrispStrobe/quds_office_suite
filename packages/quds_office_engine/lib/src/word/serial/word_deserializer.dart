@@ -356,6 +356,11 @@ class WordDeserializer {
         if (run.text.isEmpty) {
           run.text = '$id';
         }
+        // A footnote/endnote mark is superscript by definition. Word stores
+        // this in the FootnoteReference character style, which the importer
+        // does not resolve, so apply it directly or the mark renders as a
+        // normal baseline digit.
+        run.properties.vertAlign = WmlVertAlign.superscript;
         paragraph.properties.noteId = id;
         paragraph.properties.endnoteRef = run.noteRefEndnote;
       } else if (reader.localName == 'instrText') {

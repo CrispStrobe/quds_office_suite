@@ -2171,7 +2171,9 @@ class WordLayoutEngine {
       }
       final WmlParagraph paragraph = paras[line.paragraphIndex];
       final int? id = paragraph.properties.noteId;
-      if (id != null && !paragraph.properties.endnoteRef) {
+      if (id != null &&
+          !paragraph.properties.endnoteRef &&
+          _lineCarriesNoteRef(paragraph, line, id)) {
         ids.add(id);
       }
     }
@@ -2210,6 +2212,29 @@ class WordLayoutEngine {
       );
       y += 14;
     }
+  }
+
+  bool _lineCarriesNoteRef(
+    WmlParagraph paragraph,
+    LaidOutLine line,
+    int noteId,
+  ) {
+    var offset = 0;
+    int? noteOffset;
+    for (final WmlInline inline in paragraph.inlines) {
+      if (inline is WmlRun) {
+        if (inline.noteRefId == noteId) {
+          noteOffset = offset;
+          break;
+        }
+        offset += inline.text.length;
+      }
+    }
+    if (noteOffset == null) return false;
+    for (final LaidOutGlyph glyph in line.glyphs) {
+      if (glyph.glyph.logicalIndex == noteOffset) return true;
+    }
+    return false;
   }
 
   void _attachLineNumbers(LaidOutPage page, WmlSection section) {

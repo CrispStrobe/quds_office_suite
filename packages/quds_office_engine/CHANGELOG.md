@@ -2,6 +2,11 @@
 
 All notable changes to `quds_office_engine` are documented here.
 
+## Unreleased
+
+- Imported DOCX footnote and endnote reference marks render as superscript.
+  Notes attach to the page containing the reference glyph.
+
 ## 1.5.0
 
 - A variable can ask for a value before preview, print, and export
