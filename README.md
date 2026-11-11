@@ -138,6 +138,13 @@ fork by a file-hash manifest). Two consequences drove the work here:
   notes-size parts PowerPoint requires. Pictures and charts are namespaced to
   the slide that owns them, so editing or reordering one slide can no longer
   overwrite another slide's media.
+- **Word style cascade.** Sparse style definitions resolve through document
+  defaults, `basedOn` chains, theme fonts and colours, and character and
+  table-region styles, without freezing the inherited values into direct
+  formatting, so they stay editable and the saved file keeps its styles.
+- **Spreadsheet fidelity.** Source cell style records, pivot tables and live
+  chart formulas are kept on save instead of being regenerated or flattened
+  to values.
 - **Fixes merged back from CrispCloud.** Imported footnote references render
   as superscript, visible Word selection and header/footer relayout, rotated
   PDF watermarks, and report-designer font and template-band fixes.
