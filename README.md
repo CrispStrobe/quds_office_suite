@@ -95,6 +95,63 @@ On the right is the engine's, made in pure Dart.
 
 ---
 
+## About this fork (CrispStrobe)
+
+This is the CrispStrobe fork of
+[MohammedAsaadAsaad/quds_office_suite](https://github.com/MohammedAsaadAsaad/quds_office_suite).
+It exists because [CrispCloud](https://github.com/CrispStrobe/CrispCloud)
+vendors the engine and editor through local path overrides. A fix made only
+here would never reach the app, and a fix made only in the app would never come
+back. The work below keeps the two copies aligned and proves, with evidence
+that does not come from our own serializer, that Office files survive being
+opened, edited and saved.
+
+### What changed, and why
+
+- **Round-trip fidelity (engine and editor).** Footnote/endnote identity,
+  source styles, numbering definitions, table styles and borders, hyperlinks in
+  notes and headers, and explicit direct formatting (black / 11pt / zero
+  spacing / left) are now preserved instead of being regenerated or flattened
+  on save. Why: opening a real Word or LibreOffice file and saving it must not
+  silently change it.
+- **Notes layout.** Mixed and multiple notes per paragraph, multiline note
+  bodies, and notes with styled runs, tables, drawings and links render; the
+  note band is reserved during body layout and long notes continue on extra
+  pages instead of disappearing or overlapping the body.
+- **Lists.** List commands allocate document-local definitions, so they no
+  longer collide with imported list IDs; imported start values and Roman,
+  alphabetic and padded-decimal formats are honored; list commands undo/redo.
+- **Editing and history.** Footnote insertion follows the caret, paragraph
+  splits keep rich runs, and repeated undo/redo no longer mutates history
+  snapshots.
+- **CrispCloud fixes merged in.** Imported footnote references render as
+  superscript, visible Word selection and header/footer relayout, rotated PDF
+  watermarks, and report-designer font and template-band fixes.
+- **Independent verification.** Expected values come from authored XML/JSON,
+  not from blessing our own output. A Python oracle reads exported ZIP/XML
+  directly, and a .NET tool (`tool/office-validation`) validates exported
+  packages with the Open XML SDK. Negative tests confirm the oracles reject
+  damaged files. There are 18 save/reopen exports across DOCX, XLSX and PPTX,
+  plus a reviewed full-page visual golden. The `office-fidelity` CI workflow
+  runs all of it.
+- **Lint clean.** Engine analysis passes with `--fatal-infos` (the last four
+  informational lints were fixed).
+
+The full gap list, feature matrix and coverage inventory are in
+[`docs/office-fidelity-audit.md`](docs/office-fidelity-audit.md) and
+[`docs/office-coverage-gaps.json`](docs/office-coverage-gaps.json). The runnable
+guide is [`packages/quds_office_engine/tool/fidelity/README.md`](packages/quds_office_engine/tool/fidelity/README.md).
+
+### Known limits
+
+- The page golden is reviewed on Linux with Flutter 3.44.0 (what CI uses).
+  On macOS, or another Flutter version, it differs by about 0.6% of pixels
+  from font rasterization. That is not a regression; do not regenerate the
+  golden from a different platform.
+- Engine line coverage is 79.4%, not branch coverage.
+
+---
+
 ## Why this suite
 
 Most Dart “Office” libraries stop at writing a simple DOCX. Quds goes further:
@@ -358,7 +415,9 @@ quds_office_suite/
 │       └── example/            Quds Office Studio (not published)
 ├── apps/
 │   └── quds_report_studio/     standalone report editor (not published)
-├── docs/                       MISSION, STANDARDS (limits), PDF, PUBLISHING
+├── docs/                       MISSION, STANDARDS (limits), PDF, PUBLISHING,
+│                               office-fidelity-audit, coverage gaps
+├── tool/office-validation/     Open XML SDK validator used by CI
 └── LICENSE                     MIT
 ```
 
@@ -384,4 +443,4 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md). Issues and pull requests are welcome.
 
 ## License
 
-[MIT](LICENSE) © Mohammed Asaad Asaad
+[MIT](LICENSE) © Mohammed Asaad Asaad. Fork changes © CrispStrobe, same license.
