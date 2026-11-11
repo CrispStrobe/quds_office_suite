@@ -4,6 +4,22 @@ All notable changes to `quds_office_engine` are documented here.
 
 ## Unreleased
 
+- Add strict DOCX/XLSX/PPTX import, inspect, edit and repeated-save scripts with
+  43 operations, authored semantic expectations and deliberate corruption checks.
+  Explicit script formatting retains false/zero/default values as direct edits.
+
+- Preserve imported list-level overrides and export explicit restart instances
+  while keeping subsequent items attached to the restarted numbering sequence.
+- Import only the first supported markup-compatibility Choice, or its Fallback,
+  throughout Word body, table, header/footer and note stories.
+- Retain imported section metadata, page numbering, grids, borders, custom
+  columns and revision history through unrelated edits and section cloning;
+  merge deliberate page and column edits without discarding other settings.
+- Export referenced built-in styles missing from an imported style catalog,
+  including known parent styles and references from notes and headers.
+- Write line feeds as Word breaks, read run-contained line/page/column breaks,
+  and use the standard extended-comments content type.
+
 - Preserve one worksheet drawing relationship across absolute/relative target
   forms, emit SpreadsheetML chart transforms, and normalize pivot cache links.
 - Keep imported font properties, number formats and borders during cell edits

@@ -19,7 +19,9 @@ import '../model/word_styles.dart';
 import '../model/word_toc.dart';
 import '../properties/wml_properties.dart';
 import 'word_drawing_io.dart';
+import 'word_markup_compatibility.dart';
 import 'word_property_io.dart';
+import 'word_section_io.dart';
 import 'word_serializer.dart';
 
 part 'word_style_cascade.dart';
@@ -54,7 +56,7 @@ class WordDeserializer {
         properties: OfficeDocumentProperties.fromPackage(package),
       );
     }
-    final XmlPullReader reader = XmlPullReader(part.readText());
+    final XmlPullReader reader = WordMarkupCompatibilityReader(part.readText());
     final WmlDocument document = WmlDocument(
       package: package,
       sections: <WmlSection>[],
@@ -208,11 +210,6 @@ class WordDeserializer {
   }
 
   bool _takeDrawing(XmlPullReader reader, OpcPackage package, String docUri) {
-    if (reader.localName == 'Fallback' &&
-        (reader.prefix == 'mc' || reader.namespaceUri == OfficeNamespaces.mc)) {
-      _skipElement(reader);
-      return true;
-    }
     if (reader.localName != 'drawing') {
       return false;
     }
@@ -229,14 +226,6 @@ class WordDeserializer {
       _pendingFrames.add(block);
     }
     return true;
-  }
-
-  void _skipElement(XmlPullReader reader) {
-    if (reader.isEmptyElement) {
-      return;
-    }
-    final int depth = reader.depth;
-    while (reader.next() && reader.depth >= depth) {}
   }
 
   WmlParagraph _readParagraph(
@@ -302,10 +291,6 @@ class WordDeserializer {
         if (type == 'column') {
           paragraph.properties.columnBreakBefore = true;
         }
-      } else if (reader.localName == 'Fallback' &&
-          (reader.prefix == 'mc' ||
-              reader.namespaceUri == OfficeNamespaces.mc)) {
-        _skipElement(reader);
       } else if (reader.localName == 'object' ||
           reader.localName == 'drawing') {
         if (!_takeDrawing(reader, package, docUri)) {
@@ -390,10 +375,28 @@ class WordDeserializer {
         continue;
       } else if (reader.localName == 'tab') {
         run.text += '\t';
-      } else if (reader.localName == 'Fallback' &&
-          (reader.prefix == 'mc' ||
-              reader.namespaceUri == OfficeNamespaces.mc)) {
-        _skipElement(reader);
+      } else if (reader.localName == 'br' || reader.localName == 'cr') {
+        final String? type = reader.getAttribute(
+          'type',
+          namespaceUri: OfficeNamespaces.w,
+        );
+        if (type == 'page' || type == 'column') {
+          if (run.text.isNotEmpty) {
+            inlines.add(
+              WmlRun(
+                text: run.text,
+                properties: run.properties.copy(),
+                commentIds: List<int>.of(_openCommentIds),
+              ),
+            );
+            run.text = '';
+          }
+          inlines.add(
+            WmlBreak(type == 'page' ? WmlBreakType.page : WmlBreakType.column),
+          );
+        } else {
+          run.text += '\n';
+        }
       } else if (reader.localName == 'object' ||
           reader.localName == 'drawing' ||
           reader.localName == 'OLEObject') {
@@ -468,8 +471,9 @@ class WordDeserializer {
     props.sourcePropertiesXml = XmlDocument(
       root: node,
     ).toXmlString(declaration: false);
-    final XmlPullReader source = XmlPullReader(props.sourcePropertiesXml!)
-      ..next();
+    final XmlPullReader source = WordMarkupCompatibilityReader(
+      props.sourcePropertiesXml!,
+    )..next();
     _parsePPr(source, props);
   }
 
@@ -618,18 +622,21 @@ class WordDeserializer {
     section.columnSpace = pending.columnSpace;
     section.columnSep = pending.columnSep;
     section.breakKind = pending.breakKind;
-    if (section.header.isEmpty) {
-      section.header.addAll(pending.header);
-    }
-    if (section.footer.isEmpty) {
-      section.footer.addAll(pending.footer);
-    }
-    if (section.headerVisuals.isEmpty) {
-      section.headerVisuals.addAll(pending.headerVisuals);
-    }
-    if (section.footerVisuals.isEmpty) {
-      section.footerVisuals.addAll(pending.footerVisuals);
-    }
+    section.differentFirstPage = pending.differentFirstPage;
+    section.lineNumbers = pending.lineNumbers;
+    section.sourceProperties = pending.sourceProperties;
+    section.header.addAll(pending.header);
+    section.footer.addAll(pending.footer);
+    section.firstHeader.addAll(pending.firstHeader);
+    section.firstFooter.addAll(pending.firstFooter);
+    section.evenHeader.addAll(pending.evenHeader);
+    section.evenFooter.addAll(pending.evenFooter);
+    section.headerVisuals.addAll(pending.headerVisuals);
+    section.footerVisuals.addAll(pending.footerVisuals);
+    section.firstHeaderVisuals.addAll(pending.firstHeaderVisuals);
+    section.firstFooterVisuals.addAll(pending.firstFooterVisuals);
+    section.evenHeaderVisuals.addAll(pending.evenHeaderVisuals);
+    section.evenFooterVisuals.addAll(pending.evenFooterVisuals);
     document.sections.add(section);
     return WmlSection();
   }
@@ -839,8 +846,9 @@ class WordDeserializer {
     props.sourcePropertiesXml = XmlDocument(
       root: node,
     ).toXmlString(declaration: false);
-    final XmlPullReader source = XmlPullReader(props.sourcePropertiesXml!)
-      ..next();
+    final XmlPullReader source = WordMarkupCompatibilityReader(
+      props.sourcePropertiesXml!,
+    )..next();
     _parseRPr(source, props);
   }
 
@@ -1235,6 +1243,11 @@ class WordDeserializer {
     OpcPackage package,
     String docUri,
   ) {
+    final XmlElement source = XmlDocument.readElement(reader);
+    final String sourceXml = XmlDocument(
+      root: source,
+    ).toXmlString(declaration: false);
+    reader = WordMarkupCompatibilityReader(sourceXml)..next();
     String? headerRid;
     String? footerRid;
     String? firstHeaderRid;
@@ -1244,7 +1257,9 @@ class WordDeserializer {
     if (!reader.isEmptyElement) {
       final int depth = reader.depth;
       while (reader.next() && reader.depth >= depth) {
-        if (reader.eventType != XmlEventType.startElement) {
+        if (reader.eventType != XmlEventType.startElement ||
+            reader.depth != depth + 1 ||
+            reader.namespaceUri != OfficeNamespaces.w) {
           continue;
         }
         if (reader.localName == 'pgSz') {
@@ -1310,12 +1325,18 @@ class WordDeserializer {
             _ => WmlSectionBreakKind.nextPage,
           };
         } else if (reader.localName == 'titlePg') {
-          section.differentFirstPage = true;
+          final String? value = reader.getAttribute('val');
+          section.differentFirstPage =
+              value != '0' && value != 'false' && value != 'off';
         } else if (reader.localName == 'lnNumType') {
           section.lineNumbers = true;
         }
       }
     }
+    section.sourceProperties = WmlSectionSource(
+      xml: sourceXml,
+      values: WordSectionIo.values(section),
+    );
     if (headerRid != null) {
       section.header.addAll(
         _readStoryByRid(
@@ -1435,7 +1456,7 @@ class WordDeserializer {
       return <WmlParagraph>[];
     }
     final List<WmlParagraph> paragraphs = <WmlParagraph>[];
-    final XmlPullReader reader = XmlPullReader(part.readText());
+    final XmlPullReader reader = WordMarkupCompatibilityReader(part.readText());
     while (reader.next()) {
       if (reader.eventType == XmlEventType.startElement &&
           reader.localName == 'p' &&
@@ -1554,120 +1575,84 @@ class WordDeserializer {
   }
 
   Map<int, _NumberingLevel> _indexNumbering(String xml) {
-    final Map<int, int> numToAbstract = <int, int>{};
+    final XmlElement? root = XmlDocument.parse(xml).root;
+    if (root == null) return <int, _NumberingLevel>{};
     final Map<int, Map<int, _NumberingLevel>> byAbstract =
         <int, Map<int, _NumberingLevel>>{};
-    var abstractId = -1;
-    var ilvl = 0;
-    var fmt = 'bullet';
-    var text = '•';
-    var start = 1;
-    var haveLevel = false;
-    var numId = -1;
-    var leftInd = 0.0;
-    var hangingInd = 0.0;
 
-    void flushLevel() {
-      if (!haveLevel || abstractId < 0) {
-        return;
-      }
-      byAbstract.putIfAbsent(
-        abstractId,
-        () => <int, _NumberingLevel>{},
-      )[ilvl] = _NumberingLevel(
-        fmt: fmt,
-        text: text,
-        start: start,
-        left: leftInd,
-        hanging: hangingInd,
+    _NumberingLevel readLevel(XmlElement node, {_NumberingLevel? base}) {
+      final XmlElement? indent = node.firstChild('pPr')?.firstChild('ind');
+      return _NumberingLevel(
+        fmt:
+            node.firstChild('numFmt')?.getAttribute('val') ??
+            base?.fmt ??
+            'bullet',
+        text:
+            node.firstChild('lvlText')?.getAttribute('val') ??
+            base?.text ??
+            '•',
+        start:
+            int.tryParse(node.firstChild('start')?.getAttribute('val') ?? '') ??
+            base?.start ??
+            1,
+        left: indent?.getAttribute('left') == null
+            ? base?.left ?? 0
+            : twipsToPoints(int.tryParse(indent!.getAttribute('left')!) ?? 0),
+        hanging: indent?.getAttribute('hanging') == null
+            ? base?.hanging ?? 0
+            : twipsToPoints(
+                int.tryParse(indent!.getAttribute('hanging')!) ?? 0,
+              ),
       );
-      haveLevel = false;
     }
 
-    final XmlPullReader reader = XmlPullReader(xml);
-    while (reader.next()) {
-      if (reader.eventType != XmlEventType.startElement) {
-        continue;
-      }
-      switch (reader.localName) {
-        case 'abstractNum':
-          flushLevel();
-          abstractId =
-              int.tryParse(
-                reader.getAttribute(
-                      'abstractNumId',
-                      namespaceUri: OfficeNamespaces.w,
-                    ) ??
-                    '',
-              ) ??
-              -1;
-        case 'lvl':
-          flushLevel();
-          ilvl =
-              int.tryParse(
-                reader.getAttribute('ilvl', namespaceUri: OfficeNamespaces.w) ??
-                    '0',
-              ) ??
-              0;
-          fmt = 'bullet';
-          text = '•';
-          start = 1;
-          leftInd = 0;
-          hangingInd = 0;
-          haveLevel = true;
-        case 'start':
-          start =
-              int.tryParse(
-                reader.getAttribute('val', namespaceUri: OfficeNamespaces.w) ??
-                    '1',
-              ) ??
-              1;
-        case 'numFmt':
-          fmt =
-              reader.getAttribute('val', namespaceUri: OfficeNamespaces.w) ??
-              fmt;
-        case 'lvlText':
-          text =
-              reader.getAttribute('val', namespaceUri: OfficeNamespaces.w) ??
-              text;
-        case 'ind':
-          leftInd = _twipAttr(reader, 'left');
-          hangingInd = _twipAttr(reader, 'hanging');
-        case 'num':
-          flushLevel();
-          numId =
-              int.tryParse(
-                reader.getAttribute(
-                      'numId',
-                      namespaceUri: OfficeNamespaces.w,
-                    ) ??
-                    '',
-              ) ??
-              -1;
-        case 'abstractNumId':
-          final int abs =
-              int.tryParse(
-                reader.getAttribute('val', namespaceUri: OfficeNamespaces.w) ??
-                    '',
-              ) ??
-              -1;
-          if (numId >= 0 && abs >= 0) {
-            numToAbstract[numId] = abs;
-          }
-      }
+    for (final XmlElement definition in root.childrenNamed('abstractNum')) {
+      final int? id = int.tryParse(
+        definition.getAttribute('abstractNumId') ?? '',
+      );
+      if (id == null) continue;
+      byAbstract[id] = <int, _NumberingLevel>{
+        for (final XmlElement level in definition.childrenNamed('lvl'))
+          if (int.tryParse(level.getAttribute('ilvl') ?? '')
+              case final int ilvl)
+            ilvl: readLevel(level),
+      };
     }
-    flushLevel();
-
     final Map<int, _NumberingLevel> mapped = <int, _NumberingLevel>{};
-    numToAbstract.forEach((int instanceId, int absId) {
-      final Map<int, _NumberingLevel>? levels = byAbstract[absId];
-      if (levels == null) {
-        return;
+    for (final XmlElement instance in root.childrenNamed('num')) {
+      final int? id = int.tryParse(instance.getAttribute('numId') ?? '');
+      final int? abstractId = int.tryParse(
+        instance.firstChild('abstractNumId')?.getAttribute('val') ?? '',
+      );
+      if (id == null || abstractId == null) continue;
+      final Map<int, _NumberingLevel> levels = <int, _NumberingLevel>{
+        ...?byAbstract[abstractId],
+      };
+      for (final XmlElement override in instance.childrenNamed('lvlOverride')) {
+        final int? ilvl = int.tryParse(override.getAttribute('ilvl') ?? '');
+        if (ilvl == null) continue;
+        _NumberingLevel? level = levels[ilvl];
+        if (override.firstChild('lvl') case final XmlElement ownLevel) {
+          level = readLevel(ownLevel, base: level);
+        }
+        if (level == null) continue;
+        final int? start = int.tryParse(
+          override.firstChild('startOverride')?.getAttribute('val') ?? '',
+        );
+        levels[ilvl] = start == null
+            ? level
+            : _NumberingLevel(
+                fmt: level.fmt,
+                text: level.text,
+                start: start,
+                left: level.left,
+                hanging: level.hanging,
+              );
       }
-      levels.forEach((int level, _NumberingLevel def) {
-        mapped[_levelKey(instanceId, level)] = def;
-      });
-    });
+      for (final MapEntry<int, _NumberingLevel> level in levels.entries) {
+        mapped[_levelKey(id, level.key)] = level.value;
+      }
+    }
     return mapped;
   }
 
@@ -1746,7 +1731,7 @@ class WordDeserializer {
     if (part == null) {
       return;
     }
-    final XmlPullReader reader = XmlPullReader(part.readText());
+    final XmlPullReader reader = WordMarkupCompatibilityReader(part.readText());
     String tag = '';
     String author = '';
     String title = '';
@@ -1826,7 +1811,7 @@ class WordDeserializer {
       return;
     }
     bucket.clear();
-    final XmlPullReader reader = XmlPullReader(part.readText());
+    final XmlPullReader reader = WordMarkupCompatibilityReader(part.readText());
     while (reader.next()) {
       if (reader.eventType != XmlEventType.startElement ||
           reader.localName != item) {
@@ -1886,7 +1871,7 @@ class WordDeserializer {
       return;
     }
     document.styles.clear();
-    final XmlPullReader reader = XmlPullReader(part.readText());
+    final XmlPullReader reader = WordMarkupCompatibilityReader(part.readText());
     String? id;
     String name = '';
     String? basedOn;
@@ -2260,7 +2245,7 @@ class WordDeserializer {
     if (part == null) {
       return;
     }
-    final XmlPullReader reader = XmlPullReader(part.readText());
+    final XmlPullReader reader = WordMarkupCompatibilityReader(part.readText());
     while (reader.next()) {
       if (reader.eventType != XmlEventType.startElement ||
           reader.localName != 'comment') {
@@ -2334,7 +2319,7 @@ class WordDeserializer {
     if (part == null) {
       return;
     }
-    final XmlPullReader reader = XmlPullReader(part.readText());
+    final XmlPullReader reader = WordMarkupCompatibilityReader(part.readText());
     while (reader.next()) {
       if (reader.eventType != XmlEventType.startElement ||
           reader.localName != 'commentEx') {
@@ -2445,7 +2430,7 @@ class _TableStyle {
 
   static Map<String, _TableStyle> readAll(String xml) {
     final Map<String, _TableStyle> out = <String, _TableStyle>{};
-    final XmlPullReader reader = XmlPullReader(xml);
+    final XmlPullReader reader = WordMarkupCompatibilityReader(xml);
     String? id;
     String? basedOn;
     var isTable = false;

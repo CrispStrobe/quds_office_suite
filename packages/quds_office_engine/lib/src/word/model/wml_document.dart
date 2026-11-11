@@ -574,6 +574,18 @@ class WmlIndexMark {
 /// How the next section starts.
 enum WmlSectionBreakKind { nextPage, continuous, oddPage, evenPage }
 
+/// Imported section XML and the modeled values that were read from it.
+///
+/// The immutable snapshot lets unrelated edits keep section settings that the
+/// layout model does not expose, such as page numbering and document grids.
+final class WmlSectionSource {
+  WmlSectionSource({required this.xml, required Map<String, String> values})
+    : values = Map<String, String>.unmodifiable(values);
+
+  final String xml;
+  final Map<String, String> values;
+}
+
 /// Class WmlSection.
 class WmlSection {
   /// WmlSection API.
@@ -589,6 +601,7 @@ class WmlSection {
     this.differentOddEven = false,
     this.linkToPrevious = true,
     this.lineNumbers = false,
+    this.sourceProperties,
     List<WmlParagraph>? header,
     List<WmlParagraph>? footer,
     List<WmlParagraph>? firstHeader,
@@ -647,6 +660,9 @@ class WmlSection {
 
   /// lineNumbers API.
   bool lineNumbers;
+
+  /// Unmodeled imported section settings, shared safely by section clones.
+  WmlSectionSource? sourceProperties;
 
   /// header API.
   List<WmlParagraph> header;

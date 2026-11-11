@@ -1,18 +1,22 @@
 name: Office fidelity oracles
 on:
   push:
-    branches: [crispcloud, feature/office-fidelity-oracles]
+    branches: [crispcloud, 'feature/office-fidelity-*']
     paths:
       - 'packages/quds_office_engine/**'
       - 'packages/quds_office_editor/**'
       - '.github/workflows/office-fidelity.yml'
       - 'tool/office-validation/**'
+      - 'docs/office-fidelity*'
+      - 'pubspec.yaml'
   pull_request:
     paths:
       - 'packages/quds_office_engine/**'
       - 'packages/quds_office_editor/**'
       - '.github/workflows/office-fidelity.yml'
       - 'tool/office-validation/**'
+      - 'docs/office-fidelity*'
+      - 'pubspec.yaml'
   workflow_dispatch:
 permissions:
   contents: read
@@ -32,6 +36,7 @@ jobs:
         working-directory: packages/quds_office_engine
         run: |
           dart analyze
+          rm -rf coverage/vm
           dart test --coverage=coverage/vm
           bash tool/fidelity/check.sh
           python3 tool/fidelity/coverage_report.py
@@ -47,7 +52,7 @@ jobs:
           path: |
             packages/quds_office_engine/build/fidelity*
             packages/quds_office_engine/coverage/
-            packages/quds_office_editor/build/fidelity/
+            packages/quds_office_editor/build/fidelity*/
             packages/quds_office_editor/test/failures/
   external-schema:
     needs: office-fidelity
@@ -84,7 +89,9 @@ jobs:
       - name: Install independent Office renderer
         run: sudo apt-get update && sudo apt-get install -y libreoffice-writer libreoffice-calc libreoffice-impress poppler-utils fonts-liberation fonts-dejavu
       - name: Render exports and compare repeated save cycles
-        run: python3 tool/office-validation/render.py evidence build/external-render
+        run: |
+          python3 -m unittest discover -s tool/office-validation -p 'test_*.py'
+          python3 tool/office-validation/render.py evidence build/external-render
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -92,3 +99,4 @@ jobs:
           path: |
             build/external-render/render-report.json
             build/external-render/**/*.pdf
+            build/external-render/**/*.png

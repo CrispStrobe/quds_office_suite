@@ -18,7 +18,9 @@ import '../model/word_toc.dart';
 import '../properties/wml_properties.dart';
 import 'word_drawing_io.dart';
 import 'word_frame_io.dart';
+import 'word_numbering_io.dart';
 import 'word_property_io.dart';
+import 'word_section_io.dart';
 
 /// Writes a [WmlDocument] back to a `.docx` OPC package.
 class WordSerializer {
@@ -45,6 +47,8 @@ class WordSerializer {
   Map<WmlSection, _HeaderFooterIds> _headerFooterIds =
       <WmlSection, _HeaderFooterIds>{};
   WmlDocument? _document;
+  final Map<WmlParagraph, int> _restartNumberingIds =
+      Map<WmlParagraph, int>.identity();
 
   /// writeBytes API.
   Uint8List writeBytes(WmlDocument document, {String? password}) {
@@ -83,13 +87,27 @@ class WordSerializer {
     _docPrId = 1;
     _openComments.clear();
     _document = document;
+    _syncNumbering(package);
+    _restartNumberingIds
+      ..clear()
+      ..addAll(
+        WordNumberingIo.prepareRestarts(
+          document,
+          package.getPart(
+            _relatedPartUri(
+              package,
+              RelationshipTypes.numbering,
+              'numbering.xml',
+            ),
+          )!,
+        ),
+      );
     _headerFooterIds = _syncHeadersFooters(document, package);
     _syncEmbeddings(document, package);
     final Map<OfficeVisual, String> imageIds = _syncImages(document, package);
     package.getPart(_mainPartUri)!.writeText(_documentXml(document, imageIds));
     _syncComments(document, package);
     _syncWatermark(document, package);
-    _syncNumbering(package);
     _syncStyles(document, package);
     _syncNotes(document, package);
     _syncCitations(document, package);
@@ -476,6 +494,11 @@ class WordSerializer {
         utf8.encode(w.toXml()),
       );
     } else {
+      existing.contentType = OfficeContentTypes.wordCommentsExtended;
+      package.contentTypes.setOverride(
+        uri,
+        OfficeContentTypes.wordCommentsExtended,
+      );
       existing.writeText(w.toXml());
     }
     if (rels.firstByType(RelationshipTypes.commentsExtended) == null) {
@@ -516,7 +539,11 @@ class WordSerializer {
     bool endnote = false,
   }) {
     w.writeStartElement('p', prefix: 'w');
-    _writePPr(w, paragraph.properties, sectionBreak: sectionBreak);
+    final int? numberedInstance = _restartNumberingIds[paragraph];
+    final WmlParagraphProps properties = numberedInstance == null
+        ? paragraph.properties
+        : (paragraph.properties.copy()..numId = numberedInstance);
+    _writePPr(w, properties, sectionBreak: sectionBreak);
     if (noteReference) {
       // Word displays the automatic note number from this marker in the note
       // body. Without it, Word shows the note text but no number.
@@ -756,19 +783,25 @@ class WordSerializer {
   }
 
   void _writeRunContent(XmlWriter w, String text, {required bool deleted}) {
-    if (!text.contains('\t')) {
+    if (!text.contains(RegExp(r'[\t\r\n]'))) {
       _writeTextNode(w, text, deleted: deleted);
       return;
     }
     var start = 0;
     for (int i = 0; i < text.length; i++) {
-      if (text.codeUnitAt(i) != 0x09) {
+      final int code = text.codeUnitAt(i);
+      if (code != 0x09 && code != 0x0a && code != 0x0d) {
         continue;
       }
       if (i > start) {
         _writeTextNode(w, text.substring(start, i), deleted: deleted);
       }
-      w.writeEmptyElement('tab', prefix: 'w');
+      w.writeEmptyElement(code == 0x09 ? 'tab' : 'br', prefix: 'w');
+      if (code == 0x0d &&
+          i + 1 < text.length &&
+          text.codeUnitAt(i + 1) == 0x0a) {
+        i++;
+      }
       start = i + 1;
     }
     if (start < text.length) {
@@ -1202,8 +1235,17 @@ class WordSerializer {
     );
   }
 
-  void _writeSectPr(XmlWriter w, WmlSection section) {
+  void _writeSectPr(XmlWriter writer, WmlSection section) {
+    final XmlWriter generated = XmlWriter();
+    _writeGeneratedSectPr(generated, section);
+    final XmlElement element = XmlDocument.parse(generated.toXml()).root!;
+    WordSectionIo.preserve(element, section).writeTo(writer);
+  }
+
+  void _writeGeneratedSectPr(XmlWriter w, WmlSection section) {
     w.writeStartElement('sectPr', prefix: 'w');
+    w.writeNamespace('w', OfficeNamespaces.w);
+    w.writeNamespace('r', OfficeNamespaces.r);
     final _HeaderFooterIds? ids = _headerFooterIds[section];
     if (ids != null) {
       void ref(String? rid, String kind, String type) {
@@ -1677,10 +1719,12 @@ class WordSerializer {
           final int firstNum = root.children.indexWhere(
             (XmlNode n) => n is XmlElement && n.localName == 'num',
           );
+          final XmlElement copy = node.copy()
+            ..setAttribute('w', OfficeNamespaces.w, prefix: 'xmlns');
           if (node.localName == 'abstractNum' && firstNum >= 0) {
-            root.children.insert(firstNum, node.copy()..parent = root);
+            root.children.insert(firstNum, copy..parent = root);
           } else {
-            root.addChild(node.copy());
+            root.addChild(copy);
           }
         }
         xml = preserved.toXmlString();
@@ -1693,6 +1737,50 @@ class WordSerializer {
       xml,
       RelationshipTypes.numbering,
     );
+  }
+
+  Map<String, WmlStyle> _stylesForExport(WmlDocument document) {
+    final Map<String, WmlStyle> styles = <String, WmlStyle>{
+      for (final WmlStyle style
+          in document.styles.isEmpty ? WordStyles.all : document.styles)
+        style.id: style,
+    };
+    final Map<String, WmlStyle> builtIns = <String, WmlStyle>{
+      for (final WmlStyle style in WordStyles.catalog) style.id: style,
+    };
+    final Set<String> visited = <String>{};
+    void include(String? id) {
+      if (id == null || !visited.add(id)) return;
+      final WmlStyle? style = styles[id] ?? builtIns[id];
+      if (style == null) return;
+      styles[id] = style;
+      include(style.basedOn);
+    }
+
+    for (final WmlStyle style in List<WmlStyle>.of(styles.values)) {
+      include(style.id);
+    }
+    final Iterable<WmlParagraph> paragraphs = <WmlParagraph>[
+      ...document.paragraphs,
+      for (final WmlSection section in document.sections) ...<WmlParagraph>[
+        ...section.header,
+        ...section.footer,
+        ...section.firstHeader,
+        ...section.firstFooter,
+        ...section.evenHeader,
+        ...section.evenFooter,
+      ],
+      for (final WmlNote note in <WmlNote>[
+        ...document.footnotes,
+        ...document.endnotes,
+      ])
+        ...note.allParagraphs,
+      for (final WmlComment comment in document.comments) ...comment.paragraphs,
+    ];
+    for (final WmlParagraph paragraph in paragraphs) {
+      include(paragraph.properties.styleId);
+    }
+    return styles;
   }
 
   void _syncStyles(WmlDocument document, OpcPackage package) {
@@ -1725,10 +1813,8 @@ class WordSerializer {
     w.writeEndElement();
     w.writeEndElement();
     w.writeEndElement();
-    final Iterable<WmlStyle> styles = document.styles.isEmpty
-        ? WordStyles.all
-        : document.styles;
-    for (final WmlStyle style in styles) {
+    final Map<String, WmlStyle> current = _stylesForExport(document);
+    for (final WmlStyle style in current.values) {
       w.writeStartElement('style', prefix: 'w');
       w.writeAttribute('w:type', 'paragraph');
       w.writeAttribute('w:styleId', style.id);
@@ -1841,9 +1927,6 @@ class WordSerializer {
       final XmlDocument preserved = XmlDocument.parse(original.readText());
       final XmlElement? root = preserved.root;
       if (root != null) {
-        final Map<String, WmlStyle> current = <String, WmlStyle>{
-          for (final WmlStyle style in document.styles) style.id: style,
-        };
         root.children.removeWhere(
           (XmlNode node) =>
               node is XmlElement &&
@@ -1865,10 +1948,12 @@ class WordSerializer {
                 old.localName == 'style' &&
                 old.getAttribute('styleId') == id,
           );
+          final XmlElement copy = node.copy()
+            ..setAttribute('w', OfficeNamespaces.w, prefix: 'xmlns');
           if (at < 0) {
-            root.addChild(node.copy());
+            root.addChild(copy);
           } else {
-            root.children[at] = node.copy()..parent = root;
+            root.children[at] = copy..parent = root;
           }
         }
         xml = preserved.toXmlString();

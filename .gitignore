@@ -47,3 +47,7 @@ Thumbs.db
 # Oracle/interpreter and visual-test intermediates
 **/__pycache__/
 **/test/failures/
+
+# External OOXML schema validator build output
+tool/office-validation/bin/
+tool/office-validation/obj/
