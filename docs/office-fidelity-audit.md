@@ -32,6 +32,8 @@ the source revision and hashes shared files; unrelated vendor changes remain.
 | Fork changes could silently miss app | Hash guard plus root host integration tests | Vendored manifest and async-save artifact |
 | FID-004: list commands collided with imported IDs 1/2 | Allocate and reuse document-local definitions; changing levels keeps identity; list commands support undo/redo | Collision fixture, three async cycles, host history test |
 | Imported numbering start and Roman/alphabetic formats ignored | Honor zero/non-one starts and Roman, alphabetic and padded decimal labels | Independently authored numbering cases |
+| FID-001: dense pages overlapped footnotes; long notes disappeared | Reserve the note band during body layout, move references when needed and allocate continuation pages | Dense text with 180 unique note tokens; columns, table-cell reference and following-picture overlap assertions |
+| FID-002: notes flattened styled runs, tables, drawings and links | Ordered note blocks round-trip; notes use shaped rich lines and their own media relationships | Rich-note source fixture, three async cycles, glyph/style/link/table/image assertions and reviewed PNG |
 
 ## Corpus and feature matrix
 
@@ -89,8 +91,6 @@ or interoperability certification. Remaining gaps are explicit:
 
 | ID | Gap | Next acceptance check |
 | --- | --- | --- |
-| FID-001 | Footnote placement does not reflow dense body text or continue an oversized footnote | `_attachNotes` runs after body pagination; add dense multi-page fixtures and assert no body/note overlap |
-| FID-002 | Note overlays lack complete rich-run styling, wrapping, drawings and tables | Shape and paginate rich note content; add long/rich-note visual fixtures |
 | FID-003 | Source style preservation is broader than implemented character/table style editing and cascade | Effective-style fixtures for basedOn/theme/character/table combinations |
 | FID-005 | Independent sheet/slide corpus is smaller than DOCX | External fixtures for sheet styles/charts/pivots and slide masters/themes/notes/animations |
 | FID-006 | No external Word/LibreOffice rendering or full XSD validation performed | Open/export corpus in external engines and compare rendered output/schema results |
