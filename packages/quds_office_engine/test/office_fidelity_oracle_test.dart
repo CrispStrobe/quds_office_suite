@@ -8,57 +8,88 @@ WmlDocument openFixture() => WordDeserializer().readBytes(
 );
 
 void main() {
-  test('explicit default formatting overrides a non-default paragraph style', () {
-    final WmlParagraph p = openFixture().paragraphs.elementAt(1);
-    final WmlRun run = p.inlines.whereType<WmlRun>().first;
-    expect(p.properties.spacingBefore, 0);
-    expect(p.properties.spacingAfter, 8);
-    expect(p.properties.justification, WmlJustification.left);
-    expect(run.properties.bold, isFalse);
-    expect(run.properties.italic, isFalse);
-    expect(run.properties.color, '000000');
-    expect(run.properties.fontSizeHalfPoints, 22);
-    expect(run.properties.highlight, 'FFFF00');
-  });
+  test(
+    'explicit default formatting overrides a non-default paragraph style',
+    () {
+      final WmlParagraph p = openFixture().paragraphs.elementAt(1);
+      final WmlRun run = p.inlines.whereType<WmlRun>().first;
+      expect(p.properties.spacingBefore, 0);
+      expect(p.properties.spacingAfter, 8);
+      expect(p.properties.justification, WmlJustification.left);
+      expect(run.properties.bold, isFalse);
+      expect(run.properties.italic, isFalse);
+      expect(run.properties.color, '000000');
+      expect(run.properties.fontSizeHalfPoints, 22);
+      expect(run.properties.highlight, 'FFFF00');
+    },
+  );
 
   test('style defaults apply when direct formatting is absent', () {
     final WmlParagraph p = openFixture().paragraphs.first;
     expect(p.properties.headingLevel, 1);
     expect(p.inlines.whereType<WmlRun>().first.properties.bold, isTrue);
-    expect(p.inlines.whereType<WmlRun>().first.properties.fontSizeHalfPoints, 32);
+    expect(
+      p.inlines.whereType<WmlRun>().first.properties.fontSizeHalfPoints,
+      32,
+    );
   });
 
   test('notes resolve hyperlinks against their own part', () {
     final WmlNote note = openFixture().footnotes.single;
-    expect(note.paragraphs.last.inlines.whereType<WmlRun>().single.hyperlink?.url,
-      'https://example.com/note');
+    expect(
+      note.paragraphs.last.inlines.whereType<WmlRun>().single.hyperlink?.url,
+      'https://example.com/note',
+    );
   });
 
-  test('format/extract/insert preserve multi-digit note reference identity', () {
-    final WmlDocument doc = openFixture();
-    final WmlParagraph p = doc.paragraphs.elementAt(1);
-    final int start = 'Body text'.length;
-    WmlRunEdit.applyRange(p, start, start + 2, (WmlRunProps r) => r.bold = true);
-    expect(p.inlines.whereType<WmlRun>().where((WmlRun r) => r.noteRefId == 12), hasLength(1));
-    final List<WmlRun> copied = WmlRunEdit.extractRuns(p, start, start + 2);
-    final WmlParagraph target = WmlParagraph();
-    WmlRunEdit.insertRuns(target, 0, copied);
-    expect(target.inlines.whereType<WmlRun>().single.noteRefId, 12);
-  });
+  test(
+    'format/extract/insert preserve multi-digit note reference identity',
+    () {
+      final WmlDocument doc = openFixture();
+      final WmlParagraph p = doc.paragraphs.elementAt(1);
+      final int start = 'Body text'.length;
+      WmlRunEdit.applyRange(
+        p,
+        start,
+        start + 2,
+        (WmlRunProps r) => r.bold = true,
+      );
+      expect(
+        p.inlines.whereType<WmlRun>().where((WmlRun r) => r.noteRefId == 12),
+        hasLength(1),
+      );
+      final List<WmlRun> copied = WmlRunEdit.extractRuns(p, start, start + 2);
+      final WmlParagraph target = WmlParagraph();
+      WmlRunEdit.insertRuns(target, 0, copied);
+      expect(target.inlines.whereType<WmlRun>().single.noteRefId, 12);
+    },
+  );
 
   test('adjacent reference marks never coalesce into ordinary text', () {
-    final WmlParagraph p = WmlParagraph(inlines: <WmlInline>[
-      WmlRun(text: '1', noteRefId: 1), WmlRun(text: '2', noteRefId: 2), WmlRun(text: ' text'),
-    ]);
+    final WmlParagraph p = WmlParagraph(
+      inlines: <WmlInline>[
+        WmlRun(text: '1', noteRefId: 1),
+        WmlRun(text: '2', noteRefId: 2),
+        WmlRun(text: ' text'),
+      ],
+    );
     WmlRunEdit.coalesce(p);
     expect(p.inlines, hasLength(3));
   });
 
-  test('formatting part of a multi-digit note does not duplicate its reference', () {
-    final WmlParagraph p = WmlParagraph(inlines: <WmlInline>[WmlRun(text: '12', noteRefId: 12)]);
-    WmlRunEdit.applyRange(p, 0, 1, (WmlRunProps r) => r.bold = true);
-    expect(p.inlines.whereType<WmlRun>().where((WmlRun r) => r.noteRefId == 12), hasLength(1));
-  });
+  test(
+    'formatting part of a multi-digit note does not duplicate its reference',
+    () {
+      final WmlParagraph p = WmlParagraph(
+        inlines: <WmlInline>[WmlRun(text: '12', noteRefId: 12)],
+      );
+      WmlRunEdit.applyRange(p, 0, 1, (WmlRunProps r) => r.bold = true);
+      expect(
+        p.inlines.whereType<WmlRun>().where((WmlRun r) => r.noteRefId == 12),
+        hasLength(1),
+      );
+    },
+  );
 
   test('deleting a note does not erase unrelated bracketed prose', () {
     final WmlDocument doc = WmlDocument.empty(text: 'Citation [1] must remain');
@@ -72,7 +103,11 @@ void main() {
     final String original = doc.footnotes.single.paragraphs.first.text;
     for (var cycle = 0; cycle < 3; cycle++) {
       doc = WordDeserializer().readBytes(WordSerializer().writeBytes(doc));
-      expect(doc.footnotes.single.paragraphs.first.text, original, reason: 'cycle $cycle');
+      expect(
+        doc.footnotes.single.paragraphs.first.text,
+        original,
+        reason: 'cycle $cycle',
+      );
     }
   });
 
@@ -80,7 +115,9 @@ void main() {
     WmlDocument doc = openFixture();
     for (var cycle = 0; cycle < 3; cycle++) {
       doc = WordDeserializer().readBytes(WordSerializer().writeBytes(doc));
-      final WmlStyle style = doc.styles.singleWhere((WmlStyle s) => s.id == 'ListCustom');
+      final WmlStyle style = doc.styles.singleWhere(
+        (WmlStyle s) => s.id == 'ListCustom',
+      );
       expect(style.numId, 5);
       expect(style.indent?.left, 36);
       expect(style.indent?.hanging, 18);

@@ -7,7 +7,9 @@ import 'package:quds_office_engine/quds_office_engine.dart';
 Future<void> main(List<String> args) async {
   final Directory out = Directory(args.isEmpty ? 'build/fidelity' : args.single)
     ..createSync(recursive: true);
-  final Uint8List input = File('test/fixtures/fidelity/word.docx').readAsBytesSync();
+  final Uint8List input = File(
+    'test/fixtures/fidelity/word.docx',
+  ).readAsBytesSync();
   final WordSerializer writer = WordSerializer();
   WmlDocument doc = WordDeserializer().readBytes(input);
   for (var cycle = 1; cycle <= 3; cycle++) {
@@ -17,7 +19,12 @@ Future<void> main(List<String> args) async {
   }
   doc = WordDeserializer().readBytes(input);
   final List<WmlParagraph> paragraphs = doc.paragraphs.toList();
-  WmlRunEdit.replaceRange(paragraphs[0], 0, paragraphs[0].text.length, 'Revised heading');
+  WmlRunEdit.replaceRange(
+    paragraphs[0],
+    0,
+    paragraphs[0].text.length,
+    'Revised heading',
+  );
   WmlRunEdit.replaceRange(paragraphs[1], 0, 'Body text'.length, 'Edited body');
   final WmlParagraph note = doc.footnotes.single.paragraphs.first;
   WmlRunEdit.replaceRange(note, 0, note.text.length, ' Edited footnote');
