@@ -195,4 +195,55 @@ void main() {
       doc = WordDeserializer().readBytes(bytes);
     }
   });
+  test(
+    'custom style part location stays authoritative after style edits',
+    () async {
+      final package = styleFixture();
+      final original = package.getPart('/word/styles.xml')!;
+      package.createPart(
+        '/word/resources/custom-styles.xml',
+        original.contentType,
+        original.readBytes(),
+      );
+      package.deletePart('/word/styles.xml');
+      final rels = package.relationshipsFor('/word/document.xml');
+      final rel = rels.firstByType(RelationshipTypes.styles)!;
+      rels.removeById(rel.id);
+      rels.add(
+        id: rel.id,
+        type: rel.type,
+        target: 'resources/custom-styles.xml',
+      );
+      var doc = WordDeserializer().read(package);
+      cli.applyStep(doc, {
+        'op': 'styleDefinition',
+        'style': 'Accent',
+        'type': 'character',
+        'rPr': {
+          'color': {'val': '123456'},
+        },
+      });
+      for (int cycle = 0; cycle < 3; cycle++) {
+        doc = WordDeserializer().readBytes(await OfficeIsolateSave.word(doc));
+        expect(doc.package!.getPart('/word/styles.xml'), isNull);
+        expect(
+          doc.paragraphs
+              .elementAt(1)
+              .inlines
+              .whereType<WmlRun>()
+              .first
+              .properties
+              .color,
+          '123456',
+        );
+        expect(
+          doc.package!
+              .relationshipsFor('/word/document.xml')
+              .firstByType(RelationshipTypes.styles)!
+              .target,
+          'resources/custom-styles.xml',
+        );
+      }
+    },
+  );
 }

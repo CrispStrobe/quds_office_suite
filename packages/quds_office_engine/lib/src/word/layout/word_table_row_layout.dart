@@ -127,10 +127,12 @@ part of 'word_layout.dart';
         end,
         isNoteContent: false,
       );
-      if (copy.paragraphIndex != null)
+      if (copy.paragraphIndex != null) {
         copy.paragraphIndex = copy.paragraphIndex! + paragraphIndex;
-      if (copy.paragraphEnd != null)
+      }
+      if (copy.paragraphEnd != null) {
         copy.paragraphEnd = copy.paragraphEnd! + paragraphIndex;
+      }
       if (copy.table == rowTable) {
         copy.table = table;
         copy.tableRow = rowIndex;
