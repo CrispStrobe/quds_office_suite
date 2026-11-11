@@ -130,6 +130,12 @@ fork by a file-hash manifest). Two consequences drove the work here:
 - **Lists.** List commands allocate document-local definitions, so they no
   longer collide with imported list IDs; imported start values and Roman,
   alphabetic and padded-decimal formats are honored; list edits undo/redo.
+- **Editable footnotes and endnotes.** The Word notes pane edits each note
+  in place with minimal changes, so untouched runs keep their formatting,
+  links, tables and pictures; typing in a note is one undo step; notes can be
+  added and deleted from the pane (deleting also removes the mark in the body,
+  and undo restores both). Before, editing a note replaced its whole body with
+  unformatted text.
 - **Editing and history.** Footnote insertion follows the caret, paragraph
   splits keep rich runs, and repeated undo/redo no longer mutates history
   snapshots.
