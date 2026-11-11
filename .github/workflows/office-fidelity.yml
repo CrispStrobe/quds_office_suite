@@ -6,11 +6,13 @@ on:
       - 'packages/quds_office_engine/**'
       - 'packages/quds_office_editor/**'
       - '.github/workflows/office-fidelity.yml'
+      - 'tool/office-validation/**'
   pull_request:
     paths:
       - 'packages/quds_office_engine/**'
       - 'packages/quds_office_editor/**'
       - '.github/workflows/office-fidelity.yml'
+      - 'tool/office-validation/**'
   workflow_dispatch:
 permissions:
   contents: read
@@ -47,3 +49,25 @@ jobs:
             packages/quds_office_engine/coverage/
             packages/quds_office_editor/build/fidelity/
             packages/quds_office_editor/test/failures/
+  external-schema:
+    needs: office-fidelity
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - uses: actions/download-artifact@v4
+        with:
+          name: office-fidelity-evidence
+          path: evidence
+      - name: Prove validator detects invalid XML
+        run: dotnet run --project tool/office-validation -- --self-test
+      - name: Validate exported Office packages
+        run: dotnet run --project tool/office-validation -- evidence build/external/schema-report.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: external-office-schema
+          path: build/external/
