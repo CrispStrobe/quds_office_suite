@@ -30,6 +30,7 @@ the source revision and hashes shared files; unrelated vendor changes remain.
 | Multiline note bodies truncated; long endnotes overflowed | Render explicit lines and continue endnotes on additional pages | Layout regression and PNG |
 | PNG captured before image decode and cut off page bottom | Require visible picture pixels and capture notes/footer | Full-page import/reopen golden |
 | Fork changes could silently miss app | Hash guard plus root host integration tests | Vendored manifest and async-save artifact |
+| FID-005: narrow independent spreadsheet/presentation corpus | Committed openpyxl/python-pptx inputs; retain source style records, pivots, templates, owned media and chart formulas | Fifteen native/pivot exports, ZIP/XML/pixel oracle, cell/chart/style/pivot edits, slide notes/transitions/animations and reorder cases |
 | FID-003: missing effective style cascade | Resolve sparse defaults, basedOn chains, theme fonts/colors, character and table-region formatting; keep inherited values editable; script style definitions | Authored combination fixture, direct false/zero cases, cycle protection, three async cycles, six sparse-XML oracles |
 | FID-004: list commands collided with imported IDs 1/2 | Allocate and reuse document-local definitions; changing levels keeps identity; list commands support undo/redo | Collision fixture, three async cycles, host history test |
 | Imported numbering start and Roman/alphabetic formats ignored | Honor zero/non-one starts and Roman, alphabetic and padded decimal labels | Independently authored numbering cases |
@@ -94,7 +95,6 @@ or interoperability certification. Remaining gaps are explicit:
 
 | ID | Gap | Next acceptance check |
 | --- | --- | --- |
-| FID-005 | Independent sheet/slide corpus is smaller than DOCX | External fixtures for sheet styles/charts/pivots and slide masters/themes/notes/animations |
 | FID-006 | No external Word/LibreOffice rendering or full XSD validation performed | Open/export corpus in external engines and compare rendered output/schema results |
 | FID-007 | One visual fixture on one platform/SDK | Expand RTL/Arabic, columns, sections, long documents and page breaks |
 | FID-008 | Untested branches/features beyond this corpus | Use exact coverage inventory; imageReplace, arbitrary unsupported body XML and many PDF/report/formula branches need stronger oracles |
