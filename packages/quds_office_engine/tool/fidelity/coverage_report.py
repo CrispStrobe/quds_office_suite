@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """Merge fresh Dart VM coverage and inventory every uncovered engine line.
 
-The source fingerprint describes exactly the files measured. It does not turn
-executed lines into branch coverage or certify that a line is correct.
+The source fingerprint records the files present when this report is made.
+Always collect into a fresh coverage directory: stale data from a same-length
+source edit cannot be detected from VM hit counts alone. Executed lines do not
+measure branch coverage or certify that a line is correct.
 """
 import argparse
 import hashlib

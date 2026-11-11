@@ -250,22 +250,24 @@
     },
     {
       "id": "FID-024",
-      "status": "open",
+      "status": "in_progress",
       "area": "Structured document tags / content controls",
       "finding": "The modeled import flattens SDT content and loses wrapper metadata such as alias, tag, ID and end-run properties. The independent CLI probe reproduces the loss after an adjacent edit and three save/reopen cycles; full block and inline container editing is unimplemented.",
       "evidence": [
         "packages/quds_office_engine/test/fixtures/fidelity/loss-probes/content-control.xml",
-        "packages/quds_office_engine/tool/fidelity/unsupported_word_audit.py"
+        "packages/quds_office_engine/tool/fidelity/unsupported_word_audit.py",
+        "docs/office-unsupported-word-probes.json"
       ]
     },
     {
       "id": "FID-025",
-      "status": "open",
+      "status": "in_progress",
       "area": "Multiple and cross-paragraph bookmarks",
       "finding": "One paragraph bookmarkName cannot represent multiple independent endpoints or cross-paragraph ranges. The independent CLI probe reproduces expanded, dropped and collapsed bookmark ranges after an adjacent edit and three cycles.",
       "evidence": [
         "packages/quds_office_engine/test/fixtures/fidelity/loss-probes/bookmark-ranges.xml",
-        "packages/quds_office_engine/tool/fidelity/unsupported_word_audit.py"
+        "packages/quds_office_engine/tool/fidelity/unsupported_word_audit.py",
+        "docs/office-unsupported-word-probes.json"
       ]
     },
     {
@@ -333,7 +335,8 @@
         "packages/quds_office_engine/test/xml_whitespace_fidelity_test.dart",
         "packages/quds_office_engine/tool/fidelity/notes_oracle.py",
         "packages/quds_office_engine/tool/fidelity/test_note_spacing_oracle.py"
-      ]
+      ],
+      "limits": "This regression covers conventional leading automatic markers. Arbitrary marker placement or source marker absence is not represented by the current note model."
     },
     {
       "id": "FID-033",
@@ -353,7 +356,8 @@
       "evidence": [
         "packages/quds_office_engine/test/table_border_fidelity_test.dart",
         "packages/quds_office_engine/tool/fidelity/table_borders_oracle.py"
-      ]
+      ],
+      "limits": "Untouched unmodeled per-edge source XML is retained, but the editable model has one border/color/width tuple. A deliberate border edit emits six uniform edges; independent per-edge editing is not implemented."
     },
     {
       "id": "FID-035",
@@ -400,12 +404,23 @@
       "id": "FID-039",
       "status": "closed",
       "area": "Actual host outputs and coverage provenance",
-      "finding": "The host requires exactly fourteen valid captured DOCX outputs, then independently validates them with Open XML SDK. Fresh Office LCOV and engine VM reports identify all unhit instrumented lines, absent files and measured source hashes; malformed and stale inputs are rejected.",
+      "finding": "The host requires exactly fourteen valid captured DOCX outputs, then independently validates them with Open XML SDK. Fresh Office LCOV and engine VM reports list unhit instrumented lines, absent files and current source hashes. Helpers reject malformed records, missing source paths and out-of-range line numbers; clean-directory collection is required because same-length stale input cannot be detected from coverage alone.",
       "evidence": [
         "CrispCloud:tool/office_host_evidence.py",
         "CrispCloud:tool/test_office_host_evidence.py",
         "CrispCloud:tool/office_host_coverage.py",
         "packages/quds_office_engine/tool/fidelity/test_coverage_report.py"
+      ]
+    },
+    {
+      "id": "FID-040",
+      "status": "in_progress",
+      "area": "Imported note marker position and absence",
+      "finding": "The current note model preserves conventional leading marker properties but manufactures one at the first paragraph when imported source markers are absent or later. Typed zero-width source markers are being added to retain exact ordered placement through edits and exports.",
+      "evidence": [
+        "packages/quds_office_engine/lib/src/word/model/word_notes.dart",
+        "packages/quds_office_engine/lib/src/word/serial/word_deserializer.dart",
+        "packages/quds_office_engine/lib/src/word/serial/word_serializer.dart"
       ]
     }
   ]
