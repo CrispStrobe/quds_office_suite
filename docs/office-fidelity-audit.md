@@ -30,6 +30,7 @@ the source revision and hashes shared files; unrelated vendor changes remain.
 | Multiline note bodies truncated; long endnotes overflowed | Render explicit lines and continue endnotes on additional pages | Layout regression and PNG |
 | PNG captured before image decode and cut off page bottom | Require visible picture pixels and capture notes/footer | Full-page import/reopen golden |
 | Fork changes could silently miss app | Hash guard plus root host integration tests | Vendored manifest and async-save artifact |
+| FID-003: missing effective style cascade | Resolve sparse defaults, basedOn chains, theme fonts/colors, character and table-region formatting; keep inherited values editable; script style definitions | Authored combination fixture, direct false/zero cases, cycle protection, three async cycles, six sparse-XML oracles |
 | FID-004: list commands collided with imported IDs 1/2 | Allocate and reuse document-local definitions; changing levels keeps identity; list commands support undo/redo | Collision fixture, three async cycles, host history test |
 | Imported numbering start and Roman/alphabetic formats ignored | Honor zero/non-one starts and Roman, alphabetic and padded decimal labels | Independently authored numbering cases |
 | FID-001: dense pages overlapped footnotes; long notes disappeared | Reserve the note band during body layout, move references when needed and allocate continuation pages | Dense text with 180 unique note tokens; columns, table-cell reference and following-picture overlap assertions |
@@ -93,7 +94,6 @@ or interoperability certification. Remaining gaps are explicit:
 
 | ID | Gap | Next acceptance check |
 | --- | --- | --- |
-| FID-003 | Source style preservation is broader than implemented character/table style editing and cascade | Effective-style fixtures for basedOn/theme/character/table combinations |
 | FID-005 | Independent sheet/slide corpus is smaller than DOCX | External fixtures for sheet styles/charts/pivots and slide masters/themes/notes/animations |
 | FID-006 | No external Word/LibreOffice rendering or full XSD validation performed | Open/export corpus in external engines and compare rendered output/schema results |
 | FID-007 | One visual fixture on one platform/SDK | Expand RTL/Arabic, columns, sections, long documents and page breaks |
