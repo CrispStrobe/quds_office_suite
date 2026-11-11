@@ -2,6 +2,10 @@ name: Office fidelity oracles
 on:
   push:
     branches: [crispcloud, feature/office-fidelity-oracles]
+    paths:
+      - 'packages/quds_office_engine/**'
+      - 'packages/quds_office_editor/**'
+      - '.github/workflows/office-fidelity.yml'
   pull_request:
     paths:
       - 'packages/quds_office_engine/**'
@@ -25,7 +29,7 @@ jobs:
       - name: Engine suite and line coverage
         working-directory: packages/quds_office_engine
         run: |
-          dart analyze --no-fatal-infos
+          dart analyze
           dart test --coverage=coverage/vm
           bash tool/fidelity/check.sh
           python3 tool/fidelity/coverage_report.py
