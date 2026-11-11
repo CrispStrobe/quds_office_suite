@@ -1,0 +1,306 @@
+{
+  "version": 1,
+  "audit_date": "2026-11-11",
+  "repositories": {
+    "engine": "CrispStrobe/quds_office_suite",
+    "host": "CrispStrobe/CrispCloud"
+  },
+  "branch": "feature/office-fidelity-completion-20261111",
+  "scope": "Reproduced and investigated gaps; the source-hashed line inventory is separate. Closed means the cited bounded regression is covered, not exhaustive format support.",
+  "status_definitions": {
+    "closed": "Reproduced gap fixed and protected by named evidence.",
+    "partial": "Named evidence covers a bounded subset; the stated remainder remains open.",
+    "guarded": "Unsupported operation is rejected explicitly before writing output.",
+    "open": "Known unsupported behavior or missing acceptance coverage.",
+    "in_progress": "Active work; not yet represented as a passing fix."
+  },
+  "gaps": [
+    {
+      "id": "FID-001",
+      "status": "closed",
+      "area": "Footnote pagination",
+      "finding": "Dense notes reserve space and continue without overlapping body content.",
+      "evidence": [
+        "packages/quds_office_engine/test/word_footnote_reference_test.dart",
+        "packages/quds_office_editor/test/office_fidelity_golden_test.dart"
+      ]
+    },
+    {
+      "id": "FID-002",
+      "status": "closed",
+      "area": "Rich note stories",
+      "finding": "Notes retain ordered rich paragraphs, tables, owned pictures and hyperlinks.",
+      "evidence": [
+        "packages/quds_office_engine/test/rich_note_test.dart",
+        "packages/quds_office_engine/tool/fidelity/notes_oracle.py"
+      ]
+    },
+    {
+      "id": "FID-003",
+      "status": "closed",
+      "area": "Sparse style cascade",
+      "finding": "Document defaults, basedOn inheritance, character/table styles and explicit defaults are retained.",
+      "evidence": [
+        "packages/quds_office_engine/test/style_cascade_test.dart",
+        "packages/quds_office_engine/tool/fidelity/styles_oracle.py"
+      ]
+    },
+    {
+      "id": "FID-004",
+      "status": "closed",
+      "area": "Numbering collisions and restarts",
+      "finding": "Document-local IDs and level overrides preserve independent list sequences and repeated saves.",
+      "evidence": [
+        "packages/quds_office_engine/test/numbering_collision_test.dart",
+        "packages/quds_office_engine/test/list_restart_fidelity_test.dart",
+        "packages/quds_office_engine/tool/fidelity/lists_oracle.py"
+      ]
+    },
+    {
+      "id": "FID-005",
+      "status": "closed",
+      "area": "Independent spreadsheet and slide corpus",
+      "finding": "Independent openpyxl/python-pptx fixtures exercise styles, charts, pivots, template parts, notes and media ownership.",
+      "evidence": [
+        "packages/quds_office_engine/test/native_spreadsheet_test.dart",
+        "packages/quds_office_engine/test/native_presentation_test.dart",
+        "packages/quds_office_engine/tool/fidelity/native_oracle.py"
+      ]
+    },
+    {
+      "id": "FID-006",
+      "status": "closed",
+      "area": "External validation infrastructure",
+      "finding": "Open XML SDK and LibreOffice/Poppler gates validate schema and repeated-save rendering; they retain reports and actual page PNGs.",
+      "evidence": [
+        "tool/office-validation/Program.cs",
+        "tool/office-validation/render.py",
+        "tool/office-validation/test_render.py",
+        ".github/workflows/office-fidelity.yml"
+      ]
+    },
+    {
+      "id": "FID-007",
+      "status": "partial",
+      "area": "Visual/platform breadth",
+      "finding": "Reviewed four page images cover a rich-note document and first/even/default stories with columns; additional platforms and arbitrary scripts are not goldened.",
+      "evidence": [
+        "packages/quds_office_editor/test/office_fidelity_golden_test.dart",
+        "packages/quds_office_editor/test/office_story_golden_test.dart"
+      ]
+    },
+    {
+      "id": "FID-008",
+      "status": "open",
+      "area": "Execution and branch coverage",
+      "finding": "The source-hashed coverage inventory lists every unhit instrumented line and absent file. Formula/PDF/report branches and many Office combinations remain unproven.",
+      "evidence": [
+        "docs/office-coverage-gaps.json",
+        "packages/quds_office_engine/tool/fidelity/coverage_report.py"
+      ]
+    },
+    {
+      "id": "FID-009",
+      "status": "closed",
+      "area": "Executable import/edit/export scenarios",
+      "finding": "Strict five-command CLI exposes 43 operations; every operation has a committed scenario and combined multi-format outputs have independent semantic goldens.",
+      "evidence": [
+        "packages/quds_office_engine/tool/fidelity/office_steps.dart",
+        "packages/quds_office_engine/test/scripted_workflows_test.dart",
+        "packages/quds_office_engine/tool/fidelity/scripted_oracle.py",
+        "packages/quds_office_engine/tool/fidelity/audit_operations.py"
+      ]
+    },
+    {
+      "id": "FID-010",
+      "status": "closed",
+      "area": "Word story media ownership",
+      "finding": "All six header/footer variants and notes retain owned image data; replacement/reorder does not overwrite shared payloads.",
+      "evidence": [
+        "packages/quds_office_engine/test/story_media_fidelity_test.dart",
+        "packages/quds_office_engine/tool/fidelity/story_media_oracle.py"
+      ]
+    },
+    {
+      "id": "FID-011",
+      "status": "closed",
+      "area": "Relocated Word parts",
+      "finding": "Imports and writes follow main/styles/notes/settings relationships instead of assuming fixed package filenames.",
+      "evidence": [
+        "packages/quds_office_engine/test/word_part_routing_test.dart"
+      ]
+    },
+    {
+      "id": "FID-012",
+      "status": "closed",
+      "area": "Spreadsheet structural schema defects",
+      "finding": "Drawing links, chart transforms, pivot cache attributes and font-property ordering produce schema-valid output.",
+      "evidence": [
+        "packages/quds_office_engine/test/sheet_schema_fidelity_test.dart",
+        "packages/quds_office_engine/test/native_spreadsheet_test.dart"
+      ]
+    },
+    {
+      "id": "FID-013",
+      "status": "closed",
+      "area": "Spreadsheet dimensions and column metadata",
+      "finding": "Pixel-to-column conversion follows the maximum-digit-width formula; untouched source precision and hidden/grouped/widthless column properties survive edits.",
+      "evidence": [
+        "packages/quds_office_engine/test/sheet_schema_fidelity_test.dart"
+      ]
+    },
+    {
+      "id": "FID-014",
+      "status": "closed",
+      "area": "Slide text and schema",
+      "finding": "Rich text, scalar font/color edits, hard breaks, paragraphs, templates, transitions, chart transforms and axis IDs survive import/save.",
+      "evidence": [
+        "packages/quds_office_engine/test/slide_text_fidelity_test.dart"
+      ]
+    },
+    {
+      "id": "FID-015",
+      "status": "closed",
+      "area": "Markup-compatibility branch duplication",
+      "finding": "A supported Choice or Fallback is selected once in all modeled Word stories.",
+      "evidence": [
+        "packages/quds_office_engine/test/word_compatibility_fidelity_test.dart",
+        "packages/quds_office_engine/tool/fidelity/word_compatibility_oracle.py"
+      ]
+    },
+    {
+      "id": "FID-016",
+      "status": "closed",
+      "area": "Section source metadata",
+      "finding": "Page numbering, grids, borders, custom columns, gutter, line-number settings and section history survive unrelated edits and cloning.",
+      "evidence": [
+        "packages/quds_office_engine/test/word_compatibility_fidelity_test.dart",
+        "packages/quds_office_engine/tool/fidelity/word_compatibility_oracle.py"
+      ]
+    },
+    {
+      "id": "FID-017",
+      "status": "closed",
+      "area": "Missing referenced built-in styles",
+      "finding": "Referenced built-ins absent from an imported style catalog are written with their known parent styles.",
+      "evidence": [
+        "packages/quds_office_engine/test/word_referenced_styles_and_breaks_test.dart"
+      ]
+    },
+    {
+      "id": "FID-018",
+      "status": "closed",
+      "area": "Word hard-break tokens",
+      "finding": "LF/CRLF/CR serialize as real Word breaks, tabs survive, and typed page/column breaks remain distinct.",
+      "evidence": [
+        "packages/quds_office_engine/test/word_referenced_styles_and_breaks_test.dart",
+        "packages/quds_office_engine/tool/fidelity/scripted_oracle.py"
+      ]
+    },
+    {
+      "id": "FID-019",
+      "status": "closed",
+      "area": "Blank later-page viewport",
+      "finding": "Replacing the viewport triggers layout before painting so its extent is initialized and later pages are visible.",
+      "evidence": [
+        "packages/quds_office_editor/lib/src/editor_word/render_word_canvas.dart",
+        "packages/quds_office_editor/test/office_story_golden_test.dart"
+      ]
+    },
+    {
+      "id": "FID-020",
+      "status": "closed",
+      "area": "CrispCloud edits during save",
+      "finding": "A document revision captured before asynchronous save prevents later edits from being marked clean or closed by an earlier upload.",
+      "evidence": [
+        "CrispCloud:test/widget/office_save_fidelity_test.dart",
+        "CrispCloud:lib/widgets/office_editor_dialog.dart"
+      ]
+    },
+    {
+      "id": "FID-021",
+      "status": "closed",
+      "area": "CrispCloud preview fidelity",
+      "finding": "Preview follows owning parts for notes and workbook order/names, preserves tabs/breaks and explicit false formatting, including package-root main parts.",
+      "evidence": [
+        "CrispCloud:test/office_preview_fidelity_test.dart",
+        "CrispCloud:test/office_preview_strings_test.dart"
+      ]
+    },
+    {
+      "id": "FID-022",
+      "status": "closed",
+      "area": "Missing or stale scenario outputs",
+      "finding": "An independently authored exact output manifest is cleaned narrowly before producers and verified after generation; corruption controls reject absent groups and unexpected files.",
+      "evidence": [
+        "packages/quds_office_engine/tool/fidelity/output_manifest.json",
+        "packages/quds_office_engine/tool/fidelity/inventory.py",
+        "packages/quds_office_engine/tool/fidelity/test_inventory.py"
+      ]
+    },
+    {
+      "id": "FID-023",
+      "status": "in_progress",
+      "area": "Embedded external Word content",
+      "finding": "altChunk currently loses its body reference although the target payload remains in the package; a bounded opaque-block preservation fix is in progress.",
+      "evidence": []
+    },
+    {
+      "id": "FID-024",
+      "status": "open",
+      "area": "Structured document tags / content controls",
+      "finding": "The modeled import flattens SDT content and loses wrapper metadata such as alias/tag. Block and inline containers need explicit editable semantics.",
+      "evidence": []
+    },
+    {
+      "id": "FID-025",
+      "status": "open",
+      "area": "Multiple and cross-paragraph bookmarks",
+      "finding": "One paragraph bookmarkName cannot represent ordered zero-width ranges and independent endpoints; native multiple ranges can collapse.",
+      "evidence": []
+    },
+    {
+      "id": "FID-026",
+      "status": "in_progress",
+      "area": "Native comment thread anchors",
+      "finding": "Native comments use independent paragraph IDs for parent/resolved mapping; a bounded anchor-join and export fix is in progress.",
+      "evidence": []
+    },
+    {
+      "id": "FID-027",
+      "status": "guarded",
+      "area": "Formula-aware sheet renaming",
+      "finding": "The script refuses a sheet rename if formulas, names, charts or pivots refer to it; full reference rewriting is not implemented.",
+      "evidence": [
+        "packages/quds_office_engine/tool/fidelity/sheet_steps.dart"
+      ]
+    },
+    {
+      "id": "FID-028",
+      "status": "guarded",
+      "area": "Slide reordering with sections",
+      "finding": "The script refuses slide reorder when presentation sections would also need rewriting.",
+      "evidence": [
+        "packages/quds_office_engine/tool/fidelity/slide_steps.dart"
+      ]
+    },
+    {
+      "id": "FID-029",
+      "status": "open",
+      "area": "Non-default spreadsheet font metrics",
+      "finding": "Column conversion defaults to maximum-digit-width7 and accepts an explicit metric in helpers; normal-style font measurement is not automatic.",
+      "evidence": [
+        "packages/quds_office_engine/lib/src/sheet/serial/sheet_package_fidelity.dart"
+      ]
+    },
+    {
+      "id": "FID-030",
+      "status": "open",
+      "area": "External rendering equivalence",
+      "finding": "LibreOffice repeated-cycle stability is verified; Microsoft Office visual equivalence and interactive native UI behavior are not certified.",
+      "evidence": [
+        "tool/office-validation/render.py"
+      ]
+    }
+  ]
+}

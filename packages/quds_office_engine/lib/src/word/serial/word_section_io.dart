@@ -3,6 +3,71 @@ import '../../xml/xml_node.dart';
 import '../model/wml_document.dart';
 import '../properties/wml_properties.dart';
 
+/// Allocates distinct revision IDs when a section's source history is cloned.
+///
+/// Reserving all source IDs first keeps a clone from taking an ID that belongs
+/// to a later section. A new allocator per save makes repeated exports stable
+/// without mutating the immutable source fragments used by undo/redo.
+final class WordSectionRevisionIds {
+  WordSectionRevisionIds(Iterable<WmlSection> sections) {
+    for (final WmlSection section in sections) {
+      final WmlSectionSource? source = section.sourceProperties;
+      if (source == null) continue;
+      final XmlElement root = XmlDocument.parse(source.xml).root!;
+      for (final XmlElement change in _changes(root)) {
+        final int? id = int.tryParse(
+          change.getAttribute('id', namespaceUri: OfficeNamespaces.w) ?? '',
+        );
+        if (id != null) _reserved.add(id);
+      }
+    }
+  }
+
+  final Set<int> _reserved = <int>{};
+  final Set<int> _used = <int>{};
+  int _next = 1;
+
+  void ensureUnique(XmlElement section) {
+    for (final XmlElement change in _changes(section)) {
+      final XmlAttribute? attribute = change.attributes
+          .where(
+            (XmlAttribute a) =>
+                a.localName == 'id' && a.namespaceUri == OfficeNamespaces.w,
+          )
+          .firstOrNull;
+      final int? id = int.tryParse(attribute?.value ?? '');
+      if (id != null && _used.add(id)) continue;
+      while (_reserved.contains(_next) || _used.contains(_next)) {
+        _next++;
+      }
+      final int replacement = _next++;
+      _used.add(replacement);
+      if (attribute != null) {
+        attribute.value = '$replacement';
+      } else {
+        final String prefix = change.prefix.isEmpty ? 'w' : change.prefix;
+        change.setAttribute(prefix, OfficeNamespaces.w, prefix: 'xmlns');
+        change.setAttribute(
+          'id',
+          '$replacement',
+          prefix: prefix,
+          namespaceUri: OfficeNamespaces.w,
+        );
+      }
+    }
+  }
+
+  static Iterable<XmlElement> _changes(XmlElement node) sync* {
+    if (node.namespaceUri == OfficeNamespaces.w &&
+        node.localName == 'sectPrChange') {
+      yield node;
+    }
+    for (final XmlElement child in node.childElements) {
+      yield* _changes(child);
+    }
+  }
+}
+
 /// Merges deliberate section edits into an imported section-property fragment.
 abstract final class WordSectionIo {
   static Map<String, String> values(WmlSection section) => <String, String>{

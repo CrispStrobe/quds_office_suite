@@ -11,15 +11,16 @@ import '../../xml/xml_reader.dart';
 import '../math/omml_document.dart';
 import '../math/omml_io.dart';
 import '../model/wml_document.dart';
-import '../model/word_comment.dart';
 import '../model/word_link.dart';
 import '../model/word_notes.dart';
 import '../model/word_revision.dart';
 import '../model/word_styles.dart';
 import '../model/word_toc.dart';
 import '../properties/wml_properties.dart';
+import 'word_comment_io.dart';
 import 'word_drawing_io.dart';
 import 'word_markup_compatibility.dart';
+import 'word_opaque_io.dart';
 import 'word_property_io.dart';
 import 'word_section_io.dart';
 import 'word_serializer.dart';
@@ -88,6 +89,9 @@ class WordDeserializer {
       } else if (reader.localName == 'sdt' &&
           reader.namespaceUri == OfficeNamespaces.w) {
         section.blocks.addAll(_readSdt(reader, package, docUri));
+      } else if (reader.localName == 'altChunk' &&
+          reader.namespaceUri == OfficeNamespaces.w) {
+        section.blocks.add(WordOpaqueIo.read(reader, package, docUri));
       } else if (reader.localName == 'sectPr' &&
           reader.namespaceUri == OfficeNamespaces.w) {
         _readSectPr(reader, section, package, docUri);
@@ -146,6 +150,9 @@ class WordDeserializer {
       } else if (reader.localName == 'sdt' &&
           reader.namespaceUri == OfficeNamespaces.w) {
         blocks.addAll(_readSdt(reader, package, docUri));
+      } else if (reader.localName == 'altChunk' &&
+          reader.namespaceUri == OfficeNamespaces.w) {
+        blocks.add(WordOpaqueIo.read(reader, package, docUri));
       }
     }
     if (tag.startsWith('qudsFrame:')) {
@@ -1201,6 +1208,9 @@ class WordDeserializer {
         }
       } else if (reader.localName == 'tbl') {
         cell.blocks.add(_readTable(reader, package, docUri));
+      } else if (reader.localName == 'altChunk' &&
+          reader.namespaceUri == OfficeNamespaces.w) {
+        cell.blocks.add(WordOpaqueIo.read(reader, package, docUri));
       }
     }
     return cell;
@@ -1837,7 +1847,11 @@ class WordDeserializer {
             reader.getAttribute('id', namespaceUri: OfficeNamespaces.w) ?? '',
           ) ??
           bucket.length + 1;
-      final WmlNote note = WmlNote(id: id, endnote: endnote);
+      final WmlNote note = WmlNote(
+        id: id,
+        endnote: endnote,
+        addReferenceSpace: false,
+      );
       note.blocks.clear();
       if (!reader.isEmptyElement) {
         final int depth = reader.depth;
@@ -1851,6 +1865,10 @@ class WordDeserializer {
           } else if (reader.eventType == XmlEventType.startElement &&
               reader.localName == 'sdt') {
             note.blocks.addAll(_readSdt(reader, package, uri));
+          } else if (reader.eventType == XmlEventType.startElement &&
+              reader.localName == 'altChunk' &&
+              reader.namespaceUri == OfficeNamespaces.w) {
+            note.blocks.add(WordOpaqueIo.read(reader, package, uri));
           }
         }
       }
@@ -2267,6 +2285,7 @@ class WordDeserializer {
       final List<WmlParagraph> paragraphs = <WmlParagraph>[];
       final List<WmlVisual> visuals = <WmlVisual>[];
       final StringBuffer fallback = StringBuffer();
+      String? paragraphId;
       final int depth = reader.depth;
       final String commentsUri = package.relationshipsFor(docUri).resolve(rel);
       while (reader.next() && reader.depth >= depth) {
@@ -2274,6 +2293,9 @@ class WordDeserializer {
           continue;
         }
         if (reader.localName == 'p') {
+          paragraphId = WordCommentIo.normalizeParagraphId(
+            reader.getAttribute('paraId', namespaceUri: OfficeNamespaces.w14),
+          );
           paragraphs.add(_readParagraph(reader, package, commentsUri));
         } else if (reader.localName == 'drawing') {
           _takeDrawing(reader, package, commentsUri);
@@ -2297,6 +2319,7 @@ class WordDeserializer {
           text: fallback.toString(),
           paragraphs: paragraphs.isEmpty ? null : paragraphs,
           visuals: visuals,
+          paragraphId: paragraphId,
         ),
       );
     }
@@ -2319,39 +2342,10 @@ class WordDeserializer {
     if (part == null) {
       return;
     }
-    final XmlPullReader reader = WordMarkupCompatibilityReader(part.readText());
-    while (reader.next()) {
-      if (reader.eventType != XmlEventType.startElement ||
-          reader.localName != 'commentEx') {
-        continue;
-      }
-      final String paraId =
-          reader.getAttribute('paraId', namespaceUri: OfficeNamespaces.w15) ??
-          reader.getAttribute('paraId') ??
-          '';
-      final String? parent =
-          reader.getAttribute(
-            'paraIdParent',
-            namespaceUri: OfficeNamespaces.w15,
-          ) ??
-          reader.getAttribute('paraIdParent');
-      final String done =
-          reader.getAttribute('done', namespaceUri: OfficeNamespaces.w15) ??
-          reader.getAttribute('done') ??
-          '0';
-      final int? id = int.tryParse(paraId, radix: 16);
-      if (id == null) {
-        continue;
-      }
-      final WmlComment? comment = WordComment.byId(document, id);
-      if (comment == null) {
-        continue;
-      }
-      comment.resolved = done == '1' || done.toLowerCase() == 'true';
-      if (parent != null && parent.isNotEmpty) {
-        comment.parentId = int.tryParse(parent, radix: 16);
-      }
-    }
+    WordCommentIo.readExtended(
+      document.comments,
+      WordMarkupCompatibilityReader(part.readText()),
+    );
   }
 }
 

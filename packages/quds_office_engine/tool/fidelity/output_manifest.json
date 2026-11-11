@@ -1,7 +1,7 @@
 {
   "version": 1,
   "package": "quds_office_engine",
-  "expected_file_count": 95,
+  "expected_file_count": 111,
   "description": "Authored from the scenarios and regression tests. These paths are an inventory, not a golden generated from current output. SHA receipts identify each run; the semantic and renderer oracles decide correctness.",
   "series": [
     {"pattern": "fidelity/unchanged-{cycle}.docx", "cycles": [1, 2, 3], "producer": "tool/fidelity/scenarios.dart"},
@@ -33,9 +33,15 @@
     {"pattern": "fidelity-word-compatibility/compatibility-imported-{cycle}.docx", "cycles": [1, 2, 3], "producer": "test/word_compatibility_fidelity_test.dart"},
     {"pattern": "fidelity-word-compatibility/compatibility-edited-{cycle}.docx", "cycles": [1, 2, 3], "producer": "test/word_compatibility_fidelity_test.dart"},
     {"pattern": "fidelity-word-edits/styles-{cycle}.docx", "cycles": [1, 2, 3], "producer": "test/word_referenced_styles_and_breaks_test.dart"},
-    {"pattern": "fidelity-word-edits/breaks-{cycle}.docx", "cycles": [1, 2, 3], "producer": "test/word_referenced_styles_and_breaks_test.dart"}
+    {"pattern": "fidelity-word-edits/breaks-{cycle}.docx", "cycles": [1, 2, 3], "producer": "test/word_referenced_styles_and_breaks_test.dart"},
+    {"pattern": "fidelity-comment-threads/threads-imported-{cycle}.docx", "cycles": [1, 2, 3], "producer": "test/comment_thread_fidelity_test.dart"},
+    {"pattern": "fidelity-comment-threads/threads-edited-{cycle}.docx", "cycles": [1, 2, 3], "producer": "test/comment_thread_fidelity_test.dart"},
+    {"pattern": "fidelity-altchunk/altchunk-imported-{cycle}.docx", "cycles": [1, 2, 3], "producer": "test/word_altchunk_fidelity_test.dart"},
+    {"pattern": "fidelity-altchunk/altchunk-moved-{cycle}.docx", "cycles": [1, 2, 3], "producer": "test/word_altchunk_fidelity_test.dart"},
+    {"pattern": "fidelity-section-clones/section-clone-{cycle}.docx", "cycles": [1, 2, 3], "producer": "test/word_section_clone_fidelity_test.dart"}
   ],
   "standalone": [
+    {"path": "fidelity-comment-threads/threads-source.docx", "producer": "test/comment_thread_fidelity_test.dart"},
     {"path": "fidelity-notes/source.docx", "producer": "tool/fidelity/notes.dart"},
     {"path": "fidelity-script.docx", "producer": "tool/fidelity/check.sh"},
     {"path": "fidelity-scripted/word/edited.docx", "producer": "test/scripted_workflows_test.dart"},

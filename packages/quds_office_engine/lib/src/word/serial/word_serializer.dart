@@ -16,9 +16,11 @@ import '../model/word_revision.dart';
 import '../model/word_styles.dart';
 import '../model/word_toc.dart';
 import '../properties/wml_properties.dart';
+import 'word_comment_io.dart';
 import 'word_drawing_io.dart';
 import 'word_frame_io.dart';
 import 'word_numbering_io.dart';
+import 'word_opaque_io.dart';
 import 'word_property_io.dart';
 import 'word_section_io.dart';
 
@@ -47,6 +49,7 @@ class WordSerializer {
   Map<WmlSection, _HeaderFooterIds> _headerFooterIds =
       <WmlSection, _HeaderFooterIds>{};
   WmlDocument? _document;
+  late WordSectionRevisionIds _sectionRevisionIds;
   final Map<WmlParagraph, int> _restartNumberingIds =
       Map<WmlParagraph, int>.identity();
 
@@ -87,6 +90,7 @@ class WordSerializer {
     _docPrId = 1;
     _openComments.clear();
     _document = document;
+    _sectionRevisionIds = WordSectionRevisionIds(document.sections);
     _syncNumbering(package);
     _restartNumberingIds
       ..clear()
@@ -270,6 +274,8 @@ class WordSerializer {
         w.writeEndElement();
       case WmlToc():
         _writeToc(w, block);
+      case WmlOpaqueBlock():
+        WordOpaqueIo.write(w, block, _package!, _activePartUri);
     }
   }
 
@@ -384,20 +390,27 @@ class WordSerializer {
     );
     final RelationshipCollection rels = package.relationshipsFor(_mainPartUri);
     if (document.comments.isEmpty) {
-      package
-          .getPart(uri)
-          ?.writeText(
-            '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
-            '<w:comments xmlns:w="${OfficeNamespaces.w}"/>',
-          );
-      package
-          .getPart(extUri)
-          ?.writeText(
-            '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
-            '<w15:commentsEx xmlns:w15="${OfficeNamespaces.w15}"/>',
-          );
+      WordCommentIo.writePart(
+        package,
+        uri,
+        OfficeContentTypes.wordComments,
+        '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+        '<w:comments xmlns:w="${OfficeNamespaces.w}"/>',
+        create: false,
+      );
+      WordCommentIo.writePart(
+        package,
+        extUri,
+        OfficeContentTypes.wordCommentsExtended,
+        '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+        '<w15:commentsEx xmlns:w15="${OfficeNamespaces.w15}"/>',
+        create: false,
+      );
       return;
     }
+    final Map<int, String> paragraphIds = WordCommentIo.paragraphIds(
+      document.comments,
+    );
     final Map<OfficeVisual, String> imageIds = WordDrawingIo.syncVisuals(
       <OfficeVisual>[
         for (final WmlComment comment in document.comments)
@@ -437,16 +450,12 @@ class WordSerializer {
       w.writeEndElement();
     }
     w.writeEndElement();
-    final PackagePart? existing = package.getPart(uri);
-    if (existing == null) {
-      package.createPart(
-        uri,
-        OfficeContentTypes.wordComments,
-        utf8.encode(w.toXml()),
-      );
-    } else {
-      existing.writeText(w.toXml());
-    }
+    WordCommentIo.writePart(
+      package,
+      uri,
+      OfficeContentTypes.wordComments,
+      WordCommentIo.attachParagraphIds(w.toXml(), paragraphIds),
+    );
     if (rels.firstByType(RelationshipTypes.comments) == null) {
       rels.add(
         type: RelationshipTypes.comments,
@@ -454,13 +463,14 @@ class WordSerializer {
       );
     }
     _activePartUri = previousPart;
-    _syncCommentsExtended(document, package, rels);
+    _syncCommentsExtended(document, package, rels, paragraphIds);
   }
 
   void _syncCommentsExtended(
     WmlDocument document,
     OpcPackage package,
     RelationshipCollection rels,
+    Map<int, String> paragraphIds,
   ) {
     final String uri = _relatedPartUri(
       package,
@@ -476,31 +486,20 @@ class WordSerializer {
         'commentEx',
         prefix: 'w15',
         attributes: <String, String>{
-          'w15:paraId': comment.id.toRadixString(16).padLeft(8, '0'),
+          'w15:paraId': paragraphIds[comment.id]!,
           if (comment.parentId != null)
-            'w15:paraIdParent': comment.parentId!
-                .toRadixString(16)
-                .padLeft(8, '0'),
+            'w15:paraIdParent': paragraphIds[comment.parentId]!,
           'w15:done': comment.resolved ? '1' : '0',
         },
       );
     }
     w.writeEndElement();
-    final PackagePart? existing = package.getPart(uri);
-    if (existing == null) {
-      package.createPart(
-        uri,
-        OfficeContentTypes.wordCommentsExtended,
-        utf8.encode(w.toXml()),
-      );
-    } else {
-      existing.contentType = OfficeContentTypes.wordCommentsExtended;
-      package.contentTypes.setOverride(
-        uri,
-        OfficeContentTypes.wordCommentsExtended,
-      );
-      existing.writeText(w.toXml());
-    }
+    WordCommentIo.writePart(
+      package,
+      uri,
+      OfficeContentTypes.wordCommentsExtended,
+      w.toXml(),
+    );
     if (rels.firstByType(RelationshipTypes.commentsExtended) == null) {
       rels.add(
         type: RelationshipTypes.commentsExtended,
@@ -537,6 +536,7 @@ class WordSerializer {
     WmlSection? sectionBreak,
     bool noteReference = false,
     bool endnote = false,
+    bool addNoteReferenceSpace = true,
   }) {
     w.writeStartElement('p', prefix: 'w');
     final int? numberedInstance = _restartNumberingIds[paragraph];
@@ -566,9 +566,10 @@ class WordSerializer {
       w.writeEndElement();
       w.writeEmptyElement(endnote ? 'endnoteRef' : 'footnoteRef', prefix: 'w');
       w.writeEndElement();
-      // Keep the automatic number separated from the first text run. Word's
-      // own note body normally starts with a space after the reference mark.
-      if (paragraph.text.isEmpty || !RegExp(r'^\s').hasMatch(paragraph.text)) {
+      // New notes get a separator; imported stories already carry their exact
+      // whitespace, including an intentionally absent space after the mark.
+      if (addNoteReferenceSpace &&
+          (paragraph.text.isEmpty || !RegExp(r'^\s').hasMatch(paragraph.text))) {
         w.writeStartElement('r', prefix: 'w');
         w.writeStartElement('t', prefix: 'w');
         w.writeAttribute('xml:space', 'preserve');
@@ -1239,7 +1240,9 @@ class WordSerializer {
     final XmlWriter generated = XmlWriter();
     _writeGeneratedSectPr(generated, section);
     final XmlElement element = XmlDocument.parse(generated.toXml()).root!;
-    WordSectionIo.preserve(element, section).writeTo(writer);
+    final XmlElement preserved = WordSectionIo.preserve(element, section);
+    _sectionRevisionIds.ensureUnique(preserved);
+    preserved.writeTo(writer);
   }
 
   void _writeGeneratedSectPr(XmlWriter w, WmlSection section) {
@@ -1739,10 +1742,15 @@ class WordSerializer {
     );
   }
 
-  Map<String, WmlStyle> _stylesForExport(WmlDocument document) {
+  Map<String, WmlStyle> _stylesForExport(
+    WmlDocument document, {
+    bool includeDefaultStyles = true,
+  }) {
     final Map<String, WmlStyle> styles = <String, WmlStyle>{
       for (final WmlStyle style
-          in document.styles.isEmpty ? WordStyles.all : document.styles)
+          in document.styles.isEmpty && includeDefaultStyles
+              ? WordStyles.all
+              : document.styles)
         style.id: style,
     };
     final Map<String, WmlStyle> builtIns = <String, WmlStyle>{
@@ -1789,31 +1797,39 @@ class WordSerializer {
       RelationshipTypes.styles,
       'styles.xml',
     );
+    final PackagePart? original = package.getPart(uri);
+    final bool importedWithoutStyles = document.package != null && original == null;
+    final Map<String, WmlStyle> current = _stylesForExport(
+      document,
+      includeDefaultStyles: document.package == null,
+    );
+    if (importedWithoutStyles && current.isEmpty) return;
     final XmlWriter w = XmlWriter();
     w.writeStartDocument();
     w.writeStartElement('styles', prefix: 'w');
     w.writeNamespace('w', OfficeNamespaces.w);
-    w.writeStartElement('docDefaults', prefix: 'w');
-    w.writeStartElement('rPrDefault', prefix: 'w');
-    w.writeStartElement('rPr', prefix: 'w');
-    w.writeEmptyElement(
-      'rFonts',
-      prefix: 'w',
-      attributes: const <String, String>{
-        'w:ascii': 'Arial',
-        'w:hAnsi': 'Arial',
-        'w:cs': 'Arial',
-      },
-    );
-    w.writeEmptyElement(
-      'sz',
-      prefix: 'w',
-      attributes: const <String, String>{'w:val': '22'},
-    );
-    w.writeEndElement();
-    w.writeEndElement();
-    w.writeEndElement();
-    final Map<String, WmlStyle> current = _stylesForExport(document);
+    if (!importedWithoutStyles) {
+      w.writeStartElement('docDefaults', prefix: 'w');
+      w.writeStartElement('rPrDefault', prefix: 'w');
+      w.writeStartElement('rPr', prefix: 'w');
+      w.writeEmptyElement(
+        'rFonts',
+        prefix: 'w',
+        attributes: const <String, String>{
+          'w:ascii': 'Arial',
+          'w:hAnsi': 'Arial',
+          'w:cs': 'Arial',
+        },
+      );
+      w.writeEmptyElement(
+        'sz',
+        prefix: 'w',
+        attributes: const <String, String>{'w:val': '22'},
+      );
+      w.writeEndElement();
+      w.writeEndElement();
+      w.writeEndElement();
+    }
     for (final WmlStyle style in current.values) {
       w.writeStartElement('style', prefix: 'w');
       w.writeAttribute('w:type', 'paragraph');
@@ -1921,7 +1937,6 @@ class WordSerializer {
     }
     w.writeEndElement();
     final XmlDocument generated = XmlDocument.parse(w.toXml());
-    final PackagePart? original = package.getPart(uri);
     String xml = generated.toXmlString();
     if (original != null) {
       final XmlDocument preserved = XmlDocument.parse(original.readText());
@@ -2049,6 +2064,7 @@ class WordSerializer {
             block is WmlParagraph ? block : WmlParagraph(),
             noteReference: true,
             endnote: note.endnote,
+            addNoteReferenceSpace: note.addReferenceSpace,
           );
           referenceWritten = true;
           if (block is WmlParagraph) continue;
@@ -2061,6 +2077,7 @@ class WordSerializer {
           WmlParagraph(),
           noteReference: true,
           endnote: note.endnote,
+          addNoteReferenceSpace: note.addReferenceSpace,
         );
       }
       w.writeEndElement();

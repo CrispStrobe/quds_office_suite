@@ -2,6 +2,7 @@ import '../../fonts/office_typeface.dart';
 import '../../office/office_document_properties.dart';
 import '../../opc/ole/embedded_part.dart';
 import '../../opc/opc_archive.dart';
+import '../../opc/relationships.dart';
 import '../../visual/office_visual.dart';
 import '../math/omml_document.dart';
 import '../properties/wml_properties.dart';
@@ -13,6 +14,47 @@ import 'word_styles.dart';
 sealed class WmlBlock {
   /// WmlBlock API.
   WmlBlock();
+}
+
+/// An imported block retained for export without claiming layout support.
+///
+/// Currently used for `w:altChunk`. The XML and relationship provenance are
+/// immutable, so moving or cloning the block cannot discard its external
+/// content or accidentally resolve a story-local relationship in another part.
+final class WmlOpaqueBlock extends WmlBlock {
+  WmlOpaqueBlock({
+    required this.xml,
+    required this.sourcePartUri,
+    required Iterable<WmlOpaqueRelationship> relationships,
+  }) : relationships = List<WmlOpaqueRelationship>.unmodifiable(relationships);
+
+  final String xml;
+  final String sourcePartUri;
+  final List<WmlOpaqueRelationship> relationships;
+}
+
+/// A relationship from a preserved block, resolved against its original owner.
+final class WmlOpaqueRelationship {
+  const WmlOpaqueRelationship({
+    required this.id,
+    required this.type,
+    required this.target,
+    required this.targetMode,
+    this.contentType,
+    this.sha256,
+  });
+
+  final String id;
+  final String type;
+
+  /// Absolute OPC part URI for an internal relationship, otherwise its URL.
+  final String target;
+  final RelationshipTargetMode targetMode;
+
+  /// Internal payload identity prevents silently binding a cross-package copy
+  /// to unrelated bytes at the same part name. External targets are not fetched.
+  final String? contentType;
+  final String? sha256;
 }
 
 /// Class WmlInline.
@@ -66,6 +108,7 @@ class WmlComment {
     List<WmlVisual>? visuals,
     this.parentId,
     this.resolved = false,
+    this.paragraphId,
   }) : paragraphs =
            paragraphs ??
            <WmlParagraph>[
@@ -96,6 +139,10 @@ class WmlComment {
 
   /// resolved API.
   bool resolved;
+
+  /// The final comment paragraph's w14:paraId, used by native reply metadata.
+  /// This is independent of the numeric [id] on the w:comment element.
+  String? paragraphId;
 
   /// isReply API.
   bool get isReply => parentId != null;
@@ -167,6 +214,7 @@ class WmlComment {
     ],
     parentId: parentId,
     resolved: resolved,
+    paragraphId: paragraphId,
   );
 }
 
@@ -936,6 +984,8 @@ class WmlDocument {
           break;
         case WmlToc():
           break;
+        case WmlOpaqueBlock():
+          break;
       }
     }
   }
@@ -960,6 +1010,8 @@ class WmlDocument {
         case WmlToc():
           yield block.titleParagraph;
           yield* block.itemParagraphs;
+        case WmlOpaqueBlock():
+          break;
       }
     }
   }
@@ -987,6 +1039,7 @@ class WmlDocument {
         case WmlParagraph():
         case WmlVisual():
         case WmlToc():
+        case WmlOpaqueBlock():
           break;
       }
     }

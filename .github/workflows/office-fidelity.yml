@@ -20,6 +20,9 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: office-fidelity-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 jobs:
   office-fidelity:
     runs-on: ubuntu-latest

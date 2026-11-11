@@ -57,6 +57,12 @@ abstract final class WmlClone {
         return equation(source);
       case WmlToc():
         return toc(source);
+      case WmlOpaqueBlock():
+        return WmlOpaqueBlock(
+          xml: source.xml,
+          sourcePartUri: source.sourcePartUri,
+          relationships: source.relationships,
+        );
     }
   }
 
@@ -208,6 +214,7 @@ abstract final class WmlClone {
           _collectParagraphs(block.blocks, out);
         case WmlVisual():
         case WmlEquation():
+        case WmlOpaqueBlock():
           break;
       }
     }

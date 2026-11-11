@@ -47,6 +47,9 @@ void applySlideStep(
       target.text = s.string('text');
     case 'shapeFormat':
       final target = shape();
+      if (target.visual != null || target.table != null) {
+        throw ArgumentError('shapeFormat requires a text shape');
+      }
       if (s.has('size')) target.fontSizePt = s.number('size', min: 1);
       if (s.has('color')) target.textColor = s.color('color');
       if (s.has('fill')) target.fillColor = s.color('fill');

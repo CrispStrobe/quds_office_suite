@@ -194,6 +194,10 @@ void main() {
       throwsArgumentError,
     );
     expect(
+      () => applySlideStep(deck, {'op': 'shapeFormat', 'shape': 1, 'size': 30}),
+      throwsArgumentError,
+    );
+    expect(
       () =>
           applySlideStep(deck, {'op': 'shapeGeometry', 'shape': 0, 'width': 0}),
       throwsArgumentError,

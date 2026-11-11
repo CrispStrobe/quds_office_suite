@@ -4,6 +4,27 @@ All notable changes to `quds_office_engine` are documented here.
 
 ## Unreleased
 
+- Preserve sparse paragraph/run formatting when importing a document with no
+  style definitions; retain empty catalogs and avoid adding unreferenced Normal
+  defaults, while exporting explicitly referenced built-in styles and edits.
+
+- Preserve imported footnote/endnote separation exactly, including no space,
+  multiple spaces and tabs; newly inserted notes still get one separator.
+- Honor inherited `xml:space="preserve"` for whitespace-only text in the XML
+  DOM so copied rich text and note spaces remain intact.
+
+- Preserve imported `altChunk` blocks in body, table and note stories with
+  immutable source XML and payload identity; rebind their relationships when
+  moved or cloned between stories. Their external content remains unrendered.
+- Allocate stable unique section-revision IDs when cloning imported sections,
+  preserving their history and settings without duplicate schema identifiers.
+- Add diagnostic probes that explicitly report remaining content-control
+  wrapper loss and multiple/cross-paragraph bookmark-range loss.
+
+- Join native comment replies and resolved state through the final paragraph's
+  `w14:paraId`, retain anchors through comment copies/edits, allocate new anchors
+  without collisions, and normalize MIME declarations when clearing comments.
+
 - Add strict DOCX/XLSX/PPTX import, inspect, edit and repeated-save scripts with
   43 operations, authored semantic expectations and deliberate corruption checks.
   Explicit script formatting retains false/zero/default values as direct edits.

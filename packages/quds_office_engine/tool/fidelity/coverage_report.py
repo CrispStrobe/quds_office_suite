@@ -28,6 +28,13 @@ uninstrumented = sorted(str(p) for p in Path('lib').rglob('*.dart') if str(p) no
 source_hashes = {str(path): hashlib.sha256(path.read_bytes()).hexdigest()
                  for path in sorted(Path('lib').rglob('*.dart'))}
 fingerprint = hashlib.sha256(json.dumps(source_hashes, sort_keys=True).encode()).hexdigest()
+components = {}
+for name in ('word', 'sheet', 'slide', 'pdf', 'reports'):
+    prefix = f'lib/src/{name}/'
+    subset = [file for file in files if file['path'].startswith(prefix)]
+    components[name] = {'covered_lines': sum(file['hit'] for file in subset),
+                        'instrumented_lines': sum(file['total'] for file in subset),
+                        'uninstrumented_files': [path for path in uninstrumented if path.startswith(prefix)]}
 try:
     revision = subprocess.run(['git', 'rev-parse', 'HEAD'], check=True,
                               capture_output=True, text=True).stdout.strip()
@@ -37,7 +44,7 @@ except (OSError, subprocess.CalledProcessError):
     revision, source_dirty = None, None
 report = {'measurement': 'executed instrumented lines; not branch coverage',
           'source_git_commit': revision, 'source_git_dirty': source_dirty,
-          'source_tree_sha256': fingerprint, 'source_sha256': source_hashes,
+          'source_tree_sha256': fingerprint, 'source_sha256': source_hashes, 'components': components,
           'uninstrumented_files': uninstrumented, 'covered_lines': sum(f['hit'] for f in files),
           'instrumented_lines': sum(f['total'] for f in files), 'files': files}
 a.output.parent.mkdir(parents=True, exist_ok=True)
