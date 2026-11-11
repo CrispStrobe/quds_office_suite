@@ -34,7 +34,7 @@ for index, path in enumerate(paths):
                 raise AssertionError(f'Render changed across save cycles: {previous["file"]}')
             groups[key] = record
         print(f'{path}: rendered {len(pixels)} pages',flush=True)
-        # Keep PNGs for inspection, not large raw pixel buffers or LO profiles.
+        # Keep the PDF and pixel hashes; discard large raw pixel buffers.
         for ppm in dest.glob('page-*.ppm'): ppm.unlink()
     except Exception as error:
         failures.append({'file':str(path),'error':str(error)})

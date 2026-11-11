@@ -16,10 +16,13 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: office-fidelity-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   office-fidelity:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v2
@@ -29,17 +32,46 @@ jobs:
           cache: true
       - run: flutter pub get
       - name: Engine suite and line coverage
+        id: engine
         working-directory: packages/quds_office_engine
         run: |
           dart analyze
           dart test --coverage=coverage/vm
           bash tool/fidelity/check.sh
           python3 tool/fidelity/coverage_report.py
-      - name: Editor suite and reviewed visual golden
+      - name: Editor suite and reviewed visual goldens
+        id: editor
         working-directory: packages/quds_office_editor
         run: |
           flutter test --no-pub
           python3 ../quds_office_engine/tool/fidelity/corpus.py verify build/fidelity
+      - name: Collect exported Office packages
+        run: |
+          python3 - <<'PYTHON'
+          from pathlib import Path
+          import shutil
+          for package in Path('packages').glob('quds_office_*'):
+              for source in package.glob('build/fidelity*'):
+                  target = Path('build/office-evidence') / package.name / source.name
+                  target.parent.mkdir(parents=True, exist_ok=True)
+                  if source.is_dir():
+                      shutil.copytree(source, target)
+                  else:
+                      shutil.copy2(source, target)
+          PYTHON
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - name: Prove validator detects invalid XML
+        run: dotnet run --project tool/office-validation -- --self-test
+      - name: Validate exported Office packages
+        run: dotnet run --project tool/office-validation -- build/office-evidence build/external/schema-report.json
+      - name: Install independent Office renderer
+        if: ${{ !cancelled() && steps.engine.outcome == 'success' && steps.editor.outcome == 'success' }}
+        run: sudo apt-get update && sudo apt-get install -y libreoffice-writer libreoffice-calc libreoffice-impress poppler-utils fonts-liberation fonts-dejavu
+      - name: Render exports and compare repeated save cycles
+        if: ${{ !cancelled() && steps.engine.outcome == 'success' && steps.editor.outcome == 'success' }}
+        run: python3 tool/office-validation/render.py build/office-evidence build/external-render
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -47,48 +79,8 @@ jobs:
           path: |
             packages/quds_office_engine/build/fidelity*
             packages/quds_office_engine/coverage/
-            packages/quds_office_editor/build/fidelity/
+            packages/quds_office_editor/build/fidelity*
             packages/quds_office_editor/test/failures/
-  external-schema:
-    needs: office-fidelity
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: '8.0.x'
-      - uses: actions/download-artifact@v4
-        with:
-          name: office-fidelity-evidence
-          path: evidence
-      - name: Prove validator detects invalid XML
-        run: dotnet run --project tool/office-validation -- --self-test
-      - name: Validate exported Office packages
-        run: dotnet run --project tool/office-validation -- evidence build/external/schema-report.json
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: external-office-schema
-          path: build/external/
-  external-render:
-    needs: office-fidelity
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/download-artifact@v4
-        with:
-          name: office-fidelity-evidence
-          path: evidence
-      - name: Install independent Office renderer
-        run: sudo apt-get update && sudo apt-get install -y libreoffice-writer libreoffice-calc libreoffice-impress poppler-utils fonts-liberation fonts-dejavu
-      - name: Render exports and compare repeated save cycles
-        run: python3 tool/office-validation/render.py evidence build/external-render
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: external-office-render
-          path: |
+            build/external/
             build/external-render/render-report.json
             build/external-render/**/*.pdf
