@@ -33,6 +33,8 @@ the source revision and hashes shared files; unrelated vendor changes remain.
 | FID-004: list commands collided with imported IDs 1/2 | Allocate and reuse document-local definitions; changing levels keeps identity; list commands support undo/redo | Collision fixture, three async cycles, host history test |
 | Imported numbering start and Roman/alphabetic formats ignored | Honor zero/non-one starts and Roman, alphabetic and padded decimal labels | Independently authored numbering cases |
 | FID-001: dense pages overlapped footnotes; long notes disappeared | Reserve the note band during body layout, move references when needed and allocate continuation pages | Dense text with 180 unique note tokens; columns, table-cell reference and following-picture overlap assertions |
+| PPTX exported packages lacked masters and required notes size | Preserve imported templates; add missing master/layout/theme and notes relationships; emit standard sections | Open XML SDK gate; native deck and reorder/delete-notes regression |
+| Slide images/charts overwrote media on other slides | Give visuals an owning-part namespace and retain source slide URIs through reorder | Independent two-slide deck, distinct pictures and chart values over three async cycles |
 | FID-002: notes flattened styled runs, tables, drawings and links | Ordered note blocks round-trip; notes use shaped rich lines and their own media relationships | Rich-note source fixture, three async cycles, glyph/style/link/table/image assertions and reviewed PNG |
 
 ## Corpus and feature matrix
