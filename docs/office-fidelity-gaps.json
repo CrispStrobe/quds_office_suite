@@ -250,22 +250,24 @@
     },
     {
       "id": "FID-024",
-      "status": "open",
+      "status": "in_progress",
       "area": "Structured document tags / content controls",
       "finding": "The modeled import flattens SDT content and loses wrapper metadata such as alias, tag, ID and end-run properties. The independent CLI probe reproduces the loss after an adjacent edit and three save/reopen cycles; full block and inline container editing is unimplemented.",
       "evidence": [
         "packages/quds_office_engine/test/fixtures/fidelity/loss-probes/content-control.xml",
-        "packages/quds_office_engine/tool/fidelity/unsupported_word_audit.py"
+        "packages/quds_office_engine/tool/fidelity/unsupported_word_audit.py",
+        "docs/office-unsupported-word-probes.json"
       ]
     },
     {
       "id": "FID-025",
-      "status": "open",
+      "status": "in_progress",
       "area": "Multiple and cross-paragraph bookmarks",
       "finding": "One paragraph bookmarkName cannot represent multiple independent endpoints or cross-paragraph ranges. The independent CLI probe reproduces expanded, dropped and collapsed bookmark ranges after an adjacent edit and three cycles.",
       "evidence": [
         "packages/quds_office_engine/test/fixtures/fidelity/loss-probes/bookmark-ranges.xml",
-        "packages/quds_office_engine/tool/fidelity/unsupported_word_audit.py"
+        "packages/quds_office_engine/tool/fidelity/unsupported_word_audit.py",
+        "docs/office-unsupported-word-probes.json"
       ]
     },
     {
@@ -408,6 +410,17 @@
         "CrispCloud:tool/test_office_host_evidence.py",
         "CrispCloud:tool/office_host_coverage.py",
         "packages/quds_office_engine/tool/fidelity/test_coverage_report.py"
+      ]
+    },
+    {
+      "id": "FID-040",
+      "status": "in_progress",
+      "area": "Imported note marker position and absence",
+      "finding": "The current note model preserves conventional leading marker properties but manufactures one at the first paragraph when imported source markers are absent or later. Typed zero-width source markers are being added to retain exact ordered placement through edits and exports.",
+      "evidence": [
+        "packages/quds_office_engine/lib/src/word/model/word_notes.dart",
+        "packages/quds_office_engine/lib/src/word/serial/word_deserializer.dart",
+        "packages/quds_office_engine/lib/src/word/serial/word_serializer.dart"
       ]
     }
   ]

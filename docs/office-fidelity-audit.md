@@ -7,9 +7,10 @@ The base branches have not been changed by this work.
 
 The source continuation includes the existing, unmerged fidelity work at
 `3146e635`, ahead of the requested `crispcloud` baseline `c9655003`. The app
-continuation carries its prior fidelity feature into current `main` baseline
-`5ec939e8`. Keeping this history avoids dropping earlier fixes while adding
-new coverage.
+continuation carried its prior fidelity feature into `main` baseline
+`5ec939e8`, then merged current `main` at `e70f24ce` after the same earlier
+feature landed there. The later merge preserved the updated fork documentation
+without changing the tested application code.
 
 CrispCloud uses vendored engine/editor path dependencies. Shared files are
 copied from an exact source commit after checking the app's existing bytes
@@ -53,8 +54,11 @@ regression, not every possible use of that Office feature.
 | --- | --- | --- |
 | Notes and history | Note IDs/kinds, atomic references, rich bodies, caret placement, split, formatting and undo/redo survive. Dense/long notes reserve space and continue. | Rich-note and controller regressions; semantic and page goldens |
 | Styles | Sparse defaults, inheritance, theme values and character/table properties remain editable; explicit false/black/default-size/zero-spacing values stay direct. Missing referenced built-ins include known parent styles. | Style cascade fixture, sparse XML oracle, scripted Word golden |
-| Lists | Imported numbering IDs do not collide with new lists. Restart overrides apply to the intended level and following segment without changing unrelated lists or growing definitions on every save. | Collision/restart fixtures, XML labels and three-cycle oracle |
-| Word media | Body, note and all six header/footer stories retain their own picture/chart links. Replacing or reordering media does not overwrite payloads used elsewhere. | Independently authored colored pictures, ownership checks and decoded pixels |
+| Lists | Imported numbering IDs do not collide with new lists. Restarts affect the intended sequence. Clearing a style-driven list writes an explicit suppression override, so it stays cleared after reopening and history operations. | Collision/restart fixtures, intermediate edit regressions and three-cycle oracle |
+| Word media | Body, note and all six header/footer stories retain their own picture/chart links. Replacing or reordering media does not overwrite other payloads. Zero, small and omitted wrap distances remain distinct. | Authored colored pictures, ownership/distance oracles and decoded pixels |
+| Native comments | Reply and resolved metadata join through native paragraph anchors independently of numeric comment IDs, including reverse source order. | Native comment fixture, source comparison and corruption controls |
+| Embedded content | `altChunk` source blocks and owning-part relationships survive edits and cross-story moves, with target MIME and payload identity checked. | Body/table/note fixture and independent payload oracle |
+| Imported defaults | Documents without styles retain sparse properties. Imported leading note markers retain their run properties and exact separator whitespace. Borderless tables stay borderless; inherited borders can be explicitly disabled. | Styleless, note-spacing/XML-space and table-border regressions; external source render comparisons |
 | Package routing | Nonstandard document/styles/notes/settings paths are resolved and written through owning-part relationships. | Relocated-package fixture and external schema validation |
 | Word compatibility | Import chooses one supported `mc:Choice` or its `Fallback`, including nested branches and namespace aliases. | Authored body/run/table/header/note cases and mutation controls |
 | Sections | Page numbering, grids, borders, paper source, gutter, custom columns, line numbers and historical section metadata survive unrelated edits and cloning. Deliberate geometry edits update modeled fields. | Two-section fixture, source-fragment oracle and host section commands |
@@ -65,6 +69,7 @@ regression, not every possible use of that Office feature.
 | Presentation structure | Chart-frame transforms, transition durations and axis identifiers validate; templates, notes, owned media and live chart formulas remain linked. | Native package checks and external schema gate |
 | Editor painting | A replaced viewport receives layout before painting, avoiding blank later pages. | Reviewed first/even/default header/footer page PNGs before/after save |
 | CrispCloud save state | Edits made while an asynchronous upload is pending remain dirty. A successful earlier upload cannot close a newer edit; selection-only changes and retry behavior are distinguished. | Four real editor-dialog widget cases and captured upload bytes |
+| CrispCloud search | Search follows relocated parts, referenced notes, sheet/slide order, used shared strings and speaker notes, including Strict namespaces. Both input bytes and emitted UTF-8 text are bounded. | Authored DOCX/XLSX/PPTX/ODF inputs, shared-string expansion control and recursive-search callers |
 | CrispCloud preview | Explicit false formatting, tabs/breaks, note references/bodies and workbook order/names are respected, including relocated and package-root parts. | Independently authored ZIP/XML preview tests and localization tests |
 | Test completeness | Missing whole scenarios, wrong filenames, stale unexpected outputs, empty ZIPs and incomplete cycle groups cannot silently pass. | Authored exact manifest, negative controls, SHA receipts and renderer controls |
 
@@ -73,6 +78,14 @@ reviewed page PNGs cover first-page, even-page and default header/footer images,
 columns and explicit page breaks. Tests require real image-colored pixels before
 capturing or comparing a golden and use the same expected image before and after
 an asynchronous save. Flutter is pinned to 3.44.0 on Linux for these comparisons.
+
+The first story-page golden was deliberately reviewed again after the styleless
+import fix: its authored source has neither a styles part nor paragraph spacing.
+The old image included added spacing. The new image changes only the resulting
+body-picture and note-text positions; all source content remains visible. The
+other three page PNGs are unchanged. The story test now explicitly requires the
+source paragraph to have zero after-spacing and single line spacing before and
+after save.
 
 ## Evidence gates
 
@@ -89,30 +102,82 @@ collects Office-host LCOV, and retains cloud-upload bytes. The host section and
 multiline-text cases add three save/reopen exports each. The schema gate checks
 the exact actual-host inventory before validating the downloaded evidence.
 
-### Verified checkpoints
+### Verified 692 checkpoint
 
-- Source `2bd870f4`: full engine **562 passed**, one existing optional-fixture
-  skip; full editor **230 passed**, one existing optional-fixture skip.
-- Its portable suite: **102 focused Dart tests**, **57 Python controls**, all
-  **43 operations** exercised, exact **95-file engine inventory** complete.
-- Its external schema snapshot: **97 packages validated, zero errors**,
-  including the 95 engine outputs and two actual editor documents.
-- Preview regressions: **24 passed** with the package-root routing followup.
-- Engine analysis: no errors or warnings; three pre-existing informational
-  lints remain in reports/PDF/test code.
+Production engine code is checkpointed at `a7e1a207`; the reviewed story-page
+image, its explicit spacing assertions and coverage report are in `692a326`.
+The latter commit does not change production engine/editor code.
 
-Final followup results, source hashes, coverage totals and renderer counts are
-recorded below when the new preservation cases and host integration complete.
-Coverage is collected from a fresh directory, and the report records source
-hashes as well as uncovered lines. Instrumented-line percentages exclude
-unloaded/uninstrumented files and do not measure branch correctness.
+| Gate | Verified result |
+| --- | --- |
+| Full engine suite with a fresh VM coverage directory | **623 passed**, one existing optional local-fixture skip |
+| Full editor suite on pinned Linux Flutter | **233 passed**, one existing optional local-fixture skip |
+| Portable import/edit/export gate | **163 focused Dart tests**, all **43 public operations**, **113 Python oracle/inventory/coverage controls** |
+| Authored output inventory | **117/117 engine packages**, 37 complete three-save series and six standalone/baseline inputs |
+| Editor package oracle | Saved controller DOCX passes independent XML/media checks; three-page story DOCX is also retained for external validation |
+| Engine analysis | No errors or warnings; three pre-existing informational lints in reports/PDF/test code |
+| CrispCloud host suite | **97 passed**, including real editor-dialog asynchronous save cases and the search callers |
+| Host helper controls | **Eight** inventory controls and **four** coverage-report controls passed |
+| Actual host outputs | **14/14 DOCX**: seven captured editor-dialog uploads, three section cycles, three text cycles and the unchanged controller export |
+| External Open XML SDK, source snapshot | **119 packages, zero errors**: 117 engine outputs plus two editor documents |
+| External Open XML SDK, host snapshot | **131 packages, zero errors**: 117 vendored engine outputs plus all 14 actual-host documents |
+
+The SDK positive and negative self-test also passes. The app's latest complete
+gate used immutable `a7e1a207` production code; its final pin advances to
+`692a326` with only the reviewed PNG, test assertions and a helper docstring
+changed. The vendor guard records **154 shared files**. Source and app export
+snapshots retain their exact membership, byte sizes and SHA-256 hashes.
+
+The [external evidence summary](office-validation-692a326.json) records a complete
+strict render pass: **119/119 files, 187 pages, 37/37 three-save groups and all
+five source/edited baseline comparisons passed**. All 187 retained PNGs were
+decoded again and checked against their RGB fingerprints. The three remaining
+standalone packages are explicitly labeled as render-only. No conversion failed
+or required a retry. Exact snapshot membership and every file hash were checked
+again after rendering. This check is independent of the Flutter page goldens and
+of schema validity.
+
+### Fresh execution coverage
+
+[The full engine gap inventory](office-coverage-gaps.json) records the clean
+production source hash and every unhit instrumented line. It was collected after
+removing the old VM coverage directory and running all 623 engine tests against
+unchanged production code at `a7e1a207`.
+
+| Scope | Covered / instrumented lines | Coverage |
+| --- | ---: | ---: |
+| Entire engine | 40,172 / 49,903 | 80.5% |
+| Word | 6,955 / 8,757 | 79.4% |
+| Spreadsheet | 3,136 / 3,956 | 79.3% |
+| Presentation | 1,802 / 2,275 | 79.2% |
+| PDF | 11,833 / 15,287 | 77.4% |
+| Reports | 9,588 / 11,295 | 84.9% |
+| CrispCloud Office host | 1,952 / 3,557 | 54.9% |
+
+The host report is `CrispCloud/docs/office-host-coverage-gaps.json`. All nine
+scoped Office service/widget files are instrumented. The engine report lists ten
+files absent from VM instrumentation separately; most are export-only library
+entry points, with isolate helpers and a PDF template index also listed.
+Neither percentage is branch coverage or a claim of correctness. The helpers
+reject malformed records, missing paths and out-of-range line numbers; their
+source hashes describe the files present when the report was made. Fresh
+collection remains required because old hit counts after a same-length source
+edit cannot be recognized from coverage data alone.
+
+Most remaining host lines are ribbon/dialog commands outside this test cohort.
+The largest engine execution gaps include formula functions, the PDF interpreter,
+Word layout and report generation. Their exact line numbers remain in the reports.
 
 ## Remaining acceptance boundaries
 
 The ledger distinguishes unsupported behavior from tested preservation. In
 particular, SDT/content-control wrappers and multiple/cross-paragraph bookmark
-ranges need richer editable models. The final audit includes reproducible probes
-for these gaps. A retained embedded external-content payload also does not mean
+ranges need richer editable models. The audit includes independently authored XML and a real-CLI three-cycle
+probe for these gaps. [The retained diagnostic result](office-unsupported-word-probes.json)
+records the exact source and fixture hashes for the 692 checkpoint. Preservation
+fixes for these reproduced losses are the next incremental checkpoint. Run `python3 tool/fidelity/unsupported_word_audit.py` in the
+engine package; it intentionally exits 1 while the loss remains and is excluded
+from the passing regression gate. A retained embedded external-content payload also does not mean
 the editor renders or converts that payload.
 
 Column conversion currently defaults to a maximum-digit-width of 7; automatic
@@ -125,3 +190,9 @@ LibreOffice save-cycle stability and Open XML SDK validity are separate from
 Microsoft Office visual equivalence and native application certification. The
 exact execution-gap inventory remains a work list, not a claim that executed
 lines are correct or that every unhit line is defective.
+
+Additional bounded model limits are explicit in the ledger: the editable table
+border model has one border/color/width tuple, so a deliberate border edit writes
+six uniform edges even though untouched per-edge source XML is retained. The note
+fix covers conventional leading automatic markers; arbitrary marker position or
+absence is not modeled. These are not covered by the passing preservation claims.

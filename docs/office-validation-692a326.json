@@ -1,0 +1,40 @@
+{
+  "source_checkpoint": "692a326aae2e8133b793570344028a1ceffddbdc",
+  "source_worktree_status_at_snapshot": [],
+  "manifest_sha256": "d5cb3e9b3cadaf0849b0208e1cfeb4b350d8976c86f70d9418b27fd15ba46dec",
+  "snapshot_sha256_verified": true,
+  "files": 119,
+  "engine_files": 117,
+  "editor_files": 2,
+  "schema_files": 119,
+  "schema_failing_files": 0,
+  "schema_errors": 0,
+  "renderer": "LibreOfficeDev 26.8.0.0.alpha0 2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+  "rendered_files": 119,
+  "rendered_pages": 187,
+  "verified_retained_pngs": 187,
+  "three_cycle_groups": 37,
+  "passed_cycle_groups": 37,
+  "baseline_comparisons": 5,
+  "baseline_files": {
+    "engine/fidelity-comment-threads/threads-imported.docx": "engine/fidelity-comment-threads/threads-source.docx",
+    "engine/fidelity-notes/unchanged.docx": "engine/fidelity-notes/source.docx",
+    "engine/fidelity-scripted/sheet/roundtrip.xlsx": "engine/fidelity-scripted/sheet/edited.xlsx",
+    "engine/fidelity-scripted/slide/roundtrip.pptx": "engine/fidelity-scripted/slide/edited.pptx",
+    "engine/fidelity-scripted/word/roundtrip.docx": "engine/fidelity-scripted/word/edited.docx"
+  },
+  "render_only_files": [
+    "editor/fidelity-story-goldens/three-pages.docx",
+    "editor/fidelity/unchanged-controller.docx",
+    "engine/fidelity-script.docx"
+  ],
+  "evidence": {
+    "snapshot": "../build/validation-final/snapshot-receipt.json",
+    "schema": "../build/validation-final/schema-report.json",
+    "render": "../build/validation-final/rendered/render-report.json",
+    "authored_manifest": "../build/validation-final/output-manifest.json",
+    "summary": "../build/validation-final/summary.json"
+  },
+  "passed": true,
+  "failures": []
+}
