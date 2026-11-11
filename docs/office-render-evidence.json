@@ -1,0 +1,632 @@
+{
+  "renderer": "LibreOfficeDev 26.8.0.0.alpha0 2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+  "files": 65,
+  "cycle_groups": 22,
+  "failures": [],
+  "reports": [
+    {
+      "file": "quds_office_editor/fidelity/unchanged-controller.docx",
+      "pages": 1,
+      "text": "Header link\n\n\n\nImported heading\n            1i\nBody text\nBody link\n   1. List item\n Cell text\n\n\n\n\ni Endnote text\n\n\n\n\n1 Footnote text\nNote link\n\n\nFooter text\n\f",
+      "pixel_sha256": [
+        "63aa16bc05b238b847c4b93cc0a999aab71c94ef0bde68ed28a1bbb605cbf0db"
+      ],
+      "input_sha256": "536221981c3b18a032721a650d75283b978051b20be5fb66a30c0c335065b012"
+    },
+    {
+      "file": "quds_office_editor/fidelity-layout/columns_sections-1.docx",
+      "pages": 3,
+      "text": "Column paragraph 0. Text   column and continues in\nwraps across this narrow   reading order.\ncolumn and continues in\n                           Column paragraph 4. Text\nreading order.\n                           wraps across this narrow\nColumn paragraph 1. Text   column and continues in\nwraps across this narrow   reading order.\ncolumn and continues in\n                           Column paragraph 5. Text\nreading order.\n                           wraps across this narrow\nColumn paragraph 2. Text   column and continues in\nwraps across this narrow   reading order.\ncolumn and continues in\nreading order.\nColumn paragraph 3. Text\nwraps across this narrow\n\fNew landscape section\nA section break restores one column.\n\fForced next page\n\f",
+      "pixel_sha256": [
+        "22a096f2fd6d352101f3a52a8035e5c3a72e392b679aa987085fac11aa68d029",
+        "adcbe302c703f9df10a5876d59d193b69313e62fc451f62f890b53cd0cac2c20",
+        "70c49812ab5e511ebdb3fe12bdc62ff3fd83a47062835325a920d59078448ab4"
+      ],
+      "input_sha256": "add817c43d310a53eb563c5fd3572f1117e64f81ff2094025eabd16ae5586cc8"
+    },
+    {
+      "file": "quds_office_editor/fidelity-layout/columns_sections-2.docx",
+      "pages": 3,
+      "text": "Column paragraph 0. Text   column and continues in\nwraps across this narrow   reading order.\ncolumn and continues in\n                           Column paragraph 4. Text\nreading order.\n                           wraps across this narrow\nColumn paragraph 1. Text   column and continues in\nwraps across this narrow   reading order.\ncolumn and continues in\n                           Column paragraph 5. Text\nreading order.\n                           wraps across this narrow\nColumn paragraph 2. Text   column and continues in\nwraps across this narrow   reading order.\ncolumn and continues in\nreading order.\nColumn paragraph 3. Text\nwraps across this narrow\n\fNew landscape section\nA section break restores one column.\n\fForced next page\n\f",
+      "pixel_sha256": [
+        "22a096f2fd6d352101f3a52a8035e5c3a72e392b679aa987085fac11aa68d029",
+        "adcbe302c703f9df10a5876d59d193b69313e62fc451f62f890b53cd0cac2c20",
+        "70c49812ab5e511ebdb3fe12bdc62ff3fd83a47062835325a920d59078448ab4"
+      ],
+      "input_sha256": "a0b2532e120298471581ed7e10746c818c7baf5a62df293e5250509fa1863287"
+    },
+    {
+      "file": "quds_office_editor/fidelity-layout/continued_notes-1.docx",
+      "pages": 3,
+      "text": "Reference paragraph1\n\n1 N000 N001 N002 N003 N004 N005 N006 N007\nN008 N009 N010 N011 N012 N013 N014 N015\nN016 N017 N018 N019 N020 N021 N022 N023\nN024 N025 N026 N027 N028 N029 N030 N031\nN032 N033 N034 N035 N036 N037 N038 N039\nN040 N041 N042 N043 N044 N045 N046 N047\nN048 N049 N050 N051 N052 N053 N054 N055\nN056 N057 N058 N059 N060 N061 N062 N063\nN064 N065 N066 N067 N068 N069 N070 N071\nN072 N073 N074 N075 N076 N077 N078 N079\nN080 N081 N082 N083 N084 N085 N086 N087\nN088 N089 N090 N091 N092 N093 N094 N095\nN096 N097 N098 N099\n\fBody 0 follows the long note and must remain\nvisible on the following pages.\nBody 1 follows the long note and must remain\nvisible on the following pages.\nBody 2 follows the long note and must remain\nvisible on the following pages.\nBody 3 follows the long note and must remain\nvisible on the following pages.\nBody 4 follows the long note and must remain\nvisible on the following pages.\nBody 5 follows the long note and must remain\nvisible on the following pages.\n\fBody 6 follows the long note and must remain\nvisible on the following pages.\n\f",
+      "pixel_sha256": [
+        "a0f583771eae0ffa687a1ef5b866fb2190b9a7f36edbe9c20d491ccd945d6e2f",
+        "e3c6d441b2ab77d727e59096c750b784a5b38182625f78b501c19820da08f279",
+        "3a36b26fad73256e0817a9b00e447150aacf2718842b311985fcb56d29092017"
+      ],
+      "input_sha256": "00e277c72fab047fe2eaf91fc2d481bc94957bb12f3a1d362b60165b82a6344c"
+    },
+    {
+      "file": "quds_office_editor/fidelity-layout/continued_notes-2.docx",
+      "pages": 3,
+      "text": "Reference paragraph1\n\n1 N000 N001 N002 N003 N004 N005 N006 N007\nN008 N009 N010 N011 N012 N013 N014 N015\nN016 N017 N018 N019 N020 N021 N022 N023\nN024 N025 N026 N027 N028 N029 N030 N031\nN032 N033 N034 N035 N036 N037 N038 N039\nN040 N041 N042 N043 N044 N045 N046 N047\nN048 N049 N050 N051 N052 N053 N054 N055\nN056 N057 N058 N059 N060 N061 N062 N063\nN064 N065 N066 N067 N068 N069 N070 N071\nN072 N073 N074 N075 N076 N077 N078 N079\nN080 N081 N082 N083 N084 N085 N086 N087\nN088 N089 N090 N091 N092 N093 N094 N095\nN096 N097 N098 N099\n\fBody 0 follows the long note and must remain\nvisible on the following pages.\nBody 1 follows the long note and must remain\nvisible on the following pages.\nBody 2 follows the long note and must remain\nvisible on the following pages.\nBody 3 follows the long note and must remain\nvisible on the following pages.\nBody 4 follows the long note and must remain\nvisible on the following pages.\nBody 5 follows the long note and must remain\nvisible on the following pages.\n\fBody 6 follows the long note and must remain\nvisible on the following pages.\n\f",
+      "pixel_sha256": [
+        "a0f583771eae0ffa687a1ef5b866fb2190b9a7f36edbe9c20d491ccd945d6e2f",
+        "e3c6d441b2ab77d727e59096c750b784a5b38182625f78b501c19820da08f279",
+        "3a36b26fad73256e0817a9b00e447150aacf2718842b311985fcb56d29092017"
+      ],
+      "input_sha256": "621523421c83e02cf8b7b997806351fafcea2fa452dd5b22e8360e0552ec59be"
+    },
+    {
+      "file": "quds_office_editor/fidelity-layout/rtl-1.docx",
+      "pages": 1,
+      "text": "\u202b\u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0648\u0627\u0644\u0646\u0635 \u0627\u0644\u0645\u062e\u062a\u0644\u0637\u202c\n\u202b\u0645\u0631\u062d\u0628\u0627 \u0628\u0627\u0644\u0639\u0627\u0644\u0645\u202a .\u202c\u0647\u0630\u0627 \u0627\u062e\u062a\u0628\u0627\u0631 \u0627\u0644\u062a\u062c\u0627\u0647 \u0627\u0644\u0646\u0635 \u0645\u0646 \u0627\u0644\u064a\u0645\u064a\u0646 \u0625\u0649\u0644 \u0627\u0644\u064a\u0633\u0627\u0631\u202a.\u202c\u202c\n\n\u202b\u202a \u2014 CrispCloud 2026\u202c\u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u202aEnglish \u2014 123\u202c\u202c\n\u202b\u202aLeft aligned English paragraph with punctuation (42).\u202c\u202c\n \u202b\u202aSecond column\u202c\u202c                       \u202b\u0627\u0644\u0639\u0645\u0648\u062f \u0627\u0623\u0644\u0648\u0644\u202c\n\f",
+      "pixel_sha256": [
+        "c5db9ad261a108a49b2e88e35c67a844793bec7ef11fc060c25eba5883ea6e16"
+      ],
+      "input_sha256": "b91ce232adde8fffd02a217133e2c5cf1519bed4c07d246b3c8d95309f3080f7"
+    },
+    {
+      "file": "quds_office_editor/fidelity-layout/rtl-2.docx",
+      "pages": 1,
+      "text": "\u202b\u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0648\u0627\u0644\u0646\u0635 \u0627\u0644\u0645\u062e\u062a\u0644\u0637\u202c\n\u202b\u0645\u0631\u062d\u0628\u0627 \u0628\u0627\u0644\u0639\u0627\u0644\u0645\u202a .\u202c\u0647\u0630\u0627 \u0627\u062e\u062a\u0628\u0627\u0631 \u0627\u0644\u062a\u062c\u0627\u0647 \u0627\u0644\u0646\u0635 \u0645\u0646 \u0627\u0644\u064a\u0645\u064a\u0646 \u0625\u0649\u0644 \u0627\u0644\u064a\u0633\u0627\u0631\u202a.\u202c\u202c\n\n\u202b\u202a \u2014 CrispCloud 2026\u202c\u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u202aEnglish \u2014 123\u202c\u202c\n\u202b\u202aLeft aligned English paragraph with punctuation (42).\u202c\u202c\n \u202b\u202aSecond column\u202c\u202c                       \u202b\u0627\u0644\u0639\u0645\u0648\u062f \u0627\u0623\u0644\u0648\u0644\u202c\n\f",
+      "pixel_sha256": [
+        "c5db9ad261a108a49b2e88e35c67a844793bec7ef11fc060c25eba5883ea6e16"
+      ],
+      "input_sha256": "b334ac774b663005a9cdad374b14468c80983df1e4e9d11d74bee2c1f96df531"
+    },
+    {
+      "file": "quds_office_editor/fidelity-layout/tall_table-1.docx",
+      "pages": 2,
+      "text": "Table continues across pages\nT000 T001 T002 T003 T004   Other cell\nT005 T006 T007 T008 T009\nT010 T011 T012 T013 T014\nT015 T016 T017 T018 T019\nT020 T021 T022 T023 T024\nT025 T026 T027 T028 T029\nT030 T031 T032 T033 T034\nT035 T036 T037 T038 T039\nT040 T041 T042 T043 T044\nT045 T046 T047 T048 T049\nT050 T051 T052 T053 T054\nT055 T056 T057 T058 T059\nT060 T061 T062 T063 T064\n\f T065 T066 T067 T068 T069\n T070 T071 T072 T073 T074\n T075 T076 T077 T078 T079\n T080 T081 T082 T083 T084\n T085 T086 T087 T088 T089\n T090 T091 T092 T093 T094\n T095 T096 T097 T098 T099\n T100 T101 T102 T103 T104\n T105 T106 T107 T108 T109\n T110 T111 T112 T113 T114\n T115 T116 T117 T118 T1191\nAfter the table\n\n\n1 Late table note\n\f",
+      "pixel_sha256": [
+        "a40fbbcaeb0234abdf9901a16c49aa6dcbe6d2dba8a03e2e0cb93b4520a92472",
+        "206e0e1ecc3233648d8f88ee2435618eda551b2f8fbcb5da1320315e7153ec4f"
+      ],
+      "input_sha256": "335f2b644599004477e6d4ce6ec60b2183245dca147c87cba1f0ab4609988191"
+    },
+    {
+      "file": "quds_office_editor/fidelity-layout/tall_table-2.docx",
+      "pages": 2,
+      "text": "Table continues across pages\nT000 T001 T002 T003 T004   Other cell\nT005 T006 T007 T008 T009\nT010 T011 T012 T013 T014\nT015 T016 T017 T018 T019\nT020 T021 T022 T023 T024\nT025 T026 T027 T028 T029\nT030 T031 T032 T033 T034\nT035 T036 T037 T038 T039\nT040 T041 T042 T043 T044\nT045 T046 T047 T048 T049\nT050 T051 T052 T053 T054\nT055 T056 T057 T058 T059\nT060 T061 T062 T063 T064\n\f T065 T066 T067 T068 T069\n T070 T071 T072 T073 T074\n T075 T076 T077 T078 T079\n T080 T081 T082 T083 T084\n T085 T086 T087 T088 T089\n T090 T091 T092 T093 T094\n T095 T096 T097 T098 T099\n T100 T101 T102 T103 T104\n T105 T106 T107 T108 T109\n T110 T111 T112 T113 T114\n T115 T116 T117 T118 T1191\nAfter the table\n\n\n1 Late table note\n\f",
+      "pixel_sha256": [
+        "a40fbbcaeb0234abdf9901a16c49aa6dcbe6d2dba8a03e2e0cb93b4520a92472",
+        "206e0e1ecc3233648d8f88ee2435618eda551b2f8fbcb5da1320315e7153ec4f"
+      ],
+      "input_sha256": "ce5c509690bd625c69beb0626e2d1e052e151d10c972c469db8c28d5b95127cc"
+    },
+    {
+      "file": "quds_office_engine/fidelity/edited-1.docx",
+      "pages": 1,
+      "text": "Header link\n\n\n\nRevised heading\n              1i\nEdited body\nBody link\n   1. List item\n Cell text\n\n\n\n\ni Endnote text\n\n\n\n\n1 Edited footnote\nNote link\n\n\nFooter text\n\f",
+      "pixel_sha256": [
+        "d073bca3833e80be58e20f353305a7a191279d68fec222da4a9f54f3dcf81633"
+      ],
+      "input_sha256": "272a14b1035dc6ebacc86f66af8ba44f07fe8918fce34db69aaee0f440aa8bea"
+    },
+    {
+      "file": "quds_office_engine/fidelity/edited-2.docx",
+      "pages": 1,
+      "text": "Header link\n\n\n\nRevised heading\n              1i\nEdited body\nBody link\n   1. List item\n Cell text\n\n\n\n\ni Endnote text\n\n\n\n\n1 Edited footnote\nNote link\n\n\nFooter text\n\f",
+      "pixel_sha256": [
+        "d073bca3833e80be58e20f353305a7a191279d68fec222da4a9f54f3dcf81633"
+      ],
+      "input_sha256": "49ebc48acf255ff2498403064379573693a8519a8c8603f6bfa0863302a47041"
+    },
+    {
+      "file": "quds_office_engine/fidelity/edited-3.docx",
+      "pages": 1,
+      "text": "Header link\n\n\n\nRevised heading\n              1i\nEdited body\nBody link\n   1. List item\n Cell text\n\n\n\n\ni Endnote text\n\n\n\n\n1 Edited footnote\nNote link\n\n\nFooter text\n\f",
+      "pixel_sha256": [
+        "d073bca3833e80be58e20f353305a7a191279d68fec222da4a9f54f3dcf81633"
+      ],
+      "input_sha256": "56a98f5371be68fc24a7de51ecf4e17c6f702b4b2adc1a815445a5620e049296"
+    },
+    {
+      "file": "quds_office_engine/fidelity/sheet-edited-1.xlsx",
+      "pages": 1,
+      "text": "Label   5   15   TRUE\n\f",
+      "pixel_sha256": [
+        "35115c275430748313e1f06872296ef998fcf26a1f13ae7ab4d24685fe9d7858"
+      ],
+      "input_sha256": "44093b2a6ab795867b294cdbf5bdca1f06c29a3d8d569b823a9cec5371150444"
+    },
+    {
+      "file": "quds_office_engine/fidelity/sheet-edited-2.xlsx",
+      "pages": 1,
+      "text": "Label   5   15   TRUE\n\f",
+      "pixel_sha256": [
+        "35115c275430748313e1f06872296ef998fcf26a1f13ae7ab4d24685fe9d7858"
+      ],
+      "input_sha256": "0d446577891018233407ae2864cff0a551947d0b94d9b3c283766b728cce3b7b"
+    },
+    {
+      "file": "quds_office_engine/fidelity/sheet-edited-3.xlsx",
+      "pages": 1,
+      "text": "Label   5   15   TRUE\n\f",
+      "pixel_sha256": [
+        "35115c275430748313e1f06872296ef998fcf26a1f13ae7ab4d24685fe9d7858"
+      ],
+      "input_sha256": "71a12193bbaa34f62fb021798f311d07cfc74ebe0e5f56914ed5898d4ce6cc5d"
+    },
+    {
+      "file": "quds_office_engine/fidelity/sheet-imported-1.xlsx",
+      "pages": 1,
+      "text": "Label   2   6   TRUE\n\f",
+      "pixel_sha256": [
+        "419b8a7478e25825f1b19f34f53ba99eca4c4a0a78be69df1b9ef380154d5b95"
+      ],
+      "input_sha256": "23e89edd7ac41e88d2711989f883107d5deddf82b399f490f88336c8429038bd"
+    },
+    {
+      "file": "quds_office_engine/fidelity/sheet-imported-2.xlsx",
+      "pages": 1,
+      "text": "Label   2   6   TRUE\n\f",
+      "pixel_sha256": [
+        "419b8a7478e25825f1b19f34f53ba99eca4c4a0a78be69df1b9ef380154d5b95"
+      ],
+      "input_sha256": "d8e727fbc0728eed185a8d9e55638724f367d9221d11a2f2505df6b2743217d2"
+    },
+    {
+      "file": "quds_office_engine/fidelity/sheet-imported-3.xlsx",
+      "pages": 1,
+      "text": "Label   2   6   TRUE\n\f",
+      "pixel_sha256": [
+        "419b8a7478e25825f1b19f34f53ba99eca4c4a0a78be69df1b9ef380154d5b95"
+      ],
+      "input_sha256": "e24493d381046bbb148227efcc801b20b82abbee0ce1de84bb7f3f56bbdc6e06"
+    },
+    {
+      "file": "quds_office_engine/fidelity/slide-edited-1.pptx",
+      "pages": 1,
+      "text": "Edited slide\n\f",
+      "pixel_sha256": [
+        "1905705ece1880aac3b00365277a83c2cb019f70afc258c52b38420a25dabf1a"
+      ],
+      "input_sha256": "d35f2fa8fa2cd37412979766544b052d3d3760a95417b51c2bfe9d18aa754e58"
+    },
+    {
+      "file": "quds_office_engine/fidelity/slide-edited-2.pptx",
+      "pages": 1,
+      "text": "Edited slide\n\f",
+      "pixel_sha256": [
+        "1905705ece1880aac3b00365277a83c2cb019f70afc258c52b38420a25dabf1a"
+      ],
+      "input_sha256": "69fa4d27ad12076643dbe66a416aaa68581529d47813e8b4736d2050ef669d87"
+    },
+    {
+      "file": "quds_office_engine/fidelity/slide-edited-3.pptx",
+      "pages": 1,
+      "text": "Edited slide\n\f",
+      "pixel_sha256": [
+        "1905705ece1880aac3b00365277a83c2cb019f70afc258c52b38420a25dabf1a"
+      ],
+      "input_sha256": "82b13e03e056948723007f3203ce32d1d6f4e0ec6a7b80070947b02cb2e0c11d"
+    },
+    {
+      "file": "quds_office_engine/fidelity/slide-imported-1.pptx",
+      "pages": 1,
+      "text": "Imported slide\n\f",
+      "pixel_sha256": [
+        "6d8f503fbd1b0cda4d8341ba6a275578d7a03e8d305ef8028c2f82a209a3010a"
+      ],
+      "input_sha256": "6dcfc095cd2d8cd3e46d3f68cbf3a451bf800c8117dd3537c6aa4abf91a6073f"
+    },
+    {
+      "file": "quds_office_engine/fidelity/slide-imported-2.pptx",
+      "pages": 1,
+      "text": "Imported slide\n\f",
+      "pixel_sha256": [
+        "6d8f503fbd1b0cda4d8341ba6a275578d7a03e8d305ef8028c2f82a209a3010a"
+      ],
+      "input_sha256": "8e5d532df8e310e1cc977a8133d6e9b6ebd63c9da745ffc1bafcd86489b8afbc"
+    },
+    {
+      "file": "quds_office_engine/fidelity/slide-imported-3.pptx",
+      "pages": 1,
+      "text": "Imported slide\n\f",
+      "pixel_sha256": [
+        "6d8f503fbd1b0cda4d8341ba6a275578d7a03e8d305ef8028c2f82a209a3010a"
+      ],
+      "input_sha256": "4acd82469f06e39217656c8c448d5d67668f0bf3f8d8d7dae3735640757f7c0b"
+    },
+    {
+      "file": "quds_office_engine/fidelity/unchanged-1.docx",
+      "pages": 1,
+      "text": "Header link\n\n\n\nImported heading\n            1i\nBody text\nBody link\n   1. List item\n Cell text\n\n\n\n\ni Endnote text\n\n\n\n\n1 Footnote text\nNote link\n\n\nFooter text\n\f",
+      "pixel_sha256": [
+        "63aa16bc05b238b847c4b93cc0a999aab71c94ef0bde68ed28a1bbb605cbf0db"
+      ],
+      "input_sha256": "fbdc3f4b162965bae6a53b0bbdccde579897b07eda5a900c71e490a6b6d2eda5"
+    },
+    {
+      "file": "quds_office_engine/fidelity/unchanged-2.docx",
+      "pages": 1,
+      "text": "Header link\n\n\n\nImported heading\n            1i\nBody text\nBody link\n   1. List item\n Cell text\n\n\n\n\ni Endnote text\n\n\n\n\n1 Footnote text\nNote link\n\n\nFooter text\n\f",
+      "pixel_sha256": [
+        "63aa16bc05b238b847c4b93cc0a999aab71c94ef0bde68ed28a1bbb605cbf0db"
+      ],
+      "input_sha256": "21373affe895cd72c1d3582a2eaf827806d965bd1958db95c0289b000bfb02b3"
+    },
+    {
+      "file": "quds_office_engine/fidelity/unchanged-3.docx",
+      "pages": 1,
+      "text": "Header link\n\n\n\nImported heading\n            1i\nBody text\nBody link\n   1. List item\n Cell text\n\n\n\n\ni Endnote text\n\n\n\n\n1 Footnote text\nNote link\n\n\nFooter text\n\f",
+      "pixel_sha256": [
+        "63aa16bc05b238b847c4b93cc0a999aab71c94ef0bde68ed28a1bbb605cbf0db"
+      ],
+      "input_sha256": "da3986572f5731313aa91e871ffd09da585a2aabf0112f29c797cd2a5aa9c603"
+    },
+    {
+      "file": "quds_office_engine/fidelity-image/replaced-1.docx",
+      "pages": 1,
+      "text": "Header link\n\n\n\nImported heading\n            1i\nBody text\nBody link\n   1. List item\n Cell text\n\n\n\n\ni Endnote text\n\n\n\n\n1 Footnote text\nNote link\n\n\nFooter text\n\f",
+      "pixel_sha256": [
+        "c4df0a564a18bdda7072d6599291c1663bb40b1f816a28ee5a7ec186b2d5fa5e"
+      ],
+      "input_sha256": "92cfa7d2793c4139ec05343ad02788650cda197c189220ff8d5a72328ad66d92"
+    },
+    {
+      "file": "quds_office_engine/fidelity-image/replaced-2.docx",
+      "pages": 1,
+      "text": "Header link\n\n\n\nImported heading\n            1i\nBody text\nBody link\n   1. List item\n Cell text\n\n\n\n\ni Endnote text\n\n\n\n\n1 Footnote text\nNote link\n\n\nFooter text\n\f",
+      "pixel_sha256": [
+        "c4df0a564a18bdda7072d6599291c1663bb40b1f816a28ee5a7ec186b2d5fa5e"
+      ],
+      "input_sha256": "af798e1792ef508060f0afe52e5174cc25b5beda734028dd958cada26848fefd"
+    },
+    {
+      "file": "quds_office_engine/fidelity-image/replaced-3.docx",
+      "pages": 1,
+      "text": "Header link\n\n\n\nImported heading\n            1i\nBody text\nBody link\n   1. List item\n Cell text\n\n\n\n\ni Endnote text\n\n\n\n\n1 Footnote text\nNote link\n\n\nFooter text\n\f",
+      "pixel_sha256": [
+        "c4df0a564a18bdda7072d6599291c1663bb40b1f816a28ee5a7ec186b2d5fa5e"
+      ],
+      "input_sha256": "022391b99bbc10e92fa0d197db6bb81c999b2dae226696cf40bf9773a3021e6d"
+    },
+    {
+      "file": "quds_office_engine/fidelity-native/created-pivot-1.xlsx",
+      "pages": 4,
+      "text": "Region   Value       Region    Sum\nNorth            2   North            2\nSouth            5   South            5   Chart\n                     Total Resu       7\n                                1.2\n                                 1\n                                0.8\n                                0.6\n                                0.4\n                                0.2\n                                 0\n                                            Value\n\n                                           Chart\n\f\f      Chart\n2.5\n 2\n1.5\n 1\n0.5\n 0\n        Value\n\n       Chart\n\f\f",
+      "pixel_sha256": [
+        "9c8098d4e6d1c154f34fe357f21fa9b83c4109f50f59681c1e6c05308f0e6735",
+        "86300fcd2a59638dedfd866b2c284fdf0f69b45c39e62cf44486c6943f306879",
+        "ae1d432f1e113bb93b8e0f5d64cc57d836ec94980b3e931d4555e648c366652b",
+        "86300fcd2a59638dedfd866b2c284fdf0f69b45c39e62cf44486c6943f306879"
+      ],
+      "input_sha256": "92e9ff83df006a6d5502e41c332a1db743c30f24a464778fba373000b8c32233"
+    },
+    {
+      "file": "quds_office_engine/fidelity-native/created-pivot-2.xlsx",
+      "pages": 4,
+      "text": "Region   Value       Region    Sum\nNorth            2   North            2\nSouth            5   South            5   Chart\n                     Total Resu       7\n                                1.2\n                                 1\n                                0.8\n                                0.6\n                                0.4\n                                0.2\n                                 0\n                                            Value\n\n                                           Chart\n\f\f      Chart\n2.5\n 2\n1.5\n 1\n0.5\n 0\n        Value\n\n       Chart\n\f\f",
+      "pixel_sha256": [
+        "9c8098d4e6d1c154f34fe357f21fa9b83c4109f50f59681c1e6c05308f0e6735",
+        "86300fcd2a59638dedfd866b2c284fdf0f69b45c39e62cf44486c6943f306879",
+        "ae1d432f1e113bb93b8e0f5d64cc57d836ec94980b3e931d4555e648c366652b",
+        "86300fcd2a59638dedfd866b2c284fdf0f69b45c39e62cf44486c6943f306879"
+      ],
+      "input_sha256": "f35f939f986b662d0c24f52d0f36b91c5877e13bd08ce9e2242c0d289016833c"
+    },
+    {
+      "file": "quds_office_engine/fidelity-native/created-pivot-3.xlsx",
+      "pages": 4,
+      "text": "Region   Value       Region    Sum\nNorth            2   North            2\nSouth            5   South            5   Chart\n                     Total Resu       7\n                                1.2\n                                 1\n                                0.8\n                                0.6\n                                0.4\n                                0.2\n                                 0\n                                            Value\n\n                                           Chart\n\f\f      Chart\n2.5\n 2\n1.5\n 1\n0.5\n 0\n        Value\n\n       Chart\n\f\f",
+      "pixel_sha256": [
+        "9c8098d4e6d1c154f34fe357f21fa9b83c4109f50f59681c1e6c05308f0e6735",
+        "86300fcd2a59638dedfd866b2c284fdf0f69b45c39e62cf44486c6943f306879",
+        "ae1d432f1e113bb93b8e0f5d64cc57d836ec94980b3e931d4555e648c366652b",
+        "86300fcd2a59638dedfd866b2c284fdf0f69b45c39e62cf44486c6943f306879"
+      ],
+      "input_sha256": "3e3bcb2e6f9f6f3602873020e452e6237d3b713589a1635807c6aa4c5d94784f"
+    },
+    {
+      "file": "quds_office_engine/fidelity-native/native-sheet-edited-1.xlsx",
+      "pages": 3,
+      "text": "Region            Value          Total\nNorth                     7.00           21\nSouth                        5           15                  Regional values\n                                              8.00\nNative workbook                               7.00\n                                              6.00\n                                              5.00\n                                              4.00\n                                              3.00\n                                              2.00\n                                              1.00\n                                              0.00\n                                                     North                South\n\fRegional values\n\n\n\n\n                     Regional values\n\n\n\n\n             South\n\fRegion    Sum of Value\nNorth          7.00\nSouth          5.00\nTotal Resul   12.00\n\f",
+      "pixel_sha256": [
+        "35b4a789aa1a3db93d250b9c328103956db545bdcc731e380e6b6956efa179f0",
+        "12ea02ae766ace940b3457736099251934e8ede965839c8c47081283690dc5ed",
+        "aacbf49555884266cb737b3a3fa8bac661b76289c6523e0d5fa6be114ace9a64"
+      ],
+      "input_sha256": "5083f5882261c84bcdb3eb5e64441ece19472c814710bad4e8ecac318f95404a"
+    },
+    {
+      "file": "quds_office_engine/fidelity-native/native-sheet-edited-2.xlsx",
+      "pages": 3,
+      "text": "Region            Value          Total\nNorth                     7.00           21\nSouth                        5           15                  Regional values\n                                              8.00\nNative workbook                               7.00\n                                              6.00\n                                              5.00\n                                              4.00\n                                              3.00\n                                              2.00\n                                              1.00\n                                              0.00\n                                                     North                South\n\fRegional values\n\n\n\n\n                     Regional values\n\n\n\n\n             South\n\fRegion    Sum of Value\nNorth          7.00\nSouth          5.00\nTotal Resul   12.00\n\f",
+      "pixel_sha256": [
+        "35b4a789aa1a3db93d250b9c328103956db545bdcc731e380e6b6956efa179f0",
+        "12ea02ae766ace940b3457736099251934e8ede965839c8c47081283690dc5ed",
+        "aacbf49555884266cb737b3a3fa8bac661b76289c6523e0d5fa6be114ace9a64"
+      ],
+      "input_sha256": "018d95d2e24a4162c6943c2c0e724b4364863ec18cac70339ca9ad5f8b395153"
+    },
+    {
+      "file": "quds_office_engine/fidelity-native/native-sheet-edited-3.xlsx",
+      "pages": 3,
+      "text": "Region            Value          Total\nNorth                     7.00           21\nSouth                        5           15                  Regional values\n                                              8.00\nNative workbook                               7.00\n                                              6.00\n                                              5.00\n                                              4.00\n                                              3.00\n                                              2.00\n                                              1.00\n                                              0.00\n                                                     North                South\n\fRegional values\n\n\n\n\n                     Regional values\n\n\n\n\n             South\n\fRegion    Sum of Value\nNorth          7.00\nSouth          5.00\nTotal Resul   12.00\n\f",
+      "pixel_sha256": [
+        "35b4a789aa1a3db93d250b9c328103956db545bdcc731e380e6b6956efa179f0",
+        "12ea02ae766ace940b3457736099251934e8ede965839c8c47081283690dc5ed",
+        "aacbf49555884266cb737b3a3fa8bac661b76289c6523e0d5fa6be114ace9a64"
+      ],
+      "input_sha256": "62291c8b23c2177369bbabe049da22eba7ddf8a38b61617351a872a88dfb824b"
+    },
+    {
+      "file": "quds_office_engine/fidelity-native/native-sheet-imported-1.xlsx",
+      "pages": 3,
+      "text": "Region            Value          Total\nNorth                     2.00            6\nSouth                        5           15                  Regional values\n                                              6.00\nNative workbook\n                                              5.00\n\n                                              4.00\n\n                                              3.00\n\n                                              2.00\n\n                                              1.00\n\n                                              0.00\n                                                     North                South\n\fRegional values\n\n\n\n\n                     Regional values\n\n\n\n\n             South\n\fRegion    Sum of Value\nNorth          2.00\nSouth          5.00\nTotal Resul    7.00\n\f",
+      "pixel_sha256": [
+        "a1cc55b1d10d4966989a5f5687caf4b6d81a06b7a7c58311e1d31bfdea7c3653",
+        "2ca038f64f4eda14c9bd23e547d1cf87e8b199a0f86c8a9cac45a66529562f0a",
+        "2b12550760cdd16210eab065f4b54a9946357f536f9ac9a3ebe8e6b515fbe72c"
+      ],
+      "input_sha256": "217e2340d76be8b582f1d6d81d52f8614fcd441f6a726d0639da0289c349fd69"
+    },
+    {
+      "file": "quds_office_engine/fidelity-native/native-sheet-imported-2.xlsx",
+      "pages": 3,
+      "text": "Region            Value          Total\nNorth                     2.00            6\nSouth                        5           15                  Regional values\n                                              6.00\nNative workbook\n                                              5.00\n\n                                              4.00\n\n                                              3.00\n\n                                              2.00\n\n                                              1.00\n\n                                              0.00\n                                                     North                South\n\fRegional values\n\n\n\n\n                     Regional values\n\n\n\n\n             South\n\fRegion    Sum of Value\nNorth          2.00\nSouth          5.00\nTotal Resul    7.00\n\f",
+      "pixel_sha256": [
+        "a1cc55b1d10d4966989a5f5687caf4b6d81a06b7a7c58311e1d31bfdea7c3653",
+        "2ca038f64f4eda14c9bd23e547d1cf87e8b199a0f86c8a9cac45a66529562f0a",
+        "2b12550760cdd16210eab065f4b54a9946357f536f9ac9a3ebe8e6b515fbe72c"
+      ],
+      "input_sha256": "ebfdec505bacd1f55714e6c97093672e7b47701f2389b6161a102e113937e946"
+    },
+    {
+      "file": "quds_office_engine/fidelity-native/native-sheet-imported-3.xlsx",
+      "pages": 3,
+      "text": "Region            Value          Total\nNorth                     2.00            6\nSouth                        5           15                  Regional values\n                                              6.00\nNative workbook\n                                              5.00\n\n                                              4.00\n\n                                              3.00\n\n                                              2.00\n\n                                              1.00\n\n                                              0.00\n                                                     North                South\n\fRegional values\n\n\n\n\n                     Regional values\n\n\n\n\n             South\n\fRegion    Sum of Value\nNorth          2.00\nSouth          5.00\nTotal Resul    7.00\n\f",
+      "pixel_sha256": [
+        "a1cc55b1d10d4966989a5f5687caf4b6d81a06b7a7c58311e1d31bfdea7c3653",
+        "2ca038f64f4eda14c9bd23e547d1cf87e8b199a0f86c8a9cac45a66529562f0a",
+        "2b12550760cdd16210eab065f4b54a9946357f536f9ac9a3ebe8e6b515fbe72c"
+      ],
+      "input_sha256": "a263bf033914af28c3d84b71308997488be321c70ccdddc804dcba0448ff4679"
+    },
+    {
+      "file": "quds_office_engine/fidelity-native/native-slides-1.pptx",
+      "pages": 2,
+      "text": "Native slide 1\n\n\n\n                 6\n\n\n                 5\n\n\n                 4\n\n\n                 3\n\n\n                 2\n\n\n                 1\n\n\n                 0\n                     North   South\n\fNative slide 2\n\n\n\n                 7\n\n                 6\n\n                 5\n\n                 4\n\n                 3\n\n                 2\n\n                 1\n\n                 0\n                     North   South\n\f",
+      "pixel_sha256": [
+        "f2e9c423ec4173e4d7ecd8834517191b21da02d9238fdb879934cf182d3befc9",
+        "5aecad3c6f98f4c016887f747bb6beb5142bcb40ac86747c86fd252cab79f3da"
+      ],
+      "input_sha256": "2bd7924d16a45f0baac23f9abdc3bca6f9474e0b745d1ad36fbcbad9bdccd515"
+    },
+    {
+      "file": "quds_office_engine/fidelity-native/native-slides-2.pptx",
+      "pages": 2,
+      "text": "Native slide 1\n\n\n\n                 6\n\n\n                 5\n\n\n                 4\n\n\n                 3\n\n\n                 2\n\n\n                 1\n\n\n                 0\n                     North   South\n\fNative slide 2\n\n\n\n                 7\n\n                 6\n\n                 5\n\n                 4\n\n                 3\n\n                 2\n\n                 1\n\n                 0\n                     North   South\n\f",
+      "pixel_sha256": [
+        "f2e9c423ec4173e4d7ecd8834517191b21da02d9238fdb879934cf182d3befc9",
+        "5aecad3c6f98f4c016887f747bb6beb5142bcb40ac86747c86fd252cab79f3da"
+      ],
+      "input_sha256": "40062c55c75f6f40c71f93f4cb6b2252a5ef5df8f3a20ca91a07ee5ed83620a9"
+    },
+    {
+      "file": "quds_office_engine/fidelity-native/native-slides-3.pptx",
+      "pages": 2,
+      "text": "Native slide 1\n\n\n\n                 6\n\n\n                 5\n\n\n                 4\n\n\n                 3\n\n\n                 2\n\n\n                 1\n\n\n                 0\n                     North   South\n\fNative slide 2\n\n\n\n                 7\n\n                 6\n\n                 5\n\n                 4\n\n                 3\n\n                 2\n\n                 1\n\n                 0\n                     North   South\n\f",
+      "pixel_sha256": [
+        "f2e9c423ec4173e4d7ecd8834517191b21da02d9238fdb879934cf182d3befc9",
+        "5aecad3c6f98f4c016887f747bb6beb5142bcb40ac86747c86fd252cab79f3da"
+      ],
+      "input_sha256": "0c28556cdc8d78d4cdd53e03c64ae1b93e442d9d06e255cded1315796431d986"
+    },
+    {
+      "file": "quds_office_engine/fidelity-native/native-slides-edited-1.pptx",
+      "pages": 2,
+      "text": "Edited native slide 1\n\n\n\n               12\n\n\n               10\n\n\n                8\n\n\n                6\n\n\n                4\n\n\n                2\n\n\n                0\n                        North   South\n\fEdited native slide 2\n\n\n\n               12\n\n\n               10\n\n\n                8\n\n\n                6\n\n\n                4\n\n\n                2\n\n\n                0\n                        North   South\n\f",
+      "pixel_sha256": [
+        "a4a1b308ce3b6285a372db8c2ebe1cab457815c1f4bc4dda82d4e6cbba943e9f",
+        "baa98ba7d5e521fb8f0bbff3c6cb948825a698ee52051fb5b18bd5387db7b7e8"
+      ],
+      "input_sha256": "ee0702f0826cc2ef98fe97bdc53e5aed417dfb0a6e0a1bcda432cf01af03b6e7"
+    },
+    {
+      "file": "quds_office_engine/fidelity-native/native-slides-edited-2.pptx",
+      "pages": 2,
+      "text": "Edited native slide 1\n\n\n\n               12\n\n\n               10\n\n\n                8\n\n\n                6\n\n\n                4\n\n\n                2\n\n\n                0\n                        North   South\n\fEdited native slide 2\n\n\n\n               12\n\n\n               10\n\n\n                8\n\n\n                6\n\n\n                4\n\n\n                2\n\n\n                0\n                        North   South\n\f",
+      "pixel_sha256": [
+        "a4a1b308ce3b6285a372db8c2ebe1cab457815c1f4bc4dda82d4e6cbba943e9f",
+        "baa98ba7d5e521fb8f0bbff3c6cb948825a698ee52051fb5b18bd5387db7b7e8"
+      ],
+      "input_sha256": "5ceaf461158ddbbc718a1a786d04a6dd5823c94983dfee6e76b240606a2e8c9c"
+    },
+    {
+      "file": "quds_office_engine/fidelity-native/native-slides-edited-3.pptx",
+      "pages": 2,
+      "text": "Edited native slide 1\n\n\n\n               12\n\n\n               10\n\n\n                8\n\n\n                6\n\n\n                4\n\n\n                2\n\n\n                0\n                        North   South\n\fEdited native slide 2\n\n\n\n               12\n\n\n               10\n\n\n                8\n\n\n                6\n\n\n                4\n\n\n                2\n\n\n                0\n                        North   South\n\f",
+      "pixel_sha256": [
+        "a4a1b308ce3b6285a372db8c2ebe1cab457815c1f4bc4dda82d4e6cbba943e9f",
+        "baa98ba7d5e521fb8f0bbff3c6cb948825a698ee52051fb5b18bd5387db7b7e8"
+      ],
+      "input_sha256": "7a31ffdad6552d7b0aab7d13757d072cf7d7b534a0a2c88cd7b85076d07e93b4"
+    },
+    {
+      "file": "quds_office_engine/fidelity-notes/edited-1.docx",
+      "pages": 1,
+      "text": "Header link\n\n\n\nImported heading\n            1i\nBody text\nBody link\n   1. List item\n Cell text\n\n\n\n\ni Endnote text\n\n\n\n\n1 Revised note\n Revised table\n\n\n\n\nNote link\n\n\nFooter text\n\f",
+      "pixel_sha256": [
+        "443918fd10e786b85f417ab1b24f472e59077029c6fbfe440df5f396a48d2d19"
+      ],
+      "input_sha256": "79c4dd3c5c8de979f84f305f03ee17f10e95e00cfbf21e1923e4a16c67570bf7"
+    },
+    {
+      "file": "quds_office_engine/fidelity-notes/edited-2.docx",
+      "pages": 1,
+      "text": "Header link\n\n\n\nImported heading\n            1i\nBody text\nBody link\n   1. List item\n Cell text\n\n\n\n\ni Endnote text\n\n\n\n\n1 Revised note\n Revised table\n\n\n\n\nNote link\n\n\nFooter text\n\f",
+      "pixel_sha256": [
+        "443918fd10e786b85f417ab1b24f472e59077029c6fbfe440df5f396a48d2d19"
+      ],
+      "input_sha256": "e1003ad1c32dec3dd976b23138376d086f4383c958896aadc29ae2557206431f"
+    },
+    {
+      "file": "quds_office_engine/fidelity-notes/edited-3.docx",
+      "pages": 1,
+      "text": "Header link\n\n\n\nImported heading\n            1i\nBody text\nBody link\n   1. List item\n Cell text\n\n\n\n\ni Endnote text\n\n\n\n\n1 Revised note\n Revised table\n\n\n\n\nNote link\n\n\nFooter text\n\f",
+      "pixel_sha256": [
+        "443918fd10e786b85f417ab1b24f472e59077029c6fbfe440df5f396a48d2d19"
+      ],
+      "input_sha256": "820be770fe5595c0f255ef12b1f9a7ea09a3e95edfa6caabc3fb55aad0d2e9de"
+    },
+    {
+      "file": "quds_office_engine/fidelity-notes/source.docx",
+      "pages": 1,
+      "text": "Header link\n\n\n\nImported heading\n            1i\nBody text\nBody link\n   1. List item\n Cell text\n\n\n\n\ni Endnote text\n\n\n\n\n1Rich note\n Note table\n\n\n\nNote link\n\n\nFooter text\n\f",
+      "pixel_sha256": [
+        "b54f85bb4e41fb0c7b1920f90eb7cb658abb8845a1eef334e98ab4c921e41626"
+      ],
+      "input_sha256": "11550ac3f3c06bd4093b61bf16cc879827587a53c1cf0abaf8dcbdffc19da59e"
+    },
+    {
+      "file": "quds_office_engine/fidelity-notes/unchanged-1.docx",
+      "pages": 1,
+      "text": "Header link\n\n\n\nImported heading\n            1i\nBody text\nBody link\n   1. List item\n Cell text\n\n\n\n\ni Endnote text\n\n\n\n\n1 Rich note\n Note table\n\n\n\nNote link\n\n\nFooter text\n\f",
+      "pixel_sha256": [
+        "2f4fd753e1e9a848cc7cd57b6f35d5a2e4487c7aeb0061357741aabedf536fe6"
+      ],
+      "input_sha256": "49f451aaa5b74f6ffab6d933396411ab51855ca0b3fa5bf9e893f628d000a6ad"
+    },
+    {
+      "file": "quds_office_engine/fidelity-notes/unchanged-2.docx",
+      "pages": 1,
+      "text": "Header link\n\n\n\nImported heading\n            1i\nBody text\nBody link\n   1. List item\n Cell text\n\n\n\n\ni Endnote text\n\n\n\n\n1 Rich note\n Note table\n\n\n\nNote link\n\n\nFooter text\n\f",
+      "pixel_sha256": [
+        "2f4fd753e1e9a848cc7cd57b6f35d5a2e4487c7aeb0061357741aabedf536fe6"
+      ],
+      "input_sha256": "6f171609be9a59f2e50a707c1c0004e00fed52d90af74c398fa1ab83644a8225"
+    },
+    {
+      "file": "quds_office_engine/fidelity-notes/unchanged-3.docx",
+      "pages": 1,
+      "text": "Header link\n\n\n\nImported heading\n            1i\nBody text\nBody link\n   1. List item\n Cell text\n\n\n\n\ni Endnote text\n\n\n\n\n1 Rich note\n Note table\n\n\n\nNote link\n\n\nFooter text\n\f",
+      "pixel_sha256": [
+        "2f4fd753e1e9a848cc7cd57b6f35d5a2e4487c7aeb0061357741aabedf536fe6"
+      ],
+      "input_sha256": "4c00f8211ab7edbaca63e60e05611d072fb2b5b58ecc7df8c88567470cf7d3d7"
+    },
+    {
+      "file": "quds_office_engine/fidelity-opaque/opaque-1.docx",
+      "pages": 1,
+      "text": "Edited before\n\nImported HTML payload\n\nAfter\n\f",
+      "pixel_sha256": [
+        "0ef3c757d6d53505da7cd4d305a5ef7ca48cb8fc1b6fffc93c3177a4bd4cfb6b"
+      ],
+      "input_sha256": "327e349390019f0ddbda0a83ee9a06f39069017564a2642ce591ee1710769674"
+    },
+    {
+      "file": "quds_office_engine/fidelity-opaque/opaque-2.docx",
+      "pages": 1,
+      "text": "Edited before\n\nImported HTML payload\n\nAfter\n\f",
+      "pixel_sha256": [
+        "0ef3c757d6d53505da7cd4d305a5ef7ca48cb8fc1b6fffc93c3177a4bd4cfb6b"
+      ],
+      "input_sha256": "35032e53c79355d98fde75f0157781f6941bfb8138a7c2f123f27a70a71d70cb"
+    },
+    {
+      "file": "quds_office_engine/fidelity-opaque/opaque-3.docx",
+      "pages": 1,
+      "text": "Edited before\n\nImported HTML payload\n\nAfter\n\f",
+      "pixel_sha256": [
+        "0ef3c757d6d53505da7cd4d305a5ef7ca48cb8fc1b6fffc93c3177a4bd4cfb6b"
+      ],
+      "input_sha256": "e6479d6e3dc7e1f0c3bf6ff698b8bc293e31b5b116586e14bc6360b5e1f0f04e"
+    },
+    {
+      "file": "quds_office_engine/fidelity-script.docx",
+      "pages": 1,
+      "text": "Header link\n\n\nEdited headline    i\n\n\n\n\n                       Body text1ii\n\nBody link\n   1. List item\n Cell text\n\n\n\n\ni Endnote text\nii Added endnote\n\n\n\n\n1 Revised footnote\n\n\nFooter text\n\f",
+      "pixel_sha256": [
+        "40d8ef22cf0cdbb63ac908469559c7ec7109301cf0ff4f5eb30c2ce6baee545d"
+      ],
+      "input_sha256": "c66255c54538c9ed0be52fbdf32f27d277ceed37071c57ab7ee0ef784f71101d"
+    },
+    {
+      "file": "quds_office_engine/fidelity-style-toggles/toggle-1.docx",
+      "pages": 1,
+      "text": "Toggled offDirect onDirect off\nFalse style leaves parent on\n\f",
+      "pixel_sha256": [
+        "0f61fdbac5dfa674818e17e13f9ec801204db90fbd6361e632b6d4b12bcef0d5"
+      ],
+      "input_sha256": "757b7b40e2c0ff5f0a37505aba3dd1ef31de17c9c5d2051f92b523fb4d5fed71"
+    },
+    {
+      "file": "quds_office_engine/fidelity-style-toggles/toggle-2.docx",
+      "pages": 1,
+      "text": "Toggled offDirect onDirect off\nFalse style leaves parent on\n\f",
+      "pixel_sha256": [
+        "0f61fdbac5dfa674818e17e13f9ec801204db90fbd6361e632b6d4b12bcef0d5"
+      ],
+      "input_sha256": "8df0eb8a4f76b796a50c8bbb7f9c3453b0396e1d4e78ce91712793f8c1b82c0e"
+    },
+    {
+      "file": "quds_office_engine/fidelity-style-toggles/toggle-3.docx",
+      "pages": 1,
+      "text": "Toggled offDirect onDirect off\nFalse style leaves parent on\n\f",
+      "pixel_sha256": [
+        "0f61fdbac5dfa674818e17e13f9ec801204db90fbd6361e632b6d4b12bcef0d5"
+      ],
+      "input_sha256": "5239fa5a49656c4cb65f728e1bb6df247865f910425467e5df5b2145c249ac61"
+    },
+    {
+      "file": "quds_office_engine/fidelity-styles/edited-1.docx",
+      "pages": 1,
+      "text": "Inherited paragraph\nCharacter style direct override\nDocument defaults\nCyclic source terminates\n Table header\n Table body\n\f",
+      "pixel_sha256": [
+        "95e4488638fdd5d16876ca7422d604f4e504ea5ef89f4ff56a8601fc8cb19f2c"
+      ],
+      "input_sha256": "7923d2510036005b888972d0592951aa4b2b75be118994fd22d4c3770f985450"
+    },
+    {
+      "file": "quds_office_engine/fidelity-styles/edited-2.docx",
+      "pages": 1,
+      "text": "Inherited paragraph\nCharacter style direct override\nDocument defaults\nCyclic source terminates\n Table header\n Table body\n\f",
+      "pixel_sha256": [
+        "95e4488638fdd5d16876ca7422d604f4e504ea5ef89f4ff56a8601fc8cb19f2c"
+      ],
+      "input_sha256": "ebd01a433268c9aef39ceb750536413c055aca29b3ca093deb2d34f8edab3d35"
+    },
+    {
+      "file": "quds_office_engine/fidelity-styles/edited-3.docx",
+      "pages": 1,
+      "text": "Inherited paragraph\nCharacter style direct override\nDocument defaults\nCyclic source terminates\n Table header\n Table body\n\f",
+      "pixel_sha256": [
+        "95e4488638fdd5d16876ca7422d604f4e504ea5ef89f4ff56a8601fc8cb19f2c"
+      ],
+      "input_sha256": "f9d6e54e87a6eb6bb7181e5bcd8e1f2bf7c4967af5fed1583f67745c1dda9176"
+    },
+    {
+      "file": "quds_office_engine/fidelity-styles/unchanged-1.docx",
+      "pages": 1,
+      "text": "Inherited paragraph\nCharacter style direct override\nDocument defaults\nCyclic source terminates\n Table header\n Table body\n\f",
+      "pixel_sha256": [
+        "67c9e30c7f91ead491ce993127b4416f3112c95c1bbac07103f2490a72dbb8aa"
+      ],
+      "input_sha256": "44e723bf5141b370959f7b2a24e1208e6e3a563a4302344c13191983d0778306"
+    },
+    {
+      "file": "quds_office_engine/fidelity-styles/unchanged-2.docx",
+      "pages": 1,
+      "text": "Inherited paragraph\nCharacter style direct override\nDocument defaults\nCyclic source terminates\n Table header\n Table body\n\f",
+      "pixel_sha256": [
+        "67c9e30c7f91ead491ce993127b4416f3112c95c1bbac07103f2490a72dbb8aa"
+      ],
+      "input_sha256": "781ee2d5cec047e47b9894d8ab95709f59e3b110522aacc9c3efecc439eb9e78"
+    },
+    {
+      "file": "quds_office_engine/fidelity-styles/unchanged-3.docx",
+      "pages": 1,
+      "text": "Inherited paragraph\nCharacter style direct override\nDocument defaults\nCyclic source terminates\n Table header\n Table body\n\f",
+      "pixel_sha256": [
+        "67c9e30c7f91ead491ce993127b4416f3112c95c1bbac07103f2490a72dbb8aa"
+      ],
+      "input_sha256": "2a71afbefe988c9d4be9aff81e61f9b652227b47f81a4078ccda0df9d0b81123"
+    }
+  ],
+  "source_commit": "a79b7d832e080e6e551547ec79c0bb83b7312710",
+  "renderer_script_commit": "24fa590d938f8050f18cdc807c8623124d6abf04"
+}
