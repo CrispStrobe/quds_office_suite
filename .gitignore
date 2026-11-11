@@ -43,3 +43,7 @@ tmp_pdf_compare/
 # OS
 .DS_Store
 Thumbs.db
+
+# Oracle/interpreter and visual-test intermediates
+**/__pycache__/
+**/test/failures/

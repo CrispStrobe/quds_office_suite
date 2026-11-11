@@ -1,0 +1,45 @@
+name: Office fidelity oracles
+on:
+  push:
+    branches: [crispcloud, feature/office-fidelity-oracles]
+  pull_request:
+    paths:
+      - 'packages/quds_office_engine/**'
+      - 'packages/quds_office_editor/**'
+      - '.github/workflows/office-fidelity.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  office-fidelity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.44.0'
+          channel: stable
+          cache: true
+      - run: flutter pub get
+      - name: Engine suite and line coverage
+        working-directory: packages/quds_office_engine
+        run: |
+          dart analyze --no-fatal-infos
+          dart test --coverage=coverage/vm
+          bash tool/fidelity/check.sh
+          python3 tool/fidelity/coverage_report.py
+      - name: Editor suite and reviewed visual golden
+        working-directory: packages/quds_office_editor
+        run: |
+          flutter test --no-pub
+          python3 ../quds_office_engine/tool/fidelity/corpus.py verify build/fidelity
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: office-fidelity-evidence
+          path: |
+            packages/quds_office_engine/build/fidelity*
+            packages/quds_office_engine/coverage/
+            packages/quds_office_editor/build/fidelity/
+            packages/quds_office_editor/test/failures/
