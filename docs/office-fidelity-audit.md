@@ -38,6 +38,11 @@ the source revision and hashes shared files; unrelated vendor changes remain.
 | PPTX exported packages lacked masters and required notes size | Preserve imported templates; add missing master/layout/theme and notes relationships; emit standard sections | Open XML SDK gate; native deck and reorder/delete-notes regression |
 | Slide images/charts overwrote media on other slides | Give visuals an owning-part namespace and retain source slide URIs through reorder | Independent two-slide deck, distinct pictures and chart values over three async cycles |
 | FID-002: notes flattened styled runs, tables, drawings and links | Ordered note blocks round-trip; notes use shaped rich lines and their own media relationships | Rich-note source fixture, three async cycles, glyph/style/link/table/image assertions and reviewed PNG |
+| Tall cell paragraphs overflowed pages and placed late notes early | Split oversized rows at complete line boundaries; reserve notes on the reference's actual page | 120 unique tokens, bounded frames, correct note page, four reviewed page PNGs |
+| Inherited run toggles acted as replacement values | Compose paragraph/character bold/italic toggles; direct true/false remains absolute | Authored opposing styles and direct overrides across repeated async saves |
+| Nonstandard style-part targets could create a second style file | Follow the existing styles relationship when saving | Custom part location and edited character style survive three saves |
+| FID-007: only one visual fixture | Twelve reviewed PNGs cover RTL/Arabic, columns, section/page breaks, note continuation and tall tables | Explicit page counts; same golden before and after export |
+| FID-008 concrete script/body cases | Image replacement preserves expected pixels and dimensions; failed scripts retain output; opaque body XML stays ordered | Independent decoded-pixel/altChunk oracle, invalid-step control and repeated async saves |
 
 ## Corpus and feature matrix
 
@@ -50,54 +55,86 @@ rejects deliberately damaged fixtures. Normal checks never regenerate goldens.
 | Headings/styles | Heading1 and custom styles | Heading level, custom style, undo | XML snapshot and PNG |
 | Paragraph/run formatting | Defaults, highlight and spacing | Alignment, spacing, font, size, bold | Direct-value assertions; host ordering checks |
 | Footnotes/endnotes | IDs, bodies, owned links, mixed notes | Add/edit/delete, caret, formatting, split, undo/redo | ZIP/XML oracle and visible notes |
-| Pictures | Bytes, relationship and dimensions | Resize; replacement CLI provided | Hash/dimensions and visible pixels |
-| Lists | Imported definition and label | Apply imported list style | Numbering snapshot and PNG |
+| Pictures | Bytes, relationship and dimensions | Resize and replace; failed-script protection | Independent decoded-pixel hash, dimensions and PNG |
+| Lists | Imported definition and label | Imported IDs, new lists, levels, undo/redo | Numbering snapshot, visible labels and collision fixture |
 | Tables | Cell text and appearance | Style ID and border properties | XML text, assertions and PNG |
 | Header/footer | Owned links and footer text | Existing host header-edit test | Relationship-aware snapshot and PNG |
-| Opaque package parts | Custom XML retention | Unrelated edits | Byte hash |
-| XLSX | Numbers, string, boolean, formula/cache, merge, frozen row | Cell edit and formula recalculation | Authored JSON vs exported XML |
-| PPTX | Shape text and geometry | Text, position and size | Authored JSON vs exported XML |
+| Opaque package/body content | Custom XML and altChunk wrapper/HTML retention | Clone and unrelated edits | Byte hash, XML order and owning relationship |
+| XLSX | Cells, formulas, styles, links, pivots, charts, freeze/merge | Cell/style edits, live chart updates, new pivots and reorder | Authored JSON plus openpyxl fixture and relationship oracle |
+| PPTX | Text, geometry, templates, images/charts, notes | Text, geometry, charts, notes, transitions/animations and reorder | Authored XML plus python-pptx fixture, decoded pixels and template hashes |
 | Async host save | Reopen controller output | Existing host minimal-edit/format tests | Python checks the actual saved DOCX |
 
-Each format produces three unchanged and three edited save/reopen exports:
-**18 exports** total. The CLI adds a separate multi-feature DOCX edit example.
-Editor and app tests add an actual asynchronous-save DOCX.
+The core matrix produces 18 exports (three unchanged and three edited cycles
+per format). The expanded run produces **65 Office files**, including rich notes,
+styles/toggles, native spreadsheets/decks, new pivots, image replacement, opaque
+body XML, a script example, layout cases and the async editor save. Independent
+semantic/package oracles check 52 files; page goldens and external checks cover
+the additional rendering and integration cases.
 
 See [the runnable guide](../packages/quds_office_engine/tool/fidelity/README.md)
 for command syntax, operation fields, golden maintenance and output locations.
 
 ## Verification
 
-- Full engine suite: **478 passed, 1 existing optional-fixture skip**.
-- Full editor suite: **228 passed, 1 existing optional-fixture skip**, including
-  the reviewed full-page before/after PNG.
-- Independent Python oracle tests: **8 passed**. Scenario exports match all
-  semantic goldens and package checks.
-- CrispCloud root host integration: **15 passed** in GitHub CI, plus the shared
-  corpus and vendor hash guard. CI installs its native compiler/SQLite
-  dependencies and uses Flutter 3.47.8. The fork pins Flutter 3.44.0 for the PNG.
-- Engine analysis: no errors/warnings; three pre-existing informational lints
-  remain in reports/PDF code and an Arabic PDF test.
-- Engine execution coverage: **37,937 / 47,807 instrumented lines (79.4%)**.
-  [The JSON inventory](office-coverage-gaps.json) lists every unhit line in 211
-  instrumented files, and 10 files absent from instrumentation. The denominator
-  excludes those 10 files and is not branch coverage.
+- Full engine suite: **509 passed, 1 existing optional-fixture skip**.
+- Full editor suite: **233 passed, 1 existing optional-fixture skip**, with twelve
+  reviewed PNGs tested before and after export and explicit page counts.
+- Independent Python oracle self-tests: **9 passed**, including deliberate
+  corruption and image/dimension negative controls.
+- CrispCloud root host integration: **16 passed locally against the latest pin**,
+  using GCC and system SQLite with temporary compiler discovery restored after
+  the run. The independent oracle also verified the actual controller export.
+  GitHub CI passed at `98fa6b6`; latest-pin CI remains queued. CI installs
+  clang/SQLite and uses Flutter 3.47.8; the fork pins 3.44.0.
+- Analysis: no errors or warnings; three pre-existing informational lints remain
+  in reports/PDF code and an Arabic PDF test.
+- Engine execution coverage: **39,247 / 49,130 instrumented lines (79.9%)**.
+  [The JSON inventory](office-coverage-gaps.json) lists every unhit line in 216
+  instrumented files and 10 files absent from instrumentation. The denominator
+  excludes those 10 files and does not measure branch coverage.
 
-Coverage was collected from a fresh directory after the final source change.
-GitHub workflow artifacts retain exports, oracle reports, coverage and image
-failure diffs. An earlier CI invocation failed on an unsupported analyzer flag;
-the workflow now uses the supported `dart analyze` command.
+Coverage was collected from a fresh directory after the final engine source
+change. Schema and render reports include SHA-256 hashes of each checked input.
+The source revision for this evidence is `a79b7d8`.
 
-## Open gaps
+## External checks and remaining boundaries
 
-The regressions above are fixed. This is not exhaustive Office-format support
-or interoperability certification. Remaining gaps are explicit:
+The Open XML SDK 3.3.0 validator ran Office 2019 schema/semantic checks over
+**all 65 exported files with zero errors**. Positive and deliberately invalid
+controls also passed. [The schema report](office-schema-evidence.json) records
+each validated file; no errors were suppressed. A separate check of 57 exports
+produced by CrispCloud’s toolchain, including its actual host save, also returned
+zero errors; [the app report](https://github.com/CrispStrobe/CrispCloud/blob/feature/office-fidelity-oracles/docs/office-schema-evidence.json) pins those inputs.
 
-| ID | Gap | Next acceptance check |
-| --- | --- | --- |
-| FID-006 | No external Word/LibreOffice rendering or full XSD validation performed | Open/export corpus in external engines and compare rendered output/schema results |
-| FID-007 | One visual fixture on one platform/SDK | Expand RTL/Arabic, columns, sections, long documents and page breaks |
-| FID-008 | Untested branches/features beyond this corpus | Use exact coverage inventory; imageReplace, arbitrary unsupported body XML and many PDF/report/formula branches need stronger oracles |
+External validation exposed and closed missing PPTX masters/notes size, wrong
+transition/transform namespaces, axis-ID range/collision problems, duplicate
+worksheet drawing relationships, invalid pivot metadata, and Excel font/Word
+style child-order errors. It also corrected missing required attributes in the
+authored style fixture. FID-006's schema/rendering gate is now exercised locally;
+GitHub repeats it automatically on the same runner as the full tests.
 
-An unhit line is not proof of a bug; an executed line is not proof of correct
-behavior. Keep both semantic expectations and this gap list as the suite grows.
+LibreOffice Writer/Calc/Impress opens the corpus, exports PDFs, and compares text
+and rendered page pixels across repeated save cycles. The final run passed
+**all 65 files and 22 cycle groups**, including tall-table and inherited toggle
+cases.
+[The committed render report](office-render-evidence.json) records text, page
+counts and pixel hashes. The workflow publishes PDFs and
+machine-readable reports alongside all source-engine evidence.
+
+The original FID-001 through FID-007 concrete cases are covered by
+the regression matrix above. FID-008's named image/script/opaque-body cases are
+covered; its broader coverage inventory remains a test backlog, not evidence
+that every unhit line is defective. In particular:
+
+- Opaque Word body elements are preserved for external consumers; the editor
+  does not render/edit every unknown element or nested extension.
+- The style matrix covers defaults, basedOn, themes, character styles and tested
+  table regions. It does not certify every conditional table-style region.
+- Native chart/pivot tests cover the declared single-series scenarios; they do
+  not certify every chart type, multi-series edit, pivot layout or cache feature.
+- PDF/report/formula modules retain unhit lines listed in the coverage inventory.
+- Goldens use one pinned Linux/Flutter/font environment. Word/Excel/PowerPoint
+  desktop automation and cross-platform pixel equivalence have not been run.
+
+An unhit line is not proof of a bug; an executed line is not proof of correctness.
+Keep semantic expectations and these limits visible as the corpus grows.
