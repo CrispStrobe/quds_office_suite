@@ -30,6 +30,8 @@ the source revision and hashes shared files; unrelated vendor changes remain.
 | Multiline note bodies truncated; long endnotes overflowed | Render explicit lines and continue endnotes on additional pages | Layout regression and PNG |
 | PNG captured before image decode and cut off page bottom | Require visible picture pixels and capture notes/footer | Full-page import/reopen golden |
 | Fork changes could silently miss app | Hash guard plus root host integration tests | Vendored manifest and async-save artifact |
+| FID-004: list commands collided with imported IDs 1/2 | Allocate and reuse document-local definitions; changing levels keeps identity; list commands support undo/redo | Collision fixture, three async cycles, host history test |
+| Imported numbering start and Roman/alphabetic formats ignored | Honor zero/non-one starts and Roman, alphabetic and padded decimal labels | Independently authored numbering cases |
 
 ## Corpus and feature matrix
 
@@ -90,7 +92,6 @@ or interoperability certification. Remaining gaps are explicit:
 | FID-001 | Footnote placement does not reflow dense body text or continue an oversized footnote | `_attachNotes` runs after body pagination; add dense multi-page fixtures and assert no body/note overlap |
 | FID-002 | Note overlays lack complete rich-run styling, wrapping, drawings and tables | Shape and paginate rich note content; add long/rich-note visual fixtures |
 | FID-003 | Source style preservation is broader than implemented character/table style editing and cascade | Effective-style fixtures for basedOn/theme/character/table combinations |
-| FID-004 | List-type commands use built-in IDs that can collide with imported numId 1/2 | Collision fixtures and document-local definition allocation |
 | FID-005 | Independent sheet/slide corpus is smaller than DOCX | External fixtures for sheet styles/charts/pivots and slide masters/themes/notes/animations |
 | FID-006 | No external Word/LibreOffice rendering or full XSD validation performed | Open/export corpus in external engines and compare rendered output/schema results |
 | FID-007 | One visual fixture on one platform/SDK | Expand RTL/Arabic, columns, sections, long documents and page breaks |
