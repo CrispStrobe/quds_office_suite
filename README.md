@@ -99,56 +99,83 @@ On the right is the engine's, made in pure Dart.
 
 This is the CrispStrobe fork of
 [MohammedAsaadAsaad/quds_office_suite](https://github.com/MohammedAsaadAsaad/quds_office_suite).
-It exists because [CrispCloud](https://github.com/CrispStrobe/CrispCloud)
-vendors the engine and editor through local path overrides. A fix made only
-here would never reach the app, and a fix made only in the app would never come
-back. The work below keeps the two copies aligned and proves, with evidence
-that does not come from our own serializer, that Office files survive being
-opened, edited and saved.
 
-### What changed, and why
+### Why it exists
 
-- **Round-trip fidelity (engine and editor).** Footnote/endnote identity,
-  source styles, numbering definitions, table styles and borders, hyperlinks in
-  notes and headers, and explicit direct formatting (black / 11pt / zero
-  spacing / left) are now preserved instead of being regenerated or flattened
-  on save. Why: opening a real Word or LibreOffice file and saving it must not
-  silently change it.
-- **Notes layout.** Mixed and multiple notes per paragraph, multiline note
-  bodies, and notes with styled runs, tables, drawings and links render; the
-  note band is reserved during body layout and long notes continue on extra
-  pages instead of disappearing or overlapping the body.
+[CrispCloud](https://github.com/CrispStrobe/CrispCloud) opens, edits and saves
+Word, Excel and PowerPoint files that live in users' cloud accounts. It uses
+`quds_office_engine` and `quds_office_editor` from this repository through
+local path overrides (`packages/` in CrispCloud, pinned to a commit of this
+fork by a file-hash manifest). Two consequences drove the work here:
+
+- **One fix, two places.** A fix made only in CrispCloud would never come back
+  here, and a fix made only here would never reach the app. Every change lands
+  in this fork first; CrispCloud then syncs the exact files and its hash guard
+  fails if the copies drift.
+- **Saving must not damage a user's file.** A cloud file manager that silently
+  rewrites styles, drops notes or breaks a deck on save destroys data the user
+  did not ask it to touch. So the goal was not "more features" but "what goes
+  in comes out", proven by checks that do not trust our own serializer.
+
+### What we changed
+
+- **Word round-trip fidelity.** Footnote/endnote identity, source styles,
+  numbering definitions, table styles and borders, hyperlinks in notes and
+  headers, and explicit direct formatting (black / 11pt / zero spacing / left)
+  are preserved instead of regenerated or flattened on save.
+- **Notes layout.** Mixed and multiple notes per paragraph, multiline bodies
+  and notes with styled runs, tables, drawings and links render. The note band
+  is reserved during body layout, and long or rich notes paginate onto extra
+  pages in source order instead of disappearing or overlapping the body.
 - **Lists.** List commands allocate document-local definitions, so they no
   longer collide with imported list IDs; imported start values and Roman,
-  alphabetic and padded-decimal formats are honored; list commands undo/redo.
+  alphabetic and padded-decimal formats are honored; list edits undo/redo.
 - **Editing and history.** Footnote insertion follows the caret, paragraph
   splits keep rich runs, and repeated undo/redo no longer mutates history
   snapshots.
-- **CrispCloud fixes merged in.** Imported footnote references render as
-  superscript, visible Word selection and header/footer relayout, rotated PDF
-  watermarks, and report-designer font and template-band fixes.
-- **Independent verification.** Expected values come from authored XML/JSON,
-  not from blessing our own output. A Python oracle reads exported ZIP/XML
-  directly, and a .NET tool (`tool/office-validation`) validates exported
-  packages with the Open XML SDK. Negative tests confirm the oracles reject
-  damaged files. There are 18 save/reopen exports across DOCX, XLSX and PPTX,
-  plus a reviewed full-page visual golden. The `office-fidelity` CI workflow
-  runs all of it.
-- **Lint clean.** Engine analysis passes with `--fatal-infos` (the last four
-  informational lints were fixed).
+- **PowerPoint templates and media.** Exported decks keep the imported slide
+  masters, layouts and theme, and gain any missing master/layout/theme and
+  notes-size parts PowerPoint requires. Pictures and charts are namespaced to
+  the slide that owns them, so editing or reordering one slide can no longer
+  overwrite another slide's media.
+- **Fixes merged back from CrispCloud.** Imported footnote references render
+  as superscript, visible Word selection and header/footer relayout, rotated
+  PDF watermarks, and report-designer font and template-band fixes.
+- **Lint clean.** Engine and reports analysis passes with `--fatal-infos`.
 
-The full gap list, feature matrix and coverage inventory are in
-[`docs/office-fidelity-audit.md`](docs/office-fidelity-audit.md) and
-[`docs/office-coverage-gaps.json`](docs/office-coverage-gaps.json). The runnable
-guide is [`packages/quds_office_engine/tool/fidelity/README.md`](packages/quds_office_engine/tool/fidelity/README.md).
+### How it is verified
+
+Expected values are authored by hand (XML/JSON) or produced by other tools,
+never by blessing our own output:
+
+- A Python oracle reads exported ZIP/XML directly and compares it with the
+  authored expectations; negative tests confirm it rejects damaged files.
+- Import fixtures `native.pptx` and `native.xlsx` are produced by independent
+  libraries (python-pptx, openpyxl; versions in `native-producers.json`), so
+  import is tested against files our code did not write.
+- A .NET tool (`tool/office-validation`) validates every exported package with
+  the Open XML SDK.
+- Save/reopen exports across DOCX, XLSX and PPTX, scripted edits, and a
+  reviewed full-page visual golden.
+- The `office-fidelity` CI workflow runs all of it; the engine's own suite has
+  about 490 tests.
+
+Run it locally from `packages/quds_office_engine`: `dart test`, then
+`tool/fidelity/check.sh`. The full gap list, feature matrix and coverage
+inventory are in [`docs/office-fidelity-audit.md`](docs/office-fidelity-audit.md)
+and [`docs/office-coverage-gaps.json`](docs/office-coverage-gaps.json); the
+runnable guide is
+[`packages/quds_office_engine/tool/fidelity/README.md`](packages/quds_office_engine/tool/fidelity/README.md).
 
 ### Known limits
 
-- The page golden is reviewed on Linux with Flutter 3.44.0 (what CI uses).
-  On macOS, or another Flutter version, it differs by about 0.6% of pixels
-  from font rasterization. That is not a regression; do not regenerate the
-  golden from a different platform.
-- Engine line coverage is 79.4%, not branch coverage.
+- The page golden is reviewed on Linux with Flutter 3.44.0 (what CI uses). On
+  macOS or another Flutter version it differs by about 0.6% of pixels from
+  font rasterization. That is not a regression; do not regenerate the golden
+  from a different platform.
+- Engine line coverage is 79.4% (line, not branch, coverage).
+- Fidelity is proven for the features in the audit matrix; anything listed
+  there as a gap may still be simplified on save.
 
 ---
 
