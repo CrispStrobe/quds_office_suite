@@ -1441,7 +1441,17 @@ class WordDeserializer {
           reader.localName == 'p' &&
           reader.namespaceUri == OfficeNamespaces.w) {
         // Resolve drawings against the header/footer part, not document.xml.
-        paragraphs.add(_readParagraph(reader, package, storyUri));
+        final WmlParagraph paragraph = _readParagraph(
+          reader,
+          package,
+          storyUri,
+        );
+        // A drawing-only paragraph is represented by the separate story
+        // visual, just as in the body. Retaining both adds a blank paragraph
+        // on every save/reopen cycle.
+        if (paragraph.inlines.isNotEmpty || _pendingVisuals.isEmpty) {
+          paragraphs.add(paragraph);
+        }
         if (visualsOut != null && _pendingVisuals.isNotEmpty) {
           visualsOut.addAll(_pendingVisuals);
           _pendingVisuals.clear();

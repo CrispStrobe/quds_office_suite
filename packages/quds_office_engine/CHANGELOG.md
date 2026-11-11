@@ -4,6 +4,13 @@ All notable changes to `quds_office_engine` are documented here.
 
 ## Unreleased
 
+- Preserve pictures and charts in default, first-page and even-page headers
+  and footers; keep their relationships scoped to the owning story.
+- Follow package relationships when saving nonstandard Word main, styles, notes
+  and settings parts, so edits reach the part opened by external applications.
+- Replacing or reordering Word media no longer overwrites payloads shared by
+  other stories or retained package parts. Repeated saves reuse unchanged data.
+
 - Fix the feature-showcase template detail band so its item table fits.
 - Watermark text rotates as one marked line on every page.
 - Imported DOCX footnote and endnote reference marks render as superscript.
