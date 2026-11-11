@@ -4,6 +4,12 @@ All notable changes to `quds_office_engine` are documented here.
 
 ## Unreleased
 
+- Integrate formatting-aware note updates with native markers: Enter and
+  backspace carry actual inline boundaries and styled text; imported unmarked
+  or later-marked notes retain visible leading whitespace. More complex
+  paragraph-count replacements containing native ranges reject before mutation.
+  Heading ID allocation also reserves bookmarks inside preserved opaque XML.
+
 - Preserve native bookmark IDs, names, optional attributes and exact ordered
   endpoints across multiple ranges, overlapping ranges, paragraphs, tables,
   header/footer stories and notes. Zero-width markers survive run edits,

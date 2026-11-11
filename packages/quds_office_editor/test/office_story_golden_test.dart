@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'dart:typed_data';
 import 'dart:ui' as ui;
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
@@ -111,18 +110,21 @@ void main() {
                 ) {
                   final y = offset ~/ (image.width * 4);
                   for (var band = 0; band < 2; band++) {
-                    if ((band == 0 && y > 180) || (band == 1 && y < 900))
+                    if ((band == 0 && y > 180) || (band == 1 && y < 900)) {
                       continue;
+                    }
                     final color = colors[page][band];
                     if ((bytes.getUint8(offset) - color[0]).abs() < 3 &&
                         (bytes.getUint8(offset + 1) - color[1]).abs() < 3 &&
-                        (bytes.getUint8(offset + 2) - color[2]).abs() < 3)
+                        (bytes.getUint8(offset + 2) - color[2]).abs() < 3) {
                       found[band] = true;
+                    }
                   }
                 }
                 image.dispose();
-                if (!found.every((value) => value))
+                if (!found.every((value) => value)) {
                   await Future<void>.delayed(const Duration(milliseconds: 20));
+                }
                 return found.every((value) => value);
               }) ??
               false;

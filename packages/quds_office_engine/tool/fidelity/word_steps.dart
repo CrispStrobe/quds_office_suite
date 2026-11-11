@@ -609,8 +609,10 @@ void _editStyle(WmlDocument doc, StepInput s) {
       }
       props.addChild(element);
     }
-    if (group == 'rPr' || group == 'pPr') WordPropertyIo.order(props);
+    WordPropertyIo.orderChildren(props);
   }
+  // A newly added property group must also take its schema position.
+  WordPropertyIo.orderChildren(style);
   source.$1.writeText(source.$2.toXmlString());
   WordDeserializer().refreshStyles(doc);
 }

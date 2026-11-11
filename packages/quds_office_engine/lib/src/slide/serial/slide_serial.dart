@@ -589,6 +589,9 @@ class SlideSerializer {
     return package;
   }
 
+  // SDK semantic constraints restrict axis IDs to signed-positive integers.
+  // Allocate replacements for out-of-range producer IDs without colliding with
+  // valid IDs, and apply the same mapping to every axis reference in the part.
   static Map<PmlShape, String> _syncSlideVisuals(
     PmlSlide slide,
     OpcPackage package,

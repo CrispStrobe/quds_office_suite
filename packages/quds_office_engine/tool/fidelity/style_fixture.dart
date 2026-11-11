@@ -19,7 +19,7 @@ OpcPackage styleFixture() {
     utf8.encode('''
 <w:styles xmlns:w="${OfficeNamespaces.w}">
 <w:docDefaults><w:rPrDefault><w:rPr><w:rFonts w:asciiTheme="minorHAnsi"/><w:sz w:val="24"/></w:rPr></w:rPrDefault><w:pPrDefault><w:pPr><w:spacing w:after="100"/></w:pPr></w:pPrDefault></w:docDefaults>
-<w:style w:type="paragraph" w:styleId="Base"><w:name w:val="Base"/><w:pPr><w:spacing w:before="240"/></w:pPr><w:rPr><w:b/><w:color w:val="auto" w:themeColor="accent1"/><w:sz w:val="28"/></w:rPr></w:style>
+<w:style w:type="paragraph" w:styleId="Base"><w:name w:val="Base"/><w:pPr><w:spacing w:before="240"/></w:pPr><w:rPr><w:b/><w:color w:val="225588" w:themeColor="accent1"/><w:sz w:val="28"/></w:rPr></w:style>
 <w:style w:type="paragraph" w:styleId="Child"><w:name w:val="Child"/><w:basedOn w:val="Base"/><w:pPr><w:spacing w:after="60"/></w:pPr></w:style>
 <w:style w:type="character" w:styleId="AccentBase"><w:name w:val="Accent base"/><w:rPr><w:i/></w:rPr></w:style>
 <w:style w:type="character" w:styleId="Accent"><w:name w:val="Accent"/><w:basedOn w:val="AccentBase"/><w:rPr><w:color w:val="AA3300"/><w:sz w:val="32"/></w:rPr></w:style>

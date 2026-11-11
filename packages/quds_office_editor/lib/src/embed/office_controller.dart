@@ -79,6 +79,7 @@ abstract class OfficeController extends ChangeNotifier {
   OfficeSurfaceConfig _config;
   var _dirty = false;
   var _disposed = false;
+  var _contentRevision = 0;
 
   /// config API.
   OfficeSurfaceConfig get config => _config;
@@ -91,6 +92,12 @@ abstract class OfficeController extends ChangeNotifier {
 
   /// isDirty API.
   bool get isDirty => _dirty;
+
+  /// Monotonic revision for controller-observed document changes. Hosts can
+  /// capture this after committing pending edits and compare it after an
+  /// asynchronous save. Caret, viewport and layout notifications do not advance
+  /// it; immediate note-pane edits do, before their undo command is committed.
+  int get contentRevision => _contentRevision;
 
   /// canUndo API.
   bool get canUndo => commands.canUndo;
@@ -377,6 +384,7 @@ abstract class OfficeController extends ChangeNotifier {
   }
 
   void _onCommands() {
+    _contentRevision++;
     _dirty = true;
     notifyListeners();
   }
@@ -834,6 +842,7 @@ class WordEditorController extends OfficeController {
   @override
   /// saveBytes API.
   Uint8List saveBytes({String? password}) {
+    commitNoteEdits();
     final Uint8List bytes = WordSerializer().writeBytes(
       document,
       password: password,
@@ -845,6 +854,7 @@ class WordEditorController extends OfficeController {
   @override
   /// saveBytesAsync API.
   Future<Uint8List> saveBytesAsync({String? password}) {
+    commitNoteEdits();
     return OfficeIsolateSave.word(document, password: password);
   }
 
@@ -6613,12 +6623,121 @@ class WordEditorController extends OfficeController {
     notifyListeners();
   }
 
-  /// setNoteText API.
+  /// The text a notes editor shows for [note]: one line per paragraph.
+  String noteEditText(WmlNote note) => WordNotes.editableText(note);
+
+  final Map<WmlNote, List<WmlBlock>> _noteEditStart =
+      <WmlNote, List<WmlBlock>>{};
+
+  /// Replaces the editable text of [note], keeping its formatting, tables,
+  /// pictures and links (see [WordNotes.editText]).
+  ///
+  /// Successive calls for the same note form one edit; [commitNoteEdit]
+  /// records it as a single undo step. A pending edit is also committed by an
+  /// edit of another note and by [undo]. The text is applied immediately, so
+  /// saving needs no commit.
   void setNoteText(WmlNote note, String text) {
     if (!config.allowsMutation) {
       return;
     }
-    note.text = text;
+    final List<String> beforeText = note.paragraphs.map((p) => p.text).toList();
+    if (WordNotes.editableText(note) == text) return;
+    for (final WmlNote other in _noteEditStart.keys.toList()) {
+      if (!identical(other, note)) {
+        commitNoteEdit(other);
+      }
+    }
+    _noteEditStart.putIfAbsent(
+      note,
+      () => <WmlBlock>[for (final WmlBlock b in note.blocks) WmlClone.block(b)],
+    );
+    WordNotes.editText(note, text);
+    if (listEquals(beforeText, note.paragraphs.map((p) => p.text).toList())) {
+      return;
+    }
+    _contentRevision++;
+    _dirty = true;
+    relayout();
+    notifyListeners();
+  }
+
+  /// Records every pending notes-pane edit as an undo step.
+  void commitNoteEdits() {
+    for (final WmlNote note in _noteEditStart.keys.toList()) {
+      commitNoteEdit(note);
+    }
+  }
+
+  @override
+  /// Commits a pending notes-pane edit first, so it is the step undone.
+  void undo() {
+    commitNoteEdits();
+    super.undo();
+  }
+
+  /// Records the edit started by [setNoteText] as one undoable command.
+  void commitNoteEdit(WmlNote note) {
+    final List<WmlBlock>? before = _noteEditStart.remove(note);
+    if (before == null) {
+      return;
+    }
+    final List<WmlBlock> after = <WmlBlock>[
+      for (final WmlBlock b in note.blocks) WmlClone.block(b),
+    ];
+    if (WmlClone.plainTextOf(before) == WmlClone.plainTextOf(after) &&
+        before.length == after.length) {
+      return;
+    }
+    void restore(List<WmlBlock> blocks) {
+      note.blocks
+        ..clear()
+        ..addAll(<WmlBlock>[
+          for (final WmlBlock b in blocks) WmlClone.block(b),
+        ]);
+    }
+
+    commands.commit(
+      _CallbackCommand(
+        executeFn: () => restore(after),
+        undoFn: () => restore(before),
+      ),
+    );
+  }
+
+  /// Deletes [note] and its reference mark in the body, as one undo step.
+  void deleteNote(WmlNote note) {
+    if (!config.allowsMutation) {
+      return;
+    }
+    commitNoteEdit(note);
+    final List<WmlNote> bucket = note.endnote
+        ? document.endnotes
+        : document.footnotes;
+    final int index = bucket.indexOf(note);
+    if (index < 0) {
+      return;
+    }
+    final WmlParagraph? anchor = WordNotes.paragraphOf(document, note);
+    final WmlParagraphProps? anchorProps = anchor?.properties.copy();
+    final List<WmlInline>? anchorInlines = anchor == null
+        ? null
+        : _cloneInlines(anchor);
+    commands.commit(
+      _CallbackCommand(
+        executeFn: () {
+          WordNotes.delete(document, note.id, endnote: note.endnote);
+        },
+        undoFn: () {
+          bucket.insert(index.clamp(0, bucket.length), note);
+          if (anchor != null) {
+            anchor.properties = anchorProps!.copy();
+            anchor.inlines
+              ..clear()
+              ..addAll(_cloneInlinesFrom(anchorInlines!));
+          }
+        },
+      ),
+    );
     relayout();
     notifyListeners();
   }

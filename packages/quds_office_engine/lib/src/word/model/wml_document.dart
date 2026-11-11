@@ -42,7 +42,8 @@ final class WmlSdtBlockBoundary extends WmlBlock {
 
 /// An imported block retained for export without claiming layout support.
 ///
-/// Currently used for `w:altChunk`. The XML and relationship provenance are
+/// Used for `w:altChunk` and for any other unmodeled body-level element, kept
+/// as opaque XML in document order. The XML and relationship provenance are
 /// immutable, so moving or cloning the block cannot discard its external
 /// content or accidentally resolve a story-local relationship in another part.
 final class WmlOpaqueBlock extends WmlBlock {

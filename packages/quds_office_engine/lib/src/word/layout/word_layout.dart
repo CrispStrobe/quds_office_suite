@@ -21,6 +21,7 @@ import '../model/word_toc.dart';
 import '../properties/wml_properties.dart';
 
 part 'word_note_layout.dart';
+part 'word_table_row_layout.dart';
 
 /// Class LaidOutGlyph.
 class LaidOutGlyph {
@@ -994,6 +995,9 @@ class WordLayoutEngine {
     }
     for (final WmlBlock block in section.blocks) {
       switch (block) {
+        case WmlSdtBlockBoundary():
+        case WmlOpaqueBlock():
+          break;
         case WmlParagraph():
           if (block.properties.pageBreakBefore) {
             flow.breakPage();
@@ -1083,11 +1087,6 @@ class WordLayoutEngine {
           flow.y = toc.y;
           flow.pageIndex = toc.pageIndex;
           paragraphIndex += 1 + block.itemParagraphs.length;
-        case WmlSdtBlockBoundary():
-        case WmlOpaqueBlock():
-          // Preserve for export only; an altChunk requires an external content
-          // importer before it can participate in this layout model.
-          break;
       }
     }
     flow.finish();
@@ -1111,6 +1110,9 @@ class WordLayoutEngine {
     var n = 0;
     for (final WmlBlock block in blocks) {
       switch (block) {
+        case WmlSdtBlockBoundary():
+        case WmlOpaqueBlock():
+          break;
         case WmlParagraph():
           n++;
         case WmlTable():
@@ -1121,8 +1123,6 @@ class WordLayoutEngine {
           n += 1 + block.itemParagraphs.length;
         case WmlVisual():
         case WmlEquation():
-        case WmlSdtBlockBoundary():
-        case WmlOpaqueBlock():
           break;
       }
     }
@@ -1552,6 +1552,41 @@ class WordLayoutEngine {
 
     for (final WmlTableRow row in table.rows) {
       final int rowIndex = table.rows.indexOf(row);
+      final double fullRowHeight = _measureTableRowHeightFrom(
+        row,
+        cols,
+        section,
+        nextBlock: List<int>.filled(row.cells.length, 0),
+        tableX: tableX,
+        tableWidth: tableWidth,
+        rtl: rtl,
+        cellPad: cellPad,
+      );
+      if (fullRowHeight > section.contentHeight - cellPad * 2) {
+        final laid = _layoutTallTableRow(
+          this,
+          table,
+          rowIndex,
+          cols,
+          section,
+          pages,
+          current,
+          currentFrames,
+          idx,
+          cursorY,
+          para,
+          tableX,
+          tableWidth,
+          flow?.sectionIndex ?? 0,
+        );
+        cursorY = laid.y;
+        idx = laid.pageIndex;
+        para += row.cells
+            .expand((cell) => cell.blocks)
+            .expand(WmlClone.paragraphsOf)
+            .length;
+        continue;
+      }
       final List<int> nextBlock = List<int>.filled(row.cells.length, 0);
       var sliceStart = true;
       while (true) {
@@ -1921,7 +1956,7 @@ class WordLayoutEngine {
     if (block is WmlEquation) {
       return OmmlLayout.layout(block.math, fontSize: 14).height + 4;
     }
-    if (block is WmlOpaqueBlock || block is WmlSdtBlockBoundary) return 0;
+    if (block is WmlOpaqueBlock) return 0;
     return 18;
   }
 
@@ -2087,6 +2122,9 @@ class WordLayoutEngine {
     final double innerW = math.max(12, frame.width - pad * 2);
     for (final WmlBlock block in frame.blocks) {
       switch (block) {
+        case WmlSdtBlockBoundary():
+        case WmlOpaqueBlock():
+          break;
         case WmlParagraph():
           final ({double y, int pageIndex}) laid = _layoutParagraph(
             block,
@@ -2146,8 +2184,6 @@ class WordLayoutEngine {
         case WmlFrame():
           para = _layoutFrame(block, section, flow, para);
         case WmlToc():
-        case WmlSdtBlockBoundary():
-        case WmlOpaqueBlock():
           break;
       }
     }

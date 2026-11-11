@@ -236,12 +236,12 @@ void pwEmitStampLine(
       : line.width;
   final double x = (pageW - width) / 2;
   final double y = pageH / 2;
-  final SfntFont? face = stampFace;
+  final SfntFont face = stampFace;
   final ({FontSubset? subset, String fontName}) embed = context.embedFor(
     bold: resolved.bold,
   );
   final List<int> glyphIds = <int>[];
-  if (face != null && embed.subset != null) {
+  if (embed.subset != null) {
     for (final ShapedGlyph glyph in line.glyphs) {
       final int paintCp = _drawableCodePoint(face, glyph.codePoint);
       glyphIds.add(
@@ -262,7 +262,7 @@ void pwEmitStampLine(
     fontSize: resolved.fontSize,
     logical: text,
     color: resolved.color,
-    fontName: face == null ? 'F2' : embed.fontName,
+    fontName: embed.fontName,
     glyphIds: glyphIds,
   );
   canvas.restore();

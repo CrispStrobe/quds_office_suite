@@ -196,7 +196,8 @@ class InventoryTest(unittest.TestCase):
         try:
             os.chdir(self.root.parent)
             self.assertEqual(inventory.package_root(), inventory.DEFAULT_ROOT)
-            self.assertEqual(inventory.package_root(self.root), self.root)
+            # Compare resolved paths: macOS temp dirs live behind /var -> /private/var.
+            self.assertEqual(inventory.package_root(self.root), self.root.resolve())
         finally:
             os.chdir(previous)
 

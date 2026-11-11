@@ -4,6 +4,10 @@ All notable changes to `quds_office_editor` are documented here.
 
 ## Unreleased
 
+- Expose a content revision that advances immediately for pending note-pane
+  edits as well as commands and history. Saves commit pending note edits before
+  encoding so hosts can guard asynchronous completion against a later edit.
+
 - Preserve native bookmark endpoints through run formatting, paragraph splits,
   inside-range edits, native clipboard insertion and undo/redo. Invalid partial
   range copies and duplicated native identities reject on export rather than

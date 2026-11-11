@@ -584,6 +584,12 @@ String slideToXml(PmlSlide slide, {Map<PmlShape, String>? embedIds}) {
 
   /// writeNamespace API.
   w.writeNamespace('c', OfficeNamespaces.c);
+  w.writeNamespace(
+    'p14',
+    'http://schemas.microsoft.com/office/powerpoint/2010/main',
+  );
+  w.writeNamespace('mc', OfficeNamespaces.mc);
+  w.writeAttribute('mc:Ignorable', 'p14');
 
   /// writeStartElement API.
   w.writeStartElement('cSld', prefix: 'p');

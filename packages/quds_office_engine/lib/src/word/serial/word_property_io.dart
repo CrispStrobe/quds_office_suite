@@ -90,12 +90,12 @@ abstract final class WordPropertyIo {
     for (final n in generated.childrenNamed('sectPr')) {
       result.addChild(n.copy());
     }
-    order(result);
+    orderChildren(result);
     return result;
   }
 
-  /// Put properties in OOXML schema order after an explicit style edit.
-  static void order(XmlElement properties) {
+  /// Canonical OOXML property order for sparse style and direct property edits.
+  static void orderChildren(XmlElement element) {
     const runOrder = [
       'rStyle',
       'rFonts',
@@ -176,12 +176,80 @@ abstract final class WordPropertyIo {
       'sectPr',
       'pPrChange',
     ];
-    final order = properties.localName == 'rPr' ? runOrder : paragraphOrder;
+    final order = switch (element.localName) {
+      'rPr' => runOrder,
+      'pPr' => paragraphOrder,
+      'tblPr' => [
+        'tblStyle',
+        'tblpPr',
+        'tblOverlap',
+        'bidiVisual',
+        'tblStyleRowBandSize',
+        'tblStyleColBandSize',
+        'tblW',
+        'jc',
+        'tblCellSpacing',
+        'tblInd',
+        'tblBorders',
+        'shd',
+        'tblLayout',
+        'tblCellMar',
+        'tblLook',
+        'tblCaption',
+        'tblDescription',
+        'tblPrChange',
+      ],
+      'tcPr' => [
+        'cnfStyle',
+        'tcW',
+        'gridSpan',
+        'hMerge',
+        'vMerge',
+        'tcBorders',
+        'shd',
+        'noWrap',
+        'tcMar',
+        'textDirection',
+        'tcFitText',
+        'vAlign',
+        'hideMark',
+        'headers',
+        'cellIns',
+        'cellDel',
+        'cellMerge',
+        'tcPrChange',
+      ],
+      'style' => [
+        'name',
+        'aliases',
+        'basedOn',
+        'next',
+        'link',
+        'autoRedefine',
+        'hidden',
+        'uiPriority',
+        'semiHidden',
+        'unhideWhenUsed',
+        'qFormat',
+        'locked',
+        'personal',
+        'personalCompose',
+        'personalReply',
+        'rsid',
+        'pPr',
+        'rPr',
+        'tblPr',
+        'trPr',
+        'tcPr',
+        'tblStylePr',
+      ],
+      _ => <String>[],
+    };
     int rank(XmlNode n) {
       final i = n is XmlElement ? order.indexOf(n.localName) : -1;
       return i < 0 ? order.length : i;
     }
 
-    properties.children.sort((a, b) => rank(a).compareTo(rank(b)));
+    element.children.sort((a, b) => rank(a).compareTo(rank(b)));
   }
 }

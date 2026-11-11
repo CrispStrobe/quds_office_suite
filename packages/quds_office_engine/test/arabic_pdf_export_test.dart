@@ -123,7 +123,7 @@ void main() {
       _doc('$_phrase 2026'),
       fonts: OfficeFontSet(
         primary: naskh,
-        fallbacks: <SfntFont>[if (latin != null) latin],
+        fallbacks: <SfntFont>[?latin],
       ),
       title: 'Arabic',
     );

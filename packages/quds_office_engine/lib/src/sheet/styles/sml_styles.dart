@@ -494,7 +494,10 @@ class SmlStyleSheet {
     }
     buf.write('</cellXfs></styleSheet>');
     final generated = XmlDocument.parse(buf.toString());
-    if (_source == null) return generated.toXmlString();
+    if (_source == null) {
+      _orderFonts(generated);
+      return generated.toXmlString();
+    }
     final result = XmlDocument.parse(_source!.toXmlString());
     for (final name in ['fonts', 'fills', 'cellXfs']) {
       final old = result.root!.firstChild(name);
@@ -553,14 +556,18 @@ class SmlStyleSheet {
       }
       old.setAttribute('count', '${old.childElements.length}');
     }
-    // Some import producers emit the same properties in a non-schema order.
-    // Normalize their sequence without changing the properties themselves.
+    _orderFonts(result);
+    return result.toXmlString();
+  }
+
+  // Some import producers emit the same properties in a non-schema order.
+  // Normalize their sequence without changing the properties themselves.
+  static void _orderFonts(XmlDocument document) {
     for (final font
-        in result.root!.firstChild('fonts')?.childrenNamed('font') ??
+        in document.root!.firstChild('fonts')?.childrenNamed('font') ??
             <XmlElement>[]) {
       _orderFontChildren(font);
     }
-    return result.toXmlString();
   }
 
   // CT_Font is an ordered sequence. Updating only the supported properties

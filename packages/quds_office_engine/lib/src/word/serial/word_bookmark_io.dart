@@ -155,6 +155,41 @@ abstract final class WordBookmarkIo {
       } else if (block is WmlToc) {
         story.add(block.titleParagraph);
         story.addAll(block.itemParagraphs);
+      } else if (block is WmlOpaqueBlock) {
+        final List<WmlInline> markers = <WmlInline>[];
+        void collect(XmlElement element) {
+          if (element.namespaceUri == OfficeNamespaces.w) {
+            final String id =
+                element.getAttribute('id', namespaceUri: OfficeNamespaces.w) ??
+                '';
+            if (element.localName == 'bookmarkStart') {
+              markers.add(
+                WmlBookmarkStart(
+                  id: id,
+                  name:
+                      element.getAttribute(
+                        'name',
+                        namespaceUri: OfficeNamespaces.w,
+                      ) ??
+                      '',
+                ),
+              );
+            } else if (element.localName == 'bookmarkEnd') {
+              markers.add(WmlBookmarkEnd(id: id));
+            }
+          }
+          for (final XmlElement child in element.childElements) {
+            collect(child);
+          }
+        }
+
+        final XmlElement? source = XmlDocument.parse(block.xml).root;
+        if (source != null) collect(source);
+        if (markers.isNotEmpty) {
+          // Validation-only view: reserve opaque source identities without
+          // changing its XML, exposing fake editable text or moving endpoints.
+          story.add(WmlParagraph(inlines: markers));
+        }
       }
     }
   }

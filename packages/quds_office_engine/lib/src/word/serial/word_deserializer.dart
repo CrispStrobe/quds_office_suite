@@ -109,6 +109,10 @@ class WordDeserializer {
         _readSectPr(reader, section, package, docUri);
         document.sections.add(section);
         section = WmlSection();
+      } else if (reader.depth == 3) {
+        // Any other unmodeled body element is kept verbatim, together with
+        // the provenance of the relationships it references.
+        section.blocks.add(WordOpaqueIo.read(reader, package, docUri));
       }
     }
     if (section.blocks.isNotEmpty || document.sections.isEmpty) {

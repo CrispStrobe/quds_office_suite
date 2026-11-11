@@ -14,6 +14,7 @@ dart test \
   test/slide_text_fidelity_test.dart test/word_compatibility_fidelity_test.dart \
   test/word_referenced_styles_and_breaks_test.dart \
   test/comment_thread_fidelity_test.dart test/word_altchunk_fidelity_test.dart \
+  test/opaque_word_test.dart test/note_edit_test.dart test/note_marker_merge_test.dart \
   test/word_section_clone_fidelity_test.dart test/note_separator_fidelity_test.dart \
   test/xml_whitespace_fidelity_test.dart test/styleless_import_fidelity_test.dart \
   test/table_border_fidelity_test.dart test/word_picture_distance_fidelity_test.dart \
@@ -35,6 +36,7 @@ python3 tool/fidelity/scripted_oracle.py
 python3 tool/fidelity/word_compatibility_oracle.py
 python3 tool/fidelity/comment_threads_oracle.py
 python3 tool/fidelity/altchunk_oracle.py
+python3 tool/fidelity/edge_oracle.py
 python3 tool/fidelity/table_borders_oracle.py
 python3 tool/fidelity/note_markers_oracle.py
 python3 tool/fidelity/bookmarks_oracle.py

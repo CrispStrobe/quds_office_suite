@@ -187,7 +187,7 @@ class RenderExecutionTests(unittest.TestCase):
             output.mkdir()
 
             def command(args, **kwargs):
-                if args[0] == 'libreoffice':
+                if Path(args[0]).name in ('libreoffice', 'soffice'):
                     dest = Path(args[args.index('--outdir') + 1])
                     (dest / 'source.pdf').write_bytes(b'%PDF fixture')
                 elif args[0] == 'pdftoppm':

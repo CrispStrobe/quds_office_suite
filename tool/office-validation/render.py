@@ -26,6 +26,11 @@ OFFICE_SUFFIXES = {'.docx', '.xlsx', '.pptx'}
 CYCLE_COUNT = 3
 
 
+def office_binary():
+    """LibreOffice is installed as ``libreoffice`` on Linux, ``soffice`` on macOS."""
+    return shutil.which('libreoffice') or shutil.which('soffice') or 'libreoffice'
+
+
 class FidelityError(ValueError):
     """Missing evidence or a difference detected by the independent renderer."""
 
@@ -213,7 +218,7 @@ def render_document(path, root, output, index):
     with tempfile.TemporaryDirectory(prefix=f'render-{index:03d}-', dir=output) as temporary:
         work = Path(temporary)
         subprocess.run(
-            ['libreoffice', f'-env:UserInstallation={(work / "profile").as_uri()}',
+            [office_binary(), f'-env:UserInstallation={(work / "profile").as_uri()}',
              '--headless', '--convert-to', 'pdf', '--outdir', str(work), str(path.resolve())],
             check=True, timeout=60, capture_output=True, env=environment)
         pdf = work / (path.stem + '.pdf')
@@ -266,7 +271,7 @@ def main(argv=None):
     paths = []
     try:
         paths = discover_inputs(root)
-        renderer = subprocess.check_output(['libreoffice', '--version'], text=True,
+        renderer = subprocess.check_output([office_binary(), '--version'], text=True,
                                            timeout=30).strip()
         if not renderer:
             raise FidelityError('LibreOffice did not report a version')

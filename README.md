@@ -95,6 +95,103 @@ On the right is the engine's, made in pure Dart.
 
 ---
 
+## About this fork (CrispStrobe)
+
+This is the CrispStrobe fork of
+[MohammedAsaadAsaad/quds_office_suite](https://github.com/MohammedAsaadAsaad/quds_office_suite).
+
+### Why it exists
+
+[CrispCloud](https://github.com/CrispStrobe/CrispCloud) opens, edits and saves
+Word, Excel and PowerPoint files that live in users' cloud accounts. It uses
+`quds_office_engine` and `quds_office_editor` from this repository through
+local path overrides (`packages/` in CrispCloud, pinned to a commit of this
+fork by a file-hash manifest). Two consequences drove the work here:
+
+- **One fix, two places.** A fix made only in CrispCloud would never come back
+  here, and a fix made only here would never reach the app. Every change lands
+  in this fork first; CrispCloud then syncs the exact files and its hash guard
+  fails if the copies drift.
+- **Saving must not damage a user's file.** A cloud file manager that silently
+  rewrites styles, drops notes or breaks a deck on save destroys data the user
+  did not ask it to touch. So the goal was not "more features" but "what goes
+  in comes out", proven by checks that do not trust our own serializer.
+
+### What we changed
+
+- **Word round-trip fidelity.** Footnote/endnote identity, source styles,
+  numbering definitions, table styles and borders, hyperlinks in notes and
+  headers, and explicit direct formatting (black / 11pt / zero spacing / left)
+  are preserved instead of regenerated or flattened on save.
+- **Notes layout.** Mixed and multiple notes per paragraph, multiline bodies
+  and notes with styled runs, tables, drawings and links render. The note band
+  is reserved during body layout, and long or rich notes paginate onto extra
+  pages in source order instead of disappearing or overlapping the body.
+- **Lists.** List commands allocate document-local definitions, so they no
+  longer collide with imported list IDs; imported start values and Roman,
+  alphabetic and padded-decimal formats are honored; list edits undo/redo.
+- **Editable footnotes and endnotes.** The Word notes pane edits each note
+  in place with minimal changes, so untouched runs keep their formatting,
+  links, tables and pictures; typing in a note is one undo step; notes can be
+  added and deleted from the pane (deleting also removes the mark in the body,
+  and undo restores both). Before, editing a note replaced its whole body with
+  unformatted text.
+- **Editing and history.** Footnote insertion follows the caret, paragraph
+  splits keep rich runs, and repeated undo/redo no longer mutates history
+  snapshots.
+- **PowerPoint templates and media.** Exported decks keep the imported slide
+  masters, layouts and theme, and gain any missing master/layout/theme and
+  notes-size parts PowerPoint requires. Pictures and charts are namespaced to
+  the slide that owns them, so editing or reordering one slide can no longer
+  overwrite another slide's media.
+- **Word style cascade.** Sparse style definitions resolve through document
+  defaults, `basedOn` chains, theme fonts and colours, and character and
+  table-region styles, without freezing the inherited values into direct
+  formatting, so they stay editable and the saved file keeps its styles.
+- **Spreadsheet fidelity.** Source cell style records, pivot tables and live
+  chart formulas are kept on save instead of being regenerated or flattened
+  to values.
+- **Fixes merged back from CrispCloud.** Imported footnote references render
+  as superscript, visible Word selection and header/footer relayout, rotated
+  PDF watermarks, and report-designer font and template-band fixes.
+- **Lint clean.** Engine and reports analysis passes with `--fatal-infos`.
+
+### How it is verified
+
+Expected values are authored by hand (XML/JSON) or produced by other tools,
+never by blessing our own output:
+
+- A Python oracle reads exported ZIP/XML directly and compares it with the
+  authored expectations; negative tests confirm it rejects damaged files.
+- Import fixtures `native.pptx` and `native.xlsx` are produced by independent
+  libraries (python-pptx, openpyxl; versions in `native-producers.json`), so
+  import is tested against files our code did not write.
+- A .NET tool (`tool/office-validation`) validates every exported package with
+  the Open XML SDK.
+- Save/reopen exports across DOCX, XLSX and PPTX, scripted edits, and a
+  reviewed full-page visual golden.
+- The `office-fidelity` CI workflow runs all of it; the engine's own suite has
+  about 490 tests.
+
+Run it locally from `packages/quds_office_engine`: `dart test`, then
+`tool/fidelity/check.sh`. The full gap list, feature matrix and coverage
+inventory are in [`docs/office-fidelity-audit.md`](docs/office-fidelity-audit.md)
+and [`docs/office-coverage-gaps.json`](docs/office-coverage-gaps.json); the
+runnable guide is
+[`packages/quds_office_engine/tool/fidelity/README.md`](packages/quds_office_engine/tool/fidelity/README.md).
+
+### Known limits
+
+- The page golden is reviewed on Linux with Flutter 3.44.0 (what CI uses). On
+  macOS or another Flutter version it differs by about 0.6% of pixels from
+  font rasterization. That is not a regression; do not regenerate the golden
+  from a different platform.
+- Engine line coverage is 79.4% (line, not branch, coverage).
+- Fidelity is proven for the features in the audit matrix; anything listed
+  there as a gap may still be simplified on save.
+
+---
+
 ## Why this suite
 
 Most Dart “Office” libraries stop at writing a simple DOCX. Quds goes further:
@@ -358,7 +455,9 @@ quds_office_suite/
 │       └── example/            Quds Office Studio (not published)
 ├── apps/
 │   └── quds_report_studio/     standalone report editor (not published)
-├── docs/                       MISSION, STANDARDS (limits), PDF, PUBLISHING
+├── docs/                       MISSION, STANDARDS (limits), PDF, PUBLISHING,
+│                               office-fidelity-audit, coverage gaps
+├── tool/office-validation/     Open XML SDK validator used by CI
 └── LICENSE                     MIT
 ```
 
@@ -384,4 +483,4 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md). Issues and pull requests are welcome.
 
 ## License
 
-[MIT](LICENSE) © Mohammed Asaad Asaad
+[MIT](LICENSE) © Mohammed Asaad Asaad. Fork changes © CrispStrobe, same license.

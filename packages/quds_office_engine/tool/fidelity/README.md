@@ -20,6 +20,18 @@ controls must pass a positive fixture before proving that damaged output fails.
 `audit_operations.py` also requires a committed executable scenario for every
 public operation. Operation coverage measures exercised commands, not complete
 OOXML support or all possible parameter combinations.
+Scenarios cover the original 18 cross-format exports plus rich notes, style
+cascades/toggles, independently produced native spreadsheets/decks, pivot
+creation, image replacement and opaque body XML (`w:altChunk` and any other
+unmodeled body element, with its relationship provenance). The editor adds
+layout exports and the async controller export.
+
+The authored manifests require **150 engine files** and **20 editor files**:
+53 complete three-save series and 11 standalone inputs/exports. Exact inventory
+checks reject missing, extra, empty or invalid packages and retain SHA-256
+receipts. Eight authored source/edited baselines also participate in the external
+render comparisons; the other three standalone exports receive render-only
+coverage.
 
 ## Import, inspect, edit and export
 
@@ -195,7 +207,7 @@ for combined text, geometry, notes, transition, picture and reorder steps.
 | openpyxl / python-pptx inputs | Retained source templates/styles, live charts, pivots, speaker notes, media ownership and reorder behavior |
 | Python semantic oracles | Read output ZIP/XML directly, compare authored values, decode picture pixels, verify relationships and selected child ordering |
 | Mutation controls | Deliberately break content, note marks, style flags, list starts, formulas, media, namespaces or inventories and require rejection |
-| Flutter goldens | A full rich-note page plus three pages using first/even/default header/footer pictures, before and after asynchronous save |
+| Flutter goldens | A full rich-note page, three pages using first/even/default header/footer pictures, and 11 pages covering RTL, columns, sections, continued notes and a tall table before and after saves |
 | Real CrispCloud widget tests | Open the real editor, use ribbon heading/paragraph/note/picture commands, capture three saves/reopens, edit during uploads, retry failures and check dirty/close behavior |
 | Open XML SDK | Validate exported packages against the external OOXML schema validator; prove the validator rejects an invalid control |
 | LibreOffice / Poppler | Render each package to PDF and retained page PNGs; compare normalized text and decoded RGB pixels between complete repeated-save groups |
@@ -233,10 +245,26 @@ python3 ../quds_office_engine/tool/fidelity/inventory.py verify \
 From the repository root, with .NET 8, LibreOffice and Poppler available:
 
 ```sh
+# After both exact inventories pass, collect both packages for external checks.
+# Use a new directory so an earlier corpus cannot supply missing evidence.
+python3 - <<'PYTHON'
+from pathlib import Path
+import shutil
+target_root = Path('build/office-evidence')
+target_root.mkdir(parents=True, exist_ok=False)
+for package in Path('packages').glob('quds_office_*'):
+    for source in package.glob('build/fidelity*'):
+        target = target_root / package.name / source.name
+        target.parent.mkdir(parents=True, exist_ok=True)
+        if source.is_dir():
+            shutil.copytree(source, target)
+        else:
+            shutil.copy2(source, target)
+PYTHON
 dotnet run --project tool/office-validation -- --self-test
-dotnet run --project tool/office-validation -- packages/quds_office_engine/build build/external/schema-report.json
+dotnet run --project tool/office-validation -- build/office-evidence build/external/schema-report.json
 python3 -m unittest discover -s tool/office-validation -p 'test_*.py'
-python3 tool/office-validation/render.py packages/quds_office_engine/build build/external-render
+python3 tool/office-validation/render.py build/office-evidence build/external-render
 ```
 
 CI runs full engine/editor suites, retains the semantic reports, exports,
@@ -257,12 +285,33 @@ For visual maintenance, use Flutter **3.44.0 on Linux**:
 
 ```sh
 cd packages/quds_office_editor
-flutter test --no-pub test/office_fidelity_golden_test.dart test/office_story_golden_test.dart
+flutter test --no-pub test/office_fidelity_golden_test.dart test/office_story_golden_test.dart test/office_layout_goldens_test.dart
 # Only after an intentional design/layout change:
 flutter test --no-pub test/office_story_golden_test.dart --update-goldens
 # Inspect all changed PNGs, then rerun without --update-goldens.
 ```
 
+The layout goldens compare both the original and the exported reopen to the
+same reviewed baseline for RTL/Arabic, columns, sections/page breaks, continued
+notes, and a four-page table with a late note; expected page counts are asserted
+explicitly.
+
 The picture assertions must pass before capturing a golden, so an undecoded or
 blank page cannot become an accepted baseline. Read `docs/office-fidelity-audit.md`
 and the machine-readable gap ledger for verified fixes and remaining limits.
+
+## Native fixtures
+
+The independent `native.xlsx` (openpyxl 3.1.5) and `native.pptx`
+(python-pptx 1.0.2) fixtures are committed. Regenerate explicitly with
+`python3 tool/fidelity/native_fixtures.py`; normal runs never overwrite inputs.
+`native_spreadsheet_test.dart` and `native_presentation_test.dart` emit files
+under `build/fidelity-native`. `native_oracle.py` checks owned relationships,
+master/theme preservation, decoded picture pixels, chart data/references, number
+formats, borders, fonts, hyperlinks, pivot/cache wiring, notes and motion XML.
+`edge_oracle.py` checks replaced image pixels and opaque body XML across three
+save cycles.
+
+The external renderer accepts either the `libreoffice` (Linux) or `soffice`
+(macOS) executable. External engine agreement is evidence for this corpus; it
+does not establish identical layout for every Office document.
