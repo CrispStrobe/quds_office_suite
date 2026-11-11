@@ -11,12 +11,16 @@ import '../../xml/xml_node.dart';
 import '../../xml/xml_writer.dart';
 import '../math/omml_io.dart';
 import '../model/wml_document.dart';
+import '../model/word_bookmarks.dart';
+import '../model/word_content_controls.dart';
 import '../model/word_notes.dart';
 import '../model/word_revision.dart';
 import '../model/word_styles.dart';
 import '../model/word_toc.dart';
 import '../properties/wml_properties.dart';
+import 'word_bookmark_io.dart';
 import 'word_comment_io.dart';
+import 'word_content_control_io.dart';
 import 'word_drawing_io.dart';
 import 'word_frame_io.dart';
 import 'word_numbering_io.dart';
@@ -50,6 +54,8 @@ class WordSerializer {
   Map<WmlSection, _HeaderFooterIds> _headerFooterIds =
       <WmlSection, _HeaderFooterIds>{};
   WmlDocument? _document;
+  Map<WmlParagraphProps, WmlBookmarkStart> _generatedBookmarks =
+      Map<WmlParagraphProps, WmlBookmarkStart>.identity();
   late WordSectionRevisionIds _sectionRevisionIds;
   final Map<WmlParagraph, int> _restartNumberingIds =
       Map<WmlParagraph, int>.identity();
@@ -61,6 +67,19 @@ class WordSerializer {
 
   /// write API.
   OpcPackage write(WmlDocument document) {
+    WordContentControlIo.validate(document);
+    for (final WmlSection section in document.sections) {
+      final List<_ColumnSlice> slices = _columnSlices(section);
+      if (slices.length > 1) {
+        for (final _ColumnSlice slice in slices) {
+          WordContentControlIo.validateBlockSequence(
+            slice.blocks,
+            'automatic column slice',
+          );
+        }
+      }
+    }
+    _generatedBookmarks = WordBookmarkIo.prepare(document);
     final OpcPackage package =
         document.package ?? OpcPackage.create(OpcPackageKind.word);
     final PackageRelationship? office = package.packageRelationships
@@ -275,6 +294,8 @@ class WordSerializer {
         w.writeEndElement();
       case WmlToc():
         _writeToc(w, block);
+      case WmlSdtBlockBoundary():
+        WordContentControlIo.writeBoundary(w, block.control, block.isStart);
       case WmlOpaqueBlock():
         WordOpaqueIo.write(w, block, _package!, _activePartUri);
     }
@@ -595,17 +616,9 @@ class WordSerializer {
       w.writeEndElement();
       w.writeEndElement();
     }
-    final String? bookmark = paragraph.properties.bookmarkName;
-    if (bookmark != null && bookmark.isNotEmpty) {
-      w.writeEmptyElement(
-        'bookmarkStart',
-        prefix: 'w',
-        attributes: <String, String>{
-          'w:id': '${bookmark.hashCode & 0x7fffffff}',
-          'w:name': bookmark,
-        },
-      );
-    }
+    final WmlBookmarkStart? bookmark =
+        _generatedBookmarks[paragraph.properties];
+    if (bookmark != null) WordBookmarkIo.write(w, bookmark);
     final String? field = paragraph.properties.fieldInstruction;
     final bool pageField =
         paragraph.properties.pageNumberField &&
@@ -695,6 +708,22 @@ class WordSerializer {
           w.writeEndElement();
           w.writeEndElement();
           w.writeEndElement();
+        case WmlNoteBodyMarker():
+          w.writeStartElement('r', prefix: 'w');
+          if (inline.propertiesXml.isNotEmpty) {
+            XmlDocument.parse(inline.propertiesXml).root!.writeTo(w);
+          }
+          w.writeEmptyElement(
+            inline.endnote ? 'endnoteRef' : 'footnoteRef',
+            prefix: 'w',
+          );
+          w.writeEndElement();
+        case WmlSdtInlineBoundary():
+          WordContentControlIo.writeBoundary(w, inline.control, inline.isStart);
+        case WmlBookmarkMarker():
+          WordBookmarkIo.write(w, inline);
+        case WmlZeroWidthInline():
+          throw StateError('Unsupported inline marker: ${inline.runtimeType}');
       }
       _closeCommentsNotIn(w, _peekCommentIds(paragraph, i + 1));
       i++;
@@ -710,14 +739,8 @@ class WordSerializer {
       w.writeEndElement();
       _writeFieldChar(w, 'end');
     }
-    if (bookmark != null && bookmark.isNotEmpty) {
-      w.writeEmptyElement(
-        'bookmarkEnd',
-        prefix: 'w',
-        attributes: <String, String>{
-          'w:id': '${bookmark.hashCode & 0x7fffffff}',
-        },
-      );
+    if (bookmark != null) {
+      WordBookmarkIo.write(w, WmlBookmarkEnd(id: bookmark.id));
     }
     w.writeEndElement();
   }
@@ -2016,8 +2039,12 @@ class WordSerializer {
     for (final WmlNote note in notes) {
       w.writeStartElement(item, prefix: 'w');
       w.writeAttribute('w:id', '${note.id}');
-      var referenceWritten = false;
+      var referenceWritten = note.preserveBodyMarkers;
       for (final WmlBlock block in note.blocks) {
+        if (block is WmlSdtBlockBoundary) {
+          _writeBlock(w, block, imageIds);
+          continue;
+        }
         if (!referenceWritten) {
           _writeParagraph(
             w,
@@ -2032,11 +2059,11 @@ class WordSerializer {
         }
         _writeBlock(w, block, imageIds);
       }
-      if (!referenceWritten) {
+      if (!referenceWritten || note.blocks.isEmpty) {
         _writeParagraph(
           w,
           WmlParagraph(),
-          noteReference: true,
+          noteReference: !note.preserveBodyMarkers,
           endnote: note.endnote,
           addNoteReferenceSpace: note.addReferenceSpace,
           noteReferencePropertiesXml: note.referencePropertiesXml,

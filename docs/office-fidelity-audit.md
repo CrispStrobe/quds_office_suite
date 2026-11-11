@@ -5,7 +5,7 @@ Work is checkpointed on `feature/office-fidelity-completion-20261111` in
 and [CrispStrobe/CrispCloud](https://github.com/CrispStrobe/CrispCloud/tree/feature/office-fidelity-completion-20261111).
 The base branches have not been changed by this work.
 
-The source continuation includes the existing, unmerged fidelity work at
+The source continuation includes the earlier fidelity work at
 `3146e635`, ahead of the requested `crispcloud` baseline `c9655003`. The app
 continuation carried its prior fidelity feature into `main` baseline
 `5ec939e8`, then merged current `main` at `e70f24ce` after the same earlier
@@ -60,6 +60,9 @@ regression, not every possible use of that Office feature.
 | Embedded content | `altChunk` source blocks and owning-part relationships survive edits and cross-story moves, with target MIME and payload identity checked. | Body/table/note fixture and independent payload oracle |
 | Imported defaults | Documents without styles retain sparse properties. Imported leading note markers retain their run properties and exact separator whitespace. Borderless tables stay borderless; inherited borders can be explicitly disabled. | Styleless, note-spacing/XML-space and table-border regressions; external source render comparisons |
 | Package routing | Nonstandard document/styles/notes/settings paths are resolved and written through owning-part relationships. | Relocated-package fixture and external schema validation |
+| Native bookmarks | Exact endpoint objects retain multiple, overlapping and cross-paragraph ranges through edits, split, history and saves; generated heading bookmarks avoid native collisions. | Independently authored ranges, engine/editor oracles and corruption controls |
+| Content controls | Native wrappers retain aliases, tags, IDs, end properties, nesting and empty content around editable blocks/runs. Unsupported container operations reject before mutation. | Authored nested/block/inline controls, actual editor split/history and preflight controls |
+| Imported note markers | Exact marker placement, absence, kind and run properties survive exported edits; new notes retain conventional defaults. | Nine authored source cases, independent XML and three-save source comparisons |
 | Word compatibility | Import chooses one supported `mc:Choice` or its `Fallback`, including nested branches and namespace aliases. | Authored body/run/table/header/note cases and mutation controls |
 | Sections | Page numbering, grids, borders, paper source, gutter, custom columns, line numbers and historical section metadata survive unrelated edits and cloning. Deliberate geometry edits update modeled fields. | Two-section fixture, source-fragment oracle and host section commands |
 | Breaks | Line feeds use actual Word break tokens; tabs and typed page/column breaks survive save/reopen. | Structural XML assertions, multiline scripted notes and host text commands |
@@ -68,6 +71,8 @@ regression, not every possible use of that Office feature.
 | Presentation text | Imported mixed rich text, whitespace, hard breaks and body properties survive; explicit font/color/geometry edits and multiline paragraph replacement export correctly. | Native deck, rich-text fixture and independent script oracle |
 | Presentation structure | Chart-frame transforms, transition durations and axis identifiers validate; templates, notes, owned media and live chart formulas remain linked. | Native package checks and external schema gate |
 | Editor painting | A replaced viewport receives layout before painting, avoiding blank later pages. | Reviewed first/even/default header/footer page PNGs before/after save |
+| Canvas image lifetime | Closing Word, Sheet or Slide disposes decoded pictures; pending decodes release pixels without repainting the closed canvas. | Deterministic pending/ready cache tests and actual host reopen regression |
+| CrispCloud note commands | Footnote/Endnote commands are exposed in the Word Insert tab/menu and open the editable notes pane, with localization, whitespace preservation, read-only and undo/redo checks. A real ribbon editing workflow verifies three uploaded saves and reopens. | Actual host heading/paragraph/note/picture ZIP/XML/media assertions |
 | CrispCloud save state | Edits made while an asynchronous upload is pending remain dirty. A successful earlier upload cannot close a newer edit; selection-only changes and retry behavior are distinguished. | Four real editor-dialog widget cases and captured upload bytes |
 | CrispCloud search | Search follows relocated parts, referenced notes, sheet/slide order, used shared strings and speaker notes, including Strict namespaces. Both input bytes and emitted UTF-8 text are bounded. | Authored DOCX/XLSX/PPTX/ODF inputs, shared-string expansion control and recursive-search callers |
 | CrispCloud preview | Explicit false formatting, tabs/breaks, note references/bodies and workbook order/names are respected, including relocated and package-root parts. | Independently authored ZIP/XML preview tests and localization tests |
@@ -170,29 +175,32 @@ Word layout and report generation. Their exact line numbers remain in the report
 
 ## Remaining acceptance boundaries
 
-The ledger distinguishes unsupported behavior from tested preservation. In
-particular, SDT/content-control wrappers and multiple/cross-paragraph bookmark
-ranges need richer editable models. The audit includes independently authored XML and a real-CLI three-cycle
-probe for these gaps. [The retained diagnostic result](office-unsupported-word-probes.json)
-records the exact source and fixture hashes for the 692 checkpoint. Preservation
-fixes for these reproduced losses are the next incremental checkpoint. Run `python3 tool/fidelity/unsupported_word_audit.py` in the
-engine package; it intentionally exits 1 while the loss remains and is excluded
-from the passing regression gate. A retained embedded external-content payload also does not mean
-the editor renders or converts that payload.
+The original independently authored SDT and bookmark loss probes are now passing
+regressions in the modification gate. The [historical diagnostic result](office-unsupported-word-probes.json)
+retains the failing `692a326` evidence and its source/fixture hashes; it is not a
+claim about current behavior. Run `python3 tool/fidelity/unsupported_word_audit.py`
+in the engine package to require preservation through the original adjacent edit
+and three-save sequences.
+
+Native Word preservation has explicit model boundaries. Block controls in
+paragraph-only header/comment models, row/cell wrappers, invalid nesting and a
+paragraph split through an inline control reject explicitly. Paragraph-external
+bookmark endpoints, unpaired/cross-story ranges and duplicate native identities
+are also guarded. A deliberate whole-note text replacement replaces its rich
+body and keeps only its first automatic marker at the start; range edits preserve
+rich structure. Exported unconventional note-marker positions are preserved,
+while the canvas continues to use conventional note-label layout. Retaining an
+embedded external-content payload does not imply rendering or conversion of it.
 
 Column conversion currently defaults to a maximum-digit-width of 7; automatic
 measurement of arbitrary imported normal-style fonts is not implemented. The
 script refuses referenced sheet renames and slide reorders requiring section
 rewrites. Additional OS/font/SDK goldens and arbitrary RTL/layout combinations
-remain outside the reviewed visual corpus.
+remain outside the reviewed visual corpus. The table-border model has one
+border/color/width tuple: a deliberate edit writes six uniform edges, while
+untouched per-edge source XML is retained.
 
 LibreOffice save-cycle stability and Open XML SDK validity are separate from
 Microsoft Office visual equivalence and native application certification. The
 exact execution-gap inventory remains a work list, not a claim that executed
 lines are correct or that every unhit line is defective.
-
-Additional bounded model limits are explicit in the ledger: the editable table
-border model has one border/color/width tuple, so a deliberate border edit writes
-six uniform edges even though untouched per-edge source XML is retained. The note
-fix covers conventional leading automatic markers; arbitrary marker position or
-absence is not modeled. These are not covered by the passing preservation claims.

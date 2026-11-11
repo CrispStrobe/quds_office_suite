@@ -46,8 +46,12 @@ jobs:
       - name: Editor suite and reviewed visual golden
         working-directory: packages/quds_office_editor
         run: |
+          python3 ../quds_office_engine/tool/fidelity/inventory.py clean --package quds_office_editor --manifest ../quds_office_engine/tool/fidelity/editor_output_manifest.json --package-root .
           flutter test --no-pub
           python3 ../quds_office_engine/tool/fidelity/corpus.py verify build/fidelity
+          python3 ../quds_office_engine/tool/fidelity/bookmarks_oracle.py --editor-dir build/fidelity-bookmarks
+          python3 ../quds_office_engine/tool/fidelity/content_controls_oracle.py --editor-dir build/fidelity-content-controls
+          python3 ../quds_office_engine/tool/fidelity/inventory.py verify --package quds_office_editor --manifest ../quds_office_engine/tool/fidelity/editor_output_manifest.json --package-root .
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -56,6 +60,7 @@ jobs:
             packages/quds_office_engine/build/fidelity*
             packages/quds_office_engine/coverage/
             packages/quds_office_editor/build/fidelity*/
+            packages/quds_office_editor/build/fidelity-inventory.json
             packages/quds_office_editor/test/failures/
   external-schema:
     needs: office-fidelity

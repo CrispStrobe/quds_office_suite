@@ -1083,6 +1083,7 @@ class WordLayoutEngine {
           flow.y = toc.y;
           flow.pageIndex = toc.pageIndex;
           paragraphIndex += 1 + block.itemParagraphs.length;
+        case WmlSdtBlockBoundary():
         case WmlOpaqueBlock():
           // Preserve for export only; an altChunk requires an external content
           // importer before it can participate in this layout model.
@@ -1120,6 +1121,7 @@ class WordLayoutEngine {
           n += 1 + block.itemParagraphs.length;
         case WmlVisual():
         case WmlEquation():
+        case WmlSdtBlockBoundary():
         case WmlOpaqueBlock():
           break;
       }
@@ -1919,7 +1921,7 @@ class WordLayoutEngine {
     if (block is WmlEquation) {
       return OmmlLayout.layout(block.math, fontSize: 14).height + 4;
     }
-    if (block is WmlOpaqueBlock) return 0;
+    if (block is WmlOpaqueBlock || block is WmlSdtBlockBoundary) return 0;
     return 18;
   }
 
@@ -2144,6 +2146,7 @@ class WordLayoutEngine {
         case WmlFrame():
           para = _layoutFrame(block, section, flow, para);
         case WmlToc():
+        case WmlSdtBlockBoundary():
         case WmlOpaqueBlock():
           break;
       }

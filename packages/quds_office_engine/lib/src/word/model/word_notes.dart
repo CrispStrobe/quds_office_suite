@@ -4,6 +4,22 @@ import '../properties/wml_properties.dart';
 import 'wml_clone.dart';
 import 'wml_document.dart';
 
+/// An automatic reference mark at its actual position inside a note story.
+/// It occupies no text offset; its native run properties remain immutable.
+class WmlNoteBodyMarker extends WmlZeroWidthInline {
+  WmlNoteBodyMarker({required this.endnote, this.propertiesXml = ''});
+
+  final bool endnote;
+  final String propertiesXml;
+
+  @override
+  bool get isStart => true;
+
+  @override
+  WmlNoteBodyMarker copy() =>
+      WmlNoteBodyMarker(endnote: endnote, propertiesXml: propertiesXml);
+}
+
 /// Footnote or endnote body.
 class WmlNote {
   /// WmlNote API.
@@ -12,6 +28,7 @@ class WmlNote {
     required this.endnote,
     this.addReferenceSpace = true,
     this.referencePropertiesXml,
+    this.preserveBodyMarkers = false,
     List<WmlParagraph>? paragraphs,
     List<WmlBlock>? blocks,
   }) : blocks =
@@ -33,9 +50,14 @@ class WmlNote {
   /// Imported stories keep their exact source whitespace instead.
   final bool addReferenceSpace;
 
-  /// Original automatic note-mark properties. Empty means an unformatted
-  /// imported mark; null gives new notes the standard superscript style.
+  /// Generated-mark properties and a compatibility view of the first imported
+  /// mark. Empty means unformatted; null gives new notes superscript styling.
+  /// Explicit imported marks retain their own [WmlNoteBodyMarker.propertiesXml].
   String? referencePropertiesXml;
+
+  /// Imported stories retain explicit [WmlNoteBodyMarker] positions, including
+  /// a deliberate absence of marks. New notes use the conventional prefix.
+  final bool preserveBodyMarkers;
 
   /// Ordered note story, including paragraphs, tables, pictures and equations.
   final List<WmlBlock> blocks;
@@ -58,11 +80,33 @@ class WmlNote {
   /// text API.
   String get text => WmlClone.plainTextOf(blocks).trim();
 
-  /// text API.
+  /// Replaces the complete body. An existing native marker becomes the leading
+  /// mark of the replacement; an unmarked imported note remains unmarked.
+  /// This intentionally removes the old rich blocks, formatting and ranges.
+  /// Direct paragraph/range edits instead retain their actual marker positions.
   set text(String value) {
+    WmlNoteBodyMarker? retainedMarker;
+    if (preserveBodyMarkers) {
+      findMarker:
+      for (final WmlParagraph paragraph in allParagraphs) {
+        for (final WmlInline inline in paragraph.inlines) {
+          if (inline is WmlNoteBodyMarker) {
+            retainedMarker = inline.copy();
+            break findMarker;
+          }
+        }
+      }
+    }
     blocks
       ..clear()
-      ..add(WmlParagraph(inlines: <WmlInline>[WmlRun(text: value)]));
+      ..add(
+        WmlParagraph(
+          inlines: <WmlInline>[
+            ?retainedMarker,
+            WmlRun(text: value),
+          ],
+        ),
+      );
   }
 }
 

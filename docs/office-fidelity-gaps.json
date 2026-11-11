@@ -250,25 +250,29 @@
     },
     {
       "id": "FID-024",
-      "status": "in_progress",
+      "status": "closed",
       "area": "Structured document tags / content controls",
-      "finding": "The modeled import flattens SDT content and loses wrapper metadata such as alias, tag, ID and end-run properties. The independent CLI probe reproduces the loss after an adjacent edit and three save/reopen cycles; full block and inline container editing is unimplemented.",
+      "finding": "Native block and inline content-control boundaries preserve original metadata, nesting, empty content, aliases, tags, IDs and end-run properties through inside/adjacent edits, cloning, history and three saves. The original loss probe now requires preservation in the passing gate.",
       "evidence": [
-        "packages/quds_office_engine/test/fixtures/fidelity/loss-probes/content-control.xml",
-        "packages/quds_office_engine/tool/fidelity/unsupported_word_audit.py",
-        "docs/office-unsupported-word-probes.json"
-      ]
+        "packages/quds_office_engine/test/content_control_fidelity_test.dart",
+        "packages/quds_office_editor/test/word_content_control_fidelity_test.dart",
+        "packages/quds_office_engine/tool/fidelity/content_controls_oracle.py",
+        "packages/quds_office_engine/tool/fidelity/unsupported_word_audit.py"
+      ],
+      "limits": "Supported block controls contain ordinary editable body/table-cell/note blocks; inline controls remain within their paragraph, including headers. Unsupported row/cell wrappers, block controls in paragraph-only header/comment models, inline drawing containers, controls inside hyperlink/revision wrappers, invalid nesting and an inline control split across paragraphs reject explicitly. Content-control-specific UI and data-binding semantics are not implemented."
     },
     {
       "id": "FID-025",
-      "status": "in_progress",
+      "status": "closed",
       "area": "Multiple and cross-paragraph bookmarks",
-      "finding": "One paragraph bookmarkName cannot represent multiple independent endpoints or cross-paragraph ranges. The independent CLI probe reproduces expanded, dropped and collapsed bookmark ranges after an adjacent edit and three cycles.",
+      "finding": "Typed native bookmark endpoints retain source IDs, names, optional attributes, order and exact ranges, including overlapping and cross-paragraph ranges. Insertion, formatting, paragraph split, cloning, clipboard, undo/redo and three-save tests preserve their identities; generated heading bookmarks avoid native collisions.",
       "evidence": [
-        "packages/quds_office_engine/test/fixtures/fidelity/loss-probes/bookmark-ranges.xml",
-        "packages/quds_office_engine/tool/fidelity/unsupported_word_audit.py",
-        "docs/office-unsupported-word-probes.json"
-      ]
+        "packages/quds_office_engine/test/bookmark_fidelity_test.dart",
+        "packages/quds_office_editor/test/word_bookmark_fidelity_test.dart",
+        "packages/quds_office_engine/tool/fidelity/bookmarks_oracle.py",
+        "packages/quds_office_engine/tool/fidelity/unsupported_word_audit.py"
+      ],
+      "limits": "Paragraph-external native endpoints reject at import. Unpaired/cross-story or duplicate native IDs/names reject before package mutation. Copying a native range into the same document requires identity reassignment; duplicate identities are guarded rather than silently rewritten."
     },
     {
       "id": "FID-026",
@@ -336,7 +340,7 @@
         "packages/quds_office_engine/tool/fidelity/notes_oracle.py",
         "packages/quds_office_engine/tool/fidelity/test_note_spacing_oracle.py"
       ],
-      "limits": "This regression covers conventional leading automatic markers. Arbitrary marker placement or source marker absence is not represented by the current note model."
+      "limits": "This original regression covers conventional leading automatic markers. FID-040 extends exported preservation to arbitrary source placement and absence; the canvas still uses conventional note-label layout."
     },
     {
       "id": "FID-033",
@@ -404,7 +408,7 @@
       "id": "FID-039",
       "status": "closed",
       "area": "Actual host outputs and coverage provenance",
-      "finding": "The host requires exactly fourteen valid captured DOCX outputs, then independently validates them with Open XML SDK. Fresh Office LCOV and engine VM reports list unhit instrumented lines, absent files and current source hashes. Helpers reject malformed records, missing source paths and out-of-range line numbers; clean-directory collection is required because same-length stale input cannot be detected from coverage alone.",
+      "finding": "The host requires exactly seventeen valid captured DOCX outputs, then independently validates them with Open XML SDK. Fresh Office LCOV and engine VM reports list unhit instrumented lines, absent files and current source hashes. Helpers reject malformed records, missing source paths and out-of-range line numbers; clean-directory collection is required because same-length stale input cannot be detected from coverage alone.",
       "evidence": [
         "CrispCloud:tool/office_host_evidence.py",
         "CrispCloud:tool/test_office_host_evidence.py",
@@ -414,13 +418,48 @@
     },
     {
       "id": "FID-040",
-      "status": "in_progress",
+      "status": "closed",
       "area": "Imported note marker position and absence",
-      "finding": "The current note model preserves conventional leading marker properties but manufactures one at the first paragraph when imported source markers are absent or later. Typed zero-width source markers are being added to retain exact ordered placement through edits and exports.",
+      "finding": "Imported note-body markers are explicit zero-width model objects. Missing, nonleading, later-paragraph, multiple and table-first markers retain exact order, kind and run properties through range edits, split/clone and repeated exports. New notes keep their conventional generated prefix.",
       "evidence": [
-        "packages/quds_office_engine/lib/src/word/model/word_notes.dart",
-        "packages/quds_office_engine/lib/src/word/serial/word_deserializer.dart",
-        "packages/quds_office_engine/lib/src/word/serial/word_serializer.dart"
+        "packages/quds_office_engine/test/note_marker_fidelity_test.dart",
+        "packages/quds_office_engine/tool/fidelity/note_markers_oracle.py",
+        "packages/quds_office_engine/tool/fidelity/test_note_markers_oracle.py"
+      ],
+      "limits": "This is export preservation. Unconventional marker positions are not replicated by the conventional canvas note-label layout. Explicit whole-note text replacement discards contained rich structure and retains only its first marker as a leading marker; structure-preserving edits use range-edit APIs."
+    },
+    {
+      "id": "FID-041",
+      "status": "closed",
+      "area": "CrispCloud note commands and actual ribbon edits",
+      "finding": "Word Insert tab and menu expose localized Footnote/Endnote commands and open the editable notes pane. Note editing preserves entered whitespace, respects read-only mode and supports undo/redo. A real ribbon heading/paragraph/note/picture workflow validates three actual host uploads and reopens with independent XML/media assertions.",
+      "evidence": [
+        "CrispCloud:lib/widgets/office_editor_ribbon.dart",
+        "CrispCloud:test/widget/office_editor_ribbon_test.dart",
+        "CrispCloud:test/widget/office_save_fidelity_test.dart",
+        "CrispCloud:test/office_ribbon_common_i18n_test.dart"
+      ]
+    },
+    {
+      "id": "FID-042",
+      "status": "closed",
+      "area": "Picture decoding after editor disposal",
+      "finding": "Word, Sheet and Slide canvases own and dispose decoded images. Pending decodes finishing after closure release their image and do not repaint a disposed render object. Deterministic pending/ready disposal controls and the actual host repeated reopen workflow pass.",
+      "evidence": [
+        "packages/quds_office_editor/test/visual_image_cache_test.dart",
+        "packages/quds_office_editor/lib/src/visual/paint_office_visual.dart",
+        "CrispCloud:test/widget/office_save_fidelity_test.dart"
+      ]
+    },
+    {
+      "id": "FID-043",
+      "status": "guarded",
+      "area": "Unsupported native Word container and range operations",
+      "finding": "Unsupported SDT hierarchies/container placements, inline-control paragraph splits, paragraph-external bookmarks and invalid/duplicated bookmark identities reject explicitly. Export preflight runs before package changes; rejected script operations preserve an existing output file. Richer editing semantics for these cases remain unimplemented.",
+      "evidence": [
+        "packages/quds_office_engine/test/content_control_fidelity_test.dart",
+        "packages/quds_office_engine/test/bookmark_fidelity_test.dart",
+        "packages/quds_office_editor/test/word_content_control_fidelity_test.dart"
       ]
     }
   ]
