@@ -31,8 +31,8 @@ def verify_sheet_schema(parts):
     # Open XML SDK CT_Font order; preserve names, borders and number formats
     # while repairing source producer order and modified font records.
     order = 'b i strike condense extend outline shadow u vertAlign sz color name family charset scheme'.split()
-    styles = E.fromstring(parts['xl/styles.xml'])
-    for font in styles.find(X+'fonts'):
+    styles = E.fromstring(parts['xl/styles.xml']) if 'xl/styles.xml' in parts else None
+    for font in ([] if styles is None else styles.find(X+'fonts')):
         ranks = [order.index(e.tag[len(X):]) for e in font if e.tag[len(X):] in order]
         assert ranks == sorted(ranks), 'Font properties out of schema order'
     for name, data in parts.items():
