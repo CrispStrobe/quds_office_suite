@@ -333,7 +333,8 @@
         "packages/quds_office_engine/test/xml_whitespace_fidelity_test.dart",
         "packages/quds_office_engine/tool/fidelity/notes_oracle.py",
         "packages/quds_office_engine/tool/fidelity/test_note_spacing_oracle.py"
-      ]
+      ],
+      "limits": "This regression covers conventional leading automatic markers. Arbitrary marker placement or source marker absence is not represented by the current note model."
     },
     {
       "id": "FID-033",
@@ -353,7 +354,8 @@
       "evidence": [
         "packages/quds_office_engine/test/table_border_fidelity_test.dart",
         "packages/quds_office_engine/tool/fidelity/table_borders_oracle.py"
-      ]
+      ],
+      "limits": "Untouched unmodeled per-edge source XML is retained, but the editable model has one border/color/width tuple. A deliberate border edit emits six uniform edges; independent per-edge editing is not implemented."
     },
     {
       "id": "FID-035",
@@ -400,7 +402,7 @@
       "id": "FID-039",
       "status": "closed",
       "area": "Actual host outputs and coverage provenance",
-      "finding": "The host requires exactly fourteen valid captured DOCX outputs, then independently validates them with Open XML SDK. Fresh Office LCOV and engine VM reports identify all unhit instrumented lines, absent files and measured source hashes; malformed and stale inputs are rejected.",
+      "finding": "The host requires exactly fourteen valid captured DOCX outputs, then independently validates them with Open XML SDK. Fresh Office LCOV and engine VM reports list unhit instrumented lines, absent files and current source hashes. Helpers reject malformed records, missing source paths and out-of-range line numbers; clean-directory collection is required because same-length stale input cannot be detected from coverage alone.",
       "evidence": [
         "CrispCloud:tool/office_host_evidence.py",
         "CrispCloud:tool/test_office_host_evidence.py",
