@@ -19,8 +19,11 @@ reports = []; groups = {}; failures = []
 for index, path in enumerate(paths):
     dest = out / f'{index:03d}'; dest.mkdir(exist_ok=True)
     try:
-        subprocess.run([office, f'-env:UserInstallation={(dest / "profile").resolve().as_uri()}', '--headless', '--convert-to', 'pdf', '--outdir', str(dest), str(path.resolve())], check=True, timeout=60, capture_output=True)
+        # A failed conversion must not be mistaken for an earlier successful run.
         pdf = dest / (path.stem + '.pdf')
+        pdf.unlink(missing_ok=True)
+        for old_page in dest.glob('page-*.ppm'): old_page.unlink()
+        subprocess.run([office, f'-env:UserInstallation={(dest / "profile").resolve().as_uri()}', '--headless', '--convert-to', 'pdf', '--outdir', str(dest), str(path.resolve())], check=True, timeout=60, capture_output=True)
         if not pdf.exists(): raise AssertionError('LibreOffice did not produce a PDF')
         text = subprocess.check_output(['pdftotext','-layout',str(pdf),'-'],text=True,timeout=30)
         if not text.strip(): raise AssertionError('Rendered PDF has no extractable text')
