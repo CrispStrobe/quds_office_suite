@@ -4,6 +4,20 @@ All notable changes to `quds_office_engine` are documented here.
 
 ## Unreleased
 
+- Preserve one worksheet drawing relationship across absolute/relative target
+  forms, emit SpreadsheetML chart transforms, and normalize pivot cache links.
+- Keep imported font properties, number formats and borders during cell edits
+  while serializing font properties in schema order.
+- Convert stored column widths with the ISO maximum-digit-width formula;
+  preserve untouched import precision and export edited pixel widths accurately.
+- Preserve hidden/grouped columns, default column styles, best-fit/phonetic flags
+  and width-less column definitions through edits and column insertion/deletion.
+
+- Preserve imported PowerPoint rich text bodies and export scalar font/color
+  edits; use proper paragraph boundaries for multiline shape text.
+- Emit valid PowerPoint chart-frame transforms and transition durations, and
+  allocate valid chart axis IDs for nonconforming imported identifiers.
+
 - Preserve pictures and charts in default, first-page and even-page headers
   and footers; keep their relationships scoped to the owning story.
 - Follow package relationships when saving nonstandard Word main, styles, notes
