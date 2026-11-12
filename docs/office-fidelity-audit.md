@@ -1,5 +1,12 @@
 # Office fidelity audit — 2026-11-11
 
+> **Historical checkpoint — 11 November 2026.** This report retains coverage,
+> probe results and remaining-gap statements from earlier source revisions.
+> For current results and support boundaries, see the
+> [current coverage guide](office-fidelity-coverage-20261112.md),
+> [gap ledger](office-fidelity-gaps.json), and
+> [source-hashed coverage inventory](office-coverage-gaps.json).
+
 Work is checkpointed on `feature/office-fidelity-completion-20261111` in
 [CrispStrobe/quds_office_suite](https://github.com/CrispStrobe/quds_office_suite/tree/feature/office-fidelity-completion-20261111)
 and [CrispStrobe/CrispCloud](https://github.com/CrispStrobe/CrispCloud/tree/feature/office-fidelity-completion-20261111).
