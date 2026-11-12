@@ -1,0 +1,26 @@
+{
+  "status": "expected_red_reproduced",
+  "source_base": "59177fa4f714219c503bea5c8cb6eb0e25213eed",
+  "renderer_sha256": "3b524b49288effce28f048c9fa3b13a324a1463f0dd315087d09ec4b6e03625c",
+  "updated_controls_sha256": "165556120a30aad0fb84c104e1e17856f662bf65281c16afa7f48ffea77cbc2a",
+  "corrected_native_packages_rejected": [
+    {
+      "file": "/workspace/scratch/07eb2580faa9/acceptance-expansion/picture-oracle-fix/inputs/fidelity-host/slide-picture-bounds-1.pptx",
+      "sha256": "835c640f408dc76d2c6ea7b7aa62a25af77c0c7ad36761071feb3fdd8efb9a9a",
+      "error": "Host picture package geometry mismatch: Expected {'page_emu': [1270000, 762000], 'rect_emu': [127000, 76200, 1143000, 571500]}, found {'page_emu': [1270000, 914400], 'rect_emu': [127000, 91440, 1143000, 571500]}"
+    },
+    {
+      "file": "/workspace/scratch/07eb2580faa9/acceptance-expansion/picture-oracle-fix/inputs/fidelity-host/slide-picture-bounds-2.pptx",
+      "sha256": "3434bd353c8e1f2c253225448c7c73a8edb87ecd962dad2af51f6b1db18fc5c9",
+      "error": "Host picture package geometry mismatch: Expected {'page_emu': [1270000, 762000], 'rect_emu': [127000, 76200, 1143000, 571500]}, found {'page_emu': [1270000, 914400], 'rect_emu': [127000, 91440, 1143000, 571500]}"
+    },
+    {
+      "file": "/workspace/scratch/07eb2580faa9/acceptance-expansion/picture-oracle-fix/inputs/fidelity-host/slide-picture-bounds-3.pptx",
+      "sha256": "e591a1edf72097bda7c51a5e515d7edceaa50737ae9cbb78779eb193a027b1cf",
+      "error": "Host picture package geometry mismatch: Expected {'page_emu': [1270000, 762000], 'rect_emu': [127000, 76200, 1143000, 571500]}, found {'page_emu': [1270000, 914400], 'rect_emu': [127000, 91440, 1143000, 571500]}"
+    }
+  ],
+  "controls_exit_code": 1,
+  "controls_log": "red-controls.log",
+  "note": "Updated independent controls and all three corrected real packages fail against the unchanged old 100x60/y=6 renderer expectation."
+}
