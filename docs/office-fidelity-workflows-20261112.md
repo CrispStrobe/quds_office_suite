@@ -139,10 +139,20 @@ requires an independently prescribed page size and black rectangle, its position
 size, area, solid interior, grayscale color and white exterior. It also checks
 raw native transforms, because a picture extending past the page edge could
 otherwise look correct after clipping. All twelve real exports pass, as do all
-four repeated-save groups and 60 renderer control tests. Other text-free files
+four repeated-save groups. Other text-free files
 are not accepted through this precise corpus rule. The app workflow now renders
 its exact downloaded host inventory after schema validation, retaining PDFs,
 PNGs and measured pixel receipts.
+
+The six image-only JPEG/GIF Word exports now have their own independent native
+oracle. Their authored empty leading paragraph occupies exactly 12 points;
+the expected A4 image is 60 by 30 points at x=72, y=84. Native page, margins,
+paragraph spacing, inline geometry, relationships, MIME types and encoded
+dimensions must match before the raster is checked. All six SDK/native checks
+and both three-save groups pass, within the existing 0.03-point page and
+one-pixel edge tolerances. The combined native control suite passes 69 tests.
+The full source native report remains tied to its validated renderer commit;
+this additional host-only case selection changes no measured engine input.
 
 ## Measured acceptance and remaining gaps
 
@@ -169,9 +179,8 @@ zero validation errors. These are separate generated package instances,
 including each repository's 305 engine outputs. Native rendering has its own
 reports and qualifications; schema acceptance alone is not a visual result.
 
-The ledger contains 96 tracked findings: 81 closed within their stated scope,
-seven partial, six open, one explicitly guarded operation and one active
-image-only Word oracle correction. Remaining work
+The ledger contains 96 tracked findings: 82 closed within their stated scope,
+seven partial, six open and one explicitly guarded operation. Remaining work
 includes broader platform/font rendering, branch and unhit-line coverage,
 arbitrary content-control bindings, mixed bookmark/range topology, general
 spreadsheet formulas and font metrics, complex field refresh, overlapping

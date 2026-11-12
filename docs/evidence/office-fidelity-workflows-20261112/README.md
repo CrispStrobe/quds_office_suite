@@ -86,6 +86,14 @@ above also exercised and retained one real interrupted-then-successful retry.
 
 ## Reproduction and provenance
 
+The later exact-six Word image-only oracle is retained separately as
+`word-image-only-acceptance-summary.json`, its SDK/native reports, input
+receipt, compressed logs and `word-image-only-artifacts.tar.xz`. All six
+focused packages and both three-save groups passed; the combined native
+control suite passed 69 tests. This extends the separate host corpus without
+changing the engine inputs or transferring the earlier full-suite renderer
+identity to a different code revision.
+
 Use Flutter 3.44.0 for this repository and the normal commands in
 `packages/quds_office_engine/tool/fidelity/README.md`. Run the collectors into
 new directories after resolving dependencies. Normal checks never update source

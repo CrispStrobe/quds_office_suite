@@ -1,0 +1,32 @@
+[
+  {
+    "source": "/workspace/scratch/dcd413fa34f4/CrispCloud/build/fidelity-host/word-picture-jpeg-1.docx",
+    "input": "/workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/input/fidelity-host/word-picture-jpeg-1.docx",
+    "sha256": "2310426c27febbe2fbb36fcaf57ca58f28c608f0d125b81f6bd35c44e2b55305"
+  },
+  {
+    "source": "/workspace/scratch/dcd413fa34f4/CrispCloud/build/fidelity-host/word-picture-jpeg-2.docx",
+    "input": "/workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/input/fidelity-host/word-picture-jpeg-2.docx",
+    "sha256": "843cf16224bfd8ecb9939906a7645b88bb87e5516aeac61bc2f6695377d9521d"
+  },
+  {
+    "source": "/workspace/scratch/dcd413fa34f4/CrispCloud/build/fidelity-host/word-picture-jpeg-3.docx",
+    "input": "/workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/input/fidelity-host/word-picture-jpeg-3.docx",
+    "sha256": "3afd7e51d5a62af8c58aeec1b7c90ddbbdacca3c63158ea1cc2e47cd22f50c80"
+  },
+  {
+    "source": "/workspace/scratch/dcd413fa34f4/CrispCloud/build/fidelity-host/word-picture-gif-1.docx",
+    "input": "/workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/input/fidelity-host/word-picture-gif-1.docx",
+    "sha256": "8a500c0c84474943798019e98e76bc85f7b193ab74e436ccdf7ec92b40e1a832"
+  },
+  {
+    "source": "/workspace/scratch/dcd413fa34f4/CrispCloud/build/fidelity-host/word-picture-gif-2.docx",
+    "input": "/workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/input/fidelity-host/word-picture-gif-2.docx",
+    "sha256": "c2218aaa0b60cdf395eef63000b600ca7010ba7f8cda8d9a0c109af8d70e3413"
+  },
+  {
+    "source": "/workspace/scratch/dcd413fa34f4/CrispCloud/build/fidelity-host/word-picture-gif-3.docx",
+    "input": "/workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/input/fidelity-host/word-picture-gif-3.docx",
+    "sha256": "0840a12f23d52aa2963e22759bbaca55c67bf0fbbd5882d01cc72a21df78be06"
+  }
+]

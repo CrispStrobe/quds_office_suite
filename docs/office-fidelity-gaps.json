@@ -1116,15 +1116,17 @@
     },
     {
       "id": "FID-096",
-      "status": "in_progress",
+      "status": "closed",
       "area": "Native evidence for image-only Word picture fixtures",
-      "finding": "Full host native validation exposed six authored JPEG/GIF Word documents with visible pictures but no text. They need an explicit Word pixel/geometry oracle; successful schema checks and repeated-save identity alone cannot establish that the image rendered. The first full run retains those failures while the bounded oracle is completed.",
+      "finding": "The six image-only JPEG/GIF Word fixtures now require independently authored A4 page and margin values, an exact 12-point empty leading paragraph, sole inline-image geometry and owned media, plus measured native black-rectangle pixels. All six SDK/native validations and both three-save groups pass, with 69 native controls. The prior text-only rejection is retained as evidence.",
       "evidence": [
         "CrispCloud:test/widget/office_picture_fidelity_test.dart",
         "CrispCloud:docs/evidence/office-fidelity-workflows-20261112/initial-host-native-failed-report.json",
         "tool/office-validation/render.py",
-        "tool/office-validation/test_render.py"
-      ]
+        "tool/office-validation/test_render.py",
+        "docs/evidence/office-fidelity-workflows-20261112/word-image-only-acceptance-summary.json"
+      ],
+      "limits": "This acceptance applies only to the exact six authored Word cases, alongside the twelve existing slide cases. Page tolerance remains 0.03 point and raster edges one pixel; arbitrary blank or image-only documents do not gain a generic exemption."
     }
   ],
   "evidence_path_convention": "Unprefixed paths are relative to quds_office_suite; CrispCloud: paths are relative to the host repository."

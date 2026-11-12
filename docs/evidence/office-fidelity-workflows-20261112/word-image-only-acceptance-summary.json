@@ -1,0 +1,178 @@
+{
+  "scope": "Six authored image-only host Word JPEG/GIF exports; not a full host corpus result",
+  "schema_files": 6,
+  "schema_errors": 0,
+  "rendered_files": 6,
+  "picture_pixel_oracle_files": 6,
+  "native_schema_only_files": 0,
+  "cycle_groups": 2,
+  "failures": [],
+  "input_hashes_unchanged": true,
+  "python_controls_passed": 69,
+  "renderer_tool_sha256": "70472f8e210f2b255ed9fe5d87f2971041c8e8684b07b906b955d1bebca7440a",
+  "test_tool_sha256": "289b378ed9d2bf1ee101332bd6683d16d69b826e29927c3f4e102197d2781262",
+  "metrics": [
+    {
+      "file": "word-picture-gif-1.docx",
+      "pages": 1,
+      "text": "'\\x0c'",
+      "attempts": 1,
+      "case": "word-gif",
+      "page_size": [
+        596,
+        842
+      ],
+      "page_size_points": [
+        595.304,
+        841.89
+      ],
+      "black_bbox": [
+        72,
+        83,
+        132,
+        114
+      ],
+      "black_pixels": 1860,
+      "white_pixels": 499941,
+      "gray_pixels": 31,
+      "colored_pixels": 0,
+      "outside_nonwhite_pixels": 0,
+      "interior_nonblack_pixels": 0
+    },
+    {
+      "file": "word-picture-gif-2.docx",
+      "pages": 1,
+      "text": "'\\x0c'",
+      "attempts": 1,
+      "case": "word-gif",
+      "page_size": [
+        596,
+        842
+      ],
+      "page_size_points": [
+        595.304,
+        841.89
+      ],
+      "black_bbox": [
+        72,
+        83,
+        132,
+        114
+      ],
+      "black_pixels": 1860,
+      "white_pixels": 499941,
+      "gray_pixels": 31,
+      "colored_pixels": 0,
+      "outside_nonwhite_pixels": 0,
+      "interior_nonblack_pixels": 0
+    },
+    {
+      "file": "word-picture-gif-3.docx",
+      "pages": 1,
+      "text": "'\\x0c'",
+      "attempts": 1,
+      "case": "word-gif",
+      "page_size": [
+        596,
+        842
+      ],
+      "page_size_points": [
+        595.304,
+        841.89
+      ],
+      "black_bbox": [
+        72,
+        83,
+        132,
+        114
+      ],
+      "black_pixels": 1860,
+      "white_pixels": 499941,
+      "gray_pixels": 31,
+      "colored_pixels": 0,
+      "outside_nonwhite_pixels": 0,
+      "interior_nonblack_pixels": 0
+    },
+    {
+      "file": "word-picture-jpeg-1.docx",
+      "pages": 1,
+      "text": "'\\x0c'",
+      "attempts": 1,
+      "case": "word-jpeg",
+      "page_size": [
+        596,
+        842
+      ],
+      "page_size_points": [
+        595.304,
+        841.89
+      ],
+      "black_bbox": [
+        72,
+        83,
+        132,
+        114
+      ],
+      "black_pixels": 1860,
+      "white_pixels": 499941,
+      "gray_pixels": 31,
+      "colored_pixels": 0,
+      "outside_nonwhite_pixels": 0,
+      "interior_nonblack_pixels": 0
+    },
+    {
+      "file": "word-picture-jpeg-2.docx",
+      "pages": 1,
+      "text": "'\\x0c'",
+      "attempts": 1,
+      "case": "word-jpeg",
+      "page_size": [
+        596,
+        842
+      ],
+      "page_size_points": [
+        595.304,
+        841.89
+      ],
+      "black_bbox": [
+        72,
+        83,
+        132,
+        114
+      ],
+      "black_pixels": 1860,
+      "white_pixels": 499941,
+      "gray_pixels": 31,
+      "colored_pixels": 0,
+      "outside_nonwhite_pixels": 0,
+      "interior_nonblack_pixels": 0
+    },
+    {
+      "file": "word-picture-jpeg-3.docx",
+      "pages": 1,
+      "text": "'\\x0c'",
+      "attempts": 1,
+      "case": "word-jpeg",
+      "page_size": [
+        596,
+        842
+      ],
+      "page_size_points": [
+        595.304,
+        841.89
+      ],
+      "black_bbox": [
+        72,
+        83,
+        132,
+        114
+      ],
+      "black_pixels": 1860,
+      "white_pixels": 499941,
+      "gray_pixels": 31,
+      "colored_pixels": 0,
+      "outside_nonwhite_pixels": 0,
+      "interior_nonblack_pixels": 0
+    }
+  ]
+}
