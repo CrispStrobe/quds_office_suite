@@ -123,3 +123,34 @@ flutter test --no-pub test/office_fidelity_golden_test.dart \
 
 Do not use `--update-goldens` in an acceptance run. Each cycle must match the
 reviewed baseline; accepting an image on every cycle could conceal drift.
+
+## Gap-closure follow-up: explicit native frame outlines
+
+The native outline preview correction reads the preserved DrawingML width,
+dash pattern, cap, join and alignment. Newly authored frames export a one-point
+line and now preview that same width, replacing the previous fixed 0.8-point
+canvas stroke. Imported omitted widths keep the existing 0.8-point
+approximation, so all three frame-wrap baselines remain unchanged.
+
+Three existing images contain newly authored one-point outlines. Their actual
+images, masked differences and exact changed-pixel bounds were reviewed before
+copying only these three results to the golden directory. Every changed pixel
+is within the four-pixel perimeter of the existing frame rectangle. No text,
+fill, picture, table, pagination or other geometry changes. The remaining
+20 reviewed images were not updated. Bounds below use exclusive right/bottom.
+
+| Image | Changed pixels | Changed-pixel bounds | Accepted SHA-256 |
+| --- | ---: | --- | --- |
+| `nested_table_content.png` | 1,076 | `(436, 503, 638, 574)` | `83078c839ace1acdfb98e15afc7379a090cc63c5be59229a34bf0b8f3b580f54` |
+| `structure_create_1.png` | 1,273 | `(192, 186, 434, 268)` | `a70893909dbfd920e6c95dee22b71e61b0fd03ee236358dd38b31a6469084014` |
+| `structure_edit_2.png` | 1,273 | `(103, 76, 318, 185)` | `4bc0c8855e5fa4c0ecdfa5f02f194d5ec4b78be0e7c68a177eaf6babdbe8ed9c` |
+
+`office_frame_outline_test.dart` independently samples native six-point dash
+widths and gaps, custom dash percentages, round dot caps, miter/round/bevel
+corners, inset bounds and selection behavior. Width/dash checks run before
+saving and through three direct/isolate save cycles, including a stroke-color
+edit. The first six-point assertion fails against the archived renderer at
+`4407811`, and passes with the correction. Engine tests independently check
+source XML preservation; malformed and extreme patterns have bounded fallback
+controls. These tests do not certify theme inheritance, compound outlines,
+gradient/pattern strokes or complete native Word visual equivalence.

@@ -621,15 +621,19 @@
       "id": "FID-056",
       "status": "partial",
       "area": "Positioned frame wrapping in Quds layout",
-      "finding": "Following body paragraphs and TOCs reflow around anchored square frames and clear top-and-bottom frames. Variable-width layout preserves bidi shaping and exact logical character ownership through multiple frames, columns, page transitions and note reservation. Native none/square/topBottom values, coordinates, dimensions, fill and stroke are checked against three authored raw source packages and nine repeated native exports.",
+      "finding": "Following body paragraphs and TOCs reflow around anchored square frames and clear top-and-bottom frames. Variable-width layout preserves bidi shaping and exact logical character ownership through multiple frames, columns, page transitions and note reservation. Native none/square/topBottom values, coordinates, dimensions, fill and stroke are checked against three authored raw source packages and nine repeated native exports. Native outline preview geometry is now derived from preserved DrawingML instead of a fixed solid stroke; new frames match their serialized one-point width.",
       "evidence": [
         "packages/quds_office_engine/test/word_frame_wrap_test.dart",
         "packages/quds_office_engine/test/variable_line_breaker_test.dart",
         "packages/quds_office_engine/tool/fidelity/frame_wrap_oracle.py",
         "packages/quds_office_engine/tool/fidelity/test_frame_wrap_oracle.py",
-        "packages/quds_office_editor/test/office_frame_wrap_golden_test.dart"
+        "packages/quds_office_editor/test/office_frame_wrap_golden_test.dart",
+        "packages/quds_office_engine/test/drawing_line_style_test.dart",
+        "packages/quds_office_editor/test/office_frame_outline_test.dart",
+        "packages/quds_office_editor/test/drawing_line_painter_test.dart",
+        "docs/office-golden-review-20261112.md"
       ],
-      "limits": "The model chooses one available line interval. Earlier paragraphs are not retroactively reflowed around later anchors. Arbitrary picture contours, floating table exclusions and full Microsoft Word layout equivalence remain unverified. Direct XML regressions cover preservation of explicit native outline width, dash, cap and join. The external frame corpus covers omitted/default outlines against its authored source. Quds canvas still previews frame outlines as solid fixed-width strokes; native outline styling is not visually reproduced there."
+      "limits": "The model chooses one available line interval. Earlier paragraphs are not retroactively reflowed around later anchors. Arbitrary picture contours, floating table exclusions and full Microsoft Word layout equivalence remain unverified. Direct XML regressions cover preservation of explicit native outline width, dash, cap and join. The external frame corpus covers omitted/default outlines against its authored source. Quds canvas now previews explicit native width, preset/custom dash patterns, caps, joins and inset alignment, with independent pixel checks through three direct/isolate saves. Imported omitted widths retain the existing hairline approximation. Theme inheritance, compound outlines, gradient/pattern strokes and extreme subpixel dash patterns are not visually certified."
     },
     {
       "id": "FID-057",
@@ -677,13 +681,17 @@
       "id": "FID-061",
       "status": "closed",
       "area": "Native textbox insets, outlines and anchor presentation",
-      "finding": "Native textbox insets, omitted-default semantics, anchor-paragraph properties, bodyPr metadata and line properties survive import/export and clone. Native line omission, omitted width and explicit width/cap/dash/join survive; changing stroke color retains the original width. Explicit inset edits update only owned values, with matching VML fallbacks. Text layout and the selected-frame ruler use the same left/right content box. All three frame wrap sources match their first native export and subsequent cycles exactly in LibreOffice.",
+      "finding": "Native textbox insets, omitted-default semantics, anchor-paragraph properties, bodyPr metadata and line properties survive import/export and clone. Native line omission, omitted width and explicit width/cap/dash/join survive; changing stroke color retains the original width. Explicit inset edits update only owned values, with matching VML fallbacks. Text layout and the selected-frame ruler use the same left/right content box. All three frame wrap sources match their first native export and subsequent cycles exactly in LibreOffice. Native outline preview geometry is now derived from preserved DrawingML instead of a fixed solid stroke; new frames match their serialized one-point width.",
       "evidence": [
         "packages/quds_office_engine/test/word_native_presentation_test.dart",
         "packages/quds_office_editor/test/editor_test.dart",
-        "packages/quds_office_engine/tool/fidelity/frame_wrap_oracle.py"
+        "packages/quds_office_engine/tool/fidelity/frame_wrap_oracle.py",
+        "packages/quds_office_engine/test/drawing_line_style_test.dart",
+        "packages/quds_office_editor/test/office_frame_outline_test.dart",
+        "packages/quds_office_editor/test/drawing_line_painter_test.dart",
+        "docs/office-golden-review-20261112.md"
       ],
-      "limits": "Frame layout and source presentation preservation are bounded by FID-056; full native textbox overflow and anchor semantics remain unverified. Direct XML regressions cover preservation of explicit native outline width, dash, cap and join. The external frame corpus covers omitted/default outlines against its authored source. Quds canvas still previews frame outlines as solid fixed-width strokes; native outline styling is not visually reproduced there."
+      "limits": "Frame layout and source presentation preservation are bounded by FID-056; full native textbox overflow and anchor semantics remain unverified. Direct XML regressions cover preservation of explicit native outline width, dash, cap and join. The external frame corpus covers omitted/default outlines against its authored source. Quds canvas now previews explicit native width, preset/custom dash patterns, caps, joins and inset alignment, with independent pixel checks through three direct/isolate saves. Imported omitted widths retain the existing hairline approximation. Theme inheritance, compound outlines, gradient/pattern strokes and extreme subpixel dash patterns are not visually certified."
     },
     {
       "id": "FID-062",
