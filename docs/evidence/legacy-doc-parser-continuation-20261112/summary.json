@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "parserCommit": "ba5f5b0cdd540bd0c03f62aabc88faadd8660e0b",
+  "suiteBaseCommit": "9a0a0268aa57f0d61b4112e101968e29a3a5f077",
+  "upstreamFiles": 360,
+  "allowedMirrorPatch": "pubspec.yaml workspace resolution, lints6 and xml7 only; all runtime/source/tests match the immutable upstream commit",
+  "parserTests": 666,
+  "engineLegacyBridgeTests": 21,
+  "testExecution": "Direct cached Dart test runner using the existing suite package config; no Flutter/native build hooks",
+  "files": {
+    "parser-tests.log.gz": {
+      "sha256": "44f97a4cb9e4cae4defd21984a3854ad950d7f00ddb3c03b72bd9dc73e0b9790",
+      "uncompressedSha256": "38901b616c3229086042b484ce2982fb43650db3310bf4c405a56a432f868fa7"
+    },
+    "bridge-tests.log.gz": {
+      "sha256": "27ffa9d687394784432889b955db83a441f138df06d2b694a4928e4a254ee6d7",
+      "uncompressedSha256": "ec819d4521571a7bf10a26033d2ea938d148a0509b4edce79be8f3ce1074cb54"
+    },
+    "upstream-files.json.gz": {
+      "sha256": "cd5679d9cf467a013d91f028c63b3c5cd99ce58d96994442fcf823017176a530",
+      "uncompressedSha256": "7264db09eeedcc26fe0962c6b437c24455f7eab36bb69c9f281eee7cfee3fb61"
+    }
+  }
+}
