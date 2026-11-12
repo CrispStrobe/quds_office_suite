@@ -217,11 +217,15 @@
     {
       "id": "FID-020",
       "status": "closed",
-      "area": "CrispCloud edits during save",
-      "finding": "A document revision captured before asynchronous save prevents later edits from being marked clean or closed by an earlier upload.",
+      "area": "Pending Office drafts and edits during cloud save",
+      "finding": "Word note, spreadsheet cell, and slide shape/table text drafts participate in dirty state and monotonic content revisions before their undo command exists. Both byte-save APIs commit pending edits; the host captures the revision after that boundary and cannot clean or close newer input when an older upload finishes. Cancel preserves unrelated commands, no-op/caret changes stay clean, invalid cell input stays visible when save fails, and failed uploads retain dirty state for retry. Actual Save and Save and Close regressions inspect captured DOCX/XLSX/PPTX XML independently.",
       "evidence": [
+        "packages/quds_office_editor/lib/src/embed/office_controller.dart",
+        "packages/quds_office_editor/test/content_revision_test.dart",
+        "packages/quds_office_editor/test/pending_edit_save_test.dart",
         "CrispCloud:test/widget/office_save_fidelity_test.dart",
-        "CrispCloud:lib/widgets/office_editor_dialog.dart"
+        "CrispCloud:lib/widgets/office_editor_dialog.dart",
+        "CrispCloud:tool/office_host_evidence.json"
       ]
     },
     {
@@ -555,14 +559,15 @@
       "id": "FID-050",
       "status": "partial",
       "area": "Tracked revision range rebasing",
-      "finding": "Disjoint insertion/deletion and whole-span paragraph split/join rebase pending revision ranges, including auxiliary stories. Resolving an earlier change shifts later ranges. History restores target identity, bounds and conflict state. Destructive resolution and direct/isolate export validate bounds and recorded text before mutation.",
+      "finding": "Editor disjoint insertion/deletion and whole-span paragraph split/join rebase pending revision ranges, including auxiliary stories. Resolving an earlier change shifts later ranges. History restores target identity, bounds and conflict state. Destructive resolution and direct/isolate export validate bounds and recorded text before mutation. Scripted replaceText rebases pending ranges at the exact edited span.",
       "evidence": [
         "packages/quds_office_editor/test/word_revision_rebase_test.dart",
         "packages/quds_office_engine/test/word_revision_validation_test.dart",
         "packages/quds_office_engine/test/word_revision_story_test.dart",
         "packages/quds_office_editor/test/word_find_replace_history_test.dart",
         "packages/quds_office_editor/test/word_content_control_history_test.dart",
-        "packages/quds_office_editor/lib/src/embed/office_controller.dart"
+        "packages/quds_office_editor/lib/src/embed/office_controller.dart",
+        "packages/quds_office_engine/test/word_step_atomicity_test.dart"
       ],
       "limits": "Intersecting edits, splits through pending spans and overlapping changes are explicit conflicts. Undo the conflicting edit before resolving or exporting. Arbitrary external model edits are rejected on mismatch, not attributed automatically."
     },
@@ -624,7 +629,7 @@
         "packages/quds_office_engine/tool/fidelity/test_frame_wrap_oracle.py",
         "packages/quds_office_editor/test/office_frame_wrap_golden_test.dart"
       ],
-      "limits": "The model chooses one available line interval. Earlier paragraphs are not retroactively reflowed around later anchors. Arbitrary picture contours, floating table exclusions and full Microsoft Word layout equivalence remain unverified."
+      "limits": "The model chooses one available line interval. Earlier paragraphs are not retroactively reflowed around later anchors. Arbitrary picture contours, floating table exclusions and full Microsoft Word layout equivalence remain unverified. Native outline width, dash, cap and join are preserved in OOXML and checked by the external renderer. Quds canvas still previews frame outlines as solid fixed-width strokes; native outline styling is not visually reproduced there."
     },
     {
       "id": "FID-057",
@@ -678,13 +683,13 @@
         "packages/quds_office_editor/test/editor_test.dart",
         "packages/quds_office_engine/tool/fidelity/frame_wrap_oracle.py"
       ],
-      "limits": "Frame layout and source presentation preservation are bounded by FID-056; full native textbox overflow and anchor semantics remain unverified."
+      "limits": "Frame layout and source presentation preservation are bounded by FID-056; full native textbox overflow and anchor semantics remain unverified. Native outline width, dash, cap and join are preserved in OOXML and checked by the external renderer. Quds canvas still previews frame outlines as solid fixed-width strokes; native outline styling is not visually reproduced there."
     },
     {
       "id": "FID-062",
       "status": "closed",
       "area": "Native inline math and TOC cache presentation",
-      "finding": "Inline math retains its native inline/display wrapper. Native TOC cache paragraphs preserve paragraph count, tab/leader and run presentation, plus exact bookmark/control boundary ownership. Reconstructed cache ranges include the current page text while retaining the live title paragraph identity. All targets are preflighted before explicit refresh, so a later guarded cache cannot mutate earlier TOCs, heading aliases or controller history.",
+      "finding": "Inline math retains its native inline/display wrapper. Native TOC cache paragraphs preserve paragraph count, tab/leader and run presentation, plus exact bookmark/control boundary ownership. Reconstructed cache ranges include the current page text while retaining the live entry paragraph owner; titles and field-only source paragraphs keep their own owners. All targets are preflighted before explicit refresh, so a later guarded cache cannot mutate earlier TOCs, heading aliases or controller history.",
       "evidence": [
         "packages/quds_office_engine/test/word_native_presentation_test.dart",
         "packages/quds_office_engine/tool/fidelity/content_control_oracle.py",
@@ -706,13 +711,13 @@
     {
       "id": "FID-064",
       "status": "guarded",
-      "area": "Whole-note replacement across bookmark ranges",
-      "finding": "A whole-note replacement that would remove only one bookmark endpoint is rejected before text, pending note commits, selection, dirty state or history changes. A complete in-note range can be removed safely. Generated paragraph aliases do not duplicate native identities.",
+      "area": "Note-pane text replacement across bookmark ranges",
+      "finding": "A note-pane text replacement that would remove only one bookmark endpoint is rejected before text, pending note commits, selection, dirty state or history changes. A complete in-note range can be removed safely. Generated paragraph aliases do not duplicate native identities.",
       "evidence": [
         "packages/quds_office_engine/test/word_note_bookmark_edit_test.dart",
         "packages/quds_office_editor/test/word_bookmark_history_test.dart"
       ],
-      "limits": "Safe remapping of a partially removed cross-paragraph range is not implemented; rich paragraph/run edits remain the supported alternative."
+      "limits": "Safe remapping of a partially removed cross-paragraph range is not implemented; rich paragraph/run edits remain the supported alternative. This guard applies to the note-pane edit path, not every whole-note API; the legacy editNote operation intentionally replaces rich content."
     },
     {
       "id": "FID-065",
@@ -783,6 +788,77 @@
         "CrispCloud:test/widget/office_save_fidelity_test.dart"
       ],
       "consolidated_from": "main:FID-042"
+    },
+    {
+      "id": "FID-071",
+      "status": "closed",
+      "area": "Native footnote and endnote separator definitions",
+      "finding": "Native separator, continuation-separator and continuation-notice definitions retain their XML and local inherited namespace/compatibility context across direct and isolate saves. An absent imported definition remains absent; ordinary note edits do not invent separator chrome. New native note parts still receive the standard separator pair. Twenty focused tests cover both note kinds, three save cycles, aliases/default namespaces, foreign prefix bindings, relocated parts, edits and creation. Imported absence also suppresses the generic separator line in the editor preview and is checked by independent note oracles through three save/reopen cycles.",
+      "evidence": [
+        "packages/quds_office_engine/test/note_chrome_fidelity_test.dart",
+        "packages/quds_office_engine/lib/src/word/serial/word_serializer.dart",
+        "packages/quds_office_engine/lib/src/word/serial/word_deserializer.dart",
+        "packages/quds_office_engine/test/note_separator_fidelity_test.dart",
+        "packages/quds_office_engine/tool/fidelity/notes_oracle.py",
+        "packages/quds_office_engine/tool/fidelity/note_markers_oracle.py",
+        "packages/quds_office_engine/tool/fidelity/test_note_spacing_oracle.py",
+        "packages/quds_office_engine/tool/fidelity/test_note_markers_oracle.py",
+        "packages/quds_office_editor/test/office_story_golden_test.dart",
+        "docs/office-golden-review-20261112.md"
+      ],
+      "limits": "This closes the bounded native-definition preservation regression; it does not certify arbitrary renderer-specific note pagination or Microsoft Office visual equivalence. The preview does not reproduce arbitrary custom separator text, width, styles or distinct continuation rules.",
+      "consolidated_from": "coverage:FID-069"
+    },
+    {
+      "id": "FID-072",
+      "status": "closed",
+      "area": "Complete editor layout export/reopen evidence",
+      "finding": "RTL, columns/sections, continued notes and tall-table goldens check the original plus each of three successive reopened documents and emit cycles 1, 2 and 3; no duplicate-byte stand-ins or unverified final reopen. The three-page first/even/default story scenario likewise checks its original plus three actual save/reopen states.",
+      "evidence": [
+        "packages/quds_office_editor/test/office_layout_goldens_test.dart",
+        "tool/office-validation/test_render.py",
+        "packages/quds_office_editor/test/office_story_golden_test.dart"
+      ],
+      "consolidated_from": "coverage:FID-070"
+    },
+    {
+      "id": "FID-073",
+      "status": "closed",
+      "area": "Native converter refusal diagnostics and qualification",
+      "finding": "A zero-exit conversion without a PDF retains both output streams and exit status. Only the exact known source-load refusal may qualify the seven original auxiliary-control documents, subject to exact inventory, semantic/XML checks and matching clean SDK path/hash receipts. Crashes, timeouts, generic missing PDFs and stale receipts remain failures. Schema receipts are uploaded before rendering.",
+      "evidence": [
+        "tool/office-validation/render.py",
+        "tool/office-validation/test_render.py",
+        "tool/office-validation/test_native_render_limitations.py",
+        ".github/workflows/office-fidelity.yml"
+      ],
+      "limits": "Qualified packages receive native_schema_only status and no visual certification; see FID-065.",
+      "consolidated_from": "coverage:FID-071"
+    },
+    {
+      "id": "FID-074",
+      "status": "closed",
+      "area": "Auxiliary fixture schema property order and retained parts",
+      "finding": "The authored footer emits paragraph spacing before alignment. The independent oracle checks every Word XML paragraph-property sequence, including retained source parts that are no longer actively referenced, and rejects invalid order, omitted spacing and changed spacing. Open XML SDK still validates every package part.",
+      "evidence": [
+        "packages/quds_office_engine/test/word_auxiliary_content_control_test.dart",
+        "packages/quds_office_engine/tool/fidelity/auxiliary_content_control_oracle.py",
+        "packages/quds_office_engine/tool/fidelity/test_auxiliary_content_control_oracle.py"
+      ],
+      "consolidated_from": "coverage:FID-072"
+    },
+    {
+      "id": "FID-075",
+      "status": "closed",
+      "area": "New note IDs versus preserved native definitions",
+      "finding": "The shared note insertion path reserves live normal-note IDs plus retained special-definition IDs in the owning native notes part before allocating a normal note. Footnote and endnote ID domains remain separate; relocated note parts are resolved through their owning relationship. Existing live-note numbering remains monotonic, and unrelated higher special IDs do not force unnecessary renumbering.",
+      "evidence": [
+        "packages/quds_office_engine/lib/src/word/model/word_notes.dart",
+        "packages/quds_office_engine/test/note_separator_fidelity_test.dart"
+      ],
+      "limits": "This protects the shared insertion API used by the editor; arbitrary direct mutation of model IDs is not assigned a new identity automatically.",
+      "consolidated_from": "coverage:FID-073"
     }
-  ]
+  ],
+  "evidence_path_convention": "Unprefixed paths are relative to quds_office_suite; CrispCloud: paths are relative to the host repository."
 }

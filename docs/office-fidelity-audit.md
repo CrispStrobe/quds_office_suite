@@ -4,6 +4,10 @@ This is the earlier completion audit. The
 [12 November consolidation report](office-fidelity-consolidation-20261112.md)
 records the combined branches, current inventories, fresh acceptance results,
 and remaining limits. Measurements below describe their original snapshots.
+The [coverage guide](office-fidelity-coverage-20261112.md),
+[gap ledger](office-fidelity-gaps.json), and
+[source-hashed coverage inventory](office-coverage-gaps.json) retain the
+support boundaries and evidence for their identified source revisions.
 
 Work is checkpointed on `feature/office-fidelity-completion-20261111` in
 [CrispStrobe/quds_office_suite](https://github.com/CrispStrobe/quds_office_suite/tree/feature/office-fidelity-completion-20261111)

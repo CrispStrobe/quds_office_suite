@@ -88,8 +88,8 @@ header, footer or comment. Imported revisions could also receive a stale body
 index. Revision targets now bind to actual paragraphs. Export splits coalesced
 runs at the native change boundaries, preserving unchanged prefix/suffix text.
 Rejecting a reopened insertion no longer removes pre-existing adjacent text.
-Disjoint edits and paragraph split/join update pending ranges; resolving earlier
-changes shifts later spans. Conflicting overlaps are guarded before destructive
+Editor disjoint edits and paragraph split/join update pending ranges; resolving
+earlier changes shifts later spans. Conflicting overlaps are guarded before destructive
 resolution or export, and history restores conflict state and original identities.
 
 The two original source-loss probes now pass without changing their expected
@@ -135,19 +135,22 @@ native inset geometry.
 The independent frame source gate also caught an invented one-point outline:
 it altered edge pixels and moved top-and-bottom-wrapped text by 0.45 points.
 Native line omission, omitted width and explicit line properties now survive;
-stroke-color edits retain the original width. All three raw frame sources
+stroke-color edits retain the original width. Quds canvas still previews frame
+outlines as solid fixed-width strokes; native width, dash, cap and join are
+preserved in OOXML and checked externally but are not reproduced by that preview. All three raw frame sources
 match their first exports and all three subsequent cycles exactly in
 LibreOffice text, page count and decoded pixels.
 
 Native TOC cache reconstruction also preserves bookmarks and inline controls
-that span the editable title and cached page number. Range text includes the
-current page value and points back to the live title paragraph. Regenerating a
+that span the editable entry text and cached page number. Range text includes
+the current page value and retains the live entry paragraph owner. Titles and
+field-only source paragraphs retain their own owners. Regenerating a
 cache with such native ranges requires a remapping operation that is not yet
 implemented, so explicit refresh/settings changes are rejected before any TOC,
 heading alias or controller history changes. Ordinary title, formatting and
 page-value edits retain the existing cache structure.
 
-Whole-note replacement also preflights bookmark ownership. Removing only one
+Note-pane text replacement also preflights bookmark ownership. Removing only one
 endpoint is rejected before an unrelated pending note edit, selection or
 undo/redo stack can change. Removing a complete range is supported and tested
 through repeated exports.
@@ -174,6 +177,43 @@ Open XML SDK rejected numeric `bidiVisual` values from the new RTL table recipes
 The writer now emits the native `on`/`off` enumeration, with an independent
 numeric-value corruption control. See the authoritative
 [OnOffOnlyValues definition](https://learn.microsoft.com/en-us/dotnet/api/documentformat.openxml.wordprocessing.onoffonlyvalues).
+
+## Counterexamples from the independent native gates
+
+The full `adcccb4` workflow exposed defects after the engine/editor tests passed.
+The corrected authored auxiliary footer now emits `spacing` before `jc`, and
+its oracle checks every Word XML part, including retained parts no longer used
+by an active relationship. SDK checks continue to include those retained parts.
+
+Native source comparisons also found an invented footnote separator line.
+Imported footnote/endnote parts now retain their existing separator, continuation
+separator and continuation-notice definitions, including their absence and
+namespace context. New parts retain conventional defaults. The Quds preview
+also suppresses a separator absent from the imported source; arbitrary custom
+separator content and styling remain outside preview coverage. Both independent
+note oracles reject an invented separator.
+Inserting a new note also reserves IDs retained in its owning native notes part,
+including non-normal definitions; footnotes and endnotes remain separate ID
+domains. A continuation notice with a positive ID can no longer collide with a
+new normal note through the shared engine/editor insertion path.
+
+The story golden's first page previously included the same invented separator.
+Its reviewed correction removes only that rule: 1,248 pixels in a two-pixel-high
+rectangle; the rest of all three page images is unchanged. The story test also
+checks the original plus three actual save/reopen states, with separate native
+exports for all three cycles.
+
+The four layout golden scenarios now check the original and all three real
+export/reopen states and emit exactly three successive saved documents. Their
+previous two-save loop could pass its pixel checks while failing the complete
+three-cycle external inventory.
+
+Converter failures retain exit status, stdout and stderr, including a successful
+process exit that produced no PDF. Native-only qualification still requires the
+exact known source-import refusal, exact corpus paths and hashes, semantic/XML
+validation and clean matching SDK receipts. A generic missing PDF fails. Schema
+receipts are uploaded before the slower rendering step so these failures can be
+inspected while rendering is still running.
 
 ## Run the acceptance gates
 
@@ -241,7 +281,8 @@ missing instrumentation fails the gate.
 ## Remaining gaps and interpretation
 
 The [gap ledger](office-fidelity-gaps.json) distinguishes closed regressions,
-partial support, explicit guards and open work. A closed ID establishes the
+partial support, explicit guards and open work. Evidence paths without a prefix
+are relative to this suite; `CrispCloud:` paths are relative to the host app. A closed ID establishes the
 named bounded behavior. It does not certify every use of that feature or native
 Microsoft Word rendering.
 
@@ -260,8 +301,11 @@ bookmark and frame features retain explicit boundaries in the ledger.
 
 Remaining work includes unsupported content-control topology and binding/lock
 semantics, mixed text/drawing bookmark anchors, arbitrary nested complex fields,
-floating table/picture contour layout, platform/font breadth and uncovered
-branch combinations. Formula-aware sheet renaming and section-aware slide
+floating table/picture contour layout, native outline styling and custom note
+separator presentation in the Quds preview, platform/font breadth and uncovered
+branch combinations. CrispCloud still lacks creation controls for custom tab
+alignment/leaders, character styles, custom style definitions and table-style
+selection (FID-068); engine/script support does not imply host UI coverage. Formula-aware sheet renaming and section-aware slide
 reordering remain deliberate pre-mutation guards.
 
 Earlier numeric coverage and validation reports in this repository are historical
