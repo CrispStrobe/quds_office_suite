@@ -1,5 +1,10 @@
 # Office fidelity coverage — 12 November 2026
 
+This is the earlier coverage-branch report. The
+[consolidation report](office-fidelity-consolidation-20261112.md) supersedes its
+branch and acceptance status after combining the recovered edits with current
+main. Historical measurements below are retained for provenance.
+
 This continuation is on `feature/office-fidelity-coverage-20261112` in both
 [quds_office_suite](https://github.com/CrispStrobe/quds_office_suite/tree/feature/office-fidelity-coverage-20261112)
 and [CrispCloud](https://github.com/CrispStrobe/CrispCloud/tree/feature/office-fidelity-coverage-20261112).
