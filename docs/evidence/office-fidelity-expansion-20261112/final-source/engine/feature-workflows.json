@@ -1,0 +1,3090 @@
+{
+  "version": 1,
+  "scope": "Selected producer scenarios and independent package oracles; not full-suite, branch-coverage or Microsoft Office visual-equivalence certification.",
+  "features": [
+    "comments",
+    "drawings",
+    "endnotes",
+    "footnotes",
+    "headings",
+    "images",
+    "paragraphs",
+    "placement",
+    "references",
+    "slides",
+    "spreadsheets",
+    "styles",
+    "tables",
+    "textflow",
+    "tocs"
+  ],
+  "bundles": [
+    "base-word",
+    "bibliography",
+    "bookmark-copy",
+    "bookmarks",
+    "comments",
+    "cross-format",
+    "frames",
+    "image-replacement",
+    "inline-fields",
+    "native-sheets-slides",
+    "note-markers",
+    "notes",
+    "scripted",
+    "sheet-qualified-names",
+    "sheet-rename",
+    "slide-arrange",
+    "slide-sections",
+    "story-media",
+    "structure",
+    "styles",
+    "table-borders",
+    "table-grid"
+  ],
+  "matrix_sha256": "c07da134e864e9501963c08456a31605ac3af904591ae2251e6aa57960abd7ea",
+  "output_manifest_sha256": "3995809ba6d473cd0a390e0fbc6aeb7d8770b39b89064c166b435224c65a8be0",
+  "expected_outputs": [
+    "fidelity-bibliography/direct-1.docx",
+    "fidelity-bibliography/direct-2.docx",
+    "fidelity-bibliography/direct-3.docx",
+    "fidelity-bibliography/isolate-1.docx",
+    "fidelity-bibliography/isolate-2.docx",
+    "fidelity-bibliography/isolate-3.docx",
+    "fidelity-bookmark-copy/copied-1.docx",
+    "fidelity-bookmark-copy/copied-2.docx",
+    "fidelity-bookmark-copy/copied-3.docx",
+    "fidelity-bookmark-copy/copied-expected.docx",
+    "fidelity-bookmark-copy/source.docx",
+    "fidelity-bookmarks/cloned-1.docx",
+    "fidelity-bookmarks/cloned-2.docx",
+    "fidelity-bookmarks/cloned-3.docx",
+    "fidelity-bookmarks/edited-1.docx",
+    "fidelity-bookmarks/edited-2.docx",
+    "fidelity-bookmarks/edited-3.docx",
+    "fidelity-bookmarks/frame-1.docx",
+    "fidelity-bookmarks/frame-2.docx",
+    "fidelity-bookmarks/frame-3.docx",
+    "fidelity-bookmarks/frame-source.docx",
+    "fidelity-bookmarks/imported-1.docx",
+    "fidelity-bookmarks/imported-2.docx",
+    "fidelity-bookmarks/imported-3.docx",
+    "fidelity-bookmarks/source.docx",
+    "fidelity-comment-threads/threads-edited-1.docx",
+    "fidelity-comment-threads/threads-edited-2.docx",
+    "fidelity-comment-threads/threads-edited-3.docx",
+    "fidelity-comment-threads/threads-imported-1.docx",
+    "fidelity-comment-threads/threads-imported-2.docx",
+    "fidelity-comment-threads/threads-imported-3.docx",
+    "fidelity-comment-threads/threads-source.docx",
+    "fidelity-frame-wrap/none-1.docx",
+    "fidelity-frame-wrap/none-2.docx",
+    "fidelity-frame-wrap/none-3.docx",
+    "fidelity-frame-wrap/none-source.docx",
+    "fidelity-frame-wrap/square-1.docx",
+    "fidelity-frame-wrap/square-2.docx",
+    "fidelity-frame-wrap/square-3.docx",
+    "fidelity-frame-wrap/square-source.docx",
+    "fidelity-frame-wrap/topBottom-1.docx",
+    "fidelity-frame-wrap/topBottom-2.docx",
+    "fidelity-frame-wrap/topBottom-3.docx",
+    "fidelity-frame-wrap/topBottom-source.docx",
+    "fidelity-image/replaced-1.docx",
+    "fidelity-image/replaced-2.docx",
+    "fidelity-image/replaced-3.docx",
+    "fidelity-inline-fields/direct-1.docx",
+    "fidelity-inline-fields/direct-2.docx",
+    "fidelity-inline-fields/direct-3.docx",
+    "fidelity-inline-fields/isolate-1.docx",
+    "fidelity-inline-fields/isolate-2.docx",
+    "fidelity-inline-fields/isolate-3.docx",
+    "fidelity-native/created-pivot-1.xlsx",
+    "fidelity-native/created-pivot-2.xlsx",
+    "fidelity-native/created-pivot-3.xlsx",
+    "fidelity-native/native-sheet-edited-1.xlsx",
+    "fidelity-native/native-sheet-edited-2.xlsx",
+    "fidelity-native/native-sheet-edited-3.xlsx",
+    "fidelity-native/native-sheet-imported-1.xlsx",
+    "fidelity-native/native-sheet-imported-2.xlsx",
+    "fidelity-native/native-sheet-imported-3.xlsx",
+    "fidelity-native/native-slides-1.pptx",
+    "fidelity-native/native-slides-2.pptx",
+    "fidelity-native/native-slides-3.pptx",
+    "fidelity-native/native-slides-edited-1.pptx",
+    "fidelity-native/native-slides-edited-2.pptx",
+    "fidelity-native/native-slides-edited-3.pptx",
+    "fidelity-note-markers/cloned-1.docx",
+    "fidelity-note-markers/cloned-2.docx",
+    "fidelity-note-markers/cloned-3.docx",
+    "fidelity-note-markers/edited-1.docx",
+    "fidelity-note-markers/edited-2.docx",
+    "fidelity-note-markers/edited-3.docx",
+    "fidelity-note-markers/imported-1.docx",
+    "fidelity-note-markers/imported-2.docx",
+    "fidelity-note-markers/imported-3.docx",
+    "fidelity-note-markers/source.docx",
+    "fidelity-notes/edited-1.docx",
+    "fidelity-notes/edited-2.docx",
+    "fidelity-notes/edited-3.docx",
+    "fidelity-notes/source.docx",
+    "fidelity-notes/unchanged-1.docx",
+    "fidelity-notes/unchanged-2.docx",
+    "fidelity-notes/unchanged-3.docx",
+    "fidelity-opaque/opaque-1.docx",
+    "fidelity-opaque/opaque-2.docx",
+    "fidelity-opaque/opaque-3.docx",
+    "fidelity-scripted/sheet/edited.xlsx",
+    "fidelity-scripted/sheet/roundtrip-1.xlsx",
+    "fidelity-scripted/sheet/roundtrip-2.xlsx",
+    "fidelity-scripted/sheet/roundtrip-3.xlsx",
+    "fidelity-scripted/slide/edited.pptx",
+    "fidelity-scripted/slide/roundtrip-1.pptx",
+    "fidelity-scripted/slide/roundtrip-2.pptx",
+    "fidelity-scripted/slide/roundtrip-3.pptx",
+    "fidelity-scripted/word/edited.docx",
+    "fidelity-scripted/word/roundtrip-1.docx",
+    "fidelity-scripted/word/roundtrip-2.docx",
+    "fidelity-scripted/word/roundtrip-3.docx",
+    "fidelity-sheet-qualified-names/expected-recalculated.xlsx",
+    "fidelity-sheet-qualified-names/expected-renamed.xlsx",
+    "fidelity-sheet-qualified-names/recalculated-1.xlsx",
+    "fidelity-sheet-qualified-names/recalculated-2.xlsx",
+    "fidelity-sheet-qualified-names/recalculated-3.xlsx",
+    "fidelity-sheet-qualified-names/renamed-1.xlsx",
+    "fidelity-sheet-qualified-names/renamed-2.xlsx",
+    "fidelity-sheet-qualified-names/renamed-3.xlsx",
+    "fidelity-sheet-qualified-names/source.xlsx",
+    "fidelity-sheet-rename/qualified-expected.xlsx",
+    "fidelity-sheet-rename/renamed-1.xlsx",
+    "fidelity-sheet-rename/renamed-2.xlsx",
+    "fidelity-sheet-rename/renamed-3.xlsx",
+    "fidelity-sheet-rename/source.xlsx",
+    "fidelity-slide-arrange/direct-1.pptx",
+    "fidelity-slide-arrange/direct-2.pptx",
+    "fidelity-slide-arrange/direct-3.pptx",
+    "fidelity-slide-arrange/isolate-1.pptx",
+    "fidelity-slide-arrange/isolate-2.pptx",
+    "fidelity-slide-arrange/isolate-3.pptx",
+    "fidelity-slide-arrange/source.pptx",
+    "fidelity-slide-sections/direct/backward-1.pptx",
+    "fidelity-slide-sections/direct/backward-2.pptx",
+    "fidelity-slide-sections/direct/backward-3.pptx",
+    "fidelity-slide-sections/direct/emptied-1.pptx",
+    "fidelity-slide-sections/direct/emptied-2.pptx",
+    "fidelity-slide-sections/direct/emptied-3.pptx",
+    "fidelity-slide-sections/direct/forward-1.pptx",
+    "fidelity-slide-sections/direct/forward-2.pptx",
+    "fidelity-slide-sections/direct/forward-3.pptx",
+    "fidelity-slide-sections/direct/source.pptx",
+    "fidelity-slide-sections/direct/unchanged-1.pptx",
+    "fidelity-slide-sections/direct/unchanged-2.pptx",
+    "fidelity-slide-sections/direct/unchanged-3.pptx",
+    "fidelity-slide-sections/direct/within-1.pptx",
+    "fidelity-slide-sections/direct/within-2.pptx",
+    "fidelity-slide-sections/direct/within-3.pptx",
+    "fidelity-slide-sections/isolate/backward-1.pptx",
+    "fidelity-slide-sections/isolate/backward-2.pptx",
+    "fidelity-slide-sections/isolate/backward-3.pptx",
+    "fidelity-slide-sections/isolate/emptied-1.pptx",
+    "fidelity-slide-sections/isolate/emptied-2.pptx",
+    "fidelity-slide-sections/isolate/emptied-3.pptx",
+    "fidelity-slide-sections/isolate/forward-1.pptx",
+    "fidelity-slide-sections/isolate/forward-2.pptx",
+    "fidelity-slide-sections/isolate/forward-3.pptx",
+    "fidelity-slide-sections/isolate/source.pptx",
+    "fidelity-slide-sections/isolate/unchanged-1.pptx",
+    "fidelity-slide-sections/isolate/unchanged-2.pptx",
+    "fidelity-slide-sections/isolate/unchanged-3.pptx",
+    "fidelity-slide-sections/isolate/within-1.pptx",
+    "fidelity-slide-sections/isolate/within-2.pptx",
+    "fidelity-slide-sections/isolate/within-3.pptx",
+    "fidelity-story-media/relocated-edited-1.docx",
+    "fidelity-story-media/relocated-edited-2.docx",
+    "fidelity-story-media/relocated-edited-3.docx",
+    "fidelity-story-media/story-edited-1.docx",
+    "fidelity-story-media/story-edited-2.docx",
+    "fidelity-story-media/story-edited-3.docx",
+    "fidelity-story-media/story-imported-1.docx",
+    "fidelity-story-media/story-imported-2.docx",
+    "fidelity-story-media/story-imported-3.docx",
+    "fidelity-structure/create/edited.docx",
+    "fidelity-structure/create/roundtrip-1.docx",
+    "fidelity-structure/create/roundtrip-2.docx",
+    "fidelity-structure/create/roundtrip-3.docx",
+    "fidelity-structure/edit/edited.docx",
+    "fidelity-structure/edit/roundtrip-1.docx",
+    "fidelity-structure/edit/roundtrip-2.docx",
+    "fidelity-structure/edit/roundtrip-3.docx",
+    "fidelity-structure/remove/edited.docx",
+    "fidelity-structure/remove/roundtrip-1.docx",
+    "fidelity-structure/remove/roundtrip-2.docx",
+    "fidelity-structure/remove/roundtrip-3.docx",
+    "fidelity-structure/source.docx",
+    "fidelity-style-toggles/toggle-1.docx",
+    "fidelity-style-toggles/toggle-2.docx",
+    "fidelity-style-toggles/toggle-3.docx",
+    "fidelity-styles/edited-1.docx",
+    "fidelity-styles/edited-2.docx",
+    "fidelity-styles/edited-3.docx",
+    "fidelity-styles/unchanged-1.docx",
+    "fidelity-styles/unchanged-2.docx",
+    "fidelity-styles/unchanged-3.docx",
+    "fidelity-table-borders/tables-edited-1.docx",
+    "fidelity-table-borders/tables-edited-2.docx",
+    "fidelity-table-borders/tables-edited-3.docx",
+    "fidelity-table-borders/tables-imported-1.docx",
+    "fidelity-table-borders/tables-imported-2.docx",
+    "fidelity-table-borders/tables-imported-3.docx",
+    "fidelity-table-widths/direct/format-1.docx",
+    "fidelity-table-widths/direct/format-2.docx",
+    "fidelity-table-widths/direct/format-3.docx",
+    "fidelity-table-widths/direct/replace-1.docx",
+    "fidelity-table-widths/direct/replace-2.docx",
+    "fidelity-table-widths/direct/replace-3.docx",
+    "fidelity-table-widths/direct/unchanged-1.docx",
+    "fidelity-table-widths/direct/unchanged-2.docx",
+    "fidelity-table-widths/direct/unchanged-3.docx",
+    "fidelity-table-widths/direct/unmerge-1.docx",
+    "fidelity-table-widths/direct/unmerge-2.docx",
+    "fidelity-table-widths/direct/unmerge-3.docx",
+    "fidelity-table-widths/expected-format.docx",
+    "fidelity-table-widths/expected-replace.docx",
+    "fidelity-table-widths/expected-unmerge.docx",
+    "fidelity-table-widths/isolate/format-1.docx",
+    "fidelity-table-widths/isolate/format-2.docx",
+    "fidelity-table-widths/isolate/format-3.docx",
+    "fidelity-table-widths/isolate/replace-1.docx",
+    "fidelity-table-widths/isolate/replace-2.docx",
+    "fidelity-table-widths/isolate/replace-3.docx",
+    "fidelity-table-widths/isolate/unchanged-1.docx",
+    "fidelity-table-widths/isolate/unchanged-2.docx",
+    "fidelity-table-widths/isolate/unchanged-3.docx",
+    "fidelity-table-widths/isolate/unmerge-1.docx",
+    "fidelity-table-widths/isolate/unmerge-2.docx",
+    "fidelity-table-widths/isolate/unmerge-3.docx",
+    "fidelity-table-widths/source.docx",
+    "fidelity/edited-1.docx",
+    "fidelity/edited-2.docx",
+    "fidelity/edited-3.docx",
+    "fidelity/sheet-edited-1.xlsx",
+    "fidelity/sheet-edited-2.xlsx",
+    "fidelity/sheet-edited-3.xlsx",
+    "fidelity/sheet-imported-1.xlsx",
+    "fidelity/sheet-imported-2.xlsx",
+    "fidelity/sheet-imported-3.xlsx",
+    "fidelity/slide-edited-1.pptx",
+    "fidelity/slide-edited-2.pptx",
+    "fidelity/slide-edited-3.pptx",
+    "fidelity/slide-imported-1.pptx",
+    "fidelity/slide-imported-2.pptx",
+    "fidelity/slide-imported-3.pptx",
+    "fidelity/unchanged-1.docx",
+    "fidelity/unchanged-2.docx",
+    "fidelity/unchanged-3.docx"
+  ],
+  "commands": [
+    {
+      "stage": "tests",
+      "argv": [
+        "dart",
+        "test",
+        "test/comment_thread_fidelity_test.dart",
+        "test/drawing_line_style_test.dart",
+        "test/inline_field_fidelity_test.dart",
+        "test/native_presentation_test.dart",
+        "test/native_spreadsheet_test.dart",
+        "test/note_chrome_fidelity_test.dart",
+        "test/note_edit_test.dart",
+        "test/note_marker_fidelity_test.dart",
+        "test/note_separator_fidelity_test.dart",
+        "test/office_fidelity_oracle_test.dart",
+        "test/office_steps_test.dart",
+        "test/opaque_word_test.dart",
+        "test/rich_note_test.dart",
+        "test/scripted_workflows_test.dart",
+        "test/sheet_formula_cache_fidelity_test.dart",
+        "test/sheet_qualified_name_error_test.dart",
+        "test/sheet_qualified_names_test.dart",
+        "test/sheet_rename_adversarial_test.dart",
+        "test/sheet_rename_fidelity_test.dart",
+        "test/slide_arrange_fidelity_test.dart",
+        "test/slide_section_fidelity_test.dart",
+        "test/story_media_fidelity_test.dart",
+        "test/style_cascade_test.dart",
+        "test/table_border_fidelity_test.dart",
+        "test/table_grid_steps_test.dart",
+        "test/variable_line_breaker_test.dart",
+        "test/word_bibliography_fidelity_test.dart",
+        "test/word_bookmark_copy_test.dart",
+        "test/word_bookmark_fidelity_test.dart",
+        "test/word_contained_text_wrap_test.dart",
+        "test/word_footnote_reference_test.dart",
+        "test/word_frame_wrap_test.dart",
+        "test/word_note_bookmark_edit_test.dart",
+        "test/word_part_routing_test.dart",
+        "test/word_picture_distance_fidelity_test.dart",
+        "test/word_structure_integrity_test.dart",
+        "test/word_structure_steps_test.dart",
+        "test/word_style_introduction_test.dart",
+        "test/word_table_direction_test.dart",
+        "test/word_table_nested_layout_test.dart",
+        "test/word_table_tall_frame_layout_test.dart",
+        "test/word_table_tall_toc_layout_test.dart",
+        "test/xml_namespace_capture_test.dart"
+      ]
+    },
+    {
+      "stage": "producer",
+      "argv": [
+        "dart",
+        "run",
+        "tool/fidelity/cross_format.dart"
+      ]
+    },
+    {
+      "stage": "producer",
+      "argv": [
+        "dart",
+        "run",
+        "tool/fidelity/notes.dart"
+      ]
+    },
+    {
+      "stage": "producer",
+      "argv": [
+        "dart",
+        "run",
+        "tool/fidelity/scenarios.dart"
+      ]
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "python3",
+        "tool/fidelity/bibliography_oracle.py"
+      ]
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "python3",
+        "tool/fidelity/bookmark_copy_oracle.py"
+      ]
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "python3",
+        "tool/fidelity/bookmark_ranges_oracle.py"
+      ]
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "python3",
+        "tool/fidelity/comment_threads_oracle.py"
+      ]
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "python3",
+        "tool/fidelity/corpus.py",
+        "verify"
+      ]
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "python3",
+        "tool/fidelity/cross_oracle.py"
+      ]
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "python3",
+        "tool/fidelity/edge_oracle.py"
+      ]
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "python3",
+        "tool/fidelity/frame_wrap_oracle.py"
+      ]
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "python3",
+        "tool/fidelity/inline_fields_oracle.py"
+      ]
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "python3",
+        "tool/fidelity/native_oracle.py"
+      ]
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "python3",
+        "tool/fidelity/note_markers_oracle.py"
+      ]
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "python3",
+        "tool/fidelity/notes_oracle.py"
+      ]
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "python3",
+        "tool/fidelity/scripted_oracle.py"
+      ]
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "python3",
+        "tool/fidelity/sheet_qualified_names_oracle.py"
+      ]
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "python3",
+        "tool/fidelity/sheet_rename_oracle.py"
+      ]
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "python3",
+        "tool/fidelity/slide_arrange_oracle.py"
+      ]
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "python3",
+        "tool/fidelity/slide_sections_oracle.py"
+      ]
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "python3",
+        "tool/fidelity/story_media_oracle.py"
+      ]
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "python3",
+        "tool/fidelity/styles_oracle.py"
+      ]
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "python3",
+        "tool/fidelity/table_borders_oracle.py"
+      ]
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "python3",
+        "tool/fidelity/table_grid_oracle.py"
+      ]
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "python3",
+        "tool/fidelity/word_structure_oracle.py"
+      ]
+    },
+    {
+      "stage": "controls",
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_bibliography_oracle.py"
+      ]
+    },
+    {
+      "stage": "controls",
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_bookmark_copy_oracle.py"
+      ]
+    },
+    {
+      "stage": "controls",
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_bookmark_ranges_oracle.py"
+      ]
+    },
+    {
+      "stage": "controls",
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_comment_threads_oracle.py"
+      ]
+    },
+    {
+      "stage": "controls",
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_frame_wrap_oracle.py"
+      ]
+    },
+    {
+      "stage": "controls",
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_inline_fields_oracle.py"
+      ]
+    },
+    {
+      "stage": "controls",
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_note_markers_oracle.py"
+      ]
+    },
+    {
+      "stage": "controls",
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_note_spacing_oracle.py"
+      ]
+    },
+    {
+      "stage": "controls",
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_oracles.py"
+      ]
+    },
+    {
+      "stage": "controls",
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_scripted_oracle.py"
+      ]
+    },
+    {
+      "stage": "controls",
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_sheet_qualified_names_oracle.py"
+      ]
+    },
+    {
+      "stage": "controls",
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_sheet_rename_oracle.py"
+      ]
+    },
+    {
+      "stage": "controls",
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_slide_arrange_oracle.py"
+      ]
+    },
+    {
+      "stage": "controls",
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_slide_sections_oracle.py"
+      ]
+    },
+    {
+      "stage": "controls",
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_story_media_oracle.py"
+      ]
+    },
+    {
+      "stage": "controls",
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_table_borders_oracle.py"
+      ]
+    },
+    {
+      "stage": "controls",
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_table_grid_oracle.py"
+      ]
+    },
+    {
+      "stage": "controls",
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_word_structure_oracle.py"
+      ]
+    }
+  ],
+  "editor_goldens": {
+    "executed": false,
+    "required_runtime": "Flutter 3.44.0 on Linux",
+    "cwd": "../quds_office_editor",
+    "command": [
+      "flutter",
+      "test",
+      "--no-pub",
+      "test/office_fidelity_golden_test.dart",
+      "test/office_frame_wrap_golden_test.dart",
+      "test/office_layout_goldens_test.dart",
+      "test/office_nested_table_golden_test.dart",
+      "test/office_story_golden_test.dart",
+      "test/office_structure_goldens_test.dart",
+      "test/office_table_grid_golden_test.dart"
+    ],
+    "files": [
+      "test/goldens/columns_sections_1.png",
+      "test/goldens/columns_sections_2.png",
+      "test/goldens/columns_sections_3.png",
+      "test/goldens/continued_notes_1.png",
+      "test/goldens/continued_notes_2.png",
+      "test/goldens/continued_notes_3.png",
+      "test/goldens/frame_wrap_none.png",
+      "test/goldens/frame_wrap_square.png",
+      "test/goldens/frame_wrap_topBottom.png",
+      "test/goldens/nested_table_content.png",
+      "test/goldens/office_fidelity_word.png",
+      "test/goldens/office_stories_page_1.png",
+      "test/goldens/office_stories_page_2.png",
+      "test/goldens/office_stories_page_3.png",
+      "test/goldens/rtl_1.png",
+      "test/goldens/structure_create_1.png",
+      "test/goldens/structure_edit_1.png",
+      "test/goldens/structure_edit_2.png",
+      "test/goldens/structure_remove_1.png",
+      "test/goldens/table_grid_format.png",
+      "test/goldens/table_grid_replace.png",
+      "test/goldens/table_grid_unchanged.png",
+      "test/goldens/table_grid_unmerge.png",
+      "test/goldens/tall_table_1.png",
+      "test/goldens/tall_table_2.png",
+      "test/goldens/tall_table_3.png",
+      "test/goldens/tall_table_4.png"
+    ]
+  },
+  "status": "passed",
+  "completed_commands": [
+    {
+      "stage": "tests",
+      "argv": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.44/bin/cache/dart-sdk/bin/dart",
+        "test",
+        "test/comment_thread_fidelity_test.dart",
+        "test/drawing_line_style_test.dart",
+        "test/inline_field_fidelity_test.dart",
+        "test/native_presentation_test.dart",
+        "test/native_spreadsheet_test.dart",
+        "test/note_chrome_fidelity_test.dart",
+        "test/note_edit_test.dart",
+        "test/note_marker_fidelity_test.dart",
+        "test/note_separator_fidelity_test.dart",
+        "test/office_fidelity_oracle_test.dart",
+        "test/office_steps_test.dart",
+        "test/opaque_word_test.dart",
+        "test/rich_note_test.dart",
+        "test/scripted_workflows_test.dart",
+        "test/sheet_formula_cache_fidelity_test.dart",
+        "test/sheet_qualified_name_error_test.dart",
+        "test/sheet_qualified_names_test.dart",
+        "test/sheet_rename_adversarial_test.dart",
+        "test/sheet_rename_fidelity_test.dart",
+        "test/slide_arrange_fidelity_test.dart",
+        "test/slide_section_fidelity_test.dart",
+        "test/story_media_fidelity_test.dart",
+        "test/style_cascade_test.dart",
+        "test/table_border_fidelity_test.dart",
+        "test/table_grid_steps_test.dart",
+        "test/variable_line_breaker_test.dart",
+        "test/word_bibliography_fidelity_test.dart",
+        "test/word_bookmark_copy_test.dart",
+        "test/word_bookmark_fidelity_test.dart",
+        "test/word_contained_text_wrap_test.dart",
+        "test/word_footnote_reference_test.dart",
+        "test/word_frame_wrap_test.dart",
+        "test/word_note_bookmark_edit_test.dart",
+        "test/word_part_routing_test.dart",
+        "test/word_picture_distance_fidelity_test.dart",
+        "test/word_structure_integrity_test.dart",
+        "test/word_structure_steps_test.dart",
+        "test/word_style_introduction_test.dart",
+        "test/word_table_direction_test.dart",
+        "test/word_table_nested_layout_test.dart",
+        "test/word_table_tall_frame_layout_test.dart",
+        "test/word_table_tall_toc_layout_test.dart",
+        "test/xml_namespace_capture_test.dart"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "producer",
+      "argv": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.44/bin/cache/dart-sdk/bin/dart",
+        "run",
+        "tool/fidelity/cross_format.dart"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "producer",
+      "argv": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.44/bin/cache/dart-sdk/bin/dart",
+        "run",
+        "tool/fidelity/notes.dart"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "producer",
+      "argv": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.44/bin/cache/dart-sdk/bin/dart",
+        "run",
+        "tool/fidelity/scenarios.dart"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "tool/fidelity/bibliography_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "tool/fidelity/bookmark_copy_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "tool/fidelity/bookmark_ranges_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "tool/fidelity/comment_threads_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "tool/fidelity/corpus.py",
+        "verify"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "tool/fidelity/cross_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "tool/fidelity/edge_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "tool/fidelity/frame_wrap_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "tool/fidelity/inline_fields_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "tool/fidelity/native_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "tool/fidelity/note_markers_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "tool/fidelity/notes_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "tool/fidelity/scripted_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "tool/fidelity/sheet_qualified_names_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "tool/fidelity/sheet_rename_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "tool/fidelity/slide_arrange_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "tool/fidelity/slide_sections_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "tool/fidelity/story_media_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "tool/fidelity/styles_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "tool/fidelity/table_borders_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "tool/fidelity/table_grid_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "oracle",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "tool/fidelity/word_structure_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "controls",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_bibliography_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "controls",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_bookmark_copy_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "controls",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_bookmark_ranges_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "controls",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_comment_threads_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "controls",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_frame_wrap_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "controls",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_inline_fields_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "controls",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_note_markers_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "controls",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_note_spacing_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "controls",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_oracles.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "controls",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_scripted_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "controls",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_sheet_qualified_names_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "controls",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_sheet_rename_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "controls",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_slide_arrange_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "controls",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_slide_sections_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "controls",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_story_media_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "controls",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_table_borders_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "controls",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_table_grid_oracle.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "stage": "controls",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_word_structure_oracle.py"
+      ],
+      "returncode": 0
+    }
+  ],
+  "files": [
+    {
+      "path": "fidelity-bibliography/direct-1.docx",
+      "bytes": 6337,
+      "sha256": "842b27c5ba8ce71c2bdec65ddd2802fa088766f63c456804d3a098e24102e2f8"
+    },
+    {
+      "path": "fidelity-bibliography/direct-2.docx",
+      "bytes": 6371,
+      "sha256": "9949c3bfc828faccea3e86ec7ab5f480d828015da6ab8f10c2516e43e3ed7234"
+    },
+    {
+      "path": "fidelity-bibliography/direct-3.docx",
+      "bytes": 6371,
+      "sha256": "cbb6a5cb7a99851df20375a357c55e97b1d1558a15bcfa51300274993dac0b61"
+    },
+    {
+      "path": "fidelity-bibliography/isolate-1.docx",
+      "bytes": 6337,
+      "sha256": "a197b0224e0012b8ff1dd49ffc4eef7c487d87b9d16832fd93edec0adc29529a"
+    },
+    {
+      "path": "fidelity-bibliography/isolate-2.docx",
+      "bytes": 6370,
+      "sha256": "74ca3aea298a9306df50a15791eba711ae2e6125a1783e690ac151671c136cb1"
+    },
+    {
+      "path": "fidelity-bibliography/isolate-3.docx",
+      "bytes": 6370,
+      "sha256": "07bec55c0c2371c4f50210285f65cd654bb052a8ef14e6e373d588962ac0972b"
+    },
+    {
+      "path": "fidelity-bookmark-copy/copied-1.docx",
+      "bytes": 4588,
+      "sha256": "4a0c88df9a8f7ecacc4343ce7a345806de72c084e2ecd343014c6fcc4f1b6c53"
+    },
+    {
+      "path": "fidelity-bookmark-copy/copied-2.docx",
+      "bytes": 4625,
+      "sha256": "a71913f172e9e0af901ced98b28eb151154fbe74f37fa8ccc910d7376e5ee318"
+    },
+    {
+      "path": "fidelity-bookmark-copy/copied-3.docx",
+      "bytes": 4625,
+      "sha256": "9dbe09e274b0186922dc7ded536523bdd7ed4ed0b20e42537131eb447b428bff"
+    },
+    {
+      "path": "fidelity-bookmark-copy/copied-expected.docx",
+      "bytes": 1366,
+      "sha256": "4813413bbe1ac7b1cd927d0b40b07752c0944dc272d849a4274c627ce4d969b3"
+    },
+    {
+      "path": "fidelity-bookmark-copy/source.docx",
+      "bytes": 1461,
+      "sha256": "7634d9c2fc37a187b134e618a806f787fb8277ae6fd082f937e085662a3fe6ca"
+    },
+    {
+      "path": "fidelity-bookmarks/cloned-1.docx",
+      "bytes": 4828,
+      "sha256": "ef74745b133655f697b4538a741888f0ceaa7c64ca767edc2cc7f5929b9c1e65"
+    },
+    {
+      "path": "fidelity-bookmarks/cloned-2.docx",
+      "bytes": 4874,
+      "sha256": "9a293cbf4d9d13fe5b54243a1dc6c1e4435876b62197777c908760a7b5820c58"
+    },
+    {
+      "path": "fidelity-bookmarks/cloned-3.docx",
+      "bytes": 4875,
+      "sha256": "701e7c99e21a7ac1bbc2e6f15985c28b8d81e38a00e47aff0c742d8153730baa"
+    },
+    {
+      "path": "fidelity-bookmarks/edited-1.docx",
+      "bytes": 5417,
+      "sha256": "d2617d54150055ef119db1983b53314f49f635feb7b595b6946885615f06acfe"
+    },
+    {
+      "path": "fidelity-bookmarks/edited-2.docx",
+      "bytes": 5427,
+      "sha256": "58c8cd932b00fcae823a1e49a67596344ae3aecbaa4140f20660fc4ef405b17a"
+    },
+    {
+      "path": "fidelity-bookmarks/edited-3.docx",
+      "bytes": 5428,
+      "sha256": "14d6b7ec6f533c9b0a673bddc6815889224794094a6e2923294a09c07040f53a"
+    },
+    {
+      "path": "fidelity-bookmarks/frame-1.docx",
+      "bytes": 5208,
+      "sha256": "0398afd0f20c26c3c36b0a151eee384f0de9a1988ea01ab49140bc7a834889af"
+    },
+    {
+      "path": "fidelity-bookmarks/frame-2.docx",
+      "bytes": 5252,
+      "sha256": "694bdb780608f9016888ed0c3ee316cd9adb7bfe744e1e02089b514286c32a54"
+    },
+    {
+      "path": "fidelity-bookmarks/frame-3.docx",
+      "bytes": 5251,
+      "sha256": "e826f5f073474c9fdae96012557c965a56ff28d8ed950956666e4140ba0983f0"
+    },
+    {
+      "path": "fidelity-bookmarks/frame-source.docx",
+      "bytes": 1700,
+      "sha256": "84efbba2da2751e303d812860309a701b71b6424ed13c811474f37081ce3d01a"
+    },
+    {
+      "path": "fidelity-bookmarks/imported-1.docx",
+      "bytes": 4828,
+      "sha256": "b66ba8f849044ec24b2a50bfb6894dc5bdbc5668cca2add9fcff204f064611a9"
+    },
+    {
+      "path": "fidelity-bookmarks/imported-2.docx",
+      "bytes": 4875,
+      "sha256": "f3b295ab4abcb845ad5e80266320fa1cd5a3ea265df115f3aeebeb7fd975902a"
+    },
+    {
+      "path": "fidelity-bookmarks/imported-3.docx",
+      "bytes": 4875,
+      "sha256": "6e5f01264a146ef7f22453e60679f2d961e4161b6be436f68c9039d8fbf3a141"
+    },
+    {
+      "path": "fidelity-bookmarks/source.docx",
+      "bytes": 2140,
+      "sha256": "b469fc9d8ffc372e8dd6d84fc506acd19e47074262f9717e1fc0c6995758ea83"
+    },
+    {
+      "path": "fidelity-comment-threads/threads-edited-1.docx",
+      "bytes": 5587,
+      "sha256": "dd1a19c7593d13087965474f6a1b38c2c733261aa2d890713081548633cf0f33"
+    },
+    {
+      "path": "fidelity-comment-threads/threads-edited-2.docx",
+      "bytes": 5621,
+      "sha256": "00a7104dd7c581565203abc474e1abbafc2d7767a37cb4c7b1f367ccf27eb368"
+    },
+    {
+      "path": "fidelity-comment-threads/threads-edited-3.docx",
+      "bytes": 5621,
+      "sha256": "f9e3bcc379702705dc329d97ed113cde262439ffe6f6e45d68d1256004e58d97"
+    },
+    {
+      "path": "fidelity-comment-threads/threads-imported-1.docx",
+      "bytes": 5541,
+      "sha256": "0762bf13dc83b57847b603ce66863553479159fe609e1f8e38fab28e7f98bdab"
+    },
+    {
+      "path": "fidelity-comment-threads/threads-imported-2.docx",
+      "bytes": 5576,
+      "sha256": "8bc800e2e03ee60e389f34d3d78c8a381d2eac96b5380dee95b14b5828f59503"
+    },
+    {
+      "path": "fidelity-comment-threads/threads-imported-3.docx",
+      "bytes": 5576,
+      "sha256": "33ba596ef2a368137211d273c06e70026b3f62a6fa669d19a122451f4cfaf011"
+    },
+    {
+      "path": "fidelity-comment-threads/threads-source.docx",
+      "bytes": 2376,
+      "sha256": "d1763533e3733a93398a0cea7043b9d188f98f5a403ff5b7f3ed5869d654e9a4"
+    },
+    {
+      "path": "fidelity-frame-wrap/none-1.docx",
+      "bytes": 5210,
+      "sha256": "baa4b5420e09bbab348c5d4dba9a14eb95cc7a31ca220d818e21a4236a799288"
+    },
+    {
+      "path": "fidelity-frame-wrap/none-2.docx",
+      "bytes": 5247,
+      "sha256": "c5f41f51602ee9dc7f0455a44303d0c1a7717a87bd150d80b382235f117a21a1"
+    },
+    {
+      "path": "fidelity-frame-wrap/none-3.docx",
+      "bytes": 5247,
+      "sha256": "95fd59b48aadbe33746a510841dd045c6347c71e03b47c6b79f9b9b80f0b0833"
+    },
+    {
+      "path": "fidelity-frame-wrap/none-source.docx",
+      "bytes": 1959,
+      "sha256": "956a75351e281d6fcaea42829e79262c4567eba6113ea67a82fc191a61d35543"
+    },
+    {
+      "path": "fidelity-frame-wrap/square-1.docx",
+      "bytes": 5230,
+      "sha256": "01fd88e9bb96195b0d28cc3bd6d9ed4084ef7bde960d5d98272490cf7f2a69b3"
+    },
+    {
+      "path": "fidelity-frame-wrap/square-2.docx",
+      "bytes": 5268,
+      "sha256": "6627689881aa9bf803d13e6e4a94f1e1a9a234b40f5da1e5e0c6280c6988c3d5"
+    },
+    {
+      "path": "fidelity-frame-wrap/square-3.docx",
+      "bytes": 5268,
+      "sha256": "cbe77796c6e1dbf9880723bebebef69ed916849a8ba4293f4c06bff65424cd1a"
+    },
+    {
+      "path": "fidelity-frame-wrap/square-source.docx",
+      "bytes": 1979,
+      "sha256": "cc13ec6ed3be7cfe0c37c56c0bcfd5fea15b4d5e0901ca896f18b111690ad567"
+    },
+    {
+      "path": "fidelity-frame-wrap/topBottom-1.docx",
+      "bytes": 5247,
+      "sha256": "c1c8963f485bd7a69e66568b265bcb06b72b90e7ed601b4a2db8d1e19ad89c6f"
+    },
+    {
+      "path": "fidelity-frame-wrap/topBottom-2.docx",
+      "bytes": 5283,
+      "sha256": "89714de18f43105b570e848f32b5ec2082dfc0d14f4ec5993b4330451d4392db"
+    },
+    {
+      "path": "fidelity-frame-wrap/topBottom-3.docx",
+      "bytes": 5284,
+      "sha256": "31c0532612baf34aa1ca9d3104a2c17a4d84911a797fb1016fab675f71618199"
+    },
+    {
+      "path": "fidelity-frame-wrap/topBottom-source.docx",
+      "bytes": 1965,
+      "sha256": "e14aaadf28e887ae68c5492226c9d42d3954485be35511ec539bf27fe9bbf0ba"
+    },
+    {
+      "path": "fidelity-image/replaced-1.docx",
+      "bytes": 8200,
+      "sha256": "f876e660ff0bb715a1929c7ece5cfdc4db87d6dba605cea958fbabbea92c1ed9"
+    },
+    {
+      "path": "fidelity-image/replaced-2.docx",
+      "bytes": 8237,
+      "sha256": "d79401ef2317034b9ac5e52e587f38df990d60e22af0100090b7b052ba0f5909"
+    },
+    {
+      "path": "fidelity-image/replaced-3.docx",
+      "bytes": 8237,
+      "sha256": "9e7db8185fe92262cc1f46ed507b399d2474fe7534994b29a95c8713f9b1f300"
+    },
+    {
+      "path": "fidelity-inline-fields/direct-1.docx",
+      "bytes": 5634,
+      "sha256": "52792cdc93d97055fea2c54e49a5d5d6e79dd67f5220843d96412a198d5a143d"
+    },
+    {
+      "path": "fidelity-inline-fields/direct-2.docx",
+      "bytes": 5680,
+      "sha256": "b24404c8d53bd761507acec2ad5b3803b511a7b3efdd8c74ff1b80a449070f06"
+    },
+    {
+      "path": "fidelity-inline-fields/direct-3.docx",
+      "bytes": 5681,
+      "sha256": "dd3efea1412b147075d15600127b3df7736328a03b442bc40f849b9920bce7e1"
+    },
+    {
+      "path": "fidelity-inline-fields/isolate-1.docx",
+      "bytes": 5634,
+      "sha256": "bf8a5fc1e4e2b481c71c004712f95909662a9f7316b83011a6aebabd59f5a0c9"
+    },
+    {
+      "path": "fidelity-inline-fields/isolate-2.docx",
+      "bytes": 5681,
+      "sha256": "77866b36496897157b6a498bca12c4e9734d311694087b04a878183e3763720c"
+    },
+    {
+      "path": "fidelity-inline-fields/isolate-3.docx",
+      "bytes": 5681,
+      "sha256": "8ae730582d16f801f6bb2c46b88a4c5aa6369ba6a62646972bb8826613f60a71"
+    },
+    {
+      "path": "fidelity-native/created-pivot-1.xlsx",
+      "bytes": 9729,
+      "sha256": "04112b5469aed1be9e0cc7148df3444c3133920a20776f0bc803b80c6628b36a"
+    },
+    {
+      "path": "fidelity-native/created-pivot-2.xlsx",
+      "bytes": 9740,
+      "sha256": "d6c95349ee0c133e78d556aa3398201a73421a50afa657b778a7dc6d76787086"
+    },
+    {
+      "path": "fidelity-native/created-pivot-3.xlsx",
+      "bytes": 9740,
+      "sha256": "96dbc0dad390f6f7936e5f5f4249c6820a9034a69fedfceba5bd94617aeeb887"
+    },
+    {
+      "path": "fidelity-native/native-sheet-edited-1.xlsx",
+      "bytes": 11904,
+      "sha256": "fb54cab7e36ace8e5fa0fa7bec8af2fc4b533357dc61a1062039c14083ee76b8"
+    },
+    {
+      "path": "fidelity-native/native-sheet-edited-2.xlsx",
+      "bytes": 11904,
+      "sha256": "020be3a40916c63c2dd78a078de4516319ceab52f44e0833f729f46efd285e65"
+    },
+    {
+      "path": "fidelity-native/native-sheet-edited-3.xlsx",
+      "bytes": 11904,
+      "sha256": "da70ffdacf23555179c90a0b7661a2e313b2988fb4e47115858da3060d124cad"
+    },
+    {
+      "path": "fidelity-native/native-sheet-imported-1.xlsx",
+      "bytes": 11877,
+      "sha256": "9865068a6500472bc9c07ccfd818970994b01d86908e22da8ff8c9f0f147596e"
+    },
+    {
+      "path": "fidelity-native/native-sheet-imported-2.xlsx",
+      "bytes": 11877,
+      "sha256": "d117f92e149569d9f42b8ed8bb0b9cc3aeb851a65b529fd3434248a7818e9386"
+    },
+    {
+      "path": "fidelity-native/native-sheet-imported-3.xlsx",
+      "bytes": 11877,
+      "sha256": "da4d359d84454d6b7ef9a7fec4deb482c239f2fd50d35d0dbcc5af06d580b9df"
+    },
+    {
+      "path": "fidelity-native/native-slides-1.pptx",
+      "bytes": 55757,
+      "sha256": "358defc109ed24927cd0560ca053a2e2267fdb387c64985bba8433bf2d23edcc"
+    },
+    {
+      "path": "fidelity-native/native-slides-2.pptx",
+      "bytes": 55757,
+      "sha256": "c90191d14e3559d83183b29cea4bf94314138b0ed32ca152ee1b9d280f544bd6"
+    },
+    {
+      "path": "fidelity-native/native-slides-3.pptx",
+      "bytes": 55756,
+      "sha256": "eef18f9352c63b52121cf1f355f3ef98875ac7ec191c1ad57409e974d8323912"
+    },
+    {
+      "path": "fidelity-native/native-slides-edited-1.pptx",
+      "bytes": 56053,
+      "sha256": "2b2edd8fdf648ee24ff52a8188bfd08ecb20df03113ff32a7f4d90214a9a83a7"
+    },
+    {
+      "path": "fidelity-native/native-slides-edited-2.pptx",
+      "bytes": 56053,
+      "sha256": "63e2836d71008f2d8e09e03f17784b5ee89747db58f262780febe0018052fe56"
+    },
+    {
+      "path": "fidelity-native/native-slides-edited-3.pptx",
+      "bytes": 56053,
+      "sha256": "441f1e8a05006b6472e1687fbcd135a53ce107010d33ae4507d9527a1d7f408d"
+    },
+    {
+      "path": "fidelity-note-markers/cloned-1.docx",
+      "bytes": 5094,
+      "sha256": "620e08d67fa05ccffaf6746fb90d0738e69755b9da8a4bdceeaec109cb018e61"
+    },
+    {
+      "path": "fidelity-note-markers/cloned-2.docx",
+      "bytes": 5135,
+      "sha256": "79ad25d0a3beb935edbfe8f42322620c346d50a99164c8c4a618aa2b4d4ce5b1"
+    },
+    {
+      "path": "fidelity-note-markers/cloned-3.docx",
+      "bytes": 5137,
+      "sha256": "9983e5000c0fe774ddd2e522ca5f9dbe983f641571ae87b0db2f0df550c989db"
+    },
+    {
+      "path": "fidelity-note-markers/edited-1.docx",
+      "bytes": 5120,
+      "sha256": "340d38262f3bec1eb5e7f9cdb9351f3e8670f4d76ebdb8caf1e4adcb8da97502"
+    },
+    {
+      "path": "fidelity-note-markers/edited-2.docx",
+      "bytes": 5162,
+      "sha256": "78d6464d820277b0c90bd48b2036c7d0c2227e074a37fd9d721143138b6fa8d4"
+    },
+    {
+      "path": "fidelity-note-markers/edited-3.docx",
+      "bytes": 5163,
+      "sha256": "ef7588bbc73e61bfc596d33f0d16e100e0fe99c1b585efc6c57674e3c13f8da5"
+    },
+    {
+      "path": "fidelity-note-markers/imported-1.docx",
+      "bytes": 5094,
+      "sha256": "35f2c2dae20c2bd4685efcd99869a69d72fa43f1b6a2592d704e5341ce75f77b"
+    },
+    {
+      "path": "fidelity-note-markers/imported-2.docx",
+      "bytes": 5136,
+      "sha256": "d585e9e00ba9c5f2ea0fd21a9aa186d791f1a38d4070fa0c5efe86a593f832f2"
+    },
+    {
+      "path": "fidelity-note-markers/imported-3.docx",
+      "bytes": 5137,
+      "sha256": "1ba7151fcb9c8cdf8b4094a5154e66be549df555ad4a69cf377cc6311998196a"
+    },
+    {
+      "path": "fidelity-note-markers/source.docx",
+      "bytes": 2987,
+      "sha256": "24d80e959d01435191ccaaa6d31bed1e214becbddef6eef8b87b69d79d357a48"
+    },
+    {
+      "path": "fidelity-notes/edited-1.docx",
+      "bytes": 9107,
+      "sha256": "72dc86f35b1bb48c1d075a5cdc2663db9d59c736a49ccb6248afb7edec033308"
+    },
+    {
+      "path": "fidelity-notes/edited-2.docx",
+      "bytes": 9142,
+      "sha256": "a57d3a5d963cbedf719aec8eb67e4c1bc6264c2e4748d445a131005cf42512c6"
+    },
+    {
+      "path": "fidelity-notes/edited-3.docx",
+      "bytes": 9142,
+      "sha256": "a3cbbcabdf5cd62c4c126c60943ebff68efd50aafc6acd9c156904382545b1fa"
+    },
+    {
+      "path": "fidelity-notes/source.docx",
+      "bytes": 6100,
+      "sha256": "11550ac3f3c06bd4093b61bf16cc879827587a53c1cf0abaf8dcbdffc19da59e"
+    },
+    {
+      "path": "fidelity-notes/unchanged-1.docx",
+      "bytes": 9102,
+      "sha256": "98dd09d3a00dc3d4fb3a97ddb1c246af247e04760496bc023db350ca3bbf32b8"
+    },
+    {
+      "path": "fidelity-notes/unchanged-2.docx",
+      "bytes": 9136,
+      "sha256": "4cae236b45bbe31f7cefa6b7975bb7eab1ee8b1d6ba9b18bcdf4c78346392285"
+    },
+    {
+      "path": "fidelity-notes/unchanged-3.docx",
+      "bytes": 9138,
+      "sha256": "63d8609cdb1a0c02c2663ed2af41d65589b35c2e6b9ed52071c5670632d4e43d"
+    },
+    {
+      "path": "fidelity-opaque/opaque-1.docx",
+      "bytes": 4405,
+      "sha256": "5973ee8f4f9bbf5d60c859958d6bbd02ae1795949ca94f4a9050f25275fe46a8"
+    },
+    {
+      "path": "fidelity-opaque/opaque-2.docx",
+      "bytes": 4440,
+      "sha256": "2a21be7378aca373a3cdbe034243e1b823cf1e7e002d98460ac040483047f4a7"
+    },
+    {
+      "path": "fidelity-opaque/opaque-3.docx",
+      "bytes": 4440,
+      "sha256": "c39af0856ec35df5e753d6d2e807832d55c2e61f20a00cbf7c490ffa92837b24"
+    },
+    {
+      "path": "fidelity-scripted/sheet/edited.xlsx",
+      "bytes": 12047,
+      "sha256": "f47cd042c997fa4a714fb80a5ab56003cc06ea9c7c1f7bd21189c496449309af"
+    },
+    {
+      "path": "fidelity-scripted/sheet/roundtrip-1.xlsx",
+      "bytes": 12045,
+      "sha256": "ec9e6f9d731df178bfc5345d54af82a6196df6f9e8cbad8c6222b5f79a4d433e"
+    },
+    {
+      "path": "fidelity-scripted/sheet/roundtrip-2.xlsx",
+      "bytes": 12045,
+      "sha256": "a58826cdcfc675bc2461de6277e42f2577145d04120696018dd08a0a29db4c9a"
+    },
+    {
+      "path": "fidelity-scripted/sheet/roundtrip-3.xlsx",
+      "bytes": 12045,
+      "sha256": "b6c7eb74acc6351801ced347821ae56d720fdd4d3765166406485d8e8d85e9f7"
+    },
+    {
+      "path": "fidelity-scripted/slide/edited.pptx",
+      "bytes": 55648,
+      "sha256": "ad9c673192694efd8af6f957cfd0368b3a84b49247a0fe433d237b4e32cc5dac"
+    },
+    {
+      "path": "fidelity-scripted/slide/roundtrip-1.pptx",
+      "bytes": 55648,
+      "sha256": "21745b55b8db87d36c4c99d6e59a56b87b35c2f5f2560d02a06dfbe1e1ca6bb7"
+    },
+    {
+      "path": "fidelity-scripted/slide/roundtrip-2.pptx",
+      "bytes": 55648,
+      "sha256": "c12946a27a263b5857b454e567ee60938a9fc9281419051666855751a32748ae"
+    },
+    {
+      "path": "fidelity-scripted/slide/roundtrip-3.pptx",
+      "bytes": 55648,
+      "sha256": "7d4a05f71aba7434b6aefdc1f3bcb066f54b68e8cb3a14a9d9a0c0fdc6eed0c1"
+    },
+    {
+      "path": "fidelity-scripted/word/edited.docx",
+      "bytes": 9126,
+      "sha256": "e027b406ca5217552d67a3065b7dbcd2fd5562cf7990fe6559a80e6533386b78"
+    },
+    {
+      "path": "fidelity-scripted/word/roundtrip-1.docx",
+      "bytes": 9197,
+      "sha256": "a2c51ac9cbde2e9505b88905a061c0d1ff20980aaaf4f47e4fb0420e1e52ff29"
+    },
+    {
+      "path": "fidelity-scripted/word/roundtrip-2.docx",
+      "bytes": 9195,
+      "sha256": "1774188e56a9935092a1d7999817528d4c45efc1e45da52c124a9a12a8718404"
+    },
+    {
+      "path": "fidelity-scripted/word/roundtrip-3.docx",
+      "bytes": 9195,
+      "sha256": "8a797e295e89abc7ce990945609a4d685e0a3476490c6f4698a6abd45d25296f"
+    },
+    {
+      "path": "fidelity-sheet-qualified-names/expected-recalculated.xlsx",
+      "bytes": 2860,
+      "sha256": "ee946f7410d3aa2cdd26ec88005ebe9fdbb5d5fc2c497ca1e4f4575411f9da64"
+    },
+    {
+      "path": "fidelity-sheet-qualified-names/expected-renamed.xlsx",
+      "bytes": 2861,
+      "sha256": "e800d3126a5c031181d7fb0fd2b86ac43a4c6b47d34f6acaf4aa3cb90dfa10d0"
+    },
+    {
+      "path": "fidelity-sheet-qualified-names/recalculated-1.xlsx",
+      "bytes": 4464,
+      "sha256": "334bdabe2b5a32a9b61fc48cf933de925db6ca4e1f104acea10821dab2ab0b7c"
+    },
+    {
+      "path": "fidelity-sheet-qualified-names/recalculated-2.xlsx",
+      "bytes": 4471,
+      "sha256": "90543e52b6df42a1a7e88b0f2328d8d3683bfa1fa4a25170f4c2ea928a9f1489"
+    },
+    {
+      "path": "fidelity-sheet-qualified-names/recalculated-3.xlsx",
+      "bytes": 4472,
+      "sha256": "dbee5f879f5a6da2a5001fc454efe41ace1d4b48eb536b12facb5dd5db52f723"
+    },
+    {
+      "path": "fidelity-sheet-qualified-names/renamed-1.xlsx",
+      "bytes": 4470,
+      "sha256": "37f75597f2228605df9e9f4bccabc0989932f2b7a3bb02f8ae174c76b3fd1b2b"
+    },
+    {
+      "path": "fidelity-sheet-qualified-names/renamed-2.xlsx",
+      "bytes": 4469,
+      "sha256": "0694399756e54dd783d88b9c85cc6fd1455a4afda14fa1f09438fd05d2adf91a"
+    },
+    {
+      "path": "fidelity-sheet-qualified-names/renamed-3.xlsx",
+      "bytes": 4470,
+      "sha256": "68f22d9d80b426e894d5404c77be2de589e99c4e7ed7472e1fcb1b3ea8aa02bb"
+    },
+    {
+      "path": "fidelity-sheet-qualified-names/source.xlsx",
+      "bytes": 2907,
+      "sha256": "aeb3b6c808a4d4ad43b61e45e8e04664e9cc3581c65c6d94eac8590030ff0d8f"
+    },
+    {
+      "path": "fidelity-sheet-rename/qualified-expected.xlsx",
+      "bytes": 10894,
+      "sha256": "b885842cbd380e906aa58c56e01152115ae4d77e62e018764d9bec9a568f6c3d"
+    },
+    {
+      "path": "fidelity-sheet-rename/renamed-1.xlsx",
+      "bytes": 13535,
+      "sha256": "8953c3b5372775acd0371e63cd5d65c19e85866e55071ab93df0de417c283951"
+    },
+    {
+      "path": "fidelity-sheet-rename/renamed-2.xlsx",
+      "bytes": 13535,
+      "sha256": "482817154d4b1934f3a5e146039ec114559408bed9ba87a68afe02040f138765"
+    },
+    {
+      "path": "fidelity-sheet-rename/renamed-3.xlsx",
+      "bytes": 13535,
+      "sha256": "ea74046a7f1accac433b3c64ad5754da486f8dcae98159a73930d628cc970701"
+    },
+    {
+      "path": "fidelity-sheet-rename/source.xlsx",
+      "bytes": 10758,
+      "sha256": "561a2ebf80b6f02e8b1fc00648230b341ff68e1a3ee501ea026b9e69c35fc24b"
+    },
+    {
+      "path": "fidelity-slide-arrange/direct-1.pptx",
+      "bytes": 32172,
+      "sha256": "aba01648c8189ef3efe2694b643a4fa24a80910a9465ce5e5120e8639f4371c8"
+    },
+    {
+      "path": "fidelity-slide-arrange/direct-2.pptx",
+      "bytes": 32172,
+      "sha256": "02e7043bb8dac2b8f6b289afae90e7b1f263aee1500edf126d0262323b2ac658"
+    },
+    {
+      "path": "fidelity-slide-arrange/direct-3.pptx",
+      "bytes": 32172,
+      "sha256": "eaa7021db4e813ecfa724c28f3522098163b05fee779912a5920954d2614f102"
+    },
+    {
+      "path": "fidelity-slide-arrange/isolate-1.pptx",
+      "bytes": 32172,
+      "sha256": "3bbabf026a7b25ae80b5c07d11e5bd7cc9b3fba4d7d7c0ecdba6d72274c7d545"
+    },
+    {
+      "path": "fidelity-slide-arrange/isolate-2.pptx",
+      "bytes": 32172,
+      "sha256": "875bdc6c94fe5a13a7990a84108d1da72c99d4cfdecac1a4b776c248d193b763"
+    },
+    {
+      "path": "fidelity-slide-arrange/isolate-3.pptx",
+      "bytes": 32172,
+      "sha256": "f758d1afc5c07bc442dbb23edaf36a9c79ec37f83c8aa5f97f7db00719eb6940"
+    },
+    {
+      "path": "fidelity-slide-arrange/source.pptx",
+      "bytes": 28416,
+      "sha256": "6d86b24c22bdaac9d2e57167f7f506626029b4060eb793f523bfe86bfe266b50"
+    },
+    {
+      "path": "fidelity-slide-sections/direct/backward-1.pptx",
+      "bytes": 48105,
+      "sha256": "f4014afa1e2ecd514f701a73ad82eb8d7e6da309e02973d9c7c98cdc4813c453"
+    },
+    {
+      "path": "fidelity-slide-sections/direct/backward-2.pptx",
+      "bytes": 48105,
+      "sha256": "d4cfb5b9db7ce2628549a6ac634ba54e82c87d99b9a66226a739974931b2f1f2"
+    },
+    {
+      "path": "fidelity-slide-sections/direct/backward-3.pptx",
+      "bytes": 48105,
+      "sha256": "35dcc25600f236bf1938d94c52910ee0cc9d81a402336562e421b68f6801eb3f"
+    },
+    {
+      "path": "fidelity-slide-sections/direct/emptied-1.pptx",
+      "bytes": 48173,
+      "sha256": "d8cf266f36abf360634163965ebbc0be7caeb1dc8ac91c0bbc9838fac682b06c"
+    },
+    {
+      "path": "fidelity-slide-sections/direct/emptied-2.pptx",
+      "bytes": 48173,
+      "sha256": "fef5e052133882d8da9d75bc7c96ce7d8579eb098ae26dfb996e3d5d4fb6b7b1"
+    },
+    {
+      "path": "fidelity-slide-sections/direct/emptied-3.pptx",
+      "bytes": 48173,
+      "sha256": "81166e1ac9cc8db2013864fd73a6ad9fce385f651d922d4fc701bd48996875e0"
+    },
+    {
+      "path": "fidelity-slide-sections/direct/forward-1.pptx",
+      "bytes": 48110,
+      "sha256": "2082bb24bc3bebc410fd4f248ff4d12de928493fc5df4e98068655540a203902"
+    },
+    {
+      "path": "fidelity-slide-sections/direct/forward-2.pptx",
+      "bytes": 48110,
+      "sha256": "14b22c11627bfffedb57185ff9541011e55d57b3926063602c773f03bbde998e"
+    },
+    {
+      "path": "fidelity-slide-sections/direct/forward-3.pptx",
+      "bytes": 48109,
+      "sha256": "42acde553c241c2914454e731ee54e1bbeedea32c2857518fba34192a759743d"
+    },
+    {
+      "path": "fidelity-slide-sections/direct/source.pptx",
+      "bytes": 42941,
+      "sha256": "fbbaacf2b6bbc657568bb3e507e062a949ce5304d2f77fb51bd3c9f3ec5bb39c"
+    },
+    {
+      "path": "fidelity-slide-sections/direct/unchanged-1.pptx",
+      "bytes": 48103,
+      "sha256": "d54e17331f3e53bf57b7f2156aa6d02213176a4b204e03399f0428114fe36235"
+    },
+    {
+      "path": "fidelity-slide-sections/direct/unchanged-2.pptx",
+      "bytes": 48103,
+      "sha256": "68f8bd1e7486d3724e7752371b17a0c70aadd99645d122b03261ac9af560557d"
+    },
+    {
+      "path": "fidelity-slide-sections/direct/unchanged-3.pptx",
+      "bytes": 48103,
+      "sha256": "e3b3c7779d3c9be0138aa587ae3e373ee3f8b0f04e8e39ad423cafb5eabffe09"
+    },
+    {
+      "path": "fidelity-slide-sections/direct/within-1.pptx",
+      "bytes": 48112,
+      "sha256": "b439f083ac5fe6584ce875e85c0d139f182d1c84e9e89d3387e23c57ed50ddca"
+    },
+    {
+      "path": "fidelity-slide-sections/direct/within-2.pptx",
+      "bytes": 48111,
+      "sha256": "953acd162caeafe8437b3f0437ae410993c1f661fda3b315f5f1beee1049cd61"
+    },
+    {
+      "path": "fidelity-slide-sections/direct/within-3.pptx",
+      "bytes": 48112,
+      "sha256": "a1173137c2a63e2016463fa62996448aecce0f247103b9592e7d130c46608857"
+    },
+    {
+      "path": "fidelity-slide-sections/isolate/backward-1.pptx",
+      "bytes": 48105,
+      "sha256": "bb3b5461924db15aa96511ad8b3b57b6ceef7ab94d03208207bafd497ac1bdfa"
+    },
+    {
+      "path": "fidelity-slide-sections/isolate/backward-2.pptx",
+      "bytes": 48105,
+      "sha256": "f985207da2927301918f02cbd10d6e8246813a8e65286016906f943ea2d20b83"
+    },
+    {
+      "path": "fidelity-slide-sections/isolate/backward-3.pptx",
+      "bytes": 48105,
+      "sha256": "998f949fd2e1ed9ac27e3ecea7a25e91237e21ac6ab5562bd2e2bddfe04508d8"
+    },
+    {
+      "path": "fidelity-slide-sections/isolate/emptied-1.pptx",
+      "bytes": 48173,
+      "sha256": "a86a780a3ac8eaf6408fc4516d5eca38e662b5c1093ec6ebabded5310dfa8077"
+    },
+    {
+      "path": "fidelity-slide-sections/isolate/emptied-2.pptx",
+      "bytes": 48171,
+      "sha256": "e48fba84264bb42acd58ec7121215f4e6d9b1fa3da5cdc42dd1d90ba5b952089"
+    },
+    {
+      "path": "fidelity-slide-sections/isolate/emptied-3.pptx",
+      "bytes": 48173,
+      "sha256": "f7ee028add6b63530d2e6e45af8b28f22f1e4cc92fdfdc956d8bd81109260a4b"
+    },
+    {
+      "path": "fidelity-slide-sections/isolate/forward-1.pptx",
+      "bytes": 48110,
+      "sha256": "2332774bf96424884fc59dc15b5deb7a59c2ca89abb0b050eea08424210fc458"
+    },
+    {
+      "path": "fidelity-slide-sections/isolate/forward-2.pptx",
+      "bytes": 48110,
+      "sha256": "aad0b27485fb52c16df44383f9ea3b797fede7f2c48a03cd982154c967dcee22"
+    },
+    {
+      "path": "fidelity-slide-sections/isolate/forward-3.pptx",
+      "bytes": 48110,
+      "sha256": "df568ae822557d9404ecbceb450907ce124f2a6701aa372e32c6e31f197b58fd"
+    },
+    {
+      "path": "fidelity-slide-sections/isolate/source.pptx",
+      "bytes": 42941,
+      "sha256": "fbbaacf2b6bbc657568bb3e507e062a949ce5304d2f77fb51bd3c9f3ec5bb39c"
+    },
+    {
+      "path": "fidelity-slide-sections/isolate/unchanged-1.pptx",
+      "bytes": 48103,
+      "sha256": "45995f52519713b7ef3464bdc6f79bb0250177ca971c6d0226e24a7775f47832"
+    },
+    {
+      "path": "fidelity-slide-sections/isolate/unchanged-2.pptx",
+      "bytes": 48103,
+      "sha256": "0f19e46d670f3891524e35f27d987cf4524b3ff0b90be8be0dc6f4f72d5d3856"
+    },
+    {
+      "path": "fidelity-slide-sections/isolate/unchanged-3.pptx",
+      "bytes": 48103,
+      "sha256": "ec35f4b2946546be7f97e2c6e71de3f5fae9029b1b9e135be9eb96549274e605"
+    },
+    {
+      "path": "fidelity-slide-sections/isolate/within-1.pptx",
+      "bytes": 48112,
+      "sha256": "9ca49795ca614e8def8813d51c15fd6650587ea00a9fc2a34894e6c82f760d4c"
+    },
+    {
+      "path": "fidelity-slide-sections/isolate/within-2.pptx",
+      "bytes": 48112,
+      "sha256": "264375704b5b1440d31f39c9e2118b2dd1a69ea0547a3ba59b72b9eb121f616f"
+    },
+    {
+      "path": "fidelity-slide-sections/isolate/within-3.pptx",
+      "bytes": 48112,
+      "sha256": "8f5f7a9cb7896cdfdd462f262e3c8525ec1a1393455fa53e7550593f25854f53"
+    },
+    {
+      "path": "fidelity-story-media/relocated-edited-1.docx",
+      "bytes": 22497,
+      "sha256": "df6ac56c022ff3198f6cb2679f37342e527ec6e369ebb4c77073486d90526e42"
+    },
+    {
+      "path": "fidelity-story-media/relocated-edited-2.docx",
+      "bytes": 22526,
+      "sha256": "9599c4221b218bf259717d654a4fbdad8d4335bb44a35bc10cfe9c21fa683161"
+    },
+    {
+      "path": "fidelity-story-media/relocated-edited-3.docx",
+      "bytes": 22527,
+      "sha256": "d79d63d688180e2f4386cc4824db04c1c0d8140cd26c0be4d635ada89400915c"
+    },
+    {
+      "path": "fidelity-story-media/story-edited-1.docx",
+      "bytes": 22133,
+      "sha256": "83ceb7922cfd441fd162df6927a7e76f48fdcdb018a098a78873ca438f6a84cb"
+    },
+    {
+      "path": "fidelity-story-media/story-edited-2.docx",
+      "bytes": 22171,
+      "sha256": "2c0aa60b032e88dd5ab2d6d6d0bda93393fa6e1e302fa74af4e186745d674baf"
+    },
+    {
+      "path": "fidelity-story-media/story-edited-3.docx",
+      "bytes": 22171,
+      "sha256": "7ff08b7b29a41c4c74123854a04501e52ee7265c886ca9fe2d6e059694e6134e"
+    },
+    {
+      "path": "fidelity-story-media/story-imported-1.docx",
+      "bytes": 21841,
+      "sha256": "81361f951d9f9b1ccf3bb32702c1e8bb8f6bdfd0d5df7651a4b712e19fa1f185"
+    },
+    {
+      "path": "fidelity-story-media/story-imported-2.docx",
+      "bytes": 21871,
+      "sha256": "c72695c751d25ff553471d00ec29108d8f610875300919c9454abb9dae1d78cb"
+    },
+    {
+      "path": "fidelity-story-media/story-imported-3.docx",
+      "bytes": 21871,
+      "sha256": "81ca56ace93f8d0589694de71ad0a8f1e244c1409b40c60351ba42a554146096"
+    },
+    {
+      "path": "fidelity-structure/create/edited.docx",
+      "bytes": 8323,
+      "sha256": "6e54b1c5b415126108e0601b7bf07455eb89c866afe2d81e28654343e8d97856"
+    },
+    {
+      "path": "fidelity-structure/create/roundtrip-1.docx",
+      "bytes": 8403,
+      "sha256": "43359b1e3ce07225133af1760dfbe45a0d9dee58f6d986043772e217e9600c0b"
+    },
+    {
+      "path": "fidelity-structure/create/roundtrip-2.docx",
+      "bytes": 8403,
+      "sha256": "1d849f24a39822fa8574db89fee73fbf3bb1176be78f6635c8c8bf7423880f2e"
+    },
+    {
+      "path": "fidelity-structure/create/roundtrip-3.docx",
+      "bytes": 8404,
+      "sha256": "d2edc14d00ec0dff3ab6985c3e2702d983fc0b8926cb4aff0f5043c99cbe8e83"
+    },
+    {
+      "path": "fidelity-structure/edit/edited.docx",
+      "bytes": 8361,
+      "sha256": "1401ebf2a900c55fc2a17da7a013db522d4bbd9b873ef66466d523d6f54fd494"
+    },
+    {
+      "path": "fidelity-structure/edit/roundtrip-1.docx",
+      "bytes": 8365,
+      "sha256": "67cc62085266f8bf41f1f04944fb7e4fef8fe8411e042107cba74923a2536799"
+    },
+    {
+      "path": "fidelity-structure/edit/roundtrip-2.docx",
+      "bytes": 8366,
+      "sha256": "172049dff3f4c0f9c62018f2b9be34a4d4adcf983e54e61d6273a2cc143bc00f"
+    },
+    {
+      "path": "fidelity-structure/edit/roundtrip-3.docx",
+      "bytes": 8366,
+      "sha256": "b64d24711cb358656be238d85d57537a3fd3181aaf0424f65a968ce71806aa69"
+    },
+    {
+      "path": "fidelity-structure/remove/edited.docx",
+      "bytes": 6306,
+      "sha256": "c6ef0838b04bda79a19c5850a5592ca5b39b5710019828fd77ca5857e25fe210"
+    },
+    {
+      "path": "fidelity-structure/remove/roundtrip-1.docx",
+      "bytes": 6303,
+      "sha256": "397837b9b9fb64fe3cb1b07a9f5a0a1ff298a820502848b2fdad4d4c598ce10c"
+    },
+    {
+      "path": "fidelity-structure/remove/roundtrip-2.docx",
+      "bytes": 6303,
+      "sha256": "fc53d8bca23beffbb85a88e1d736405a0bcc56637310f878a230a70c6666c12e"
+    },
+    {
+      "path": "fidelity-structure/remove/roundtrip-3.docx",
+      "bytes": 6302,
+      "sha256": "8ed444d9bac306ae83ba096198473bc07fc911ba670c303ab7eed91bdc7de4ba"
+    },
+    {
+      "path": "fidelity-structure/source.docx",
+      "bytes": 1231,
+      "sha256": "19d3d78dd6823d8b2ad7173f0eb82be7b2ccf4224d50fdb889dee758ab64e88f"
+    },
+    {
+      "path": "fidelity-style-toggles/toggle-1.docx",
+      "bytes": 6967,
+      "sha256": "2f5d6b8fe38c732ad4cef72617c746e6329429d7da3e0af569b821f831ca3d89"
+    },
+    {
+      "path": "fidelity-style-toggles/toggle-2.docx",
+      "bytes": 6967,
+      "sha256": "888167f5d9c1a650b2b4d6ff49fb855b89739b4b61e30a3d537cc0f71cab1937"
+    },
+    {
+      "path": "fidelity-style-toggles/toggle-3.docx",
+      "bytes": 6967,
+      "sha256": "a082181ab82ec9a23a0be1342af38578a6ad9c3ba71216cb02b1cb8ad5d9a0ab"
+    },
+    {
+      "path": "fidelity-styles/edited-1.docx",
+      "bytes": 7167,
+      "sha256": "76007a6fbd2db6d569accd0a3db1ccdd94532ddcc4eb0371c0cb0a056fe56828"
+    },
+    {
+      "path": "fidelity-styles/edited-2.docx",
+      "bytes": 7167,
+      "sha256": "378ca91f31a211d1379c5757ea6ad34958aa9a7376eec43547a34758272c1b49"
+    },
+    {
+      "path": "fidelity-styles/edited-3.docx",
+      "bytes": 7167,
+      "sha256": "2907e2916e4752fb10b2fc20651fed29e90ad0689346a067063221669ce427b3"
+    },
+    {
+      "path": "fidelity-styles/unchanged-1.docx",
+      "bytes": 7125,
+      "sha256": "988d80f3a2c063cdc00f6eea3e948b90cddf5bca6eaf962583efa1f1fda58349"
+    },
+    {
+      "path": "fidelity-styles/unchanged-2.docx",
+      "bytes": 7160,
+      "sha256": "336910c67763b70de8a2d3fcd199ef0d3f1be0dae0ce29a0a16fdede1a312dd9"
+    },
+    {
+      "path": "fidelity-styles/unchanged-3.docx",
+      "bytes": 7159,
+      "sha256": "c837daab182f7ec4d500ca116bb6a5475a77a60b4241e642f7d9f9817f2f367b"
+    },
+    {
+      "path": "fidelity-table-borders/tables-edited-1.docx",
+      "bytes": 5131,
+      "sha256": "036d71c3f392fdadf482a8c246c0672bc35753488de264083f2cd92fb326bf8f"
+    },
+    {
+      "path": "fidelity-table-borders/tables-edited-2.docx",
+      "bytes": 5166,
+      "sha256": "72912a6f0801c202b4c017c4f24118336f4d94f2925c55b18cb84815e40d4e4e"
+    },
+    {
+      "path": "fidelity-table-borders/tables-edited-3.docx",
+      "bytes": 5166,
+      "sha256": "421a8d079acccd07bcef34a42be2fb5d0cc1e4318bf4c0a8439fcae3871bddc8"
+    },
+    {
+      "path": "fidelity-table-borders/tables-imported-1.docx",
+      "bytes": 4970,
+      "sha256": "727ad79798f1afb76a377e87fcc1c26cfe4490976f30126ac6afef0c089139b3"
+    },
+    {
+      "path": "fidelity-table-borders/tables-imported-2.docx",
+      "bytes": 5009,
+      "sha256": "9cd9b1678187223ce0352020abb8d6686627d398f2db8195eddc4ebb0d1d0b92"
+    },
+    {
+      "path": "fidelity-table-borders/tables-imported-3.docx",
+      "bytes": 5009,
+      "sha256": "d37daa597697696c0a846b8605bcf59e6e3a84de8ad72218be6ae2983f619357"
+    },
+    {
+      "path": "fidelity-table-widths/direct/format-1.docx",
+      "bytes": 4832,
+      "sha256": "47599fc7fe50070b8c6366e44e0b385ae37416c137da4d8d7bf822ebbfa94ad2"
+    },
+    {
+      "path": "fidelity-table-widths/direct/format-2.docx",
+      "bytes": 4877,
+      "sha256": "306098b68da9ee1f2941676185ace26dd27eb466b909d4a364e27844bc1a9fda"
+    },
+    {
+      "path": "fidelity-table-widths/direct/format-3.docx",
+      "bytes": 4878,
+      "sha256": "f72c9753cfd96c39235a224b4bec11a345749803f9506c477f22ee15db289a58"
+    },
+    {
+      "path": "fidelity-table-widths/direct/replace-1.docx",
+      "bytes": 4733,
+      "sha256": "459d66ba6fb6ba6629aa453533ae5832118bb7fedef7a96e3edfcf6a4bdc69d3"
+    },
+    {
+      "path": "fidelity-table-widths/direct/replace-2.docx",
+      "bytes": 4780,
+      "sha256": "a38e343c14e8e21303c08a4fd30a369bba91f3ec4a6158de191f941f8f7ccdc1"
+    },
+    {
+      "path": "fidelity-table-widths/direct/replace-3.docx",
+      "bytes": 4780,
+      "sha256": "592ab8b1d3ddc64e1a4ee497ae595aa17c6d3753f596c461035fd3c9f3ffa65c"
+    },
+    {
+      "path": "fidelity-table-widths/direct/unchanged-1.docx",
+      "bytes": 4647,
+      "sha256": "56bd5dad6161df5185106f08a4f40ca8168386a205a74eecfa1ee5408900168b"
+    },
+    {
+      "path": "fidelity-table-widths/direct/unchanged-2.docx",
+      "bytes": 4694,
+      "sha256": "1dc6bcc57bc5ea3dc34e257e9cb59acc9574f7a57598855af5309d73f819266d"
+    },
+    {
+      "path": "fidelity-table-widths/direct/unchanged-3.docx",
+      "bytes": 4695,
+      "sha256": "6143f18bec96e3095e408096855b58d752065db50a71c5214f77eafa4c1858af"
+    },
+    {
+      "path": "fidelity-table-widths/direct/unmerge-1.docx",
+      "bytes": 4818,
+      "sha256": "6cc932159f14548f08b33d43a507a16c9e2c2e47def2747e05aa475b04ebeb98"
+    },
+    {
+      "path": "fidelity-table-widths/direct/unmerge-2.docx",
+      "bytes": 4852,
+      "sha256": "872d0b851708396425f3e74e6598ae1bf81fa098c663b41256c6b777ec8e5044"
+    },
+    {
+      "path": "fidelity-table-widths/direct/unmerge-3.docx",
+      "bytes": 4852,
+      "sha256": "faa83ce3ece7ceb51cfc6078cf49844f9eeea1295c3a9f8f4fa7f2a7b4ed7817"
+    },
+    {
+      "path": "fidelity-table-widths/expected-format.docx",
+      "bytes": 1801,
+      "sha256": "675e0a606bb5b625a61e63c7b89695b8d372a6b6ccae18060400d215a9632d2e"
+    },
+    {
+      "path": "fidelity-table-widths/expected-replace.docx",
+      "bytes": 1708,
+      "sha256": "5ddbd51e2d59cf1a9644ff005a838f94a7f607570f4f40029a1d0e4baad74bfb"
+    },
+    {
+      "path": "fidelity-table-widths/expected-unmerge.docx",
+      "bytes": 1789,
+      "sha256": "9c89a26640c653e71bdeda0d987afb5259d3fec7f63426d48db98401abef5533"
+    },
+    {
+      "path": "fidelity-table-widths/isolate/format-1.docx",
+      "bytes": 4832,
+      "sha256": "f266e3dd7d1c71e995e952b1369e1299f35abe17a3c4500a03c7518bcab9b6ed"
+    },
+    {
+      "path": "fidelity-table-widths/isolate/format-2.docx",
+      "bytes": 4877,
+      "sha256": "8242b76b693a9b00cf9dc4062746847e177881de8c64668b4be3234a30f064d1"
+    },
+    {
+      "path": "fidelity-table-widths/isolate/format-3.docx",
+      "bytes": 4877,
+      "sha256": "5290448ef0ed00a991badb088033b2248eec8922da396cfd7e0636f6009e4f70"
+    },
+    {
+      "path": "fidelity-table-widths/isolate/replace-1.docx",
+      "bytes": 4733,
+      "sha256": "3c3b4a2a9b187984801f42b68177d8cd25dbd9ddc81c6cbbcf7c883d8014bb20"
+    },
+    {
+      "path": "fidelity-table-widths/isolate/replace-2.docx",
+      "bytes": 4780,
+      "sha256": "9a81ce4b6b4c51ae944e4b3956afc77a5823d73459c9d387c35dad66a043cd97"
+    },
+    {
+      "path": "fidelity-table-widths/isolate/replace-3.docx",
+      "bytes": 4781,
+      "sha256": "ee4fda821747374c55045bdf77f437a344f3fc63e3e44aeb94f9c0cc92342c81"
+    },
+    {
+      "path": "fidelity-table-widths/isolate/unchanged-1.docx",
+      "bytes": 4647,
+      "sha256": "45a5c9955158b5915581b5f9ad5719e46d570d16507cdc7a150e68925ecb7ebb"
+    },
+    {
+      "path": "fidelity-table-widths/isolate/unchanged-2.docx",
+      "bytes": 4695,
+      "sha256": "1f04e0541c8e18af593790b47a87befac9d2d3e8b06437f72e379d166e407511"
+    },
+    {
+      "path": "fidelity-table-widths/isolate/unchanged-3.docx",
+      "bytes": 4695,
+      "sha256": "ffd65d52cdae7678708b43985ae1ff5b8d4ca6cb6c10f7be0b713c0ce2e5f4b8"
+    },
+    {
+      "path": "fidelity-table-widths/isolate/unmerge-1.docx",
+      "bytes": 4818,
+      "sha256": "1c76dae9c50749d7feaf260ffa6e123bc008e25775d1d77967611b321e83ca06"
+    },
+    {
+      "path": "fidelity-table-widths/isolate/unmerge-2.docx",
+      "bytes": 4852,
+      "sha256": "0668b6e65990c738381723b47d098fa6344fbd223ca0f43715c2a4d62d855be6"
+    },
+    {
+      "path": "fidelity-table-widths/isolate/unmerge-3.docx",
+      "bytes": 4852,
+      "sha256": "c6683ffb1620cf349c55057ddd94cc47c24925dd4223372b020295374eba9dad"
+    },
+    {
+      "path": "fidelity-table-widths/source.docx",
+      "bytes": 1617,
+      "sha256": "51de42cf2c0568dd7ff98717109755ab8a2d3e9bb091986e60e1ef97eb00053a"
+    },
+    {
+      "path": "fidelity/edited-1.docx",
+      "bytes": 8217,
+      "sha256": "2c2053c38c4c1bc2cd94d3edb91de0deddd5e5d625be9a5f3409ffab86065db7"
+    },
+    {
+      "path": "fidelity/edited-2.docx",
+      "bytes": 8252,
+      "sha256": "cb0e94ff56e19aef633954f7b1ca1a4cd41ed6aa649aaeff6745804d5ee0a77c"
+    },
+    {
+      "path": "fidelity/edited-3.docx",
+      "bytes": 8252,
+      "sha256": "25f4163ff959ae047574550ea1fc4fac19257c1e71b552dad28e058b8f7cc888"
+    },
+    {
+      "path": "fidelity/sheet-edited-1.xlsx",
+      "bytes": 3209,
+      "sha256": "1b0663b93c9f0905013efc7859124ac04795b51bd5b7c398475014c159e33031"
+    },
+    {
+      "path": "fidelity/sheet-edited-2.xlsx",
+      "bytes": 3217,
+      "sha256": "0566daee8a767432b479e44381ebbfc60699d3570367377e1b5904d254c30d70"
+    },
+    {
+      "path": "fidelity/sheet-edited-3.xlsx",
+      "bytes": 3217,
+      "sha256": "ed99de87cab83fa74f8d384c325e0833b83c45f2ac166220fc9a06fb6f14f551"
+    },
+    {
+      "path": "fidelity/sheet-imported-1.xlsx",
+      "bytes": 3209,
+      "sha256": "590f731c14f59a7c573351260dc5826c7902afa28517952332c68b8e95f19da6"
+    },
+    {
+      "path": "fidelity/sheet-imported-2.xlsx",
+      "bytes": 3217,
+      "sha256": "018d301952c8431dd83984afe75d5eed415b25a2779adff1035ee1d3b8906fe6"
+    },
+    {
+      "path": "fidelity/sheet-imported-3.xlsx",
+      "bytes": 3218,
+      "sha256": "2effa721e1c207ac0e33c5b86c7adb338bd656100e8dcef84c61403d8c9199d0"
+    },
+    {
+      "path": "fidelity/slide-edited-1.pptx",
+      "bytes": 6137,
+      "sha256": "be3e21eaff9dc74b992bb6a8e1a7563f89a4c3ce52fd7c61d554a73079d7b79b"
+    },
+    {
+      "path": "fidelity/slide-edited-2.pptx",
+      "bytes": 6144,
+      "sha256": "7ed38d0ef7a664397dcdcbbd768a62a7f1ad4b0be18c48d8fddbd75349a3b746"
+    },
+    {
+      "path": "fidelity/slide-edited-3.pptx",
+      "bytes": 6144,
+      "sha256": "c6096491ac5be8492e403102e1ec1585cd4e8e5359eb0f237448fdaa6b5a8963"
+    },
+    {
+      "path": "fidelity/slide-imported-1.pptx",
+      "bytes": 6136,
+      "sha256": "50e25cc38daebd313e3681717d0681b8cf94dee38841ac4ddeaa33e75fdd0c3e"
+    },
+    {
+      "path": "fidelity/slide-imported-2.pptx",
+      "bytes": 6143,
+      "sha256": "7c14a91e598222db202d2e31cd7d7e6d5318b3da710aceb0c90bf8ba4e351897"
+    },
+    {
+      "path": "fidelity/slide-imported-3.pptx",
+      "bytes": 6145,
+      "sha256": "f043ef83d1df2b887e83e9b2e8ccfa9d1c81e78a2d964bee8b1716696582b338"
+    },
+    {
+      "path": "fidelity/unchanged-1.docx",
+      "bytes": 8208,
+      "sha256": "f36d2ae049a639e56640561422ac0a3c7b3ab11007249677bc6ecb83bb6a40aa"
+    },
+    {
+      "path": "fidelity/unchanged-2.docx",
+      "bytes": 8243,
+      "sha256": "46d6778070df10c73ea1619c0db56baef5ae91db1eb36627e06d4c93475a0d38"
+    },
+    {
+      "path": "fidelity/unchanged-3.docx",
+      "bytes": 8243,
+      "sha256": "fd9dea8b894f13b73ee8fd9333e6605fd52d9344a495d3a04fca2c5c18887c97"
+    }
+  ],
+  "input_sha256": {
+    "engine/analysis_options.yaml": "bf7d17dfdbc3aa4dcba00ef52506c50fd798bbcf3d0f907e875fa38bdfa9846f",
+    "engine/example/engine_quickstart.dart": "836f7224ea34af72a6956f6211d145fa6b3e2a9628e6edfe3553ac487a911b62",
+    "engine/example/example.dart": "1799a85cff832032d565bdd44cc2f82e2b436eb5aea15a36ec142a22e30ac4fc",
+    "engine/example/gallery_io.dart": "56e275f6d87a7b76025124c7b08a092aa9b8aeb70cfc37843fef476ea9a09d6a",
+    "engine/example/pdf_widgets_catalog.dart": "b00f69e7aaad9261f79450e82b8b237672799f3ef565fee605af82d3f3235470",
+    "engine/example/pdf_widgets_invoice.dart": "a285b8a52f27b71e4fdf07dcc7898acdafdd1fac01e03a32f057529b6e3faba9",
+    "engine/example/pdf_widgets_proposal.dart": "c994237003b2d6f8f93d6e5f2bb10e9172bdc218bdb287d204f0c15079cf5479",
+    "engine/example/pdf_widgets_report.dart": "4e82baab98c29737ee06de806281fa2737648a284fe094ede70e6a6bba0c578d",
+    "engine/example/report_quickstart.dart": "4327408d57168d787407e612355f4bd0ec67a1783b7297c3fb8c1c6697be0a2e",
+    "engine/example/rich_export_gallery.dart": "9738822fcab92d841630493259735504e7a1848b14bbd89a20922bb03f4876b1",
+    "engine/example/sheet_gallery.dart": "4937a36aca9871eb7625d25f279ec6844974ca991a99b87397b0248b4f090446",
+    "engine/example/slide_gallery.dart": "0105fc3fd10c4aff07b1168b524b528aadf534744beaf0a0f24adb4aef876514",
+    "engine/example/word_gallery.dart": "7218b68d756828bf542b667f6a30fefc10ac7391f7dc21366458d4b515460280",
+    "engine/example/word_report_sample.dart": "12f0ee1d0eb9aac569af1890d3dba40caf552c59d1025555f43a8512baeb6d61",
+    "engine/lib/pdf_file.dart": "52ef0127bb6fa2378ed7e01b2d536483f2b9acbefba6387a30f3bb50de9b0422",
+    "engine/lib/pdf_templates.dart": "dd182a645531f5794632314c5fea6cb53509502d3f4398a10886a63c47594b9b",
+    "engine/lib/pdf_widgets.dart": "d41e91e2e9b1e1973a9f620dae13d5bb183745e935dfdb12386232653f9e549c",
+    "engine/lib/pdf_widgets_samples.dart": "f34c9c4eb05ef7ca61b5571f433aef9ba44b0a0addfccd92e923c8b689e8bbec",
+    "engine/lib/quds_office_engine.dart": "27a421e9c2a35ddb7c8dd523c1456c88440549f865e17d0e100a7fd8bc36ff43",
+    "engine/lib/quds_office_engine_optional.dart": "1f397c7f0703e03b7beade08779b5dfc916b7d147b98c959ac35f4a193d6679c",
+    "engine/lib/quds_reports.dart": "2918c0d989f42c9705b6ca085eaf402aba7ca8278764e293f916069e653a7759",
+    "engine/lib/src/bidi/arabic_shaping.dart": "defaf787d5363c4da45b3524a0d4732ef15153987f93658b20fd615388de74b0",
+    "engine/lib/src/bidi/grapheme_clusters.dart": "1fa4c95090c12d367589917a886ef31280a0b2080ee2320328a6a38234aaec32",
+    "engine/lib/src/bidi/line_breaker.dart": "4fdcce0cd1fe989f433a2cf6e1c383ae3ec124daf46821f31b16b0d2a169660f",
+    "engine/lib/src/bidi/office_direction.dart": "3937995152a52a6796a9229540ca4fe9f527a062e374d38108154d557d79d673",
+    "engine/lib/src/bidi/uax9_bidi.dart": "708a616f9a28abb7d86fb9de1f975d5fa637c55cf29206b770f32113e5acb04a",
+    "engine/lib/src/builders/docx_builder.dart": "d58a9c8b1757208065e1f68a3368118b040ea2cf2116e79c0f0fac95ba1ebe3f",
+    "engine/lib/src/builders/drawingml_charts.dart": "dcd333224d534f528bc218a56b9297375286b24ef92016307ad45035e257993d",
+    "engine/lib/src/builders/image_fit.dart": "1018b829fcc78d85b891f1c29e9287ef267ddea4d9befc76750fc31f161f53a8",
+    "engine/lib/src/builders/office_document_theme.dart": "fe9ce8d4ca691c429d37dde98a476f6561a5cd93a9520bd67fb18dad832ad020",
+    "engine/lib/src/builders/office_markup.dart": "3b11bbd6ec7fb2203a058cf9780358128f04459bf8c240bdce186d5f6c52384e",
+    "engine/lib/src/builders/pptx_builder.dart": "58771591344e8f06d66009971913d64809e4ff5609b50f6df32a683905367ba8",
+    "engine/lib/src/builders/xlsx_io.dart": "b8eb4d80b5c62c17bede5d3b2320d5466690c088b3583898c2827c7e71ffb9f2",
+    "engine/lib/src/crypto/aes.dart": "638967fdf0683328de6c385221fedc7be6e08be3c3e948e6f634967f01007cdd",
+    "engine/lib/src/extract/office_search_text.dart": "97dc650cee6bb7e6ee4e234207b07f5b225fd7f682892751b599d4553893cb6f",
+    "engine/lib/src/extract/office_text_extractor.dart": "d45c6219e5e7793bd12152eef307dddf70bb4fb4a1a3dfd20675882ed594a768",
+    "engine/lib/src/fonts/cff_raster.dart": "ca6c60a925e1e6be3bd512ad26ae8ef04a71cab55a8d68c5ce0724b391f0a238",
+    "engine/lib/src/fonts/font_metrics.dart": "70251ec7a527fecf872e10ff038fe0cd5eb7a5e3b327319c98f0d0248680c9c1",
+    "engine/lib/src/fonts/font_subsetter.dart": "ebaa644f807453bb4ad00451387b0293478c1c3db44a03a46d2991bf0fe2feab",
+    "engine/lib/src/fonts/glyph_outlines.dart": "3e7b75e8031d5b0edee2cef8032c7727a97258e7587544d82fa7870f595dabc6",
+    "engine/lib/src/fonts/gpos_mark_to_base.dart": "9e7f093e9e409d3a07d4df1470d29e1a42574d985933f6584f27a3ab8021e75b",
+    "engine/lib/src/fonts/gsub_ligature.dart": "5954daa62892b542404f327128e7a9901fdcf08e70eb2f21fefaa24bd352bc22",
+    "engine/lib/src/fonts/office_font_set.dart": "862bc27e97276ed9c0bdf9e1e13741b7fa23ee1f3a06778cf8819e8b17226656",
+    "engine/lib/src/fonts/office_typeface.dart": "2ac82a1d909a9e399764e25dda4ddad026c4d329272eb22bce736fc941cddc9b",
+    "engine/lib/src/fonts/sfnt_parser.dart": "5e6d0ec9bba6e5c0be8d6763c6773a4b2e2afa136e3787b915ad2b7742b062d6",
+    "engine/lib/src/io/byte_source.dart": "bfd604c766efa0a4ab052f85f9a6da1efa5a0cfd801b25419f8f89bb842c48cf",
+    "engine/lib/src/office/office_document_properties.dart": "7a90bfcbc02e36409e8f0c8474195bf2dd4d95e89cb79458213b53b14030ed9b",
+    "engine/lib/src/office/office_find.dart": "c1efa253780033067ad551aec02ebc2fb9c95ab4b28b8287a5657b513df337e3",
+    "engine/lib/src/office/office_print.dart": "81c9351edd6fcdbb784cf49969a2737b0e459c3cf14fd811b9d05b3cd125c464",
+    "engine/lib/src/office/office_spell.dart": "83552b83dc8d9401f9b800c97dd0f56ee19efb7c0bb7257486905d255b502ac2",
+    "engine/lib/src/office/office_text_stats.dart": "13c398ceafa068532880ea813ab1a24f438d8be8cc04c3e9245afd9c8bf65a82",
+    "engine/lib/src/opc/content_types.dart": "a6c27fa73cb7be272246d8cfde12af1eba4ad7b1548454f2a6ea371874662b46",
+    "engine/lib/src/opc/crypto/office_crypto.dart": "b14a302282ddeeeb818cda9931858a1f556c1b57e31a29a0afc7cd11d2980107",
+    "engine/lib/src/opc/office_isolate_open.dart": "5b80a374d75cf5374b750cdbbba31eae8facf8ae604a815c5b91ac02165c4ffb",
+    "engine/lib/src/opc/office_isolate_run.dart": "e8ff20077f107d26f1d78a05703e33b8b4f64ec234a3060a39dcf27c6fea7453",
+    "engine/lib/src/opc/office_isolate_run_io.dart": "8bebf64f33829e03a95660ad663aa8c333ef0413290c60fce26c5e19b4429504",
+    "engine/lib/src/opc/office_isolate_save.dart": "ef1d4d91e91a45aaba9abc2aeb1fd4cc670381ce8348de92465f97b14cb17d8d",
+    "engine/lib/src/opc/office_isolate_spawn.dart": "0cad8efa10e71084e6d0ab7978e73d2e8ce6c6b40925ea1dbaabfaf25cd6c8a6",
+    "engine/lib/src/opc/office_isolate_spawn_io.dart": "33fffaa9a6b8c273acbf80513440c3183d2224816748d78c4e94d5180f672211",
+    "engine/lib/src/opc/office_open_decode.dart": "fa8ce198614b9704a61688be5609d7c55073af172a1dadccf53bb82839367205",
+    "engine/lib/src/opc/office_open_types.dart": "994a2cfe04cad7f0293316438efd298e588e4634ade41a924d2528a280aa5813",
+    "engine/lib/src/opc/office_package_parts.dart": "7134c027e846e122aadf78bf1d870ba41e1093269bb3a949adc37fdaf1ae70c3",
+    "engine/lib/src/opc/ole/bounded_cfb_reader.dart": "4641762d4c59fd45f3b790ac2b41afe31db64cedd8686eff7975ec736a115f7c",
+    "engine/lib/src/opc/ole/cfbf_reader.dart": "3fd389a63fa0c735b872365ad82c8f9128eee51e8e4964dc654b1c3022580cbc",
+    "engine/lib/src/opc/ole/cfbf_writer.dart": "156b1bdb09829f4c20683ff4871cbc7dbe24ed8ce93e1a660b5336df051b5ec5",
+    "engine/lib/src/opc/ole/embedded_part.dart": "2f964475b13d06aa268ba906d541e1c8b4d02cb6b10a992fcb7a02795c3f1ab0",
+    "engine/lib/src/opc/opc_archive.dart": "ae1d801d027f9c1214531b0a8b5578f948abc57b0d7f5aa765780ca8cd1d9da5",
+    "engine/lib/src/opc/package_part.dart": "02e6338ba76cef47c8fc351590b55f6eccc3908f365a62e5dce291907a3b71ba",
+    "engine/lib/src/opc/relationships.dart": "e767ebdce03d7c08fe4c37503f88bd4bb9cb27130c700d1e3694f3fb7acabd0c",
+    "engine/lib/src/opc/repair/office_repair.dart": "dd9186249869819eb05708f4ec1ce88347b010a7881d1606b42ac30f3a35f7f9",
+    "engine/lib/src/opc/repair/xml_repair.dart": "f6a822db5c3800826c970c3160af8041cf1524502a158a4864f4c8f2c44005de",
+    "engine/lib/src/opc/repair/zip_recovery.dart": "9e19d5dbbb2ccce36d388833823002b29ad54f877d2243823240cc15bffaa95e",
+    "engine/lib/src/opc/zip/crc32.dart": "d207f2653d8b00bbf412a6bc8b2e76a01f64ecfbb67aa06defa9ac7b0326c47f",
+    "engine/lib/src/opc/zip/deflate_codec.dart": "9fa29fdfaf787ab69a4b205ec58584c146be05484c25047a51d41328f64c7989",
+    "engine/lib/src/opc/zip/zip_reader.dart": "271637e64400f6c0bb04a5aa76d3bfd26e940040256cc1c3d0588385a8f7f00f",
+    "engine/lib/src/opc/zip/zip_writer.dart": "cde0651a022ba618b496e4093dea989acb27960d13abfe6fc354e34b3bfc7803",
+    "engine/lib/src/optional/pptx_media.dart": "8916827335419a88f0bff141e23492da454be00b91728fdb710072a3e897207a",
+    "engine/lib/src/pdf/file/cos/pdf_cos.dart": "f1ae143582f1cc51a47cfb15976c96fecf024d4487cb3b08d70a298fc4613264",
+    "engine/lib/src/pdf/file/cos/pdf_cos_reader.dart": "67004bae5a4e0a4247a80688ba0ec399d688b4b0577ac7652b818bc9644c2c83",
+    "engine/lib/src/pdf/file/cos/pdf_cos_write.dart": "9ad1436adcae03bd5ace09fefbc54c2b7453852da624747a71255a2273fbd50c",
+    "engine/lib/src/pdf/file/cos/pdf_open_error.dart": "4b2d82d7f931677ff7343a74e13662a7ca1f7957c122970bfc7ae5979f08ec47",
+    "engine/lib/src/pdf/file/cos/pdf_store.dart": "9aacae2c2e77c86954fe6833760f7151230ce3279afdb7b063f9c967623f807a",
+    "engine/lib/src/pdf/file/cos/pdf_xref.dart": "dc5be45a511394fde851f23ab7c8ff7fbd1c596daa46c8543f9cd74938a9d62e",
+    "engine/lib/src/pdf/file/crypto/pdf_rc4.dart": "b2e7e84e7852e81008a83ca09f48b9e1001f65330373bf1ce1d0141bff75bdcc",
+    "engine/lib/src/pdf/file/crypto/pdf_security.dart": "889d24940b271f454b9ab3041e1270830fea852119ccf7032f79c9112eb980fc",
+    "engine/lib/src/pdf/file/decode/pdf_ccitt.dart": "402149c19a31e35f326cb9a3b60cffc4fb5a0b5a852c1f2fdd75d42412719af4",
+    "engine/lib/src/pdf/file/decode/pdf_cms.dart": "8a69c059ef9633ad183d2d76268751143741a3f224a15bbfe060d04d4da3a1dd",
+    "engine/lib/src/pdf/file/decode/pdf_filters.dart": "7999a93e4be17b2c9a2a4e714b6493cbf14dc11c9c6a50530fd0aec5512ddba5",
+    "engine/lib/src/pdf/file/decode/pdf_jbig2.dart": "ddfd8b1889b90bc913da73fcab7acd407cf95ac97504944945f4309420006596",
+    "engine/lib/src/pdf/file/interp/pdf_display_list.dart": "042f57bd80b65dd86f4281601e5f497ca695b4373d8a16426c8fe4f81371b321",
+    "engine/lib/src/pdf/file/interp/pdf_interpreter.dart": "8c0fb1b4ff236925be22f620555ecef616d6a4fb813051cdfce1bb3443c6bd9f",
+    "engine/lib/src/pdf/file/io/pdf_appearance.dart": "ad331187e6af292b3239742b001ce810b53b72a19fabfec797677dc2c7afb87f",
+    "engine/lib/src/pdf/file/io/pdf_incremental_save.dart": "6eec5e002e9c57fb672560cedb6da3db1351d96ba5fc8c3a9d05ccdc10f7ea54",
+    "engine/lib/src/pdf/file/io/pdf_open_payload.dart": "b10545144995425ba7d2c076052e8ee21c5e22de0e0cc83ed07573faa61f74e0",
+    "engine/lib/src/pdf/file/io/pdf_page_io.dart": "05dd69d7119206c904a9082976e33322f223256bdcb52b76e8c34ec4debf167f",
+    "engine/lib/src/pdf/file/io/pdf_xfdf.dart": "2ffd9ba1eb195c77687fe6946878ef40e275e58c01e48c489088c201880ec831",
+    "engine/lib/src/pdf/file/model/pdf_annot.dart": "514a7129e70f0f321e2e7b39fc6a9d3a1c71c5782e1026048ce0669b3588b49a",
+    "engine/lib/src/pdf/file/model/pdf_extra.dart": "ab39fe4078eb11b5b803a91ac24d2fcd4a7d1901f509472fc06ceaf5ef10125b",
+    "engine/lib/src/pdf/file/model/pdf_file.dart": "21c272d223d78b9bc962d66a84d91169a13581bdb57fd1d35cf6d8d13b7bcb90",
+    "engine/lib/src/pdf/file/model/pdf_form.dart": "0fda5540082c14e9daa420f9d32f5aaf2487339c688e63765edec4d70fb71ff9",
+    "engine/lib/src/pdf/file/model/pdf_page_info.dart": "8ab944da5b0fe8bfb4ffc9869e49e1933464f2989908ee6f9d965e8dadc61ea2",
+    "engine/lib/src/pdf/file/text/pdf_cff_host.dart": "4404a96aae54609d2d6c50fa75fb7abe021551c83d54a36cfd73510027c8578b",
+    "engine/lib/src/pdf/file/text/pdf_extract.dart": "54564001c9afae96ae5a3302b9f9e85361b09d00701efe79eaa932405097a4b7",
+    "engine/lib/src/pdf/file/text/pdf_std14.dart": "0566f502fc111e9628033f602f0da774b0becd8e14e64a74e54b17c1846bf7d6",
+    "engine/lib/src/pdf/file/text/pdf_stream_redact.dart": "54408fa640bfb70aa65b017c4195b51ff1ef1ad590a66d3a68be895a7196eaa8",
+    "engine/lib/src/pdf/file/text/pdf_tounicode.dart": "f91ac6be7dbcac9186ab469f84e0d38f4bfb245a47a21d1f5e8af80902deb6ea",
+    "engine/lib/src/pdf/file/tools/pdf_page_graft.dart": "ba490dc2494662a4f1cb3d29169d79a3b63d5a811f30077eef78e96e961939d7",
+    "engine/lib/src/pdf/file/tools/pdf_page_view.dart": "86e98283b22d1d9db05630d410c10074a550100855219e7ac8fcc083209516a2",
+    "engine/lib/src/pdf/file/tools/pdf_toolbox.dart": "54573c89df47aa7f206af8e4e568037314520675f00290d7bc3597cfec884fc4",
+    "engine/lib/src/pdf/office/pdf_office_isolate.dart": "7402c7cca85d4487949a9134afd0a7e041989be973d57da707eb6e5d8ebecd33",
+    "engine/lib/src/pdf/office/pdf_office_layout.dart": "6076b05032f217da2eee8c3dd95fcd3479ec647dcab8943b5e938181239702da",
+    "engine/lib/src/pdf/office/pdf_office_model.dart": "5d9aae4311886aa909304a1c480c99d5d0cfe834b1e2bb6c9c49444aa7748fb7",
+    "engine/lib/src/pdf/office/pdf_to_office.dart": "ea9d59e9056ed17c6d01adc7b5262c3092328b68b82511a63d0b362bd1c4ef15",
+    "engine/lib/src/pdf/office_pdf_export.dart": "64ee098215afdc0398cac1ca8e488aa44f33a93f365844f94da5e9951cd539ee",
+    "engine/lib/src/pdf/office_pdf_visuals.dart": "8093a3b55be98bd79bca0999d5bcecefdecb9aaf4c540d213942f46a2002a86e",
+    "engine/lib/src/pdf/pdf_canvas.dart": "10f7bf3a587eb0d5e2c923b28764761061c9452b0dcae50a3d9f32327fb9683a",
+    "engine/lib/src/pdf/pdf_document.dart": "7f2f6c3f4523a2266278ccd6d002eddc87b8e7d97847fd0be02fe9c60b50ba1c",
+    "engine/lib/src/pdf/pdf_font.dart": "1ed8efee3dba6ded9a97deb38306f8a95492f1edb4eda6d53ff2700b1a2907fe",
+    "engine/lib/src/pdf/pdf_image.dart": "87370cda7fbbdfd26abe7bdd76c98b209a2a07124f7b28e686d992b107f9cfd1",
+    "engine/lib/src/pdf/pdf_report_builder.dart": "f4f35c838fb40e67c2ff1ef3ec34419938ab5a5b68481391b6dfce75b6a0426f",
+    "engine/lib/src/pdf/pdf_save_options.dart": "247ffe16a09fad27c397574b6ae45bc126c81a9a563a62f808d7a085111e6d49",
+    "engine/lib/src/pdf/pdf_stream.dart": "fa24007793f6dab3454d9c80db8d8b33d081a0338767de4a27db5e742d502b28",
+    "engine/lib/src/pdf/samples/literary_arabic.dart": "d37c258f981ef238a57ebaadd2c72a681e1fc2b05ccad557849fed0bb46b7f09",
+    "engine/lib/src/pdf/samples/widgets_catalog.dart": "27aa55c2f5cceb3688deaec69bf81cbd1ca57f1c4899b6741b33ad8b07df54da",
+    "engine/lib/src/pdf/templates/catalog.dart": "e91af86fe4290377693cf48ca1e29e9d10ba17a1e4219ca580ecf20b25c0b409",
+    "engine/lib/src/pdf/templates/commerce.dart": "53dcbac4630e198f98c4358f6ee3bb51ac1bbab1f3337f6aee427b37d9524d7d",
+    "engine/lib/src/pdf/templates/data_reports.dart": "2c7a6977c4ebc58db853b00f9a10df80255d08e35e5a246bbaf46f1678bbbdcf",
+    "engine/lib/src/pdf/templates/finance.dart": "630982ca933805c9d9c1649a425b009d6529239da34d8d01b65043dcc5ec9873",
+    "engine/lib/src/pdf/templates/kit.dart": "b019ff4468e7446b273b64f4de507197f00db4b3d998bd5419f77d580d03124c",
+    "engine/lib/src/pdf/templates/narrative.dart": "9414af239fcd89a321f122d4998043e9235054b2349610e0e4533ef784092e32",
+    "engine/lib/src/pdf/templates/operations.dart": "f99d8dac0b7f75b13c2aff62e39f77cfa59ef684c41d2574730dbf9b98e19122",
+    "engine/lib/src/pdf/templates/people.dart": "5e4ea98b8532749bc1cdcbaebab158059b968ced5425427527979bb29751c465",
+    "engine/lib/src/pdf/templates/sheets.dart": "d76445a9a0fa5d593ec3e710a568dd1a28b6b56caf3405bd77d915aebf5dbc2d",
+    "engine/lib/src/pdf/templates/skins.dart": "2d3392e33f9ecbd1d63193a8e411001f427bcf8ce20de9e9f26a83c11d19d1bc",
+    "engine/lib/src/pdf/templates/suite.dart": "7e9f653a4fdceb83acfbe0b425502c5c0e64af81f5b2fef4c6ec4ccb016c2cc9",
+    "engine/lib/src/pdf/templates/suite_index.dart": "99ca5487e5cc91cfa67cba28624848532dd531de640c15ddf6123791845246e3",
+    "engine/lib/src/pdf/widgets/pw_barcode.dart": "5060d23f1c0fa3727c65ea75f726e29153bd15d84d644c4ec292f28b0195b9a8",
+    "engine/lib/src/pdf/widgets/pw_box.dart": "b63d2729e82cc2fca65e599accd6a4086f1f571251ad55966c91c941d37abe52",
+    "engine/lib/src/pdf/widgets/pw_chrome.dart": "88ff7ed51c901b6ccabd9ffd82e56515a6a07c0a99aaff91543f4e0424f6f195",
+    "engine/lib/src/pdf/widgets/pw_content.dart": "a10a1a99f50163edbe7b82ddfe85607fc103bbdaa64aca1a33b3157cd87016c7",
+    "engine/lib/src/pdf/widgets/pw_core.dart": "1728312e5ab1c1de9a161a8e40a1f3aa5d3db053d3b99514ca42ff65166a015d",
+    "engine/lib/src/pdf/widgets/pw_flutter.dart": "508e46ed05c8c9fd9091e2bc80745170d0ad68d91a54e6bd94dae3566976443e",
+    "engine/lib/src/pdf/widgets/pw_layout.dart": "37b6acd87716a5723d740fd41030be6d56c883de27df4f7ef62a2cc56bb40eac",
+    "engine/lib/src/pdf/widgets/pw_media.dart": "987682606b36c68bbca090bc9bf9e56e3c91bc6f1b8bff0df095e6549d576217",
+    "engine/lib/src/pdf/widgets/pw_paint.dart": "d6473b8629a62ddbb770aa94edd263b946dbf04a70515b32f5a6adba4d544ee2",
+    "engine/lib/src/pdf/widgets/pw_qr.dart": "c357031b3f4a11cecf851dc1b087c8322d5000ecb52d18b7bcb24a58add240cb",
+    "engine/lib/src/pdf/widgets/pw_style.dart": "983d041d7f904a71faf69493012af1e1b99be6c009ff6471dd37dc7ef837cbf8",
+    "engine/lib/src/pdf/widgets/pw_svg.dart": "7247caa8b7ac0fe560701fd9e100051d9bfc83cc6785bd35e9627814ac7e650d",
+    "engine/lib/src/pdf/widgets/pw_table.dart": "d474a3aa28d89a456b7756e130e28a70196fb4ec2333a7c7d864c4383485d3bd",
+    "engine/lib/src/pdf/widgets/pw_text.dart": "83ea47338a3101557e2eafefe6fff2f1a01a667244f2ce5eecdd742274c5ec79",
+    "engine/lib/src/pdf/widgets/pw_types.dart": "8140b3080fea4e84906aa2c3c5caf491b0fa452bb125e85d67dbf363c8782c5c",
+    "engine/lib/src/reports/arabic_tafqeet.dart": "da894f2489fef1ae6f7fab329ca996a315d7dd1623c069d2ba8172bb2fd5ed9c",
+    "engine/lib/src/reports/english_words.dart": "c9bec248c51d460e1720ae5ca5c30299bca4ddfadabc0998b691fb106e611287",
+    "engine/lib/src/reports/report_chart.dart": "fae9b77b7f9dcb2abfb93860f6ba9afed720072b50ff38063d0dc1bfdaa84de0",
+    "engine/lib/src/reports/report_completion.dart": "479f506fbebdd9607484485edd5c2e7bd9d7e307b6295d58c3e8a67e9f053f62",
+    "engine/lib/src/reports/report_data.dart": "4546ba164c759c0578d19831ae298d3137180cb6fd3e4c16257d49f555f59efa",
+    "engine/lib/src/reports/report_diagnostic_target.dart": "dce6f359be7735b9ca48b37c2911fa380a3e0046547cf34c1247517262f3cf4e",
+    "engine/lib/src/reports/report_docx_writer.dart": "d3ea5722dde7e5fe36da90b1c9ec78eea6cce6d8fc32ac74d7067e825cb5b103",
+    "engine/lib/src/reports/report_engine.dart": "55ca4071747ab6bd8a69522d05e09c49a5809262f8b66322df5579fed5d67901",
+    "engine/lib/src/reports/report_expression.dart": "7055ef101c552873b0610ea540ff2ed92a32bddc18c3926788396d1f46e5e672",
+    "engine/lib/src/reports/report_expression_engine.dart": "dfbfcb9b9c22bb406e3415a69c36f78e192127c231587cea2ba0f0a249274750",
+    "engine/lib/src/reports/report_font_file.dart": "5f235aeae9c5d9f25b15d5e1ea22544ee5d0f835f949b59d07cad05c8c74251a",
+    "engine/lib/src/reports/report_fonts.dart": "94fcd79218dddb5471d88a2ad2441909cab33ae5f2abc85aed3f0a96386e2200",
+    "engine/lib/src/reports/report_format.dart": "d92126415bac12f8c01d89fb0cfda026e33a3bbc417add2d18a85c79aba99ae7",
+    "engine/lib/src/reports/report_generator.dart": "a4a5fd0f13f9f2389f196e69ddb38fa7b9e0eee176fa7a16aab38076a4a9b09a",
+    "engine/lib/src/reports/report_layout.dart": "dcc29102c68ed02e6a304955dcb04242af17a1794948d73161062c18798f5c21",
+    "engine/lib/src/reports/report_mock_data.dart": "3b8d0a8c7b652453033e647b30dbaffee2eec40a5cd4f1763cde8a5f3db8e535",
+    "engine/lib/src/reports/report_package.dart": "d7fe45275f2113392ce94b283353b8a42df5484fee86c37822d1e1620258fc75",
+    "engine/lib/src/reports/report_pdf_writer.dart": "26fb8a808adcca5a369316889e396a445ce8c2ab4a995172a1d401783bea0f7b",
+    "engine/lib/src/reports/report_png.dart": "451e7f40df483c5e42dcdf830cbe2072423ec06d97e057c2df1c542ffe78d688",
+    "engine/lib/src/reports/report_shape.dart": "e7ba9a3d094cc51e5a2bc2d187385e8e896b7e9a60cf49b756947d6024009c27",
+    "engine/lib/src/reports/report_template.dart": "13895fdc90c6e60df49bbb3f245b6e25fd8a22ad88ac27dc8fb4915a7802ecc7",
+    "engine/lib/src/reports/report_template_art.dart": "a114998f93e7567dd5fa79df490ad84ccbee9dc1fa0c9582973ac15fd7b3f969",
+    "engine/lib/src/reports/report_template_manifest.dart": "462d375401e0eba1713df6f892b936a05e797564a88ad66a02c39ce3236e07b3",
+    "engine/lib/src/reports/report_templates.dart": "1062f004b3e69666dbe5f8ab0e29a315f9f024976393436b30a142a4406bad5d",
+    "engine/lib/src/reports/report_units.dart": "c21ca263d00ded7d2d3e19c4b4aceaabb656e9d4d8a647940a4125dfa4e2f7ba",
+    "engine/lib/src/reports/report_value.dart": "3a8ecea02011ef329e0fac77966f4fa7d37a16e79fa060c144c6503ff6e984aa",
+    "engine/lib/src/reports/report_xlsx_writer.dart": "0c60392d90db8e6c6319f035eae94998e85a365284af34052115e91761d08d99",
+    "engine/lib/src/reports/report_xml.dart": "dcd3ff512297fafe22232b71cc2bf1921bc86f51496645b744e5a2df055fb9e8",
+    "engine/lib/src/reports/world_countries.dart": "a4e9fd7f17760e0fc85fc502bffeb36374fddd613d8d5f6ae2e39b9f3721da90",
+    "engine/lib/src/sheet/formula/dep_graph.dart": "3ce6315283e0d12fcbd93a9588893d8aff2fad0704f781f2a8761fe1c6fc61e5",
+    "engine/lib/src/sheet/formula/formula_ast.dart": "fc5a7aefc106983529207d1c05787348bd6b6d5f075cbee02a8e2d5f63362a77",
+    "engine/lib/src/sheet/formula/formula_eval.dart": "c9d13f08e8388c22e12567d50cc57c4f1ed70f340b338bfed39facac59c1d45b",
+    "engine/lib/src/sheet/formula/formula_functions.dart": "05af6c4294d59b1e20dc75f3a5174ae88da2fb4dd5a53a9e965d941f87c4e421",
+    "engine/lib/src/sheet/formula/formula_guide.dart": "13d8d4e9090fb3a4a5ca66509cf59b1a47132a2033b5419a35e1060bc7e21047",
+    "engine/lib/src/sheet/formula/formula_refs.dart": "1c1eac769bd2657dd65a78351ce41ff69a6d6c3c52e31ad48696144a383daa22",
+    "engine/lib/src/sheet/model/sheet_rename.dart": "93e0c9103222bc05ddbc08929983129f3285da15839695bc3a2384c68a91089f",
+    "engine/lib/src/sheet/model/sml_analysis.dart": "ce11f4f35fecd88dec39a9904c30214090d2a0b4b3422e615cd74f7e8be4f34f",
+    "engine/lib/src/sheet/model/sml_power_query.dart": "07be6aa57830910c8679bec50bd6eb4ebebb0da70441a4e960a50f7c99d7ed46",
+    "engine/lib/src/sheet/model/sml_solver.dart": "ab723570ce9ae44b63a846e8bde2bdcdcffaa03d0a8f92d8e3cbdc4f5210c292",
+    "engine/lib/src/sheet/model/sml_sparkline.dart": "e60f743c048b6436033921da16068938b703083397ce3d38f103ecf9f4118a03",
+    "engine/lib/src/sheet/model/sml_workbook.dart": "7e00944a32aeff80ae362252bf17297da77c4e7a068d6f7d333a5198c34def24",
+    "engine/lib/src/sheet/serial/sheet_drawing_io.dart": "12bdcd3963ce4acb83bc6465f7d4343d9c4a0303d17d124ea76dbe5e83ac9f77",
+    "engine/lib/src/sheet/serial/sheet_package_fidelity.dart": "f8984392e9f886bdbc121880643f05d22a28d451cc79a7a85f74962f9ad81864",
+    "engine/lib/src/sheet/serial/sheet_serial.dart": "c3375bdf0d821f1a5e5e4fac0f1be5caa4f3de4056b0175d11d1e227ee825132",
+    "engine/lib/src/sheet/shared_strings.dart": "f9b284994c4de672abe5d7f305dc10f58c6abd94e259509e6f80d87ed0950a79",
+    "engine/lib/src/sheet/styles/sml_styles.dart": "6a219f012fc6896e02997ed316faa2b4059a5ed96de6453d41beaf38df850427",
+    "engine/lib/src/slide/anim/pml_morph.dart": "635d239f0732e64b8ab2c4a1bc1c0a500f87219738c52ba9ced4453c8fe8d4fe",
+    "engine/lib/src/slide/anim/pml_motion.dart": "45f8fca83b6eb1a403d3d8f4387fc96af60b960034bf1232bc9bc41acb8063a1",
+    "engine/lib/src/slide/anim/pml_motion_io.dart": "c651ee0235ed5c96b47398ac86fa5ba8f414aad1bc2ae8066752de01af42e88c",
+    "engine/lib/src/slide/model/pml_arrange.dart": "55b511cf38d76de917fcbde0d80990a2e5eb99f7caf80d5c9c51da48a05948b7",
+    "engine/lib/src/slide/model/pml_presentation.dart": "c18bfea9cc8db55de0e9c823d82539a1e9738a7b6c16e8a2eb26d361a05a5de0",
+    "engine/lib/src/slide/serial/slide_section_io.dart": "c00aeed36b9a30c1d7a50b9b831d368c7cf07475c757e371b9bed10f424df7bd",
+    "engine/lib/src/slide/serial/slide_serial.dart": "32cd83f0f106845e8f1dea1e64c2d1d7c91c9d9852737893986b18c7ea75f6f9",
+    "engine/lib/src/slide/shapes/drawingml.dart": "db979f21e10238a4c87731f35e29c267bda82891b0809c8c27ed206a83c8da37",
+    "engine/lib/src/visual/drawing_line_style.dart": "d4dbf492555193c51f9fe63e844c77b8834e9aed518f2199d59226b7bbd78384",
+    "engine/lib/src/visual/drawingml_visual_io.dart": "84e7e37982ffeb7d90db8d1488210066692f69b8c7cc075747c3c61aa9482884",
+    "engine/lib/src/visual/office_visual.dart": "a3b8f8ece59b04275fba456803072de1aa84e602f6dedb6f69a51a4090daa949",
+    "engine/lib/src/visual/png_bytes.dart": "8407ce49c50be4267c68232ad6465eeadae754c5204c9497c7028ca4b5313b12",
+    "engine/lib/src/visual/sheet_chart_data.dart": "5a46d7e32acaf4bc62a391975eef53e79b4c2f5345fa64f3871af0cecee1cbcd",
+    "engine/lib/src/word/layout/word_contained_layout.dart": "23aef5888b747f1d36b1ce605809425ea119531988ff0177f35886f57f4facb9",
+    "engine/lib/src/word/layout/word_layout.dart": "98f005c454a5ebf30f0c27e51cf1d60264af131d80406c671e647d1324b4a126",
+    "engine/lib/src/word/layout/word_note_layout.dart": "013f8c32ae8ecb2dc11994b5583ed0bd3d899943fadad2f15d74d48ccad8e32d",
+    "engine/lib/src/word/layout/word_table_row_layout.dart": "0fe024b8de36dc401bd6ab869a6698f3e4f80901109bdb613d6e6c12b7cc59ee",
+    "engine/lib/src/word/layout/word_wrap_layout.dart": "b4f1d789f93d4c8d37e44d0b9a9270f1282e29cad927e10594e77187b91a22af",
+    "engine/lib/src/word/legacy/legacy_word_conversion.dart": "8c9b44fd4af7e35905f007320c5ce8651021db20128d1817be753ca5c264d8a7",
+    "engine/lib/src/word/legacy/legacy_word_document.dart": "e918e9af607376f052355d272e86c7949dccf60fab318b273238512e06394b70",
+    "engine/lib/src/word/math/omml_document.dart": "81be3a1ad74fa883b4774be7f96cb3883c7dfb2768a56eadaf8a5ca8c8d2c380",
+    "engine/lib/src/word/math/omml_edit.dart": "275e6c2c73c054ae21a56a3f2eee893f5857199b4be95d93ae2358c40dbedc75",
+    "engine/lib/src/word/math/omml_gallery.dart": "837c5bf486e74f747642dc5d18704accb6619eb298712b2b7c6a28b511c2a027",
+    "engine/lib/src/word/math/omml_io.dart": "e5ab0496063bd85e6e17643aa064aa3c5d7030ea65d0aeaf6560086f6ed8d8ed",
+    "engine/lib/src/word/math/omml_layout.dart": "ac4cb3f066c09c011142cfa3e0b6e4915aab68043025d4349d483fd374a38ee9",
+    "engine/lib/src/word/math/omml_linear.dart": "810de8e1bcbbae88b7641060563ed12c9e815a1d1571e4f8ce37c582b0fa0e9c",
+    "engine/lib/src/word/model/wml_clone.dart": "24953ade7527d448bc028a623a6cc5babc4700764b312e83f7290e213e48fbdb",
+    "engine/lib/src/word/model/wml_document.dart": "a119f98e30e38fecc551635f7bc65c4b0e93df65d726578dad9083a5b3c7d0ea",
+    "engine/lib/src/word/model/wml_run_edit.dart": "022855e049e9f18aba5bc5512f29ff5bf5db60ae9a68d7d7196214c2583011e2",
+    "engine/lib/src/word/model/word_bookmarks.dart": "4f62a976fd8afbf15ae66721a693f515462a1e6d21f23cc821ad0884e8babac1",
+    "engine/lib/src/word/model/word_captions.dart": "7edd44419e2353456ae738272451f01979c7f37d1739f66dc3fc18bb094e73ae",
+    "engine/lib/src/word/model/word_citations.dart": "7efeded806a0f183a9671a18938a38841af440a89473d69a807d210fb14ed245",
+    "engine/lib/src/word/model/word_comment.dart": "707febc7fb5e3a5fa4d98c44632d5320efb3cbb935f43e9c07b0bf101dac9161",
+    "engine/lib/src/word/model/word_compare.dart": "9e8bcca92d439e4f4b7ef72fd8d2547165feff36a9825b21ae8b8af37ebd3eb6",
+    "engine/lib/src/word/model/word_content_controls.dart": "6ce19b207e1e3449f2876fbd1821a0d76faf104c40aaa77a2ad8d8e9665d4fca",
+    "engine/lib/src/word/model/word_fields.dart": "1ae309cac6d8eef0ae71d852ebb9f444fb9276f0fc342dedd48c61c9b442dbba",
+    "engine/lib/src/word/model/word_link.dart": "04b7b12dd5ec4578e38445ac24b84c6437c8cab8e29e2a7dfc08436142b8fd61",
+    "engine/lib/src/word/model/word_lists.dart": "0b5f16675db8f5e43d19be9ee1869a5efc11d6810a07f6fba49460e5fc8d9336",
+    "engine/lib/src/word/model/word_mail_merge.dart": "17c93cdf1112441ec78d23909f7a003e894ddd932cd8aeb3b5d406e96a145cfb",
+    "engine/lib/src/word/model/word_notes.dart": "2c17a2aec0a71a9490f2d5df49e443e308a8b6ce4c1502331f62167f2edd11d6",
+    "engine/lib/src/word/model/word_revision.dart": "260b5d64d0c7b7e34db4d668a70c32f9a735d231e1da7037a54e01e29b8face1",
+    "engine/lib/src/word/model/word_styles.dart": "67d13ea21e64dd90400a5ce1fd6e0064d8497658aca8e6772b619a3eb8dd3b96",
+    "engine/lib/src/word/model/word_table.dart": "70832100a936de09391ff2b38a7151503a937653fbd55ca20d8a7c3beac71c2f",
+    "engine/lib/src/word/model/word_toc.dart": "3c7cd91f5c9051c7630b8c4dbc3e78ac2b843a428e615698b12625c112e7851e",
+    "engine/lib/src/word/model/word_tree.dart": "5c60de3bc9620e7f357d408ed7fd7821e6167e7b21d1b6dd7f874c76186a6008",
+    "engine/lib/src/word/properties/wml_properties.dart": "b5afd1b64a6f0980a41c627993d81c9b7c8a5c16296a331da30d4c2501e051d1",
+    "engine/lib/src/word/serial/word_bibliography_io.dart": "6abb7408be416e799e2d4845852a400622703b94cdb88b9d7bb46bec040ac285",
+    "engine/lib/src/word/serial/word_bookmark_io.dart": "b1c4a0f896af2f8500b607895d3f23ef204729a17361e07553a93df9961a688c",
+    "engine/lib/src/word/serial/word_comment_io.dart": "a605eda98d8f99561db02a21524db9c6a1a8d06db5bc46e33704580d856f6f59",
+    "engine/lib/src/word/serial/word_content_control_io.dart": "d7bb3046bdb8030eee54ffb5baaece8a16688eecf9f9a056be20f0b436cebb3b",
+    "engine/lib/src/word/serial/word_deserializer.dart": "9775743c9d32b4ab4189b1949302c75d0b0e96c8fb5347957fe6652c64b33155",
+    "engine/lib/src/word/serial/word_drawing_io.dart": "1d4b57a8b3132ceafd972bca7940737c22cb55f965ff30308419c8852ea2ced4",
+    "engine/lib/src/word/serial/word_frame_io.dart": "34aa8f522f43875014d168e1c9e29de75ecaa3cfc1d188bc71ff97deeab8ed7b",
+    "engine/lib/src/word/serial/word_markup_compatibility.dart": "24558ff5c518ffa2cb22f35e887fcab1622d2631a1f1f1ef82ecd12960783c87",
+    "engine/lib/src/word/serial/word_numbering_io.dart": "0149afb504bd0ff5287cabd15069b1481087dcb6ce7d01b0536711af524d2df9",
+    "engine/lib/src/word/serial/word_opaque_io.dart": "e7a1d2c190e998bdcea27387a957470b11bb61e34dcf41cd792e37df73b07896",
+    "engine/lib/src/word/serial/word_package_preservation.dart": "5b85aa46e5958027e9e3d4296866981b6848c750fb80e1d9d6121515746862c6",
+    "engine/lib/src/word/serial/word_property_io.dart": "eb556e3a27554a00ea7295bbe07a65b4ef1ecc0bf5fa42c226e68ca1d9f11e38",
+    "engine/lib/src/word/serial/word_section_io.dart": "346354c4fab12d533247d32a053966990e5446a4ebf5e73b7e755d4ef5c54e3a",
+    "engine/lib/src/word/serial/word_serializer.dart": "c697e76958d314637ce205d080f440436fac6960304ec60a186d7508abea3ddf",
+    "engine/lib/src/word/serial/word_settings_io.dart": "87de1b6b2bc077052a115f2c84264f4a129be599b7bb63237c5bd8bd20cf29d9",
+    "engine/lib/src/word/serial/word_style_cascade.dart": "784c4887d0db51448e5b5d7d3798f81e8916b58ed9dcf324c38961ca344466f5",
+    "engine/lib/src/word/serial/word_table_property_io.dart": "af42a17a4a0a5e2f2c1bfd04a0f3d3aac16e2cce4ae9eebb6b0728c14d4b851b",
+    "engine/lib/src/xml/namespaces.dart": "f043295589e663e0aa8b80403cc3ffd84e162d213a8b8d81dc90dd65031e9a48",
+    "engine/lib/src/xml/xml_node.dart": "911378e591f1092b51cce5cba72aeede115dceb06e1a3e5171687bad56a7408c",
+    "engine/lib/src/xml/xml_reader.dart": "4e1c6ffe5617835308d501b1cb66ccda5098dea7ef7e383b24b7f9edb02859b7",
+    "engine/lib/src/xml/xml_writer.dart": "8bb95958c14001e6c7f51627a5c1f28f34c9a2ff3a337a64dcb9e79828bd478b",
+    "engine/pubspec.yaml": "13acc54b4305e19f79c39712f922418bf20436c896e5a6138b01ff9de2bf1d19",
+    "engine/test/arabic_pdf_export_test.dart": "f4f36d58c8db124e9b42fb2b179bc992c4fc02b35cdd91437c5317d47aa57765",
+    "engine/test/bidi_test.dart": "4bca9df00c90fb8505916cb9e7ce3e60f3e545620017595174a1e8e3f0d93a42",
+    "engine/test/bookmark_fidelity_test.dart": "4d480eb15b64fcee42debb2353cda7e1ae73d844ebd830352d0ad482afd5a0d8",
+    "engine/test/bounded_cfb_reader_test.dart": "6403532630353408977ca6533373f455b176358a172a8941655d155d07da1a08",
+    "engine/test/builders_io_test.dart": "62dd819c2b47764eca526c0258f2f56bd683508072ca1f5384cdc87b8e7968b6",
+    "engine/test/cfbf_embedded_test.dart": "f818c7c0225fc0b05e65027fc41568b6206e00be5ff0bb467af6924e108a6532",
+    "engine/test/comment_thread_fidelity_test.dart": "fdd10b7c43b3d98e57df88219637be5850fc0a2f4e8a58cd6a935828fd1417f1",
+    "engine/test/content_control_fidelity_test.dart": "92179ec93f02730ca6a157afb1ed44a5cc9b754bc73acdae8fb05366ea248ab2",
+    "engine/test/deflate_test.dart": "086d3537b189123de3c607d2bffb1b68007bc8df1d1c311c89c79be50a45413c",
+    "engine/test/drawing_line_style_test.dart": "596c675305a187a464fbaebae1412292a8e8a36b4f32a9e6b5243f9a896f07d8",
+    "engine/test/fidelity_waves_test.dart": "01e7ea7ff4ada91e13b66c903f0eb2926b13e63b0ad57b8f784bf3b3c90c0ca9",
+    "engine/test/fixtures/fidelity/altchunk_expected.json": "e7148cfb68d0da6ec411604a02a3b4abc068a04604b0357a34e87540b99b9acf",
+    "engine/test/fixtures/fidelity/bibliography_sources.xml": "948fa40a93ad3d37af013befaf40b5b945f157397ba7403be9ec862d2c11a4d1",
+    "engine/test/fixtures/fidelity/bookmark_copy.xml": "6353fd1493111a544b371711a40b028cb3e21eb811007b64a00a1047e5a5425a",
+    "engine/test/fixtures/fidelity/bookmark_copy_expected.docx": "4813413bbe1ac7b1cd927d0b40b07752c0944dc272d849a4274c627ce4d969b3",
+    "engine/test/fixtures/fidelity/bookmark_copy_expected.json": "c8dd4dd38cbc6b3f0f698079aacdc3cf62efe19f54faade8410c4e6af46c2191",
+    "engine/test/fixtures/fidelity/bookmark_copy_expected.provenance.json": "9e7a03a152825a055aaa349332bf3f2030a659355c3469b7b03b848094e20e09",
+    "engine/test/fixtures/fidelity/bookmark_frame_stories.xml": "251aca5f51c2ec6fc18458ed22ff9016597cdf0977feaf4e5387f1645e453aa2",
+    "engine/test/fixtures/fidelity/bookmark_ranges.xml": "0dffa6c22bea3ad48add6e967f2049841b7b07ab202a0d58b4970ef7526aaad5",
+    "engine/test/fixtures/fidelity/bookmark_ranges_expected.json": "61c73f52083f816bb7631a5cda2cebafb6208c6ee9e089def1c378c952e134cc",
+    "engine/test/fixtures/fidelity/bookmarks.docx": "acc4bc7ef24543b75d2295dbbd37a58b9a4ac5a2105cef13ef186e8178ec05b6",
+    "engine/test/fixtures/fidelity/comment-threads.docx": "d1763533e3733a93398a0cea7043b9d188f98f5a403ff5b7f3ed5869d654e9a4",
+    "engine/test/fixtures/fidelity/comment_threads_expected.json": "ae855242c5660f4ec2d867c71d1c45b0e6a8e2ffeb9df31b7381dd6bb9d7d78b",
+    "engine/test/fixtures/fidelity/content-controls-legacy.docx": "2833e0d3ef3e00ba626177fb2f40ddf51744611be1a324a3a6aabdb01926aaab",
+    "engine/test/fixtures/fidelity/content-controls.docx": "a59cb0915fdadaa579bd28f028da5be1df2c8e036362e8e1fe21b789053b5e29",
+    "engine/test/fixtures/fidelity/content_controls.xml": "046420736953485f8ec52f1c46ec8656f213839f4a5be18ed49c22842a5fd1af",
+    "engine/test/fixtures/fidelity/content_controls_expected.json": "35ec769972e506fb26aa810190d65bbbf23fe6ef50a607df8f486d047550099f",
+    "engine/test/fixtures/fidelity/edited.json": "4f852f15fb6eb30de2ace3ea9206e7bed6c21e051b72e36e6e40112e403683c1",
+    "engine/test/fixtures/fidelity/frame_wrap_source.xml": "8a5dea7f5ba004c2a3f45ef491b6126f763fc9d59ed3445f9b19d51928e1e0d1",
+    "engine/test/fixtures/fidelity/imported.json": "8c48cdcc461993845551a07af4a2ca862e945cce1ad8fe46cc69e1b58d02fffe",
+    "engine/test/fixtures/fidelity/loss-probes/README.md": "d3e614fe21e94c0071ee5f19ed68b1f5ed6c9699ad53450ae358e04ddc20a7e5",
+    "engine/test/fixtures/fidelity/loss-probes/bookmark-ranges.xml": "bfaf0230acb82024f33a30f5ba5968275b22484e70b8766405f2892396288326",
+    "engine/test/fixtures/fidelity/loss-probes/content-control.xml": "3b777e3b32466d4f7ff2472542bfb78a2999d2f42c350537fecc3bf7cb34b1e0",
+    "engine/test/fixtures/fidelity/make_altchunk_fixture.py": "0840df8dcfa3893ce36a7e1b0fdd6cfb5cd27f376b9fbd900a8f28ed119ec612",
+    "engine/test/fixtures/fidelity/make_bookmarks_fixture.py": "e319f12d99be58ec2815a5870b800294cad93f8f5e298ee3bb234d1204e1f5c6",
+    "engine/test/fixtures/fidelity/make_comment_threads_fixture.py": "4c3ea463eab3f6a09896fd8ccaf481cf758a13bffbbdd952e0cf0629ea42f0bb",
+    "engine/test/fixtures/fidelity/make_content_controls_fixture.py": "fcf2c6d35a39d32db527dc89795fdff4cb05212fdf4135ff0780c2cc18c86400",
+    "engine/test/fixtures/fidelity/make_note_markers_fixture.py": "10300adcbf1fbcda422391deee919a864278528a4701191ac649626279e937c7",
+    "engine/test/fixtures/fidelity/make_story_media_fixture.py": "e3d615a5b08db8776bffa8b197de5a49b87ae5a663029a1062816a837f68793f",
+    "engine/test/fixtures/fidelity/make_table_borders_fixture.py": "e6eb620ab8a70352bc957b7a9a4d3e640c2e2ecee7b22fd7f2492f15295024f5",
+    "engine/test/fixtures/fidelity/make_word_compatibility_fixture.py": "3580b691f2b0009805770aabfd355c07154af74f5b4e4821544e55b2729163df",
+    "engine/test/fixtures/fidelity/native-producers.json": "af13f13ee994c57bcb3ac0f8c76d59f27e2f1ca21d14d6c0eb800dcf00959cbc",
+    "engine/test/fixtures/fidelity/native.pptx": "3badf8c5c56685c9247f907a6d81f4735968bf9f05c303a7507c1c4486a9ee58",
+    "engine/test/fixtures/fidelity/native.xlsx": "9cc8a4baa68ead3020038b6c8012aad2b92148d3f1f668d2fedac99016f12ffa",
+    "engine/test/fixtures/fidelity/note-markers.docx": "6f4e979c69c4a942796ea512490b791f8b3ea99a966c75593c1b2613880e7536",
+    "engine/test/fixtures/fidelity/note_markers_document.xml": "8160cb81787ef1bb88f70309a9615a6af26b13e2026a5ae53a4eaf4bba698b69",
+    "engine/test/fixtures/fidelity/note_markers_endnotes.xml": "73f124e45a3f956a2f278bdfb19b5dea744273ea5f0cced000111887f237404f",
+    "engine/test/fixtures/fidelity/note_markers_expected.json": "cbe97ee0f9371855f7e6c78b32c81db21755ec337c5a9d8665ddfcf289f71bd5",
+    "engine/test/fixtures/fidelity/note_markers_footnotes.xml": "12579fa9097939f573308198fdaca047e33de3f88092d48917bbf6d6a5e3d4a0",
+    "engine/test/fixtures/fidelity/note_markers_legacy_expected.json": "3f6038e2bf02b22a56fca3714c664d2afc3f777583a317113460a6b2d0dd98a7",
+    "engine/test/fixtures/fidelity/notes_edited.json": "278f0b9d4e5b5ee40791db2338a2f9b94201d2535d365b81f6c316690e5baf52",
+    "engine/test/fixtures/fidelity/notes_imported.json": "de0ec0b9fc72aed35d312e2f3c0344dea7931614ec5ba14cde1ea28c079aaa28",
+    "engine/test/fixtures/fidelity/scripts/expected.json": "31b251eed244a8fb04a3dbf12eb2f459b0fc4b3317e33daefaeadf42f06b6ab6",
+    "engine/test/fixtures/fidelity/scripts/replacement.png": "6f1be35d11e89adb6d6dd4e60cb5255ac310aedf282b3ab7adfa57f73c81486f",
+    "engine/test/fixtures/fidelity/scripts/sheet.json": "2af8b2ddb12c80d3e945562bdf3d4de97d4ca77c5ffeeffbcf2c456d00d87036",
+    "engine/test/fixtures/fidelity/scripts/slide.json": "eddd07509c0381fc2b537221bac6c7731c35272a09c5aba8460faf0254f02e54",
+    "engine/test/fixtures/fidelity/scripts/table-grid-format.json": "f656d1f06e15d92265f747ecb6792f0190a851c425a78c94e0e3b0fec85a0500",
+    "engine/test/fixtures/fidelity/scripts/table-grid-replace.json": "d1347eadead68f07789dcc3d6294f201b0ec6ce60d08610c59e7390c050f7b27",
+    "engine/test/fixtures/fidelity/scripts/table-grid-unmerge.json": "bbaf97b292fe051d327a1f0782ca2c27070225e0eb2efbf2b1bd9965df2161c3",
+    "engine/test/fixtures/fidelity/scripts/word-structure-create.json": "556c1d9a0831dc8df2edbb0d976e2bd2744d71d2a3411ed15ba912b7a844a19b",
+    "engine/test/fixtures/fidelity/scripts/word-structure-edit.json": "7538e5f2b33f7b81c026cf0866e7f6c8bcc5025a054bb29df2bff37c650e38fd",
+    "engine/test/fixtures/fidelity/scripts/word-structure-remove.json": "2162f994cec425357cb5a7316c776a7d4adac64322f5ab8fc65e2a781b6e44bb",
+    "engine/test/fixtures/fidelity/scripts/word.json": "ec1c89156be54a676940840edbc6aa4a95b0ff9ee5cfb8d1241922f532f6b233",
+    "engine/test/fixtures/fidelity/sheet-normal-font-native.xlsx": "7021b9a131d929d4ae6d4074a69056c997efa5b96f7693d4ba15d6c9a41b737f",
+    "engine/test/fixtures/fidelity/sheet-qualified-names-native.xlsx": "aeb3b6c808a4d4ad43b61e45e8e04664e9cc3581c65c6d94eac8590030ff0d8f",
+    "engine/test/fixtures/fidelity/sheet-qualified-names-recalculated-expected.xlsx": "ee946f7410d3aa2cdd26ec88005ebe9fdbb5d5fc2c497ca1e4f4575411f9da64",
+    "engine/test/fixtures/fidelity/sheet-qualified-names-renamed-expected.xlsx": "e800d3126a5c031181d7fb0fd2b86ac43a4c6b47d34f6acaf4aa3cb90dfa10d0",
+    "engine/test/fixtures/fidelity/sheet-rename-native.xlsx": "561a2ebf80b6f02e8b1fc00648230b341ff68e1a3ee501ea026b9e69c35fc24b",
+    "engine/test/fixtures/fidelity/sheet-rename-qualified-expected.xlsx": "b885842cbd380e906aa58c56e01152115ae4d77e62e018764d9bec9a568f6c3d",
+    "engine/test/fixtures/fidelity/sheet_edited.json": "fbcfcdd4e8953f77dbda3e953ef7924ee82e5ed0acd1b425139ce9c04a5dd1c4",
+    "engine/test/fixtures/fidelity/sheet_imported.json": "26aeeb5e0481a929bc60a1a74fa3e45bf05267e9adc8b1eabe445dae8f34d6a0",
+    "engine/test/fixtures/fidelity/slide-arrange.pptx": "6d86b24c22bdaac9d2e57167f7f506626029b4060eb793f523bfe86bfe266b50",
+    "engine/test/fixtures/fidelity/slide-sections.pptx": "fbbaacf2b6bbc657568bb3e507e062a949ce5304d2f77fb51bd3c9f3ec5bb39c",
+    "engine/test/fixtures/fidelity/slide_edited.json": "e5dcff64b5d14d1b9977fb03f16835c6ef0a70799f4c81cb49036e88988ca0fc",
+    "engine/test/fixtures/fidelity/slide_imported.json": "7dfcbbc981373801e0d0e47bdf352765d3fcb6221327e58f92494f6a0930c577",
+    "engine/test/fixtures/fidelity/story-media.docx": "3267ee707daac2a409e9bd1d796572949fb9e7e7891ac71ec14dcdefb59cb219",
+    "engine/test/fixtures/fidelity/story_media_expected.json": "abd59a6a04a0618a9216532c7d9855fb33593334d105fd348e3a0fb1ff08647e",
+    "engine/test/fixtures/fidelity/table-borders.docx": "066f9d736e114c01436b328c2bc74ec76e3be676d6cddb3e8eb81956f2598e83",
+    "engine/test/fixtures/fidelity/table_borders_expected.json": "0a910c6cfebb4afcd3dbf469c3628d136f20022fd0eb22a591bc43cb83f43be2",
+    "engine/test/fixtures/fidelity/table_grid_expected.json": "5686627072176230c02f2cc1d2b6153223aaba211c5d99b00daf1572d3c67d29",
+    "engine/test/fixtures/fidelity/table_grid_format_expected.xml": "9513a34f21cc933cf130085b9216a03596144cdf6c94fe4d15ce62ac194f9573",
+    "engine/test/fixtures/fidelity/table_grid_replace_expected.xml": "980d47424827dfc142c0480a946bf28847d82c50b352ad9f8d80a7a9cf076318",
+    "engine/test/fixtures/fidelity/table_grid_source.xml": "a3c2ce118b3e0f1ff3f714c6b8b87da75bcf495d2050d7e10fcb070a638d4e98",
+    "engine/test/fixtures/fidelity/table_grid_unmerge_expected.xml": "85156dabab3ae1b4d4498e948fa0b6ad236f478a50f27721b0c5912f47b473e0",
+    "engine/test/fixtures/fidelity/word-altchunk.docx": "f623604dfab5865907c70d7e2e933970bca4f1e6e892187025c083f32784b05b",
+    "engine/test/fixtures/fidelity/word-compatibility.docx": "8fccf5c41ac4f51136635322933065ecc786e1365709a7a10edb8734024049fe",
+    "engine/test/fixtures/fidelity/word.docx": "501bdd2f897b9a0d417988903b3a378bac958cacbcba5f842736802a5d47af1b",
+    "engine/test/fixtures/fidelity/word_compatibility_expected.json": "d3208c46c034b68f9003c37814d54d1e00d64542fd893ee944cc2dbad56106c7",
+    "engine/test/fixtures/fidelity/word_structure_expected.json": "e3e38a1f71b53ffc09d14b7857b2fac24cb6003748c49635531b0dd417acd963",
+    "engine/test/fixtures/fidelity/word_structure_source.xml": "65f11d3d013d8ec018289623cc8d1c1a531d52a5f9749dcd7110625e8298991d",
+    "engine/test/fixtures/footnote.docx": "5307dbffd0a314f158b8a9ab75fa7d33ea357143eec6de7ea72990c8a050e4ef",
+    "engine/test/fonts_test.dart": "c7c2c48bcb33a3d1a139dd7a053c8523432ae0819a8e3ecf64fba689ad0706ea",
+    "engine/test/hardening_test.dart": "340dfbb6c9a7011c692265e4f06c226bb6e59a8ea2393210e2a6d31285b10b2c",
+    "engine/test/header_footer_sdt_test.dart": "b7bfd3e91f28bac55dcac64df3d5e7d6c36ba2bb65ba4bee4bbcb90db10ab99e",
+    "engine/test/inline_field_fidelity_test.dart": "5a76d275a608c6c902dc55f7d2c3b8070487fb128a209883665b4b7998897b4f",
+    "engine/test/legacy_word_conversion_test.dart": "87a71607fb90b2b984e5e5a5c1adb7a840f7708540ba98e5c2a0f7a29e7146ef",
+    "engine/test/legacy_word_document_test.dart": "0d1ee04744d58b9a735019527cd64ae536acbd1dc1e7c1c225a68e9d213bf801",
+    "engine/test/list_restart_fidelity_test.dart": "2e0318c0eac36d143d55caaa8f8b2364f0f48d168758f576d114d59ff3e409fa",
+    "engine/test/literary_arabic_sample_test.dart": "bff57d74995bcb901b7e22ad1af836ad94a7127bf6f413ca939b567e1c03380c",
+    "engine/test/native_presentation_test.dart": "af7a29f3aa311531b8901e2a92f6de31cc0f0ce2b2f9f5e9d25e5bbf7785f8f4",
+    "engine/test/native_spreadsheet_test.dart": "638e4dabbb8a39b8ef08a8c9f8d9603ea98422abc6256d665a05860e8a52bd06",
+    "engine/test/note_chrome_fidelity_test.dart": "4cb17524af3193000a75e76c641033a78328cabed753632f4f289699d5cdd311",
+    "engine/test/note_edit_test.dart": "e247e7ee0f2b184f3a522eef48118b897cc765b86f6e5e454b67138f2942a15e",
+    "engine/test/note_marker_fidelity_test.dart": "bac81eea0c0f25bf5cb585dd18e8001b606e88235e601d2fa154709d331dfc55",
+    "engine/test/note_marker_legacy_fidelity_test.dart": "18cbff8425a4a1f8c968ac51209271b3cf68c9f8c7e22f3197b4d248634affd2",
+    "engine/test/note_marker_merge_test.dart": "c5ea2e069021071299b1b191154fe98fcd870dbbc4e6edce174da775ad83e6e8",
+    "engine/test/note_separator_fidelity_test.dart": "7f086b027fe9be2cd03e5326d9508573dbb14a3d77744ccae62c4585252cd195",
+    "engine/test/numbering_collision_test.dart": "9b05f637b3965c98f2b16062c4052e8d18310db8724aab04a8f28e7f339e78ea",
+    "engine/test/office_crypto_test.dart": "dd4f2dddcb3da81013baade656ea7f2e478d295fe91503be3fd69addf58d0175",
+    "engine/test/office_features_test.dart": "baf7bf76e6455acfc14bd8412e0d9aeccaac99b77cf076947939c350111ac7ec",
+    "engine/test/office_fidelity_oracle_test.dart": "097a6ba4f7b5d433c899eaad8c5df1c41be006d035e5fa76710f6de64f2d6a68",
+    "engine/test/office_isolate_open_test.dart": "add2c9ad84021c783f1cff3ecaaf9084e648c4a5bddf5a6efba8ef5124aba817",
+    "engine/test/office_isolate_save_test.dart": "d01f8ec25a3c3f32d34abdcbe4c9e6d242cf9b2d7b6e20da6c2de776d58056b7",
+    "engine/test/office_package_parts_test.dart": "ec988fd7eb10ddd21ea7ba148bc975b624f78e9e73748b3ac965110c2b3e8c33",
+    "engine/test/office_pdf_export_test.dart": "49da91a9f89cb27fcdc810741cb57c988a207ed0197395f50d76dd3479e4ab21",
+    "engine/test/office_repair_test.dart": "db50ac4a93f7d566253ded9b567b9c4736bb2f7f2516f937c8ff04226f3bc014",
+    "engine/test/office_search_fidelity_test.dart": "6be46e563260611bc7a7e0d204ca33715a0f2000a3f9e1f643ebb20db7187bfa",
+    "engine/test/office_steps_test.dart": "4e22d8033256876546b12f07f3bad534982b7d02c59742c0a54e023bdcb7ce08",
+    "engine/test/omml_test.dart": "a6ed9a1d941a1801ebd1c5dec192aee717038a619ae24226ac1cc2ea1c095221",
+    "engine/test/opaque_word_test.dart": "8fb8229ce62d91128dbcb6993970c0d9811c76c670da06d81269e00889773842",
+    "engine/test/opc_archive_test.dart": "3452d3a55efa362a8eea70cf4c02172c5478b8843f30d5dad16b190f9aefd54d",
+    "engine/test/opc_word_kind_test.dart": "71ea86bfdb04697e39cbe9ec8dfb61272a871ec1df83c789b7f263ec96fa3e16",
+    "engine/test/pdf_file_test.dart": "e10181d2366422dc2f4699ab2d359b196b1785f16479417a33801908a034c2c3",
+    "engine/test/pdf_templates_test.dart": "876d8428849d0275d12adbaae84a4ad5e766385775b7b7abd2a59c5e715009b8",
+    "engine/test/pdf_to_office_test.dart": "b6d21f345b221fe9860ba7d70c76c497b45843f1d5f30b71678c477ed588243d",
+    "engine/test/pdf_toolbox_test.dart": "5a0b6068d2341c4b80d2e83fd36efb318509e43f255f7956bf51fb5fa26bce9c",
+    "engine/test/pdf_widgets_catalog_test.dart": "c24290009a06cdb51ba21c1e7a031be489ba4a6f57396d22dfb8f0ab9b438c09",
+    "engine/test/pdf_widgets_test.dart": "17cf1f23d58a8e39ba87e874f958e15fd6e8685ff01f0862094a6e4a804f6908",
+    "engine/test/phase_features_test.dart": "bc0389fd6ac982651735211b002fdb108a79c6703e35a8cf880ab87926a28fc6",
+    "engine/test/report_engine_test.dart": "0c462858d5c03b101c6225582be88f40633a6b7e7cde7bb805d8a20730d793f3",
+    "engine/test/rich_note_test.dart": "7dd2feac8af9a3c532ba5a005a463e21c568052bd1cf17169bedf5d068c726bf",
+    "engine/test/scripted_transitions_test.dart": "222826de215576595033348ab5cfdf7d1985a459e27aca68592b92a8683c4751",
+    "engine/test/scripted_workflows_test.dart": "4800f9a87a7ef9c2c8bf1852ad244ec9ea8dd16107ca6e30d2c9f25064dcf365",
+    "engine/test/sheet_explicit_style_fidelity_test.dart": "f9e383c54eb3c17d210335064ec8c252fa38dd2faed77c2369fcae95e7ecf3b9",
+    "engine/test/sheet_formula_cache_fidelity_test.dart": "e1ff23d16df0c4f83189335fbedc53e03668ce90088ab6e1ffeeb35833684761",
+    "engine/test/sheet_formula_test.dart": "93f6c6942dedbfee64b1954185efdd714ab6822b9fb19a47d67c4b4f85e181a6",
+    "engine/test/sheet_import_fidelity_test.dart": "cb6043e33656e92cc79b308dd25f89634fb79ff813121133bb89eda7b1ea2f14",
+    "engine/test/sheet_nav_test.dart": "7c8d7a4607fb9425b303daf5436fc76e73673918c703c3a929671e4ca478b991",
+    "engine/test/sheet_normal_font_metrics_test.dart": "939dcf74bfae209072cf1eb8c02a8422dd93b7c7d17a805d8261cb3e4448976c",
+    "engine/test/sheet_qualified_name_error_test.dart": "f89fa42a8ede2562d801f805e22206ea6527bc25f97a48610b1d3ff0655e18bd",
+    "engine/test/sheet_qualified_names_test.dart": "ad817ca73805ba21c4729a9fc997ee3f90edbd48ca96babcf8f18c49a7f2cdb2",
+    "engine/test/sheet_rename_adversarial_test.dart": "62aa60cf7ccefd124f71c17fcc40478478111a2a8e962eec057668b6c0b2b10b",
+    "engine/test/sheet_rename_fidelity_test.dart": "a46c2efbf4a813a0ae8efa9d04edb2f9085beb2c584c8e09800cc304820f9828",
+    "engine/test/sheet_schema_fidelity_test.dart": "36115b3cca8384e798f96b8da6204da0ab9e1c3719585135743a3a704a67cf54",
+    "engine/test/slide_arrange_fidelity_test.dart": "be83f895df9ee9e6435791ed12c874379172aad9d1546b1ca18e8e7e11db42f6",
+    "engine/test/slide_import_fidelity_test.dart": "e53d73dd0ede1f0fe334c0d1714526b750d3ff40f1d6a5a1b11bc7cf7ae8e9f8",
+    "engine/test/slide_section_fidelity_test.dart": "205c65b324cf406daddea223e1dddc2a8b675c9dd1468848dbf1249f3ff55e53",
+    "engine/test/slide_test.dart": "4946343f221b1892b7dbdf3e57c1a29e59f2512eabe0ae42e005b0965d5dd72e",
+    "engine/test/slide_text_fidelity_test.dart": "a140043cd85d2b0d0b2a0112f7d97c8d671b83a6c3bbf2e1976c49e3050e3466",
+    "engine/test/story_media_fidelity_test.dart": "1c5678453daf0275e31a1c226be5d8f46f1a36eea8af740b705cb60c1164779f",
+    "engine/test/style_cascade_test.dart": "f3205a3a9b6bb1886e9e7d396dc0552c4bbfbdaa2c0a9797c0ffcbbb6b0c0305",
+    "engine/test/styleless_import_fidelity_test.dart": "7d610d292ccfce0f46140570c5ef2d6d574b4c423a54ddb2dcefc9d0679d590b",
+    "engine/test/support/legacy_word_fixture.dart": "b8a20463999decb7ae235de4949b4a3277265f2a0cc693206d8b69886d1e10ba",
+    "engine/test/table_border_fidelity_test.dart": "c3372072cf8872f0388a54e9967bab0c49081f48de3d4cb6fc58e43da5df9abb",
+    "engine/test/table_grid_steps_test.dart": "fed913b1156ec039506047827e671b5b527ed616fbfc11dae93bf03da4a5af0b",
+    "engine/test/toolkit_builders_test.dart": "8a53112d96083d219cfd372a3ee38a7cb42f62e3116f73a978f8dfb9ae08a3ad",
+    "engine/test/variable_line_breaker_test.dart": "1118471316ba41098135c99d71dc6fb6c422247fd9b36141946f36e3b0f4077b",
+    "engine/test/visual_test.dart": "132dd7402ca9426f1a698c97e1cb9bd4363ac97ff04465d76990d03fc9515b54",
+    "engine/test/wave4_platform_test.dart": "f9fdeb53350b31d1433727d37141611b39d8b22915466596b6220c4175ab6e4e",
+    "engine/test/wml_run_edit_test.dart": "5e2216190e5ed97a859a3c66c8aedace2aa12a1cd0db44cc68b5bfb073675ace",
+    "engine/test/word_altchunk_fidelity_test.dart": "093f3497d0e8f8be8f54c25b7b5c472c15402c1ec94e6435a84ba865201a9ee2",
+    "engine/test/word_auxiliary_content_control_test.dart": "a48fba4c7e419f3da826ea058aaf82e9ccfa23843ec1dbe37924cf34dcc6c562",
+    "engine/test/word_bibliography_fidelity_test.dart": "b851218dd0958d621f81b170272f908208bbba8fb6581d3482bb5b8ae695307a",
+    "engine/test/word_bookmark_copy_test.dart": "98b2bae0dd946849c8adc2fa5631c2c325664530dc91d521b1a44048b0642f20",
+    "engine/test/word_bookmark_fidelity_test.dart": "ad38f1dc9d927203fc74cb2fc4c78351e212e14ce398b6a36deba1d0220d7889",
+    "engine/test/word_comment_test.dart": "b5a280d52e85d27990f3d17ed4489675bb6c60695f5b1fb40c8765d043f7a408",
+    "engine/test/word_compatibility_fidelity_test.dart": "383dbe4b6d69da7f88404b8547fed7cc51c2fe3a6b0ec09644aa17d6f1fcd00e",
+    "engine/test/word_contained_text_wrap_test.dart": "e247199264fe161bb2238b3b4c69da62d7a8345ff068833474661e7f04ae4067",
+    "engine/test/word_content_control_fidelity_test.dart": "7fed3c8b6fda8d6ce9a7f5a643e03816a783158dbfd2996c2fd5fdd983e44792",
+    "engine/test/word_edit_integrity_test.dart": "1161944bd3d5a89b6135c345ce5a8a520508aefc192323c7281538e0b3cef591",
+    "engine/test/word_fidelity_test.dart": "07cc56e3072be629d287045f5deca695b7b400cc28cc57092a6387e0bf7b4bb7",
+    "engine/test/word_find_replace_atomic_test.dart": "a7ac277e484b854ed1480cbf5402717a29e9b2d9409de0a95e1eb3ae82f8b3c3",
+    "engine/test/word_footnote_reference_test.dart": "a4f9d0c8de543b19afb594bed37d212da331d7020e5867d15a3f504daff7250d",
+    "engine/test/word_frame_wrap_test.dart": "aa6db4dbd75874844e69100401fd6236506b25ee06bb337cde329761f73288c2",
+    "engine/test/word_layout_test.dart": "8217d2a851146a4f4d2eb81122fb755a1adb212a955f5dcaefb6636beefca9c0",
+    "engine/test/word_native_presentation_test.dart": "8adcc88ce4a4a111c482d55f3ed9fe1887249d3c9e5ef8a67ca5e146473c4ba2",
+    "engine/test/word_note_bookmark_edit_test.dart": "d7ad4ee3c5c1144213fe7b9ef9729028eef877b0a8f0136164d88bed7550a1b5",
+    "engine/test/word_note_script_break_test.dart": "22a50901aba175c051b100c938d8840a146cba3ae63efef403cd1f21a7b7c8a3",
+    "engine/test/word_package_preservation_test.dart": "44eb54c30ff6c22f95c58502bdfa15a964e889da921c8408b5bb1090d8d882b2",
+    "engine/test/word_part_routing_test.dart": "3c09cc66742f65f77287f18b6ae4b27697af470822f148b65a471c8d0509aae0",
+    "engine/test/word_pdf_test.dart": "a91bee8f6178b498fb8a6849745b70ff4b248aa16c52bc20195254bb318e980d",
+    "engine/test/word_picture_distance_fidelity_test.dart": "b8f35143def902462683cded4d3a57915992c681d31c2fcbbbfe49c4c5c5de9e",
+    "engine/test/word_referenced_styles_and_breaks_test.dart": "519c50b0e09a5e74e9c3196e13eee25ece7074b35e51a228ae5b9956404f4edf",
+    "engine/test/word_revision_story_test.dart": "ba234a4efa66aced9ed3e2e5e6654ea17b28296ae24f328f96857b3487d6367c",
+    "engine/test/word_revision_validation_test.dart": "0c9335ad341b7affe55231084bb1f8badb932083a016c12dd5ff411e33256eec",
+    "engine/test/word_section_clone_fidelity_test.dart": "668b97851a93b6889675398bf48493bfcd130bb90a6e53bfac17320d052c307e",
+    "engine/test/word_step_atomicity_test.dart": "e26cd06db3ce229e0ac12e7acec0addcecb2c8dcb70b79a1470a2dee83b7bc7a",
+    "engine/test/word_structure_integrity_test.dart": "6dab833914ca750811c2b37eb09199e268d9280d560621f5c7a09fbc2a1ac54d",
+    "engine/test/word_structure_steps_test.dart": "ec69586a9fd498239910c7aa0aaf3574f560bb815232e9f84aafac6d37708dce",
+    "engine/test/word_style_introduction_test.dart": "5b82af9baf7346f45252e08dc95cc99365555b2f355cb4fe68c7f6e0a686d4b1",
+    "engine/test/word_styles_layout_test.dart": "8e5d171c763e9e24e36eec0a7c3ecee2444a39317db0123827450744f7db9205",
+    "engine/test/word_table_direction_test.dart": "d0b31b1820f2f2961d0381855e1e6f00abfc470dd4d51d629911e7e538d20297",
+    "engine/test/word_table_grid_addressing_test.dart": "233fc8df983ebc59b3d3d6b61311a50038b35231826ddd0bfd78ab07ff927a42",
+    "engine/test/word_table_nested_layout_test.dart": "3cfdaa37b699cd37a1befd4dd12a2282274a6ea9d9b33511c39138f4cb8e32f9",
+    "engine/test/word_table_picture_pagination_test.dart": "a73a04eb1b338e899b069089597148d2f31371fd2988c4139499659dab37b720",
+    "engine/test/word_table_tall_frame_layout_test.dart": "e78bde64d570bddfff61878b12f8673221bb243501ff99c13360bda1f28c61c2",
+    "engine/test/word_table_tall_toc_layout_test.dart": "253a3b0c95c0bd616ef00873b5759ff36d3143877b7bd2fca4d9f9f6e077c3f8",
+    "engine/test/word_table_test.dart": "1ea77aebfb529ca160103ef72be737461386a52ffbd244ea9cddb2b8031b16d4",
+    "engine/test/word_toc_test.dart": "277372c723377200431beaee8e55db8109e584f0bb9861ed1aa73306920469ed",
+    "engine/test/word_tree_test.dart": "761103a75d2692a378a136f59f0e4776aa1a3d707c612ab6c6ee52fb9adc9f0a",
+    "engine/test/xml_namespace_capture_test.dart": "b738ee09a955bf35d16e4fcbe9a97db5482270d76627a2494150a3ef6114859c",
+    "engine/test/xml_reader_test.dart": "12c65fcd3997be2bb3c236cb811b4d02658834fb662f5da152655c5519295fca",
+    "engine/test/xml_whitespace_fidelity_test.dart": "f9541bc7b08f0bee825caf7ced3377372e87d0800f6c91fb065307f96fb0b48e",
+    "engine/test/zip_bounded_read_test.dart": "ae33b7e3eca89abbcbe27c70f7f7ea2a42abb15bf17e3bb67fef9e03895e9ddf",
+    "engine/tool/docx_to_pdf.dart": "a4749389c75fd508c833b38027a174745d920138ef0369811456e7eacf3da4bf",
+    "engine/tool/dump_office_shots.dart": "608c2cc8d7cdb577d3b235d4148417e8fe50d06a40f75fd0f8630677980478d2",
+    "engine/tool/dump_outline.dart": "b850cdf38030d788f014c2cd929a1e6b362959917da013ee70c6700fbb7d26c6",
+    "engine/tool/dump_report_shots.dart": "097fb554b5b646a93b98fc196aae407731f280e54c3632699ad7b5f3f0de062d",
+    "engine/tool/dump_widget_shots.dart": "f4afec748bc445be7524f6b7c290a1a97930959184ece21a3af10bb038c67f92",
+    "engine/tool/fidelity/README.md": "ff6c1bd72f68536351fa53ee7b6996365691b8dd033f1b497e0d4cda9a21bc74",
+    "engine/tool/fidelity/altchunk_oracle.py": "f0c35b0960e8e28e84695e7ce61362c6d60dbb7fdd6564c20664ab53aadf5304",
+    "engine/tool/fidelity/audit_operations.py": "44c2821d062bd2b0ce221db63d41c3cce26b68d6d9dbff05ccc977c162e58d88",
+    "engine/tool/fidelity/auxiliary_content_control_oracle.py": "27b040f269c52baf71ba85164d92c5c65103ee76e3714d9bb3c667dab3945139",
+    "engine/tool/fidelity/bibliography_oracle.py": "42026569b76e2edee4c4c317b19ec091a2041432cbccea1d70e5b7705f9339e1",
+    "engine/tool/fidelity/bookmark_copy_oracle.py": "3a013def719a0434f52102ae5a5c813b62fdccd68762efa7a2d07abd986c9ea8",
+    "engine/tool/fidelity/bookmark_ranges_oracle.py": "e13eb616d96eda868295d81527dac4d77f17dfe5e9b0b5e6e09f3b6e093cf8a2",
+    "engine/tool/fidelity/bookmarks_oracle.py": "0af0fa98445f85f74f8b46ce4a0a4715aaa32cc09684b21d199c94d3f8fce7d9",
+    "engine/tool/fidelity/check.sh": "ee228a82543768576874e00a298438d9488c3b0ccdbe15eb5c6efd15f0341d69",
+    "engine/tool/fidelity/collect_coverage.py": "fffd9daf2beece4248a0f83ed951c100e53e41bf9c9bd8bff8f36fb34c5e23a0",
+    "engine/tool/fidelity/comment_threads_oracle.py": "027e0f1db62cd619ed6b9c8e035fe519672ce68e0f1a6ad2f12f698001b8bc3a",
+    "engine/tool/fidelity/compare_sheet_qualified_names_native.py": "7f10147293df6d6484ca5d3b5f3eb9e8ac86d983ad8933652607d5cf7768035f",
+    "engine/tool/fidelity/content_control_oracle.py": "8b37baeebf1a790326f80052bf404e4b39c3f14d0c95ee3d3f714fde169d105f",
+    "engine/tool/fidelity/content_controls_oracle.py": "75f0d884d01d279674fba234eb08f98801a12f436cb54c7209983e9943ccc7c0",
+    "engine/tool/fidelity/corpus.py": "fba63fa1a591e3014dacf4eea17714acfe79454c0a405928e011c30b13495890",
+    "engine/tool/fidelity/coverage_report.py": "c4c5a6ceb1d664b3b1de175e3b8529d0d95d7bf9d5c01dd96c1a232c3a54f765",
+    "engine/tool/fidelity/cross_format.dart": "3759e7893cc409238201d3be21fe00a77db997b64c447cebe5981e77040e1d89",
+    "engine/tool/fidelity/cross_oracle.py": "82d5900be4b7321b09614a393a28133e393bb28f46bf794b72d20d6f085f8c80",
+    "engine/tool/fidelity/edge_oracle.py": "d2d2526763c762048e4fcd60e3cdf52514c7737a25669566a7af4fab1eb97b18",
+    "engine/tool/fidelity/editor_output_manifest.json": "6d478af9a047483c99f1cf306bd860b68e68175e6491bf2611880c6d09b7e9a8",
+    "engine/tool/fidelity/example_steps.json": "a55de9ab6570abddffb5d7a5ea93bb3468d796730aa2b854166470e41ea35967",
+    "engine/tool/fidelity/feature_matrix.json": "c07da134e864e9501963c08456a31605ac3af904591ae2251e6aa57960abd7ea",
+    "engine/tool/fidelity/feature_matrix.py": "48f6e9749ae9f46444f56885b127c72f4003833c73fc041b6d756506b28a586d",
+    "engine/tool/fidelity/frame_wrap_oracle.py": "6b363e2b68e50b0e8898bf99e05478f163d21d7088d11cf1b5dd9064e9b00e12",
+    "engine/tool/fidelity/generate_sheet_normal_font_fixture.py": "08d22e1dc1aa7bf9169dc8c64b95b461c3418c49695c83917ac9dbc48750eda0",
+    "engine/tool/fidelity/generate_slide_arrange_fixture.py": "62eba78f32805df0d04ad4c2a6e4ade7758af8598daef573923dff7598242ae0",
+    "engine/tool/fidelity/inline_fields_oracle.py": "23f60e97de046fbf48426241c14b4b1447f829f10f613e79023ccfb04eb1af75",
+    "engine/tool/fidelity/inventory.py": "23f90b8d19fa8dd10cb7d386482a50b95ff125d30f22c4917aba718c29120d52",
+    "engine/tool/fidelity/layout_cases.dart": "7ae49088dba597c17e0fcd4956a6a1372a6bcad3b0f00c75f215fc6a14842e81",
+    "engine/tool/fidelity/lists_oracle.py": "e8687a7a8b4f8f2e702213ae7ed44922a3b4ff85ed5bd479ac9ee27cb26a6e9e",
+    "engine/tool/fidelity/make_sheet_qualified_names_fixture.py": "212cd9ea08ee05c6082d44708b3fffc1f1ba6d4a1089981d1c1f3f37eae8b654",
+    "engine/tool/fidelity/make_sheet_rename_fixture.py": "6f125d4b3075905c5d147b616f21fe30f41b508c7da2892dff82957ce60210f3",
+    "engine/tool/fidelity/native_fixtures.py": "1d44abab01c6248821940744b27ba017c0a62f874eb5efdb6abac9414e9b68ca",
+    "engine/tool/fidelity/native_oracle.py": "d2019c195adbb2a8482a2d6e58d758a5a289931a1105b7ea5a17a894eb9f4343",
+    "engine/tool/fidelity/note_fixture.dart": "6cad6a312631f3fbb4fd1efbd3d915539f7f1e32551f517ff1797a7ba4624318",
+    "engine/tool/fidelity/note_markers_legacy_oracle.py": "b005f1332e62dee93817691add124a68b680c33379b0b596e46be481e17edaf5",
+    "engine/tool/fidelity/note_markers_oracle.py": "ac407b01557dc6ef71feae841d898d6258182c558c8901321f6b1a1346bac545",
+    "engine/tool/fidelity/notes.dart": "a7b5ed2a7813bcf38cdd80e01c1bd4149c6929ba38d8bae556b3cd3db3da682d",
+    "engine/tool/fidelity/notes_oracle.py": "fb24159a825d174936b6f66cf889b88b14a47dba826a5e91cb815adfff140934",
+    "engine/tool/fidelity/office_steps.dart": "614f3e09f83e70f61b3512d06daef4134e5dbafaa7f3af7ea27e4be91a07991b",
+    "engine/tool/fidelity/output_manifest.json": "3995809ba6d473cd0a390e0fbc6aeb7d8770b39b89064c166b435224c65a8be0",
+    "engine/tool/fidelity/revision_story_oracle.py": "45feb26e395a67fafadc55f129610237e0d9e80e86346c1e4274e68dc420500f",
+    "engine/tool/fidelity/scenarios.dart": "417c5a2aa5f54bc99e2373958d405829544a846bc675ef2074ba186fd35d5074",
+    "engine/tool/fidelity/scripted_oracle.py": "4c8aca2f13bf14fca4288bd6f6d4080dc51922c17daa7a80ffc2397197de91d3",
+    "engine/tool/fidelity/sheet_qualified_names_oracle.py": "e92f71573d8954803665e54f5dc202c4ae1d8ea8e6b8b06aa05c0871fb40444a",
+    "engine/tool/fidelity/sheet_rename_oracle.py": "e36b731e4973046f244ecfa1d051dc65aff5f47891c179905346f21598d26a04",
+    "engine/tool/fidelity/sheet_steps.dart": "9da4d9488f7c7927b1ee4689364999e84f3f5412d79f2cb08f11aeff0e8702b4",
+    "engine/tool/fidelity/slide_arrange_oracle.py": "a1ee0bcfc59b29e3831ad39b58985d19c41b5ab539ec2d8562408e3997a81d99",
+    "engine/tool/fidelity/slide_sections_oracle.py": "88e3ac49ae50d978cf6ca78eb6b23bebb34150cdc2bd23ab866ee98e876787aa",
+    "engine/tool/fidelity/slide_steps.dart": "9032edfbb4a1c6133634d77299c72480f499d70d9ea5749eac21a5e63c8ff784",
+    "engine/tool/fidelity/step_input.dart": "ba9fcaa2bf4c04f7b90f39c6c2527971725664f4ecb01f9e75f362b2ceeea1ce",
+    "engine/tool/fidelity/story_media_oracle.py": "ced5879388e1c0065dc0e4d6b6759e342a5df2499df69abd4ac8d299ea6a7685",
+    "engine/tool/fidelity/style_fixture.dart": "d149e4749578b9b6da511d289179d75340ae86526e387c76d9c591c98ad84a6d",
+    "engine/tool/fidelity/styles_oracle.py": "9be40c7c90ea84c38450351e46ab257056d9698024a62f10aa1879300198c778",
+    "engine/tool/fidelity/table_borders_oracle.py": "9ea926417f82a6177e6023ee858cfe868b0b598a49a7d41b15ae01298d0ca519",
+    "engine/tool/fidelity/table_grid_fixtures.py": "86c0e348de7e9718e17c40c182d15357e38a5c138d08441b22c95c851686f4cf",
+    "engine/tool/fidelity/table_grid_oracle.py": "b84bc20f9e7bb47d02342ef39dfe65ccded0c8e5f6f538f542caea1521f3fbfa",
+    "engine/tool/fidelity/table_selector.dart": "c8669e4281007d81edc6bf96c48411d9ad5e01653ab58b469afb8e532ea008fe",
+    "engine/tool/fidelity/test_altchunk_oracle.py": "8fc892d6b0b8e25267ca3799240509fdd4df789b5c2d1a9f631d73d02a9d8602",
+    "engine/tool/fidelity/test_audit_operations.py": "135ece21aab8f92e6d53be2917208d010e15942533d9ca41ae4e40b6e8f799d0",
+    "engine/tool/fidelity/test_auxiliary_content_control_oracle.py": "5e16f3d7d6bf7088e223aa1021951deb82b551d1d543658fe41612fd266ee791",
+    "engine/tool/fidelity/test_bibliography_oracle.py": "0e2f28fe8de52328abd6f87278b6dc2ad880a0532a4926dabdd681323beb11c8",
+    "engine/tool/fidelity/test_bookmark_copy_oracle.py": "b1c44c4beb622be5b0a76deb5f94020ab72f059f6c518bba38ad6e460cd4a181",
+    "engine/tool/fidelity/test_bookmark_ranges_oracle.py": "b5692662871bb437ce221ac7e34839d5ccb62b98f7909e187a49deaf2b72d05b",
+    "engine/tool/fidelity/test_bookmarks_oracle.py": "4e1d6ac7db942c247b666b32cee2c978b031fa794d8154acfc0ba2158d3547be",
+    "engine/tool/fidelity/test_collect_coverage.py": "6d8b6adce3f190223c990cc9282f6000677226686687ec9f4724941e868b000b",
+    "engine/tool/fidelity/test_comment_threads_oracle.py": "f1526eeffec7dbb853b1ca03eb8f4f28bcfb6d5837f7f9974d33389c695fa298",
+    "engine/tool/fidelity/test_content_control_oracle.py": "a95356f01e2d50a8ea7d7d9f9aab51af25c68a3f3b80513ba78c1fd1c454dca2",
+    "engine/tool/fidelity/test_content_controls_oracle.py": "10d76a2a9f213c7ae09865aa527919e354cc1d8ed7c546e48e3c50d138140d1c",
+    "engine/tool/fidelity/test_coverage_report.py": "ecacbdc6b8ce82b326245cc83a583917dfb48e3006c783a6d67125723aebb4a7",
+    "engine/tool/fidelity/test_feature_matrix.py": "d08833a9d9613276f3ad33b1761b4530fde6494033750991ddbb5de90bb20afc",
+    "engine/tool/fidelity/test_frame_wrap_oracle.py": "3e1e57bf2e27608094fb2ddef55edfc7b4e5f0b22f06ea7bf956e445d127d8f5",
+    "engine/tool/fidelity/test_inline_fields_oracle.py": "5fe1a9530b9a6050d95b5c536381061da29b1b1f5649b61ffa5bc8d912490389",
+    "engine/tool/fidelity/test_inventory.py": "18ec9884ef4450711c5d02b2f15685fd557b22bf3e49b0c5b7c69ff9cfccdffb",
+    "engine/tool/fidelity/test_lists_oracle.py": "2cf36464cce12432783f299e0c46a9224802f1238c1f205f0e5f21f6799bb908",
+    "engine/tool/fidelity/test_note_markers_legacy_oracle.py": "e4f0eb23a83e4ab2ddd95528c0666f28f77f616cfcf0d747fd168999df74b11a",
+    "engine/tool/fidelity/test_note_markers_oracle.py": "8a110d2c9b98031d79c289f310d8987a41e92a174db1cd63b053bab8cdf4a7ed",
+    "engine/tool/fidelity/test_note_spacing_oracle.py": "fe6bd1201e34bfceb8f6c6069cb13ad234145855d1d83b89f1eabb79764a3014",
+    "engine/tool/fidelity/test_oracles.py": "94bf5475e8cfb1353560353b162807022c3c22fa39ca949f407d327607d6c6c6",
+    "engine/tool/fidelity/test_revision_story_oracle.py": "9554b9277bcca662dace19eba4d6be6d80eead2622cc2d311e1e01b953be4381",
+    "engine/tool/fidelity/test_scripted_oracle.py": "626c115fbf59143ae0b9a5383ac05369b232418de08a0f1098d131432d1da261",
+    "engine/tool/fidelity/test_sheet_qualified_names_oracle.py": "554baf9d8345200e8dd4f8bb95acca8962697802e5e2b3681fe5bab75178f714",
+    "engine/tool/fidelity/test_sheet_rename_oracle.py": "53ec5f9ab1407f8b2b4288ea888fc6c97ed495b11b12072db971a5f36908c8d2",
+    "engine/tool/fidelity/test_slide_arrange_oracle.py": "0f07fd9e0ab235cc7b987bd5ac8bb8ab9b6a00506e3b175be7626db68fa97766",
+    "engine/tool/fidelity/test_slide_sections_oracle.py": "5bea0ef7bab10ed6cc92920f448d41bb790bdc487af4fafa75603f50b1a4d167",
+    "engine/tool/fidelity/test_story_media_oracle.py": "132fd4c13c7179b7ab24b143ad7055a555467ed0f193ccadb4ec4e79920c1b7d",
+    "engine/tool/fidelity/test_table_borders_oracle.py": "963f6e07853f1d5ae022fe5e8efbf5e46839a969c91fb6259d95bbf56e1b0898",
+    "engine/tool/fidelity/test_table_grid_oracle.py": "26833a22fd4e21727084e33ff99287c055b9fa0f1de5e8849fe7a869beeadbfd",
+    "engine/tool/fidelity/test_word_compatibility_oracle.py": "4d56e0327f445dbfb9dd75efcf5f2e94a64e86e5fe9d0d1144c38a33f7ab824a",
+    "engine/tool/fidelity/test_word_structure_oracle.py": "648029d2269c09713f848e2ff6ebe376ff51524369336d78ebd257be1e295a40",
+    "engine/tool/fidelity/unsupported_word_audit.py": "f428faeba6b604eb30a08a9744338400ab05168cd6d6f96d8e728a4fe5517e77",
+    "engine/tool/fidelity/word_compatibility_oracle.py": "c0d90f561a41032e0512daaa851effc59d3955e95b623bd36795b20f7f20da78",
+    "engine/tool/fidelity/word_steps.dart": "c14316835bac78fb2a3f69cd884e6bba24e4632cf5bff3c1bc34c68e9a97024b",
+    "engine/tool/fidelity/word_structure_oracle.py": "c3877a89604a2b2b0c100173b05fb7dc133c89f06632e9de2970747fb3ee4964",
+    "engine/tool/fidelity/word_structure_steps.dart": "c1be2b878fc14edc3607e1f2afc81b63ee1b8a084ceb717a57cbabf0c3ad42f4",
+    "engine/tool/office_shots/compose.py": "2656a6986511fec1d1f20f8ae876c416738570ac5b061c6e92b528fdf528acc8",
+    "engine/tool/office_shots/make_inputs.py": "ffbf1bb869d0608523230daecb30d454d4db8e7eb682866fdb55121db73f7e8a",
+    "engine/tool/shot_skins.dart": "638d79b4e986adc2f3dab58a8d8fe4baf4ec69f6c134ff6125c592bae700d8de",
+    "quds_office_editor/example/fonts/Cairo-Regular.ttf": "ca9f630344d33e7b01abb9998a379465a135d1311430f33bbbfaa1e3eb99fdb5",
+    "quds_office_editor/example/fonts/NOTICE.txt": "70c1d466792eacf702a9abd362a9cba1aefaf312a820777c9167c53f45cdaf38",
+    "quds_office_editor/example/fonts/OFL-Cairo.txt": "a4554e1799d42e1405924b61eb0e0722ae1623b1f1f07f995348f96c496362a9",
+    "quds_office_editor/example/fonts/OFL-Tajawal.txt": "9b584984f9db0ee30347391a76eff9c0a6b03dc450c3c6afe3757a2cb3a4db87",
+    "quds_office_editor/example/fonts/Tajawal-Bold.ttf": "0342ab6b74b6bd1b4b5bf7beda45a9734a2b3147a31e8a3a45b6a3417a52d9d7",
+    "quds_office_editor/example/fonts/Tajawal-Regular.ttf": "6882892da3e03527d5db2bbab3b48bde6ef2e878a43f522d1a4eebda90010a19",
+    "quds_office_editor/fonts/LICENSE-Liberation": "06851bf76af77a55e1d7fcd072911e03406eaa61b20a2e17f3624fda47a642bf",
+    "quds_office_editor/fonts/LICENSE-NotoNaskhArabic": "3132adec56d068e79b0c9a800f9feb1d0b34d9e1034dbffec2602706dc3818d1",
+    "quds_office_editor/fonts/LiberationMono-Bold.ttf": "50464e64aaadea741fb9516748aee296d570439406be11d63df22294e77ba867",
+    "quds_office_editor/fonts/LiberationMono-BoldItalic.ttf": "291872531f0e8013df602c412fc570241860e41b1fa1b7972537c27a19024d4d",
+    "quds_office_editor/fonts/LiberationMono-Italic.ttf": "35c3116d4366eb0e58494d8e432d4ee0c60c5735c7f775ffc096008bd2907c74",
+    "quds_office_editor/fonts/LiberationMono-Regular.ttf": "d18235f1e874771f4eaec3ddd6ddb4db849d334bdc6930c5c2185d9344834e62",
+    "quds_office_editor/fonts/LiberationSans-Bold.ttf": "b72c65e551d653b54217ffad0d1454ce0657e4e8d4a28bcc79e0acd2598f4bf3",
+    "quds_office_editor/fonts/LiberationSans-BoldItalic.ttf": "64263238517af60213cdb469165fc7e9acd0c09c35f4155f924a379f97125a57",
+    "quds_office_editor/fonts/LiberationSans-Italic.ttf": "4ccb79043bd3a6d131b5a53901abb21261b1417f6052b38a9fa9716a4e5a3d81",
+    "quds_office_editor/fonts/LiberationSans-Regular.ttf": "075e71be4c58beda172ecb574a799308f04c3d054c6a5b7434954d3b0f1b28d8",
+    "quds_office_editor/fonts/LiberationSerif-Bold.ttf": "bb033fae52dcbf67a55494a08829aaa788324624d72a195af7f93da3061c928f",
+    "quds_office_editor/fonts/LiberationSerif-BoldItalic.ttf": "10ec0fa22bc6f12a239d600c051752884d155997aafd19ebc24c4f4a8d2b98d0",
+    "quds_office_editor/fonts/LiberationSerif-Italic.ttf": "c1882fbb05e78537b9c39dad3c07c4f231c987a3747b20c8745737aed50cd488",
+    "quds_office_editor/fonts/LiberationSerif-Regular.ttf": "350f4ffd773cae53560c63dca3d89a5070595614fde12f772bf43feb63d81064",
+    "quds_office_editor/fonts/NotoNaskhArabic-Bold.ttf": "b5cbcb561b4b540ff11d7b6934577dbbbbb9e1d152d47f6f31f19176d58ff39c",
+    "quds_office_editor/fonts/NotoNaskhArabic-Regular.ttf": "8c67eaa2f0086872628fc3f7f760386f83c8be5c5e9a1ba3a38891237b2ac7cb",
+    "workspace/.dart_tool/package_config.json": "45204bc7547679014be36f94b9635d691cb372cd1bfa8102ccd3a4967dd8a401",
+    "workspace/.dart_tool/package_graph.json": "b89169dc4be77511e2dc4c1015700d3d0b56d0140b0e9cef531aab8931bf1f05",
+    "workspace/analysis_options.yaml": "2605ddd3559825e867cab2f5c4536f4172d6ba3514cb10da19f17d7dbe7179e4",
+    "workspace/pubspec.lock": "bc5e5e3971d870180044f69ef1c6a2f1473cbb15a63316fecd9b8f172ce3804f",
+    "workspace/pubspec.yaml": "7fde99c5a37b696528bbc86b0aa23ee0d017083db872a945cfe39d99bb7e58fc"
+  },
+  "input_tree_sha256": "ef89e82c99714021f3c5c974191acb74a47b18eb42bae8389b9da170cab4e029"
+}
