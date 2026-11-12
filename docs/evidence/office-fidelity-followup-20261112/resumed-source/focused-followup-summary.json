@@ -1,0 +1,233 @@
+{
+  "status": "passed",
+  "source_commit": "7641d9cfa167987216134ebfc4772918cc945d97",
+  "derived_from_native_report_sha256": "70b64fbd60aa62dc5087e47f74419f04d01cff0d15229babca7b07b5358e98f3",
+  "input_manifest_sha256": "606d82cd7250f6791bc1af94acf7606d4b0dc149842bb76708ea5e2604c320f1",
+  "summary_script_sha256": "96492ec2a0a8a4a9e0bb9b1786c2debed5edf8a09da2f648a1939d92b676fb9a",
+  "all_original_and_snapshot_hashes_unchanged": true,
+  "masking_normalization_or_tolerance": false,
+  "normal_font": {
+    "unchanged_three_saves_match_native_source": [
+      {
+        "reference": "quds_office_engine/fidelity-sheet-normal-font/source.xlsx",
+        "actual": "quds_office_engine/fidelity-sheet-normal-font/unchanged-1.xlsx",
+        "matched": {
+          "pages": true,
+          "text": true,
+          "pixel_sha256": true
+        },
+        "passed": true
+      },
+      {
+        "reference": "quds_office_engine/fidelity-sheet-normal-font/source.xlsx",
+        "actual": "quds_office_engine/fidelity-sheet-normal-font/unchanged-2.xlsx",
+        "matched": {
+          "pages": true,
+          "text": true,
+          "pixel_sha256": true
+        },
+        "passed": true
+      },
+      {
+        "reference": "quds_office_engine/fidelity-sheet-normal-font/source.xlsx",
+        "actual": "quds_office_engine/fidelity-sheet-normal-font/unchanged-3.xlsx",
+        "matched": {
+          "pages": true,
+          "text": true,
+          "pixel_sha256": true
+        },
+        "passed": true
+      }
+    ],
+    "blank_column_width_edits_source_comparison": [
+      {
+        "reference": "quds_office_engine/fidelity-sheet-normal-font/source.xlsx",
+        "actual": "quds_office_engine/fidelity-sheet-normal-font/normal-font-1.xlsx",
+        "matched": {
+          "pages": true,
+          "text": true,
+          "pixel_sha256": true
+        },
+        "passed": true
+      },
+      {
+        "reference": "quds_office_engine/fidelity-sheet-normal-font/source.xlsx",
+        "actual": "quds_office_engine/fidelity-sheet-normal-font/normal-font-2.xlsx",
+        "matched": {
+          "pages": true,
+          "text": true,
+          "pixel_sha256": true
+        },
+        "passed": true
+      },
+      {
+        "reference": "quds_office_engine/fidelity-sheet-normal-font/source.xlsx",
+        "actual": "quds_office_engine/fidelity-sheet-normal-font/normal-font-3.xlsx",
+        "matched": {
+          "pages": true,
+          "text": true,
+          "pixel_sha256": true
+        },
+        "passed": true
+      }
+    ],
+    "required_repeat_cycle_comparisons": [
+      {
+        "case": "quds_office_engine/fidelity-sheet-normal-font/normal-font.xlsx",
+        "expected_cycles": [
+          1,
+          2,
+          3
+        ],
+        "actual_cycles": [
+          1,
+          2,
+          3
+        ],
+        "files": [
+          "quds_office_engine/fidelity-sheet-normal-font/normal-font-1.xlsx",
+          "quds_office_engine/fidelity-sheet-normal-font/normal-font-2.xlsx",
+          "quds_office_engine/fidelity-sheet-normal-font/normal-font-3.xlsx"
+        ],
+        "baseline": null,
+        "baseline_candidate": null,
+        "baseline_page_order": null,
+        "passed": true
+      },
+      {
+        "case": "quds_office_engine/fidelity-sheet-normal-font/unchanged.xlsx",
+        "expected_cycles": [
+          1,
+          2,
+          3
+        ],
+        "actual_cycles": [
+          1,
+          2,
+          3
+        ],
+        "files": [
+          "quds_office_engine/fidelity-sheet-normal-font/unchanged-1.xlsx",
+          "quds_office_engine/fidelity-sheet-normal-font/unchanged-2.xlsx",
+          "quds_office_engine/fidelity-sheet-normal-font/unchanged-3.xlsx"
+        ],
+        "baseline": "quds_office_engine/fidelity-sheet-normal-font/source.xlsx",
+        "baseline_candidate": "quds_office_engine/fidelity-sheet-normal-font/source.xlsx",
+        "baseline_page_order": null,
+        "passed": true
+      }
+    ],
+    "scope": "One authored non-default Normal-font workbook; unknown fonts retain explicit fallbacks."
+  },
+  "logical_table_grid": {
+    "required_repeat_cycle_comparisons": [
+      {
+        "case": "quds_office_engine/fidelity-table-grid/edited.docx",
+        "expected_cycles": [
+          1,
+          2,
+          3
+        ],
+        "actual_cycles": [
+          1,
+          2,
+          3
+        ],
+        "files": [
+          "quds_office_engine/fidelity-table-grid/edited-1.docx",
+          "quds_office_engine/fidelity-table-grid/edited-2.docx",
+          "quds_office_engine/fidelity-table-grid/edited-3.docx"
+        ],
+        "baseline": null,
+        "baseline_candidate": null,
+        "baseline_page_order": null,
+        "passed": true
+      },
+      {
+        "case": "quds_office_engine/fidelity-table-grid/omitted-edited.docx",
+        "expected_cycles": [
+          1,
+          2,
+          3
+        ],
+        "actual_cycles": [
+          1,
+          2,
+          3
+        ],
+        "files": [
+          "quds_office_engine/fidelity-table-grid/omitted-edited-1.docx",
+          "quds_office_engine/fidelity-table-grid/omitted-edited-2.docx",
+          "quds_office_engine/fidelity-table-grid/omitted-edited-3.docx"
+        ],
+        "baseline": "quds_office_engine/fidelity-table-grid/omitted-edited-expected.docx",
+        "baseline_candidate": "quds_office_engine/fidelity-table-grid/omitted-edited-expected.docx",
+        "baseline_page_order": null,
+        "passed": true
+      },
+      {
+        "case": "quds_office_engine/fidelity-table-grid/omitted.docx",
+        "expected_cycles": [
+          1,
+          2,
+          3
+        ],
+        "actual_cycles": [
+          1,
+          2,
+          3
+        ],
+        "files": [
+          "quds_office_engine/fidelity-table-grid/omitted-1.docx",
+          "quds_office_engine/fidelity-table-grid/omitted-2.docx",
+          "quds_office_engine/fidelity-table-grid/omitted-3.docx"
+        ],
+        "baseline": "quds_office_engine/fidelity-table-grid/omitted-source.docx",
+        "baseline_candidate": "quds_office_engine/fidelity-table-grid/omitted-source.docx",
+        "baseline_page_order": null,
+        "passed": true
+      }
+    ],
+    "scope": "Authored merged-cell and omitted-row fixtures; unchanged and whole-story-edited omitted rows use separate native baselines."
+  },
+  "shared_custom_tabs": {
+    "required_repeat_cycle_comparisons": [
+      {
+        "case": "quds_office_editor/fidelity-custom-tabs/editor-tabs.docx",
+        "expected_cycles": [
+          1,
+          2,
+          3
+        ],
+        "actual_cycles": [
+          1,
+          2,
+          3
+        ],
+        "files": [
+          "quds_office_editor/fidelity-custom-tabs/editor-tabs-1.docx",
+          "quds_office_editor/fidelity-custom-tabs/editor-tabs-2.docx",
+          "quds_office_editor/fidelity-custom-tabs/editor-tabs-3.docx"
+        ],
+        "baseline": null,
+        "baseline_candidate": null,
+        "baseline_page_order": null,
+        "passed": true
+      }
+    ],
+    "scope": "Three actual Quds editor exports; full rendering compared without a source equality claim for intentional edits."
+  },
+  "worksheet_formula_caches": {
+    "cell_checks": 42,
+    "classifications": {
+      "supported_numeric_recalculation": 9,
+      "retained_unsupported_cache": 27,
+      "supported_exact_string_result": 3,
+      "intended_indirect_reference_error": 3
+    },
+    "native_expected_matches": 3,
+    "source_page1_exact_matches": 3,
+    "report_sha256": "c057490173a9ceaa140a7df22244a3b77e35792f128321b4bf53a0843405022c",
+    "scope": "Three renamed saves match the independently authored native result; intentional recalculation and INDIRECT #REF! are distinct from retained unsupported caches."
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "status": "passed",
+  "source_commit": "7641d9cfa167987216134ebfc4772918cc945d97",
+  "started_utc": "2026-11-12T13:54:57.783233+00:00",
+  "commands": [
+    {
+      "name": "sdk-selftest",
+      "command": [
+        "dotnet",
+        "/workspace/scratch/07eb2580faa9/runtime/validator/OfficeValidation.dll",
+        "--self-test"
+      ],
+      "cwd": "/workspace/scratch/07eb2580faa9/quds_office_suite",
+      "exit_code": 0,
+      "elapsed_seconds": 0.530585313001211,
+      "log": "/workspace/scratch/07eb2580faa9/validation/source-external/sdk-selftest.log",
+      "log_sha256": "4945b06eb2eda6b4b7dd4ab50752ac76d91e73af5045d5bb39b3ecda55e25c56"
+    },
+    {
+      "name": "schema",
+      "command": [
+        "dotnet",
+        "/workspace/scratch/07eb2580faa9/runtime/validator/OfficeValidation.dll",
+        "/workspace/scratch/07eb2580faa9/validation/source-external/input",
+        "/workspace/scratch/07eb2580faa9/validation/source-external/schema-report.json"
+      ],
+      "cwd": "/workspace/scratch/07eb2580faa9/quds_office_suite",
+      "exit_code": 0,
+      "elapsed_seconds": 6.706802642002003,
+      "log": "/workspace/scratch/07eb2580faa9/validation/source-external/schema.log",
+      "log_sha256": "e4c3bc7d4e3edc2aee8aa034ffb5ee08bd141e70c90ac176c4f08c2d49128262"
+    },
+    {
+      "name": "renderer-controls",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/office-validation",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/workspace/scratch/07eb2580faa9/quds_office_suite",
+      "exit_code": 0,
+      "elapsed_seconds": 0.3190165249980055,
+      "log": "/workspace/scratch/07eb2580faa9/validation/source-external/renderer-controls.log",
+      "log_sha256": "e2fc7d33cfe379e79ee23b23945fad9204826e9135ce236f4b7ab0d49d042ef9"
+    },
+    {
+      "name": "native-render",
+      "command": [
+        "python3",
+        "/workspace/scratch/07eb2580faa9/quds_office_suite/tool/office-validation/render.py",
+        "/workspace/scratch/07eb2580faa9/validation/source-external/input",
+        "/workspace/scratch/07eb2580faa9/validation/source-external/render",
+        "--schema-report",
+        "/workspace/scratch/07eb2580faa9/validation/source-external/schema-report.json"
+      ],
+      "cwd": "/workspace/scratch/07eb2580faa9/quds_office_suite",
+      "exit_code": 0,
+      "elapsed_seconds": 251.73140575399884,
+      "log": "/workspace/scratch/07eb2580faa9/validation/source-external/native-render.log",
+      "log_sha256": "4240cc18d474f5387d65e67e84c4e24dfc33c1dbd4202ab7f4dce2ff82f9de19"
+    },
+    {
+      "name": "sheet-classification",
+      "command": [
+        "python3",
+        "/workspace/scratch/07eb2580faa9/quds_office_suite/docs/evidence/office-fidelity-gap-closure-20261112/focused-sheet-native/reproduce/compare_native.py",
+        "/workspace/scratch/07eb2580faa9/validation/source-external/focused-sheet",
+        "/workspace/scratch/07eb2580faa9/validation/sheet-expected-native",
+        "/workspace/scratch/07eb2580faa9/quds_office_suite/tool/office-validation/render.py"
+      ],
+      "cwd": "/workspace/scratch/07eb2580faa9/quds_office_suite",
+      "exit_code": 0,
+      "elapsed_seconds": 0.11464693399830139,
+      "log": "/workspace/scratch/07eb2580faa9/validation/source-external/sheet-classification.log",
+      "log_sha256": "7bee36a0426ab9f70b6b510025d19b117e47c06c5480c7bad4b4a89020ac4122"
+    }
+  ],
+  "inputs": 321,
+  "schema_failures": 0,
+  "all_producer_source_fingerprints_unchanged": true,
+  "all_original_and_snapshot_hashes_unchanged": true,
+  "rendered_files": 314,
+  "rendered_pages": 614,
+  "native_schema_only_files": 7,
+  "cycle_groups": 95,
+  "baseline_comparisons": 32,
+  "page_order_comparisons": 10,
+  "sheet_expected_native_matches": 3,
+  "sheet_classified_cell_checks": 42,
+  "failures": [],
+  "report_sha256": {
+    "input-manifest.json": "606d82cd7250f6791bc1af94acf7606d4b0dc149842bb76708ea5e2604c320f1",
+    "schema-report.json": "b1e68ab7177a3485a2aa7a6e699406d949276f83e33ba56dbb1c262ad68435b0",
+    "render/render-report.json": "70b64fbd60aa62dc5087e47f74419f04d01cff0d15229babca7b07b5358e98f3",
+    "renderer-provenance.json": "da97b266bcb36b4387a27dacceb39425ff1c5af11e2665e228a292af20d9a29e",
+    "schema-validator-provenance.json": "94cd085d040f70c25bc50208c50d4d6655542b06dc794c618fa33bd2373d385e",
+    "focused-sheet/classified-native-comparison.json": "c057490173a9ceaa140a7df22244a3b77e35792f128321b4bf53a0843405022c"
+  },
+  "finished_utc": "2026-11-12T13:59:17.485390+00:00"
+}

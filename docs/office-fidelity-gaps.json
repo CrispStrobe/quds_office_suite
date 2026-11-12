@@ -5,7 +5,7 @@
     "engine": "CrispStrobe/quds_office_suite",
     "host": "CrispStrobe/CrispCloud"
   },
-  "branch": "feature/office-fidelity-workflows-20261112",
+  "branch": "main",
   "scope": "Reproduced and investigated gaps; the source-hashed line inventory is separate. Closed means the cited bounded regression is covered, not exhaustive format support.",
   "status_definitions": {
     "closed": "Reproduced gap fixed and protected by named evidence.",
@@ -313,7 +313,7 @@
       "id": "FID-027",
       "status": "partial",
       "area": "Formula-aware sheet renaming",
-      "finding": "The shared engine and editor now rename worksheets atomically across local formula qualifiers, defined/print names, validation/conditional rules, links, consolidation, chart references and pivot sources. Quoted names, apostrophes, case variants, repeated range endpoints and three-dimensional endpoints are covered; formula strings, structured references, external qualifiers and their caches remain unchanged. Undo and redo preserve unrelated later edits and save-generated cached results.",
+      "finding": "The shared engine and editor now rename worksheets atomically across local formula qualifiers, defined/print names, validation/conditional rules, links, consolidation, chart references and pivot sources. Quoted names, apostrophes, case variants, repeated range endpoints and three-dimensional endpoints are covered; formula strings, structured references, external qualifiers and their caches remain unchanged. Undo and redo preserve unrelated later edits and save-generated cached results. Cached results preserve native numeric, boolean, text and error types; text spelled like an error remains text, while genuine evaluated or referenced errors remain error caches across direct/isolate saves.",
       "evidence": [
         "packages/quds_office_engine/lib/src/sheet/model/sheet_rename.dart",
         "packages/quds_office_engine/test/sheet_rename_fidelity_test.dart",
@@ -322,9 +322,10 @@
         "packages/quds_office_editor/test/sheet_rename_controller_test.dart",
         "packages/quds_office_engine/tool/fidelity/sheet_rename_oracle.py",
         "packages/quds_office_engine/tool/fidelity/test_sheet_rename_oracle.py",
-        "docs/evidence/office-fidelity-gap-closure-20261112/focused-sheet-native/acceptance-summary.json"
+        "docs/evidence/office-fidelity-gap-closure-20261112/focused-sheet-native/acceptance-summary.json",
+        "docs/evidence/office-fidelity-followup-20261112/resumed-source/focused-sheet/classified-native-comparison.json"
       ],
-      "limits": "Opaque executable/data-model reference owners, unknown reference-bearing XML, lossy modified native projections, incomplete shared formulas and array/data-table formulas reject before mutation. Unsupported external, three-dimensional, whole-row/column and qualified-name evaluation retains authored caches; it is not claimed as evaluation support. Native acceptance covers one independently authored workbook and three renamed exports against a separately authored expected package with 34 prescribed scalar changes; it does not establish arbitrary Excel formula or Microsoft Office equivalence."
+      "limits": "Opaque executable/data-model reference owners, unknown reference-bearing XML, lossy modified native projections, incomplete shared formulas and array/data-table formulas reject before mutation. Unsupported external, three-dimensional, whole-row/column and qualified-name evaluation retains authored caches; it is not claimed as evaluation support. Native acceptance covers one independently authored workbook and three renamed exports against a separately authored expected package with 34 prescribed scalar changes; it does not establish arbitrary Excel formula or Microsoft Office equivalence. An untyped manually supplied error-looking formula cache is rejected when recalculation is bypassed rather than guessing its type."
     },
     {
       "id": "FID-028",
@@ -343,11 +344,20 @@
     },
     {
       "id": "FID-029",
-      "status": "open",
+      "status": "partial",
       "area": "Non-default spreadsheet font metrics",
-      "finding": "Column conversion defaults to maximum-digit-width7 and accepts an explicit metric in helpers; normal-style font measurement is not automatic.",
+      "finding": "Native built-in Normal style/XF/font and theme links resolve the requested family. The shared editor measures maximum digit width only for known loaded faces and records the actual family; an engine resolver applies it without losing authored native widths or explicit pixel edits. Native-aware snapshots, worksheet-bound resize history and read-only cancellation preserve dimensions; stale direct-edit width provenance is invalidated. Explicit cell style zero is retained separately from absent style through sorting, history and saves after a single-attribute native probe explained the page-count mismatch. Missing/ambiguous Normal metadata or unavailable fonts remain unresolved with MDW7 fallback; omitted default/base widths retain 64px. Arbitrary-font and Microsoft Office equivalence remain unproven.",
       "evidence": [
-        "packages/quds_office_engine/lib/src/sheet/serial/sheet_package_fidelity.dart"
+        "packages/quds_office_engine/lib/src/sheet/serial/sheet_package_fidelity.dart",
+        "packages/quds_office_engine/test/sheet_normal_font_metrics_test.dart",
+        "packages/quds_office_engine/test/sheet_explicit_style_fidelity_test.dart",
+        "packages/quds_office_engine/tool/fidelity/generate_sheet_normal_font_fixture.py",
+        "packages/quds_office_editor/lib/src/editor_sheet/sheet_font_metrics.dart",
+        "packages/quds_office_editor/test/sheet_normal_font_auto_test.dart",
+        "packages/quds_office_editor/test/sheet_normal_font_metrics_test.dart",
+        "packages/quds_office_editor/test/sheet_explicit_style_history_test.dart",
+        "docs/evidence/office-fidelity-followup-20261112/style-zero/summary.json",
+        "docs/evidence/office-fidelity-followup-20261112/resumed-source/focused-followup-summary.json"
       ]
     },
     {
@@ -654,9 +664,17 @@
     {
       "id": "FID-057",
       "status": "closed",
-      "area": "Logical merged-table cell script addressing",
-      "finding": "Cell text/format/unmerge accept an explicit gridColumn, resolving horizontal spans and vertical continuations to the visible merge origin while retaining physical column compatibility. Inspect exposes both coordinate systems and merge origins; malformed chains reject before mutation. Nested tables retain their actual owner.",
+      "area": "Table and TOC script addressing",
+      "finding": "Existing depth-first modeled-body Table/TOC owner selection is retained. The bounded logical-grid addressing gap is closed: opt-in gridColumn resolves horizontal spans and vertical continuations to the master for supported rectangular tables, while legacy physical column selectors keep their meaning and ambiguous selectors reject. Merge/unmerge and whole-story edits preflight invalid topology and affected bookmark/revision owners. Native gridBefore/gridAfter counts survive serialization, cloning and history; logical-grid edits, row/column mutations and table sizing on omitted-row tables remain guarded. Corrected native evidence distinguishes a true unchanged three-cycle series from physical story replacement against independently authored expected XML. The regular edited merged-table series proves repeat-cycle stability only; arbitrary merged/omitted-row layout and Microsoft Office equivalence are not certified.",
       "evidence": [
+        "packages/quds_office_engine/tool/fidelity/word_structure_steps.dart",
+        "packages/quds_office_engine/lib/src/word/model/word_table.dart",
+        "packages/quds_office_engine/test/word_table_grid_addressing_test.dart",
+        "packages/quds_office_engine/test/word_step_atomicity_test.dart",
+        "packages/quds_office_editor/test/word_table_grid_history_test.dart",
+        "docs/evidence/office-fidelity-followup-20261112/table-grid/red-green.json",
+        "docs/evidence/office-fidelity-followup-20261112/table-grid/native-corrected/summary.json",
+        "docs/evidence/office-fidelity-followup-20261112/resumed-source/focused-followup-summary.json",
         "packages/quds_office_engine/tool/fidelity/table_selector.dart",
         "packages/quds_office_engine/test/table_grid_steps_test.dart",
         "packages/quds_office_engine/tool/fidelity/table_grid_oracle.py",
@@ -785,11 +803,19 @@
     },
     {
       "id": "FID-068",
-      "status": "open",
+      "status": "partial",
       "area": "CrispCloud style and custom tab controls",
-      "finding": "The existing host dialog preserves imported tab alignment and leaders but does not offer creation of custom alignment/leader settings. Character-style editing, custom style creation and table-style selection remain UI gaps even though engine/script APIs support those properties.",
+      "finding": "Shared Quds WordTabStopsEditor now provides custom positions, left/center/right/decimal alignment and none/dot/hyphen/underscore leaders. CrispCloud supplies localized paragraph-dialog integration and existing history; host tests use the shared controls and inspect native values in three captured uploads. Character-style editing, custom style creation and table-style selection remain open. Native bar/clear tabs, heavy/middleDot leaders and inherited style-tab semantics are outside this increment. Reusable editor/model behavior stays Quds-owned; the host consumes the guarded 366-file source pin.",
       "evidence": [
-        "CrispCloud:docs/office-host-fidelity-20261112.md"
+        "CrispCloud:docs/office-host-fidelity-20261112.md",
+        "packages/quds_office_editor/lib/src/embed/word_tab_stops_editor.dart",
+        "packages/quds_office_editor/test/word_tab_stops_editor_test.dart",
+        "CrispCloud:test/widget/office_paragraph_dialog_test.dart",
+        "CrispCloud:test/widget/office_paragraph_fidelity_test.dart",
+        "CrispCloud:test/widget/office_save_fidelity_test.dart",
+        "CrispCloud:docs/evidence/office-fidelity-followup-20261112/custom-tabs/host-focused-summary.json",
+        "CrispCloud:tool/office_fidelity_manifest.json",
+        "docs/evidence/office-fidelity-followup-20261112/resumed-source/focused-followup-summary.json"
       ]
     },
     {

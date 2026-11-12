@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "checked_utc": "2026-11-12T13:55:28.995421+00:00",
+  "source_commit": "7641d9cfa167987216134ebfc4772918cc945d97",
+  "files": 321,
+  "engine_files": 296,
+  "editor_files": 25,
+  "failures": 0,
+  "exact_path_and_hash_receipts_verified": true,
+  "all_original_and_snapshot_hashes_unchanged": true,
+  "input_manifest_sha256": "606d82cd7250f6791bc1af94acf7606d4b0dc149842bb76708ea5e2604c320f1",
+  "schema_report_sha256": "b1e68ab7177a3485a2aa7a6e699406d949276f83e33ba56dbb1c262ad68435b0",
+  "validator_source_sha256": "4d41f286855ed11a12ecdf0641773c33285847180a3e5cdbf43ce2385a099880",
+  "validator_assembly_sha256": "77b80ecfa6082d482f18c7646582645ae94d0ee70e724de5e2e3bb5bbbb9ef38",
+  "native_status": "running_separate_gate"
+}

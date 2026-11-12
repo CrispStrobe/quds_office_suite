@@ -1,0 +1,11 @@
+{
+  "Files": 1,
+  "Failures": 0,
+  "Reports": [
+    {
+      "File": "validation/sheet-expected-native/renamed-expected.xlsx",
+      "Sha256": "f6c4c756d03d5dee78cfd66853df6f6c82c5e3d8793d327070a8271455bfa4f8",
+      "Errors": []
+    }
+  ]
+}

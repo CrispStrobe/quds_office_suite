@@ -1,0 +1,156 @@
+{
+  "status": "passed",
+  "recorded_utc": "2026-11-12T13:55:42.742911+00:00",
+  "implementation_commit": "7641d9cfa167987216134ebfc4772918cc945d97",
+  "runtime": {
+    "source_flutter": "3.44.0",
+    "host_flutter": "3.47.8",
+    "native_renderer": "LibreOffice 24.2.7.2 via official LibreOfficeKit",
+    "open_xml_sdk": "3.3.0"
+  },
+  "tests": {
+    "engine_full": {
+      "success_marker": "02:30 +1384 ~1: All tests passed!",
+      "passed": 1384,
+      "skipped": 1,
+      "skip_diagnostics": [
+        "01:27 +1014: test/wave4_platform_test.dart: multi-face PDF embeds distinct font resources\n  Latin face already covers Arabic; cannot force F3\n01:27 +1014 ~1: test/report_engine_test.dart: Ready-made templates class_certificate_ar parses, validates, and exports"
+      ]
+    },
+    "mandatory_engine": {
+      "success_marker": "00:17 +921: All tests passed!",
+      "passed": 921,
+      "skipped": 0,
+      "python_controls": 344,
+      "skip_diagnostics": []
+    },
+    "editor_full": {
+      "success_marker": "00:29 +478 ~1: All tests passed!",
+      "passed": 478,
+      "skipped": 1,
+      "skip_diagnostics": [
+        "00:04 +60: /workspace/scratch/10b2b87c2738/quds_office_suite/packages/quds_office_editor/test/pdf_pixel_compare_render_test.dart: render al_tahreer pages for pixel compare\n  Skip: needs /home/mohammed/Desktop/al_tahreer_profile.pdf (local compare tool)\n00:04 +60 ~1: /workspace/scratch/10b2b87c2738/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: alignment and leader controls export native values through history and three saves"
+      ]
+    },
+    "renderer_python_controls": 41
+  },
+  "engine_coverage": {
+    "covered_lines": 44568,
+    "instrumented_lines": 54173,
+    "source_tree_sha256": "ffd7e386098f5221cdace89da2c7277136514b6fb29e6932bb461dab96d4473a",
+    "components": {
+      "word": {
+        "covered_lines": 9524,
+        "instrumented_lines": 11226,
+        "uninstrumented_files": []
+      },
+      "sheet": {
+        "covered_lines": 4006,
+        "instrumented_lines": 4830,
+        "uninstrumented_files": []
+      },
+      "slide": {
+        "covered_lines": 2040,
+        "instrumented_lines": 2515,
+        "uninstrumented_files": []
+      },
+      "pdf": {
+        "covered_lines": 11834,
+        "instrumented_lines": 15289,
+        "uninstrumented_files": [
+          "lib/src/pdf/templates/suite_index.dart"
+        ]
+      },
+      "reports": {
+        "covered_lines": 9588,
+        "instrumented_lines": 11295,
+        "uninstrumented_files": []
+      }
+    },
+    "fresh_vm_files": 116
+  },
+  "inventories": {
+    "engine": 296,
+    "editor": 25,
+    "total": 321
+  },
+  "native": {
+    "inputs": 321,
+    "schema_failures": 0,
+    "rendered_files": 314,
+    "rendered_pages": 614,
+    "native_schema_only_files": 7,
+    "cycle_groups": 95,
+    "baseline_comparisons": 32,
+    "page_order_comparisons": 10,
+    "failures": []
+  },
+  "source_fingerprint": "19ab1dc5bf3b0f3a93e2d17cac76aa9fe3cb111f6e81abe2ed4f959d3b13be88",
+  "source_and_goldens_unchanged": true,
+  "qualification": "The seven pre-existing native comment-content-control packages retain schema/native-XML evidence only; no new exception or tolerance was added. Rendered pages are compared by exact text and decoded RGB fingerprints.",
+  "sequencing_note": "The first parallel editor attempt passed all tests but its bookmark oracle ran before the engine corpus was complete. Its failed receipt and logs are retained in raw-logs.tar.gz. The serial editor rerun passed every stage; the archived runner now requires a matching passed engine receipt.",
+  "logs": {
+    "files": 44,
+    "sha256": "2808df5c5553b7da75f97cf36f6640af0e7d3d848eac0202f58776bd0552778d",
+    "members": {
+      "validation/fid029-before.log": "ef53c28343ab3173a82a1bb937cb35e5af01ef8f94296fb42a5b40e780de3c2d",
+      "validation/fid029-editor-analyze.log": "1c367d966f1a0b3b4a851d76afc53b20c4b440950b339a25ade0a634ab47985e",
+      "validation/fid029-editor-focused.log": "4ab3fd6d456756b9572663f7694433ba9728f5ab98a67caa8bc2f82faeae5c8b",
+      "validation/fid029-engine-analyze.log": "b820800e4bd4b00a47ec289c4b2a75deb7d036c524c5125fec65574134069a3b",
+      "validation/fid029-engine-focused.log": "3ee3103c9fbfbba411ed27ad5b6bcad82ac52971b8eec9ee2ae14ded957523c7",
+      "validation/fid029-provenance-analyze.log": "af6badd4c3c4cbf1b222ee5a9abfdb8efe59c43552f15a26b80f37738784bbcc",
+      "validation/fid029-provenance-before.log": "e71f5296f935cf843a88750e4d24b2f998800b597e480ba1c38b17dbd350d45e",
+      "validation/fid029-provenance-editor.log": "81e0f720b83540d4d3e733b47a4889f4f33f60db4f5dd6241accb45b6a549147",
+      "validation/fid029-provenance-engine.log": "fc8e432d19b6fd27f4568e6a793b146c4cda6662be40b58d69fc4c22720b9228",
+      "validation/fid029-style-zero-probe/analysis-editor.log": "2b3cf739df6b9cf6d631ee3da8534f0a34af10d2a591fe9fad74617ec62c92ee",
+      "validation/fid029-style-zero-probe/analysis-engine.log": "0cfbc80ce554def357b98a57139ea01cb4d8e2ae44584cc665f44973dc10598e",
+      "validation/fid029-style-zero-probe/final-render.log": "401352c558746565489a552e73db0afdd6b1a11b979fb926fd10513f748cbb42",
+      "validation/fid029-style-zero-probe/final-schema.log": "4edc9bbfcc25ee2c97ffd51949964a7a258d44e5eca6a50537efd95102502d87",
+      "validation/fid029-style-zero-probe/green-editor.log": "5fbd70dc501b7e6bb0491923ff796e91e93b2c84e23c393a4e493031b0fb46ff",
+      "validation/fid029-style-zero-probe/green-engine.log": "4abfd0b4dd45eafa75145ae2164af254462ddd33ac97c5f5b529eba69fbe4674",
+      "validation/fid029-style-zero-probe/red-tests.log": "8d123c4b5a6fe9edd771a8c5748db980a74ec4fe0dc3adb63e6904a2cce97a32",
+      "validation/fid029-style-zero-probe/render.log": "cf52f803647e192ab988afc0dd81e6a9f821617f3ed8e5f8fe7023086e8a97cd",
+      "validation/fid029-style-zero-probe/schema-env-failure.log": "fa05aa99e810cc7caf63116e277d87e85eddb8b58ea89b32f499129fb8555382",
+      "validation/fid057/analysis.log": "e89491637530549e0ef98d0622b5a69f694615307270203eeba2b37adb0be9be",
+      "validation/fid057/editor-tests.log": "cf413e938ee7eb35ffd62268f6b6e1a4575770fa732778a94e2938cd5cde78dc",
+      "validation/fid057/engine-native-corrected.log": "111db1e1a0a579e1e0a78ceb1452912739a738c5b5afea163f93163f5241cbdf",
+      "validation/fid057/engine-tests.log": "ae5baf6138de503e7856b21ccda028dc773d0d620934590b66b1124f09a0aae8",
+      "validation/fid057/renderer-controls.log": "2ade4cba390343c46d588c43f8e58105d5111278d7bf4247cc0405d4124c34c7",
+      "validation/source-editor-final/acceptance.json": "db0003105f02c22c62abeaa76b594d1ecb98fbd3470cba2ff472048915c91601",
+      "validation/source-editor-final/analyze.log": "810b371adc846641fd5c8fb3790a1358751e957bf9424352796e2fbd120125cc",
+      "validation/source-editor-final/bookmark-oracle.log": "8ce3746f7eec443d24a6d37832f74fafcf43fd76dc8e30fb43deed99a74746be",
+      "validation/source-editor-final/corpus-oracle.log": "4cd1a5c5378cd35bb39c410006e30c856ac1d1eed229cf4407a2afd9ed83193a",
+      "validation/source-editor-final/full-tests.log": "f035f2463c2781d66434b709ef22ab8aa2ea4b5b93fe1d3106f79d3308111f8f",
+      "validation/source-editor-final/inventory-clean.log": "69038ae9170c0f11a69b640e0f4bdedb1db003e561aac75c861b3b2df6bc961b",
+      "validation/source-editor-final-serial/analyze.log": "eaa55447a72b4584339876280c1ecef6e4cd03c36d2be3e6a0e3c09f9193602d",
+      "validation/source-editor-final-serial/bookmark-oracle.log": "eca31c148f4a2202ada2f313a98d0362146d26d1adbd957de3d7686717522c3a",
+      "validation/source-editor-final-serial/control-oracle.log": "c40aed56cda54101a659e8f26580797e316b45baf24aa380da96c1e5b9af8d6c",
+      "validation/source-editor-final-serial/corpus-oracle.log": "4cd1a5c5378cd35bb39c410006e30c856ac1d1eed229cf4407a2afd9ed83193a",
+      "validation/source-editor-final-serial/full-tests.log": "057f10e2003be6193b602002b9741b68e776f8ebe677a0215f028f84d4519f0d",
+      "validation/source-editor-final-serial/inventory-clean.log": "29ee08e529b814e80e6aaefc1126d4c2e1099ba57500530659f44fc5e0e02553",
+      "validation/source-editor-final-serial/inventory-verify.log": "34285831e977cf24a1e7a25efcda40e7f06a770d14f425791e6129f2182730e6",
+      "validation/source-engine-final/analyze.log": "c557a0c697cdb937104f1423d3c02d6a1062917cb0bcb2830d91db8cf6192af0",
+      "validation/source-engine-final/coverage-report.log": "6b0e3ebc3187dcb1c6a9e0979134e9afa05d275c142ab5064b2b11a7900d43fe",
+      "validation/source-engine-final/full-tests.log": "7d81e35ea52cedba2b2c99b7f37b91ebc3b09af16a7cd0b11b0d4c0ba9112be3",
+      "validation/source-engine-final/mandatory-fidelity.log": "f40a75bbf11b6a3a7229db3b94007139636c184b425c99dfdd9abb5f1b359d3e",
+      "validation/source-external-final/native-render.log": "4240cc18d474f5387d65e67e84c4e24dfc33c1dbd4202ab7f4dce2ff82f9de19",
+      "validation/source-external-final/renderer-controls.log": "bc583578e73a0f221cf7fa7b87db09302fca24c70a6dea96316ee008f02b4b36",
+      "validation/source-external-final/schema.log": "7da12d0ae96d7c2fc4cb16dfafdf63736d3d718177f0730f7f4b1f279ac05f2f",
+      "validation/source-external-final/sdk-selftest.log": "4945b06eb2eda6b4b7dd4ab50752ac76d91e73af5045d5bb39b3ecda55e25c56"
+    }
+  },
+  "artifacts": {
+    "engine-acceptance.json": "b9cbd1e27eb3ace42b6f1bee9a683db74783a88759c3bc37935821c11bb14625",
+    "editor-acceptance.json": "1f2a23d49643dea1de6c66ac65736c7d30df19589de55f1591384b5a30992a65",
+    "coverage-gaps.json": "e3b93b147ebc9ecfb391b66988ac63ac8dd25db88c117df8e50cd4d8a09d0e72",
+    "engine-inventory.json": "603283b509a6d3f325330d0ceab96d6b358842f2bada53b3ed963a8b74d101c7",
+    "editor-inventory.json": "f2f60e813c4a8776418e5920aab826df27982169f90c01b591babeed47cdae33",
+    "external-acceptance.json": "5cb757a75a3b11f7afb743197dc2b3722fc300867fc9998e3f68d881909e1720",
+    "input-manifest.json": "46cf4663621a8980fd982983094b157814e1e25fd793ea126f621789ba8afbf0",
+    "schema-report.json": "af061a21e9e08e257c44681c917ff998a7e266d5fc6763b7ed0689a70df217eb",
+    "render-report.json": "149d9fbfeec3e960724482b614a647dcf77944d2d8c98a39538c433b5d4b473a",
+    "renderer-provenance.json": "a6d6e25ee4830af8af2350948c18574dc6e72843b618e017788844893afdd5fc",
+    "schema-validator-provenance.json": "fa247388c661779b0aa881f855b4d2723ed7788364f3489cd5b9f1a7628cc43a",
+    "remote-implementation-audit.json": "a980c52e02dce98e460d13af46a5f2f66516afb6dfc409dead50263dc546636f"
+  }
+}

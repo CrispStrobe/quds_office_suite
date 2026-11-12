@@ -1,0 +1,121 @@
+{
+  "logs/source-engine/analyze.log.gz": {
+    "source_path": "/workspace/scratch/07eb2580faa9/validation/source-engine/analyze.log",
+    "uncompressed_bytes": 49,
+    "uncompressed_sha256": "c557a0c697cdb937104f1423d3c02d6a1062917cb0bcb2830d91db8cf6192af0",
+    "compressed_bytes": 69,
+    "compressed_sha256": "7ebbd8664f346a74eb817ae88e3b30f2d91550e9cc7799bdf2e5d2694c1c1c5d"
+  },
+  "logs/source-engine/coverage-report.log.gz": {
+    "source_path": "/workspace/scratch/07eb2580faa9/validation/source-engine/coverage-report.log",
+    "uncompressed_bytes": 707,
+    "uncompressed_sha256": "6b0e3ebc3187dcb1c6a9e0979134e9afa05d275c142ab5064b2b11a7900d43fe",
+    "compressed_bytes": 292,
+    "compressed_sha256": "829d39fee22b141e3ba753196aed2471f3d7fcb8c0060faade78f09ea87cb6ee"
+  },
+  "logs/source-engine/full-tests.log.gz": {
+    "source_path": "/workspace/scratch/07eb2580faa9/validation/source-engine/full-tests.log",
+    "uncompressed_bytes": 161767,
+    "uncompressed_sha256": "efde2e9c11064f601a92f734b3a281b6e8f4d2ebde281968093314dc42946002",
+    "compressed_bytes": 12850,
+    "compressed_sha256": "d1a8d615ee05bac654e7689991794406d56cab2b43d3ff5c72793c114fdf9aa3"
+  },
+  "logs/source-engine/mandatory-fidelity.log.gz": {
+    "source_path": "/workspace/scratch/07eb2580faa9/validation/source-engine/mandatory-fidelity.log",
+    "uncompressed_bytes": 129440,
+    "uncompressed_sha256": "60531c911b7ecda1f1510375fe4c6106888273a3f66dc7762b9afb31142c6397",
+    "compressed_bytes": 9241,
+    "compressed_sha256": "d5a02a5301148264792ce1f3627eb0292d5527ec8b1f089fcca0df6a0a313e01"
+  },
+  "logs/source-editor/analyze.log.gz": {
+    "source_path": "/workspace/scratch/07eb2580faa9/validation/source-editor/analyze.log",
+    "uncompressed_bytes": 97,
+    "uncompressed_sha256": "f197a0f7ed804f75277a8f39a6e09d8afbf7c4c14339d87eed19b20b2ad9916c",
+    "compressed_bytes": 72,
+    "compressed_sha256": "88966948cfc452a7f53f82279970a451cfa99fbf81c72e76adc74ac882783f96"
+  },
+  "logs/source-editor/bookmark-oracle-sequential.log.gz": {
+    "source_path": "/workspace/scratch/07eb2580faa9/validation/source-editor/bookmark-oracle-sequential.log",
+    "uncompressed_bytes": 66,
+    "uncompressed_sha256": "eca31c148f4a2202ada2f313a98d0362146d26d1adbd957de3d7686717522c3a",
+    "compressed_bytes": 81,
+    "compressed_sha256": "a7952ae57e5a16c98412451b0a14033c03c2f3718e5f4c3d52b48bb8bcdac71d"
+  },
+  "logs/source-editor/bookmark-oracle.log.gz": {
+    "source_path": "/workspace/scratch/07eb2580faa9/validation/source-editor/bookmark-oracle.log",
+    "uncompressed_bytes": 1137,
+    "uncompressed_sha256": "2c206e23395ad0788d04c3775640f59194e4b1466f31b088da83dc896ff42b16",
+    "compressed_bytes": 370,
+    "compressed_sha256": "3b70bf975c4fc0a611d820786c4930825ecf692fa1080b3bba4a981d080071ae"
+  },
+  "logs/source-editor/control-oracle-sequential.log.gz": {
+    "source_path": "/workspace/scratch/07eb2580faa9/validation/source-editor/control-oracle-sequential.log",
+    "uncompressed_bytes": 191,
+    "uncompressed_sha256": "c40aed56cda54101a659e8f26580797e316b45baf24aa380da96c1e5b9af8d6c",
+    "compressed_bytes": 136,
+    "compressed_sha256": "9ed83f8c3f685d6450f199ab7eb418402f9e6438a45a4788062a929303e93e28"
+  },
+  "logs/source-editor/corpus-oracle.log.gz": {
+    "source_path": "/workspace/scratch/07eb2580faa9/validation/source-editor/corpus-oracle.log",
+    "uncompressed_bytes": 93,
+    "uncompressed_sha256": "4cd1a5c5378cd35bb39c410006e30c856ac1d1eed229cf4407a2afd9ed83193a",
+    "compressed_bytes": 102,
+    "compressed_sha256": "8baa4eeba9ae15dad6b0c8c45dfe1809c64e0c167e54a97fc384937772a829f5"
+  },
+  "logs/source-editor/full-tests.log.gz": {
+    "source_path": "/workspace/scratch/07eb2580faa9/validation/source-editor/full-tests.log",
+    "uncompressed_bytes": 96171,
+    "uncompressed_sha256": "0d2053a9df6c3213388234d88e7da77dd0522d16515d4e06410eb005ad09fb46",
+    "compressed_bytes": 4410,
+    "compressed_sha256": "a118c6590beb0f966150d7337c050e3140075264eac6cf3d1e36294094670980"
+  },
+  "logs/source-editor/inventory-clean.log.gz": {
+    "source_path": "/workspace/scratch/07eb2580faa9/validation/source-editor/inventory-clean.log",
+    "uncompressed_bytes": 127,
+    "uncompressed_sha256": "47ddbf191e99eebd3b4b58dd8449acd4263c528115608fd6a21c35c748270d90",
+    "compressed_bytes": 120,
+    "compressed_sha256": "60c610cc2e75baf7547de15ac629f2a5619500959f45d8907452595268bd4074"
+  },
+  "logs/source-editor/inventory-verify-sequential.log.gz": {
+    "source_path": "/workspace/scratch/07eb2580faa9/validation/source-editor/inventory-verify-sequential.log",
+    "uncompressed_bytes": 155,
+    "uncompressed_sha256": "861bf2e7645cedc74b83f8d1d334410c6b787cd04412936a4015387a20ceb2de",
+    "compressed_bytes": 142,
+    "compressed_sha256": "1954b3c6539d5182e093eaaac5737dd5fd6def2eab1660a839af47d6b33d4db3"
+  },
+  "logs/source-external/renderer-controls.log.gz": {
+    "source_path": "/workspace/scratch/07eb2580faa9/validation/source-external/renderer-controls.log",
+    "uncompressed_bytes": 7054,
+    "uncompressed_sha256": "e2fc7d33cfe379e79ee23b23945fad9204826e9135ce236f4b7ab0d49d042ef9",
+    "compressed_bytes": 1481,
+    "compressed_sha256": "9d3f3801a8ac93531d9641484f1e085f876839d788ea01e860597cb354b435a3"
+  },
+  "logs/source-external/schema.log.gz": {
+    "source_path": "/workspace/scratch/07eb2580faa9/validation/source-external/schema.log",
+    "uncompressed_bytes": 46609,
+    "uncompressed_sha256": "e4c3bc7d4e3edc2aee8aa034ffb5ee08bd141e70c90ac176c4f08c2d49128262",
+    "compressed_bytes": 1654,
+    "compressed_sha256": "9de0ac0edaaa59befcd931f60aaa1250ec2484e1a1bb814a54da6287798fe5ac"
+  },
+  "logs/source-external/sdk-selftest.log.gz": {
+    "source_path": "/workspace/scratch/07eb2580faa9/validation/source-external/sdk-selftest.log",
+    "uncompressed_bytes": 110,
+    "uncompressed_sha256": "4945b06eb2eda6b4b7dd4ab50752ac76d91e73af5045d5bb39b3ecda55e25c56",
+    "compressed_bytes": 119,
+    "compressed_sha256": "bb07c9fee93773b8d45216fe4b1f795e2efdec711f715707aedc9aa775abd27a"
+  },
+  "logs/source-external/native-render.log.gz": {
+    "source_path": "/workspace/scratch/07eb2580faa9/validation/source-external/native-render.log",
+    "uncompressed_bytes": 27730,
+    "uncompressed_sha256": "4240cc18d474f5387d65e67e84c4e24dfc33c1dbd4202ab7f4dce2ff82f9de19",
+    "compressed_bytes": 1762,
+    "compressed_sha256": "59adbdf9996f8f79afa764dd43c0a1cd58990d23055d715e17fc5af611c3024f"
+  },
+  "logs/source-external/sheet-classification.log.gz": {
+    "source_path": "/workspace/scratch/07eb2580faa9/validation/source-external/sheet-classification.log",
+    "uncompressed_bytes": 86,
+    "uncompressed_sha256": "7bee36a0426ab9f70b6b510025d19b117e47c06c5480c7bad4b4a89020ac4122",
+    "compressed_bytes": 85,
+    "compressed_sha256": "b88b9a2dae70446ca7824030e6d1a7fa890fab151936040080d4c9ab970f8de0"
+  }
+}
