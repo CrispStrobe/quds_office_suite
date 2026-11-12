@@ -13,7 +13,7 @@ schema/render gates. This follow-up preserves that work on
 CrispCloud initially pins suite revision
 `84b11839126a9577b6688b6acf80edd3cc2601ee` through 237 selected files. Its
 corresponding feature branch now pins
-`c8d5ba3cfddf8c6fd3fa736deab992be1e0cc3aa` and verifies all 378 selected
+`8223a2297418ba6f478ed6ce80b9881d28680094` and verifies all 378 selected
 shared files. The app's path dependencies need this explicit synchronization;
 changes to the suite branch alone cannot update it. Later evidence-only suite
 commits do not require a new implementation pin.
@@ -176,8 +176,13 @@ portable corpus and required 104 host exports.
 
 Open XML SDK accepted all 327 suite packages and all 409 app packages with
 zero validation errors. These are separate generated package instances,
-including each repository's 305 engine outputs. Native rendering has its own
-reports and qualifications; schema acceptance alone is not a visual result.
+including each repository's 305 engine outputs. The retained complete suite
+native run rendered 320 files across 575 pages, passed all 97 three-save
+groups, 37 authored-baseline comparisons and ten page-order comparisons, with
+zero gate failures. Seven exact auxiliary-comment cases remained schema-only.
+All 320 PDFs and 575 page PNGs are retained. This native run is bound to
+renderer commit `c8d5ba3cfddf8c6fd3fa736deab992be1e0cc3aa`; subsequent
+host-only oracle additions change none of its 572 measured engine inputs.
 
 The ledger contains 96 tracked findings: 82 closed within their stated scope,
 seven partial, six open and one explicitly guarded operation. Remaining work
