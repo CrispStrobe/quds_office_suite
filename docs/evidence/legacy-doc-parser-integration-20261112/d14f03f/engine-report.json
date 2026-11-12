@@ -1,0 +1,808 @@
+{
+  "allSuitesExactlyOnce": true,
+  "batches": [
+    {
+      "batch": 1,
+      "command": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "test",
+        "--concurrency=1",
+        "--reporter",
+        "expanded",
+        "--file-reporter",
+        "json:/workspace/scratch/143959eed1a1/quds_office_suite/build/parser-integration/d14f03f/engine-batches/01.events.jsonl",
+        "test/arabic_pdf_export_test.dart",
+        "test/bidi_test.dart",
+        "test/bookmark_fidelity_test.dart",
+        "test/bounded_cfb_reader_test.dart",
+        "test/builders_io_test.dart",
+        "test/cfbf_embedded_test.dart",
+        "test/comment_thread_fidelity_test.dart",
+        "test/content_control_fidelity_test.dart"
+      ],
+      "directory": "packages/quds_office_engine",
+      "durationSeconds": 16.412,
+      "environment": {
+        "CI": "true",
+        "PUB_CACHE": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/pub-cache",
+        "TMPDIR": "/workspace/scratch/143959eed1a1/tmp/quds-engine-d14f03f/01"
+      },
+      "events": {
+        "doneSuccess": true,
+        "failed": 0,
+        "hidden": 14,
+        "passed": 69,
+        "skipped": 0
+      },
+      "eventsSha256": "66b7175036423d197bf290bc659db7bb293609dfb7141cc45d4459c21721fc14",
+      "exitCode": 0,
+      "freeBytesAfter": 1790988288,
+      "freeBytesBefore": 1787572224,
+      "logSha256": "a97008f76c2849e1e2e632be42b4cf87572e4f43327b9629f108c265275df78e",
+      "remainingScratchFiles": {},
+      "suites": [
+        "test/arabic_pdf_export_test.dart",
+        "test/bidi_test.dart",
+        "test/bookmark_fidelity_test.dart",
+        "test/bounded_cfb_reader_test.dart",
+        "test/builders_io_test.dart",
+        "test/cfbf_embedded_test.dart",
+        "test/comment_thread_fidelity_test.dart",
+        "test/content_control_fidelity_test.dart"
+      ]
+    },
+    {
+      "batch": 2,
+      "command": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "test",
+        "--concurrency=1",
+        "--reporter",
+        "expanded",
+        "--file-reporter",
+        "json:/workspace/scratch/143959eed1a1/quds_office_suite/build/parser-integration/d14f03f/engine-batches/02.events.jsonl",
+        "test/deflate_test.dart",
+        "test/drawing_line_style_test.dart",
+        "test/fidelity_waves_test.dart",
+        "test/fonts_test.dart",
+        "test/hardening_test.dart",
+        "test/header_footer_sdt_test.dart",
+        "test/inline_field_fidelity_test.dart",
+        "test/legacy_word_conversion_test.dart"
+      ],
+      "directory": "packages/quds_office_engine",
+      "durationSeconds": 4.714,
+      "environment": {
+        "CI": "true",
+        "PUB_CACHE": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/pub-cache",
+        "TMPDIR": "/workspace/scratch/143959eed1a1/tmp/quds-engine-d14f03f/02"
+      },
+      "events": {
+        "doneSuccess": true,
+        "failed": 0,
+        "hidden": 8,
+        "passed": 76,
+        "skipped": 0
+      },
+      "eventsSha256": "a880d3705c8d4e5dfabf50c694d4b46a2612376ef2f231260a22f5e3dd94cc5d",
+      "exitCode": 0,
+      "freeBytesAfter": 1782128640,
+      "freeBytesBefore": 1790984192,
+      "logSha256": "aff10c413b824406196f1e709eb90c696b783062e9dfaba11a9aa2e115a9f20a",
+      "remainingScratchFiles": {},
+      "suites": [
+        "test/deflate_test.dart",
+        "test/drawing_line_style_test.dart",
+        "test/fidelity_waves_test.dart",
+        "test/fonts_test.dart",
+        "test/hardening_test.dart",
+        "test/header_footer_sdt_test.dart",
+        "test/inline_field_fidelity_test.dart",
+        "test/legacy_word_conversion_test.dart"
+      ]
+    },
+    {
+      "batch": 3,
+      "command": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "test",
+        "--concurrency=1",
+        "--reporter",
+        "expanded",
+        "--file-reporter",
+        "json:/workspace/scratch/143959eed1a1/quds_office_suite/build/parser-integration/d14f03f/engine-batches/03.events.jsonl",
+        "test/legacy_word_document_test.dart",
+        "test/list_restart_fidelity_test.dart",
+        "test/literary_arabic_sample_test.dart",
+        "test/native_presentation_test.dart",
+        "test/native_spreadsheet_test.dart",
+        "test/note_chrome_fidelity_test.dart",
+        "test/note_edit_test.dart",
+        "test/note_marker_fidelity_test.dart"
+      ],
+      "directory": "packages/quds_office_engine",
+      "durationSeconds": 6.637,
+      "environment": {
+        "CI": "true",
+        "PUB_CACHE": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/pub-cache",
+        "TMPDIR": "/workspace/scratch/143959eed1a1/tmp/quds-engine-d14f03f/03"
+      },
+      "events": {
+        "doneSuccess": true,
+        "failed": 0,
+        "hidden": 8,
+        "passed": 62,
+        "skipped": 0
+      },
+      "eventsSha256": "bd95b8951b6f242700a92090f8264ed44284aefe0bf3a96d62168bca9fc92531",
+      "exitCode": 0,
+      "freeBytesAfter": 1767526400,
+      "freeBytesBefore": 1782128640,
+      "logSha256": "413e6003f005bac9f38deac6005bf21152333ff0bf2e9eaa30c9836c97fb1e3d",
+      "remainingScratchFiles": {},
+      "suites": [
+        "test/legacy_word_document_test.dart",
+        "test/list_restart_fidelity_test.dart",
+        "test/literary_arabic_sample_test.dart",
+        "test/native_presentation_test.dart",
+        "test/native_spreadsheet_test.dart",
+        "test/note_chrome_fidelity_test.dart",
+        "test/note_edit_test.dart",
+        "test/note_marker_fidelity_test.dart"
+      ]
+    },
+    {
+      "batch": 4,
+      "command": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "test",
+        "--concurrency=1",
+        "--reporter",
+        "expanded",
+        "--file-reporter",
+        "json:/workspace/scratch/143959eed1a1/quds_office_suite/build/parser-integration/d14f03f/engine-batches/04.events.jsonl",
+        "test/note_marker_legacy_fidelity_test.dart",
+        "test/note_marker_merge_test.dart",
+        "test/note_separator_fidelity_test.dart",
+        "test/numbering_collision_test.dart",
+        "test/office_crypto_test.dart",
+        "test/office_features_test.dart",
+        "test/office_fidelity_oracle_test.dart",
+        "test/office_isolate_open_test.dart"
+      ],
+      "directory": "packages/quds_office_engine",
+      "durationSeconds": 7.178,
+      "environment": {
+        "CI": "true",
+        "PUB_CACHE": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/pub-cache",
+        "TMPDIR": "/workspace/scratch/143959eed1a1/tmp/quds-engine-d14f03f/04"
+      },
+      "events": {
+        "doneSuccess": true,
+        "failed": 0,
+        "hidden": 10,
+        "passed": 97,
+        "skipped": 0
+      },
+      "eventsSha256": "599cf1709f83696bcc6e69276148ad1663cf5099432bd1e5e5ba0ba9a096e765",
+      "exitCode": 0,
+      "freeBytesAfter": 1758654464,
+      "freeBytesBefore": 1767522304,
+      "logSha256": "a5a9636d75a19db7ad74ae045d41e6e37b077005262249582467764caaac642d",
+      "remainingScratchFiles": {},
+      "suites": [
+        "test/note_marker_legacy_fidelity_test.dart",
+        "test/note_marker_merge_test.dart",
+        "test/note_separator_fidelity_test.dart",
+        "test/numbering_collision_test.dart",
+        "test/office_crypto_test.dart",
+        "test/office_features_test.dart",
+        "test/office_fidelity_oracle_test.dart",
+        "test/office_isolate_open_test.dart"
+      ]
+    },
+    {
+      "batch": 5,
+      "command": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "test",
+        "--concurrency=1",
+        "--reporter",
+        "expanded",
+        "--file-reporter",
+        "json:/workspace/scratch/143959eed1a1/quds_office_suite/build/parser-integration/d14f03f/engine-batches/05.events.jsonl",
+        "test/office_isolate_save_test.dart",
+        "test/office_package_parts_test.dart",
+        "test/office_pdf_export_test.dart",
+        "test/office_repair_test.dart",
+        "test/office_search_fidelity_test.dart",
+        "test/office_steps_test.dart",
+        "test/omml_test.dart",
+        "test/opaque_word_test.dart"
+      ],
+      "directory": "packages/quds_office_engine",
+      "durationSeconds": 5.696,
+      "environment": {
+        "CI": "true",
+        "PUB_CACHE": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/pub-cache",
+        "TMPDIR": "/workspace/scratch/143959eed1a1/tmp/quds-engine-d14f03f/05"
+      },
+      "events": {
+        "doneSuccess": true,
+        "failed": 0,
+        "hidden": 8,
+        "passed": 87,
+        "skipped": 0
+      },
+      "eventsSha256": "a5b5d46d1ee99fcf1201f7994a4073c921d5981de7be36aa78536088057d3150",
+      "exitCode": 0,
+      "freeBytesAfter": 1750622208,
+      "freeBytesBefore": 1758638080,
+      "logSha256": "313266dd1380312b7692ccc15bfe4bd300a68f26c17accd323e595f9498dfb34",
+      "remainingScratchFiles": {},
+      "suites": [
+        "test/office_isolate_save_test.dart",
+        "test/office_package_parts_test.dart",
+        "test/office_pdf_export_test.dart",
+        "test/office_repair_test.dart",
+        "test/office_search_fidelity_test.dart",
+        "test/office_steps_test.dart",
+        "test/omml_test.dart",
+        "test/opaque_word_test.dart"
+      ]
+    },
+    {
+      "batch": 6,
+      "command": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "test",
+        "--concurrency=1",
+        "--reporter",
+        "expanded",
+        "--file-reporter",
+        "json:/workspace/scratch/143959eed1a1/quds_office_suite/build/parser-integration/d14f03f/engine-batches/06.events.jsonl",
+        "test/opc_archive_test.dart",
+        "test/opc_word_kind_test.dart",
+        "test/pdf_file_test.dart",
+        "test/pdf_templates_test.dart",
+        "test/pdf_to_office_test.dart",
+        "test/pdf_toolbox_test.dart",
+        "test/pdf_widgets_catalog_test.dart",
+        "test/pdf_widgets_test.dart"
+      ],
+      "directory": "packages/quds_office_engine",
+      "durationSeconds": 6.588,
+      "environment": {
+        "CI": "true",
+        "PUB_CACHE": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/pub-cache",
+        "TMPDIR": "/workspace/scratch/143959eed1a1/tmp/quds-engine-d14f03f/06"
+      },
+      "events": {
+        "doneSuccess": true,
+        "failed": 0,
+        "hidden": 8,
+        "passed": 89,
+        "skipped": 0
+      },
+      "eventsSha256": "0b480812b41f00c38e54774eb961dd703c7b27ef63c1273308a1f89d22f9b124",
+      "exitCode": 0,
+      "freeBytesAfter": 1729970176,
+      "freeBytesBefore": 1750618112,
+      "logSha256": "88194e32cbd8736c48b80806dbd353c3420737f6b43fa52bfd64fbe065fe16c1",
+      "remainingScratchFiles": {},
+      "suites": [
+        "test/opc_archive_test.dart",
+        "test/opc_word_kind_test.dart",
+        "test/pdf_file_test.dart",
+        "test/pdf_templates_test.dart",
+        "test/pdf_to_office_test.dart",
+        "test/pdf_toolbox_test.dart",
+        "test/pdf_widgets_catalog_test.dart",
+        "test/pdf_widgets_test.dart"
+      ]
+    },
+    {
+      "batch": 7,
+      "command": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "test",
+        "--concurrency=1",
+        "--reporter",
+        "expanded",
+        "--file-reporter",
+        "json:/workspace/scratch/143959eed1a1/quds_office_suite/build/parser-integration/d14f03f/engine-batches/07.events.jsonl",
+        "test/phase_features_test.dart",
+        "test/report_engine_test.dart",
+        "test/rich_note_test.dart",
+        "test/scripted_transitions_test.dart",
+        "test/scripted_workflows_test.dart",
+        "test/sheet_explicit_style_fidelity_test.dart",
+        "test/sheet_formula_cache_fidelity_test.dart",
+        "test/sheet_formula_test.dart"
+      ],
+      "directory": "packages/quds_office_engine",
+      "durationSeconds": 79.834,
+      "environment": {
+        "CI": "true",
+        "PUB_CACHE": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/pub-cache",
+        "TMPDIR": "/workspace/scratch/143959eed1a1/tmp/quds-engine-d14f03f/07"
+      },
+      "events": {
+        "doneSuccess": true,
+        "failed": 0,
+        "hidden": 8,
+        "passed": 239,
+        "skipped": 0
+      },
+      "eventsSha256": "915502d69aad0f8abb42672ff4586497842a7e33aa46d678b36c9ccfea625f94",
+      "exitCode": 0,
+      "freeBytesAfter": 1789108224,
+      "freeBytesBefore": 1729970176,
+      "logSha256": "4b80b355c207228e130a614f890bf0af6a9e0b8e5a09ae874d52b308342fc892",
+      "remainingScratchFiles": {},
+      "suites": [
+        "test/phase_features_test.dart",
+        "test/report_engine_test.dart",
+        "test/rich_note_test.dart",
+        "test/scripted_transitions_test.dart",
+        "test/scripted_workflows_test.dart",
+        "test/sheet_explicit_style_fidelity_test.dart",
+        "test/sheet_formula_cache_fidelity_test.dart",
+        "test/sheet_formula_test.dart"
+      ]
+    },
+    {
+      "batch": 8,
+      "command": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "test",
+        "--concurrency=1",
+        "--reporter",
+        "expanded",
+        "--file-reporter",
+        "json:/workspace/scratch/143959eed1a1/quds_office_suite/build/parser-integration/d14f03f/engine-batches/08.events.jsonl",
+        "test/sheet_import_fidelity_test.dart",
+        "test/sheet_nav_test.dart",
+        "test/sheet_normal_font_metrics_test.dart",
+        "test/sheet_qualified_name_error_test.dart",
+        "test/sheet_qualified_names_test.dart",
+        "test/sheet_rename_adversarial_test.dart",
+        "test/sheet_rename_fidelity_test.dart",
+        "test/sheet_schema_fidelity_test.dart"
+      ],
+      "directory": "packages/quds_office_engine",
+      "durationSeconds": 7.374,
+      "environment": {
+        "CI": "true",
+        "PUB_CACHE": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/pub-cache",
+        "TMPDIR": "/workspace/scratch/143959eed1a1/tmp/quds-engine-d14f03f/08"
+      },
+      "events": {
+        "doneSuccess": true,
+        "failed": 0,
+        "hidden": 8,
+        "passed": 206,
+        "skipped": 0
+      },
+      "eventsSha256": "b34ba2aeba91fd92655058bb7e6ac240163db90a684ab0b2c23ac89d11a8f0fb",
+      "exitCode": 0,
+      "freeBytesAfter": 1789329408,
+      "freeBytesBefore": 1789104128,
+      "logSha256": "9dac4bbc02642aaf1fd177b7a8ae082b113fcc6b3cb0250f9d17c61909c935ac",
+      "remainingScratchFiles": {},
+      "suites": [
+        "test/sheet_import_fidelity_test.dart",
+        "test/sheet_nav_test.dart",
+        "test/sheet_normal_font_metrics_test.dart",
+        "test/sheet_qualified_name_error_test.dart",
+        "test/sheet_qualified_names_test.dart",
+        "test/sheet_rename_adversarial_test.dart",
+        "test/sheet_rename_fidelity_test.dart",
+        "test/sheet_schema_fidelity_test.dart"
+      ]
+    },
+    {
+      "batch": 9,
+      "command": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "test",
+        "--concurrency=1",
+        "--reporter",
+        "expanded",
+        "--file-reporter",
+        "json:/workspace/scratch/143959eed1a1/quds_office_suite/build/parser-integration/d14f03f/engine-batches/09.events.jsonl",
+        "test/slide_arrange_fidelity_test.dart",
+        "test/slide_import_fidelity_test.dart",
+        "test/slide_section_fidelity_test.dart",
+        "test/slide_test.dart",
+        "test/slide_text_fidelity_test.dart",
+        "test/story_media_fidelity_test.dart",
+        "test/style_cascade_test.dart",
+        "test/styleless_import_fidelity_test.dart"
+      ],
+      "directory": "packages/quds_office_engine",
+      "durationSeconds": 7.775,
+      "environment": {
+        "CI": "true",
+        "PUB_CACHE": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/pub-cache",
+        "TMPDIR": "/workspace/scratch/143959eed1a1/tmp/quds-engine-d14f03f/09"
+      },
+      "events": {
+        "doneSuccess": true,
+        "failed": 0,
+        "hidden": 8,
+        "passed": 98,
+        "skipped": 0
+      },
+      "eventsSha256": "ad1cccd0a409c32afdcf523171d56a1d5a23c09e59e60752690bd63e63edf61c",
+      "exitCode": 0,
+      "freeBytesAfter": 1789108224,
+      "freeBytesBefore": 1789329408,
+      "logSha256": "0d100634956cccaa8adbe0935c021cb0ea6ab8cba9c106f7f4f44ef1b80936eb",
+      "remainingScratchFiles": {},
+      "suites": [
+        "test/slide_arrange_fidelity_test.dart",
+        "test/slide_import_fidelity_test.dart",
+        "test/slide_section_fidelity_test.dart",
+        "test/slide_test.dart",
+        "test/slide_text_fidelity_test.dart",
+        "test/story_media_fidelity_test.dart",
+        "test/style_cascade_test.dart",
+        "test/styleless_import_fidelity_test.dart"
+      ]
+    },
+    {
+      "batch": 10,
+      "command": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "test",
+        "--concurrency=1",
+        "--reporter",
+        "expanded",
+        "--file-reporter",
+        "json:/workspace/scratch/143959eed1a1/quds_office_suite/build/parser-integration/d14f03f/engine-batches/10.events.jsonl",
+        "test/table_border_fidelity_test.dart",
+        "test/table_grid_steps_test.dart",
+        "test/toolkit_builders_test.dart",
+        "test/variable_line_breaker_test.dart",
+        "test/visual_test.dart",
+        "test/wave4_platform_test.dart",
+        "test/wml_run_edit_test.dart",
+        "test/word_altchunk_fidelity_test.dart"
+      ],
+      "directory": "packages/quds_office_engine",
+      "durationSeconds": 4.718,
+      "environment": {
+        "CI": "true",
+        "PUB_CACHE": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/pub-cache",
+        "TMPDIR": "/workspace/scratch/143959eed1a1/tmp/quds-engine-d14f03f/10"
+      },
+      "events": {
+        "doneSuccess": true,
+        "failed": 0,
+        "hidden": 8,
+        "passed": 87,
+        "skipped": 1
+      },
+      "eventsSha256": "46b1ce245c1e5e6a7d36b5c87466df6bc4583f9d93b9ec5151df5660b4188cef",
+      "exitCode": 0,
+      "freeBytesAfter": 1789030400,
+      "freeBytesBefore": 1789108224,
+      "logSha256": "dbdf98a653b2c1605dc9b86e6cc5b0449e8cb2ca3155e0b1a426189918969a14",
+      "remainingScratchFiles": {},
+      "suites": [
+        "test/table_border_fidelity_test.dart",
+        "test/table_grid_steps_test.dart",
+        "test/toolkit_builders_test.dart",
+        "test/variable_line_breaker_test.dart",
+        "test/visual_test.dart",
+        "test/wave4_platform_test.dart",
+        "test/wml_run_edit_test.dart",
+        "test/word_altchunk_fidelity_test.dart"
+      ]
+    },
+    {
+      "batch": 11,
+      "command": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "test",
+        "--concurrency=1",
+        "--reporter",
+        "expanded",
+        "--file-reporter",
+        "json:/workspace/scratch/143959eed1a1/quds_office_suite/build/parser-integration/d14f03f/engine-batches/11.events.jsonl",
+        "test/word_auxiliary_content_control_test.dart",
+        "test/word_bibliography_fidelity_test.dart",
+        "test/word_bookmark_copy_test.dart",
+        "test/word_bookmark_fidelity_test.dart",
+        "test/word_comment_test.dart",
+        "test/word_compatibility_fidelity_test.dart",
+        "test/word_contained_text_wrap_test.dart",
+        "test/word_content_control_fidelity_test.dart"
+      ],
+      "directory": "packages/quds_office_engine",
+      "durationSeconds": 7.084,
+      "environment": {
+        "CI": "true",
+        "PUB_CACHE": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/pub-cache",
+        "TMPDIR": "/workspace/scratch/143959eed1a1/tmp/quds-engine-d14f03f/11"
+      },
+      "events": {
+        "doneSuccess": true,
+        "failed": 0,
+        "hidden": 8,
+        "passed": 138,
+        "skipped": 0
+      },
+      "eventsSha256": "05eead0fd11750bee235b637fa44a9bba41c6ebec603ec382da133221339c33e",
+      "exitCode": 0,
+      "freeBytesAfter": 1788936192,
+      "freeBytesBefore": 1789026304,
+      "logSha256": "f83b7fdd9e366f2fca137d530839c52cb79ba4cf04648dcac2b31ae5f05313c9",
+      "remainingScratchFiles": {},
+      "suites": [
+        "test/word_auxiliary_content_control_test.dart",
+        "test/word_bibliography_fidelity_test.dart",
+        "test/word_bookmark_copy_test.dart",
+        "test/word_bookmark_fidelity_test.dart",
+        "test/word_comment_test.dart",
+        "test/word_compatibility_fidelity_test.dart",
+        "test/word_contained_text_wrap_test.dart",
+        "test/word_content_control_fidelity_test.dart"
+      ]
+    },
+    {
+      "batch": 12,
+      "command": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "test",
+        "--concurrency=1",
+        "--reporter",
+        "expanded",
+        "--file-reporter",
+        "json:/workspace/scratch/143959eed1a1/quds_office_suite/build/parser-integration/d14f03f/engine-batches/12.events.jsonl",
+        "test/word_edit_integrity_test.dart",
+        "test/word_fidelity_test.dart",
+        "test/word_find_replace_atomic_test.dart",
+        "test/word_footnote_reference_test.dart",
+        "test/word_frame_wrap_test.dart",
+        "test/word_layout_test.dart",
+        "test/word_native_presentation_test.dart",
+        "test/word_note_bookmark_edit_test.dart"
+      ],
+      "directory": "packages/quds_office_engine",
+      "durationSeconds": 5.939,
+      "environment": {
+        "CI": "true",
+        "PUB_CACHE": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/pub-cache",
+        "TMPDIR": "/workspace/scratch/143959eed1a1/tmp/quds-engine-d14f03f/12"
+      },
+      "events": {
+        "doneSuccess": true,
+        "failed": 0,
+        "hidden": 8,
+        "passed": 115,
+        "skipped": 0
+      },
+      "eventsSha256": "517d25c7329d1bd36261d4d1822ee3369c92e868731ef93e8918e0ac09eecde3",
+      "exitCode": 0,
+      "freeBytesAfter": 1789026304,
+      "freeBytesBefore": 1788936192,
+      "logSha256": "04a0f2d5d27c91ab69d8aa8d0b1a21eb5238474d9b0c4b2ce80580922c3e0100",
+      "remainingScratchFiles": {},
+      "suites": [
+        "test/word_edit_integrity_test.dart",
+        "test/word_fidelity_test.dart",
+        "test/word_find_replace_atomic_test.dart",
+        "test/word_footnote_reference_test.dart",
+        "test/word_frame_wrap_test.dart",
+        "test/word_layout_test.dart",
+        "test/word_native_presentation_test.dart",
+        "test/word_note_bookmark_edit_test.dart"
+      ]
+    },
+    {
+      "batch": 13,
+      "command": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "test",
+        "--concurrency=1",
+        "--reporter",
+        "expanded",
+        "--file-reporter",
+        "json:/workspace/scratch/143959eed1a1/quds_office_suite/build/parser-integration/d14f03f/engine-batches/13.events.jsonl",
+        "test/word_note_script_break_test.dart",
+        "test/word_package_preservation_test.dart",
+        "test/word_part_routing_test.dart",
+        "test/word_pdf_test.dart",
+        "test/word_picture_distance_fidelity_test.dart",
+        "test/word_referenced_styles_and_breaks_test.dart",
+        "test/word_revision_story_test.dart",
+        "test/word_revision_validation_test.dart"
+      ],
+      "directory": "packages/quds_office_engine",
+      "durationSeconds": 5.322,
+      "environment": {
+        "CI": "true",
+        "PUB_CACHE": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/pub-cache",
+        "TMPDIR": "/workspace/scratch/143959eed1a1/tmp/quds-engine-d14f03f/13"
+      },
+      "events": {
+        "doneSuccess": true,
+        "failed": 0,
+        "hidden": 8,
+        "passed": 67,
+        "skipped": 0
+      },
+      "eventsSha256": "a6c7886dd293f118b5c0830a8a934a37f08685c4ee6f67fbb69189736d648997",
+      "exitCode": 0,
+      "freeBytesAfter": 1788833792,
+      "freeBytesBefore": 1789022208,
+      "logSha256": "3e56e2c5aa935b4bdf4d2bc6194afde0ff03202c8f9be7c259f4e7b6c61d8176",
+      "remainingScratchFiles": {},
+      "suites": [
+        "test/word_note_script_break_test.dart",
+        "test/word_package_preservation_test.dart",
+        "test/word_part_routing_test.dart",
+        "test/word_pdf_test.dart",
+        "test/word_picture_distance_fidelity_test.dart",
+        "test/word_referenced_styles_and_breaks_test.dart",
+        "test/word_revision_story_test.dart",
+        "test/word_revision_validation_test.dart"
+      ]
+    },
+    {
+      "batch": 14,
+      "command": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "test",
+        "--concurrency=1",
+        "--reporter",
+        "expanded",
+        "--file-reporter",
+        "json:/workspace/scratch/143959eed1a1/quds_office_suite/build/parser-integration/d14f03f/engine-batches/14.events.jsonl",
+        "test/word_section_clone_fidelity_test.dart",
+        "test/word_step_atomicity_test.dart",
+        "test/word_structure_integrity_test.dart",
+        "test/word_structure_steps_test.dart",
+        "test/word_style_introduction_test.dart",
+        "test/word_styles_layout_test.dart",
+        "test/word_table_direction_test.dart",
+        "test/word_table_grid_addressing_test.dart"
+      ],
+      "directory": "packages/quds_office_engine",
+      "durationSeconds": 6.335,
+      "environment": {
+        "CI": "true",
+        "PUB_CACHE": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/pub-cache",
+        "TMPDIR": "/workspace/scratch/143959eed1a1/tmp/quds-engine-d14f03f/14"
+      },
+      "events": {
+        "doneSuccess": true,
+        "failed": 0,
+        "hidden": 8,
+        "passed": 118,
+        "skipped": 0
+      },
+      "eventsSha256": "57d822a2394ef9474da41f539c0a0f161a3f4c80df903c103d2dfaefde02fb9d",
+      "exitCode": 0,
+      "freeBytesAfter": 1788715008,
+      "freeBytesBefore": 1788833792,
+      "logSha256": "406b9ea915b0670462c55750c28adb10d33714ea6c0ec46923775e3125fe3dd4",
+      "remainingScratchFiles": {},
+      "suites": [
+        "test/word_section_clone_fidelity_test.dart",
+        "test/word_step_atomicity_test.dart",
+        "test/word_structure_integrity_test.dart",
+        "test/word_structure_steps_test.dart",
+        "test/word_style_introduction_test.dart",
+        "test/word_styles_layout_test.dart",
+        "test/word_table_direction_test.dart",
+        "test/word_table_grid_addressing_test.dart"
+      ]
+    },
+    {
+      "batch": 15,
+      "command": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "test",
+        "--concurrency=1",
+        "--reporter",
+        "expanded",
+        "--file-reporter",
+        "json:/workspace/scratch/143959eed1a1/quds_office_suite/build/parser-integration/d14f03f/engine-batches/15.events.jsonl",
+        "test/word_table_nested_layout_test.dart",
+        "test/word_table_picture_pagination_test.dart",
+        "test/word_table_tall_frame_layout_test.dart",
+        "test/word_table_tall_toc_layout_test.dart",
+        "test/word_table_test.dart",
+        "test/word_toc_test.dart",
+        "test/word_tree_test.dart",
+        "test/xml_namespace_capture_test.dart"
+      ],
+      "directory": "packages/quds_office_engine",
+      "durationSeconds": 5.306,
+      "environment": {
+        "CI": "true",
+        "PUB_CACHE": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/pub-cache",
+        "TMPDIR": "/workspace/scratch/143959eed1a1/tmp/quds-engine-d14f03f/15"
+      },
+      "events": {
+        "doneSuccess": true,
+        "failed": 0,
+        "hidden": 8,
+        "passed": 66,
+        "skipped": 0
+      },
+      "eventsSha256": "09ffce3525b5c26edd05b4cadb6494744d205c227abd96f3c6681d5afa2947d1",
+      "exitCode": 0,
+      "freeBytesAfter": 1788858368,
+      "freeBytesBefore": 1788710912,
+      "logSha256": "e59e00b5223fe37a208c73f533ce8d6dd557f0d9a16b439d02bfb9ebf3afeea8",
+      "remainingScratchFiles": {},
+      "suites": [
+        "test/word_table_nested_layout_test.dart",
+        "test/word_table_picture_pagination_test.dart",
+        "test/word_table_tall_frame_layout_test.dart",
+        "test/word_table_tall_toc_layout_test.dart",
+        "test/word_table_test.dart",
+        "test/word_toc_test.dart",
+        "test/word_tree_test.dart",
+        "test/xml_namespace_capture_test.dart"
+      ]
+    },
+    {
+      "batch": 16,
+      "command": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "test",
+        "--concurrency=1",
+        "--reporter",
+        "expanded",
+        "--file-reporter",
+        "json:/workspace/scratch/143959eed1a1/quds_office_suite/build/parser-integration/d14f03f/engine-batches/16.events.jsonl",
+        "test/xml_reader_test.dart",
+        "test/xml_whitespace_fidelity_test.dart",
+        "test/zip_bounded_read_test.dart"
+      ],
+      "directory": "packages/quds_office_engine",
+      "durationSeconds": 2.263,
+      "environment": {
+        "CI": "true",
+        "PUB_CACHE": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/pub-cache",
+        "TMPDIR": "/workspace/scratch/143959eed1a1/tmp/quds-engine-d14f03f/16"
+      },
+      "events": {
+        "doneSuccess": true,
+        "failed": 0,
+        "hidden": 3,
+        "passed": 13,
+        "skipped": 0
+      },
+      "eventsSha256": "f19319652cbed57976537c70c923a4f4e1b6098767de633486747205314f2ae6",
+      "exitCode": 0,
+      "freeBytesAfter": 1788870656,
+      "freeBytesBefore": 1788858368,
+      "logSha256": "736957220e0b5e642b28459703c1a0567bb94cd39b1dd6413b0768dc5178f7dc",
+      "remainingScratchFiles": {},
+      "suites": [
+        "test/xml_reader_test.dart",
+        "test/xml_whitespace_fidelity_test.dart",
+        "test/zip_bounded_read_test.dart"
+      ]
+    }
+  ],
+  "durationSeconds": 179.424,
+  "executedSuiteCount": 123,
+  "parserCommit": "d14f03f198a9735c660d0f8ae18ba6fc316fcf25",
+  "qudsHead": "2a35557fd436b9bb2f8ae15225771c249e1e51de",
+  "sourceUnchanged": true,
+  "success": true,
+  "suiteCount": 123,
+  "testCounts": {
+    "failed": 0,
+    "hidden": 131,
+    "passed": 1627,
+    "skipped": 1
+  }
+}

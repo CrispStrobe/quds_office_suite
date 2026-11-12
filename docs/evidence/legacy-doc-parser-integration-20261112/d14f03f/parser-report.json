@@ -1,0 +1,456 @@
+{
+  "allSuitesExactlyOnce": true,
+  "batches": [
+    {
+      "batch": 1,
+      "command": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "test",
+        "--concurrency=1",
+        "--reporter",
+        "expanded",
+        "--file-reporter",
+        "json:/workspace/scratch/143959eed1a1/quds_office_suite/build/parser-integration/d14f03f/parser-batches/01.events.jsonl",
+        "test/compound_preservation_test.dart",
+        "test/extended_conversion_test.dart",
+        "test/legacy_word_blip_store_count_test.dart",
+        "test/legacy_word_comment_threads_test.dart",
+        "test/legacy_word_compatibility_test.dart",
+        "test/legacy_word_conditional_table_test.dart",
+        "test/legacy_word_decorations_test.dart",
+        "test/legacy_word_display_field_revisions_test.dart"
+      ],
+      "directory": "packages/legacy_doc_parser",
+      "durationSeconds": 5.763,
+      "environment": {
+        "CI": "true",
+        "PUB_CACHE": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/pub-cache",
+        "TMPDIR": "/workspace/scratch/143959eed1a1/tmp/quds-parser-d14f03f/01"
+      },
+      "events": {
+        "doneSuccess": true,
+        "failed": 0,
+        "hidden": 8,
+        "passed": 84,
+        "skipped": 0
+      },
+      "eventsSha256": "c6d3993ae67109e9264af87c52e048c37e5acd58b612e0a3cf292b48a55b976f",
+      "exitCode": 0,
+      "freeBytesAfter": 1787711488,
+      "freeBytesBefore": 1787772928,
+      "logSha256": "a6e3ee0f958e9370d8dc9afef88f3b8c77e99fd70e581a56413cfca8ed026dce",
+      "remainingScratchFiles": {},
+      "suites": [
+        "test/compound_preservation_test.dart",
+        "test/extended_conversion_test.dart",
+        "test/legacy_word_blip_store_count_test.dart",
+        "test/legacy_word_comment_threads_test.dart",
+        "test/legacy_word_compatibility_test.dart",
+        "test/legacy_word_conditional_table_test.dart",
+        "test/legacy_word_decorations_test.dart",
+        "test/legacy_word_display_field_revisions_test.dart"
+      ]
+    },
+    {
+      "batch": 2,
+      "command": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "test",
+        "--concurrency=1",
+        "--reporter",
+        "expanded",
+        "--file-reporter",
+        "json:/workspace/scratch/143959eed1a1/quds_office_suite/build/parser-integration/d14f03f/parser-batches/02.events.jsonl",
+        "test/legacy_word_fkp_recovery_test.dart",
+        "test/legacy_word_header_shape_alias_test.dart",
+        "test/legacy_word_header_textbox_alias_test.dart",
+        "test/legacy_word_html_media_test.dart",
+        "test/legacy_word_image_appearance_test.dart",
+        "test/legacy_word_ink_evidence_test.dart",
+        "test/legacy_word_kerning_test.dart",
+        "test/legacy_word_layout_test.dart"
+      ],
+      "directory": "packages/legacy_doc_parser",
+      "durationSeconds": 9.345,
+      "environment": {
+        "CI": "true",
+        "PUB_CACHE": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/pub-cache",
+        "TMPDIR": "/workspace/scratch/143959eed1a1/tmp/quds-parser-d14f03f/02"
+      },
+      "events": {
+        "doneSuccess": true,
+        "failed": 0,
+        "hidden": 8,
+        "passed": 148,
+        "skipped": 0
+      },
+      "eventsSha256": "4cdfd2014cec63853227038766413cfe957d66cc2d2996f5343756c62a110c04",
+      "exitCode": 0,
+      "freeBytesAfter": 1787572224,
+      "freeBytesBefore": 1787707392,
+      "logSha256": "81e93c08966ee3cc21132b01ccd7ab1814d68c93faefb93622b12077b2891681",
+      "remainingScratchFiles": {},
+      "suites": [
+        "test/legacy_word_fkp_recovery_test.dart",
+        "test/legacy_word_header_shape_alias_test.dart",
+        "test/legacy_word_header_textbox_alias_test.dart",
+        "test/legacy_word_html_media_test.dart",
+        "test/legacy_word_image_appearance_test.dart",
+        "test/legacy_word_ink_evidence_test.dart",
+        "test/legacy_word_kerning_test.dart",
+        "test/legacy_word_layout_test.dart"
+      ]
+    },
+    {
+      "batch": 3,
+      "command": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "test",
+        "--concurrency=1",
+        "--reporter",
+        "expanded",
+        "--file-reporter",
+        "json:/workspace/scratch/143959eed1a1/quds_office_suite/build/parser-integration/d14f03f/parser-batches/03.events.jsonl",
+        "test/legacy_word_list_continuation_test.dart",
+        "test/legacy_word_list_precedence_test.dart",
+        "test/legacy_word_list_sequences_test.dart",
+        "test/legacy_word_lists_test.dart",
+        "test/legacy_word_media_revisions_test.dart",
+        "test/legacy_word_media_test.dart",
+        "test/legacy_word_metafile_arcs_test.dart",
+        "test/legacy_word_metafile_render_test.dart"
+      ],
+      "directory": "packages/legacy_doc_parser",
+      "durationSeconds": 5.527,
+      "environment": {
+        "CI": "true",
+        "PUB_CACHE": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/pub-cache",
+        "TMPDIR": "/workspace/scratch/143959eed1a1/tmp/quds-parser-d14f03f/03"
+      },
+      "events": {
+        "doneSuccess": true,
+        "failed": 0,
+        "hidden": 8,
+        "passed": 117,
+        "skipped": 0
+      },
+      "eventsSha256": "2c6dd7abf6039c81341e5b65d7f6784b90fb84c954a36b3876431b7baedde7e3",
+      "exitCode": 0,
+      "freeBytesAfter": 1787052032,
+      "freeBytesBefore": 1787572224,
+      "logSha256": "2fe10ef2d90342acfb4809dc9a11c22ce207b1dd91a7ade7304c5c6322a3b14f",
+      "remainingScratchFiles": {},
+      "suites": [
+        "test/legacy_word_list_continuation_test.dart",
+        "test/legacy_word_list_precedence_test.dart",
+        "test/legacy_word_list_sequences_test.dart",
+        "test/legacy_word_lists_test.dart",
+        "test/legacy_word_media_revisions_test.dart",
+        "test/legacy_word_media_test.dart",
+        "test/legacy_word_metafile_arcs_test.dart",
+        "test/legacy_word_metafile_render_test.dart"
+      ]
+    },
+    {
+      "batch": 4,
+      "command": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "test",
+        "--concurrency=1",
+        "--reporter",
+        "expanded",
+        "--file-reporter",
+        "json:/workspace/scratch/143959eed1a1/quds_office_suite/build/parser-integration/d14f03f/parser-batches/04.events.jsonl",
+        "test/legacy_word_metafile_test.dart",
+        "test/legacy_word_native_recovery_test.dart",
+        "test/legacy_word_native_textbox_test.dart",
+        "test/legacy_word_nested_tables_test.dart",
+        "test/legacy_word_note_boundary_test.dart",
+        "test/legacy_word_note_formats_test.dart",
+        "test/legacy_word_note_layout_test.dart",
+        "test/legacy_word_numbering_revisions_test.dart"
+      ],
+      "directory": "packages/legacy_doc_parser",
+      "durationSeconds": 5.379,
+      "environment": {
+        "CI": "true",
+        "PUB_CACHE": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/pub-cache",
+        "TMPDIR": "/workspace/scratch/143959eed1a1/tmp/quds-parser-d14f03f/04"
+      },
+      "events": {
+        "doneSuccess": true,
+        "failed": 0,
+        "hidden": 8,
+        "passed": 92,
+        "skipped": 0
+      },
+      "eventsSha256": "158fb7289aae9e0d131cc93b8b81be8bb48d9e5210ca6fe02a55e9cfd3c1fe50",
+      "exitCode": 0,
+      "freeBytesAfter": 1787047936,
+      "freeBytesBefore": 1787047936,
+      "logSha256": "c6b981cc5ee087dea3a633ed9938efeee97a47daf2fdc011e6363d3d5ca98954",
+      "remainingScratchFiles": {},
+      "suites": [
+        "test/legacy_word_metafile_test.dart",
+        "test/legacy_word_native_recovery_test.dart",
+        "test/legacy_word_native_textbox_test.dart",
+        "test/legacy_word_nested_tables_test.dart",
+        "test/legacy_word_note_boundary_test.dart",
+        "test/legacy_word_note_formats_test.dart",
+        "test/legacy_word_note_layout_test.dart",
+        "test/legacy_word_numbering_revisions_test.dart"
+      ]
+    },
+    {
+      "batch": 5,
+      "command": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "test",
+        "--concurrency=1",
+        "--reporter",
+        "expanded",
+        "--file-reporter",
+        "json:/workspace/scratch/143959eed1a1/quds_office_suite/build/parser-integration/d14f03f/parser-batches/05.events.jsonl",
+        "test/legacy_word_officeart_position_test.dart",
+        "test/legacy_word_officeart_test.dart",
+        "test/legacy_word_packed_vertices_test.dart",
+        "test/legacy_word_preview_parity_test.dart",
+        "test/legacy_word_revisions_test.dart",
+        "test/legacy_word_row_borders_test.dart",
+        "test/legacy_word_section_revisions_test.dart",
+        "test/legacy_word_shape_context_test.dart"
+      ],
+      "directory": "packages/legacy_doc_parser",
+      "durationSeconds": 4.885,
+      "environment": {
+        "CI": "true",
+        "PUB_CACHE": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/pub-cache",
+        "TMPDIR": "/workspace/scratch/143959eed1a1/tmp/quds-parser-d14f03f/05"
+      },
+      "events": {
+        "doneSuccess": true,
+        "failed": 0,
+        "hidden": 8,
+        "passed": 77,
+        "skipped": 0
+      },
+      "eventsSha256": "fa1e2f3c44de3fd3c3c48a2e934ceefeb04e41a21daf920126762d51d448e053",
+      "exitCode": 0,
+      "freeBytesAfter": 1755643904,
+      "freeBytesBefore": 1787047936,
+      "logSha256": "43754fbf455bab8ff31c0a5327d2c80a2e450b13b8c00d09fd3be8c0f1ed2a40",
+      "remainingScratchFiles": {},
+      "suites": [
+        "test/legacy_word_officeart_position_test.dart",
+        "test/legacy_word_officeart_test.dart",
+        "test/legacy_word_packed_vertices_test.dart",
+        "test/legacy_word_preview_parity_test.dart",
+        "test/legacy_word_revisions_test.dart",
+        "test/legacy_word_row_borders_test.dart",
+        "test/legacy_word_section_revisions_test.dart",
+        "test/legacy_word_shape_context_test.dart"
+      ]
+    },
+    {
+      "batch": 6,
+      "command": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "test",
+        "--concurrency=1",
+        "--reporter",
+        "expanded",
+        "--file-reporter",
+        "json:/workspace/scratch/143959eed1a1/quds_office_suite/build/parser-integration/d14f03f/parser-batches/06.events.jsonl",
+        "test/legacy_word_shape_conversion_test.dart",
+        "test/legacy_word_sprm_regression_test.dart",
+        "test/legacy_word_stories_fields_test.dart",
+        "test/legacy_word_structured_bounds_test.dart",
+        "test/legacy_word_structured_conversion_test.dart",
+        "test/legacy_word_structured_document_test.dart",
+        "test/legacy_word_structured_render_test.dart",
+        "test/legacy_word_table_format_test.dart"
+      ],
+      "directory": "packages/legacy_doc_parser",
+      "durationSeconds": 5.218,
+      "environment": {
+        "CI": "true",
+        "PUB_CACHE": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/pub-cache",
+        "TMPDIR": "/workspace/scratch/143959eed1a1/tmp/quds-parser-d14f03f/06"
+      },
+      "events": {
+        "doneSuccess": true,
+        "failed": 0,
+        "hidden": 8,
+        "passed": 76,
+        "skipped": 0
+      },
+      "eventsSha256": "08c0deb2527bf29ad201f730b1af2d83abf07bad200198b5e409cc9dcb0fd800",
+      "exitCode": 0,
+      "freeBytesAfter": 1731039232,
+      "freeBytesBefore": 1755639808,
+      "logSha256": "d58ff7e129cecdb12fa839f8442349e0995770f05826aced960c8b8b02e3085b",
+      "remainingScratchFiles": {},
+      "suites": [
+        "test/legacy_word_shape_conversion_test.dart",
+        "test/legacy_word_sprm_regression_test.dart",
+        "test/legacy_word_stories_fields_test.dart",
+        "test/legacy_word_structured_bounds_test.dart",
+        "test/legacy_word_structured_conversion_test.dart",
+        "test/legacy_word_structured_document_test.dart",
+        "test/legacy_word_structured_render_test.dart",
+        "test/legacy_word_table_format_test.dart"
+      ]
+    },
+    {
+      "batch": 7,
+      "command": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "test",
+        "--concurrency=1",
+        "--reporter",
+        "expanded",
+        "--file-reporter",
+        "json:/workspace/scratch/143959eed1a1/quds_office_suite/build/parser-integration/d14f03f/parser-batches/07.events.jsonl",
+        "test/legacy_word_table_layout_test.dart",
+        "test/legacy_word_table_operations_test.dart",
+        "test/legacy_word_table_origin_test.dart",
+        "test/legacy_word_table_preview_test.dart",
+        "test/legacy_word_table_properties_test.dart",
+        "test/legacy_word_table_review_conditions_test.dart",
+        "test/legacy_word_table_revisions_test.dart",
+        "test/legacy_word_table_text_test.dart"
+      ],
+      "directory": "packages/legacy_doc_parser",
+      "durationSeconds": 4.718,
+      "environment": {
+        "CI": "true",
+        "PUB_CACHE": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/pub-cache",
+        "TMPDIR": "/workspace/scratch/143959eed1a1/tmp/quds-parser-d14f03f/07"
+      },
+      "events": {
+        "doneSuccess": true,
+        "failed": 0,
+        "hidden": 8,
+        "passed": 90,
+        "skipped": 0
+      },
+      "eventsSha256": "ee94cf5bd6a6799e5f7eb711337be2f70ac6357c37de74e3de5597e377d910b6",
+      "exitCode": 0,
+      "freeBytesAfter": 1730588672,
+      "freeBytesBefore": 1731039232,
+      "logSha256": "48a8b9394d6f35d4c20c7e12cd0a4f72b4d3757485c1b31cc60f07b335c958a9",
+      "remainingScratchFiles": {},
+      "suites": [
+        "test/legacy_word_table_layout_test.dart",
+        "test/legacy_word_table_operations_test.dart",
+        "test/legacy_word_table_origin_test.dart",
+        "test/legacy_word_table_preview_test.dart",
+        "test/legacy_word_table_properties_test.dart",
+        "test/legacy_word_table_review_conditions_test.dart",
+        "test/legacy_word_table_revisions_test.dart",
+        "test/legacy_word_table_text_test.dart"
+      ]
+    },
+    {
+      "batch": 8,
+      "command": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "test",
+        "--concurrency=1",
+        "--reporter",
+        "expanded",
+        "--file-reporter",
+        "json:/workspace/scratch/143959eed1a1/quds_office_suite/build/parser-integration/d14f03f/parser-batches/08.events.jsonl",
+        "test/legacy_word_table_width_test.dart",
+        "test/legacy_word_terminal_mark_test.dart",
+        "test/legacy_word_textbox_boundary_test.dart",
+        "test/legacy_word_textbox_chain_test.dart",
+        "test/legacy_word_textbox_layout_test.dart",
+        "test/legacy_word_textbox_spare_test.dart",
+        "test/legacy_word_textbox_table_test.dart",
+        "test/legacy_word_underlines_test.dart"
+      ],
+      "directory": "packages/legacy_doc_parser",
+      "durationSeconds": 5.279,
+      "environment": {
+        "CI": "true",
+        "PUB_CACHE": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/pub-cache",
+        "TMPDIR": "/workspace/scratch/143959eed1a1/tmp/quds-parser-d14f03f/08"
+      },
+      "events": {
+        "doneSuccess": true,
+        "failed": 0,
+        "hidden": 8,
+        "passed": 115,
+        "skipped": 0
+      },
+      "eventsSha256": "3856f0255fd1e89532da59e10fbfa4210cc52defa2cf0d2b94a676459e8b6c71",
+      "exitCode": 0,
+      "freeBytesAfter": 1730289664,
+      "freeBytesBefore": 1730584576,
+      "logSha256": "22c3880894003e6b284aaa2d9b27c451ab9bf04551991db2f64ddbf238e8a853",
+      "remainingScratchFiles": {},
+      "suites": [
+        "test/legacy_word_table_width_test.dart",
+        "test/legacy_word_terminal_mark_test.dart",
+        "test/legacy_word_textbox_boundary_test.dart",
+        "test/legacy_word_textbox_chain_test.dart",
+        "test/legacy_word_textbox_layout_test.dart",
+        "test/legacy_word_textbox_spare_test.dart",
+        "test/legacy_word_textbox_table_test.dart",
+        "test/legacy_word_underlines_test.dart"
+      ]
+    },
+    {
+      "batch": 9,
+      "command": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "test",
+        "--concurrency=1",
+        "--reporter",
+        "expanded",
+        "--file-reporter",
+        "json:/workspace/scratch/143959eed1a1/quds_office_suite/build/parser-integration/d14f03f/parser-batches/09.events.jsonl",
+        "test/legacy_word_vertex_extent_test.dart",
+        "test/paragraph_decoration_conversion_test.dart"
+      ],
+      "directory": "packages/legacy_doc_parser",
+      "durationSeconds": 2.118,
+      "environment": {
+        "CI": "true",
+        "PUB_CACHE": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/pub-cache",
+        "TMPDIR": "/workspace/scratch/143959eed1a1/tmp/quds-parser-d14f03f/09"
+      },
+      "events": {
+        "doneSuccess": true,
+        "failed": 0,
+        "hidden": 2,
+        "passed": 11,
+        "skipped": 0
+      },
+      "eventsSha256": "4032c4d5aa7d1a7aac7477026c4e0233c54aa24a899b61ed7a08325c43993af3",
+      "exitCode": 0,
+      "freeBytesAfter": 1730330624,
+      "freeBytesBefore": 1730289664,
+      "logSha256": "d9ba24d585f4b566a6723f50df29f3d4ed66961f26146c2d612660c2c4c848df",
+      "remainingScratchFiles": {},
+      "suites": [
+        "test/legacy_word_vertex_extent_test.dart",
+        "test/paragraph_decoration_conversion_test.dart"
+      ]
+    }
+  ],
+  "durationSeconds": 48.387,
+  "executedSuiteCount": 66,
+  "parserCommit": "d14f03f198a9735c660d0f8ae18ba6fc316fcf25",
+  "qudsHead": "2a35557fd436b9bb2f8ae15225771c249e1e51de",
+  "sourceUnchanged": true,
+  "success": true,
+  "suiteCount": 66,
+  "testCounts": {
+    "failed": 0,
+    "hidden": 66,
+    "passed": 810,
+    "skipped": 0
+  }
+}

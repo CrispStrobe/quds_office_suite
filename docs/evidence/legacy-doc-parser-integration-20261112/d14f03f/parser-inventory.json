@@ -1,0 +1,266 @@
+[
+  {
+    "path": "test/compound_preservation_test.dart",
+    "sha256": "dc75b69638786e2277225bf3bda1db6c609463741cbe0089245d87999621a795"
+  },
+  {
+    "path": "test/extended_conversion_test.dart",
+    "sha256": "9dbfb53a710f194d208f247a91496eb2cff0147b99fa3f37934de24764055817"
+  },
+  {
+    "path": "test/legacy_word_blip_store_count_test.dart",
+    "sha256": "78001d1fbd1f4dde7dfb24e40fd7415614c9a0da47fc233587985381a9b9394d"
+  },
+  {
+    "path": "test/legacy_word_comment_threads_test.dart",
+    "sha256": "7da526afa7f725a52e40cd5e4d93a9cd5117ca40665f113b1f24ab2b21de02f3"
+  },
+  {
+    "path": "test/legacy_word_compatibility_test.dart",
+    "sha256": "7e95145ccc85d04f958fb22d24b97aeccf3441dade3014e09739973dea91c167"
+  },
+  {
+    "path": "test/legacy_word_conditional_table_test.dart",
+    "sha256": "2dfb915553a7cd93d87b187800d2fe3351c139c20f3f7c921e4c03ed8a24e194"
+  },
+  {
+    "path": "test/legacy_word_decorations_test.dart",
+    "sha256": "61413bd0857aa9ecb9f7e4d465fcc0e1ebc77f52b06a3242bc791114c09f387e"
+  },
+  {
+    "path": "test/legacy_word_display_field_revisions_test.dart",
+    "sha256": "5818e94eebd691af18e855179188c78a725c72fde35e57d08174415ff05c8bc2"
+  },
+  {
+    "path": "test/legacy_word_fkp_recovery_test.dart",
+    "sha256": "ca1ec1333faa878dfeeec19de697b4ffdcbc30ee2d5b4617693cd54226b3e670"
+  },
+  {
+    "path": "test/legacy_word_header_shape_alias_test.dart",
+    "sha256": "8fbd61beeee738d998232552ff8351be24dd43d3eb89a45681c7c6e224c9a802"
+  },
+  {
+    "path": "test/legacy_word_header_textbox_alias_test.dart",
+    "sha256": "182f0fd2cdde2be4f3fc9f61f5658f9c69db2bf0ce379fc5568383358c3f1251"
+  },
+  {
+    "path": "test/legacy_word_html_media_test.dart",
+    "sha256": "2bce039cd1cf063fe8924dede98d93507e624396c1b81b71624689078975178d"
+  },
+  {
+    "path": "test/legacy_word_image_appearance_test.dart",
+    "sha256": "a76fdbba45d19cd3a19015bfb5bddc9b4170026fe291cb44e3f8089232c4cc9c"
+  },
+  {
+    "path": "test/legacy_word_ink_evidence_test.dart",
+    "sha256": "f6e973ed8c58a272a0e9154f03fed3857035dd3184346e92679c3eb7f0307a53"
+  },
+  {
+    "path": "test/legacy_word_kerning_test.dart",
+    "sha256": "52e6477834eb43fc19d0dc6acd4406da69627d101d512d532eea193607358a0a"
+  },
+  {
+    "path": "test/legacy_word_layout_test.dart",
+    "sha256": "fb2f3d5f1942283b7f5fe7c28f675311ccd967f86ea8e427d6f7239864f69003"
+  },
+  {
+    "path": "test/legacy_word_list_continuation_test.dart",
+    "sha256": "11a98eed54be01378603cd2d16e9da21c7f4e7065907d705eb911d3b58ef168a"
+  },
+  {
+    "path": "test/legacy_word_list_precedence_test.dart",
+    "sha256": "5435a88d4dd1ca11464435939a791747ce74d390e2c5eefc8f7b19e39f2a2760"
+  },
+  {
+    "path": "test/legacy_word_list_sequences_test.dart",
+    "sha256": "9d72dde12296b442aab7a1774875d2e1332a20fb31fd52404fe9fe046d0c9006"
+  },
+  {
+    "path": "test/legacy_word_lists_test.dart",
+    "sha256": "7dbf15e7e65844abc9d4bf52a04018dfcffd61f5bd303eee02b816a41ade502f"
+  },
+  {
+    "path": "test/legacy_word_media_revisions_test.dart",
+    "sha256": "a714adca4182387a8958f0e0f645b4514b45fb740afe208a25a3504e25f670c3"
+  },
+  {
+    "path": "test/legacy_word_media_test.dart",
+    "sha256": "a33aa58da2f27c06de51f0a0a2b02171642b6290eb2eabffae37f04eeb50a248"
+  },
+  {
+    "path": "test/legacy_word_metafile_arcs_test.dart",
+    "sha256": "f505c2d35b4f5b01d779fe337470507892979bb42c26440ada47c0c8e792feef"
+  },
+  {
+    "path": "test/legacy_word_metafile_render_test.dart",
+    "sha256": "ee66b1cdb52b8db742994ea0598838493ade12b826207247a294e3b2f964c9ae"
+  },
+  {
+    "path": "test/legacy_word_metafile_test.dart",
+    "sha256": "65792f5e0944f42ca3e481dd3ec88a719c58417366e71102aed3d3ef2e82420b"
+  },
+  {
+    "path": "test/legacy_word_native_recovery_test.dart",
+    "sha256": "e25ba7b5a4fbcc9402350fca5aa05f36f3a138ccbe394609afd536a47181f91f"
+  },
+  {
+    "path": "test/legacy_word_native_textbox_test.dart",
+    "sha256": "1593e86a813851f50526974890e37db90c0dca5d03bb5afdc5f41fc0a99a07c8"
+  },
+  {
+    "path": "test/legacy_word_nested_tables_test.dart",
+    "sha256": "ecb15f6f81513b0e42deab812d18d96b113b87e9716a3ca3ae7d9cb7af3de272"
+  },
+  {
+    "path": "test/legacy_word_note_boundary_test.dart",
+    "sha256": "6dce7405b834bd4319d365ff6c931a45eac7a460a8cd3841dbeb9ece11a76bf3"
+  },
+  {
+    "path": "test/legacy_word_note_formats_test.dart",
+    "sha256": "5624806b0dd73a3f931db765f222b954c7b187bb3a5e99bb64c5abb1bd70df10"
+  },
+  {
+    "path": "test/legacy_word_note_layout_test.dart",
+    "sha256": "a2647d27fe9f1c4bec7d556acbd6e65cff47560c52303cff18c187a4a36bc90e"
+  },
+  {
+    "path": "test/legacy_word_numbering_revisions_test.dart",
+    "sha256": "8e42a89724b1001289a010514ccec4512f84e6021d76ad21f7f6e32812f67a1e"
+  },
+  {
+    "path": "test/legacy_word_officeart_position_test.dart",
+    "sha256": "2d132befe1f51316bb45292818b3d4e58effc52ce69c572df8a34aec3497c61c"
+  },
+  {
+    "path": "test/legacy_word_officeart_test.dart",
+    "sha256": "acb67286793c586371ff826fd1973160e292b9835c6bbada0db4a260bb5c9be9"
+  },
+  {
+    "path": "test/legacy_word_packed_vertices_test.dart",
+    "sha256": "794cabcd7ce36293e862bf678c3842ae7c1f43f08fc912930bb2a0e0430e8e62"
+  },
+  {
+    "path": "test/legacy_word_preview_parity_test.dart",
+    "sha256": "b40f5f29f160f4ba5b90785b42772ed6982c86586cbf9ae1f01a9483704761ce"
+  },
+  {
+    "path": "test/legacy_word_revisions_test.dart",
+    "sha256": "ee7fc66f81fbcae8a0463ce886798527e32294877c253add17dca886d5993e6a"
+  },
+  {
+    "path": "test/legacy_word_row_borders_test.dart",
+    "sha256": "1b89c63209e391127e27cf0168754325874363b0fc31a695faf657c93268466e"
+  },
+  {
+    "path": "test/legacy_word_section_revisions_test.dart",
+    "sha256": "0be039d7e6b6ca70848c24510a7f579de9c49de2ed0d6cb6c491e599e3029661"
+  },
+  {
+    "path": "test/legacy_word_shape_context_test.dart",
+    "sha256": "6b2eae9b4013f8ddcfb075e916f70d71fbed92750894b71b5276cd4984fb6efb"
+  },
+  {
+    "path": "test/legacy_word_shape_conversion_test.dart",
+    "sha256": "85608133a8cf2aeb2e0c7fa17653d3d3b92b3f564eaf6e65df3339ff0fee5ed3"
+  },
+  {
+    "path": "test/legacy_word_sprm_regression_test.dart",
+    "sha256": "0cff36a42b9e18f55a9bfc8e7236083b2c91d620811928c8db0286be21ece5cb"
+  },
+  {
+    "path": "test/legacy_word_stories_fields_test.dart",
+    "sha256": "dede367f331612a54f1bc456be5b9c7abc69fa616738ab48825696706d0e00a6"
+  },
+  {
+    "path": "test/legacy_word_structured_bounds_test.dart",
+    "sha256": "5c731412699a60dce13925f8fdb90a27f7af6f4751c04f2dea0c9df536a9745e"
+  },
+  {
+    "path": "test/legacy_word_structured_conversion_test.dart",
+    "sha256": "fb162916ef805457592959f43209a63e98952739625aa38d73a6366d58e5b5c9"
+  },
+  {
+    "path": "test/legacy_word_structured_document_test.dart",
+    "sha256": "d09ef2d0f21f28ef3f838ff235ff54d366adbe6a5b75e448fbae91b63e66d4cc"
+  },
+  {
+    "path": "test/legacy_word_structured_render_test.dart",
+    "sha256": "03c6aa0c2f18cc8a0592b0148da6436d8958ec01fe3f8dfe2b282bcdbc620767"
+  },
+  {
+    "path": "test/legacy_word_table_format_test.dart",
+    "sha256": "a8ac80b4484ef9a6d0819bdbb5135365bd066c445625dafebf576dca25e1f72d"
+  },
+  {
+    "path": "test/legacy_word_table_layout_test.dart",
+    "sha256": "a01b866a6faf61e6f235536f97e9641d3867de22d7e436dc74f74cee8be94e44"
+  },
+  {
+    "path": "test/legacy_word_table_operations_test.dart",
+    "sha256": "e6156b9f9194ba40660ac7a37d5cacacd80731e63f65be211cb93e0f59f3a65e"
+  },
+  {
+    "path": "test/legacy_word_table_origin_test.dart",
+    "sha256": "999919b2ffc15502dcc0b15c0ddb9a3d51b6a66cc63b0d29145b2461818da1f2"
+  },
+  {
+    "path": "test/legacy_word_table_preview_test.dart",
+    "sha256": "1843c6a719e5346f4425f6aa230e2d7832d00ab94129bc31d9ad549398313ac1"
+  },
+  {
+    "path": "test/legacy_word_table_properties_test.dart",
+    "sha256": "a1eaed0275165a4c4c828c0f2faeff9164ffa657de5d30a009c47a4075f50a63"
+  },
+  {
+    "path": "test/legacy_word_table_review_conditions_test.dart",
+    "sha256": "89a2767b4343e036e6064a452e9735f47fec772e219e750a1849baf93ee0abde"
+  },
+  {
+    "path": "test/legacy_word_table_revisions_test.dart",
+    "sha256": "2c78a992598e4ab8014884b4891853d42e6e633a5c5c511152b662d060e65067"
+  },
+  {
+    "path": "test/legacy_word_table_text_test.dart",
+    "sha256": "bdcafebf12a708687088950d21486d50373fea88c822ef52e566c1c238598e1f"
+  },
+  {
+    "path": "test/legacy_word_table_width_test.dart",
+    "sha256": "95d24de4585a4c0ae71f5286af31e6581e2b9f4ce95d82680f5144f5d71d18ab"
+  },
+  {
+    "path": "test/legacy_word_terminal_mark_test.dart",
+    "sha256": "ca909a05ea73bc95689d22fd47a504e9480681c8a001fd8b5c5be40794ac280b"
+  },
+  {
+    "path": "test/legacy_word_textbox_boundary_test.dart",
+    "sha256": "e087704f33f4aeea34b52c7dc8adb7657be3fd5dd1dd59cfdb256e3e7ef85a61"
+  },
+  {
+    "path": "test/legacy_word_textbox_chain_test.dart",
+    "sha256": "0eb4c68bf7e8b1bfd0a3c400817084c949f2c3426e41dabe3183531d9f75b01f"
+  },
+  {
+    "path": "test/legacy_word_textbox_layout_test.dart",
+    "sha256": "92101da93b9a49143f2e36c9790a1d7edd450c32754228487e1382f97572ecd2"
+  },
+  {
+    "path": "test/legacy_word_textbox_spare_test.dart",
+    "sha256": "7ab7fa8c393e0c66afb766c135b22959b39ff7184cc081921f38324e207cef1c"
+  },
+  {
+    "path": "test/legacy_word_textbox_table_test.dart",
+    "sha256": "cbf35ed88d07d3bf795ef3930f16ae65483b1b3f2535755f75653d4e26b6971a"
+  },
+  {
+    "path": "test/legacy_word_underlines_test.dart",
+    "sha256": "c728fe9baaa4b4d20460b7c7568d2dab9917e5e451512371aaefb31c75ebbea9"
+  },
+  {
+    "path": "test/legacy_word_vertex_extent_test.dart",
+    "sha256": "d1449c1fdf3787f5eb5d2b9384a49badf1c3b48a95e73e585dee5c0e85639e8e"
+  },
+  {
+    "path": "test/paragraph_decoration_conversion_test.dart",
+    "sha256": "b49d67d2b6e103bdf82e359f04e2a0f54fb1c3dbc8edc3f325fda2a4dbeecef2"
+  }
+]

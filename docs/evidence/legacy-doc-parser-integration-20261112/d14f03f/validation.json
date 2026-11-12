@@ -1,0 +1,119 @@
+{
+  "allUpstreamModesVerified": true,
+  "artifactArchive": "validation-artifacts.tar.xz",
+  "artifactArchiveSha256": "190aa2713415130f6f35b911d81abd3e1c0e5305060acafa28cae9d7bb262205",
+  "artifactMembers": 95,
+  "artifactMembersVerified": true,
+  "checks": {
+    "engine": {
+      "allSuitesExactlyOnce": true,
+      "batches": 16,
+      "durationSeconds": 179.424,
+      "minimumFreeBytesAtBatchBoundary": 1729970176,
+      "noScratchFilesRemain": true,
+      "runnerSha256": "2d2b2199a2708fef8a0481315825665ff2927674cd1f813bbd4ad5baa43ae30c",
+      "sourceUnchanged": true,
+      "suites": 123,
+      "testCounts": {
+        "failed": 0,
+        "hidden": 131,
+        "passed": 1627,
+        "skipped": 1
+      }
+    },
+    "parser": {
+      "allSuitesExactlyOnce": true,
+      "batches": 9,
+      "durationSeconds": 48.387,
+      "minimumFreeBytesAtBatchBoundary": 1730289664,
+      "noScratchFilesRemain": true,
+      "runnerSha256": "ae8b893c642eeb2c06d75151a6e00c0dadd519d586e252af180288084943a0e4",
+      "sourceUnchanged": true,
+      "suites": 66,
+      "testCounts": {
+        "failed": 0,
+        "hidden": 66,
+        "passed": 810,
+        "skipped": 0
+      }
+    }
+  },
+  "commands": {
+    "engine-analysis": {
+      "command": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "analyze",
+        "--fatal-infos"
+      ],
+      "directory": "packages/quds_office_engine",
+      "durationSeconds": 7.499,
+      "environment": {
+        "CI": "true",
+        "PUB_CACHE": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/pub-cache",
+        "TMPDIR": "/workspace/scratch/143959eed1a1/tmp"
+      },
+      "exitCode": 0,
+      "name": "engine-analysis"
+    },
+    "parser-analysis": {
+      "command": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "analyze"
+      ],
+      "directory": "packages/legacy_doc_parser",
+      "durationSeconds": 3.922,
+      "environment": {
+        "CI": "true",
+        "PUB_CACHE": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/pub-cache",
+        "TMPDIR": "/workspace/scratch/143959eed1a1/tmp"
+      },
+      "exitCode": 0,
+      "name": "parser-analysis"
+    },
+    "parser-python": {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_*.py"
+      ],
+      "directory": "packages/legacy_doc_parser",
+      "durationSeconds": 1.212,
+      "environment": {
+        "CI": "true",
+        "PUB_CACHE": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/pub-cache",
+        "TMPDIR": "/workspace/scratch/143959eed1a1/tmp"
+      },
+      "exitCode": 0,
+      "name": "parser-python"
+    }
+  },
+  "engineAnalyzer": "No issues found; --fatal-infos enabled",
+  "existingEngineSkip": {
+    "name": "multi-face PDF embeds distinct font resources",
+    "path": "test/wave4_platform_test.dart",
+    "reason": "Latin face already covers Arabic; cannot force F3"
+  },
+  "gateChanges": "None: full test inventories, default VM/kernel and timeouts, unchanged skip logic, no filters or retries.",
+  "measuredAndPublishedQudsTree": "e024041254fbae2c07d38586eb69325cdf058093",
+  "measuredQudsCommit": "2a35557fd436b9bb2f8ae15225771c249e1e51de",
+  "parserAnalyzer": {
+    "error": 0,
+    "info": 325,
+    "warning": 0
+  },
+  "parserCommit": "d14f03f198a9735c660d0f8ae18ba6fc316fcf25",
+  "parserTree": "78dc7f4ec68e45e82a62bedf95da3b98ce62393e",
+  "publishedParent": "e3b81f56e95e9ebc9f1802fb31fc8d8aa756bb08",
+  "publishedQudsSourceCommit": "aa1d3c88ede1f772a7f76e35348ff4e1b831976a",
+  "pythonTests": 162,
+  "schema": "quds-office/legacy-parser-integration-validation",
+  "unpatchedExactFiles": 475,
+  "upstreamEntries": 476,
+  "version": 2,
+  "workspacePubspecSha256": "150af8d89562635bf5a876c0a539c20ae48b58ea3666db071b5e4ebd3addf153"
+}
