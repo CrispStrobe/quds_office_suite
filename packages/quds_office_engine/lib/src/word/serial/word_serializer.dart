@@ -10,6 +10,7 @@ import '../../xml/namespaces.dart';
 import '../../xml/xml_node.dart';
 import '../../xml/xml_writer.dart';
 import '../math/omml_io.dart';
+import '../model/wml_clone.dart';
 import '../model/wml_document.dart';
 import '../model/word_notes.dart';
 import '../model/word_revision.dart';
@@ -747,26 +748,39 @@ class WordSerializer {
     WmlRun inline,
     int offset,
   ) {
-    final WmlRevision? revision = _revisionAt(
-      paragraph,
-      offset,
-      inline.text.length,
-    );
-    if (revision == null) {
+    final List<WmlRevision> revisions = _revisionsFor(paragraph).toList();
+    if (revisions.isEmpty || inline.text.isEmpty) {
       _writeRun(w, inline);
       return;
     }
-    w.writeStartElement(
-      revision.kind == WmlRevisionKind.delete ? 'del' : 'ins',
-      prefix: 'w',
-    );
-    w.writeAttribute('w:id', '${revision.id}');
-    w.writeAttribute('w:author', revision.author);
-    if (revision.dateIso.isNotEmpty) {
-      w.writeAttribute('w:date', revision.dateIso);
+    final int length = inline.text.length;
+    final Set<int> boundaries = <int>{0, length};
+    if (!inline.isAtomic) {
+      for (final WmlRevision revision in revisions) {
+        if (revision.start < offset + length && revision.end > offset) {
+          boundaries
+            ..add((revision.start - offset).clamp(0, length))
+            ..add((revision.end - offset).clamp(0, length));
+        }
+      }
     }
-    _writeRun(w, inline, deleted: revision.kind == WmlRevisionKind.delete);
-    w.writeEndElement();
+    final List<int> cuts = boundaries.toList()..sort();
+    for (var i = 1; i < cuts.length; i++) {
+      final int start = offset + cuts[i - 1];
+      final int end = offset + cuts[i];
+      WmlRevision? tracked;
+      for (final WmlRevision revision in revisions) {
+        if (revision.start < end && revision.end > start) {
+          tracked = revision;
+          break;
+        }
+      }
+      final WmlRun run = cuts.length == 2
+          ? inline
+          : (WmlClone.inlines(<WmlInline>[inline]).single as WmlRun
+              ..text = inline.text.substring(cuts[i - 1], cuts[i]));
+      _writeRun(w, run, revision: tracked);
+    }
   }
 
   bool _hasLeadingColumnBreak(WmlParagraph paragraph) {
@@ -777,30 +791,22 @@ class WordSerializer {
     return false;
   }
 
-  WmlRevision? _revisionAt(WmlParagraph paragraph, int offset, int length) {
+  Iterable<WmlRevision> _revisionsFor(WmlParagraph paragraph) sync* {
     final WmlDocument? document = _document;
-    if (document == null || length <= 0) {
-      return null;
-    }
-    var index = 0;
-    for (final WmlParagraph item in document.paragraphs) {
-      if (identical(item, paragraph)) {
-        final int end = offset + length;
-        for (final WmlRevision revision in document.revisions) {
-          if (revision.paragraphIndex == index &&
-              revision.start < end &&
-              revision.end > offset) {
-            return revision;
-          }
-        }
-        return null;
+    if (document == null) return;
+    for (final WmlRevision revision in document.revisions) {
+      if (revision.accepted == null &&
+          identical(
+            revision.targetParagraph ??
+                WordRevisions.resolveParagraph(document, revision),
+            paragraph,
+          )) {
+        yield revision;
       }
-      index++;
     }
-    return null;
   }
 
-  void _writeRun(XmlWriter w, WmlRun inline, {bool deleted = false}) {
+  void _writeRun(XmlWriter w, WmlRun inline, {WmlRevision? revision}) {
     final String? instruction = inline.fieldInstruction;
     if (instruction != null) {
       w.writeStartElement('fldSimple', prefix: 'w');
@@ -808,6 +814,17 @@ class WordSerializer {
       if (inline.fieldLocked) w.writeAttribute('w:fldLock', '1');
       if (inline.fieldDirty != null) {
         w.writeAttribute('w:dirty', inline.fieldDirty! ? '1' : '0');
+      }
+    }
+    // Native simple fields contain tracked runs. A fldSimple inside ins/del
+    // is not a valid WordprocessingML run-content child.
+    final bool deleted = revision?.kind == WmlRevisionKind.delete;
+    if (revision != null) {
+      w.writeStartElement(deleted ? 'del' : 'ins', prefix: 'w');
+      w.writeAttribute('w:id', '${revision.id}');
+      w.writeAttribute('w:author', revision.author);
+      if (revision.dateIso.isNotEmpty) {
+        w.writeAttribute('w:date', revision.dateIso);
       }
     }
     w.writeStartElement('r', prefix: 'w');
@@ -822,6 +839,7 @@ class WordSerializer {
       _writeRunContent(w, inline.text, deleted: deleted);
     }
     w.writeEndElement();
+    if (revision != null) w.writeEndElement();
     if (instruction != null) w.writeEndElement();
   }
 

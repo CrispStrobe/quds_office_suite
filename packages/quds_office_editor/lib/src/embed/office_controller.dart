@@ -1090,6 +1090,7 @@ class WordEditorController extends OfficeController {
       if (document.trackRevisions) {
         _recordRevision(
           kind: WmlRevisionKind.insert,
+          paragraph: paragraph,
           paragraphIndex: range.startPara,
           start: at,
           end: at + text.length,
@@ -3359,6 +3360,7 @@ class WordEditorController extends OfficeController {
 
   void _recordRevision({
     required WmlRevisionKind kind,
+    required WmlParagraph paragraph,
     required int paragraphIndex,
     required int start,
     required int end,
@@ -3373,6 +3375,7 @@ class WordEditorController extends OfficeController {
             revision = WordRevisions.record(
               document,
               kind: kind,
+              paragraph: paragraph,
               paragraphIndex: paragraphIndex,
               start: start,
               end: end,
@@ -3422,6 +3425,7 @@ class WordEditorController extends OfficeController {
     if (document.trackRevisions) {
       _recordRevision(
         kind: WmlRevisionKind.insert,
+        paragraph: para,
         paragraphIndex: caret.paragraphIndex,
         start: start,
         end: start + text.length,
@@ -3509,6 +3513,7 @@ class WordEditorController extends OfficeController {
     if (document.trackRevisions) {
       _recordRevision(
         kind: WmlRevisionKind.delete,
+        paragraph: paragraph,
         paragraphIndex: caret.paragraphIndex,
         start: range.start,
         end: range.end,
@@ -3533,16 +3538,16 @@ class WordEditorController extends OfficeController {
   }
 
   void _deleteNormalizedSelection() {
+    if (document.trackRevisions) {
+      _deleteNormalizedTextOnly();
+      return;
+    }
     if (isEditingComment || isEditingHeaderFooter) {
       if (caret.normalizedRange.startPara != caret.normalizedRange.endPara) {
         _deleteStorySelection();
       } else {
         _deleteNormalizedTextOnly();
       }
-      return;
-    }
-    if (document.trackRevisions) {
-      _deleteNormalizedTextOnly();
       return;
     }
     if (_isEntireDocumentSelected()) {
@@ -3637,6 +3642,7 @@ class WordEditorController extends OfficeController {
         if (document.trackRevisions) {
           _recordRevision(
             kind: WmlRevisionKind.delete,
+            paragraph: para,
             paragraphIndex: p,
             start: from,
             end: to,
@@ -3778,7 +3784,7 @@ class WordEditorController extends OfficeController {
   }
 
   void _deleteVisualsInSelection(int startPara, int endPara) {
-    if (isEditingComment || endPara <= startPara) {
+    if (isEditingComment || isEditingHeaderFooter || endPara <= startPara) {
       return;
     }
     final List<WmlVisual> remove = <WmlVisual>[
@@ -6394,24 +6400,26 @@ class WordEditorController extends OfficeController {
     if (!config.allowsMutation) {
       return;
     }
+    // Story-local paragraph indices cannot order targets across stories or
+    // after paragraph insertion. Rightmost spans first is sufficient for all
+    // independent paragraph targets, and keeps their offsets valid.
     final List<WmlRevision> targets =
-        revisions.where(document.revisions.contains).toList()..sort((a, b) {
-          final paragraph = b.paragraphIndex.compareTo(a.paragraphIndex);
-          return paragraph == 0 ? b.start.compareTo(a.start) : paragraph;
-        });
+        revisions.where(document.revisions.contains).toList()
+          ..sort((a, b) => b.start.compareTo(a.start));
     if (targets.isEmpty) {
       return;
     }
-    final List<WmlParagraph> paragraphs = document.paragraphs.toList();
     final Map<WmlParagraph, List<WmlInline>> inlines =
-        <WmlParagraph, List<WmlInline>>{
-          for (final revision in targets)
-            if (revision.paragraphIndex >= 0 &&
-                revision.paragraphIndex < paragraphs.length)
-              paragraphs[revision.paragraphIndex]: _cloneInlines(
-                paragraphs[revision.paragraphIndex],
-              ),
-        };
+        <WmlParagraph, List<WmlInline>>{};
+    for (final revision in targets) {
+      final WmlParagraph? paragraph = WordRevisions.resolveParagraph(
+        document,
+        revision,
+      );
+      if (paragraph != null) {
+        inlines.putIfAbsent(paragraph, () => _cloneInlines(paragraph));
+      }
+    }
     final List<WmlRevision> before = List<WmlRevision>.of(document.revisions);
     final Map<WmlRevision, bool?> status = <WmlRevision, bool?>{
       for (final revision in targets) revision: revision.accepted,

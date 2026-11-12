@@ -487,13 +487,16 @@
     },
     {
       "id": "FID-047",
-      "status": "open",
+      "status": "closed",
       "area": "Tracked revision story ownership",
-      "finding": "Revision records identified only by body paragraph index can target unrelated text when recorded in auxiliary stories or after paragraph insertion. Imported revisions can also receive a stale body index.",
+      "finding": "Tracked revisions bind to the actual paragraph across body, header/footer, note and comment stories; imports, serialization and accept/reject no longer redirect to unrelated body indexes. Native export splits coalesced runs at exact revision boundaries and retains valid hyperlink/inline-field nesting.",
       "evidence": [
-        "packages/quds_office_engine/lib/src/word/model/word_revisions.dart",
-        "packages/quds_office_editor/lib/src/embed/office_controller.dart"
-      ]
+        "packages/quds_office_engine/test/word_revision_story_test.dart",
+        "packages/quds_office_editor/test/word_revision_story_test.dart",
+        "packages/quds_office_engine/tool/fidelity/revision_story_oracle.py",
+        "packages/quds_office_engine/tool/fidelity/test_revision_story_oracle.py"
+      ],
+      "limits": "Imported note revisions resolve safely. Notes-pane whole-text replacement, structural/formatting changes and overlapping tracked ranges do not yet have complete native change-tracking semantics."
     },
     {
       "id": "FID-048",
@@ -520,6 +523,42 @@
       "finding": "Text insertion, paragraph splitting and overlapping edits within already tracked spans need explicit range transformation coverage; paragraph identity alone cannot establish character-range correctness.",
       "evidence": [
         "packages/quds_office_editor/lib/src/embed/office_controller.dart"
+      ]
+    },
+    {
+      "id": "FID-051",
+      "status": "closed",
+      "area": "Imported sparse styles after catalog introduction",
+      "finding": "Introducing a heading/TOC style catalog no longer applies new-document spacing defaults to unrelated imported paragraphs; explicit defaults and overrides still cascade.",
+      "evidence": [
+        "packages/quds_office_engine/test/word_style_introduction_test.dart"
+      ]
+    },
+    {
+      "id": "FID-052",
+      "status": "closed",
+      "area": "Structural oracle corruption blind spots",
+      "finding": "Independent controls reject dangling comment references, broken TOC targets, explicit false cantSplit, incorrect image relationship type and missing native field boundaries.",
+      "evidence": [
+        "packages/quds_office_engine/tool/fidelity/test_word_structure_oracle.py"
+      ]
+    },
+    {
+      "id": "FID-053",
+      "status": "closed",
+      "area": "Direct scripted operation atomicity",
+      "finding": "Late invalid arguments no longer partially mutate run formats, images, cells, stories or sections. Native cached fields reject partial ranges; TOC bookmark targets are unique, empty REF caches are explicit and visibility updates clear partial omission.",
+      "evidence": [
+        "packages/quds_office_engine/test/word_step_atomicity_test.dart"
+      ]
+    },
+    {
+      "id": "FID-054",
+      "status": "closed",
+      "area": "Canvas layout replacement",
+      "finding": "Replacing laid-out pages or compact mode invalidates layout, recalculating viewport extent and geometry before painting.",
+      "evidence": [
+        "packages/quds_office_editor/lib/src/editor_word/render_word_canvas.dart"
       ]
     }
   ]
