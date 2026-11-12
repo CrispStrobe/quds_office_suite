@@ -1,0 +1,14 @@
+{
+  "scope": "The complete raw VM files remain reproducible build artifacts; the source checkout stores the verified collection receipt, derived coverage and full test log.",
+  "raw_vm_files": 123,
+  "collection_receipt_sha256": "1803935ab4e7da6e359311e41f4aded6dac5f75ce3603eac25e60589f1ace1f4",
+  "generated_archive_bytes": 12845115,
+  "generated_archive_sha256": "e01daf752114a703b3be0eb177f665ef38d26f126d6a2e3edd30743d0790d0d7",
+  "command": [
+    "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.44/bin/cache/dart-sdk/bin/dart",
+    "test",
+    "--reporter",
+    "expanded",
+    "--coverage=/workspace/scratch/07eb2580faa9/quds-expansion-validation-final/packages/quds_office_engine/coverage/vm"
+  ]
+}

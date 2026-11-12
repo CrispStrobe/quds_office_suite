@@ -140,16 +140,23 @@ pubspec to be restored byte-for-byte after the gate.
 
 ## Evidence and remaining gaps
 
-Final source acceptance passed at implementation
-`2d6529e52f389e8c491ce75331d9efe6bd59a821`: 1,610 full engine tests, 1,147 mandatory
+Current final source acceptance passed at implementation
+`1d19150ff35e95374fa3c11e0b6a43d187d24024`: 1,610 full engine tests, 1,147 mandatory
 engine tests, 436 Python controls, all 15 feature workflows and 521 editor tests.
 The full suites retain their two individually documented existing skips; the
-mandatory cohort has none. All 375 packages pass schema validation. Native
-acceptance covers 368 files and 687 pages, with 109 save-cycle groups, 47
-independent baseline comparisons and 10 page-order comparisons. The seven
-existing comment-control qualifications remain explicit. Fresh engine line
-coverage is 45,186/54,575 (82.80%). See the
-[final source receipt chain](evidence/office-fidelity-expansion-20261112/final-source/README.md).
+mandatory cohort has none. All 375 packages pass schema validation, and all
+56 renderer controls pass. Native acceptance covers 368 files and 687 pages,
+with 109 save-cycle groups, 47 independent baseline comparisons and 10 page-order
+comparisons (included in the baseline count). The seven existing comment-control
+qualifications remain explicit. Fresh engine line coverage is
+45,186/54,575 (82.80%). See the
+[current final source receipt chain](evidence/office-fidelity-expansion-20261112/final-source-current/README.md).
+
+This complete rerun covers the shared renderer correction for the schema-valid
+host picture-bounds reference. The
+[earlier full acceptance at `2d6529e`](evidence/office-fidelity-expansion-20261112/final-source/README.md)
+is retained unchanged. Timestamped remote CI observations are stored separately
+from these local acceptance results.
 
 Focused red/green logs, authored references, source/input hashes and independent
 native receipts are under
