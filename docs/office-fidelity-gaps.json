@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "audit_date": "2026-11-11",
+  "audit_date": "2026-11-12",
   "repositories": {
     "engine": "CrispStrobe/quds_office_suite",
     "host": "CrispStrobe/CrispCloud"
   },
-  "branch": "feature/office-fidelity-completion-20261111",
+  "branch": "feature/office-fidelity-coverage-20261112",
   "scope": "Reproduced and investigated gaps; the source-hashed line inventory is separate. Closed means the cited bounded regression is covered, not exhaustive format support.",
   "status_definitions": {
     "closed": "Reproduced gap fixed and protected by named evidence.",
@@ -103,12 +103,14 @@
       "id": "FID-009",
       "status": "closed",
       "area": "Executable import/edit/export scenarios",
-      "finding": "Strict five-command CLI exposes 43 operations; every operation has a committed scenario and combined multi-format outputs have independent semantic goldens.",
+      "finding": "Strict five-command CLI exposes 67 operations; every operation has a committed scenario. Independently authored expectations cover multi-format edits plus creation, modification and removal of Word tables, TOCs, bookmark references, threaded comments, picture wrapping and positioned frames.",
       "evidence": [
         "packages/quds_office_engine/tool/fidelity/office_steps.dart",
         "packages/quds_office_engine/test/scripted_workflows_test.dart",
         "packages/quds_office_engine/tool/fidelity/scripted_oracle.py",
-        "packages/quds_office_engine/tool/fidelity/audit_operations.py"
+        "packages/quds_office_engine/tool/fidelity/audit_operations.py",
+        "packages/quds_office_engine/test/word_structure_steps_test.dart",
+        "packages/quds_office_engine/tool/fidelity/word_structure_oracle.py"
       ]
     },
     {
@@ -408,7 +410,7 @@
       "id": "FID-039",
       "status": "closed",
       "area": "Actual host outputs and coverage provenance",
-      "finding": "The host requires exactly seventeen valid captured DOCX outputs, then independently validates them with Open XML SDK. Fresh Office LCOV and engine VM reports list unhit instrumented lines, absent files and current source hashes. Helpers reject malformed records, missing source paths and out-of-range line numbers; clean-directory collection is required because same-length stale input cannot be detected from coverage alone.",
+      "finding": "The host requires all valid captured DOCX outputs listed in the output manifest, then independently validates them with Open XML SDK. Fresh Office LCOV and engine VM reports list unhit instrumented lines, absent files and current source hashes. Helpers reject malformed records, missing source paths and out-of-range line numbers; clean-directory collection is required because same-length stale input cannot be detected from coverage alone.",
       "evidence": [
         "CrispCloud:tool/office_host_evidence.py",
         "CrispCloud:tool/test_office_host_evidence.py",
@@ -460,6 +462,142 @@
         "packages/quds_office_engine/test/content_control_fidelity_test.dart",
         "packages/quds_office_engine/test/bookmark_fidelity_test.dart",
         "packages/quds_office_editor/test/word_content_control_fidelity_test.dart"
+      ]
+    },
+    {
+      "id": "FID-041",
+      "status": "closed",
+      "area": "Rich run editing and native inline fields",
+      "finding": "Coalescing, cloning, deletion, links and citations retain sparse styles, note tokens and native inline field metadata. Native citations no longer replace surrounding paragraph content. Field dispatch matches instruction commands, not words within quoted arguments.",
+      "evidence": [
+        "packages/quds_office_engine/test/word_edit_integrity_test.dart",
+        "packages/quds_office_engine/test/inline_field_fidelity_test.dart"
+      ]
+    },
+    {
+      "id": "FID-042",
+      "status": "closed",
+      "area": "TOC cached content and source formatting",
+      "finding": "Page-number suppression, including native partial ranges, survives repeated exports without stripping trailing heading numerals. Export does not mutate live paragraph tabs.",
+      "evidence": [
+        "packages/quds_office_engine/test/word_structure_integrity_test.dart",
+        "packages/quds_office_engine/test/word_edit_integrity_test.dart"
+      ]
+    },
+    {
+      "id": "FID-043",
+      "status": "closed",
+      "area": "Rich table merge and structural undo",
+      "finding": "Merge retains ordered paragraphs, pictures, frames, nested tables and drawings; row/cell snapshots retain properties without aliasing. Editor history reuses live identities so later commands remain attached after replay.",
+      "evidence": [
+        "packages/quds_office_engine/test/word_structure_integrity_test.dart",
+        "packages/quds_office_editor/test/word_structural_history_test.dart"
+      ]
+    },
+    {
+      "id": "FID-044",
+      "status": "closed",
+      "area": "Picture accessibility metadata and leading column breaks",
+      "finding": "Native picture title and description remain independent of display name. A middle column break does not suppress an explicit leading column break.",
+      "evidence": [
+        "packages/quds_office_engine/test/word_structure_integrity_test.dart"
+      ]
+    },
+    {
+      "id": "FID-045",
+      "status": "closed",
+      "area": "CrispCloud exact property dialogs",
+      "finding": "Paragraph and margin dialogs retain fractional values, imported tab alignment and leaders, explicit zero and unedited properties. No-op Apply remains clean; selected and auxiliary-story edits are covered through real host controls.",
+      "evidence": [
+        "CrispCloud:test/widget/office_paragraph_fidelity_test.dart",
+        "CrispCloud:docs/office-host-fidelity-20261112.md"
+      ]
+    },
+    {
+      "id": "FID-046",
+      "status": "closed",
+      "area": "Structural scripts and independent edit goldens",
+      "finding": "Authored XML, three committed scripts and semantic JSON expectations cover create/edit/remove transitions across three save/reopen cycles. Invalid structures and late step failures preserve existing output.",
+      "evidence": [
+        "packages/quds_office_engine/test/word_structure_steps_test.dart",
+        "packages/quds_office_engine/tool/fidelity/word_structure_oracle.py",
+        "packages/quds_office_engine/tool/fidelity/test_word_structure_oracle.py"
+      ]
+    },
+    {
+      "id": "FID-047",
+      "status": "closed",
+      "area": "Tracked revision story ownership",
+      "finding": "Tracked revisions bind to the actual paragraph across body, header/footer, note and comment stories; imports, serialization and accept/reject no longer redirect to unrelated body indexes. Native export splits coalesced runs at exact revision boundaries and retains valid hyperlink/inline-field nesting.",
+      "evidence": [
+        "packages/quds_office_engine/test/word_revision_story_test.dart",
+        "packages/quds_office_editor/test/word_revision_story_test.dart",
+        "packages/quds_office_engine/tool/fidelity/revision_story_oracle.py",
+        "packages/quds_office_engine/tool/fidelity/test_revision_story_oracle.py"
+      ],
+      "limits": "Imported note revisions resolve safely. Notes-pane whole-text replacement, structural/formatting changes and overlapping tracked ranges do not yet have complete native change-tracking semantics."
+    },
+    {
+      "id": "FID-048",
+      "status": "open",
+      "area": "Native bibliography part ownership",
+      "finding": "Bibliography export uses hardcoded duplicate custom XML paths and can overwrite unrelated custom XML. Native author containers and rich source metadata need independent preservation checks.",
+      "evidence": [
+        "packages/quds_office_engine/lib/src/word/serial/word_serializer.dart"
+      ]
+    },
+    {
+      "id": "FID-049",
+      "status": "partial",
+      "area": "Complex field editing",
+      "finding": "Simple inline native fields retain instruction, lock and dirty flags, and are atomic during supported edits. Arbitrarily nested, multi-run complex fields still need a range-aware model.",
+      "evidence": [
+        "packages/quds_office_engine/test/inline_field_fidelity_test.dart"
+      ]
+    },
+    {
+      "id": "FID-050",
+      "status": "open",
+      "area": "Tracked revision range rebasing",
+      "finding": "Text insertion, paragraph splitting and overlapping edits within already tracked spans need explicit range transformation coverage; paragraph identity alone cannot establish character-range correctness.",
+      "evidence": [
+        "packages/quds_office_editor/lib/src/embed/office_controller.dart"
+      ]
+    },
+    {
+      "id": "FID-051",
+      "status": "closed",
+      "area": "Imported sparse styles after catalog introduction",
+      "finding": "Introducing a heading/TOC style catalog no longer applies new-document spacing defaults to unrelated imported paragraphs; explicit defaults and overrides still cascade.",
+      "evidence": [
+        "packages/quds_office_engine/test/word_style_introduction_test.dart"
+      ]
+    },
+    {
+      "id": "FID-052",
+      "status": "closed",
+      "area": "Structural oracle corruption blind spots",
+      "finding": "Independent controls reject dangling comment references, broken TOC targets, explicit false cantSplit, incorrect image relationship type and missing native field boundaries.",
+      "evidence": [
+        "packages/quds_office_engine/tool/fidelity/test_word_structure_oracle.py"
+      ]
+    },
+    {
+      "id": "FID-053",
+      "status": "closed",
+      "area": "Direct scripted operation atomicity",
+      "finding": "Late invalid arguments no longer partially mutate run formats, images, cells, stories or sections. Native cached fields reject partial ranges; TOC bookmark targets are unique, empty REF caches are explicit and visibility updates clear partial omission.",
+      "evidence": [
+        "packages/quds_office_engine/test/word_step_atomicity_test.dart"
+      ]
+    },
+    {
+      "id": "FID-054",
+      "status": "closed",
+      "area": "Canvas layout replacement",
+      "finding": "Replacing laid-out pages or compact mode invalidates layout, recalculating viewport extent and geometry before painting.",
+      "evidence": [
+        "packages/quds_office_editor/lib/src/editor_word/render_word_canvas.dart"
       ]
     }
   ]

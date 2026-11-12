@@ -19,7 +19,11 @@ dart test \
   test/xml_whitespace_fidelity_test.dart test/styleless_import_fidelity_test.dart \
   test/table_border_fidelity_test.dart test/word_picture_distance_fidelity_test.dart \
   test/scripted_transitions_test.dart test/note_marker_fidelity_test.dart \
-  test/bookmark_fidelity_test.dart test/content_control_fidelity_test.dart
+  test/bookmark_fidelity_test.dart test/content_control_fidelity_test.dart \
+  test/word_edit_integrity_test.dart test/inline_field_fidelity_test.dart \
+  test/word_structure_steps_test.dart test/word_structure_integrity_test.dart \
+  test/word_revision_story_test.dart test/word_step_atomicity_test.dart \
+  test/word_style_introduction_test.dart
 dart run tool/fidelity/scenarios.dart
 python3 tool/fidelity/corpus.py verify
 dart run tool/fidelity/cross_format.dart
@@ -42,6 +46,9 @@ python3 tool/fidelity/note_markers_oracle.py
 python3 tool/fidelity/bookmarks_oracle.py
 python3 tool/fidelity/content_controls_oracle.py
 python3 tool/fidelity/unsupported_word_audit.py
+python3 tool/fidelity/inline_fields_oracle.py
+python3 tool/fidelity/word_structure_oracle.py
+python3 tool/fidelity/revision_story_oracle.py
 python3 tool/fidelity/audit_operations.py
 python3 tool/fidelity/inventory.py verify
 python3 -m unittest discover -s tool/fidelity -p 'test_*.py'

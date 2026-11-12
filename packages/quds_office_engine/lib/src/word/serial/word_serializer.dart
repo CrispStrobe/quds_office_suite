@@ -10,6 +10,7 @@ import '../../xml/namespaces.dart';
 import '../../xml/xml_node.dart';
 import '../../xml/xml_writer.dart';
 import '../math/omml_io.dart';
+import '../model/wml_clone.dart';
 import '../model/wml_document.dart';
 import '../model/word_bookmarks.dart';
 import '../model/word_content_controls.dart';
@@ -310,7 +311,15 @@ class WordSerializer {
     w.writeStartElement('r', prefix: 'w');
     w.writeStartElement('instrText', prefix: 'w');
     w.writeAttribute('xml:space', 'preserve');
-    w.writeText(' TOC \\o "${toc.minLevel}-${toc.maxLevel}" \\h \\z \\u ');
+    final String numberSwitch = !toc.showPageNumbers
+        ? ' \\n'
+        : toc.omitPageNumbersFromLevel != null &&
+              toc.omitPageNumbersThroughLevel != null
+        ? ' \\n "${toc.omitPageNumbersFromLevel}-${toc.omitPageNumbersThroughLevel}"'
+        : '';
+    w.writeText(
+      ' TOC \\o "${toc.minLevel}-${toc.maxLevel}" \\h \\z \\u$numberSwitch ',
+    );
     w.writeEndElement();
     w.writeEndElement();
     _writeFieldChar(w, 'separate');
@@ -318,14 +327,22 @@ class WordSerializer {
     final int count = toc.itemParagraphs.length;
     for (int i = 0; i < count; i++) {
       final WmlParagraph para = _copyParagraph(toc.itemParagraphs[i]);
-      para.properties.tabs = <WmlTabStop>[
-        WmlTabStop(
-          position: 468,
-          alignment: WmlTabAlignment.right,
-          leader: WmlTabLeader.dot,
-        ),
-      ];
-      if (toc.showPageNumbers && i < toc.entries.length) {
+      final bool showNumber =
+          i < toc.entries.length &&
+          toc.showsPageNumberForLevel(toc.entries[i].level);
+      if (showNumber &&
+          !para.properties.tabs.any(
+            (tab) => tab.alignment == WmlTabAlignment.right,
+          )) {
+        para.properties.tabs.add(
+          const WmlTabStop(
+            position: 468,
+            alignment: WmlTabAlignment.right,
+            leader: WmlTabLeader.dot,
+          ),
+        );
+      }
+      if (showNumber) {
         para.inlines.add(WmlRun(text: '\t${toc.entries[i].pageNumber}'));
       }
       _writeParagraph(w, para);
@@ -337,7 +354,7 @@ class WordSerializer {
 
   WmlParagraph _copyParagraph(WmlParagraph source) {
     return WmlParagraph(
-      properties: source.properties,
+      properties: source.properties.copy(),
       inlines: <WmlInline>[
         for (final WmlInline inline in source.inlines)
           if (inline is WmlRun)
@@ -348,6 +365,9 @@ class WordSerializer {
               commentIds: List<int>.from(inline.commentIds),
               noteRefId: inline.noteRefId,
               noteRefEndnote: inline.noteRefEndnote,
+              fieldInstruction: inline.fieldInstruction,
+              fieldLocked: inline.fieldLocked,
+              fieldDirty: inline.fieldDirty,
             )
           else
             inline,
@@ -606,10 +626,7 @@ class WordSerializer {
       }
     }
     if (paragraph.properties.columnBreakBefore &&
-        !paragraph.inlines.any(
-          (WmlInline inline) =>
-              inline is WmlBreak && inline.type == WmlBreakType.column,
-        )) {
+        !_hasLeadingColumnBreak(paragraph)) {
       w.writeStartElement('r', prefix: 'w');
       w.writeStartElement('br', prefix: 'w');
       w.writeAttribute('w:type', 'column');
@@ -656,7 +673,10 @@ class WordSerializer {
         while (end < paragraph.inlines.length) {
           final WmlInline next = paragraph.inlines[end];
           if (next is! WmlRun ||
-              next.hyperlink?.displayTarget != link.displayTarget) {
+              next.hyperlink == null ||
+              next.hyperlink!.anchor != link.anchor ||
+              next.hyperlink!.url != link.url ||
+              next.hyperlink!.file != link.file) {
             break;
           }
           end++;
@@ -751,52 +771,85 @@ class WordSerializer {
     WmlRun inline,
     int offset,
   ) {
-    final WmlRevision? revision = _revisionAt(
-      paragraph,
-      offset,
-      inline.text.length,
-    );
-    if (revision == null) {
+    final List<WmlRevision> revisions = _revisionsFor(paragraph).toList();
+    if (revisions.isEmpty || inline.text.isEmpty) {
       _writeRun(w, inline);
       return;
     }
-    w.writeStartElement(
-      revision.kind == WmlRevisionKind.delete ? 'del' : 'ins',
-      prefix: 'w',
-    );
-    w.writeAttribute('w:id', '${revision.id}');
-    w.writeAttribute('w:author', revision.author);
-    if (revision.dateIso.isNotEmpty) {
-      w.writeAttribute('w:date', revision.dateIso);
-    }
-    _writeRun(w, inline, deleted: revision.kind == WmlRevisionKind.delete);
-    w.writeEndElement();
-  }
-
-  WmlRevision? _revisionAt(WmlParagraph paragraph, int offset, int length) {
-    final WmlDocument? document = _document;
-    if (document == null || length <= 0) {
-      return null;
-    }
-    var index = 0;
-    for (final WmlParagraph item in document.paragraphs) {
-      if (identical(item, paragraph)) {
-        final int end = offset + length;
-        for (final WmlRevision revision in document.revisions) {
-          if (revision.paragraphIndex == index &&
-              revision.start < end &&
-              revision.end > offset) {
-            return revision;
-          }
+    final int length = inline.text.length;
+    final Set<int> boundaries = <int>{0, length};
+    if (!inline.isAtomic) {
+      for (final WmlRevision revision in revisions) {
+        if (revision.start < offset + length && revision.end > offset) {
+          boundaries
+            ..add((revision.start - offset).clamp(0, length))
+            ..add((revision.end - offset).clamp(0, length));
         }
-        return null;
       }
-      index++;
     }
-    return null;
+    final List<int> cuts = boundaries.toList()..sort();
+    for (var i = 1; i < cuts.length; i++) {
+      final int start = offset + cuts[i - 1];
+      final int end = offset + cuts[i];
+      WmlRevision? tracked;
+      for (final WmlRevision revision in revisions) {
+        if (revision.start < end && revision.end > start) {
+          tracked = revision;
+          break;
+        }
+      }
+      final WmlRun run = cuts.length == 2
+          ? inline
+          : (WmlClone.inlines(<WmlInline>[inline]).single as WmlRun
+              ..text = inline.text.substring(cuts[i - 1], cuts[i]));
+      _writeRun(w, run, revision: tracked);
+    }
   }
 
-  void _writeRun(XmlWriter w, WmlRun inline, {bool deleted = false}) {
+  bool _hasLeadingColumnBreak(WmlParagraph paragraph) {
+    for (final WmlInline inline in paragraph.inlines) {
+      if (inline is WmlRun && inline.text.isEmpty) continue;
+      return inline is WmlBreak && inline.type == WmlBreakType.column;
+    }
+    return false;
+  }
+
+  Iterable<WmlRevision> _revisionsFor(WmlParagraph paragraph) sync* {
+    final WmlDocument? document = _document;
+    if (document == null) return;
+    for (final WmlRevision revision in document.revisions) {
+      if (revision.accepted == null &&
+          identical(
+            revision.targetParagraph ??
+                WordRevisions.resolveParagraph(document, revision),
+            paragraph,
+          )) {
+        yield revision;
+      }
+    }
+  }
+
+  void _writeRun(XmlWriter w, WmlRun inline, {WmlRevision? revision}) {
+    final String? instruction = inline.fieldInstruction;
+    if (instruction != null) {
+      w.writeStartElement('fldSimple', prefix: 'w');
+      w.writeAttribute('w:instr', instruction);
+      if (inline.fieldLocked) w.writeAttribute('w:fldLock', '1');
+      if (inline.fieldDirty != null) {
+        w.writeAttribute('w:dirty', inline.fieldDirty! ? '1' : '0');
+      }
+    }
+    // Native simple fields contain tracked runs. A fldSimple inside ins/del
+    // is not a valid WordprocessingML run-content child.
+    final bool deleted = revision?.kind == WmlRevisionKind.delete;
+    if (revision != null) {
+      w.writeStartElement(deleted ? 'del' : 'ins', prefix: 'w');
+      w.writeAttribute('w:id', '${revision.id}');
+      w.writeAttribute('w:author', revision.author);
+      if (revision.dateIso.isNotEmpty) {
+        w.writeAttribute('w:date', revision.dateIso);
+      }
+    }
     w.writeStartElement('r', prefix: 'w');
     _writeRPr(w, inline.properties);
     if (inline.noteRefId != null) {
@@ -805,11 +858,12 @@ class WordSerializer {
         prefix: 'w',
         attributes: <String, String>{'w:id': '${inline.noteRefId}'},
       );
-      w.writeEndElement();
-      return;
+    } else {
+      _writeRunContent(w, inline.text, deleted: deleted);
     }
-    _writeRunContent(w, inline.text, deleted: deleted);
     w.writeEndElement();
+    if (revision != null) w.writeEndElement();
+    if (instruction != null) w.writeEndElement();
   }
 
   void _writeRunContent(XmlWriter w, String text, {required bool deleted}) {
