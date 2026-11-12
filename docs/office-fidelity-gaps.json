@@ -5,7 +5,7 @@
     "engine": "CrispStrobe/quds_office_suite",
     "host": "CrispStrobe/CrispCloud"
   },
-  "branch": "feature/office-fidelity-consolidation-20261112",
+  "branch": "feature/office-fidelity-gap-closure-20261112",
   "scope": "Reproduced and investigated gaps; the source-hashed line inventory is separate. Closed means the cited bounded regression is covered, not exhaustive format support.",
   "status_definitions": {
     "closed": "Reproduced gap fixed and protected by named evidence.",
@@ -311,21 +311,35 @@
     },
     {
       "id": "FID-027",
-      "status": "guarded",
+      "status": "partial",
       "area": "Formula-aware sheet renaming",
-      "finding": "The script refuses a sheet rename if formulas, names, charts or pivots refer to it; full reference rewriting is not implemented.",
+      "finding": "The shared engine and editor now rename worksheets atomically across local formula qualifiers, defined/print names, validation/conditional rules, links, consolidation, chart references and pivot sources. Quoted names, apostrophes, case variants, repeated range endpoints and three-dimensional endpoints are covered; formula strings, structured references, external qualifiers and their caches remain unchanged. Undo and redo preserve unrelated later edits and save-generated cached results.",
       "evidence": [
-        "packages/quds_office_engine/tool/fidelity/sheet_steps.dart"
-      ]
+        "packages/quds_office_engine/lib/src/sheet/model/sheet_rename.dart",
+        "packages/quds_office_engine/test/sheet_rename_fidelity_test.dart",
+        "packages/quds_office_engine/test/sheet_rename_adversarial_test.dart",
+        "packages/quds_office_engine/test/sheet_formula_cache_fidelity_test.dart",
+        "packages/quds_office_editor/test/sheet_rename_controller_test.dart",
+        "packages/quds_office_engine/tool/fidelity/sheet_rename_oracle.py",
+        "packages/quds_office_engine/tool/fidelity/test_sheet_rename_oracle.py",
+        "docs/evidence/office-fidelity-gap-closure-20261112/focused-sheet-native/acceptance-summary.json"
+      ],
+      "limits": "Opaque executable/data-model reference owners, unknown reference-bearing XML, lossy modified native projections, incomplete shared formulas and array/data-table formulas reject before mutation. Unsupported external, three-dimensional, whole-row/column and qualified-name evaluation retains authored caches; it is not claimed as evaluation support. Native acceptance covers one independently authored workbook and three renamed exports against a separately authored expected package with 34 prescribed scalar changes; it does not establish arbitrary Excel formula or Microsoft Office equivalence."
     },
     {
       "id": "FID-028",
-      "status": "guarded",
+      "status": "closed",
       "area": "Slide reordering with sections",
-      "finding": "The script refuses slide reorder when presentation sections would also need rewriting.",
+      "finding": "The shared atomic reorder plan retains native section GUIDs, order, empty sections, per-slide metadata and namespace bindings. The moved slide adopts the original destination slide section, while every unaffected membership stays unchanged. Editor history retains active-slide identity. Independent direct/isolate XML and native-render checks cover within-section, forward, backward and emptied-section moves through three saves.",
       "evidence": [
-        "packages/quds_office_engine/tool/fidelity/slide_steps.dart"
-      ]
+        "packages/quds_office_engine/test/slide_section_fidelity_test.dart",
+        "packages/quds_office_editor/test/slide_section_reorder_test.dart",
+        "packages/quds_office_engine/tool/fidelity/slide_sections_oracle.py",
+        "packages/quds_office_engine/tool/fidelity/test_slide_sections_oracle.py",
+        "tool/office-validation/render.py",
+        "docs/evidence/office-fidelity-gap-closure-20261112/focused-slide-native/acceptance-summary.json"
+      ],
+      "limits": "Malformed, duplicated, orphaned, nonconsecutive or ambiguous memberships, stale plans and invalid native slide relationships reject before mutation. Closure covers the independently authored six-slide, six-section corpus and its named permutations; it does not certify all PowerPoint extension vocabularies or rendering engines."
     },
     {
       "id": "FID-029",
@@ -421,19 +435,21 @@
     {
       "id": "FID-038",
       "status": "closed",
-      "area": "CrispCloud Office search fidelity and bounds",
-      "finding": "Search follows relocated main/story parts, note references, workbook and slide order, used shared strings and speaker notes. Strict OOXML namespaces are recognized; external and escaping relationships are rejected; input and emitted UTF-8 text share bounded processing rules.",
+      "area": "Shared Office search fidelity and bounds",
+      "finding": "Office text extraction and package graph navigation live in the pure-Dart Quds engine. Search follows relocated main/story parts, note references, workbook and slide order, used shared strings and speaker notes. Namespace-aware graph checks reject duplicate identities, ambiguous main parts, escaping relationships, malformed selected XML/ZIP and exhausted input/output budgets. CrispCloud owns cloud traversal and consumes the public engine API.",
       "evidence": [
-        "CrispCloud:test/office_search_fidelity_test.dart",
-        "CrispCloud:lib/services/office_search_text.dart",
-        "CrispCloud:lib/services/office_package_parts.dart"
+        "packages/quds_office_engine/test/office_search_fidelity_test.dart",
+        "packages/quds_office_engine/test/office_package_parts_test.dart",
+        "packages/quds_office_engine/lib/src/extract/office_search_text.dart",
+        "packages/quds_office_engine/lib/src/opc/office_package_parts.dart",
+        "CrispCloud:test/full_text_search_test.dart"
       ]
     },
     {
       "id": "FID-039",
       "status": "closed",
       "area": "Actual host outputs and coverage provenance",
-      "finding": "The host requires exactly forty-one valid captured DOCX outputs, then independently validates them with Open XML SDK. Fresh Office LCOV and engine VM reports list unhit instrumented lines, absent files and current source hashes. Helpers reject malformed records, missing source paths and out-of-range line numbers; clean-directory collection is required because same-length stale input cannot be detected from coverage alone.",
+      "finding": "The host requires exactly fifty-nine valid captured DOCX outputs and validates the captured bytes independently with Open XML SDK. Fresh Office LCOV and engine VM reports list unhit instrumented lines, absent files and current source hashes. The explicit host coverage scope contains ten host integration files, including captured conversion destinations and the conversion action/dialog; six reusable parsing/package/conversion modules are maintained in Quds. Coverage percentages across the old and new scopes are not directly comparable. Helpers reject malformed records, missing source paths and out-of-range line numbers; fresh clean-directory collection is required because same-length stale input cannot be detected from coverage alone.",
       "evidence": [
         "CrispCloud:tool/office_host_evidence.py",
         "CrispCloud:tool/test_office_host_evidence.py",
@@ -866,6 +882,19 @@
       ],
       "limits": "This protects the shared insertion API used by the editor; arbitrary direct mutation of model IDs is not assigned a new identity automatically.",
       "consolidated_from": "coverage:FID-073"
+    },
+    {
+      "id": "FID-076",
+      "status": "closed",
+      "area": "Native slide placeholder inheritance",
+      "finding": "Saving a slide retains modeled placeholder presence, type and index in p:nvPr/p:ph, including omitted defaults. This preserves inherited title alignment and bullets. A single-property native probe reproduced the cause; the six-slide source and ten direct/isolate section permutations now match exact source page text and RGB fingerprints through three saves.",
+      "evidence": [
+        "packages/quds_office_engine/lib/src/slide/shapes/drawingml.dart",
+        "packages/quds_office_engine/test/slide_section_fidelity_test.dart",
+        "docs/evidence/office-fidelity-gap-closure-20261112/focused-slide-native/placeholder-only-probe.json",
+        "docs/evidence/office-fidelity-gap-closure-20261112/focused-slide-native/render-report.json"
+      ],
+      "limits": "Closure is limited to modeled placeholder presence/type/index and the authored layouts. It does not certify every placeholder extension or arbitrary theme/master inheritance."
     }
   ],
   "evidence_path_convention": "Unprefixed paths are relative to quds_office_suite; CrispCloud: paths are relative to the host repository."
