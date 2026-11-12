@@ -101,7 +101,7 @@ This fork is integrated with [CrispCloud](https://github.com/CrispStrobe/CrispCl
 
 Legacy `.doc`/`.dot` parsing and separate DOCX/DOCM conversion are maintained in [legacy-doc-parser](https://github.com/CrispStrobe/legacy-doc-parser). The engine exposes compatibility exports from the pinned workspace copy in `packages/legacy_doc_parser`; its `UPSTREAM.json` records the source and workspace-only patches. The suite's MIT license does not replace that dependency's MPL-2.0 license or its third-party notices.
 
-Use Flutter **3.47.8**, pinned in `.fvmrc` and CI, and resolve dependencies from this workspace. Source-based consumers outside the workspace must provide the same standalone parser dependency or a matching local override. Pub.dev badges describe published upstream packages; they do not imply that this fork's additions have been published.
+Use Flutter **3.47.8**, pinned in `.fvmrc` and CI, and resolve dependencies from this workspace. This fork marks its modified engine/editor packages as source-only (`publish_to: none`) and records their sibling package dependencies explicitly. Use the complete workspace or its matching source checkout. Pub.dev badges describe published upstream packages; they do not imply that this fork's additions have been published.
 
 This is the CrispStrobe fork of
 [MohammedAsaadAsaad/quds_office_suite](https://github.com/MohammedAsaadAsaad/quds_office_suite).
