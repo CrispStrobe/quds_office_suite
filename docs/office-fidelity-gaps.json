@@ -1113,6 +1113,18 @@
         "docs/evidence/office-fidelity-workflows-20261112/serial-native-interruption-report.json"
       ],
       "limits": "The process termination cause is not established. Bounded retry does not turn an exhausted conversion or a failed schema/text/pixel comparison into acceptance. Platforms without SIGKILL do not enable this recovery."
+    },
+    {
+      "id": "FID-096",
+      "status": "in_progress",
+      "area": "Native evidence for image-only Word picture fixtures",
+      "finding": "Full host native validation exposed six authored JPEG/GIF Word documents with visible pictures but no text. They need an explicit Word pixel/geometry oracle; successful schema checks and repeated-save identity alone cannot establish that the image rendered. The first full run retains those failures while the bounded oracle is completed.",
+      "evidence": [
+        "CrispCloud:test/widget/office_picture_fidelity_test.dart",
+        "CrispCloud:docs/evidence/office-fidelity-workflows-20261112/initial-host-native-failed-report.json",
+        "tool/office-validation/render.py",
+        "tool/office-validation/test_render.py"
+      ]
     }
   ],
   "evidence_path_convention": "Unprefixed paths are relative to quds_office_suite; CrispCloud: paths are relative to the host repository."

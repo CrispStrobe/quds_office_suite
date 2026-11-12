@@ -13,7 +13,7 @@ schema/render gates. This follow-up preserves that work on
 CrispCloud initially pins suite revision
 `84b11839126a9577b6688b6acf80edd3cc2601ee` through 237 selected files. Its
 corresponding feature branch now pins
-`3e4502152d4b6c99d164f621b5271ba4b0a7ec71` and verifies all 378 selected
+`c8d5ba3cfddf8c6fd3fa736deab992be1e0cc3aa` and verifies all 378 selected
 shared files. The app's path dependencies need this explicit synchronization;
 changes to the suite branch alone cannot update it. Later evidence-only suite
 commits do not require a new implementation pin.
@@ -169,8 +169,9 @@ zero validation errors. These are separate generated package instances,
 including each repository's 305 engine outputs. Native rendering has its own
 reports and qualifications; schema acceptance alone is not a visual result.
 
-The ledger contains 95 tracked findings: 81 closed within their stated scope,
-seven partial, six open and one explicitly guarded operation. Remaining work
+The ledger contains 96 tracked findings: 81 closed within their stated scope,
+seven partial, six open, one explicitly guarded operation and one active
+image-only Word oracle correction. Remaining work
 includes broader platform/font rendering, branch and unhit-line coverage,
 arbitrary content-control bindings, mixed bookmark/range topology, general
 spreadsheet formulas and font metrics, complex field refresh, overlapping

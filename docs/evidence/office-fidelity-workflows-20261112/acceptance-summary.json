@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "status": "passed_with_explicit_native_limitations",
+  "created_at_utc": "2026-11-12T15:45:16.240468+00:00",
+  "repository": "CrispStrobe/quds_office_suite",
+  "branch": "feature/office-fidelity-workflows-20261112",
+  "suite_code_checkpoint": "c8d5ba3cfddf8c6fd3fa736deab992be1e0cc3aa",
+  "schema": {
+    "files": 327,
+    "failures": 0,
+    "report": "suite-schema-report.json"
+  },
+  "native": {
+    "renderer": "LibreOfficeDev 26.8.0.0.alpha0 2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+    "input_files": 327,
+    "rendered_files": 320,
+    "rendered_pages": 575,
+    "native_schema_only_files": 7,
+    "cycle_groups": 97,
+    "authored_baseline_comparisons": 37,
+    "page_order_comparisons": 10,
+    "picture_pixel_oracle_files": 0,
+    "failures": 0,
+    "retry_policy": {
+      "maximum_attempts": 3,
+      "retry_returncode": -9,
+      "scope": "SOFFICE conversion only; unchanged input and fresh profile/output per attempt"
+    },
+    "retried_rendered_files": [
+      {
+        "file": "quds_office_engine/fidelity-scripted/sheet/edited.xlsx",
+        "returncodes": [
+          -9,
+          0
+        ]
+      }
+    ],
+    "archived_pdf_and_png_files": 895,
+    "artifact_archive_sha256": "b15c1b3ba21a4a2c82a13739ff13f4d31f0c479114e8c0b5aa15286a184c7231",
+    "archive_verification": "Archive bytes rehashed after compression; decoded PNG dimensions/RGB match the rendering fingerprints. PDF hashes identify retained archive bytes, not a separate conversion-time PDF fingerprint.",
+    "report_sha256": "f70feb4867b0f48f5cebff1b1b37bf3a0f5375bca81af0fc228c7f53b1b96e89",
+    "renderer_script_sha256": "c35e3934005b3c603fff58a9ce27fe5dde814d7dc89aab2af55f4a43a2772a37",
+    "limits": "The seven explicitly qualified suite cases have no visual certification. Native acceptance is specific to the recorded LibreOffice/Poppler corpus and runtime; it does not establish Quds canvas or Microsoft Office pixel equivalence.",
+    "renderer_commit": "c8d5ba3cfddf8c6fd3fa736deab992be1e0cc3aa"
+  },
+  "native_python_controls_passed": 60,
+  "engine_measured_commit": "12799e2a6b371226012163a092fab866c133f967",
+  "engine_full_suite": {
+    "passed": 1425,
+    "skipped": 1,
+    "skip_reason": "Existing multi-face PDF test: Latin face already covers Arabic; cannot force F3"
+  },
+  "feature_matrix": {
+    "receipt": "/workspace/scratch/dcd413fa34f4/quds_office_suite/packages/quds_office_engine/build/fidelity-features/comments-drawings-endnotes-footnotes-headings-images-paragraphs-placement-references-slides-spreadsheets-styles-tables-textflow-tocs.json",
+    "status": "passed",
+    "features": 15,
+    "outputs": 214,
+    "dart_tests": 565,
+    "python_controls": 205,
+    "commands": 38,
+    "oracles": 19,
+    "input_tree_sha256": "f60e6be31ae2cf6a594b49b4e1c1db425ebb38c6b732d1a8ca2c5c105291f99d"
+  },
+  "portable_gate": {
+    "dart_tests": 963,
+    "python_controls": 389,
+    "operations": 67,
+    "expected_outputs": 305,
+    "verified_outputs": 305,
+    "inventory_errors": []
+  },
+  "engine_coverage": {
+    "covered_lines": 44326,
+    "instrumented_lines": 53898,
+    "unhit_lines": 9572,
+    "uninstrumented_files": 10
+  },
+  "editor": {
+    "passed": 452,
+    "skipped": 1,
+    "reviewed_pngs": 27,
+    "required_exports": 22
+  },
+  "coverage_scope": "Instrumented line execution; branch correctness and uninstrumented code remain unproven."
+}
