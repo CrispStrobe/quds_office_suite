@@ -92,3 +92,14 @@ The root engine CI job now sets up Python 3.12, installs the parser's exact
 the parser's Python test discovery. This avoids depending on an image library
 that happens to be preinstalled in a developer environment. The existing
 workspace Dart dependency settings remain unchanged.
+
+## Continuation: arcs and object revision provenance
+
+The development branch now pins parser `ba5f5b0cdd540bd0c03f62aabc88faadd8660e0b`.
+All 360 upstream files were checked before and after synchronization; only the
+existing workspace pubspec adaptation remains. The [continuation receipt](evidence/legacy-doc-parser-continuation-20261112/README.md)
+records 666 parser tests and 21 focused legacy bridge tests passing.
+
+This is the same runtime accepted by the standalone 153-case Open XML SDK gate.
+That gate caught and corrected paragraph-mark revision ordering and OLE shape
+identifiers; it does not establish visual identity or native object activation.
