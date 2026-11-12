@@ -187,6 +187,82 @@ void main() {
   );
 
   test(
+    'direct pixel edits cannot regain stale native provenance at a later metric',
+    () {
+      final book = SheetDeserializer().read(_native());
+      final sheet = book.firstSheet;
+      sheet.columnWidths[1] =
+          166; // Edited at MDW7; native 8.72 projects to 61.
+      book.resolveColumnMetrics(
+        _measured,
+      ); // The old native width also maps to 166 at MDW19.
+      expect(sheet.columnWidth(1), 166);
+      book.resolveColumnMetrics(
+        (_) => const SmlColumnMetrics(
+          maximumDigitWidthPx: 12,
+          resolvedFontFamily: 'Other face',
+        ),
+      );
+      expect(sheet.columnWidth(1), 166); // Must not become native 8.72 -> 105.
+      expect(sheet.captureColumn(1).nativeWidth, isNull);
+    },
+  );
+
+  test(
+    'column and grid snapshots discard mismatched direct-edit provenance',
+    () {
+      for (final grid in [false, true]) {
+        final book = SheetDeserializer().read(_native());
+        final sheet = book.firstSheet;
+        sheet.columnWidths[1] = 166;
+        final snapshot = sheet.captureColumn(1);
+        final all = sheet.captureColumns();
+        expect(snapshot.nativeWidth, isNull);
+        expect(all[1]!.nativeWidth, isNull);
+        book.resolveColumnMetrics(_measured);
+        if (grid) {
+          sheet.restoreColumns(all);
+        } else {
+          sheet.restoreColumn(1, snapshot);
+        }
+        book.resolveColumnMetrics(
+          (_) => const SmlColumnMetrics(
+            maximumDigitWidthPx: 12,
+            resolvedFontFamily: 'Other face',
+          ),
+        );
+        expect(sheet.columnWidth(1), 166);
+      }
+    },
+  );
+
+  test(
+    'observed direct removals and export mismatches invalidate native association',
+    () {
+      final book = SheetDeserializer().read(_native());
+      final sheet = book.firstSheet;
+      sheet.columnWidths[1] = 166;
+      sheet.exportColumnWidth(
+        1,
+      ); // Observe the mismatch before the caller edits again.
+      sheet.columnWidths[1] = 61;
+      book.resolveColumnMetrics(_measured);
+      expect(sheet.columnWidth(1), 61);
+      sheet.columnWidths.remove(0);
+      book.resolveColumnMetrics(
+        (_) => const SmlColumnMetrics(
+          maximumDigitWidthPx: 12,
+          resolvedFontFamily: 'Other face',
+        ),
+      );
+      expect(sheet.captureColumn(0).nativeWidth, isNull);
+      sheet.columnWidths[0] = 105;
+      book.resolveColumnMetrics(_measured);
+      expect(sheet.columnWidth(0), 105);
+    },
+  );
+
+  test(
     'column history reprojects native states and preserves unrelated flags',
     () {
       final book = SheetDeserializer().read(_native());

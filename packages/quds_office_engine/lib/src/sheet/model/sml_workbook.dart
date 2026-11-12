@@ -192,6 +192,7 @@ class SmlCell {
     this.value,
     this.formula,
     this.styleIndex = 0,
+    this.hasExplicitStyleIndex = false,
     this.horizontalAlign = SmlHAlign.general,
     this.fillRgb = '',
     this.fontRgb = '',
@@ -216,6 +217,10 @@ class SmlCell {
 
   /// styleIndex API.
   int styleIndex;
+
+  /// Whether the imported cell explicitly selected its style, including zero.
+  /// Retained through copies so native style presence survives serialization.
+  bool hasExplicitStyleIndex;
 
   /// horizontalAlign API.
   SmlHAlign horizontalAlign;
@@ -530,10 +535,35 @@ class SmlWorksheet {
     _nativeBaseColumnWidth = baseCharacters;
   }
 
+  // Direct edits to the public pixel map bypass setColumnWidth. Once observed,
+  // a mismatch permanently severs its old native association: a later metric
+  // must not accidentally make the edited value look like an untouched import.
+  double? _currentImportedColumnWidth(int col) {
+    final native = _importedColumnWidths[col];
+    if (native != null &&
+        columnWidths[col] !=
+            columnWidthFromExcel(
+              native,
+              maximumDigitWidth: maximumDigitWidthPx,
+            )) {
+      _importedColumnWidths.remove(col);
+      return null;
+    }
+    return native;
+  }
+
+  bool _hasNativeColumnProjection(SmlColumnSnapshot state) =>
+      state.nativeWidth != null &&
+      state.pixelWidth ==
+          columnWidthFromExcel(
+            state.nativeWidth!,
+            maximumDigitWidth: state.maximumDigitWidthPx,
+          );
+
   /// Captures a column for editor history without flattening its native width.
   SmlColumnSnapshot captureColumn(int col) => SmlColumnSnapshot._(
     pixelWidth: columnWidths[col],
-    nativeWidth: _importedColumnWidths[col],
+    nativeWidth: _currentImportedColumnWidth(col),
     maximumDigitWidthPx: maximumDigitWidthPx,
     properties: columnProperties[col] ?? const <String, String>{},
   );
@@ -543,15 +573,9 @@ class SmlWorksheet {
   double projectedColumnWidth(SmlColumnSnapshot state) {
     final pixels = state.pixelWidth;
     if (pixels == null) return effectiveDefaultColumnWidthPx;
-    final native = state.nativeWidth;
-    if (native != null &&
-        pixels ==
-            columnWidthFromExcel(
-              native,
-              maximumDigitWidth: state.maximumDigitWidthPx,
-            )) {
+    if (_hasNativeColumnProjection(state)) {
       return columnWidthFromExcel(
-        native,
+        state.nativeWidth!,
         maximumDigitWidth: maximumDigitWidthPx,
       );
     }
@@ -570,7 +594,7 @@ class SmlWorksheet {
     } else {
       columnWidths[col] = projectedColumnWidth(state);
     }
-    if (state.nativeWidth == null) {
+    if (!_hasNativeColumnProjection(state)) {
       _importedColumnWidths.remove(col);
     } else {
       _importedColumnWidths[col] = state.nativeWidth!;
@@ -616,14 +640,11 @@ class SmlWorksheet {
       throw ArgumentError.value(maximumDigitWidth, 'maximumDigitWidth');
     }
     if (maximumDigitWidth == _maximumDigitWidthPx) return;
-    for (final entry in _importedColumnWidths.entries) {
-      if (columnWidths[entry.key] ==
-          columnWidthFromExcel(
-            entry.value,
-            maximumDigitWidth: _maximumDigitWidthPx,
-          )) {
-        columnWidths[entry.key] = columnWidthFromExcel(
-          entry.value,
+    for (final col in _importedColumnWidths.keys.toList()) {
+      final native = _currentImportedColumnWidth(col);
+      if (native != null) {
+        columnWidths[col] = columnWidthFromExcel(
+          native,
           maximumDigitWidth: maximumDigitWidth,
         );
       }
@@ -847,15 +868,8 @@ class SmlWorksheet {
   /// Retains untouched import precision and converts edited pixel widths.
   double exportColumnWidth(int col) {
     final px = columnWidths[col] ?? effectiveDefaultColumnWidthPx;
-    final imported = _importedColumnWidths[col];
-    if (imported != null &&
-        columnWidthFromExcel(
-              imported,
-              maximumDigitWidth: maximumDigitWidthPx,
-            ) ==
-            px) {
-      return imported;
-    }
+    final imported = _currentImportedColumnWidth(col);
+    if (imported != null) return imported;
     return columnWidthToExcel(px, maximumDigitWidth: maximumDigitWidthPx);
   }
 
@@ -865,14 +879,8 @@ class SmlWorksheet {
       columnProperties[col] ?? const <String, String>{},
     );
     final width = columnWidths[col];
-    final original = _importedColumnWidths[col];
-    if (width != null &&
-        (original == null ||
-            columnWidthFromExcel(
-                  original,
-                  maximumDigitWidth: maximumDigitWidthPx,
-                ) !=
-                width)) {
+    final original = _currentImportedColumnWidth(col);
+    if (width != null && original == null) {
       properties['customWidth'] = '1';
     }
     return properties;
