@@ -7,6 +7,7 @@ import '../core/input_bridge.dart';
 import '../core/virtual_viewport.dart';
 import '../editor_sheet/inline_cell_editor.dart';
 import '../editor_sheet/selection_matrix.dart';
+import '../editor_sheet/sheet_font_metrics.dart';
 import '../editor_sheet/sheet_scroll_extent.dart';
 import '../editor_word/caret_engine.dart';
 import '../editor_word/office_ruler.dart';
@@ -7263,12 +7264,14 @@ class SheetEditorController extends OfficeController {
     SmlWorkbook? workbook,
     super.config,
     this._activeSheet = 0,
+    this.columnMetricsResolver = SheetFontMetrics.measure,
   }) : workbook = workbook ?? SmlWorkbook() {
     cellEditor = InlineCellEditor(
       onCommit: _commitFormula,
       onChanged: _onCellEditorChanged,
       commitOnNewline: true,
     );
+    this.workbook.resolveColumnMetrics(columnMetricsResolver);
     recalculateWorkbook();
   }
 
@@ -7277,9 +7280,11 @@ class SheetEditorController extends OfficeController {
     Uint8List bytes, {
     String? password,
     OfficeSurfaceConfig? config,
+    SmlColumnMetricsResolver columnMetricsResolver = SheetFontMetrics.measure,
   }) {
     final SheetEditorController controller = SheetEditorController(
       config: config,
+      columnMetricsResolver: columnMetricsResolver,
     );
     controller.loadBytes(bytes, password: password);
     return controller;
@@ -7287,7 +7292,37 @@ class SheetEditorController extends OfficeController {
 
   /// workbook API.
   SmlWorkbook workbook;
+
+  /// Resolves actual font availability; null measurements preserve fallback.
+  final SmlColumnMetricsResolver columnMetricsResolver;
+
+  /// Reprojects dimensions after a host registers fonts. This view-only change
+  /// preserves source width precision, explicit edits, dirty state and history.
+  bool refreshColumnMetrics() {
+    final resolved = workbook.resolveColumnMetrics(columnMetricsResolver);
+    if (resolved) notifyListeners();
+    return resolved;
+  }
+
   int _activeSheet;
+
+  @override
+  set config(OfficeSurfaceConfig value) {
+    if (!value.allowsMutation) _cancelResize();
+    super.config = value;
+  }
+
+  @override
+  void syncConfig(OfficeSurfaceConfig value) {
+    if (!value.allowsMutation) _cancelResize();
+    super.syncConfig(value);
+  }
+
+  @override
+  void setMode(OfficeInteractionMode mode) {
+    if (mode != OfficeInteractionMode.editing) _cancelResize();
+    super.setMode(mode);
+  }
 
   /// selection API.
   final SelectionMatrix selection = SelectionMatrix();
@@ -7335,7 +7370,11 @@ class SheetEditorController extends OfficeController {
     if (workbook.sheets.isEmpty) {
       workbook.sheets.add(SmlWorksheet(name: 'Sheet1', sheetId: 1));
     }
-    return workbook.sheets[_activeSheet.clamp(0, workbook.sheets.length - 1)];
+    final active =
+        workbook.sheets[_activeSheet.clamp(0, workbook.sheets.length - 1)];
+    final metrics = workbook.columnMetrics;
+    if (metrics != null) active.applyColumnMetrics(metrics.maximumDigitWidthPx);
+    return active;
   }
 
   @override
@@ -7486,8 +7525,10 @@ class SheetEditorController extends OfficeController {
   }
 
   void _acceptOpenedWorkbook(SmlWorkbook opened, {required bool recalculate}) {
+    _cancelResize();
     cancelCellEdit();
     workbook = opened;
+    workbook.resolveColumnMetrics(columnMetricsResolver);
     _activeSheet = 0;
     selectedDrawingIndex = null;
     selection.selectCell(const SmlCellRef(0, 0));
@@ -7585,7 +7626,8 @@ class SheetEditorController extends OfficeController {
     if (checked.isEmpty) return false;
     // Validate the buffered formula before committing it, so a malformed
     // qualifier cannot create a cell command ahead of a rejected rename.
-    if (cellEditor.editing && cellEditor.formulaBar.trimLeft().startsWith('=')) {
+    if (cellEditor.editing &&
+        cellEditor.formulaBar.trimLeft().startsWith('=')) {
       SheetRename.rewriteFormula(cellEditor.formulaBar, target.name, name);
     }
     commitPendingEdits();
@@ -8380,70 +8422,118 @@ class SheetEditorController extends OfficeController {
     return <int>[row];
   }
 
-  Map<int, double>? _resizeFromCols;
-  Map<int, double>? _resizeFromRows;
+  Map<int, SmlColumnSnapshot>? _resizeFromCols;
+  Map<int, double?>? _resizeFromRows;
+  SmlWorksheet? _columnResizeSheet;
+  SmlWorksheet? _rowResizeSheet;
+
+  void _restoreRowResize(SmlWorksheet target, Map<int, double?> values) {
+    for (final entry in values.entries) {
+      if (entry.value == null) {
+        target.rowHeights.remove(entry.key);
+      } else {
+        target.rowHeights[entry.key] = entry.value!;
+      }
+    }
+  }
+
+  void _cancelResize() {
+    final columns = _resizeFromCols;
+    final columnTarget = _columnResizeSheet;
+    if (columns != null && columnTarget != null) {
+      for (final entry in columns.entries) {
+        columnTarget.restoreColumn(entry.key, entry.value, widthOnly: true);
+      }
+    }
+    final rows = _resizeFromRows;
+    final rowTarget = _rowResizeSheet;
+    if (rows != null && rowTarget != null) _restoreRowResize(rowTarget, rows);
+    _resizeFromCols = null;
+    _resizeFromRows = null;
+    _columnResizeSheet = null;
+    _rowResizeSheet = null;
+  }
 
   /// previewColumnWidth API.
   void previewColumnWidth(int col, double px) {
-    if (!config.allowsMutation) {
-      return;
+    if (!config.allowsMutation) return;
+    final target = sheet;
+    if (_resizeFromRows != null ||
+        (_columnResizeSheet != null &&
+            !identical(_columnResizeSheet, target))) {
+      commitResize();
     }
     final List<int> cols = _columnsForResize(col);
-    _resizeFromCols ??= <int, double>{
-      for (final int c in cols) c: sheet.columnWidth(c),
-    };
+    final original = _resizeFromCols ??= <int, SmlColumnSnapshot>{};
+    _columnResizeSheet = target;
     for (final int c in cols) {
-      sheet.setColumnWidth(c, px);
+      original.putIfAbsent(c, () => target.captureColumn(c));
+      target.setColumnWidth(c, px);
     }
     notifyListeners();
   }
 
   /// previewRowHeight API.
   void previewRowHeight(int row, double px) {
-    if (!config.allowsMutation) {
-      return;
+    if (!config.allowsMutation) return;
+    final target = sheet;
+    if (_resizeFromCols != null ||
+        (_rowResizeSheet != null && !identical(_rowResizeSheet, target))) {
+      commitResize();
     }
     final List<int> rows = _rowsForResize(row);
-    _resizeFromRows ??= <int, double>{
-      for (final int r in rows) r: sheet.rowHeightAt(r),
-    };
+    final original = _resizeFromRows ??= <int, double?>{};
+    _rowResizeSheet = target;
     for (final int r in rows) {
-      sheet.setRowHeight(r, px);
+      original.putIfAbsent(r, () => target.rowHeights[r]);
+      target.setRowHeight(r, px);
     }
     notifyListeners();
   }
 
-  /// commitResize API.
+  /// Commits to the worksheet captured at preview, even after tab navigation.
+  /// Losing mutation permission restores previews without history or dirtiness.
   void commitResize() {
+    if (!config.allowsMutation) {
+      _cancelResize();
+      return;
+    }
     if (_resizeFromCols != null) {
-      final Map<int, double> from = _resizeFromCols!;
-      final Map<int, double> to = <int, double>{
-        for (final int c in from.keys) c: sheet.columnWidth(c),
+      final target = _columnResizeSheet!;
+      if (!workbook.sheets.any((candidate) => identical(candidate, target))) {
+        _cancelResize();
+        return;
+      }
+      final from = _resizeFromCols!;
+      final to = <int, SmlColumnSnapshot>{
+        for (final int c in from.keys) c: target.captureColumn(c),
       };
       _resizeFromCols = null;
+      _columnResizeSheet = null;
       var changed = false;
       for (final int c in from.keys) {
-        if ((to[c]! - from[c]!).abs() >= 0.5) {
+        if ((target.projectedColumnWidth(to[c]!) -
+                    target.projectedColumnWidth(from[c]!))
+                .abs() >=
+            0.5) {
           changed = true;
           break;
         }
       }
-      if (!changed) {
-        return;
+      for (final entry in from.entries) {
+        target.restoreColumn(entry.key, entry.value, widthOnly: true);
       }
-      for (final MapEntry<int, double> e in from.entries) {
-        sheet.setColumnWidth(e.key, e.value);
-      }
+      if (!changed) return;
       commands.commit(
         _CallbackCommand(
           executeFn: () {
-            for (final MapEntry<int, double> e in to.entries) {
-              sheet.setColumnWidth(e.key, e.value);
+            for (final entry in to.entries) {
+              target.restoreColumn(entry.key, entry.value, widthOnly: true);
             }
           },
           undoFn: () {
-            for (final MapEntry<int, double> e in from.entries) {
-              sheet.setColumnWidth(e.key, e.value);
+            for (final entry in from.entries) {
+              target.restoreColumn(entry.key, entry.value, widthOnly: true);
             }
           },
         ),
@@ -8451,36 +8541,30 @@ class SheetEditorController extends OfficeController {
       return;
     }
     if (_resizeFromRows != null) {
-      final Map<int, double> from = _resizeFromRows!;
-      final Map<int, double> to = <int, double>{
-        for (final int r in from.keys) r: sheet.rowHeightAt(r),
-      };
-      _resizeFromRows = null;
-      var changed = false;
-      for (final int r in from.keys) {
-        if ((to[r]! - from[r]!).abs() >= 0.5) {
-          changed = true;
-          break;
-        }
-      }
-      if (!changed) {
+      final target = _rowResizeSheet!;
+      if (!workbook.sheets.any((candidate) => identical(candidate, target))) {
+        _cancelResize();
         return;
       }
-      for (final MapEntry<int, double> e in from.entries) {
-        sheet.setRowHeight(e.key, e.value);
-      }
+      final from = _resizeFromRows!;
+      final to = <int, double?>{
+        for (final int r in from.keys) r: target.rowHeights[r],
+      };
+      _resizeFromRows = null;
+      _rowResizeSheet = null;
+      final changed = from.keys.any(
+        (r) =>
+            ((to[r] ?? SmlWorksheet.defaultRowHeightPx) -
+                    (from[r] ?? SmlWorksheet.defaultRowHeightPx))
+                .abs() >=
+            0.5,
+      );
+      _restoreRowResize(target, from);
+      if (!changed) return;
       commands.commit(
         _CallbackCommand(
-          executeFn: () {
-            for (final MapEntry<int, double> e in to.entries) {
-              sheet.setRowHeight(e.key, e.value);
-            }
-          },
-          undoFn: () {
-            for (final MapEntry<int, double> e in from.entries) {
-              sheet.setRowHeight(e.key, e.value);
-            }
-          },
+          executeFn: () => _restoreRowResize(target, to),
+          undoFn: () => _restoreRowResize(target, from),
         ),
       );
     }
@@ -11586,7 +11670,7 @@ class _SheetGridSnap {
             fontSize: cell.fontSize,
           ),
       ],
-      widths: Map<int, double>.from(sheet.columnWidths),
+      widths: sheet.captureColumns(),
       heights: Map<int, double>.from(sheet.rowHeights),
       merges: <SmlMerge>[
         for (final SmlMerge merge in sheet.merges) merge.copy(),
@@ -11598,7 +11682,7 @@ class _SheetGridSnap {
   final List<SmlCell> cells;
 
   /// widths API.
-  final Map<int, double> widths;
+  final Map<int, SmlColumnSnapshot> widths;
 
   /// heights API.
   final Map<int, double> heights;
@@ -11622,9 +11706,7 @@ class _SheetGridSnap {
         ..fontBold = cell.fontBold
         ..fontSize = cell.fontSize;
     }
-    sheet.columnWidths
-      ..clear()
-      ..addAll(widths);
+    sheet.restoreColumns(widths);
     sheet.rowHeights
       ..clear()
       ..addAll(heights);
