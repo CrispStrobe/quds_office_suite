@@ -29,6 +29,15 @@ jobs:
       - name: Test vendored legacy DOC parser
         working-directory: packages/legacy_doc_parser
         run: dart test
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install parser oracle test dependencies
+        working-directory: packages/legacy_doc_parser
+        run: python -m pip install -r tool/fidelity/requirements-test.txt
+      - name: Test parser oracle harness
+        working-directory: packages/legacy_doc_parser
+        run: python -m unittest discover -s tool/fidelity -p 'test_*.py'
       - run: dart analyze --fatal-infos
       - run: dart test
 

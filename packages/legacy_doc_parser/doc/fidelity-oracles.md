@@ -1,13 +1,16 @@
 # Fidelity corpus and independent oracles
 
-`tool/fidelity/corpus.json` pins ten authored Office XML fixtures from the MIT
-Quds fork at `ca9853b5b08784beac50df5680176cb4e5b3cb25`, plus the package's
-existing native DOC fixture. Source paths, feature tags, SHA-256 hashes, and
+`tool/fidelity/corpus.json` pins 22 source cases, including ten authored Office
+XML fixtures from the MIT Quds fork at
+`ca9853b5b08784beac50df5680176cb4e5b3cb25`, the package's existing native DOC,
+independent authored controls and public Word/Apache POI binaries.
+Source paths, feature tags, SHA-256 hashes, and
 license provenance travel with the corpus. The Quds expectations are retained
 under `test/fixtures/fidelity/quds-expectations`; they describe original OOXML,
 not a promise that a native DOC bridge can carry every newer OOXML feature.
 
 ```
+python3 -m pip install -r tool/fidelity/requirements-test.txt
 python3 tool/fidelity/oracle.py
 python3 -m unittest discover -s tool/fidelity -p 'test_*.py'
 python3 tool/fidelity/run.py --office /path/to/installed/soffice \
@@ -20,6 +23,11 @@ No Office application is installed or downloaded. Normal unit tests do not
 require native Office. The opt-in runner uses an isolated profile and creates
 a new output directory. Source fixtures are hashed again after every run.
 Package XML and relationships are inspected without fetching external targets.
+
+The portable Python suite requires Python 3.11 or newer and the pinned Pillow
+test dependency for independent colored-border masks. CI installs that declared
+dependency in Python 3.12; a preinstalled local imaging library is not assumed.
+Optional image-appearance native probes additionally use NumPy and PyMuPDF.
 
 For each original DOCX the runner retains its structural snapshot and renders
 the original package before creating a DOC using installed LibreOffice. It
@@ -135,7 +143,7 @@ Primary references:
 
 ## Recovered source goldens and RGB measurements
 
-The reconciled corpus contains 19 pinned source cases. `goldens.py` verifies
+The reconciled corpus contains 22 pinned source cases. `goldens.py` verifies
 two independent source-DOC page records and reviewable PNGs. It has no update
 mode. The compact and extended linked-textbox documents have separate paths
 and hashes; the extended document owns the recovered linked-box page golden.

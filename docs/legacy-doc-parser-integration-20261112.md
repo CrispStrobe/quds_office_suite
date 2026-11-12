@@ -67,3 +67,28 @@ No application behavior changed. The [repair receipt](evidence/legacy-doc-parser
 retains the failing local reproduction and passing follow-up logs: both
 focused tests pass, the complete studio suite passes 16 tests with its two
 existing opt-in screenshot producers skipped, and studio analysis is clean.
+
+## Checkpoint: parser 53a7f0d
+
+The next mirror pins
+[`53a7f0df113f0b88967f7fecd492652ad5c730d5`](https://github.com/CrispStrobe/legacy-doc-parser/commit/53a7f0df113f0b88967f7fecd492652ad5c730d5).
+All 340 upstream files other than the unchanged workspace pubspec match the
+recorded source bytes and modes. This carries the bounded row-revision and
+image-appearance work, the raw review-data audit, and the retained native
+round-trip report with its original source identity.
+
+The [production integration receipt](evidence/legacy-doc-parser-integration-20261112/34e1484/summary.json)
+records 616 parser Dart tests, 104 Python tests, and 1,627 engine tests passing
+(with the same single font-dependent skip). Engine analysis is clean. The
+[follow-up receipt](evidence/legacy-doc-parser-integration-20261112/53a7f0d/summary.json)
+proves that the parser library, tests, example, pubspec, and analysis options
+have identical Git object IDs between that tested production checkpoint and
+this evidence/CI checkpoint. The added audit tooling was freshly analyzed:
+271 informational diagnostics, no warnings or errors. The 104 Python tests
+were rerun successfully.
+
+The root engine CI job now sets up Python 3.12, installs the parser's exact
+`tool/fidelity/requirements-test.txt` declaration (`Pillow==13.0.0`), and runs
+the parser's Python test discovery. This avoids depending on an image library
+that happens to be preinstalled in a developer environment. The existing
+workspace Dart dependency settings remain unchanged.

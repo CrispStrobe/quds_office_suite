@@ -1,0 +1,125 @@
+{
+  "analysis": {
+    "engineIssues": 0,
+    "parser": {
+      "error": 0,
+      "info": 270,
+      "warning": 0
+    }
+  },
+  "ciWorkflowSha256": "417809a2fd9e56c79ffc589d22c173bb688a500f424901c738dcb29cd3ae55db",
+  "commands": [
+    {
+      "arguments": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "test",
+        "--concurrency=4",
+        "--reporter",
+        "expanded"
+      ],
+      "exitCode": 0,
+      "log": {
+        "file": "parser-tests.log.gz",
+        "sha256": "fe0b856a69ccdc2011e25abe5db04b515283540e16172222e7cc55c807b7d845",
+        "uncompressedSha256": "4fb0585f2b3714636cb3c5ad23e787ce5fd83071cdeb86ceb7d4b80fa169b5c3"
+      },
+      "name": "parser-tests",
+      "seconds": 36.528,
+      "workingDirectory": "packages/legacy_doc_parser"
+    },
+    {
+      "arguments": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "analyze"
+      ],
+      "exitCode": 0,
+      "log": {
+        "file": "parser-analysis.log.gz",
+        "sha256": "a2f2976efa60f45bf1de2f02f6f9624c2ad6c0f707ce97033d0c193c0bef18f8",
+        "uncompressedSha256": "390e6eb304f1746bd989f55341403d395e7118ea8d93f09e311a9c519e94bdea"
+      },
+      "name": "parser-analysis",
+      "seconds": 4.776,
+      "workingDirectory": "packages/legacy_doc_parser"
+    },
+    {
+      "arguments": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "test",
+        "--concurrency=4",
+        "--reporter",
+        "expanded"
+      ],
+      "exitCode": 0,
+      "log": {
+        "file": "engine-tests.log.gz",
+        "sha256": "c48290848b6ac448dde5644e25c98a398e473d9680926eb28f9aabcebed4efac",
+        "uncompressedSha256": "8a7290dae4a53ebf4f2b9a6671485f1928c50a5b33e3070cd9b8e48f330a3503"
+      },
+      "name": "engine-tests",
+      "seconds": 120.861,
+      "workingDirectory": "packages/quds_office_engine"
+    },
+    {
+      "arguments": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "analyze",
+        "--fatal-infos"
+      ],
+      "exitCode": 0,
+      "log": {
+        "file": "engine-analysis.log.gz",
+        "sha256": "7ebbd8664f346a74eb817ae88e3b30f2d91550e9cc7799bdf2e5d2694c1c1c5d",
+        "uncompressedSha256": "c557a0c697cdb937104f1423d3c02d6a1062917cb0bcb2830d91db8cf6192af0"
+      },
+      "name": "engine-analysis",
+      "seconds": 9.174,
+      "workingDirectory": "packages/quds_office_engine"
+    },
+    {
+      "arguments": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_*.py"
+      ],
+      "exitCode": 0,
+      "log": {
+        "file": "parser-python.log.gz",
+        "sha256": "66eba7bcb0b25a3f06df2908a76476094a2bb7fb653c7679511e3eddf86c3a4d",
+        "uncompressedSha256": "53ad2880015c079d40766ef6a21d3f4d5961f4a77ed548f6b265be5d2fccb174"
+      },
+      "name": "parser-python",
+      "seconds": 1.031,
+      "workingDirectory": "packages/legacy_doc_parser"
+    }
+  ],
+  "qudsBaseCommit": "07b993580bfdee6d997de0d6037e025419a8e14a",
+  "schema": "quds-office/legacy-parser-integration",
+  "scope": "Exact upstream mirror and consumer integration checks; native receipts retain their recorded source identity.",
+  "tests": {
+    "engineDart": {
+      "passed": 1627,
+      "skipped": 1
+    },
+    "parserDart": {
+      "passed": 616,
+      "skipped": 0
+    },
+    "parserPythonPassed": 104
+  },
+  "upstream": {
+    "commit": "34e14841ef679c6b480673ef5be354286dbd67dc",
+    "exactFileCount": 329,
+    "repository": "CrispStrobe/legacy-doc-parser",
+    "tree": "1853ed03beb9ca2afb8158f6c46fb0cb1da064d5",
+    "upstreamFileCount": 330
+  },
+  "upstreamFilesReceiptSha256": "6dbfc13551f69a2447fe3011cfcec7ad0471bef2d5e3e8495955822cb90d5686",
+  "version": 1,
+  "workspacePubspecSha256": "150af8d89562635bf5a876c0a539c20ae48b58ea3666db071b5e4ebd3addf153"
+}

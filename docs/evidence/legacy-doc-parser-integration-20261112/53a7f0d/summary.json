@@ -1,0 +1,44 @@
+{
+  "ciWorkflowSha256": "c07b6d5337e9da3b212c86a53c9e7aa2cf42507ba2ac853f0e2b418559fdc5db",
+  "exactUpstreamFiles": 340,
+  "freshChecks": {
+    "declaredPillow": "13.0.0",
+    "parserAnalysis": {
+      "error": 0,
+      "info": 271,
+      "warning": 0
+    },
+    "parserPythonPassed": 104,
+    "python": "3.12.14"
+  },
+  "logs": {
+    "analysis": {
+      "file": "analysis.log.gz",
+      "sha256": "e8ae407229b8eacad407160f3fb465314ed8416a359ef6f5f322c69e6d0f0b69",
+      "uncompressedSha256": "ee4698bc4983d1cbf4405e51c3b97305994e4b948f6991998ca9d4210214bf4a"
+    },
+    "python": {
+      "file": "python.log.gz",
+      "sha256": "73408411ac97000bcb85be7736d2cb8ada78d01ca2b8bfd1b2785f584a4ce88b",
+      "uncompressedSha256": "dca186584633330bd8600122a00344c81e79b106acca77d81e0a64f6ad0b728b"
+    }
+  },
+  "qudsBaseCommit": "07b993580bfdee6d997de0d6037e025419a8e14a",
+  "requirementsSha256": "feb13d11caacc095c462f72a48bef3bd656315f2ad2df9ba65ea8c012e537276",
+  "reusedRuntimeTestReceipt": "../34e1484/summary.json",
+  "reusedRuntimeTestReceiptSha256": "df77f4fc981047ac1e8e21bd1a3d2efd0f08d50329707f8cd20e37d75a056384",
+  "schema": "quds-office/legacy-parser-integration-followup",
+  "scope": "Runtime and Dart tests reuse the exact unchanged 34e1484 objects; the new audit tooling was freshly analyzed and the Python suite rerun. The root CI dependency declaration is present.",
+  "unchangedRuntimeAndTestObjects": {
+    "analysis_options.yaml": "572dd239d0976799433e2a9c56e7e02be86d61b1",
+    "example": "1c77c8141e7378e215141441ca74fb013cfe8f63",
+    "lib": "54ce65adac176027ae64dd50efa66db022b59d40",
+    "pubspec.yaml": "6c9061f2deb12612990c3ac904f3fc6bd24776fd",
+    "test": "713a0400ec228ac6c9a782072d3589cb384c646b"
+  },
+  "upstreamCommit": "53a7f0df113f0b88967f7fecd492652ad5c730d5",
+  "upstreamFileReceiptSha256": "5377626096672f7c1d97cb401a066dfc06128ed44310bfb5fb924c81d0097a96",
+  "upstreamTree": "d1725e875db5f21e1754bb6ffc604255d129e131",
+  "version": 1,
+  "workspacePubspecSha256": "150af8d89562635bf5a876c0a539c20ae48b58ea3666db071b5e4ebd3addf153"
+}
