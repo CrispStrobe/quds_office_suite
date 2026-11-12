@@ -205,4 +205,91 @@ void main() {
       }
     },
   );
+
+  for (final context in ['footnotes', 'endnotes', 'textbox', 'opaque']) {
+    for (final duplicate in ['id', 'name']) {
+      test(
+        '$context duplicate bookmark $duplicate rejects before package mutation',
+        () async {
+          final document = WordDeserializer().readBytes(
+            WordSerializer().writeBytes(WmlDocument.empty(text: 'Body')),
+          );
+          WmlParagraph pair(String id, String name) => WmlParagraph(
+            inlines: [
+              WmlBookmarkBoundary(id: id, isStart: true, name: name),
+              WmlRun(text: name),
+              WmlBookmarkBoundary(id: id, isStart: false),
+            ],
+          );
+          final first = pair('71', 'Shared');
+          final secondId = duplicate == 'id' ? '+71' : '72';
+          final secondName = duplicate == 'name' ? 'Shared' : 'Different';
+          final second = pair(secondId, secondName);
+          if (context == 'footnotes' || context == 'endnotes') {
+            final endnote = context == 'endnotes';
+            (endnote ? document.endnotes : document.footnotes).addAll([
+              WmlNote(id: 1, endnote: endnote, paragraphs: [first]),
+              WmlNote(id: 2, endnote: endnote, paragraphs: [second]),
+            ]);
+          } else {
+            document.sections.first.blocks.add(first);
+            if (context == 'textbox') {
+              document.sections.first.blocks.add(WmlFrame(blocks: [second]));
+            } else {
+              document.sections.first.blocks.add(
+                WmlOpaqueBlock(
+                  xml:
+                      '<w:customXml xmlns:w="${OfficeNamespaces.w}"><w:p>'
+                      '<w:bookmarkStart w:id="$secondId" w:name="$secondName"/>'
+                      '<w:r><w:t>Opaque</w:t></w:r><w:bookmarkEnd w:id="$secondId"/>'
+                      '</w:p></w:customXml>',
+                  sourcePartUri: '/word/document.xml',
+                  relationships: const [],
+                ),
+              );
+            }
+          }
+          final before = document.package!.save();
+          expect(() => WordSerializer().writeBytes(document), throwsStateError);
+          expect(document.package!.save(), before);
+          await expectLater(OfficeIsolateSave.word(document), throwsStateError);
+          expect(document.package!.save(), before);
+        },
+      );
+    }
+  }
+
+  test(
+    'separate native parts retain independent bookmark identities',
+    () async {
+      WmlParagraph pair() => WmlParagraph(
+        inlines: [
+          WmlBookmarkBoundary(id: '71', isStart: true, name: 'Shared'),
+          WmlRun(text: 'Shared'),
+          WmlBookmarkBoundary(id: '71', isStart: false),
+        ],
+      );
+      var document = WmlDocument.empty(text: 'Body');
+      document.sections.first
+        ..header.add(pair())
+        ..footer.add(pair());
+      document.footnotes.add(
+        WmlNote(id: 1, endnote: false, paragraphs: [pair()]),
+      );
+      document.endnotes.add(
+        WmlNote(id: 1, endnote: true, paragraphs: [pair()]),
+      );
+      for (var cycle = 0; cycle < 3; cycle++) {
+        document = WordDeserializer().readBytes(
+          await OfficeIsolateSave.word(document),
+        );
+        expect(WordBookmarks.ranges(document).map((range) => range.start.id), [
+          '71',
+          '71',
+          '71',
+          '71',
+        ]);
+      }
+    },
+  );
 }

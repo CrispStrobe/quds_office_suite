@@ -158,6 +158,7 @@ abstract final class WordBookmarks {
   /// free IDs for generated bookmarks. Imported IDs are never rewritten.
   static Map<String, String> generatedIds(WmlDocument document) {
     final native = ranges(document);
+    _validatePartIdentities(document);
     final ids = native.map((range) => canonicalId(range.start.id)).toSet();
     final names = native.map((range) => range.name).toSet();
     // Opaque source XML is not editable range text, but still owns its native
@@ -188,6 +189,18 @@ abstract final class WordBookmarks {
   static Iterable<WmlBookmarkBoundary> _opaqueMarkers(
     WmlDocument document,
   ) sync* {
+    for (final blocks in [
+      for (final section in document.sections) section.blocks,
+      for (final note in [...document.footnotes, ...document.endnotes])
+        note.blocks,
+    ]) {
+      yield* _opaqueMarkersIn(blocks);
+    }
+  }
+
+  static Iterable<WmlBookmarkBoundary> _opaqueMarkersIn(
+    Iterable<WmlBlock> blocks,
+  ) sync* {
     Iterable<WmlBookmarkBoundary> visit(XmlElement element) sync* {
       if (element.namespaceUri == OfficeNamespaces.w &&
           (element.localName == 'bookmarkStart' ||
@@ -207,16 +220,64 @@ abstract final class WordBookmarks {
       }
     }
 
-    for (final blocks in [
-      for (final section in document.sections) section.blocks,
-      for (final note in [...document.footnotes, ...document.endnotes])
-        note.blocks,
-    ]) {
-      for (final block in WordTree.descendants(
-        blocks,
-      ).whereType<WmlOpaqueBlock>()) {
-        final source = XmlDocument.parse(block.xml).root;
-        if (source != null) yield* visit(source);
+    for (final block in WordTree.descendants(
+      blocks,
+    ).whereType<WmlOpaqueBlock>()) {
+      final source = XmlDocument.parse(block.xml).root;
+      if (source != null) yield* visit(source);
+    }
+  }
+
+  /// Notes and textboxes own separate text stories, but their IDs still share
+  /// one physical XML part. Independent header/footer parts have their own IDs.
+  static void _validatePartIdentities(WmlDocument document) {
+    void part(
+      Iterable<Iterable<WmlParagraph>> stories,
+      Iterable<WmlBookmarkBoundary> opaque,
+      String context,
+    ) {
+      final ids = <String>{};
+      final names = <String>{};
+      for (final marker in [
+        for (final story in stories)
+          for (final paragraph in story)
+            ...paragraph.inlines.whereType<WmlBookmarkBoundary>(),
+        ...opaque,
+      ]) {
+        validateSource(marker);
+        if (marker.isStart &&
+            (!ids.add(canonicalId(marker.id)) || !names.add(marker.name!))) {
+          throw StateError(
+            'Duplicate bookmark id or name (${marker.id}, ${marker.name}) in $context.',
+          );
+        }
+      }
+    }
+
+    final body = document.sections.expand((section) => section.blocks).toList();
+    part(_blockStories(body), _opaqueMarkersIn(body), 'document part');
+    for (final notes in [document.footnotes, document.endnotes]) {
+      part(
+        notes.expand((note) => _blockStories(note.blocks)),
+        notes.expand((note) => _opaqueMarkersIn(note.blocks)),
+        'note part',
+      );
+    }
+    part(
+      document.comments.map((comment) => comment.paragraphs),
+      const <WmlBookmarkBoundary>[],
+      'comments part',
+    );
+    for (final section in document.sections) {
+      for (final story in [
+        section.header,
+        section.footer,
+        section.firstHeader,
+        section.firstFooter,
+        section.evenHeader,
+        section.evenFooter,
+      ]) {
+        part([story], const <WmlBookmarkBoundary>[], 'header/footer part');
       }
     }
   }
