@@ -12,6 +12,48 @@ existing descendant before adding the changes described here. CrispCloud started
 from `8c8d5c6c` and uses vendored engine/editor path dependencies. Updating the
 suite alone does not update the app.
 
+## Source-bound validation evidence
+
+The final functional suite checkpoint is `31add77938bb1242d510ab544dbe886d87ebdf75`.
+CrispCloud pins its 278 shared files to that source in host checkpoint
+`9bf04566434318ad199971d1071ca0ca02c81905`. Later evidence-only commits do not
+change those tested source bytes. The
+[validation receipt](office-validation-20261112.json) records execution results,
+toolchain versions, hashes, native-render attempts and corresponding Actions
+runs. A queued workflow is not recorded as passing evidence.
+
+| Suite gate at the functional checkpoint | Verified result |
+| --- | --- |
+| Full engine suite and analysis | 994 passed, one environment-specific skip; no analyzer issues |
+| Full editor suite | 365 passed, one optional-sample skip |
+| Curated Dart acceptance cases | 530 passed |
+| Independent Python semantic and corruption controls | 264 passed |
+| Native-render policy and failure controls | 29 passed |
+| Executable operation scenarios | 67/67 |
+| Required engine export inventory | 217/217 |
+| Reviewed editor goldens | 13 cases, 23 PNGs |
+| Independent Open XML SDK validation | 233/233 engine/editor exports; zero errors or suppressed diagnostics |
+| Original source-loss probes | Both pass their original expectations |
+
+Fresh engine coverage is **42,229/51,873 instrumented lines (81.4%)**. Its 240
+source hashes match the before/after source snapshot; 230 files are instrumented
+and ten are absent. The [complete inventory](office-coverage-gaps.json) lists
+all uncovered instrumented lines and uninstrumented files. Word is 8,865/10,584
+(83.8%); Sheet 3,139/3,959 (79.3%); Slide 1,806/2,278 (79.3%); PDF
+11,834/15,289 (77.4%); Reports 9,588/11,295 (84.9%). These are executed-line
+measurements, not branch coverage or proof of every format behavior.
+
+The [native render evidence](office-render-evidence.json) preserves two separate
+attempts. The first matrix rendered 221 of 226 visual inputs, passed 67 of 69
+cycle groups and all 16 strict native-source comparisons; five early XLSX
+conversions terminated with SIGKILL. The one bounded retry rendered all six
+unchanged files in the two affected groups and passed both groups exactly.
+Reconciliation verifies 226 distinct visual files, all 69 complete groups,
+identical bytes for copied inputs, and matching text/pages/pixels for the
+one overlapping successful render. It does not present the attempts as a single
+clean run. Seven precisely scoped auxiliary-comment files remain schema-only
+and have no visual certification.
+
 ## Execute import, edit and export workflows
 
 Use the suite's pinned Flutter 3.44.0 toolchain. From
@@ -130,9 +172,10 @@ native inset geometry.
 The independent frame source gate also caught an invented one-point outline:
 it altered edge pixels and moved top-and-bottom-wrapped text by 0.45 points.
 Native line omission, omitted width and explicit line properties now survive;
-stroke-color edits retain the original width. Quds canvas still previews frame
-outlines as solid fixed-width strokes; native width, dash, cap and join are
-preserved in OOXML and checked externally but are not reproduced by that preview. All three raw frame sources
+stroke-color edits retain the original width. Direct XML regressions cover
+explicit native width, dash, cap and join. The external frame corpus checks
+omitted/default outlines against its authored source. Quds canvas still previews
+outlines as solid fixed-width strokes, without reproducing native line styling. All three raw frame sources
 match their first exports and all three subsequent cycles exactly in
 LibreOffice text, page count and decoded pixels.
 

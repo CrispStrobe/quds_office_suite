@@ -1,0 +1,220 @@
+{
+  "version": 1,
+  "audit_date": "2026-11-12",
+  "branch": "feature/office-fidelity-coverage-20261112",
+  "scope": "Source-bound local acceptance results; completed local evidence and pending remote CI are distinguished. Closed gap IDs name bounded regressions, not complete Office format support.",
+  "functional_checkpoints": {
+    "suite": {
+      "repository": "CrispStrobe/quds_office_suite",
+      "commit": "31add77938bb1242d510ab544dbe886d87ebdf75",
+      "engine_source_tree_sha256": "1ca990f4ba3c58c7133dc150c0d9e6cd3e84addeee29a00420f0102bb2454d16",
+      "source_hash_count": 240
+    },
+    "host": {
+      "repository": "CrispStrobe/CrispCloud",
+      "commit": "9bf04566434318ad199971d1071ca0ca02c81905",
+      "pinned_suite_commit": "31add77938bb1242d510ab544dbe886d87ebdf75",
+      "pinned_files": 278,
+      "office_source_tree_sha256": "062b8d00625d26909824e7d520da034b064434abfce2c9fd573edf83609357bc",
+      "source_hash_count": 9,
+      "vendor_manifest_sha256": "e1daa31aa879a1f4c0c93dcabde9e6b3240bf9d611d05f8e4eceb12501d556e2"
+    }
+  },
+  "suite": {
+    "toolchain": {
+      "flutter": "3.44.0",
+      "dart": "3.12.0",
+      "platform": "Linux"
+    },
+    "analyzer": "passed",
+    "full_engine": {
+      "passed": 994,
+      "skipped": 1,
+      "skip_scope": "Environment-specific forced font-fallback case"
+    },
+    "full_editor": {
+      "passed": 365,
+      "skipped": 1,
+      "skip_scope": "Optional local PDF sample unavailable"
+    },
+    "curated_dart_cases": 530,
+    "python_semantic_and_corruption_controls": 264,
+    "renderer_policy_controls": 29,
+    "operation_scenarios": {
+      "required": 67,
+      "executed": 67,
+      "formats": {
+        "DOCX": 49,
+        "XLSX": 10,
+        "PPTX": 8
+      }
+    },
+    "engine_inventory": {
+      "required": 217,
+      "verified": 217
+    },
+    "original_data_loss_probes": {
+      "passed": 2,
+      "open": 0
+    },
+    "goldens": {
+      "cases": 13,
+      "pngs": 23,
+      "normal_comparison_mode": "passed",
+      "reviewed_change": "One story-page image removes an invented source-absent separator; exactly 1,248 pixels, other 22 PNGs unchanged"
+    },
+    "coverage": {
+      "covered_lines": 42229,
+      "instrumented_lines": 51873,
+      "instrumented_files": 230,
+      "uninstrumented_files": 10,
+      "source_git_dirty": false,
+      "report": "office-coverage-gaps.json"
+    },
+    "schema": {
+      "validated": 233,
+      "engine": 217,
+      "editor": 16,
+      "formats": {
+        "DOCX": 186,
+        "XLSX": 25,
+        "PPTX": 22
+      },
+      "errors": 0,
+      "exceptions": 0,
+      "suppressed_errors": 0,
+      "receipt_paths_and_hashes_verified": 233,
+      "report": "office-schema-evidence.json",
+      "canonical_report_sha256": "3d465a7ba362a5897d9c66a72a40f139860567f6139719a5ff149bdd3e6a02b5"
+    }
+  },
+  "host": {
+    "toolchain": {
+      "flutter": "3.47.8",
+      "dart": "3.13.7",
+      "platform": "Linux",
+      "native_compiler": "Genuine Debian Clang 19.1.7, extracted to task directory",
+      "sqlite": "Existing system SQLite 3.46.1 through the committed CI helper"
+    },
+    "gate_exit_code": 0,
+    "actual_flutter_tests": 115,
+    "required_actual_saved_exports": 41,
+    "verified_actual_saved_exports": 41,
+    "vendor_pins_verified": 278,
+    "shared_engine_dart_cases": 530,
+    "shared_engine_exports": 217,
+    "shared_python_controls": 264,
+    "coverage": {
+      "covered_lines": 2282,
+      "instrumented_lines": 3661,
+      "scoped_files": 9,
+      "uninstrumented_files": 0,
+      "source_git_dirty": false,
+      "report": "CrispCloud:docs/office-host-coverage-gaps.json"
+    },
+    "schema": {
+      "validated": 258,
+      "actual_saved_host_exports": 41,
+      "shared_engine_exports": 217,
+      "formats": {
+        "DOCX": 211,
+        "XLSX": 25,
+        "PPTX": 22
+      },
+      "errors": 0,
+      "exceptions": 0,
+      "suppressed_errors": 0,
+      "receipt_paths_and_hashes_verified": 258,
+      "report": "CrispCloud:docs/office-schema-evidence.json",
+      "canonical_report_sha256": "185bfe63b5929dc0d4063c95f26a0a0ec3d17ea58b50cc5b0fdff805e4db0410"
+    }
+  },
+  "independent_validator": {
+    "sdk": "DocumentFormat.OpenXml 3.3.0",
+    "target": "Office2019",
+    "positive_and_negative_controls": "passed",
+    "program_cs_sha256": "755bd8c32ce0b4c23ecb38c614f316150722e06ea07dd296988a7fa743618a13",
+    "project_sha256": "e9e7985f8af8396d5b0dea81555e3c8ca51b7dba1af68a0e2cd4d2b238347e27",
+    "host_and_suite_validator_sources_match": true,
+    "dotnet_sdk": "8.0.428",
+    "runtime": "Microsoft.NETCore.App/8.0.34",
+    "build_method": "Installed Roslyn compiled unchanged Program.cs with SDK-equivalent global imports and official packages; normal repository/CI dotnet-run path is unchanged.",
+    "packages": [
+      {
+        "id": "DocumentFormat.OpenXml",
+        "version": "3.3.0",
+        "nupkg_sha256": "53a74167552d886f0e312540db12c86a6133a83bd698795f3be6e25fc091b9e7",
+        "assembly_sha256": "72e8f6e3e3527d7e6ee29f2f9182ef1b39a4de6da355a33013c0940efb24d87e"
+      },
+      {
+        "id": "DocumentFormat.OpenXml.Framework",
+        "version": "3.3.0",
+        "nupkg_sha256": "5f539f1602b642198ec6ed3ec567eac3fff62309f6ec65e28db2751a488ec30d",
+        "assembly_sha256": "5b8c2b9ca1aa70539af0b8054d649bd09fdce4dec812b263ab511b13789c8589"
+      },
+      {
+        "id": "System.IO.Packaging",
+        "version": "8.0.1",
+        "nupkg_sha256": "c5fd0101fa90bc84e89a906cbdfa7188bb6cffab11404cdd8cd0377ffabfbd8e",
+        "assembly_sha256": "12ddc8bff279fad856551a74894dc52b80fa437d5d2b32722e70ae6899217b7c"
+      }
+    ]
+  },
+  "native_render": {
+    "renderer": "LibreOfficeDev 26.8.0.0.alpha0 2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+    "inputs": 233,
+    "visual_inputs": 226,
+    "native_schema_only": 7,
+    "native_schema_only_visual_certification": false,
+    "first_attempt": {
+      "rendered": 221,
+      "cycle_groups_passed": 67,
+      "cycle_groups_total": 69,
+      "native_source_comparisons_passed": 16,
+      "process_failures": 5,
+      "incomplete_groups": 2,
+      "report_sha256": "6bcfcbff92b8379afe3bc1fda62afc4d30ce20c1e5869c8d84d9ce7ef4cf4e63"
+    },
+    "bounded_retry": {
+      "files": 6,
+      "complete_groups_passed": 2,
+      "failures": 0,
+      "same_input_bytes": true,
+      "fresh_schema_receipts": 6,
+      "report_sha256": "260ff317bf463fe9126f3d6416a97c79cd57381849fac7ddb608abe672603ca3"
+    },
+    "single_clean_full_run_claimed": false,
+    "initial_failure_cause": "LibreOffice subprocess SIGKILL 9; historical OOM or exact cause unproven. Workbook data/layout bytes match earlier CI outputs.",
+    "report": "office-render-evidence.json",
+    "status": "resolved_by_bounded_retry",
+    "unique_visual_files_verified": 226,
+    "complete_cycle_groups_verified": 69,
+    "strict_native_source_comparisons_passed": 16,
+    "reconciliation_sha256": "1ac55779e4413a59a645746a0df62ababafd8d1517918e57f1ca4702ff00448a"
+  },
+  "gap_ledger": {
+    "report": "office-fidelity-gaps.json",
+    "records": 73,
+    "closed": 58,
+    "partial": 7,
+    "open": 5,
+    "guarded": 3,
+    "evidence_references": 192
+  },
+  "ci": {
+    "observed_at_utc": "2026-11-12 08:52:03",
+    "suite": {
+      "run_id": 43183203551,
+      "source_commit": "31add77938bb1242d510ab544dbe886d87ebdf75",
+      "status": "queued",
+      "url": "https://github.com/CrispStrobe/quds_office_suite/actions/runs/43183203551"
+    },
+    "host": {
+      "run_id": 43183465694,
+      "source_commit": "9bf04566434318ad199971d1071ca0ca02c81905",
+      "status": "queued",
+      "url": "https://github.com/CrispStrobe/CrispCloud/actions/runs/43183465694"
+    },
+    "interpretation": "Queued workflows are not counted as passing remote evidence. Local gates above executed the exact functional checkpoints."
+  }
+}

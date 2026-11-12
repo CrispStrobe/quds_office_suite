@@ -614,7 +614,7 @@
         "packages/quds_office_engine/tool/fidelity/test_frame_wrap_oracle.py",
         "packages/quds_office_editor/test/office_frame_wrap_golden_test.dart"
       ],
-      "limits": "The model chooses one available line interval. Earlier paragraphs are not retroactively reflowed around later anchors. Arbitrary picture contours, floating table exclusions and full Microsoft Word layout equivalence remain unverified. Native outline width, dash, cap and join are preserved in OOXML and checked by the external renderer. Quds canvas still previews frame outlines as solid fixed-width strokes; native outline styling is not visually reproduced there."
+      "limits": "The model chooses one available line interval. Earlier paragraphs are not retroactively reflowed around later anchors. Arbitrary picture contours, floating table exclusions and full Microsoft Word layout equivalence remain unverified. Direct XML regressions cover preservation of explicit native outline width, dash, cap and join. The external frame corpus covers omitted/default outlines against its authored source. Quds canvas still previews frame outlines as solid fixed-width strokes; native outline styling is not visually reproduced there."
     },
     {
       "id": "FID-057",
@@ -668,7 +668,7 @@
         "packages/quds_office_editor/test/editor_test.dart",
         "packages/quds_office_engine/tool/fidelity/frame_wrap_oracle.py"
       ],
-      "limits": "Frame layout and source presentation preservation are bounded by FID-056; full native textbox overflow and anchor semantics remain unverified. Native outline width, dash, cap and join are preserved in OOXML and checked by the external renderer. Quds canvas still previews frame outlines as solid fixed-width strokes; native outline styling is not visually reproduced there."
+      "limits": "Frame layout and source presentation preservation are bounded by FID-056; full native textbox overflow and anchor semantics remain unverified. Direct XML regressions cover preservation of explicit native outline width, dash, cap and join. The external frame corpus covers omitted/default outlines against its authored source. Quds canvas still previews frame outlines as solid fixed-width strokes; native outline styling is not visually reproduced there."
     },
     {
       "id": "FID-062",
@@ -793,7 +793,7 @@
       "id": "FID-072",
       "status": "closed",
       "area": "Auxiliary fixture schema property order and retained parts",
-      "finding": "The authored footer emits paragraph spacing before alignment. The independent oracle checks every Word XML paragraph-property sequence, including retained source parts that are no longer actively referenced, and rejects invalid order, omitted spacing and changed spacing. Open XML SDK still validates every package part.",
+      "finding": "The authored footer emits paragraph spacing before alignment. Across every Word XML part, including retained parts no longer actively referenced, the independent oracle rejects spacing after alignment. It also checks exact spacing values in the PAGE footer. Open XML SDK owns full schema validation for every package part.",
       "evidence": [
         "packages/quds_office_engine/test/word_auxiliary_content_control_test.dart",
         "packages/quds_office_engine/tool/fidelity/auxiliary_content_control_oracle.py",

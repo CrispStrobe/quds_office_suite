@@ -1,21 +1,22 @@
 # Reviewed Office renderer baselines — 12 November 2026
 
-At suite code checkpoint `adcccb405b0e11ac407fabaaaf7d0ebbb1a48f10`, the full
+At suite code checkpoint `31add77938bb1242d510ab544dbe886d87ebdf75`, the full
 editor suite passed **365 tests with one documented skip** under pinned Flutter
 3.44.0 in ordinary comparison mode. This includes **13 golden cases covering 23
 reviewed page images**. Updating baselines is a separate review step; the normal
 gate never updates them.
 
-The subsequent layout-cycle correction extends `office_layout_goldens_test.dart`
+The layout-cycle correction extends `office_layout_goldens_test.dart`
 to check the original document and all three sequential native save/reopen
 states for `columns_sections`, `continued_notes`, `rtl` and `tall_table`. Each
 reopened document is rendered against the same reviewed PNGs, with exact page
 counts checked. The four series produce 12 actual DOCX exports and 44 page
 comparisons. Exports 2 and 3 are serialized from the preceding reopened document.
-The layout baselines are unchanged. A subsequent full run at `c19e90d` passed
+The layout baselines are unchanged. The intermediate run at `c19e90d` passed
 364 tests with one documented skip and reported one outdated story-page image,
-reviewed below. **A fresh full acceptance run after that review is pending**;
-the earlier complete passing counts above belong to `adcccb4`.
+reviewed below. After that specific correction, the complete editor suite at
+`31add77` passed 365 tests with one documented skip in ordinary comparison mode.
+The separate 13-case golden cohort also passed without updates.
 
 ## Existing images changed for verified source corrections
 
