@@ -159,3 +159,27 @@ Engine analysis with `--fatal-infos` is clean. Parser analysis exits zero with
 dependencies. The complete 1,627-test engine result above remains attributed
 to its original `713973f` checkpoint; this merge's local engine test scope is
 explicitly limited to those three integration suites.
+
+## Note and header boundary checkpoint: parser d28be0a
+
+The next source roll pins
+[`d28be0a173415ebb392a8309aacdbe2bb1a50da7`](https://github.com/CrispStrobe/legacy-doc-parser/commit/d28be0a173415ebb392a8309aacdbe2bb1a50da7),
+tree `9cf883d7829627051a2f1068235dfe20d2e37383`. The
+[file receipt](evidence/legacy-doc-parser-integration-20261112/d28be0a/upstream-files.json)
+verifies all 421 unpatched upstream files and the unchanged workspace pubspec.
+Quds main remains `74960237cea7c560f3db7ee96ca37641c4438567`, already in this
+branch's ancestry.
+
+This roll preserves every source paragraph in note and separator stories while
+avoiding an extra generated paragraph after a final table. Corroborated normal/
+first-header textbox aliases retain their source shapes and one-frame identity;
+shared review/event identities and independent media revision metadata exclude
+alias recovery. The earlier main arc and media revision work is retained.
+
+The [integration receipt](evidence/legacy-doc-parser-integration-20261112/d28be0a/summary.json)
+records 761 parser Dart tests, 129 Python tests and 21 focused engine tests,
+all passing. Engine analysis with `--fatal-infos` is clean. Parser analysis exits
+zero with 315 informational diagnostics and no warnings or errors under the
+preserved workspace dependency versions. The fresh engine scope is the three
+legacy document, conversion and note-marker suites. The full engine gate and
+the final native corpus receipt will follow after the native run is sealed.
