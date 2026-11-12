@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "audit_date": "2026-11-11",
+  "audit_date": "2026-11-12",
   "repositories": {
     "engine": "CrispStrobe/quds_office_suite",
     "host": "CrispStrobe/CrispCloud"
   },
-  "branch": "feature/office-fidelity-completion-20261111",
+  "branch": "feature/office-fidelity-coverage-20261112",
   "scope": "Reproduced and investigated gaps; the source-hashed line inventory is separate. Closed means the cited bounded regression is covered, not exhaustive format support.",
   "status_definitions": {
     "closed": "Reproduced gap fixed and protected by named evidence.",
@@ -103,12 +103,14 @@
       "id": "FID-009",
       "status": "closed",
       "area": "Executable import/edit/export scenarios",
-      "finding": "Strict five-command CLI exposes 43 operations; every operation has a committed scenario and combined multi-format outputs have independent semantic goldens.",
+      "finding": "Strict five-command CLI exposes 67 operations; every operation has a committed scenario. Independently authored expectations cover multi-format edits plus creation, modification and removal of Word tables, TOCs, bookmark references, threaded comments, picture wrapping and positioned frames.",
       "evidence": [
         "packages/quds_office_engine/tool/fidelity/office_steps.dart",
         "packages/quds_office_engine/test/scripted_workflows_test.dart",
         "packages/quds_office_engine/tool/fidelity/scripted_oracle.py",
-        "packages/quds_office_engine/tool/fidelity/audit_operations.py"
+        "packages/quds_office_engine/tool/fidelity/audit_operations.py",
+        "packages/quds_office_engine/test/word_structure_steps_test.dart",
+        "packages/quds_office_engine/tool/fidelity/word_structure_oracle.py"
       ]
     },
     {
@@ -250,7 +252,7 @@
     },
     {
       "id": "FID-024",
-      "status": "in_progress",
+      "status": "open",
       "area": "Structured document tags / content controls",
       "finding": "The modeled import flattens SDT content and loses wrapper metadata such as alias, tag, ID and end-run properties. The independent CLI probe reproduces the loss after an adjacent edit and three save/reopen cycles; full block and inline container editing is unimplemented.",
       "evidence": [
@@ -261,7 +263,7 @@
     },
     {
       "id": "FID-025",
-      "status": "in_progress",
+      "status": "open",
       "area": "Multiple and cross-paragraph bookmarks",
       "finding": "One paragraph bookmarkName cannot represent multiple independent endpoints or cross-paragraph ranges. The independent CLI probe reproduces expanded, dropped and collapsed bookmark ranges after an adjacent edit and three cycles.",
       "evidence": [
@@ -404,7 +406,7 @@
       "id": "FID-039",
       "status": "closed",
       "area": "Actual host outputs and coverage provenance",
-      "finding": "The host requires exactly fourteen valid captured DOCX outputs, then independently validates them with Open XML SDK. Fresh Office LCOV and engine VM reports list unhit instrumented lines, absent files and current source hashes. Helpers reject malformed records, missing source paths and out-of-range line numbers; clean-directory collection is required because same-length stale input cannot be detected from coverage alone.",
+      "finding": "The host requires exactly forty-one valid captured DOCX outputs, then independently validates them with Open XML SDK. Fresh Office LCOV and engine VM reports list unhit instrumented lines, absent files and current source hashes. Helpers reject malformed records, missing source paths and out-of-range line numbers; clean-directory collection is required because same-length stale input cannot be detected from coverage alone.",
       "evidence": [
         "CrispCloud:tool/office_host_evidence.py",
         "CrispCloud:tool/test_office_host_evidence.py",
@@ -414,13 +416,110 @@
     },
     {
       "id": "FID-040",
-      "status": "in_progress",
+      "status": "open",
       "area": "Imported note marker position and absence",
-      "finding": "The current note model preserves conventional leading marker properties but manufactures one at the first paragraph when imported source markers are absent or later. Typed zero-width source markers are being added to retain exact ordered placement through edits and exports.",
+      "finding": "The current note model preserves conventional leading marker properties but manufactures a leading marker when imported source markers are absent or later. Exact ordered marker placement requires a model and codec change; it is not yet a passing fix.",
       "evidence": [
         "packages/quds_office_engine/lib/src/word/model/word_notes.dart",
         "packages/quds_office_engine/lib/src/word/serial/word_deserializer.dart",
         "packages/quds_office_engine/lib/src/word/serial/word_serializer.dart"
+      ]
+    },
+    {
+      "id": "FID-041",
+      "status": "closed",
+      "area": "Rich run editing and native inline fields",
+      "finding": "Coalescing, cloning, deletion, links and citations retain sparse styles, note tokens and native inline field metadata. Native citations no longer replace surrounding paragraph content. Field dispatch matches instruction commands, not words within quoted arguments.",
+      "evidence": [
+        "packages/quds_office_engine/test/word_edit_integrity_test.dart",
+        "packages/quds_office_engine/test/inline_field_fidelity_test.dart"
+      ]
+    },
+    {
+      "id": "FID-042",
+      "status": "closed",
+      "area": "TOC cached content and source formatting",
+      "finding": "Page-number suppression, including native partial ranges, survives repeated exports without stripping trailing heading numerals. Export does not mutate live paragraph tabs.",
+      "evidence": [
+        "packages/quds_office_engine/test/word_structure_integrity_test.dart",
+        "packages/quds_office_engine/test/word_edit_integrity_test.dart"
+      ]
+    },
+    {
+      "id": "FID-043",
+      "status": "closed",
+      "area": "Rich table merge and structural undo",
+      "finding": "Merge retains ordered paragraphs, pictures, frames, nested tables and drawings; row/cell snapshots retain properties without aliasing. Editor history reuses live identities so later commands remain attached after replay.",
+      "evidence": [
+        "packages/quds_office_engine/test/word_structure_integrity_test.dart",
+        "packages/quds_office_editor/test/word_structural_history_test.dart"
+      ]
+    },
+    {
+      "id": "FID-044",
+      "status": "closed",
+      "area": "Picture accessibility metadata and leading column breaks",
+      "finding": "Native picture title and description remain independent of display name. A middle column break does not suppress an explicit leading column break.",
+      "evidence": [
+        "packages/quds_office_engine/test/word_structure_integrity_test.dart"
+      ]
+    },
+    {
+      "id": "FID-045",
+      "status": "closed",
+      "area": "CrispCloud exact property dialogs",
+      "finding": "Paragraph and margin dialogs retain fractional values, imported tab alignment and leaders, explicit zero and unedited properties. No-op Apply remains clean; selected and auxiliary-story edits are covered through real host controls.",
+      "evidence": [
+        "CrispCloud:test/widget/office_paragraph_fidelity_test.dart",
+        "CrispCloud:docs/office-host-fidelity-20261112.md"
+      ]
+    },
+    {
+      "id": "FID-046",
+      "status": "closed",
+      "area": "Structural scripts and independent edit goldens",
+      "finding": "Authored XML, three committed scripts and semantic JSON expectations cover create/edit/remove transitions across three save/reopen cycles. Invalid structures and late step failures preserve existing output.",
+      "evidence": [
+        "packages/quds_office_engine/test/word_structure_steps_test.dart",
+        "packages/quds_office_engine/tool/fidelity/word_structure_oracle.py",
+        "packages/quds_office_engine/tool/fidelity/test_word_structure_oracle.py"
+      ]
+    },
+    {
+      "id": "FID-047",
+      "status": "open",
+      "area": "Tracked revision story ownership",
+      "finding": "Revision records identified only by body paragraph index can target unrelated text when recorded in auxiliary stories or after paragraph insertion. Imported revisions can also receive a stale body index.",
+      "evidence": [
+        "packages/quds_office_engine/lib/src/word/model/word_revisions.dart",
+        "packages/quds_office_editor/lib/src/embed/office_controller.dart"
+      ]
+    },
+    {
+      "id": "FID-048",
+      "status": "open",
+      "area": "Native bibliography part ownership",
+      "finding": "Bibliography export uses hardcoded duplicate custom XML paths and can overwrite unrelated custom XML. Native author containers and rich source metadata need independent preservation checks.",
+      "evidence": [
+        "packages/quds_office_engine/lib/src/word/serial/word_serializer.dart"
+      ]
+    },
+    {
+      "id": "FID-049",
+      "status": "partial",
+      "area": "Complex field editing",
+      "finding": "Simple inline native fields retain instruction, lock and dirty flags, and are atomic during supported edits. Arbitrarily nested, multi-run complex fields still need a range-aware model.",
+      "evidence": [
+        "packages/quds_office_engine/test/inline_field_fidelity_test.dart"
+      ]
+    },
+    {
+      "id": "FID-050",
+      "status": "open",
+      "area": "Tracked revision range rebasing",
+      "finding": "Text insertion, paragraph splitting and overlapping edits within already tracked spans need explicit range transformation coverage; paragraph identity alone cannot establish character-range correctness.",
+      "evidence": [
+        "packages/quds_office_editor/lib/src/embed/office_controller.dart"
       ]
     }
   ]
