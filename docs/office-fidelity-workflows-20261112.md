@@ -17,7 +17,7 @@ schema/render gates. This follow-up preserves that work on
 CrispCloud initially pins suite revision
 `84b11839126a9577b6688b6acf80edd3cc2601ee` through 237 selected files. Its
 corresponding feature branch now pins
-`3e4502152d4b6c99d164f621b5271ba4b0a7ec71` and verifies all 378 selected
+`8223a2297418ba6f478ed6ce80b9881d28680094` and verifies all 378 selected
 shared files. The app's path dependencies need this explicit synchronization;
 changes to the suite branch alone cannot update it. Later evidence-only suite
 commits do not require a new implementation pin.
@@ -143,10 +143,20 @@ requires an independently prescribed page size and black rectangle, its position
 size, area, solid interior, grayscale color and white exterior. It also checks
 raw native transforms, because a picture extending past the page edge could
 otherwise look correct after clipping. All twelve real exports pass, as do all
-four repeated-save groups and 60 renderer control tests. Other text-free files
+four repeated-save groups. Other text-free files
 are not accepted through this precise corpus rule. The app workflow now renders
 its exact downloaded host inventory after schema validation, retaining PDFs,
 PNGs and measured pixel receipts.
+
+The six image-only JPEG/GIF Word exports now have their own independent native
+oracle. Their authored empty leading paragraph occupies exactly 12 points;
+the expected A4 image is 60 by 30 points at x=72, y=84. Native page, margins,
+paragraph spacing, inline geometry, relationships, MIME types and encoded
+dimensions must match before the raster is checked. All six SDK/native checks
+and both three-save groups pass, within the existing 0.03-point page and
+one-pixel edge tolerances. The combined native control suite passes 69 tests.
+The full source native report remains tied to its validated renderer commit;
+this additional host-only case selection changes no measured engine input.
 
 ## Measured acceptance and remaining gaps
 
@@ -170,10 +180,15 @@ portable corpus and required 104 host exports.
 
 Open XML SDK accepted all 327 suite packages and all 409 app packages with
 zero validation errors. These are separate generated package instances,
-including each repository's 305 engine outputs. Native rendering has its own
-reports and qualifications; schema acceptance alone is not a visual result.
+including each repository's 305 engine outputs. The retained complete suite
+native run rendered 320 files across 575 pages, passed all 97 three-save
+groups, 37 authored-baseline comparisons and ten page-order comparisons, with
+zero gate failures. Seven exact auxiliary-comment cases remained schema-only.
+All 320 PDFs and 575 page PNGs are retained. This native run is bound to
+renderer commit `c8d5ba3cfddf8c6fd3fa736deab992be1e0cc3aa`; subsequent
+host-only oracle additions change none of its 572 measured engine inputs.
 
-The ledger contains 95 tracked findings: 81 closed within their stated scope,
+The ledger contains 96 tracked findings: 82 closed within their stated scope,
 seven partial, six open and one explicitly guarded operation. Remaining work
 includes broader platform/font rendering, branch and unhit-line coverage,
 arbitrary content-control bindings, mixed bookmark/range topology, general

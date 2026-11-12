@@ -1,0 +1,789 @@
+{
+  "renderer": "LibreOfficeDev 26.8.0.0.alpha0 2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+  "files": 6,
+  "rendered_files": 6,
+  "soffice_retry_policy": {
+    "maximum_attempts": 3,
+    "retry_returncode": -9,
+    "scope": "SOFFICE conversion only; unchanged input and fresh profile/output per attempt"
+  },
+  "picture_pixel_oracle_files": 6,
+  "visual_input_files": 6,
+  "native_schema_only_files": 0,
+  "native_schema_only": [],
+  "schema_report": "/workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/schema-report.json",
+  "pixel_fingerprint": "SHA-256 of big-endian uint32 width/height followed by RGB bytes",
+  "cycle_groups": 2,
+  "cycle_comparisons": [
+    {
+      "case": "word-picture-gif.docx",
+      "expected_cycles": [
+        1,
+        2,
+        3
+      ],
+      "actual_cycles": [
+        1,
+        2,
+        3
+      ],
+      "files": [
+        "word-picture-gif-1.docx",
+        "word-picture-gif-2.docx",
+        "word-picture-gif-3.docx"
+      ],
+      "baseline": null,
+      "baseline_candidate": null,
+      "baseline_page_order": null,
+      "passed": true
+    },
+    {
+      "case": "word-picture-jpeg.docx",
+      "expected_cycles": [
+        1,
+        2,
+        3
+      ],
+      "actual_cycles": [
+        1,
+        2,
+        3
+      ],
+      "files": [
+        "word-picture-jpeg-1.docx",
+        "word-picture-jpeg-2.docx",
+        "word-picture-jpeg-3.docx"
+      ],
+      "baseline": null,
+      "baseline_candidate": null,
+      "baseline_page_order": null,
+      "passed": true
+    }
+  ],
+  "baseline_comparisons": 0,
+  "page_order_comparisons": 0,
+  "render_only_files": [],
+  "failures": [],
+  "reports": [
+    {
+      "file": "word-picture-gif-1.docx",
+      "pages": 1,
+      "text": "\f",
+      "pixel_sha256": [
+        "507ef48bbab5ab360ea3a40f46f0dd374c6bb7894513d0aa4b1d7674c242a03f"
+      ],
+      "pdf": "000/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 596,
+          "height": 842,
+          "png": "000/page-0001.png",
+          "pixel_sha256": "507ef48bbab5ab360ea3a40f46f0dd374c6bb7894513d0aa4b1d7674c242a03f"
+        }
+      ],
+      "picture_pixel_evidence": {
+        "oracle": "host-word-black-picture-v1",
+        "case": "word-gif",
+        "dpi": 72,
+        "page_size": [
+          596,
+          842
+        ],
+        "expected_page_size": [
+          595.3,
+          841.9
+        ],
+        "page_size_points": [
+          595.304,
+          841.89
+        ],
+        "expected_rect": [
+          72,
+          84,
+          60,
+          30
+        ],
+        "source_geometry": {
+          "page_twips": [
+            11906,
+            16838
+          ],
+          "margins_twips": [
+            1440,
+            1440,
+            1440,
+            1440,
+            720,
+            720
+          ],
+          "leading_spacing_twips": [
+            0,
+            0,
+            240
+          ],
+          "leading_line_rule": "exact",
+          "inline_extent_emu": [
+            762000,
+            381000
+          ],
+          "inline_distances_emu": [
+            0,
+            0,
+            114300,
+            114300
+          ],
+          "picture_offset_emu": [
+            0,
+            0
+          ],
+          "picture_extent_emu": [
+            762000,
+            381000
+          ],
+          "media_dimensions_pixels": [
+            80,
+            40
+          ],
+          "media_mime": "image/gif"
+        },
+        "pixel_sha256": "507ef48bbab5ab360ea3a40f46f0dd374c6bb7894513d0aa4b1d7674c242a03f",
+        "black_pixels": 1860,
+        "white_pixels": 499941,
+        "gray_pixels": 31,
+        "colored_pixels": 0,
+        "outside_nonwhite_pixels": 0,
+        "interior_nonblack_pixels": 0,
+        "black_bbox": [
+          72,
+          83,
+          132,
+          114
+        ]
+      },
+      "input_sha256": "8a500c0c84474943798019e98e76bc85f7b193ab74e436ccdf7ec92b40e1a832",
+      "conversion_attempts": [
+        {
+          "attempt": 1,
+          "command": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/bin/override/soffice",
+            "-env:UserInstallation=file:///workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/native/render-000-attempt-1-cujqf0gf/profile",
+            "--headless",
+            "--convert-to",
+            "pdf",
+            "--outdir",
+            "/workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/native/render-000-attempt-1-cujqf0gf",
+            "/workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/input/fidelity-host/word-picture-gif-1.docx"
+          ],
+          "input_sha256_before": "8a500c0c84474943798019e98e76bc85f7b193ab74e436ccdf7ec92b40e1a832",
+          "status": "converted",
+          "returncode": 0,
+          "stdout": "convert /workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/input/fidelity-host/word-picture-gif-1.docx as a Writer document -> /workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/native/render-000-attempt-1-cujqf0gf/word-picture-gif-1.pdf using filter : writer_pdf_Export\n",
+          "stderr": "",
+          "input_sha256_after": "8a500c0c84474943798019e98e76bc85f7b193ab74e436ccdf7ec92b40e1a832",
+          "input_unchanged": true
+        }
+      ]
+    },
+    {
+      "file": "word-picture-gif-2.docx",
+      "pages": 1,
+      "text": "\f",
+      "pixel_sha256": [
+        "507ef48bbab5ab360ea3a40f46f0dd374c6bb7894513d0aa4b1d7674c242a03f"
+      ],
+      "pdf": "001/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 596,
+          "height": 842,
+          "png": "001/page-0001.png",
+          "pixel_sha256": "507ef48bbab5ab360ea3a40f46f0dd374c6bb7894513d0aa4b1d7674c242a03f"
+        }
+      ],
+      "picture_pixel_evidence": {
+        "oracle": "host-word-black-picture-v1",
+        "case": "word-gif",
+        "dpi": 72,
+        "page_size": [
+          596,
+          842
+        ],
+        "expected_page_size": [
+          595.3,
+          841.9
+        ],
+        "page_size_points": [
+          595.304,
+          841.89
+        ],
+        "expected_rect": [
+          72,
+          84,
+          60,
+          30
+        ],
+        "source_geometry": {
+          "page_twips": [
+            11906,
+            16838
+          ],
+          "margins_twips": [
+            1440,
+            1440,
+            1440,
+            1440,
+            720,
+            720
+          ],
+          "leading_spacing_twips": [
+            0,
+            0,
+            240
+          ],
+          "leading_line_rule": "exact",
+          "inline_extent_emu": [
+            762000,
+            381000
+          ],
+          "inline_distances_emu": [
+            0,
+            0,
+            114300,
+            114300
+          ],
+          "picture_offset_emu": [
+            0,
+            0
+          ],
+          "picture_extent_emu": [
+            762000,
+            381000
+          ],
+          "media_dimensions_pixels": [
+            80,
+            40
+          ],
+          "media_mime": "image/gif"
+        },
+        "pixel_sha256": "507ef48bbab5ab360ea3a40f46f0dd374c6bb7894513d0aa4b1d7674c242a03f",
+        "black_pixels": 1860,
+        "white_pixels": 499941,
+        "gray_pixels": 31,
+        "colored_pixels": 0,
+        "outside_nonwhite_pixels": 0,
+        "interior_nonblack_pixels": 0,
+        "black_bbox": [
+          72,
+          83,
+          132,
+          114
+        ]
+      },
+      "input_sha256": "c2218aaa0b60cdf395eef63000b600ca7010ba7f8cda8d9a0c109af8d70e3413",
+      "conversion_attempts": [
+        {
+          "attempt": 1,
+          "command": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/bin/override/soffice",
+            "-env:UserInstallation=file:///workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/native/render-001-attempt-1-hj77wvza/profile",
+            "--headless",
+            "--convert-to",
+            "pdf",
+            "--outdir",
+            "/workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/native/render-001-attempt-1-hj77wvza",
+            "/workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/input/fidelity-host/word-picture-gif-2.docx"
+          ],
+          "input_sha256_before": "c2218aaa0b60cdf395eef63000b600ca7010ba7f8cda8d9a0c109af8d70e3413",
+          "status": "converted",
+          "returncode": 0,
+          "stdout": "convert /workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/input/fidelity-host/word-picture-gif-2.docx as a Writer document -> /workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/native/render-001-attempt-1-hj77wvza/word-picture-gif-2.pdf using filter : writer_pdf_Export\n",
+          "stderr": "",
+          "input_sha256_after": "c2218aaa0b60cdf395eef63000b600ca7010ba7f8cda8d9a0c109af8d70e3413",
+          "input_unchanged": true
+        }
+      ]
+    },
+    {
+      "file": "word-picture-gif-3.docx",
+      "pages": 1,
+      "text": "\f",
+      "pixel_sha256": [
+        "507ef48bbab5ab360ea3a40f46f0dd374c6bb7894513d0aa4b1d7674c242a03f"
+      ],
+      "pdf": "002/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 596,
+          "height": 842,
+          "png": "002/page-0001.png",
+          "pixel_sha256": "507ef48bbab5ab360ea3a40f46f0dd374c6bb7894513d0aa4b1d7674c242a03f"
+        }
+      ],
+      "picture_pixel_evidence": {
+        "oracle": "host-word-black-picture-v1",
+        "case": "word-gif",
+        "dpi": 72,
+        "page_size": [
+          596,
+          842
+        ],
+        "expected_page_size": [
+          595.3,
+          841.9
+        ],
+        "page_size_points": [
+          595.304,
+          841.89
+        ],
+        "expected_rect": [
+          72,
+          84,
+          60,
+          30
+        ],
+        "source_geometry": {
+          "page_twips": [
+            11906,
+            16838
+          ],
+          "margins_twips": [
+            1440,
+            1440,
+            1440,
+            1440,
+            720,
+            720
+          ],
+          "leading_spacing_twips": [
+            0,
+            0,
+            240
+          ],
+          "leading_line_rule": "exact",
+          "inline_extent_emu": [
+            762000,
+            381000
+          ],
+          "inline_distances_emu": [
+            0,
+            0,
+            114300,
+            114300
+          ],
+          "picture_offset_emu": [
+            0,
+            0
+          ],
+          "picture_extent_emu": [
+            762000,
+            381000
+          ],
+          "media_dimensions_pixels": [
+            80,
+            40
+          ],
+          "media_mime": "image/gif"
+        },
+        "pixel_sha256": "507ef48bbab5ab360ea3a40f46f0dd374c6bb7894513d0aa4b1d7674c242a03f",
+        "black_pixels": 1860,
+        "white_pixels": 499941,
+        "gray_pixels": 31,
+        "colored_pixels": 0,
+        "outside_nonwhite_pixels": 0,
+        "interior_nonblack_pixels": 0,
+        "black_bbox": [
+          72,
+          83,
+          132,
+          114
+        ]
+      },
+      "input_sha256": "0840a12f23d52aa2963e22759bbaca55c67bf0fbbd5882d01cc72a21df78be06",
+      "conversion_attempts": [
+        {
+          "attempt": 1,
+          "command": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/bin/override/soffice",
+            "-env:UserInstallation=file:///workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/native/render-002-attempt-1-x065_rl9/profile",
+            "--headless",
+            "--convert-to",
+            "pdf",
+            "--outdir",
+            "/workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/native/render-002-attempt-1-x065_rl9",
+            "/workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/input/fidelity-host/word-picture-gif-3.docx"
+          ],
+          "input_sha256_before": "0840a12f23d52aa2963e22759bbaca55c67bf0fbbd5882d01cc72a21df78be06",
+          "status": "converted",
+          "returncode": 0,
+          "stdout": "convert /workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/input/fidelity-host/word-picture-gif-3.docx as a Writer document -> /workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/native/render-002-attempt-1-x065_rl9/word-picture-gif-3.pdf using filter : writer_pdf_Export\n",
+          "stderr": "",
+          "input_sha256_after": "0840a12f23d52aa2963e22759bbaca55c67bf0fbbd5882d01cc72a21df78be06",
+          "input_unchanged": true
+        }
+      ]
+    },
+    {
+      "file": "word-picture-jpeg-1.docx",
+      "pages": 1,
+      "text": "\f",
+      "pixel_sha256": [
+        "507ef48bbab5ab360ea3a40f46f0dd374c6bb7894513d0aa4b1d7674c242a03f"
+      ],
+      "pdf": "003/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 596,
+          "height": 842,
+          "png": "003/page-0001.png",
+          "pixel_sha256": "507ef48bbab5ab360ea3a40f46f0dd374c6bb7894513d0aa4b1d7674c242a03f"
+        }
+      ],
+      "picture_pixel_evidence": {
+        "oracle": "host-word-black-picture-v1",
+        "case": "word-jpeg",
+        "dpi": 72,
+        "page_size": [
+          596,
+          842
+        ],
+        "expected_page_size": [
+          595.3,
+          841.9
+        ],
+        "page_size_points": [
+          595.304,
+          841.89
+        ],
+        "expected_rect": [
+          72,
+          84,
+          60,
+          30
+        ],
+        "source_geometry": {
+          "page_twips": [
+            11906,
+            16838
+          ],
+          "margins_twips": [
+            1440,
+            1440,
+            1440,
+            1440,
+            720,
+            720
+          ],
+          "leading_spacing_twips": [
+            0,
+            0,
+            240
+          ],
+          "leading_line_rule": "exact",
+          "inline_extent_emu": [
+            762000,
+            381000
+          ],
+          "inline_distances_emu": [
+            0,
+            0,
+            114300,
+            114300
+          ],
+          "picture_offset_emu": [
+            0,
+            0
+          ],
+          "picture_extent_emu": [
+            762000,
+            381000
+          ],
+          "media_dimensions_pixels": [
+            80,
+            40
+          ],
+          "media_mime": "image/jpeg"
+        },
+        "pixel_sha256": "507ef48bbab5ab360ea3a40f46f0dd374c6bb7894513d0aa4b1d7674c242a03f",
+        "black_pixels": 1860,
+        "white_pixels": 499941,
+        "gray_pixels": 31,
+        "colored_pixels": 0,
+        "outside_nonwhite_pixels": 0,
+        "interior_nonblack_pixels": 0,
+        "black_bbox": [
+          72,
+          83,
+          132,
+          114
+        ]
+      },
+      "input_sha256": "2310426c27febbe2fbb36fcaf57ca58f28c608f0d125b81f6bd35c44e2b55305",
+      "conversion_attempts": [
+        {
+          "attempt": 1,
+          "command": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/bin/override/soffice",
+            "-env:UserInstallation=file:///workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/native/render-003-attempt-1-mjdo9zrm/profile",
+            "--headless",
+            "--convert-to",
+            "pdf",
+            "--outdir",
+            "/workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/native/render-003-attempt-1-mjdo9zrm",
+            "/workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/input/fidelity-host/word-picture-jpeg-1.docx"
+          ],
+          "input_sha256_before": "2310426c27febbe2fbb36fcaf57ca58f28c608f0d125b81f6bd35c44e2b55305",
+          "status": "converted",
+          "returncode": 0,
+          "stdout": "convert /workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/input/fidelity-host/word-picture-jpeg-1.docx as a Writer document -> /workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/native/render-003-attempt-1-mjdo9zrm/word-picture-jpeg-1.pdf using filter : writer_pdf_Export\n",
+          "stderr": "",
+          "input_sha256_after": "2310426c27febbe2fbb36fcaf57ca58f28c608f0d125b81f6bd35c44e2b55305",
+          "input_unchanged": true
+        }
+      ]
+    },
+    {
+      "file": "word-picture-jpeg-2.docx",
+      "pages": 1,
+      "text": "\f",
+      "pixel_sha256": [
+        "507ef48bbab5ab360ea3a40f46f0dd374c6bb7894513d0aa4b1d7674c242a03f"
+      ],
+      "pdf": "004/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 596,
+          "height": 842,
+          "png": "004/page-0001.png",
+          "pixel_sha256": "507ef48bbab5ab360ea3a40f46f0dd374c6bb7894513d0aa4b1d7674c242a03f"
+        }
+      ],
+      "picture_pixel_evidence": {
+        "oracle": "host-word-black-picture-v1",
+        "case": "word-jpeg",
+        "dpi": 72,
+        "page_size": [
+          596,
+          842
+        ],
+        "expected_page_size": [
+          595.3,
+          841.9
+        ],
+        "page_size_points": [
+          595.304,
+          841.89
+        ],
+        "expected_rect": [
+          72,
+          84,
+          60,
+          30
+        ],
+        "source_geometry": {
+          "page_twips": [
+            11906,
+            16838
+          ],
+          "margins_twips": [
+            1440,
+            1440,
+            1440,
+            1440,
+            720,
+            720
+          ],
+          "leading_spacing_twips": [
+            0,
+            0,
+            240
+          ],
+          "leading_line_rule": "exact",
+          "inline_extent_emu": [
+            762000,
+            381000
+          ],
+          "inline_distances_emu": [
+            0,
+            0,
+            114300,
+            114300
+          ],
+          "picture_offset_emu": [
+            0,
+            0
+          ],
+          "picture_extent_emu": [
+            762000,
+            381000
+          ],
+          "media_dimensions_pixels": [
+            80,
+            40
+          ],
+          "media_mime": "image/jpeg"
+        },
+        "pixel_sha256": "507ef48bbab5ab360ea3a40f46f0dd374c6bb7894513d0aa4b1d7674c242a03f",
+        "black_pixels": 1860,
+        "white_pixels": 499941,
+        "gray_pixels": 31,
+        "colored_pixels": 0,
+        "outside_nonwhite_pixels": 0,
+        "interior_nonblack_pixels": 0,
+        "black_bbox": [
+          72,
+          83,
+          132,
+          114
+        ]
+      },
+      "input_sha256": "843cf16224bfd8ecb9939906a7645b88bb87e5516aeac61bc2f6695377d9521d",
+      "conversion_attempts": [
+        {
+          "attempt": 1,
+          "command": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/bin/override/soffice",
+            "-env:UserInstallation=file:///workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/native/render-004-attempt-1-xqj69qg3/profile",
+            "--headless",
+            "--convert-to",
+            "pdf",
+            "--outdir",
+            "/workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/native/render-004-attempt-1-xqj69qg3",
+            "/workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/input/fidelity-host/word-picture-jpeg-2.docx"
+          ],
+          "input_sha256_before": "843cf16224bfd8ecb9939906a7645b88bb87e5516aeac61bc2f6695377d9521d",
+          "status": "converted",
+          "returncode": 0,
+          "stdout": "convert /workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/input/fidelity-host/word-picture-jpeg-2.docx as a Writer document -> /workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/native/render-004-attempt-1-xqj69qg3/word-picture-jpeg-2.pdf using filter : writer_pdf_Export\n",
+          "stderr": "",
+          "input_sha256_after": "843cf16224bfd8ecb9939906a7645b88bb87e5516aeac61bc2f6695377d9521d",
+          "input_unchanged": true
+        }
+      ]
+    },
+    {
+      "file": "word-picture-jpeg-3.docx",
+      "pages": 1,
+      "text": "\f",
+      "pixel_sha256": [
+        "507ef48bbab5ab360ea3a40f46f0dd374c6bb7894513d0aa4b1d7674c242a03f"
+      ],
+      "pdf": "005/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 596,
+          "height": 842,
+          "png": "005/page-0001.png",
+          "pixel_sha256": "507ef48bbab5ab360ea3a40f46f0dd374c6bb7894513d0aa4b1d7674c242a03f"
+        }
+      ],
+      "picture_pixel_evidence": {
+        "oracle": "host-word-black-picture-v1",
+        "case": "word-jpeg",
+        "dpi": 72,
+        "page_size": [
+          596,
+          842
+        ],
+        "expected_page_size": [
+          595.3,
+          841.9
+        ],
+        "page_size_points": [
+          595.304,
+          841.89
+        ],
+        "expected_rect": [
+          72,
+          84,
+          60,
+          30
+        ],
+        "source_geometry": {
+          "page_twips": [
+            11906,
+            16838
+          ],
+          "margins_twips": [
+            1440,
+            1440,
+            1440,
+            1440,
+            720,
+            720
+          ],
+          "leading_spacing_twips": [
+            0,
+            0,
+            240
+          ],
+          "leading_line_rule": "exact",
+          "inline_extent_emu": [
+            762000,
+            381000
+          ],
+          "inline_distances_emu": [
+            0,
+            0,
+            114300,
+            114300
+          ],
+          "picture_offset_emu": [
+            0,
+            0
+          ],
+          "picture_extent_emu": [
+            762000,
+            381000
+          ],
+          "media_dimensions_pixels": [
+            80,
+            40
+          ],
+          "media_mime": "image/jpeg"
+        },
+        "pixel_sha256": "507ef48bbab5ab360ea3a40f46f0dd374c6bb7894513d0aa4b1d7674c242a03f",
+        "black_pixels": 1860,
+        "white_pixels": 499941,
+        "gray_pixels": 31,
+        "colored_pixels": 0,
+        "outside_nonwhite_pixels": 0,
+        "interior_nonblack_pixels": 0,
+        "black_bbox": [
+          72,
+          83,
+          132,
+          114
+        ]
+      },
+      "input_sha256": "3afd7e51d5a62af8c58aeec1b7c90ddbbdacca3c63158ea1cc2e47cd22f50c80",
+      "conversion_attempts": [
+        {
+          "attempt": 1,
+          "command": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/bin/override/soffice",
+            "-env:UserInstallation=file:///workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/native/render-005-attempt-1-9emx4u1f/profile",
+            "--headless",
+            "--convert-to",
+            "pdf",
+            "--outdir",
+            "/workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/native/render-005-attempt-1-9emx4u1f",
+            "/workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/input/fidelity-host/word-picture-jpeg-3.docx"
+          ],
+          "input_sha256_before": "3afd7e51d5a62af8c58aeec1b7c90ddbbdacca3c63158ea1cc2e47cd22f50c80",
+          "status": "converted",
+          "returncode": 0,
+          "stdout": "convert /workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/input/fidelity-host/word-picture-jpeg-3.docx as a Writer document -> /workspace/scratch/dcd413fa34f4/verification-word-picture-native-20261112/native/render-005-attempt-1-9emx4u1f/word-picture-jpeg-3.pdf using filter : writer_pdf_Export\n",
+          "stderr": "",
+          "input_sha256_after": "3afd7e51d5a62af8c58aeec1b7c90ddbbdacca3c63158ea1cc2e47cd22f50c80",
+          "input_unchanged": true
+        }
+      ]
+    }
+  ]
+}
