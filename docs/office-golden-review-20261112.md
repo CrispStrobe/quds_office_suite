@@ -47,6 +47,26 @@ full width below it; top-and-bottom flow starts below the frame. Exact mode,
 geometry, colors and logical character ownership have independent XML/layout
 checks. Each scene must match before saving and after all three native cycles.
 
+The subsequent native-presentation correction moves only the textbox's own
+text to its source-default insets: 7.2 points horizontally and 3.6 vertically
+when `bodyPr` omits those attributes. Frame geometry and body wrapping remain
+unchanged. The three changed images were inspected again; source XML tests and
+the independent frame oracle establish the defaults. The normal four-state
+comparison checks the source model and each save cycle against the same image.
+
+## Rich nested table image
+
+`office_nested_table_golden_test.dart` adds one image with a filled parent cell,
+a visible authored green picture, a two-cell nested table, a TOC and an absolute
+text frame. This brings the reviewed set to 23 page images in 13 golden cases.
+The test checks the live model and three native save/reopen cycles. Layout
+checks require four cell boxes, one picture, one frame and one TOC entry.
+Independent pixel guards require visible picture pixels, frame-text ink outside
+the parent cell, and a dark TOC page number inside the cell. Their regions exclude
+borders and leader dots. The reviewed image has 4,465 green picture pixels,
+268 frame-text pixels and 14 page-number pixels, above thresholds of 100, 40 and
+5 respectively.
+
 ## Reproduce normal validation
 
 From `packages/quds_office_editor`, with the pinned SDK and dependencies:
@@ -55,7 +75,8 @@ From `packages/quds_office_editor`, with the pinned SDK and dependencies:
 flutter test --no-pub test/office_fidelity_golden_test.dart \
   test/office_story_golden_test.dart test/office_layout_goldens_test.dart \
   test/office_structure_goldens_test.dart \
-  test/office_frame_wrap_golden_test.dart
+  test/office_frame_wrap_golden_test.dart \
+  test/office_nested_table_golden_test.dart
 ```
 
 Do not use `--update-goldens` in an acceptance run. Each cycle must match the

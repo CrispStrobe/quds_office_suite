@@ -148,6 +148,75 @@ class CycleComparisonTests(unittest.TestCase):
                 failing = render.cycle_coverage(files, records)
                 self.assertEqual(len(failing['failures']), 1)
 
+    def test_bookmark_clone_series_requires_its_explicit_native_baseline(self):
+        for folder in ('fidelity-bookmarks', 'engine/fidelity-bookmarks'):
+            with self.subTest(folder=folder):
+                cycles = [f'{folder}/cloned-{cycle}.docx' for cycle in range(1, 4)]
+                source = f'{folder}/source.docx'
+                files = cycles + [source]
+                records = {name: record(name) for name in files}
+                result = render.cycle_coverage(files, records)
+                self.assertEqual(result['failures'], [])
+                self.assertEqual(result['baseline_comparisons'], 1)
+                self.assertEqual(result['cycle_comparisons'][0]['baseline'], source)
+                self.assertEqual(result['render_only_files'], [])
+
+                missing = render.cycle_coverage(cycles, records)
+                self.assertIn('Missing required native baseline',
+                              missing['failures'][0]['error'])
+                del records[source]
+                failed = render.cycle_coverage(files, records)
+                self.assertIn('Missing successful baseline render',
+                              failed['failures'][0]['error'])
+
+    def test_bookmark_clone_first_save_text_pixels_and_page_count_must_match_source(self):
+        files = [f'fidelity-bookmarks/cloned-{cycle}.docx' for cycle in range(1, 4)]
+        source = 'fidelity-bookmarks/source.docx'
+        files.append(source)
+        for change in ({'text': 'Native source has additional visible text'},
+                       {'pixels': ['2' * 64]}, {'pages': 2}):
+            with self.subTest(change=change):
+                records = {name: record(name) for name in files}
+                records[source] = record(source, **change)
+                result = render.cycle_coverage(files, records)
+                self.assertEqual(len(result['failures']), 1)
+                self.assertIn('Render changed', result['failures'][0]['error'])
+                self.assertFalse(result['cycle_comparisons'][0]['passed'])
+
+    def test_explicit_clone_mapping_does_not_guess_other_scenario_baselines(self):
+        for folder, case, suffix in (
+                ('other-corpus', 'cloned', '.docx'),
+                ('fidelity-bookmarks', 'cloned', '.xlsx'),
+                ('fidelity-bookmarks', 'edited', '.docx'),
+                ('fidelity-bookmarks', 'frame', '.docx')):
+            with self.subTest(folder=folder, case=case, suffix=suffix):
+                files = [f'{folder}/{case}-{cycle}{suffix}' for cycle in range(1, 4)]
+                source = f'{folder}/source{suffix}'
+                files.append(source)
+                records = {name: record(name) for name in files}
+                records[source] = record(source, text='Intentionally different source')
+                result = render.cycle_coverage(files, records)
+                self.assertEqual(result['failures'], [])
+                self.assertEqual(result['baseline_comparisons'], 0)
+                self.assertEqual(result['render_only_files'], [source])
+
+    def test_declared_frame_wrap_modes_require_their_exact_native_source(self):
+        for mode in ('none', 'square', 'topBottom'):
+            with self.subTest(mode=mode):
+                cycles = [f'engine/fidelity-frame-wrap/{mode}-{cycle}.docx'
+                          for cycle in range(1, 4)]
+                source = f'engine/fidelity-frame-wrap/{mode}-source.docx'
+                files = cycles + [source]
+                records = {name: record(name) for name in files}
+                passed = render.cycle_coverage(files, records)
+                self.assertEqual(passed['failures'], [])
+                self.assertEqual(passed['baseline_comparisons'], 1)
+                missing = render.cycle_coverage(cycles, records)
+                self.assertIn('Missing required native baseline', missing['failures'][0]['error'])
+                records[source] = record(source, pixels=['2' * 64])
+                changed = render.cycle_coverage(files, records)
+                self.assertIn('Render changed (pixel_sha256)', changed['failures'][0]['error'])
+
 
 class RenderExecutionTests(unittest.TestCase):
     def test_empty_and_missing_inputs_fail_with_a_report(self):

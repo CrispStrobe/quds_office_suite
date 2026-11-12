@@ -58,12 +58,12 @@ fields. Relative picture paths are resolved against the script directory.
 | Headings and styles | Heading1–9, custom paragraph/character/table styles, sparse style definitions, selected paragraph edits | Style cascade, referenced styles, style introduction and host gallery tests | All style combinations and fonts are not enumerated |
 | Paragraphs | Insert/delete/split, rich replacement, indents, spacing rules, tabs/leaders, shading, borders, direction, breaks | Scripted transitions, atomicity tests, exact host property dialogs, repeated history | Layout equivalence across arbitrary scripts and fonts remains separate |
 | Footnotes/endnotes | Caret insertion, rich story editing, deletion, owned links/images/tables, pagination | Exact marker-position/absence oracle, real ribbon tests, note continuation goldens | The whole-note text setter intentionally replaces rich content; paragraph/run edits preserve it |
-| Tables | Create, row/column insertion/deletion, merge/unmerge, cell/row/table properties, table styles and RTL | Structural XML golden, negative controls, rich merge and structural history tests | Grid surgery requires unmerged cells; merge uses logical columns, other cell selectors use physical cells |
+| Tables | Create, row/column insertion/deletion, merge/unmerge, cell/row/table properties, table styles and RTL; rich nested-cell layout | Structural XML golden, negative controls, rich merge/history tests, nested-cell pixel guards and tall-row ownership tests | Grid surgery requires unmerged cells; merge uses logical columns, other cell selectors use physical cells |
 | TOCs | Create/update/remove, heading ranges, cached page numbers, full/partial page suppression, unique bookmark targets | Structural oracle, native TOC integrity and empty-reference tests | Selectors traverse modeled body containers in depth-first order |
 | Pictures | Add/remove/replace/resize, wrapping metadata, distances, rotation, title/description and owning relationships | Byte hashes, native drawing XML, story-media tests and visible-pixel guards | Arbitrary picture contour wrapping is not certified |
 | Positioned drawings | Text frames with coordinates, dimensions, page/margin anchors, fill/stroke and native wrap metadata | Native frame oracle, variable-width/bidi geometry and page/column/note-reservation regressions | One available line interval; earlier paragraphs and floating tables are not retroactively reflowed |
 | References | Exact native bookmark ranges, partial/cross-paragraph/empty/overlapping ranges, REF caches, inline citation/index fields | Fourteen native packages, independent endpoint/UTF-16 oracle, edits and repeated history | Mixed drawing-anchor endpoints and arbitrary rich complex-field refresh remain partial |
-| Content controls | Live nested block containers and paired inline controls, exact metadata, real-parent text/structural edits | Six native direct/isolate exports, unchanged loss probe, corruption controls and controller history | Unsupported topologies and boundary-crossing/colliding copies are guarded; UI lock/data binding semantics remain open |
+| Content controls | Live nested block containers and paired inline controls; single-paragraph native wrappers in headers, footers and comments | Raw native sources, direct/isolate cycles, auxiliary-story corpora, corruption controls and controller history | Unsupported topologies and boundary-crossing/colliding copies are guarded; UI lock/data binding semantics remain open |
 | Comments | Exact text anchors, replies, edit, resolve and delete; comment-story formatting | Native thread oracle, relational corruption controls, host comment dialog and history tests | Full modern-comment metadata beyond the modeled fields is not claimed |
 | Revisions | Body and auxiliary-story ownership, exact native insertion/deletion spans, accept/reject and history | Authored ten-story corpus, direct/isolate export cycles and editor reopen/resolve tests | Disjoint edits rebase; ambiguous intersections are explicit conflicts requiring undo before resolve/export |
 | Bibliography | Owned native source parts, add/edit/rename/delete, structured imported authors and source metadata | Relocated native source fixture, independent relationship/source oracle and mutation controls | Citation style rendering and automatic field retargeting after direct tag changes remain separate |
@@ -98,6 +98,10 @@ Replace-all previously could change an early paragraph before discovering that a
 later match crossed an unsupported field/control boundary. A prepared operation
 now validates every affected paragraph first. One controller history command
 restores rich tokens and pending revision ranges across repeated undo/redo.
+Scripted single-paragraph replacement now uses the same revision range rebasing:
+an exact repeated-text case protects against a revision silently moving to the
+wrong identical substring. Row, column and TOC deletion preflight both bookmark
+endpoints, including source-only native TOC cache paragraphs, before mutation.
 
 Frame layout now uses the available width on each affected line while retaining
 the paragraph's bidi shaping and logical character offsets. Square frames allow
@@ -105,6 +109,43 @@ text beside them; top-and-bottom frames clear the full intersected column. Tests
 cover multiple frames, columns, page transitions, long unbreakable words, TOCs
 and changing footnote reservations. Native top-and-bottom wrap is also retained
 instead of being read back as square wrap.
+
+Rich table cells previously measured and painted different subsets of their
+content. A shared contained-block path now handles nested tables, pictures,
+frames, equations, TOCs and controls consistently. Continued rows keep stable
+paragraph ownership. Absolute frames and pictures stay on their anchor page;
+frame footnotes reserve space there. Oversized inline pictures fit the physical
+page without changing their exported dimensions or bytes. A reviewed scene
+also checks that cell backgrounds do not cover pictures, ancestor clips do not
+hide frame text, and TOC page numbers are painted inside their actual text box.
+
+Native source comparisons exposed changes that repeat-save stability alone
+missed: inline equations became display equations, cached TOCs gained extra
+paragraphs and generated leaders, textboxes lost native insets and anchor
+paragraph properties, and writing an otherwise absent settings part changed
+the native layout. The source-preservation tests now keep those distinctions.
+Settings edits merge only the three modeled values and retain other native
+settings and protection metadata. Textbox layout and its ruler share the same
+native inset geometry.
+The independent frame source gate also caught an invented one-point outline:
+it altered edge pixels and moved top-and-bottom-wrapped text by 0.45 points.
+Native line omission, omitted width and explicit line properties now survive;
+stroke-color edits retain the original width. All three raw frame sources
+match their first exports and all three subsequent cycles exactly in
+LibreOffice text, page count and decoded pixels.
+
+Native TOC cache reconstruction also preserves bookmarks and inline controls
+that span the editable title and cached page number. Range text includes the
+current page value and points back to the live title paragraph. Regenerating a
+cache with such native ranges requires a remapping operation that is not yet
+implemented, so explicit refresh/settings changes are rejected before any TOC,
+heading alias or controller history changes. Ordinary title, formatting and
+page-value edits retain the existing cache structure.
+
+Whole-note replacement also preflights bookmark ownership. Removing only one
+endpoint is rejected before an unrelated pending note edit, selection or
+undo/redo stack can change. Removing a complete range is supported and tested
+through repeated exports.
 
 CrispCloud's paragraph and margin dialogs rounded fractional values and wrote
 unchanged fields back into imported documents. They now apply only edited
@@ -158,6 +199,19 @@ goldens, external Open XML SDK validation and LibreOffice/Poppler render
 comparisons. Complete three-cycle groups are compared against their source or
 edited baseline where available. PDFs, page PNGs, diagnostics, schema reports
 and fresh coverage remain workflow artifacts.
+
+The auxiliary-comment corpus records one specific external-renderer limit.
+The available LibreOffice importer refuses the authored source containing a
+block content control inside a comment. The seven original packages remain
+mandatory for independent XML/semantic validation and Open XML SDK validation.
+The renderer may classify them as `native_schema_only` only after reproducing
+that exact source-import refusal and matching successful SDK receipts to each
+file's exact path and SHA-256. They are counted separately and have no visual
+certification. A separately authored header/footer-control corpus is rendered
+normally against its raw source. Missing or stale receipts, malformed packages,
+different conversion failures and all other corpus files still fail the gate.
+If a newer renderer accepts the original source, strict visual comparisons
+automatically apply to that corpus too.
 
 ## Integrate and validate CrispCloud
 

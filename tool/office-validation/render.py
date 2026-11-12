@@ -7,11 +7,14 @@ The fidelity corpus uses three numbered saves per case, either CASE-1..3 or
 CASE-0..2. Unnumbered files are rendered and reported without implying repeated
 save coverage. A roundtrip series also compares against a sibling edited file;
 an unchanged/imported series compares against a sibling input/source file when supplied.
+Explicit corpus mappings additionally require native baselines for unchanged
+scenarios whose names do not express that contract.
 Requires LibreOffice and Poppler; PNG creation uses only Python's standard library.
 """
 import argparse
 from collections import defaultdict
 import hashlib
+import importlib.util
 import json
 import os
 from pathlib import Path
@@ -21,9 +24,27 @@ import struct
 import subprocess
 import tempfile
 import zlib
+from xml.etree import ElementTree as ET
+from zipfile import BadZipFile, ZipFile
 
 OFFICE_SUFFIXES = {'.docx', '.xlsx', '.pptx'}
 CYCLE_COUNT = 3
+# This producer deep-clones imported body blocks without intended visible edits.
+# Do not infer that other "cloned", "edited", or "frame" series are unchanged.
+# The directory and Office format are part of this specific corpus contract.
+REQUIRED_SERIES_BASELINES = {
+    ('fidelity-bookmarks', 'cloned.docx'): 'source.docx',
+    ('fidelity-frame-wrap', 'none.docx'): 'none-source.docx',
+    ('fidelity-frame-wrap', 'square.docx'): 'square-source.docx',
+    ('fidelity-frame-wrap', 'topBottom.docx'): 'topBottom-source.docx',
+}
+NATIVE_AUX_CORPUS = 'fidelity-aux-controls'
+NATIVE_AUX_FILES = {'source.docx'} | {
+    f'{phase}-{cycle}.docx' for phase in ('imported', 'edited') for cycle in range(1, 4)}
+NATIVE_AUX_REASON = (
+    'LibreOffice rejected the authored native block content control in a comment. '
+    'These exact files passed the independent native XML oracle and matching '
+    'Open XML SDK receipts; they have no visual certification from this renderer.')
 
 
 def office_binary():
@@ -179,7 +200,11 @@ def cycle_coverage(files, records):
                 compare_records(reference, records[name])
             case = Path(key)
             candidates = []
-            if case.stem == 'roundtrip':
+            required_baseline = REQUIRED_SERIES_BASELINES.get(
+                (case.parent.name, case.name))
+            if required_baseline is not None:
+                candidates = [case.with_name(required_baseline).as_posix()]
+            elif case.stem == 'roundtrip':
                 candidates = [case.with_name('edited' + case.suffix).as_posix()]
             elif case.stem in ('unchanged', 'imported'):
                 candidates = [case.with_name(prefix + case.suffix).as_posix()
@@ -191,6 +216,8 @@ def cycle_coverage(files, records):
             baseline = next((name for name in candidates if name in files),
                             candidates[0] if candidates else None)
             info['baseline_candidate'] = baseline
+            if required_baseline is not None and baseline not in files:
+                raise FidelityError(f'Missing required native baseline: {baseline}')
             if baseline in files:
                 if baseline not in records:
                     raise FidelityError(f'Missing successful baseline render: {baseline}')
@@ -209,6 +236,79 @@ def cycle_coverage(files, records):
         'render_only_files': sorted(name for name in singles if name not in compared_files),
         'failures': failures,
     }
+
+
+def native_aux_groups(paths):
+    """This exception is limited to one declared producer and seven exact names."""
+    groups = defaultdict(list)
+    for path in paths:
+        if path.parent.name == NATIVE_AUX_CORPUS and path.name in NATIVE_AUX_FILES:
+            groups[path.parent].append(path)
+    return groups
+
+
+def validate_native_aux_corpus(paths):
+    names = {path.name for path in paths}
+    if names != NATIVE_AUX_FILES:
+        raise FidelityError(f'Incomplete native auxiliary corpus: {sorted(NATIVE_AUX_FILES - names)}')
+    oracle_path = (Path(__file__).resolve().parents[2] / 'packages/quds_office_engine'
+                   / 'tool/fidelity/auxiliary_content_control_oracle.py')
+    specification = importlib.util.spec_from_file_location('native_aux_oracle', oracle_path)
+    if specification is None or specification.loader is None:
+        raise FidelityError('Independent native auxiliary oracle is unavailable')
+    oracle = importlib.util.module_from_spec(specification)
+    specification.loader.exec_module(oracle)
+    for path in paths:
+        try:
+            with ZipFile(path) as archive:
+                if len(archive.namelist()) != len(set(archive.namelist())) or archive.testzip() is not None:
+                    raise FidelityError(f'Invalid native auxiliary ZIP: {path}')
+                parts = {name: archive.read(name) for name in archive.namelist()}
+            if not {'[Content_Types].xml', '_rels/.rels', 'word/document.xml'} <= parts.keys():
+                raise FidelityError(f'Incomplete native auxiliary package: {path}')
+            for name, payload in parts.items():
+                if name.endswith(('.xml', '.rels')):
+                    ET.fromstring(payload)
+            oracle.inspect_parts(parts, edited=path.name.startswith('edited-'))
+        except (AssertionError, KeyError, ET.ParseError, BadZipFile, RuntimeError) as error:
+            raise FidelityError(f'Native auxiliary structure is not qualified: {path}: {error}') from error
+
+
+def matching_schema_receipts(paths, report_path):
+    """Require clean SDK results for these exact paths and current file bytes."""
+    if report_path is None:
+        raise FidelityError('No Open XML SDK schema receipt supplied for native-only evidence')
+    try:
+        report = json.loads(Path(report_path).read_text(encoding='utf-8'))
+    except (OSError, ValueError) as error:
+        raise FidelityError(f'Cannot read Open XML SDK schema receipt: {error}') from error
+    if not isinstance(report, dict) or not isinstance(report.get('Reports'), list):
+        raise FidelityError('Malformed Open XML SDK schema receipt')
+    entries = defaultdict(list)
+    for entry in report['Reports']:
+        if isinstance(entry, dict) and isinstance(entry.get('File'), str):
+            entries[Path(entry['File']).resolve()].append(entry)
+    qualified = {}
+    for path in paths:
+        candidates = entries[path.resolve()]
+        if len(candidates) != 1:
+            raise FidelityError(f'Missing or ambiguous exact-path SDK receipt: {path}')
+        entry = candidates[0]
+        digest = hashlib.sha256(path.read_bytes()).hexdigest()
+        if entry.get('Errors') != [] or 'Exception' in entry:
+            raise FidelityError(f'Native auxiliary file did not pass SDK validation: {path}')
+        if entry.get('Sha256') != digest:
+            raise FidelityError(f'Stale or missing SDK byte hash: {path}')
+        qualified[path] = digest
+    return qualified
+
+
+def known_native_import_rejection(error):
+    diagnostic = getattr(error, 'stderr', '') or ''
+    if isinstance(diagnostic, bytes):
+        diagnostic = diagnostic.decode('utf-8', errors='replace')
+    return (isinstance(error, subprocess.CalledProcessError) and error.returncode == 1
+            and 'Error: source file could not be loaded' in diagnostic)
 
 
 def render_document(path, root, output, index):
@@ -263,10 +363,15 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('input_directory', type=Path)
     parser.add_argument('output_directory', type=Path)
+    parser.add_argument('--schema-report', type=Path,
+                        help='Open XML SDK receipts, including exact file SHA-256 values')
     args = parser.parse_args(argv)
     root, output = args.input_directory.resolve(), args.output_directory.resolve()
     output.mkdir(parents=True, exist_ok=True)
     reports, failures = {}, []
+    native_only = []
+    excluded = set()
+    processed = set()
     renderer = None
     paths = []
     try:
@@ -275,8 +380,45 @@ def main(argv=None):
                                            timeout=30).strip()
         if not renderer:
             raise FidelityError('LibreOffice did not report a version')
+        indexes = {path: index for index, path in enumerate(paths)}
+        for directory, corpus_paths in native_aux_groups(paths).items():
+            source = directory / 'source.docx'
+            source_name = source.relative_to(root).as_posix()
+            try:
+                validate_native_aux_corpus(corpus_paths)
+            except (OSError, ValueError, ImportError) as error:
+                failures.append({'file': source_name, 'error': str(error)})
+                continue
+            processed.add(source)
+            try:
+                record = render_document(source, root, output, indexes[source])
+                reports[source_name] = record
+                print(f'{source_name}: rendered {record["pages"]} pages', flush=True)
+            except (OSError, subprocess.SubprocessError, FidelityError) as error:
+                if not known_native_import_rejection(error):
+                    failures.append({'file': source_name, 'error': str(error)})
+                    continue
+                try:
+                    receipts = matching_schema_receipts(corpus_paths, args.schema_report)
+                except FidelityError as qualification:
+                    failures.append({'file': source_name, 'error': str(error),
+                                     'qualification_error': str(qualification)})
+                    continue
+                diagnostic = error.stderr
+                if isinstance(diagnostic, bytes):
+                    diagnostic = diagnostic.decode('utf-8', errors='replace')
+                for path in corpus_paths:
+                    name = path.relative_to(root).as_posix()
+                    excluded.add(name)
+                    native_only.append({'file': name, 'status': 'native_schema_only',
+                                        'reason': NATIVE_AUX_REASON, 'source': source_name,
+                                        'source_diagnostic': diagnostic,
+                                        'schema_sha256': receipts[path]})
+                    print(f'{name}: native_schema_only; no visual certification', flush=True)
         for index, path in enumerate(paths):
             name = path.relative_to(root).as_posix()
+            if path in processed or name in excluded:
+                continue
             try:
                 record = render_document(path, root, output, index)
                 reports[name] = record
@@ -287,9 +429,12 @@ def main(argv=None):
     except (OSError, subprocess.SubprocessError, FidelityError) as error:
         failures.append({'error': str(error)})
     names = [path.relative_to(root).as_posix() for path in paths]
-    coverage = cycle_coverage(names, reports)
+    coverage = cycle_coverage([name for name in names if name not in excluded], reports)
     failures.extend(coverage.pop('failures'))
     report = {'renderer': renderer, 'files': len(paths), 'rendered_files': len(reports),
+              'visual_input_files': len(paths) - len(excluded),
+              'native_schema_only_files': len(native_only), 'native_schema_only': native_only,
+              'schema_report': str(args.schema_report) if args.schema_report is not None else None,
               'pixel_fingerprint': 'SHA-256 of big-endian uint32 width/height followed by RGB bytes',
               **coverage, 'failures': failures, 'reports': list(reports.values())}
     (output / 'render-report.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')

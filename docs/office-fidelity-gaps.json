@@ -71,25 +71,27 @@
       "id": "FID-006",
       "status": "closed",
       "area": "External validation infrastructure",
-      "finding": "Open XML SDK and LibreOffice/Poppler gates validate schema and repeated-save rendering; they retain reports and actual page PNGs.",
+      "finding": "Open XML SDK and LibreOffice/Poppler gates validate schema and repeated-save rendering, retain exact-byte schema receipts and actual page PNGs, and report qualified native-only renderer limitations separately from visual passes.",
       "evidence": [
         "tool/office-validation/Program.cs",
         "tool/office-validation/render.py",
         "tool/office-validation/test_render.py",
-        ".github/workflows/office-fidelity.yml"
+        ".github/workflows/office-fidelity.yml",
+        "tool/office-validation/test_native_render_limitations.py"
       ]
     },
     {
       "id": "FID-007",
       "status": "partial",
       "area": "Visual/platform breadth",
-      "finding": "Twenty-two reviewed page images cover notes, note continuation, first/even/default stories, columns, tall tables structural create/edit/remove workflows and three native frame wrap modes on pinned Linux Flutter 3.44.0. Other platforms and arbitrary scripts/fonts remain unproven.",
+      "finding": "Twenty-three reviewed page images cover notes, note continuation, first/even/default stories, columns, tall tables, structural create/edit/remove workflows, three native frame wrap modes and rich nested cells on pinned Linux Flutter 3.44.0. Other platforms and arbitrary scripts/fonts remain unproven.",
       "evidence": [
         "packages/quds_office_editor/test/office_fidelity_golden_test.dart",
         "packages/quds_office_editor/test/office_story_golden_test.dart",
         "packages/quds_office_editor/test/office_structure_goldens_test.dart",
         "docs/office-golden-review-20261112.md",
-        "packages/quds_office_editor/test/office_frame_wrap_golden_test.dart"
+        "packages/quds_office_editor/test/office_frame_wrap_golden_test.dart",
+        "packages/quds_office_editor/test/office_nested_table_golden_test.dart"
       ]
     },
     {
@@ -257,16 +259,19 @@
       "id": "FID-024",
       "status": "partial",
       "area": "Structured document tags / content controls",
-      "finding": "Live block controls and paired inline boundaries preserve native wrapper attributes, IDs, aliases, tags, sdtPr and sdtEndPr through supported edits and three direct/isolate cycles. Nested body, note, table and frame controls use their real mutable parents. The original unchanged loss probe now passes.",
+      "finding": "Live block controls and paired inline boundaries preserve native wrapper attributes, IDs, aliases, tags, sdtPr and sdtEndPr through supported edits and three direct/isolate cycles. Nested body, note, table and frame controls use their real mutable parents. Single-paragraph block controls, including nested shells, are also retained in all six header/footer variants and comments. The original unchanged loss probe passes.",
       "evidence": [
         "packages/quds_office_engine/test/word_content_control_fidelity_test.dart",
         "packages/quds_office_editor/test/word_content_control_history_test.dart",
         "packages/quds_office_engine/tool/fidelity/content_control_oracle.py",
         "packages/quds_office_engine/tool/fidelity/test_content_control_oracle.py",
         "packages/quds_office_engine/tool/fidelity/unsupported_word_audit.py",
-        "docs/office-unsupported-word-probes.json"
+        "docs/office-unsupported-word-probes.json",
+        "packages/quds_office_engine/test/word_auxiliary_content_control_test.dart",
+        "packages/quds_office_engine/tool/fidelity/auxiliary_content_control_oracle.py",
+        "packages/quds_office_engine/tool/fidelity/test_auxiliary_content_control_oracle.py"
       ],
-      "limits": "UI lock/data-binding behavior, repeating-section semantics and arbitrary topology remain open. Inline controls containing drawings/equations, block controls in paragraph-only headers/footers/comments, row/cell wrappers, boundary-crossing edits and duplicate-ID insertion fail explicitly before mutation."
+      "limits": "UI lock/data-binding behavior, repeating-section semantics and arbitrary topology remain open. Inline controls containing drawings/equations, multi-paragraph or non-paragraph controls in paragraph-only auxiliary stories, row/cell wrappers, boundary-crossing edits and duplicate-ID insertion fail explicitly before mutation. Native comment controls require separate renderer limitation reporting; see FID-065."
     },
     {
       "id": "FID-025",
@@ -279,7 +284,8 @@
         "packages/quds_office_engine/tool/fidelity/bookmark_ranges_oracle.py",
         "packages/quds_office_engine/tool/fidelity/test_bookmark_ranges_oracle.py",
         "packages/quds_office_engine/tool/fidelity/unsupported_word_audit.py",
-        "docs/office-unsupported-word-probes.json"
+        "docs/office-unsupported-word-probes.json",
+        "packages/quds_office_engine/test/word_note_bookmark_edit_test.dart"
       ],
       "limits": "Mixed text-and-drawing anchor endpoint order remains outside the block drawing model. Duplicate-producing copies and deletion of only one cross-paragraph endpoint are guarded until safe remapping is implemented. Arbitrary rich complex-field refresh remains FID-049."
     },
@@ -433,7 +439,9 @@
       "evidence": [
         "packages/quds_office_engine/test/note_marker_fidelity_test.dart",
         "packages/quds_office_engine/tool/fidelity/note_markers_oracle.py",
-        "packages/quds_office_engine/tool/fidelity/test_note_markers_oracle.py"
+        "packages/quds_office_engine/tool/fidelity/test_note_markers_oracle.py",
+        "CrispCloud:test/office_roundtrip_preservation_test.dart",
+        "CrispCloud:test/office_footnote_test.dart"
       ],
       "limits": "The legacy whole-note text setter intentionally replaces rich content and preserves one automatic reference marker. Use paragraph/run operations for rich edits."
     },
@@ -597,7 +605,7 @@
       "id": "FID-056",
       "status": "partial",
       "area": "Positioned frame wrapping in Quds layout",
-      "finding": "Following body paragraphs and TOCs reflow around anchored square frames and clear top-and-bottom frames. Variable-width layout preserves bidi shaping and exact logical character ownership through multiple frames, columns, page transitions and note reservation. Native none/square/topBottom values, coordinates, dimensions, fill and stroke pass nine independent native-export checks.",
+      "finding": "Following body paragraphs and TOCs reflow around anchored square frames and clear top-and-bottom frames. Variable-width layout preserves bidi shaping and exact logical character ownership through multiple frames, columns, page transitions and note reservation. Native none/square/topBottom values, coordinates, dimensions, fill and stroke are checked against three authored raw source packages and nine repeated native exports.",
       "evidence": [
         "packages/quds_office_engine/test/word_frame_wrap_test.dart",
         "packages/quds_office_engine/test/variable_line_breaker_test.dart",
@@ -624,6 +632,120 @@
       "evidence": [
         "packages/quds_office_engine/test/word_find_replace_atomic_test.dart",
         "packages/quds_office_editor/test/word_find_replace_history_test.dart"
+      ]
+    },
+    {
+      "id": "FID-059",
+      "status": "closed",
+      "area": "Rich table-cell measurement and painting",
+      "finding": "One contained-block layout path measures and places paragraphs, pictures, nested tables, frames, TOCs, equations and transparent content controls. Source paragraph ownership stays stable across continued rows. Parent cell fill no longer hides rich children, ancestor cell clips no longer hide absolute frame text, and TOC page overlays align inside the actual cell or frame text box.",
+      "evidence": [
+        "packages/quds_office_engine/test/word_table_nested_layout_test.dart",
+        "packages/quds_office_editor/test/office_nested_table_golden_test.dart"
+      ],
+      "limits": "This closes the named omissions and ownership regressions. It does not certify arbitrary table layout against Microsoft Word or every nested topology."
+    },
+    {
+      "id": "FID-060",
+      "status": "closed",
+      "area": "Tall-row rich content and physical page bounds",
+      "finding": "Tall table rows retain anchored frames and pictures on their owning physical page, preserve global TOC targets, and reserve frame footnotes. Oversized inline pictures are bounded by the physical page and nested cell padding without changing model dimensions or image bytes. Live and reopened cases cover nested cells, continued rows and footnote contexts.",
+      "evidence": [
+        "packages/quds_office_engine/test/word_table_tall_frame_layout_test.dart",
+        "packages/quds_office_engine/test/word_table_tall_toc_layout_test.dart",
+        "packages/quds_office_engine/test/word_table_picture_pagination_test.dart"
+      ],
+      "limits": "Inline pictures may be reduced for layout to fit a page; source geometry is preserved in export. An impossible padding-only content region is rejected explicitly."
+    },
+    {
+      "id": "FID-061",
+      "status": "closed",
+      "area": "Native textbox insets, outlines and anchor presentation",
+      "finding": "Native textbox insets, omitted-default semantics, anchor-paragraph properties, bodyPr metadata and line properties survive import/export and clone. Native line omission, omitted width and explicit width/cap/dash/join survive; changing stroke color retains the original width. Explicit inset edits update only owned values, with matching VML fallbacks. Text layout and the selected-frame ruler use the same left/right content box. All three frame wrap sources match their first native export and subsequent cycles exactly in LibreOffice.",
+      "evidence": [
+        "packages/quds_office_engine/test/word_native_presentation_test.dart",
+        "packages/quds_office_editor/test/editor_test.dart",
+        "packages/quds_office_engine/tool/fidelity/frame_wrap_oracle.py"
+      ],
+      "limits": "Frame layout and source presentation preservation are bounded by FID-056; full native textbox overflow and anchor semantics remain unverified."
+    },
+    {
+      "id": "FID-062",
+      "status": "closed",
+      "area": "Native inline math and TOC cache presentation",
+      "finding": "Inline math retains its native inline/display wrapper. Native TOC cache paragraphs preserve paragraph count, tab/leader and run presentation, plus exact bookmark/control boundary ownership. Reconstructed cache ranges include the current page text while retaining the live title paragraph identity. All targets are preflighted before explicit refresh, so a later guarded cache cannot mutate earlier TOCs, heading aliases or controller history.",
+      "evidence": [
+        "packages/quds_office_engine/test/word_native_presentation_test.dart",
+        "packages/quds_office_engine/tool/fidelity/content_control_oracle.py",
+        "packages/quds_office_editor/test/editor_test.dart",
+        "packages/quds_office_engine/test/word_structure_integrity_test.dart"
+      ],
+      "limits": "Explicit regeneration of native TOC caches containing ranges is guarded until those ranges can be remapped safely; arbitrary rich complex-field refresh remains FID-049."
+    },
+    {
+      "id": "FID-063",
+      "status": "closed",
+      "area": "Native settings part ownership and namespaces",
+      "finding": "Only modeled tracking, protection and odd/even-story settings are merged. Unowned native settings and attributes, including protection metadata, retain their source representation; an absent settings part is not invented. Changed or created owned elements bind a fresh local Word namespace prefix so aliased/default Word namespaces and foreign w attributes remain distinct.",
+      "evidence": [
+        "packages/quds_office_engine/test/word_native_presentation_test.dart",
+        "packages/quds_office_engine/lib/src/word/serial/word_settings_io.dart"
+      ]
+    },
+    {
+      "id": "FID-064",
+      "status": "guarded",
+      "area": "Whole-note replacement across bookmark ranges",
+      "finding": "A whole-note replacement that would remove only one bookmark endpoint is rejected before text, pending note commits, selection, dirty state or history changes. A complete in-note range can be removed safely. Generated paragraph aliases do not duplicate native identities.",
+      "evidence": [
+        "packages/quds_office_engine/test/word_note_bookmark_edit_test.dart",
+        "packages/quds_office_editor/test/word_bookmark_history_test.dart"
+      ],
+      "limits": "Safe remapping of a partially removed cross-paragraph range is not implemented; rich paragraph/run edits remain the supported alternative."
+    },
+    {
+      "id": "FID-065",
+      "status": "open",
+      "area": "LibreOffice import of native block controls in comments",
+      "finding": "The independently authored source with block controls in comments is rejected by the available LibreOffice importer before Quds modifies it. The original seven source/export packages remain mandatory for semantic and Open XML SDK checks. Only exact-path, exact-SHA256, zero-error SDK receipts can qualify these files as native_schema_only after the raw source reproduces the specific importer refusal. Such files receive no visual certification. A separately authored seven-file header/footer-control corpus remains subject to strict source and repeated-cycle rendering.",
+      "evidence": [
+        "packages/quds_office_engine/test/word_auxiliary_content_control_test.dart",
+        "packages/quds_office_engine/tool/fidelity/auxiliary_content_control_oracle.py",
+        "tool/office-validation/Program.cs",
+        "tool/office-validation/render.py",
+        "tool/office-validation/test_native_render_limitations.py"
+      ],
+      "limits": "A native renderer that supports this topology is still needed for its visual certification. If a newer LibreOffice renders the source, normal strict comparisons automatically apply."
+    },
+    {
+      "id": "FID-066",
+      "status": "closed",
+      "area": "Scripted text replacement and tracked revision attribution",
+      "finding": "Scripted replaceText rebases pending revision ranges after the exact accepted text edit. A repeated-text regression independently checks the original tracked span moves from [5,8] to [8,11], retaining author and content through exports. Rejected structural edits leave text and revision metadata unchanged; intersecting edits retain explicit conflict state.",
+      "evidence": [
+        "packages/quds_office_engine/test/word_step_atomicity_test.dart",
+        "packages/quds_office_engine/tool/fidelity/word_steps.dart"
+      ],
+      "limits": "Ambiguous intersecting edits continue to use the explicit conflict rules in FID-050."
+    },
+    {
+      "id": "FID-067",
+      "status": "closed",
+      "area": "Scripted table deletion and native range ownership",
+      "finding": "Row, column and TOC deletion preflight typed bookmark endpoints against every removed paragraph, including source-only native TOC cache owners. Cross-boundary deletion fails before mutation; complete-range deletion remains legal and surviving endpoint identities stay unchanged.",
+      "evidence": [
+        "packages/quds_office_engine/test/word_structure_integrity_test.dart",
+        "packages/quds_office_engine/tool/fidelity/word_structure_steps.dart"
+      ],
+      "limits": "This closes bookmark endpoint ownership for the named deletions; full tracked-change semantics for arbitrary structural edits remain outside FID-047."
+    },
+    {
+      "id": "FID-068",
+      "status": "open",
+      "area": "CrispCloud style and custom tab controls",
+      "finding": "The existing host dialog preserves imported tab alignment and leaders but does not offer creation of custom alignment/leader settings. Character-style editing, custom style creation and table-style selection remain UI gaps even though engine/script APIs support those properties.",
+      "evidence": [
+        "CrispCloud:docs/office-host-fidelity-20261112.md"
       ]
     }
   ]

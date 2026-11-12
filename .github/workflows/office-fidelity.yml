@@ -78,7 +78,7 @@ jobs:
         if: ${{ !cancelled() && steps.engine.outcome == 'success' && steps.editor.outcome == 'success' }}
         run: |
           python3 -m unittest discover -s tool/office-validation -p 'test_*.py'
-          python3 tool/office-validation/render.py build/office-evidence build/external-render
+          python3 tool/office-validation/render.py build/office-evidence build/external-render --schema-report build/external/schema-report.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:
