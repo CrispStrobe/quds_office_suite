@@ -40,7 +40,7 @@ jobs:
         working-directory: packages/quds_office_engine
         run: |
           dart analyze
-          python3 tool/fidelity/collect_coverage.py coverage/vm
+          python3 tool/fidelity/collect_coverage.py --dart "$FLUTTER_ROOT/bin/cache/dart-sdk/bin/dart" coverage/vm
           bash tool/fidelity/check.sh
           python3 tool/fidelity/coverage_report.py coverage/vm --require-receipt
       - name: Editor suite and reviewed visual goldens
