@@ -71,6 +71,13 @@ jobs:
         run: dotnet run --project tool/office-validation -- --self-test
       - name: Validate exported Office packages
         run: dotnet run --project tool/office-validation -- build/office-evidence build/external/schema-report.json
+      - name: Upload schema validation receipts
+        if: ${{ always() && hashFiles('build/external/schema-report.json') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: office-fidelity-schema-receipts
+          path: build/external/schema-report.json
+          if-no-files-found: error
       - name: Install independent Office renderer
         if: ${{ !cancelled() && steps.engine.outcome == 'success' && steps.editor.outcome == 'success' }}
         run: sudo apt-get update && sudo apt-get install -y libreoffice-writer libreoffice-calc libreoffice-impress poppler-utils fonts-liberation fonts-dejavu
