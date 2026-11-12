@@ -20,6 +20,7 @@ import '../model/word_styles.dart';
 import '../model/word_toc.dart';
 import '../properties/wml_properties.dart';
 import 'word_bibliography_io.dart';
+import 'word_bookmark_io.dart';
 import 'word_comment_io.dart';
 import 'word_content_control_io.dart';
 import 'word_drawing_io.dart';
@@ -825,20 +826,7 @@ class WordSerializer {
   }
 
   void _writeBookmarkBoundary(XmlWriter writer, WmlBookmarkBoundary boundary) {
-    final kind = boundary.isStart ? 'bookmarkStart' : 'bookmarkEnd';
-    if (boundary.sourceXml != null) {
-      final element = XmlDocument.parse(boundary.sourceXml!).root!;
-      element.writeTo(writer);
-      return;
-    }
-    writer.writeEmptyElement(
-      kind,
-      prefix: 'w',
-      attributes: {
-        'w:id': boundary.id,
-        if (boundary.isStart) 'w:name': boundary.name!,
-      },
-    );
+    WordBookmarkIo.write(writer, boundary);
   }
 
   void _writeTrackedRun(
@@ -2106,8 +2094,7 @@ class WordSerializer {
               attribute.namespaceUri == OfficeNamespaces.mc;
           if (inherited &&
               !retained.attributes.any(
-                (existing) =>
-                    existing.qualifiedName == attribute.qualifiedName,
+                (existing) => existing.qualifiedName == attribute.qualifiedName,
               )) {
             retained.attributes.add(attribute.copy());
           }
@@ -2188,11 +2175,11 @@ class WordSerializer {
         }
         _writeBlock(w, block, imageIds);
       }
-      if (!referenceWritten) {
+      if (!referenceWritten || note.blocks.isEmpty) {
         _writeParagraph(
           w,
           WmlParagraph(),
-          noteReference: true,
+          noteReference: !referenceWritten,
           endnote: note.endnote,
           addNoteReferenceSpace: note.addReferenceSpace,
           noteReferencePropertiesXml: note.referencePropertiesXml,

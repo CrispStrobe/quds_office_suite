@@ -5,7 +5,7 @@
     "engine": "CrispStrobe/quds_office_suite",
     "host": "CrispStrobe/CrispCloud"
   },
-  "branch": "feature/office-fidelity-coverage-20261112",
+  "branch": "feature/office-fidelity-consolidation-20261112",
   "scope": "Reproduced and investigated gaps; the source-hashed line inventory is separate. Closed means the cited bounded regression is covered, not exhaustive format support.",
   "status_definitions": {
     "closed": "Reproduced gap fixed and protected by named evidence.",
@@ -269,7 +269,10 @@
         "docs/office-unsupported-word-probes.json",
         "packages/quds_office_engine/test/word_auxiliary_content_control_test.dart",
         "packages/quds_office_engine/tool/fidelity/auxiliary_content_control_oracle.py",
-        "packages/quds_office_engine/tool/fidelity/test_auxiliary_content_control_oracle.py"
+        "packages/quds_office_engine/tool/fidelity/test_auxiliary_content_control_oracle.py",
+        "packages/quds_office_engine/test/content_control_fidelity_test.dart",
+        "packages/quds_office_editor/test/word_content_control_fidelity_test.dart",
+        "packages/quds_office_engine/tool/fidelity/content_controls_oracle.py"
       ],
       "limits": "UI lock/data-binding behavior, repeating-section semantics and arbitrary topology remain open. Inline controls containing drawings/equations, multi-paragraph or non-paragraph controls in paragraph-only auxiliary stories, row/cell wrappers, boundary-crossing edits and duplicate-ID insertion fail explicitly before mutation. Native comment controls require separate renderer limitation reporting; see FID-065."
     },
@@ -285,7 +288,10 @@
         "packages/quds_office_engine/tool/fidelity/test_bookmark_ranges_oracle.py",
         "packages/quds_office_engine/tool/fidelity/unsupported_word_audit.py",
         "docs/office-unsupported-word-probes.json",
-        "packages/quds_office_engine/test/word_note_bookmark_edit_test.dart"
+        "packages/quds_office_engine/test/word_note_bookmark_edit_test.dart",
+        "packages/quds_office_engine/test/bookmark_fidelity_test.dart",
+        "packages/quds_office_editor/test/word_bookmark_fidelity_test.dart",
+        "packages/quds_office_engine/tool/fidelity/bookmarks_oracle.py"
       ],
       "limits": "Mixed text-and-drawing anchor endpoint order remains outside the block drawing model. Duplicate-producing copies and deletion of only one cross-paragraph endpoint are guarded until safe remapping is implemented. Arbitrary rich complex-field refresh remains FID-049."
     },
@@ -441,7 +447,10 @@
         "packages/quds_office_engine/tool/fidelity/note_markers_oracle.py",
         "packages/quds_office_engine/tool/fidelity/test_note_markers_oracle.py",
         "CrispCloud:test/office_roundtrip_preservation_test.dart",
-        "CrispCloud:test/office_footnote_test.dart"
+        "CrispCloud:test/office_footnote_test.dart",
+        "packages/quds_office_engine/test/note_marker_legacy_fidelity_test.dart",
+        "packages/quds_office_engine/tool/fidelity/note_markers_legacy_oracle.py",
+        "packages/quds_office_engine/tool/fidelity/test_note_markers_legacy_oracle.py"
       ],
       "limits": "The legacy whole-note text setter intentionally replaces rich content and preserves one automatic reference marker. Use paragraph/run operations for rich edits."
     },
@@ -526,7 +535,8 @@
       "evidence": [
         "packages/quds_office_engine/test/word_bibliography_fidelity_test.dart",
         "packages/quds_office_engine/tool/fidelity/bibliography_oracle.py",
-        "packages/quds_office_engine/tool/fidelity/test_bibliography_oracle.py"
+        "packages/quds_office_engine/tool/fidelity/test_bibliography_oracle.py",
+        "packages/quds_office_engine/lib/src/word/serial/word_serializer.dart"
       ],
       "limits": "New free-text authors are native literal corporate-author containers. Full personal-name parsing, native citation-style rendering and automatic retargeting of citation fields after direct tag mutation are not implemented."
     },
@@ -551,7 +561,8 @@
         "packages/quds_office_engine/test/word_revision_validation_test.dart",
         "packages/quds_office_engine/test/word_revision_story_test.dart",
         "packages/quds_office_editor/test/word_find_replace_history_test.dart",
-        "packages/quds_office_editor/test/word_content_control_history_test.dart"
+        "packages/quds_office_editor/test/word_content_control_history_test.dart",
+        "packages/quds_office_editor/lib/src/embed/office_controller.dart"
       ],
       "limits": "Intersecting edits, splits through pending spans and overlapping changes are explicit conflicts. Undo the conflicting edit before resolving or exporting. Arbitrary external model edits are rejected on mismatch, not attributed automatically."
     },
@@ -747,6 +758,31 @@
       "evidence": [
         "CrispCloud:docs/office-host-fidelity-20261112.md"
       ]
+    },
+    {
+      "id": "FID-069",
+      "status": "closed",
+      "area": "CrispCloud note commands and actual ribbon edits",
+      "finding": "Word Insert tab and menu expose localized Footnote/Endnote commands and open the editable notes pane. Note editing preserves entered whitespace, respects read-only mode and supports undo/redo. A real ribbon heading/paragraph/note/picture workflow validates three actual host uploads and reopens with independent XML/media assertions.",
+      "evidence": [
+        "CrispCloud:lib/widgets/office_editor_ribbon.dart",
+        "CrispCloud:test/widget/office_editor_ribbon_test.dart",
+        "CrispCloud:test/widget/office_save_fidelity_test.dart",
+        "CrispCloud:test/office_ribbon_common_i18n_test.dart"
+      ],
+      "consolidated_from": "main:FID-041"
+    },
+    {
+      "id": "FID-070",
+      "status": "closed",
+      "area": "Picture decoding after editor disposal",
+      "finding": "Word, Sheet and Slide canvases own and dispose decoded images. Pending decodes finishing after closure release their image and do not repaint a disposed render object. Deterministic pending/ready disposal controls and the actual host repeated reopen workflow pass.",
+      "evidence": [
+        "packages/quds_office_editor/test/visual_image_cache_test.dart",
+        "packages/quds_office_editor/lib/src/visual/paint_office_visual.dart",
+        "CrispCloud:test/widget/office_save_fidelity_test.dart"
+      ],
+      "consolidated_from": "main:FID-042"
     }
   ]
 }

@@ -110,8 +110,11 @@ abstract final class WordBookmarks {
   static WmlBookmarkRange? byName(WmlDocument document, String name) =>
       ranges(document).where((range) => range.name == name).firstOrNull;
 
-  static Set<String> nativeNames(WmlDocument document) =>
-      ranges(document).map((range) => range.name).toSet();
+  static Set<String> nativeNames(WmlDocument document) => {
+    ...ranges(document).map((range) => range.name),
+    for (final marker in _opaqueMarkers(document))
+      if (marker.isStart) marker.name!,
+  };
 
   static WmlParagraph? paragraphByName(WmlDocument document, String name) {
     final native = byName(document, name);
@@ -157,8 +160,15 @@ abstract final class WordBookmarks {
     final native = ranges(document);
     final ids = native.map((range) => canonicalId(range.start.id)).toSet();
     final names = native.map((range) => range.name).toSet();
+    // Opaque source XML is not editable range text, but still owns its native
+    // identities. Reserving them prevents generated headings from silently
+    // colliding with preserved custom XML and other unmodeled containers.
+    for (final marker in _opaqueMarkers(document)) {
+      ids.add(canonicalId(marker.id));
+      if (marker.isStart) names.add(marker.name!);
+    }
     final result = <String, String>{};
-    var next = 0;
+    var next = 1;
     for (final paragraph in _stories(document).expand((story) => story)) {
       final name = generatedName(paragraph);
       if (name == null) continue;
@@ -175,9 +185,47 @@ abstract final class WordBookmarks {
     return result;
   }
 
+  static Iterable<WmlBookmarkBoundary> _opaqueMarkers(
+    WmlDocument document,
+  ) sync* {
+    Iterable<WmlBookmarkBoundary> visit(XmlElement element) sync* {
+      if (element.namespaceUri == OfficeNamespaces.w &&
+          (element.localName == 'bookmarkStart' ||
+              element.localName == 'bookmarkEnd')) {
+        final marker = WmlBookmarkBoundary(
+          id:
+              element.getAttribute('id', namespaceUri: OfficeNamespaces.w) ??
+              '',
+          isStart: element.localName == 'bookmarkStart',
+          name: element.getAttribute('name', namespaceUri: OfficeNamespaces.w),
+        );
+        validateSource(marker);
+        yield marker;
+      }
+      for (final child in element.childElements) {
+        yield* visit(child);
+      }
+    }
+
+    for (final blocks in [
+      for (final section in document.sections) section.blocks,
+      for (final note in [...document.footnotes, ...document.endnotes])
+        note.blocks,
+    ]) {
+      for (final block in WordTree.descendants(
+        blocks,
+      ).whereType<WmlOpaqueBlock>()) {
+        final source = XmlDocument.parse(block.xml).root;
+        if (source != null) yield* visit(source);
+      }
+    }
+  }
+
   /// Compare decimal IDs by value while retaining their source spelling.
   static String canonicalId(String value) {
-    final id = BigInt.tryParse(value);
+    final id = RegExp(r'^[+-]?[0-9]+$').hasMatch(value)
+        ? BigInt.tryParse(value)
+        : null;
     if (id == null) {
       throw StateError('Bookmark id is not a native decimal number: $value');
     }
@@ -187,6 +235,10 @@ abstract final class WordBookmarks {
   /// Imported metadata is immutable: fail before any package write if a
   /// caller constructs an endpoint whose source describes a different range.
   static void validateSource(WmlBookmarkBoundary boundary) {
+    canonicalId(boundary.id);
+    if (boundary.isStart && (boundary.name == null || boundary.name!.isEmpty)) {
+      throw StateError('A bookmark start requires a name.');
+    }
     if (boundary.sourceXml == null) return;
     final element = XmlDocument.parse(boundary.sourceXml!).root;
     final kind = boundary.isStart ? 'bookmarkStart' : 'bookmarkEnd';
@@ -197,7 +249,9 @@ abstract final class WordBookmarks {
             boundary.id ||
         (boundary.isStart &&
             element.getAttribute('name', namespaceUri: OfficeNamespaces.w) !=
-                boundary.name)) {
+                boundary.name) ||
+        element.childElements.isNotEmpty ||
+        element.text.trim().isNotEmpty) {
       throw StateError(
         'Bookmark endpoint metadata does not match its source XML.',
       );
