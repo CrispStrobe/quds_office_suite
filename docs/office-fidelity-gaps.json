@@ -759,7 +759,9 @@
         "packages/quds_office_engine/tool/fidelity/notes_oracle.py",
         "packages/quds_office_engine/tool/fidelity/note_markers_oracle.py",
         "packages/quds_office_engine/tool/fidelity/test_note_spacing_oracle.py",
-        "packages/quds_office_engine/tool/fidelity/test_note_markers_oracle.py"
+        "packages/quds_office_engine/tool/fidelity/test_note_markers_oracle.py",
+        "packages/quds_office_editor/test/office_story_golden_test.dart",
+        "docs/office-golden-review-20261112.md"
       ],
       "limits": "The preview absence fix does not reproduce arbitrary custom separator text, width, styles or distinct continuation rules."
     },
@@ -767,10 +769,11 @@
       "id": "FID-070",
       "status": "closed",
       "area": "Complete editor layout export/reopen evidence",
-      "finding": "RTL, columns/sections, continued notes and tall-table goldens check the original plus each of three successive reopened documents and emit cycles 1, 2 and 3; no duplicate-byte stand-ins or unverified final reopen.",
+      "finding": "RTL, columns/sections, continued notes and tall-table goldens check the original plus each of three successive reopened documents and emit cycles 1, 2 and 3; no duplicate-byte stand-ins or unverified final reopen. The three-page first/even/default story scenario likewise checks its original plus three actual save/reopen states.",
       "evidence": [
         "packages/quds_office_editor/test/office_layout_goldens_test.dart",
-        "tool/office-validation/test_render.py"
+        "tool/office-validation/test_render.py",
+        "packages/quds_office_editor/test/office_story_golden_test.dart"
       ]
     },
     {
@@ -796,6 +799,17 @@
         "packages/quds_office_engine/tool/fidelity/auxiliary_content_control_oracle.py",
         "packages/quds_office_engine/tool/fidelity/test_auxiliary_content_control_oracle.py"
       ]
+    },
+    {
+      "id": "FID-073",
+      "status": "closed",
+      "area": "New note IDs versus preserved native definitions",
+      "finding": "The shared note insertion path reserves live normal-note IDs plus retained special-definition IDs in the owning native notes part before allocating a normal note. Footnote and endnote ID domains remain separate; relocated note parts are resolved through their owning relationship. Existing live-note numbering remains monotonic, and unrelated higher special IDs do not force unnecessary renumbering.",
+      "evidence": [
+        "packages/quds_office_engine/lib/src/word/model/word_notes.dart",
+        "packages/quds_office_engine/test/note_separator_fidelity_test.dart"
+      ],
+      "limits": "This protects the shared insertion API used by the editor; arbitrary direct mutation of model IDs is not assigned a new identity automatically."
     }
   ],
   "evidence_path_convention": "Unprefixed paths are relative to quds_office_suite; CrispCloud: paths are relative to the host repository."

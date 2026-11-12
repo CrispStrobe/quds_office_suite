@@ -187,6 +187,16 @@ namespace context. New parts retain conventional defaults. The Quds preview
 also suppresses a separator absent from the imported source; arbitrary custom
 separator content and styling remain outside preview coverage. Both independent
 note oracles reject an invented separator.
+Inserting a new note also reserves IDs retained in its owning native notes part,
+including non-normal definitions; footnotes and endnotes remain separate ID
+domains. A continuation notice with a positive ID can no longer collide with a
+new normal note through the shared engine/editor insertion path.
+
+The story golden's first page previously included the same invented separator.
+Its reviewed correction removes only that rule: 1,248 pixels in a two-pixel-high
+rectangle; the rest of all three page images is unchanged. The story test also
+checks the original plus three actual save/reopen states, with separate native
+exports for all three cycles.
 
 The four layout golden scenarios now check the original and all three real
 export/reopen states and emit exactly three successive saved documents. Their

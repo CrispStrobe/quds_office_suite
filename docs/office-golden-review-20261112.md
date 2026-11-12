@@ -12,8 +12,10 @@ states for `columns_sections`, `continued_notes`, `rtl` and `tall_table`. Each
 reopened document is rendered against the same reviewed PNGs, with exact page
 counts checked. The four series produce 12 actual DOCX exports and 44 page
 comparisons. Exports 2 and 3 are serialized from the preceding reopened document.
-The baselines are unchanged. **The final full run after this correction is
-pending**; the verified counts above belong to `adcccb4`.
+The layout baselines are unchanged. A subsequent full run at `c19e90d` passed
+364 tests with one documented skip and reported one outdated story-page image,
+reviewed below. **A fresh full acceptance run after that review is pending**;
+the earlier complete passing counts above belong to `adcccb4`.
 
 ## Existing images changed for verified source corrections
 
@@ -22,13 +24,43 @@ pending**; the verified counts above belong to `adcccb4`.
   single line spacing when adding referenced styles. Imported note markers are
   painted at their source position with their source run properties.
 - `office_stories_page_1.png`: the source marker is adjacent to its source text.
-  Layout no longer invents a period or separator absent from the source XML.
+  Layout no longer invents punctuation or spacing around that marker.
 - `continued_notes_1.png` and `tall_table_4.png`: newly created notes paint the
   same superscript marker and separator as their native export, without an
   artificial period. Later continuation pages are unchanged.
 
 The native-default regression and exact-marker oracle independently establish
 these changes; a renderer snapshot alone is not their specification.
+
+## Imported note separator absence
+
+The authored `story-media.docx` footnotes part contains only normal footnote 3;
+it has no separator, continuation-separator or continuation-notice definition.
+The native separator-preservation correction at `c19e90d` therefore also stops
+the Quds preview from inventing a horizontal separator rule for this source.
+Newly created notes retain their conventional rule.
+
+The previous and actual page-1 images were inspected side by side. Exactly
+1,248 pixels changed, confined to the two-pixel rule at x=160..783,
+y=916..917 in the 900×1120 image. Every other pixel is identical, including the
+intersecting vertical column separator, note text and picture, body text, and
+header/footer pictures. Only `office_stories_page_1.png` was updated through
+the pinned Flutter 3.44.0 golden-review command. SHA-256 checks confirmed that
+the other 22 committed PNGs, including story pages 2 and 3, are unchanged.
+
+`office_story_golden_test.dart` now checks the original source-derived document
+and three sequential asynchronous native save/reopen states. Each state must
+retain three pages, both owning-part story pictures, the source spacing and
+the absence of native footnote separators. All 12 page comparisons passed in
+ordinary mode after the single-image review. The exact export inventory is
+`three-pages-1.docx`, `three-pages-2.docx` and `three-pages-3.docx`; each later
+export is written from the previous reopened document. The former standalone
+`three-pages.docx` output is removed explicitly, and unexpected DOCX files fail
+the producer's inventory check. This adds two real exports while keeping the
+reviewed set at **23 PNGs in 13 golden cases**. The independent local
+LibreOfficeDev 26.8 run rendered all three exports as three pages and accepted
+the complete cycle group with identical extracted text and page-pixel
+fingerprints, with no failures or exemptions.
 
 ## New structure images
 
