@@ -48,12 +48,24 @@ separate declared behavioral properties.
 - `focused-native-retry-report.json`: all six exact initially killed inputs
   converted successfully in a separate serial diagnostic retry. This does not
   substitute for the complete native gate.
+- `serial-native-interruption-report.json`: the subsequent complete run
+  rendered 319 files, retained seven qualified schema-only cases and failed on
+  one different killed spreadsheet conversion plus its missing cycle result.
+  The killed-process cause has not been established.
 
 Full native acceptance is recorded separately when the final serial render
 completes. The seven precisely scoped auxiliary-comment documents can receive
 schema-only status only after the authored XML checks and exact SDK receipts
 pass and the renderer actually refuses their source. Such cases have no visual
 certification. Picture-only host cases instead require actual measured pixels.
+
+The renderer now permits at most three attempts only when the SOFFICE
+conversion process itself is killed by SIGKILL. Every attempt uses a fresh
+profile/output and verifies the original input hash. Its complete diagnostics
+remain in the report. Ordinary conversion errors, timeouts, Poppler failures,
+input changes and schema/text/pixel mismatches cannot use this retry. All 60
+native Python controls pass; final corpus acceptance still requires the
+separate complete native run.
 
 ## Reproduction and provenance
 
