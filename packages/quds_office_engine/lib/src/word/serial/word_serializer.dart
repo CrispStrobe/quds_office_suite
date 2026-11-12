@@ -316,7 +316,7 @@ class WordSerializer {
 
   WmlParagraph _copyParagraph(WmlParagraph source) {
     return WmlParagraph(
-      properties: source.properties,
+      properties: source.properties.copy(),
       inlines: <WmlInline>[
         for (final WmlInline inline in source.inlines)
           if (inline is WmlRun)
@@ -643,7 +643,10 @@ class WordSerializer {
         while (end < paragraph.inlines.length) {
           final WmlInline next = paragraph.inlines[end];
           if (next is! WmlRun ||
-              next.hyperlink?.displayTarget != link.displayTarget) {
+              next.hyperlink == null ||
+              next.hyperlink!.anchor != link.anchor ||
+              next.hyperlink!.url != link.url ||
+              next.hyperlink!.file != link.file) {
             break;
           }
           end++;

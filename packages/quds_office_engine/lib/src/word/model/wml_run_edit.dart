@@ -106,14 +106,10 @@ abstract final class WmlRunEdit {
     int end,
     String insert,
   ) {
-    if (start > end) {
-      final int swap = start;
-      start = end;
-      end = swap;
-    }
+    final range = normalizeRange(paragraph, start, end);
+    start = range.start;
+    end = range.end;
     final int length = paragraph.text.length;
-    start = start.clamp(0, length);
-    end = end.clamp(0, length);
     final WmlRunProps props = propsAt(
       paragraph,
       start == length ? start - 1 : start,
@@ -180,6 +176,42 @@ abstract final class WmlRunEdit {
       paragraph.inlines.add(WmlRun(properties: props.copy()));
     }
     coalesce(paragraph);
+  }
+
+  /// Bounds for an edit that cannot split an atomic note-reference field.
+  ///
+  /// A nonempty selection touching a note mark includes the whole mark. A
+  /// collapsed caret inside a multi-digit mark moves after it, just as
+  /// [insertRuns] does. Callers can use these bounds for undo and selection.
+  static ({int start, int end}) normalizeRange(
+    WmlParagraph paragraph,
+    int start,
+    int end,
+  ) {
+    if (start > end) {
+      final int swap = start;
+      start = end;
+      end = swap;
+    }
+    final int length = paragraph.text.length;
+    start = start.clamp(0, length);
+    end = end.clamp(0, length);
+    final bool collapsed = start == end;
+    var offset = 0;
+    for (final WmlRun run in paragraph.inlines.whereType<WmlRun>()) {
+      final int runEnd = offset + run.text.length;
+      if (run.noteRefId != null) {
+        if (collapsed && start > offset && start < runEnd) {
+          return (start: runEnd, end: runEnd);
+        }
+        if (!collapsed && start < runEnd && end > offset) {
+          if (start > offset) start = offset;
+          if (end < runEnd) end = runEnd;
+        }
+      }
+      offset = runEnd;
+    }
+    return (start: start, end: end);
   }
 
   /// extractRuns API.
@@ -301,8 +333,19 @@ abstract final class WmlRunEdit {
     return a.noteRefId == null &&
         b.noteRefId == null &&
         _sameProps(a.properties, b.properties) &&
-        a.hyperlink?.displayTarget == b.hyperlink?.displayTarget &&
+        _sameLink(a.hyperlink, b.hyperlink) &&
         _sameInts(a.commentIds, b.commentIds);
+  }
+
+  static bool _sameLink(WmlHyperlink? a, WmlHyperlink? b) {
+    if (a == null || b == null) return a == b;
+    return a.anchor == b.anchor && a.url == b.url && a.file == b.file;
+  }
+
+  static bool _sameValues(Map<String, String>? a, Map<String, String>? b) {
+    if (identical(a, b)) return true;
+    if (a == null || b == null || a.length != b.length) return false;
+    return a.entries.every((entry) => b[entry.key] == entry.value);
   }
 
   static bool _sameInts(List<int> a, List<int> b) {
@@ -318,7 +361,15 @@ abstract final class WmlRunEdit {
   }
 
   static bool _sameProps(WmlRunProps a, WmlRunProps b) {
-    return a.bold == b.bold &&
+    // Equal visible formatting is insufficient: source XML retains properties
+    // such as language, direction, and proofing that the model cannot edit.
+    // Import baselines and explicit defaults also affect subsequent export.
+    return a.styleId == b.styleId &&
+        a.sourcePropertiesXml == b.sourcePropertiesXml &&
+        _sameValues(a.importedValues, b.importedValues) &&
+        a.explicitProperties.length == b.explicitProperties.length &&
+        a.explicitProperties.containsAll(b.explicitProperties) &&
+        a.bold == b.bold &&
         a.italic == b.italic &&
         a.underline == b.underline &&
         a.strike == b.strike &&

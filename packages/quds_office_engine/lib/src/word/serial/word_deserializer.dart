@@ -48,7 +48,22 @@ class WordDeserializer {
 
   /// read API.
   WmlDocument read(OpcPackage package) {
+    // A reader may be reused after a truncated document or a parse failure.
+    // Story state belongs to one document and must not contaminate the next.
+    _pendingEquations.clear();
+    _pendingVisuals.clear();
+    _pendingFrames.clear();
+    _openCommentIds.clear();
+    _tablesWithOwnBorders.clear();
+    _tableLooks.clear();
+    _notBold.clear();
+    _notItalic.clear();
+    _pendingParagraphSectPr = null;
+    _document = null;
+    _package = null;
+    _docUri = null;
     _readingNote = null;
+    _noteMarkCaptured = false;
     final PackageRelationship? office = package.packageRelationships
         .firstByType(RelationshipTypes.officeDocument);
     final String docUri = office == null
@@ -490,9 +505,8 @@ class WordDeserializer {
 
   void _readPPr(XmlPullReader reader, WmlParagraphProps props) {
     final XmlElement node = XmlDocument.readElement(reader);
-    props.sourcePropertiesXml = XmlDocument(
-      root: node,
-    ).toXmlString(declaration: false);
+    props.sourcePropertiesXml = XmlDocument(root: node)
+        .toXmlString(declaration: false);
     final XmlPullReader source = WordMarkupCompatibilityReader(
       props.sourcePropertiesXml!,
     )..next();
@@ -867,9 +881,8 @@ class WordDeserializer {
 
   void _readRPr(XmlPullReader reader, WmlRunProps props) {
     final XmlElement node = XmlDocument.readElement(reader);
-    props.sourcePropertiesXml = XmlDocument(
-      root: node,
-    ).toXmlString(declaration: false);
+    props.sourcePropertiesXml = XmlDocument(root: node)
+        .toXmlString(declaration: false);
     final XmlPullReader source = WordMarkupCompatibilityReader(
       props.sourcePropertiesXml!,
     )..next();
@@ -972,9 +985,8 @@ class WordDeserializer {
       }
       if (reader.localName == 'tblPr') {
         final XmlElement source = XmlDocument.readElement(reader);
-        final String xml = XmlDocument(
-          root: source,
-        ).toXmlString(declaration: false);
+        final String xml = XmlDocument(root: source)
+            .toXmlString(declaration: false);
         table.properties.sourcePropertiesXml = xml;
         _readTableProperties(WordMarkupCompatibilityReader(xml)..next(), table);
       } else if (reader.localName == 'gridCol') {
@@ -1310,9 +1322,8 @@ class WordDeserializer {
     String docUri,
   ) {
     final XmlElement source = XmlDocument.readElement(reader);
-    final String sourceXml = XmlDocument(
-      root: source,
-    ).toXmlString(declaration: false);
+    final String sourceXml = XmlDocument(root: source)
+        .toXmlString(declaration: false);
     reader = WordMarkupCompatibilityReader(sourceXml)..next();
     String? headerRid;
     String? footerRid;
@@ -1762,9 +1773,8 @@ class WordDeserializer {
     final PackagePart? part = package.getPart('/word/watermark.xml');
     if (part != null) {
       final String xml = part.readText();
-      final Match? match = RegExp(
-        r'<w:watermark[^>]*>([^<]*)</w:watermark>',
-      ).firstMatch(xml);
+      final Match? match = RegExp(r'<w:watermark[^>]*>([^<]*)</w:watermark>')
+          .firstMatch(xml);
       if (match != null) {
         document.watermark = match
             .group(1)!

@@ -267,7 +267,10 @@ abstract final class WmlClone {
       final int localEnd = to < end ? to - offset : inline.text.length;
       out.add(
         WmlRun(
-          text: inline.text.substring(localStart, localEnd),
+          // A note mark is a single field, even when its label has two digits.
+          text: inline.noteRefId != null
+              ? inline.text
+              : inline.text.substring(localStart, localEnd),
           properties: inline.properties.copy(),
           hyperlink: inline.hyperlink?.copy(),
           commentIds: List<int>.from(inline.commentIds),

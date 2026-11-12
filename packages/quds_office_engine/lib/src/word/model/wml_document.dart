@@ -192,7 +192,7 @@ class WmlComment {
     paragraphs: <WmlParagraph>[
       for (final WmlParagraph paragraph in paragraphs)
         WmlParagraph(
-          properties: paragraph.properties,
+          properties: paragraph.properties.copy(),
           inlines: <WmlInline>[
             for (final WmlInline inline in paragraph.inlines)
               if (inline is WmlRun)
