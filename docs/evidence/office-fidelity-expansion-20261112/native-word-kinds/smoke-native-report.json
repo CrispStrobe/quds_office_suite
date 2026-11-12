@@ -1,0 +1,77 @@
+{
+  "renderer": "LibreOffice 24.2.7.2 ee3885777aa7032db5a9b65deec9457448a91162 (LibreOfficeKit embedding API)",
+  "files": 3,
+  "rendered_files": 3,
+  "picture_pixel_oracle_files": 0,
+  "visual_input_files": 3,
+  "native_schema_only_files": 0,
+  "native_schema_only": [],
+  "schema_report": null,
+  "pixel_fingerprint": "SHA-256 of big-endian uint32 width/height followed by RGB bytes",
+  "cycle_groups": 0,
+  "cycle_comparisons": [],
+  "baseline_comparisons": 0,
+  "page_order_comparisons": 0,
+  "render_only_files": [
+    "word-docm-save.docm",
+    "word-dotm-save.dotm",
+    "word-dotx-save.dotx"
+  ],
+  "failures": [],
+  "reports": [
+    {
+      "file": "word-docm-save.docm",
+      "pages": 1,
+      "text": "Host-saved Template body.\n\f",
+      "pixel_sha256": [
+        "934d965167e2979d7381a45c8dae89933a6569745112b2d03c6439ba4940556c"
+      ],
+      "pdf": "000/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 596,
+          "height": 842,
+          "png": "000/page-0001.png",
+          "pixel_sha256": "934d965167e2979d7381a45c8dae89933a6569745112b2d03c6439ba4940556c"
+        }
+      ]
+    },
+    {
+      "file": "word-dotm-save.dotm",
+      "pages": 1,
+      "text": "Host-saved Template body.\n\f",
+      "pixel_sha256": [
+        "934d965167e2979d7381a45c8dae89933a6569745112b2d03c6439ba4940556c"
+      ],
+      "pdf": "001/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 596,
+          "height": 842,
+          "png": "001/page-0001.png",
+          "pixel_sha256": "934d965167e2979d7381a45c8dae89933a6569745112b2d03c6439ba4940556c"
+        }
+      ]
+    },
+    {
+      "file": "word-dotx-save.dotx",
+      "pages": 1,
+      "text": "Host-saved Template body.\n\f",
+      "pixel_sha256": [
+        "934d965167e2979d7381a45c8dae89933a6569745112b2d03c6439ba4940556c"
+      ],
+      "pdf": "002/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 596,
+          "height": 842,
+          "png": "002/page-0001.png",
+          "pixel_sha256": "934d965167e2979d7381a45c8dae89933a6569745112b2d03c6439ba4940556c"
+        }
+      ]
+    }
+  ]
+}

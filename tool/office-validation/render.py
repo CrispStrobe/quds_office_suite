@@ -29,7 +29,9 @@ import zlib
 from xml.etree import ElementTree as ET
 from zipfile import BadZipFile, ZipFile
 
-OFFICE_SUFFIXES = {'.docx', '.xlsx', '.pptx'}
+# Match every Office package kind produced by the host inventory. Templates
+# and macro-enabled Word packages require the same native text/pixel checks.
+OFFICE_SUFFIXES = {'.docx', '.docm', '.dotx', '.dotm', '.xlsx', '.pptx'}
 CYCLE_COUNT = 3
 # This producer deep-clones imported body blocks without intended visible edits.
 # Do not infer that other "cloned", "edited", or "frame" series are unchanged.
