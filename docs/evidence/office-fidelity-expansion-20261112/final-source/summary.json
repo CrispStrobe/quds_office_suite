@@ -1,0 +1,215 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-11-12T15:17:29.032952+00:00",
+  "source_commit": "2d6529e52f389e8c491ce75331d9efe6bd59a821",
+  "source_tree": "f8032c89074ecb3ccc5d4bfa36fac359b573b272",
+  "checkout": "/workspace/scratch/07eb2580faa9/quds-expansion-validation",
+  "full_worktree_clean": true,
+  "source_files_verified": 947,
+  "source_snapshot_sha256": "65c8eaf78d9fb3f7d92b3ae423cb0855c3fafc9971163aee196c12d5117ec312",
+  "runtime": {
+    "flutter": "3.44.0",
+    "flutter_revision": "559ffa3f75e7402d65a8def9c28389a9b2e6fe42",
+    "dart": "Dart SDK version: 3.12.0 (stable) (Fri May 8 01:51:14 2026 -0700) on \"linux_x64\""
+  },
+  "engine": {
+    "analyzer": "passed",
+    "full_suite": {
+      "success_marker": "03:05 +1610 ~1: All tests passed!",
+      "passed": 1610,
+      "skipped": 1,
+      "skip_diagnostics": [
+        "02:01 +1220: test/wave4_platform_test.dart: multi-face PDF embeds distinct font resources\n  Latin face already covers Arabic; cannot force F3\n02:01 +1220 ~1: test/report_engine_test.dart: Ready-made templates class_certificate_ar parses, validates, and exports"
+      ]
+    },
+    "mandatory_fidelity": {
+      "success_marker": "00:19 +1147: All tests passed!",
+      "passed": 1147,
+      "skipped": 0,
+      "python_controls": 436,
+      "skip_diagnostics": []
+    },
+    "inventory_files": 346,
+    "three_cycle_series": 102,
+    "standalone_files": 40,
+    "feature_workflows": {
+      "features": [
+        "comments",
+        "drawings",
+        "endnotes",
+        "footnotes",
+        "headings",
+        "images",
+        "paragraphs",
+        "placement",
+        "references",
+        "slides",
+        "spreadsheets",
+        "styles",
+        "tables",
+        "textflow",
+        "tocs"
+      ],
+      "bundles": [
+        "base-word",
+        "bibliography",
+        "bookmark-copy",
+        "bookmarks",
+        "comments",
+        "cross-format",
+        "frames",
+        "image-replacement",
+        "inline-fields",
+        "native-sheets-slides",
+        "note-markers",
+        "notes",
+        "scripted",
+        "sheet-qualified-names",
+        "sheet-rename",
+        "slide-arrange",
+        "slide-sections",
+        "story-media",
+        "structure",
+        "styles",
+        "table-borders",
+        "table-grid"
+      ],
+      "matrix_sha256": "c07da134e864e9501963c08456a31605ac3af904591ae2251e6aa57960abd7ea",
+      "output_manifest_sha256": "3995809ba6d473cd0a390e0fbc6aeb7d8770b39b89064c166b435224c65a8be0",
+      "scope": "Selected producer scenarios and independent package oracles; not full-suite, branch-coverage or Microsoft Office visual-equivalence certification.",
+      "outputs": 236,
+      "commands": 44
+    },
+    "coverage": {
+      "covered_lines": 45186,
+      "instrumented_lines": 54575,
+      "percent": 82.796152,
+      "fresh_vm_files": 123,
+      "verified_collection": true,
+      "components": {
+        "word": {
+          "covered_lines": 9681,
+          "instrumented_lines": 11364,
+          "uninstrumented_files": [],
+          "percent": 85.190074
+        },
+        "sheet": {
+          "covered_lines": 4251,
+          "instrumented_lines": 5023,
+          "uninstrumented_files": [],
+          "percent": 84.630699
+        },
+        "slide": {
+          "covered_lines": 2182,
+          "instrumented_lines": 2541,
+          "uninstrumented_files": [],
+          "percent": 85.871704
+        },
+        "pdf": {
+          "covered_lines": 11834,
+          "instrumented_lines": 15289,
+          "uninstrumented_files": [
+            "lib/src/pdf/templates/suite_index.dart"
+          ],
+          "percent": 77.402054
+        },
+        "reports": {
+          "covered_lines": 9588,
+          "instrumented_lines": 11295,
+          "uninstrumented_files": [],
+          "percent": 84.887118
+        }
+      }
+    }
+  },
+  "editor": {
+    "analyzer": "passed",
+    "full_suite": {
+      "success_marker": "00:43 +521 ~1: All tests passed!",
+      "passed": 521,
+      "skipped": 1,
+      "skip_diagnostics": [
+        "00:11 +87: /workspace/scratch/07eb2580faa9/quds-expansion-validation/packages/quds_office_editor/test/pdf_pixel_compare_render_test.dart: render al_tahreer pages for pixel compare\n  Skip: needs /home/mohammed/Desktop/al_tahreer_profile.pdf (local compare tool)\n00:11 +87 ~1: /workspace/scratch/07eb2580faa9/quds-expansion-validation/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: alignment and leader controls export native values through history and three saves"
+      ]
+    },
+    "all_native_oracles": "passed",
+    "inventory_files": 29,
+    "three_cycle_series": 9,
+    "standalone_files": 2,
+    "engine_prerequisite_verified": {
+      "path": "/workspace/scratch/07eb2580faa9/acceptance-expansion/final-source/engine/acceptance.json",
+      "sha256": "d6d04126adbe1c42c8336a2ae9af7eb5d598895692490d9b663069002b694044",
+      "commit": "2d6529e52f389e8c491ce75331d9efe6bd59a821",
+      "source_snapshot_sha256": "65c8eaf78d9fb3f7d92b3ae423cb0855c3fafc9971163aee196c12d5117ec312",
+      "finished_utc": "2026-11-12T15:06:35.720035+00:00"
+    }
+  },
+  "external": {
+    "inputs": 375,
+    "schema_failures": 0,
+    "rendered_files": 368,
+    "rendered_pages": 687,
+    "native_schema_only_files": 7,
+    "cycle_groups": 109,
+    "baseline_comparisons": 47,
+    "page_order_comparisons": 10,
+    "all_producer_source_fingerprints_unchanged": true,
+    "all_original_and_snapshot_hashes_unchanged": true,
+    "failures": []
+  },
+  "renderer_controls": 54,
+  "qualified_native_files": [
+    {
+      "file": "quds_office_engine/fidelity-aux-controls/edited-1.docx",
+      "status": "native_schema_only",
+      "reason": "LibreOffice rejected the authored native block content control in a comment. These exact files passed the independent native XML oracle and matching Open XML SDK receipts; they have no visual certification from this renderer."
+    },
+    {
+      "file": "quds_office_engine/fidelity-aux-controls/edited-2.docx",
+      "status": "native_schema_only",
+      "reason": "LibreOffice rejected the authored native block content control in a comment. These exact files passed the independent native XML oracle and matching Open XML SDK receipts; they have no visual certification from this renderer."
+    },
+    {
+      "file": "quds_office_engine/fidelity-aux-controls/edited-3.docx",
+      "status": "native_schema_only",
+      "reason": "LibreOffice rejected the authored native block content control in a comment. These exact files passed the independent native XML oracle and matching Open XML SDK receipts; they have no visual certification from this renderer."
+    },
+    {
+      "file": "quds_office_engine/fidelity-aux-controls/imported-1.docx",
+      "status": "native_schema_only",
+      "reason": "LibreOffice rejected the authored native block content control in a comment. These exact files passed the independent native XML oracle and matching Open XML SDK receipts; they have no visual certification from this renderer."
+    },
+    {
+      "file": "quds_office_engine/fidelity-aux-controls/imported-2.docx",
+      "status": "native_schema_only",
+      "reason": "LibreOffice rejected the authored native block content control in a comment. These exact files passed the independent native XML oracle and matching Open XML SDK receipts; they have no visual certification from this renderer."
+    },
+    {
+      "file": "quds_office_engine/fidelity-aux-controls/imported-3.docx",
+      "status": "native_schema_only",
+      "reason": "LibreOffice rejected the authored native block content control in a comment. These exact files passed the independent native XML oracle and matching Open XML SDK receipts; they have no visual certification from this renderer."
+    },
+    {
+      "file": "quds_office_engine/fidelity-aux-controls/source.docx",
+      "status": "native_schema_only",
+      "reason": "LibreOffice rejected the authored native block content control in a comment. These exact files passed the independent native XML oracle and matching Open XML SDK receipts; they have no visual certification from this renderer."
+    }
+  ],
+  "scope": "Full source engine/editor gates, fresh source-bound line coverage, all 15 selected feature workflows, exact 375-input SDK and native corpus acceptance. Native-schema-only files have no native visual certification; feature workflows and line coverage do not imply complete Office parity.",
+  "artifact_sha256": {
+    "plan.json": "1a9aca8cc041e3a320749c4708735b9021cf8a5aa9cd7363a06d3553b78b54cb",
+    "engine/acceptance.json": "d6d04126adbe1c42c8336a2ae9af7eb5d598895692490d9b663069002b694044",
+    "engine/inventory.json": "55908c188d0e57848ca09308e36367a44e6ae80a2027b488b1171e169e3c3524",
+    "engine/coverage-gaps.json": "61dc403ceebc86091e69689043d7bc01489e31a8cb9d0ae2f5db3646b9851787",
+    "engine/collection-receipt.json": "6dd5b481aed759b0b33125195fcb28bc459d92ef884ac29479c7029851ef5689",
+    "engine/feature-workflows.json": "a7f2c402dbd4d003f25e18785f8032ad3d7b364fa8d3cb84d6db856ba062bb50",
+    "editor/acceptance.json": "f80057c80daf99b833ba6cf09b8d7dbec03d628cd416210155057fa6c422a4d2",
+    "editor/inventory.json": "90160ae9c9a3c23a617780e9d5efcdce03ee1789489d69e22df410ac2fe140b0",
+    "external/acceptance-summary.json": "c02aa95de89e29d4df09d6f55211886096a10844b5dc8999af637f48e31f1793",
+    "external/input-manifest.json": "532c01d574461c28d084e1803df2a9e5fb7e46d03804f37bcc2fa0863f7fab0f",
+    "external/schema-report.json": "d47c94ee801ec3a721d72b717d80df4dbf9331888061b648802e23fd8129e8a9",
+    "external/render/render-report.json": "dab477f29ec96833d303443caa7c216e92fb6fe9c5309f22577d9af11a0c352e",
+    "external/renderer-provenance.json": "c748ac3a8067d3c4c0ea6c172fd22f3ac77a612972992694541fd33b82ff1245",
+    "external/schema-validator-provenance.json": "94cd085d040f70c25bc50208c50d4d6655542b06dc794c618fa33bd2373d385e"
+  }
+}

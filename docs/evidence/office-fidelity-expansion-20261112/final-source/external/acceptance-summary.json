@@ -1,0 +1,88 @@
+{
+  "status": "passed",
+  "source_commit": "2d6529e52f389e8c491ce75331d9efe6bd59a821",
+  "started_utc": "2026-11-12T15:09:26.361901+00:00",
+  "commands": [
+    {
+      "name": "sdk-selftest",
+      "command": [
+        "dotnet",
+        "/workspace/scratch/07eb2580faa9/runtime/validator/OfficeValidation.dll",
+        "--self-test"
+      ],
+      "cwd": "/workspace/scratch/07eb2580faa9/quds-expansion-validation",
+      "exit_code": 0,
+      "elapsed_seconds": 0.47732217199882143,
+      "log": "/workspace/scratch/07eb2580faa9/acceptance-expansion/final-source/external/sdk-selftest.log",
+      "log_sha256": "4945b06eb2eda6b4b7dd4ab50752ac76d91e73af5045d5bb39b3ecda55e25c56"
+    },
+    {
+      "name": "schema",
+      "command": [
+        "dotnet",
+        "/workspace/scratch/07eb2580faa9/runtime/validator/OfficeValidation.dll",
+        "/workspace/scratch/07eb2580faa9/acceptance-expansion/final-source/external/input",
+        "/workspace/scratch/07eb2580faa9/acceptance-expansion/final-source/external/schema-report.json"
+      ],
+      "cwd": "/workspace/scratch/07eb2580faa9/quds-expansion-validation",
+      "exit_code": 0,
+      "elapsed_seconds": 7.016345822001313,
+      "log": "/workspace/scratch/07eb2580faa9/acceptance-expansion/final-source/external/schema.log",
+      "log_sha256": "a8a605260634b230631dc23b431621e782e131124d7745722f9f2b16ef1cc968"
+    },
+    {
+      "name": "renderer-controls",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/office-validation",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/workspace/scratch/07eb2580faa9/quds-expansion-validation",
+      "exit_code": 0,
+      "elapsed_seconds": 0.8670680559989705,
+      "log": "/workspace/scratch/07eb2580faa9/acceptance-expansion/final-source/external/renderer-controls.log",
+      "log_sha256": "ac851aa0c5952954deb13aad32dea8e171014874efc527a4b059890a015b8668"
+    },
+    {
+      "name": "native-render",
+      "command": [
+        "python3",
+        "/workspace/scratch/07eb2580faa9/quds-expansion-validation/tool/office-validation/render.py",
+        "/workspace/scratch/07eb2580faa9/acceptance-expansion/final-source/external/input",
+        "/workspace/scratch/07eb2580faa9/acceptance-expansion/final-source/external/render",
+        "--schema-report",
+        "/workspace/scratch/07eb2580faa9/acceptance-expansion/final-source/external/schema-report.json"
+      ],
+      "cwd": "/workspace/scratch/07eb2580faa9/quds-expansion-validation",
+      "exit_code": 0,
+      "elapsed_seconds": 278.86608242299917,
+      "log": "/workspace/scratch/07eb2580faa9/acceptance-expansion/final-source/external/native-render.log",
+      "log_sha256": "b713f4e27ae595dc921da533acd8b6143c15f2e47d5cf5fb13104da2ebf0bb00"
+    }
+  ],
+  "inputs": 375,
+  "schema_failures": 0,
+  "all_producer_source_fingerprints_unchanged": true,
+  "all_original_and_snapshot_hashes_unchanged": true,
+  "rendered_files": 368,
+  "rendered_pages": 687,
+  "native_schema_only_files": 7,
+  "cycle_groups": 109,
+  "baseline_comparisons": 47,
+  "page_order_comparisons": 10,
+  "failures": [],
+  "report_sha256": {
+    "input-manifest.json": "532c01d574461c28d084e1803df2a9e5fb7e46d03804f37bcc2fa0863f7fab0f",
+    "schema-report.json": "d47c94ee801ec3a721d72b717d80df4dbf9331888061b648802e23fd8129e8a9",
+    "render/render-report.json": "dab477f29ec96833d303443caa7c216e92fb6fe9c5309f22577d9af11a0c352e",
+    "renderer-provenance.json": "c748ac3a8067d3c4c0ea6c172fd22f3ac77a612972992694541fd33b82ff1245",
+    "schema-validator-provenance.json": "94cd085d040f70c25bc50208c50d4d6655542b06dc794c618fa33bd2373d385e"
+  },
+  "finished_utc": "2026-11-12T15:14:13.888337+00:00"
+}
