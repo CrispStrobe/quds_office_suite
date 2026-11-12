@@ -508,3 +508,5 @@ The November integration uses the current standalone DOC parser source, includin
 Final integration refresh includes the standalone parser evidence/CI declaration, with the canonical parser source pin recorded in `packages/legacy_doc_parser/UPSTREAM.json`. Studio parameter/template regressions run from the studio package and pass all 16 tests.
 
 The next integration refresh mirrors the canonical parser shape/textbox/metafile/schema updates, while retaining the shared engine/editor implementation and Word input guards. Engine legacy-document consumer regressions pass all 21 cases; both implementation analyzers report no issues.
+
+The current combined parser mirror includes note/header boundary preservation, isolated textbox table indentation and corrected semantic oracle contexts. Its canonical source passes 773 Dart tests, 156 Python controls and independent Open XML SDK validation of 217 DOCX outputs. Native rendering evidence remains scoped to its authored cases and records remaining failures.

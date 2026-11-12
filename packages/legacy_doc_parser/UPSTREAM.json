@@ -1,8 +1,7 @@
 {
   "repository": "CrispStrobe/legacy-doc-parser",
-  "commit": "d28be0a173415ebb392a8309aacdbe2bb1a50da7",
+  "commit": "564388c5a88ac89410e87012644f36a2848260ff",
   "patches": [
     "Workspace resolution and shared development constraints (lints 6, xml 7) only; parser sources and tests are unchanged."
-  ],
-  "tree": "9cf883d7829627051a2f1068235dfe20d2e37383"
+  ]
 }
