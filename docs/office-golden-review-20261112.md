@@ -123,7 +123,8 @@ flutter test --no-pub test/office_fidelity_golden_test.dart \
   test/office_story_golden_test.dart test/office_layout_goldens_test.dart \
   test/office_structure_goldens_test.dart \
   test/office_frame_wrap_golden_test.dart \
-  test/office_nested_table_golden_test.dart
+  test/office_nested_table_golden_test.dart \
+  test/office_table_grid_golden_test.dart
 ```
 
 Do not use `--update-goldens` in an acceptance run. Each cycle must match the
@@ -194,3 +195,13 @@ images certify complete constrained text and stable edits/saves under that
 policy, not font-metric equality with LibreOffice or Microsoft Word. They bring
 the reviewed image set to 27 PNGs. Full editor acceptance is recorded separately
 for the exact implementation checkpoint.
+
+
+A final Unicode audit reproduced eleven failures for omitted Indic conjuncts,
+spacing marks and related cluster classes. `GraphemeClusters.segment` now uses
+Dart's `characters` 1.4.1 (Unicode 16.0) and retains its public UTF-16 API.
+Seventeen additional regressions cover the concrete gaps and saved cell
+scenarios. The contained-wrap cohort now has 41 passing tests; the full editor
+again passes 452 tests with its existing skip, and all 27 PNGs remain unchanged.
+This establishes boundary and ownership behavior, not arbitrary Indic font
+shaping or native font-metric equivalence.

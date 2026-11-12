@@ -460,7 +460,7 @@
       "id": "FID-039",
       "status": "closed",
       "area": "Actual host outputs and coverage provenance",
-      "finding": "The host requires exactly fifty-nine valid captured Office outputs and validates the captured bytes independently with Open XML SDK. Fresh Office LCOV and engine VM reports list unhit instrumented lines, absent files and current source hashes. The explicit host coverage scope contains ten host integration files, including captured conversion destinations and the conversion action/dialog; six reusable parsing/package/conversion modules are maintained in Quds. Coverage percentages across the old and new scopes are not directly comparable. Helpers reject malformed records, missing source paths and out-of-range line numbers; fresh clean-directory collection is required because same-length stale input cannot be detected from coverage alone.",
+      "finding": "The host requires exactly 104 captured Office outputs (92 DOCX and 12 PPTX), with no missing, duplicate or unexpected packages. Coverage requires every office_*.dart source under lib/services and lib/widgets to be instrumented; the current ten-file scope includes office_picture.dart. Source/output collection provenance and complete LCOV records are protected separately by FID-087.",
       "evidence": [
         "CrispCloud:tool/office_host_evidence.py",
         "CrispCloud:tool/test_office_host_evidence.py",
@@ -823,7 +823,7 @@
       "id": "FID-069",
       "status": "closed",
       "area": "CrispCloud note commands and actual ribbon edits",
-      "finding": "Word Insert tab and menu expose localized Footnote/Endnote commands and open the editable notes pane. Note editing preserves entered whitespace, respects read-only mode and supports undo/redo. A real ribbon heading/paragraph/note/picture workflow validates three actual host uploads and reopens with independent XML/media assertions.",
+      "finding": "Flutter Word Insert tab and menu expose localized Footnote/Endnote commands and open the editable notes pane. Note editing preserves entered whitespace, respects read-only mode and supports undo/redo. A real ribbon heading/paragraph/note/picture workflow validates three actual host uploads and reopens with independent XML/media assertions.",
       "evidence": [
         "CrispCloud:lib/widgets/office_editor_ribbon.dart",
         "CrispCloud:test/widget/office_editor_ribbon_test.dart",
@@ -1029,7 +1029,7 @@
       "id": "FID-086",
       "status": "closed",
       "area": "Long words in narrow nested cells",
-      "finding": "Constrained Word cell/frame paragraphs emergency-wrap oversized tokens at whole grapheme boundaries and grow rows instead of clipping text. Default body line breaking remains unchanged. Flag pairs and emoji modifiers remain intact; supplementary UTF-16 ranges and RTL shaped-glyph ownership are protected. Authored nested-grid phases and three direct/isolate saves have semantic bounds checks and reviewed pixels.",
+      "finding": "Constrained Word cell/frame paragraphs emergency-wrap oversized tokens at Unicode 16 extended grapheme boundaries using the pure-Dart characters package. Table rows grow instead of clipping text. The incomplete hand-maintained segmenter is replaced; Indic conjuncts, spacing marks, emoji and RTL glyph ownership retain original UTF-16 ranges. Authored nested-grid phases and three direct/isolate saves have semantic bounds checks and reviewed pixels.",
       "evidence": [
         "packages/quds_office_engine/test/word_contained_text_wrap_test.dart",
         "packages/quds_office_engine/lib/src/bidi/line_breaker.dart",
@@ -1037,7 +1037,7 @@
         "packages/quds_office_editor/test/office_table_grid_golden_test.dart",
         "docs/office-golden-review-20261112.md"
       ],
-      "limits": "A single grapheme wider than the entire content box cannot be made narrower without scaling or clipping. The fallback metric remains conservative when no font is supplied; this correction does not promise native Word line-break equivalence."
+      "limits": "An indivisible grapheme wider than the content box cannot fit without scaling or clipping. Table rows grow, but authored text frames keep their fixed height and can still overflow vertically. The fallback metric remains conservative when no font is supplied; arbitrary script shaping and native Word line-break equivalence are not certified."
     },
     {
       "id": "FID-087",
@@ -1071,6 +1071,48 @@
       "evidence": [
         "CrispCloud:docs/office-picture-fidelity-20261112.md",
         "CrispCloud:docs/office-fidelity.md"
+      ]
+    },
+    {
+      "id": "FID-090",
+      "status": "closed",
+      "area": "Native evidence for picture-only host slides",
+      "finding": "The twelve authored landscape, portrait, square and bounded slide exports require measured native page and black-rectangle geometry, solid interior, grayscale color and white exterior. Empty extracted text can pass only with those pixel measurements. A separate OOXML transform check rejects invisible overflow clipped by the page. Each of four three-save groups must retain identical validated pixels and metrics.",
+      "evidence": [
+        "tool/office-validation/render.py",
+        "tool/office-validation/test_render.py",
+        "CrispCloud:test/widget/office_picture_fidelity_test.dart",
+        "CrispCloud:.github/workflows/office-fidelity.yml"
+      ],
+      "limits": "This is an independent oracle for the exact twelve authored image-only fixtures, not a blanket permission for empty or blank render output. Physical page rounding is bounded by 0.03 point and rectangle raster edges by one pixel."
+    },
+    {
+      "id": "FID-091",
+      "status": "closed",
+      "area": "Portable gate versus declared feature coverage",
+      "finding": "The portable gate now executes the omitted imported-footnote reference regression. A contract check parses real shell commands and requires every matrix-declared Dart test, producer and exact oracle command; comments, quoted descriptions, disabled commands and ignored failures cannot satisfy it.",
+      "evidence": [
+        "packages/quds_office_engine/tool/fidelity/check.sh",
+        "packages/quds_office_engine/tool/fidelity/test_feature_matrix.py"
+      ]
+    },
+    {
+      "id": "FID-092",
+      "status": "closed",
+      "area": "Source-exact actual host note and picture expectations",
+      "finding": "The host note regression independently verifies native marker absence instead of requiring invented number prefixes. The actual ribbon save scenario waits for worker decoding and binds the inserted image extent to that picture relationship and exact source media, preventing an unrelated drawing from satisfying geometry checks.",
+      "evidence": [
+        "CrispCloud:test/office_footnote_test.dart",
+        "CrispCloud:test/widget/office_save_fidelity_test.dart"
+      ]
+    },
+    {
+      "id": "FID-093",
+      "status": "closed",
+      "area": "Office input-only pull-request coverage triggers",
+      "finding": "Host fidelity pull requests also trigger on shipped font assets and localization changes, because those inputs affect Office PDF and widget behavior even without an Office source-file edit.",
+      "evidence": [
+        "CrispCloud:.github/workflows/office-fidelity.yml"
       ]
     }
   ],
