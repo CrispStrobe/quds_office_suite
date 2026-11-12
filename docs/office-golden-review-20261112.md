@@ -1,9 +1,10 @@
 # Reviewed Office renderer baselines — 12 November 2026
 
 The pinned Flutter 3.44.0 renderer was checked against suite code checkpoint
-`002ba34e32fed5a5813c5a312953b62d1c6b99b5`. After visual review, all nine golden
-tests passed in ordinary comparison mode, covering 19 page images. Updating
-baselines is a separate review step; the normal gate never updates them.
+`0ce6e983a2e11e6c3adc36a33a63fb8fc5754750`. After visual review, the full editor
+suite passed 355 tests with one documented skip in ordinary comparison mode,
+including 12 golden cases covering 22 page images. Updating baselines is a
+separate review step; the normal gate never updates them.
 
 ## Existing images changed for verified source corrections
 
@@ -37,6 +38,15 @@ These snapshots establish Quds rendering stability, not full native Word visual
 equivalence or all wrapping/anchor combinations. Remaining layout limits are
 recorded in `office-fidelity-gaps.json`.
 
+## Native frame wrapping images
+
+`office_frame_wrap_golden_test.dart` adds three reviewed images from authored
+native XML: `none`, `square` and `topBottom`. The no-wrap view intentionally
+allows body/frame overlap; square flow starts beside the frame and returns to
+full width below it; top-and-bottom flow starts below the frame. Exact mode,
+geometry, colors and logical character ownership have independent XML/layout
+checks. Each scene must match before saving and after all three native cycles.
+
 ## Reproduce normal validation
 
 From `packages/quds_office_editor`, with the pinned SDK and dependencies:
@@ -44,7 +54,8 @@ From `packages/quds_office_editor`, with the pinned SDK and dependencies:
 ```sh
 flutter test --no-pub test/office_fidelity_golden_test.dart \
   test/office_story_golden_test.dart test/office_layout_goldens_test.dart \
-  test/office_structure_goldens_test.dart
+  test/office_structure_goldens_test.dart \
+  test/office_frame_wrap_golden_test.dart
 ```
 
 Do not use `--update-goldens` in an acceptance run. Each cycle must match the

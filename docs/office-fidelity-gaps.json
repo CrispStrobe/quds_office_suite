@@ -83,12 +83,13 @@
       "id": "FID-007",
       "status": "partial",
       "area": "Visual/platform breadth",
-      "finding": "Nineteen reviewed page images cover notes, note continuation, first/even/default stories, columns, tall tables and structural create/edit/remove workflows on pinned Linux Flutter 3.44.0. Other platforms and arbitrary scripts/fonts remain unproven.",
+      "finding": "Twenty-two reviewed page images cover notes, note continuation, first/even/default stories, columns, tall tables structural create/edit/remove workflows and three native frame wrap modes on pinned Linux Flutter 3.44.0. Other platforms and arbitrary scripts/fonts remain unproven.",
       "evidence": [
         "packages/quds_office_editor/test/office_fidelity_golden_test.dart",
         "packages/quds_office_editor/test/office_story_golden_test.dart",
         "packages/quds_office_editor/test/office_structure_goldens_test.dart",
-        "docs/office-golden-review-20261112.md"
+        "docs/office-golden-review-20261112.md",
+        "packages/quds_office_editor/test/office_frame_wrap_golden_test.dart"
       ]
     },
     {
@@ -601,7 +602,8 @@
         "packages/quds_office_engine/test/word_frame_wrap_test.dart",
         "packages/quds_office_engine/test/variable_line_breaker_test.dart",
         "packages/quds_office_engine/tool/fidelity/frame_wrap_oracle.py",
-        "packages/quds_office_engine/tool/fidelity/test_frame_wrap_oracle.py"
+        "packages/quds_office_engine/tool/fidelity/test_frame_wrap_oracle.py",
+        "packages/quds_office_editor/test/office_frame_wrap_golden_test.dart"
       ],
       "limits": "The model chooses one available line interval. Earlier paragraphs are not retroactively reflowed around later anchors. Arbitrary picture contours, floating table exclusions and full Microsoft Word layout equivalence remain unverified."
     },
