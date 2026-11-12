@@ -38,6 +38,8 @@ REQUIRED_SERIES_BASELINES = {
     ('fidelity-frame-wrap', 'none.docx'): 'none-source.docx',
     ('fidelity-frame-wrap', 'square.docx'): 'square-source.docx',
     ('fidelity-frame-wrap', 'topBottom.docx'): 'topBottom-source.docx',
+    # This native-row omission series has no intended visible edits.
+    ('fidelity-table-grid', 'omitted.docx'): 'omitted-source.docx',
 }
 # This six-slide native fixture changes only slide order and section membership.
 # These are authored page orders, independent of the engine/XML oracle. Scope

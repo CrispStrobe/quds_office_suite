@@ -1950,7 +1950,15 @@ class WordEditorController extends OfficeController {
   void mergeTableCells() {
     final ({WmlTable table, int r0, int g0, int r1, int g1})? range =
         tableCellRange;
-    if (range == null || !config.allowsMutation) {
+    if (range == null ||
+        !config.allowsMutation ||
+        !WordTable.canMerge(
+          range.table,
+          range.r0,
+          range.g0,
+          range.r1,
+          range.g1,
+        )) {
       return;
     }
     _mutateWordTable(
@@ -1969,7 +1977,9 @@ class WordEditorController extends OfficeController {
   /// unmergeTableCells API.
   void unmergeTableCells() {
     final ({WmlTable table, int row, int col})? loc = tableAtCaret;
-    if (loc == null || !config.allowsMutation) {
+    if (loc == null ||
+        !config.allowsMutation ||
+        !WordTable.canUnmerge(loc.table, loc.row, loc.col)) {
       return;
     }
     _mutateWordTable(
@@ -1986,12 +1996,16 @@ class WordEditorController extends OfficeController {
 
   /// beginTableResize API.
   void beginTableResize(WmlTable table) {
+    if (!config.allowsMutation || WordTable.hasRowOmissions(table)) {
+      _tableResizeSnap = null;
+      return;
+    }
     _tableResizeSnap = WordTableHistoryState.capture(table);
   }
 
   /// previewTableColumnWidth API.
   void previewTableColumnWidth(WmlTable table, int col, double width) {
-    if (!config.allowsMutation) {
+    if (!config.allowsMutation || WordTable.hasRowOmissions(table)) {
       return;
     }
     while (table.grid.length <= col) {
@@ -2010,7 +2024,10 @@ class WordEditorController extends OfficeController {
 
   /// previewTableRowHeight API.
   void previewTableRowHeight(WmlTable table, int row, double height) {
-    if (!config.allowsMutation || row < 0 || row >= table.rows.length) {
+    if (!config.allowsMutation ||
+        WordTable.hasRowOmissions(table) ||
+        row < 0 ||
+        row >= table.rows.length) {
       return;
     }
     table.rows[row].height = height.clamp(16, 480);
@@ -2024,7 +2041,8 @@ class WordEditorController extends OfficeController {
     _tableResizeSnap = null;
     if (snap == null ||
         !identical(snap.table, table) ||
-        !config.allowsMutation) {
+        !config.allowsMutation ||
+        WordTable.hasRowOmissions(table)) {
       return;
     }
     final WordTableHistoryState now = WordTableHistoryState.capture(table);
@@ -2368,6 +2386,7 @@ class WordEditorController extends OfficeController {
       return;
     }
     final WmlTable table = band.table;
+    if (WordTable.hasRowOmissions(table)) return;
     final int a = band.from < band.to ? band.from : band.to;
     final int b = band.from > band.to ? band.from : band.to;
     if (band.column) {
@@ -2413,7 +2432,7 @@ class WordEditorController extends OfficeController {
     void Function() mutate,
     void Function(WmlTable table) place,
   ) {
-    if (!config.allowsMutation) {
+    if (!config.allowsMutation || WordTable.hasRowOmissions(table)) {
       return;
     }
     final WordTableHistoryState before = WordTableHistoryState.capture(table);

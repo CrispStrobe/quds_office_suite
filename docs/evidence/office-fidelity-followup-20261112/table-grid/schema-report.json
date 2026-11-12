@@ -1,0 +1,46 @@
+{
+  "Files": 8,
+  "Failures": 0,
+  "Reports": [
+    {
+      "File": "quds_office_suite/packages/quds_office_engine/build/fidelity-table-grid/edited-1.docx",
+      "Sha256": "a163e14e952be1cf0fdddcc8ed6bad07fdd581fa128b32864ea4694c4fe67086",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_suite/packages/quds_office_engine/build/fidelity-table-grid/edited-2.docx",
+      "Sha256": "8cf7b83666382379cd138da6e54f0d6d0047bb13e67de19794fe0d61b5ed8d2f",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_suite/packages/quds_office_engine/build/fidelity-table-grid/edited-3.docx",
+      "Sha256": "37deac26dc026be3953d13fc40bf789069691af0fac4dd4cfafae3c24a5d0b3b",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_suite/packages/quds_office_engine/build/fidelity-table-grid/omitted-1.docx",
+      "Sha256": "6e6ba0ebf40caac8b3ef3312c14c8f1be1c293001ea701ff33d7b09cb3dd9caf",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_suite/packages/quds_office_engine/build/fidelity-table-grid/omitted-2.docx",
+      "Sha256": "135ca6fb23c22cb364921b61974abd613abc274ef49e8e35aa713721bbba054a",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_suite/packages/quds_office_engine/build/fidelity-table-grid/omitted-3.docx",
+      "Sha256": "3fe24875ef617a756ae39d5b106cadb22ee00473d5b43ba6857e4d6a82582f22",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_suite/packages/quds_office_engine/build/fidelity-table-grid/omitted-source.docx",
+      "Sha256": "708b3d662d51f21ea30441df04cba4cdcb2fcad89d2da84d5dedb82a08fb0853",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_suite/packages/quds_office_engine/build/fidelity-table-grid/source.docx",
+      "Sha256": "8f44b7cbf776d0378c5964c45708d745dcb01eed3679a025bf7225bba297f107",
+      "Errors": []
+    }
+  ]
+}

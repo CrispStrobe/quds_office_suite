@@ -73,6 +73,22 @@ class PixelEvidenceTests(unittest.TestCase):
 
 
 class CycleComparisonTests(unittest.TestCase):
+    def test_omitted_table_grid_requires_matching_native_source(self):
+        for folder in ('fidelity-table-grid', 'engine/fidelity-table-grid'):
+            with self.subTest(folder=folder):
+                cycles = [f'{folder}/omitted-{cycle}.docx' for cycle in range(1, 4)]
+                source = f'{folder}/omitted-source.docx'
+                files = [source, *cycles]
+                records = {name: record(name) for name in files}
+                passing = render.cycle_coverage(files, records)
+                self.assertEqual(passing['failures'], [])
+                self.assertEqual(passing['baseline_comparisons'], 1)
+                for changes in ({'text': 'Lost native omitted cell geometry'},
+                                {'pixels': ['2' * 64]}, {'pages': 2}):
+                    broken = dict(records, **{source: record(source, **changes)})
+                    self.assertEqual(len(render.cycle_coverage(files, broken)['failures']), 1)
+                self.assertEqual(len(render.cycle_coverage(cycles, records)['failures']), 1)
+
     def test_complete_zero_and_one_based_series_pass(self):
         for cycles in ([0, 1, 2], [1, 2, 3]):
             files = [f'case-{n}.docx' for n in cycles]

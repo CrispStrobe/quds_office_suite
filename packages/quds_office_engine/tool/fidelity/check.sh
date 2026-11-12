@@ -33,6 +33,7 @@ dart test \
   test/bookmark_fidelity_test.dart test/content_control_fidelity_test.dart \
   test/word_edit_integrity_test.dart test/inline_field_fidelity_test.dart \
   test/word_structure_steps_test.dart test/word_structure_integrity_test.dart \
+  test/word_table_grid_addressing_test.dart \
   test/word_revision_story_test.dart test/word_step_atomicity_test.dart \
   test/word_bibliography_fidelity_test.dart test/note_marker_fidelity_test.dart \
   test/word_note_script_break_test.dart \
