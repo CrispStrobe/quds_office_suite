@@ -76,6 +76,20 @@ python3 tool/fidelity/feature_matrix.py plan footnotes headings tables
 python3 tool/fidelity/feature_matrix.py run styles references
 ```
 
+Three concrete recipe families live under
+`packages/quds_office_engine/test/fixtures/fidelity/scripts/`:
+
+| Recipe | Tested edits |
+| --- | --- |
+| `word.json` | 29 steps against the committed `word.docx`, including adding/editing/deleting notes, rich note formatting, headings, styles, paragraphs, images and sections |
+| `table-grid-format.json`, `table-grid-replace.json`, `table-grid-unmerge.json` | Sequential logical-cell edits, owner formatting, nested text replacement, native preferred widths and unmerge against authored XML |
+| `word-structure-create.json`, `word-structure-edit.json`, `word-structure-remove.json` | Sequential table/TOC/frame creation, paragraph flow, picture wrapping, bookmarks, reference fields and threaded comments |
+
+The matrix runs the producers that create the authored source packages and
+apply each phase in order. Recipes use fixture-specific indexes and identities;
+use `inspect` to adapt them to another document. A recipe is not a generic
+instruction to replace similarly numbered content in an arbitrary input.
+
 The matrix exposes footnotes, endnotes, headings, styles, paragraphs, images,
 tables, TOCs, textflow, placement, drawings, references, comments, spreadsheets
 and slides. It connects those 15 areas to 19 producer/oracle bundles and lists
@@ -129,7 +143,7 @@ requires an independently prescribed page size and black rectangle, its position
 size, area, solid interior, grayscale color and white exterior. It also checks
 raw native transforms, because a picture extending past the page edge could
 otherwise look correct after clipping. All twelve real exports pass, as do all
-four repeated-save groups and 49 renderer control tests. Other text-free files
+four repeated-save groups and 60 renderer control tests. Other text-free files
 are not accepted through this precise corpus rule. The app workflow now renders
 its exact downloaded host inventory after schema validation, retaining PDFs,
 PNGs and measured pixel receipts.
@@ -159,7 +173,7 @@ zero validation errors. These are separate generated package instances,
 including each repository's 305 engine outputs. Native rendering has its own
 reports and qualifications; schema acceptance alone is not a visual result.
 
-The ledger contains 94 tracked findings: 80 closed within their stated scope,
+The ledger contains 95 tracked findings: 81 closed within their stated scope,
 seven partial, six open and one explicitly guarded operation. Remaining work
 includes broader platform/font rendering, branch and unhit-line coverage,
 arbitrary content-control bindings, mixed bookmark/range topology, general
