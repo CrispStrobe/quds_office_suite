@@ -16,9 +16,11 @@ schema/render gates. This follow-up preserves that work on
 
 CrispCloud initially pins suite revision
 `84b11839126a9577b6688b6acf80edd3cc2601ee` through 237 selected files. Its
-corresponding feature branch first synchronizes the newer source revision and
-verifies all 352 selected shared files. The app's path dependencies need this
-explicit synchronization; changes to the suite branch alone cannot update it.
+corresponding feature branch now pins
+`3e4502152d4b6c99d164f621b5271ba4b0a7ec71` and verifies all 378 selected
+shared files. The app's path dependencies need this explicit synchronization;
+changes to the suite branch alone cannot update it. Later evidence-only suite
+commits do not require a new implementation pin.
 
 ## Reproduced gaps in this follow-up
 
@@ -30,7 +32,8 @@ explicit synchronization; changes to the suite branch alone cannot update it.
 | Actual host font dialog | Opening and applying the dialog could round imported sizes, flatten mixed formatting and replace complex-script fonts | Preserve unchanged values and apply only explicitly requested properties; 17 real-dialog tests and 30 required exports |
 | Picture insertion and history | Fixed dimensions stretched images, stale pickers changed new targets, and drawing undo used the currently selected slide | Proportional bounded insertion, original-target checks and original-slide history; 20 host tests and 30 required exports |
 | Coverage and workflow selection | Stale artifacts could obscure missing producers, and feature commands needed manual assembly | Source-bound collection and a strict 15-area producer/oracle matrix with selected-output cleanup and receipts |
-| Narrow-cell rendering | Visual review found long words clipped in new nested-table scenes | Emergency wrapping in fixed containers preserves whole graphemes and grows rows; 24 focused regressions and four reviewed PNGs |
+| Narrow-cell rendering | Visual review found long words clipped in new nested-table scenes | Emergency wrapping in fixed containers preserves whole graphemes and grows rows; 41 focused regressions and four reviewed PNGs |
+| Unicode boundaries | Existing hand-written grapheme tables split Indic conjuncts and other extended clusters | Use the pure-Dart Unicode 16 `characters` implementation, with 17 additional script/spacing regressions and unchanged reviewed goldens |
 
 The full format-support ledger remains
 [`office-fidelity-gaps.json`](office-fidelity-gaps.json); these bounded fixes do
@@ -77,7 +80,7 @@ The matrix exposes footnotes, endnotes, headings, styles, paragraphs, images,
 tables, TOCs, textflow, placement, drawings, references, comments, spreadsheets
 and slides. It connects those 15 areas to 19 producer/oracle bundles and lists
 the pinned editor golden commands separately. The complete matrix run from a
-clean inventory passed 548 Dart tests, three additional Dart producers,
+clean inventory passed 565 Dart tests, three additional Dart producers,
 19 independent package oracles and 205 Python mutation controls. All 214
 selected Office packages were freshly regenerated and verified across 38
 successful commands. Full acceptance separately requires all 305 engine and
@@ -130,3 +133,38 @@ four repeated-save groups and 49 renderer control tests. Other text-free files
 are not accepted through this precise corpus rule. The app workflow now renders
 its exact downloaded host inventory after schema validation, retaining PDFs,
 PNGs and measured pixel receipts.
+
+## Measured acceptance and remaining gaps
+
+The [retained execution evidence](evidence/office-fidelity-workflows-20261112/README.md)
+identifies exact source revisions, runtime versions, successful collection
+receipts, package hashes and original logs. The final engine collection passed
+1,425 tests with one existing font-fallback skip. The editor passed 452 tests
+with one existing author-local PDF skip, including all 27 committed PNG
+goldens. The full portable gate passed 963 Dart tests and 389 Python controls,
+verified all 67 operation scenarios and required all 305 engine exports.
+The separate feature run is a selected subset; these test counts must not be
+added together as unique tests.
+
+Engine line execution is 44,326 of 53,898 instrumented lines (82.2%), leaving
+9,572 unhit lines and ten files absent from instrumentation. The app's actual
+host gate passed 154 Flutter tests across 21 files, plus 31 provenance,
+12 artifact and seven synchronization controls. Its scoped Office line
+execution is 2,540 of 3,782 lines (67.2%): all ten scoped files were
+instrumented, with 1,242 unhit lines. The app independently ran the vendored
+portable corpus and required 104 host exports.
+
+Open XML SDK accepted all 327 suite packages and all 409 app packages with
+zero validation errors. These are separate generated package instances,
+including each repository's 305 engine outputs. Native rendering has its own
+reports and qualifications; schema acceptance alone is not a visual result.
+
+The ledger contains 94 tracked findings: 80 closed within their stated scope,
+seven partial, six open and one explicitly guarded operation. Remaining work
+includes broader platform/font rendering, branch and unhit-line coverage,
+arbitrary content-control bindings, mixed bookmark/range topology, general
+spreadsheet formulas and font metrics, complex field refresh, overlapping
+tracked changes, full floating/wrapping geometry, and additional actual-host
+authoring controls. Seven qualified native auxiliary-comment documents have
+schema-only acceptance, without visual certification. Microsoft Office native
+rendering equivalence remains unverified.

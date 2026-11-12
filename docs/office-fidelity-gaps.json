@@ -1158,6 +1158,18 @@
       "evidence": [
         "CrispCloud:.github/workflows/office-fidelity.yml"
       ]
+    },
+    {
+      "id": "FID-094",
+      "status": "closed",
+      "area": "Native-valid minimum slide fixture",
+      "finding": "Independent SDK validation caught that the new 100 by 60 point bounds fixture violated the native one-inch minimum height. The authored input and pixel oracle now use a legal 100 by 72 point canvas, retaining the same 90 by 45 point proportional image at x10/y7.2. The 20 host picture tests, all twelve picture-package SDK validations and native pixels pass.",
+      "evidence": [
+        "CrispCloud:test/widget/office_picture_fidelity_test.dart",
+        "tool/office-validation/render.py",
+        "tool/office-validation/test_render.py"
+      ],
+      "limits": "The invalid fixture was corrected; schema checks were not disabled and no renderer exemption was added."
     }
   ],
   "evidence_path_convention": "Unprefixed paths are relative to quds_office_suite; CrispCloud: paths are relative to the host repository."
