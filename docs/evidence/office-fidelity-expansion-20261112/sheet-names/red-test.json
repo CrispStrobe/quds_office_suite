@@ -1,0 +1,19 @@
+{
+  "status": "expected-regression-failures",
+  "implementation_base": "08b0948",
+  "command": "dart test test/sheet_qualified_names_test.dart --reporter expanded",
+  "exit_code": 1,
+  "passed": 1,
+  "failed": 3,
+  "fixture_sha256": "aeb3b6c808a4d4ad43b61e45e8e04664e9cc3581c65c6d94eac8590030ff0d8f",
+  "defects": [
+    "localSheetId discarded; local Price returns global 11 rather than local 13",
+    "qualified names rejected before worksheet-local resolution",
+    "named scalar constants are not imported or evaluated"
+  ],
+  "bounded_semantics": "Explicit worksheet qualification requires a worksheet-local definition. Global fallback for an explicitly qualified name remains unsupported and preserves authored typed caches. Relative, computed, external, 3D, and whole-row/column definitions remain unsupported.",
+  "primary_sources": [
+    "https://support.microsoft.com/en-us/excel/names-in-formulas",
+    "https://learn.microsoft.com/en-us/openspecs/office_standards/ms-oe376/ddfb7406-8921-4540-a4ed-8516b3d7d583"
+  ]
+}
