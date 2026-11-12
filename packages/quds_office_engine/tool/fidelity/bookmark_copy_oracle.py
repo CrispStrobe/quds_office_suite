@@ -80,13 +80,16 @@ def verify_xml(data, *, copied):
 
 
 def verify(root: Path, *, editor=False):
-    expected = ([f'editor-{cycle}.docx' for cycle in (1, 2, 3)] if editor else
-                ['source.docx', *[f'copied-{cycle}.docx' for cycle in (1, 2, 3)]])
+    expected = (['copied-expected.docx', *[f'editor-{cycle}.docx' for cycle in (1, 2, 3)]] if editor else
+                ['source.docx', 'copied-expected.docx', *[f'copied-{cycle}.docx' for cycle in (1, 2, 3)]])
     equal(sorted(path.name for path in root.glob('*.docx')), sorted(expected),
           'authored bookmark copy output inventory')
     receipts = []
     for name in expected:
         path = root / name
+        if name == 'copied-expected.docx':
+            equal(path.read_bytes(), (FIXTURES / 'bookmark_copy_expected.docx').read_bytes(),
+                  'independent native reference bytes')
         with ZipFile(path) as package:
             verify_xml(package.read('word/document.xml'), copied=name != 'source.docx')
         receipts.append({'name': name, 'sha256': hashlib.sha256(path.read_bytes()).hexdigest()})

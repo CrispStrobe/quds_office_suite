@@ -1,0 +1,123 @@
+00:00 +0: loading /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_arrange_history_test.dart
+00:00 +0: independent groups never share a slide group identity
+00:00 +0 -1: independent groups never share a slide group identity [E]
+  Expected: not <1>
+    Actual: <1>
+  
+  package:matcher                                     expect
+  package:flutter_test/src/widget_tester.dart 473:18  expect
+  test/slide_arrange_history_test.dart 53:5           main.<fn>
+  
+00:00 +0 -1: left alignment is one owning-slide undo command
+00:00 +0 -2: left alignment is one owning-slide undo command [E]
+  Expected: true
+    Actual: <false>
+  
+  package:matcher                                     expect
+  package:flutter_test/src/widget_tester.dart 473:18  expect
+  test/slide_arrange_history_test.dart 72:7           main.<fn>
+  
+00:00 +0 -2: center alignment is one owning-slide undo command
+00:00 +0 -3: center alignment is one owning-slide undo command [E]
+  Expected: true
+    Actual: <false>
+  
+  package:matcher                                     expect
+  package:flutter_test/src/widget_tester.dart 473:18  expect
+  test/slide_arrange_history_test.dart 72:7           main.<fn>
+  
+00:00 +0 -3: right alignment is one owning-slide undo command
+00:00 +0 -4: right alignment is one owning-slide undo command [E]
+  Expected: true
+    Actual: <false>
+  
+  package:matcher                                     expect
+  package:flutter_test/src/widget_tester.dart 473:18  expect
+  test/slide_arrange_history_test.dart 72:7           main.<fn>
+  
+00:00 +0 -4: top alignment is one owning-slide undo command
+00:00 +0 -5: top alignment is one owning-slide undo command [E]
+  Expected: true
+    Actual: <false>
+  
+  package:matcher                                     expect
+  package:flutter_test/src/widget_tester.dart 473:18  expect
+  test/slide_arrange_history_test.dart 72:7           main.<fn>
+  
+00:00 +0 -5: middle alignment is one owning-slide undo command
+00:00 +0 -6: middle alignment is one owning-slide undo command [E]
+  Expected: true
+    Actual: <false>
+  
+  package:matcher                                     expect
+  package:flutter_test/src/widget_tester.dart 473:18  expect
+  test/slide_arrange_history_test.dart 72:7           main.<fn>
+  
+00:00 +0 -6: bottom alignment is one owning-slide undo command
+00:00 +0 -7: bottom alignment is one owning-slide undo command [E]
+  Expected: true
+    Actual: <false>
+  
+  package:matcher                                     expect
+  package:flutter_test/src/widget_tester.dart 473:18  expect
+  test/slide_arrange_history_test.dart 72:7           main.<fn>
+  
+00:00 +0 -7: horizontal distribution preserves endpoints and history
+00:00 +0 -8: horizontal distribution preserves endpoints and history [E]
+  Expected: [0, 32, 72, 103]
+    Actual: MappedListIterable<PmlShape, int>:[0, 32, 71, 102]
+     Which: at location [2] is <71> instead of <72>
+  
+  package:matcher                                     expect
+  package:flutter_test/src/widget_tester.dart 473:18  expect
+  test/slide_arrange_history_test.dart 95:7           main.<fn>
+  
+00:00 +0 -8: vertical distribution preserves endpoints and history
+00:00 +0 -9: vertical distribution preserves endpoints and history [E]
+  Expected: [0, 32, 72, 103]
+    Actual: MappedListIterable<PmlShape, int>:[0, 32, 71, 102]
+     Which: at location [2] is <71> instead of <72>
+  
+  package:matcher                                     expect
+  package:flutter_test/src/widget_tester.dart 473:18  expect
+  test/slide_arrange_history_test.dart 95:7           main.<fn>
+  
+00:00 +0 -9: group and ungroup restore earlier membership through undo and redo
+00:00 +0 -10: group and ungroup restore earlier membership through undo and redo [E]
+  Expected: true
+    Actual: <false>
+  
+  package:matcher                                     expect
+  package:flutter_test/src/widget_tester.dart 473:18  expect
+  test/slide_arrange_history_test.dart 116:5          main.<fn>
+  
+00:00 +0 -10: no-op arrangements retain clean state and redo history
+00:00 +0 -11: no-op arrangements retain clean state and redo history [E]
+  Expected: true
+    Actual: <false>
+  
+  package:matcher                                     expect
+  package:flutter_test/src/widget_tester.dart 473:18  expect
+  test/slide_arrange_history_test.dart 143:5          main.<fn>
+  
+00:00 +0 -11: already arranged geometry does not consume another history step
+00:00 +1 -11: OfficeInteractionMode.viewing blocks arrangement and group changes
+00:00 +2 -11: OfficeInteractionMode.selecting blocks arrangement and group changes
+00:00 +3 -11: noncontiguous groups reject without changing state or selection
+00:00 +3 -12: noncontiguous groups reject without changing state or selection [E]
+  Expected: throws <Instance of 'StateError'>
+    Actual: <Closure: () => int?>
+     Which: returned <1>
+  
+  package:matcher                                     expect
+  package:flutter_test/src/widget_tester.dart 473:18  expect
+  test/slide_arrange_history_test.dart 180:5          main.<fn>
+  
+00:00 +3 -12: Some tests failed.
+
+Failing tests:
+  /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_arrange_history_test.dart: bottom alignment is one owning-slide undo command
+  /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_arrange_history_test.dart: center alignment is one owning-slide undo command
+  /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_arrange_history_test.dart: group and ungroup restore earlier membership through undo and redo
+  /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_arrange_history_test.dart: horizontal distribution preserves endpoints and history
+  ... and 8 more

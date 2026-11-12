@@ -1,0 +1,230 @@
+{
+  "renderer": "LibreOffice 24.2.7.2 ee3885777aa7032db5a9b65deec9457448a91162 (LibreOfficeKit embedding API)",
+  "files": 9,
+  "rendered_files": 9,
+  "picture_pixel_oracle_files": 0,
+  "visual_input_files": 9,
+  "native_schema_only_files": 0,
+  "native_schema_only": [],
+  "schema_report": "/workspace/scratch/07eb2580faa9/validation/bookmark-expansion/native-reference/schema-report.json",
+  "pixel_fingerprint": "SHA-256 of big-endian uint32 width/height followed by RGB bytes",
+  "cycle_groups": 2,
+  "cycle_comparisons": [
+    {
+      "case": "editor/fidelity-bookmark-copy/editor.docx",
+      "expected_cycles": [
+        1,
+        2,
+        3
+      ],
+      "actual_cycles": [
+        1,
+        2,
+        3
+      ],
+      "files": [
+        "editor/fidelity-bookmark-copy/editor-1.docx",
+        "editor/fidelity-bookmark-copy/editor-2.docx",
+        "editor/fidelity-bookmark-copy/editor-3.docx"
+      ],
+      "baseline": null,
+      "baseline_candidate": null,
+      "baseline_page_order": null,
+      "passed": true
+    },
+    {
+      "case": "engine/fidelity-bookmark-copy/copied.docx",
+      "expected_cycles": [
+        1,
+        2,
+        3
+      ],
+      "actual_cycles": [
+        1,
+        2,
+        3
+      ],
+      "files": [
+        "engine/fidelity-bookmark-copy/copied-1.docx",
+        "engine/fidelity-bookmark-copy/copied-2.docx",
+        "engine/fidelity-bookmark-copy/copied-3.docx"
+      ],
+      "baseline": null,
+      "baseline_candidate": null,
+      "baseline_page_order": null,
+      "passed": true
+    }
+  ],
+  "baseline_comparisons": 0,
+  "page_order_comparisons": 0,
+  "render_only_files": [
+    "editor/fidelity-bookmark-copy/copied-expected.docx",
+    "engine/fidelity-bookmark-copy/copied-expected.docx",
+    "engine/fidelity-bookmark-copy/source.docx"
+  ],
+  "failures": [],
+  "reports": [
+    {
+      "file": "editor/fidelity-bookmark-copy/copied-expected.docx",
+      "pages": 1,
+      "text": "      \ud83d\ude00 \ud83d\ude00\nPrefix A BCTail\nHead End | A B | Jump\n\n      \ud83d\ude00 \ud83d\ude00\nReserved oneReserved two\nPrefix A BCTail\nHead End | A B | Jump\n\f",
+      "pixel_sha256": [
+        "5bb4e73a5b7b185d5c2b25e7e299ce5374917f07257d70c0cf213fbf547fe3d0"
+      ],
+      "pdf": "000/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "000/page-0001.png",
+          "pixel_sha256": "5bb4e73a5b7b185d5c2b25e7e299ce5374917f07257d70c0cf213fbf547fe3d0"
+        }
+      ]
+    },
+    {
+      "file": "editor/fidelity-bookmark-copy/editor-1.docx",
+      "pages": 1,
+      "text": "      \ud83d\ude00 \ud83d\ude00\nPrefix A BCTail\nHead End | A B | Jump\n\n      \ud83d\ude00 \ud83d\ude00\nReserved oneReserved two\nPrefix A BCTail\nHead End | A B | Jump\n\f",
+      "pixel_sha256": [
+        "5bb4e73a5b7b185d5c2b25e7e299ce5374917f07257d70c0cf213fbf547fe3d0"
+      ],
+      "pdf": "001/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "001/page-0001.png",
+          "pixel_sha256": "5bb4e73a5b7b185d5c2b25e7e299ce5374917f07257d70c0cf213fbf547fe3d0"
+        }
+      ]
+    },
+    {
+      "file": "editor/fidelity-bookmark-copy/editor-2.docx",
+      "pages": 1,
+      "text": "      \ud83d\ude00 \ud83d\ude00\nPrefix A BCTail\nHead End | A B | Jump\n\n      \ud83d\ude00 \ud83d\ude00\nReserved oneReserved two\nPrefix A BCTail\nHead End | A B | Jump\n\f",
+      "pixel_sha256": [
+        "5bb4e73a5b7b185d5c2b25e7e299ce5374917f07257d70c0cf213fbf547fe3d0"
+      ],
+      "pdf": "002/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "002/page-0001.png",
+          "pixel_sha256": "5bb4e73a5b7b185d5c2b25e7e299ce5374917f07257d70c0cf213fbf547fe3d0"
+        }
+      ]
+    },
+    {
+      "file": "editor/fidelity-bookmark-copy/editor-3.docx",
+      "pages": 1,
+      "text": "      \ud83d\ude00 \ud83d\ude00\nPrefix A BCTail\nHead End | A B | Jump\n\n      \ud83d\ude00 \ud83d\ude00\nReserved oneReserved two\nPrefix A BCTail\nHead End | A B | Jump\n\f",
+      "pixel_sha256": [
+        "5bb4e73a5b7b185d5c2b25e7e299ce5374917f07257d70c0cf213fbf547fe3d0"
+      ],
+      "pdf": "003/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "003/page-0001.png",
+          "pixel_sha256": "5bb4e73a5b7b185d5c2b25e7e299ce5374917f07257d70c0cf213fbf547fe3d0"
+        }
+      ]
+    },
+    {
+      "file": "engine/fidelity-bookmark-copy/copied-1.docx",
+      "pages": 1,
+      "text": "      \ud83d\ude00 \ud83d\ude00\nPrefix A BCTail\nHead End | A B | Jump\n\n      \ud83d\ude00 \ud83d\ude00\nReserved oneReserved two\nPrefix A BCTail\nHead End | A B | Jump\n\f",
+      "pixel_sha256": [
+        "5bb4e73a5b7b185d5c2b25e7e299ce5374917f07257d70c0cf213fbf547fe3d0"
+      ],
+      "pdf": "004/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "004/page-0001.png",
+          "pixel_sha256": "5bb4e73a5b7b185d5c2b25e7e299ce5374917f07257d70c0cf213fbf547fe3d0"
+        }
+      ]
+    },
+    {
+      "file": "engine/fidelity-bookmark-copy/copied-2.docx",
+      "pages": 1,
+      "text": "      \ud83d\ude00 \ud83d\ude00\nPrefix A BCTail\nHead End | A B | Jump\n\n      \ud83d\ude00 \ud83d\ude00\nReserved oneReserved two\nPrefix A BCTail\nHead End | A B | Jump\n\f",
+      "pixel_sha256": [
+        "5bb4e73a5b7b185d5c2b25e7e299ce5374917f07257d70c0cf213fbf547fe3d0"
+      ],
+      "pdf": "005/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "005/page-0001.png",
+          "pixel_sha256": "5bb4e73a5b7b185d5c2b25e7e299ce5374917f07257d70c0cf213fbf547fe3d0"
+        }
+      ]
+    },
+    {
+      "file": "engine/fidelity-bookmark-copy/copied-3.docx",
+      "pages": 1,
+      "text": "      \ud83d\ude00 \ud83d\ude00\nPrefix A BCTail\nHead End | A B | Jump\n\n      \ud83d\ude00 \ud83d\ude00\nReserved oneReserved two\nPrefix A BCTail\nHead End | A B | Jump\n\f",
+      "pixel_sha256": [
+        "5bb4e73a5b7b185d5c2b25e7e299ce5374917f07257d70c0cf213fbf547fe3d0"
+      ],
+      "pdf": "006/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "006/page-0001.png",
+          "pixel_sha256": "5bb4e73a5b7b185d5c2b25e7e299ce5374917f07257d70c0cf213fbf547fe3d0"
+        }
+      ]
+    },
+    {
+      "file": "engine/fidelity-bookmark-copy/copied-expected.docx",
+      "pages": 1,
+      "text": "      \ud83d\ude00 \ud83d\ude00\nPrefix A BCTail\nHead End | A B | Jump\n\n      \ud83d\ude00 \ud83d\ude00\nReserved oneReserved two\nPrefix A BCTail\nHead End | A B | Jump\n\f",
+      "pixel_sha256": [
+        "5bb4e73a5b7b185d5c2b25e7e299ce5374917f07257d70c0cf213fbf547fe3d0"
+      ],
+      "pdf": "007/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "007/page-0001.png",
+          "pixel_sha256": "5bb4e73a5b7b185d5c2b25e7e299ce5374917f07257d70c0cf213fbf547fe3d0"
+        }
+      ]
+    },
+    {
+      "file": "engine/fidelity-bookmark-copy/source.docx",
+      "pages": 1,
+      "text": "      \ud83d\ude00 \ud83d\ude00\nPrefix A BCTail\nHead End | A B | Jump\nReserved oneReserved two\n\f",
+      "pixel_sha256": [
+        "96874c166065f989e05bc0a608a298d195dc66fdbfc21544a49eea02c86c8466"
+      ],
+      "pdf": "008/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "008/page-0001.png",
+          "pixel_sha256": "96874c166065f989e05bc0a608a298d195dc66fdbfc21544a49eea02c86c8466"
+        }
+      ]
+    }
+  ]
+}

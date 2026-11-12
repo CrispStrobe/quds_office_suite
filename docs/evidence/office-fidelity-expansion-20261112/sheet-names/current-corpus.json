@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "producer_tests": 69,
+  "qualified_name_oracle_controls": 14,
+  "rename_oracle_controls": 19,
+  "qualified_name_outputs": [
+    "expected-recalculated.xlsx",
+    "expected-renamed.xlsx",
+    "recalculated-1.xlsx",
+    "recalculated-2.xlsx",
+    "recalculated-3.xlsx",
+    "renamed-1.xlsx",
+    "renamed-2.xlsx",
+    "renamed-3.xlsx",
+    "source.xlsx"
+  ],
+  "rename_outputs": [
+    "qualified-expected.xlsx",
+    "renamed-1.xlsx",
+    "renamed-2.xlsx",
+    "renamed-3.xlsx",
+    "source.xlsx"
+  ],
+  "independent_expected_fixtures": [
+    {
+      "path": "packages/quds_office_engine/test/fixtures/fidelity/sheet-qualified-names-recalculated-expected.xlsx",
+      "sha256": "ee946f7410d3aa2cdd26ec88005ebe9fdbb5d5fc2c497ca1e4f4575411f9da64"
+    },
+    {
+      "path": "packages/quds_office_engine/test/fixtures/fidelity/sheet-qualified-names-renamed-expected.xlsx",
+      "sha256": "e800d3126a5c031181d7fb0fd2b86ac43a4c6b47d34f6acaf4aa3cb90dfa10d0"
+    },
+    {
+      "path": "packages/quds_office_engine/test/fixtures/fidelity/sheet-rename-qualified-expected.xlsx",
+      "sha256": "b885842cbd380e906aa58c56e01152115ae4d77e62e018764d9bec9a568f6c3d"
+    }
+  ]
+}

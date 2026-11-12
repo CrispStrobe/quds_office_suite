@@ -39,6 +39,12 @@ void main() {
           );
       final source = package.save();
       writeOutput('build/fidelity-bookmark-copy/source.docx', source);
+      writeOutput(
+        'build/fidelity-bookmark-copy/copied-expected.docx',
+        File(
+          'test/fixtures/fidelity/bookmark_copy_expected.docx',
+        ).readAsBytesSync(),
+      );
       var document = WordDeserializer().readBytes(source);
       final before = _parts(document.package!);
       final original = document.sections.single.blocks.take(2).toList();

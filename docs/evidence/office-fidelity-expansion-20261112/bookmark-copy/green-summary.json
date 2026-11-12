@@ -1,0 +1,131 @@
+{
+  "status": "passed",
+  "scope": "Focused FID025 complete bookmark insertion-copy increment; not a new full-suite acceptance claim.",
+  "implementation_commit": "a8eee31af3cc5ad0f9520d4ac47568e98f26dac7",
+  "reference_commit": "f217475e1563043707e05b8da3d86da965170258",
+  "toolchain": "Flutter 3.44.0 / Dart 3.12.0",
+  "engine_analyzer": "passed",
+  "editor_lib_analyzer": "passed",
+  "engine_focused_tests": 73,
+  "editor_focused_tests": 40,
+  "reference_integration_recheck": {
+    "engine_copy_tests": 20,
+    "editor_copy_tests": 5,
+    "independent_python_controls": 16
+  },
+  "engine_inventory_files": 5,
+  "editor_inventory_files": 4,
+  "native": {
+    "status": "passed",
+    "source_commit": "f217475e1563043707e05b8da3d86da965170258",
+    "producer_files": 9,
+    "source_export_files": 7,
+    "independent_native_reference_files": 2,
+    "schema_files": 9,
+    "schema_failures": 0,
+    "rendered_files": 9,
+    "native_pages": 9,
+    "native_schema_only_files": 0,
+    "cycle_groups": 2,
+    "comparisons": [
+      {
+        "file": "editor/fidelity-bookmark-copy/copied-expected.docx",
+        "baseline": "engine/fidelity-bookmark-copy/copied-expected.docx",
+        "status": "exact_native_match"
+      },
+      {
+        "file": "editor/fidelity-bookmark-copy/editor-1.docx",
+        "baseline": "engine/fidelity-bookmark-copy/copied-expected.docx",
+        "status": "exact_native_match"
+      },
+      {
+        "file": "editor/fidelity-bookmark-copy/editor-2.docx",
+        "baseline": "engine/fidelity-bookmark-copy/copied-expected.docx",
+        "status": "exact_native_match"
+      },
+      {
+        "file": "editor/fidelity-bookmark-copy/editor-3.docx",
+        "baseline": "engine/fidelity-bookmark-copy/copied-expected.docx",
+        "status": "exact_native_match"
+      },
+      {
+        "file": "engine/fidelity-bookmark-copy/copied-1.docx",
+        "baseline": "engine/fidelity-bookmark-copy/copied-expected.docx",
+        "status": "exact_native_match"
+      },
+      {
+        "file": "engine/fidelity-bookmark-copy/copied-2.docx",
+        "baseline": "engine/fidelity-bookmark-copy/copied-expected.docx",
+        "status": "exact_native_match"
+      },
+      {
+        "file": "engine/fidelity-bookmark-copy/copied-3.docx",
+        "baseline": "engine/fidelity-bookmark-copy/copied-expected.docx",
+        "status": "exact_native_match"
+      }
+    ],
+    "renderer_source_sha256": "bf2edbf2f1fa89f2857c3b03f5e494420cfdf02b1a55405a6cccc328e8a522fd",
+    "validator_source_sha256": "4d41f286855ed11a12ecdf0641773c33285847180a3e5cdbf43ce2385a099880",
+    "validator_build_receipt_sha256": "17e857813747994eaf69a5e05cc242bea546471bc00965ff13634661b37e5367",
+    "renderer_provenance_sha256": "0ccd0f13183f25bc77e9f805dfa10db8e78056ea80a68da9bd3ef3db188ad891",
+    "producer_and_snapshot_hashes_unchanged": true
+  },
+  "source_sha256": {
+    "packages/quds_office_engine/lib/src/word/model/word_bookmarks.dart": "4f62a976fd8afbf15ae66721a693f515462a1e6d21f23cc821ad0884e8babac1",
+    "packages/quds_office_editor/lib/src/embed/office_controller.dart": "c061b277915be138dbca51422214835fd189bd71b749cfe56b2a5096380acc36",
+    "packages/quds_office_engine/test/word_bookmark_copy_test.dart": "98b2bae0dd946849c8adc2fa5631c2c325664530dc91d521b1a44048b0642f20",
+    "packages/quds_office_editor/test/word_bookmark_copy_test.dart": "e473d96ea7c4d8c15d314486648b7ce91a83cb986327be54ebd55c4fd220ce86",
+    "packages/quds_office_editor/test/word_bookmark_history_test.dart": "f2e1694df4d787d4177d89a27e0753b68bd79f909c47eb8c318a21966b28b639",
+    "packages/quds_office_engine/test/fixtures/fidelity/bookmark_copy.xml": "6353fd1493111a544b371711a40b028cb3e21eb811007b64a00a1047e5a5425a",
+    "packages/quds_office_engine/test/fixtures/fidelity/bookmark_copy_expected.json": "c8dd4dd38cbc6b3f0f698079aacdc3cf62efe19f54faade8410c4e6af46c2191",
+    "packages/quds_office_engine/test/fixtures/fidelity/bookmark_copy_expected.docx": "4813413bbe1ac7b1cd927d0b40b07752c0944dc272d849a4274c627ce4d969b3",
+    "packages/quds_office_engine/tool/fidelity/bookmark_copy_oracle.py": "3a013def719a0434f52102ae5a5c813b62fdccd68762efa7a2d07abd986c9ea8",
+    "packages/quds_office_engine/tool/fidelity/test_bookmark_copy_oracle.py": "b1c44c4beb622be5b0a76deb5f94020ab72f059f6c518bba38ad6e460cd4a181"
+  },
+  "logs": {
+    "editor-analyze.log": "1185ff88267be7b5ae1a2a08537c66c47a17d6fb1c704495948959ec282405fc",
+    "editor-first-green.log": "bdaf7e16dea670e7939883eda09c677f6c7679640e6692603def2645de7d7873",
+    "editor-focused.log": "a3be1892e322c83be5f81169db84c5b027e54a3abbf5ab6fdb4c328b55478c4f",
+    "editor-oracle.log": "5a026e54d9c62121730aff8ebdb5ca3799cee1e3f4e19612b843bd2fcaf2d79e",
+    "editor-red.log": "ea61098acc0825a15e727a3328a0fd9ee9e9ae1017b7e9d810006847de1e133a",
+    "editor-reference-oracle.log": "84297544081d00e04aaa225913f707ed8682fa5343c3de5747ea3993e433969f",
+    "editor-reference.log": "14a54adf5929963b06cb79b6f7c0194ecaa4416bb92316f188302684a07d3909",
+    "engine-analyze.log": "c557a0c697cdb937104f1423d3c02d6a1062917cb0bcb2830d91db8cf6192af0",
+    "engine-dart-final.log": "8e73804670d608987c1cc8337e32ba0e58872acddf29f839fe4e7892dd8dfeac",
+    "engine-dart-focused.log": "3370d7222a9ad5d4bdc1bf9964f50f70d5522e0161d8cd99cd8f89b27f6e45f1",
+    "engine-focused.log": "b4d3bd9eda414f7da08a738c7e315ab7ceecff357a8473f871cd1487061ecc73",
+    "engine-oracle-premature.log": "ba062fcc5e13b94ce0195203406cc30229051ae74fc959aa374e344acfc99ccb",
+    "engine-oracle.log": "00f8606de559cc5161e7ce4c2c6cc90ef7bcf0651f85c8e358252386e4d8be99",
+    "engine-reference-oracle.log": "1c0936b84137149dbdbf3133203f4f17b2003d7b084b71c77878e5a4c7daefa8",
+    "engine-reference.log": "2018e595d7b333ce13179f7932e34fd33c1d1368cbd02dc2e284b26c320e91ae",
+    "native/render.log": "177309bc413cf6933405f21dd73a84417be76667a828fd77dcab1a3be65b84db",
+    "native/schema.log": "d718c5e8465fee1886a766f1e4a553ab1aff40117dac843d0b9fa0f7863a60b1",
+    "native-reference/render.log": "5d956b29d4eec0a1bb010b3ff489c236996b6f3a15e839159380ae6fab22756d",
+    "native-reference/schema.log": "c3f0c73481fa59b8a47c4f84c17f910a0024cae85819184beaeb3a1c110341cf",
+    "native-reference-run.log": "a1789edc1ef0ef17688dae7e5566019d5d29aac1f4ac0719c24bcdffd5c8f1a8",
+    "native-run.log": "ffb279aa171d8aaf58bb829f5a053f9a2c41ecbe19b55551dc528b24d03c9649",
+    "oracle-controls.log": "659d37032b09962a45b39f539b0315984b51484069a4989913ebe431fc5710cb",
+    "reference-controls.log": "e2c1f7484b98e062a1be9b43b954d8e52ed5cf07534cf9e6908441379d83800f"
+  },
+  "logs_archive_sha256": "1da143f5a6a9b61eaf23a0d80db062191a8dc9bf4223869cba5997d0c8647b70",
+  "earlier_diagnostics_preserved": [
+    "The red checkpoint has three expected complete-copy failures and two already passing guards.",
+    "The initial engine command used flutter test instead of dart test; one existing CLI subprocess test timed out under the wrong executable.",
+    "Early engine copy tests initially omitted required opaque-block fixture constructor arguments; both diagnostic logs are preserved.",
+    "The first oracle invocation rejected absent engine outputs after that compilation failure. The final producer/oracle runs pass without skipping or weakening any control."
+  ],
+  "bounds": [
+    "Full editable native ranges and generated paragraph bookmarks are supported.",
+    "Identity-preserving WmlClone and history snapshots are unchanged.",
+    "Copied REF and hyperlink targets retain original names.",
+    "Partial native ranges and bookmark-bearing opaque XML or preserved native TOC caches are rejected before input or history mutation.",
+    "Mixed text/drawing endpoint ordering remains outside this increment; existing content-control identity guards remain in force."
+  ],
+  "reproduction": {
+    "engine": "dart test --reporter expanded test/word_bookmark_copy_test.dart test/word_bookmark_fidelity_test.dart test/bookmark_fidelity_test.dart test/note_marker_merge_test.dart test/word_toc_test.dart",
+    "editor": "flutter test --no-pub --reporter expanded test/word_bookmark_copy_test.dart test/word_bookmark_history_test.dart test/word_bookmark_fidelity_test.dart test/word_content_control_history_test.dart",
+    "engine_oracle": "python3 tool/fidelity/bookmark_copy_oracle.py",
+    "editor_oracle": "python3 ../quds_office_engine/tool/fidelity/bookmark_copy_oracle.py --editor --root build/fidelity-bookmark-copy",
+    "controls": "python3 -m unittest discover -s tool/fidelity -p test_bookmark_copy_oracle.py -v"
+  }
+}

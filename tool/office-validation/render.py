@@ -46,6 +46,16 @@ REQUIRED_SERIES_BASELINES = {
     # Physical story replacement has prescribed text and plain-paragraph
     # defaults. Its expected native package is authored independently of saves.
     ('fidelity-table-grid', 'omitted-edited.docx'): 'omitted-edited-expected.docx',
+    # These edits have independent authored appearance references. Repeated
+    # saves alone cannot establish that their first export was correct.
+    ('fidelity-bookmark-copy', 'copied.docx'): 'copied-expected.docx',
+    ('fidelity-bookmark-copy', 'editor.docx'): 'copied-expected.docx',
+    ('fidelity-sheet-qualified-names', 'recalculated.xlsx'): 'expected-recalculated.xlsx',
+    ('fidelity-sheet-qualified-names', 'renamed.xlsx'): 'expected-renamed.xlsx',
+    ('fidelity-sheet-rename', 'renamed.xlsx'): 'qualified-expected.xlsx',
+    # Flat grouping changes membership while retaining the source appearance.
+    ('fidelity-slide-arrange', 'direct.pptx'): 'source.pptx',
+    ('fidelity-slide-arrange', 'isolate.pptx'): 'source.pptx',
 }
 # This six-slide native fixture changes only slide order and section membership.
 # These are authored page orders, independent of the engine/XML oracle. Scope

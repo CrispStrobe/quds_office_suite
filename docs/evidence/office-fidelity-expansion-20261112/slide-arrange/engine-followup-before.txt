@@ -1,0 +1,45 @@
+00:00 +0: loading test/slide_arrange_fidelity_test.dart
+00:00 +0: left aligns modeled bounds and preserves dimensions
+00:00 +1: center aligns modeled bounds and preserves dimensions
+00:00 +2: right aligns modeled bounds and preserves dimensions
+00:00 +3: top aligns modeled bounds and preserves dimensions
+00:00 +4: middle aligns modeled bounds and preserves dimensions
+00:00 +5: bottom aligns modeled bounds and preserves dimensions
+00:00 +6: horizontal gap distribution fixes both endpoints
+00:00 +7: horizontal overlap distribution fixes both endpoints
+00:00 +8: vertical gap distribution fixes both endpoints
+00:00 +9: vertical overlap distribution fixes both endpoints
+00:00 +10: insufficient selections leave original transform objects untouched
+00:00 +11: direct flat group membership and unique native IDs survive three saves
+00:00 +12: isolate flat group membership and unique native IDs survive three saves
+00:00 +13: noncontiguous membership rejects before changing imported package parts
+00:01 +14: group allocation reserves the complete scope and ungroup preserves other groups
+00:01 +15: regrouping the middle of an existing group rejects atomically
+00:01 +16: ungrouping the middle of an existing group rejects atomically
+00:01 +17: foreign group members reject before mutation
+00:01 +18: duplicate group members reject before mutation
+00:01 +19: regrouping an entire existing group retains its identity
+00:01 +19 -1: regrouping an entire existing group retains its identity [E]
+  Expected: <7>
+    Actual: <8>
+  
+  package:matcher                              expect
+  test/slide_arrange_fidelity_test.dart 284:5  main.<fn>
+  
+00:01 +19 -1: native group IDs stay in unsigned range with a maximal existing shape ID
+00:01 +19 -2: native group IDs stay in unsigned range with a maximal existing shape ID [E]
+  Expected: every element(be in range from 1 (inclusive) to 4294967295 (inclusive))
+    Actual: [1, 4294967296, 2, 3, 4294967297, 4, 5, 4294967295]
+     Which: has value <4294967296> which doesn't match be in range from 1 (inclusive) to 4294967295 (inclusive) at index 1
+  
+  package:matcher                              expect
+  test/slide_arrange_fidelity_test.dart 298:5  main.<fn>
+  
+00:01 +19 -2: Some tests failed.
+
+Failing tests:
+  test/slide_arrange_fidelity_test.dart: native group IDs stay in unsigned range with a maximal existing shape ID
+  test/slide_arrange_fidelity_test.dart: regrouping an entire existing group retains its identity
+
+Consider enabling the flag chain-stack-traces to receive more detailed exceptions.
+For example, 'dart test --chain-stack-traces'.

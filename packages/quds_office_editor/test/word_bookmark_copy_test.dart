@@ -107,6 +107,13 @@ void main() {
     'complete native bookmark copy keeps ranges, history and three exports',
     () async {
       final editor = _source();
+      final expected = File(
+        'build/fidelity-bookmark-copy/copied-expected.docx',
+      );
+      expected.parent.createSync(recursive: true);
+      File(
+        '../quds_office_engine/test/fixtures/fidelity/bookmark_copy_expected.docx',
+      ).copySync(expected.path);
       final originals = editor.document.paragraphs.toList();
       await _copy(editor);
       final payload = OfficeClipboard.instance.local!;

@@ -33,8 +33,21 @@ class BookmarkCopyOracleControls(unittest.TestCase):
         for copied in (False, True):
             oracle.verify_xml(ET.tostring(oracle.authored_root(copied)), copied=copied)
 
-    def test_all_four_engine_packages_are_verified(self):
-        self.assertEqual(oracle.verify(oracle.ROOT / 'build/fidelity-bookmark-copy')['files_verified'], 4)
+    def test_all_five_engine_packages_are_verified(self):
+        self.assertEqual(oracle.verify(oracle.ROOT / 'build/fidelity-bookmark-copy')['files_verified'], 5)
+
+    def test_tracked_native_reference_matches_authored_xml_intent(self):
+        from zipfile import ZipFile
+        with ZipFile(oracle.FIXTURES / 'bookmark_copy_expected.docx') as package:
+            oracle.verify_xml(package.read('word/document.xml'), copied=True)
+
+    def test_missing_independent_reference_is_rejected(self):
+        with tempfile.TemporaryDirectory(dir=oracle.ROOT / 'build') as temp:
+            for path in (oracle.ROOT / 'build/fidelity-bookmark-copy').glob('*.docx'):
+                if path.name != 'copied-expected.docx':
+                    shutil.copyfile(path, Path(temp) / path.name)
+            with self.assertRaises(AssertionError):
+                oracle.verify(Path(temp))
 
     def test_duplicate_source_identity_is_rejected(self):
         def change(root):

@@ -1,0 +1,106 @@
+{
+  "implementation_commit": "ecdbab2",
+  "validator": {
+    "source": "/workspace/scratch/07eb2580faa9/quds_office_suite/tool/office-validation/Program.cs",
+    "source_sha256": "4d41f286855ed11a12ecdf0641773c33285847180a3e5cdbf43ce2385a099880",
+    "sdk": "8.0.428",
+    "runtime": "8.0.34",
+    "dependencies_sha256": {
+      "documentformat.openxml.3.3.0.nupkg": "53a74167552d886f0e312540db12c86a6133a83bd698795f3be6e25fc091b9e7",
+      "DocumentFormat.OpenXml.dll": "72e8f6e3e3527d7e6ee29f2f9182ef1b39a4de6da355a33013c0940efb24d87e",
+      "documentformat.openxml.framework.3.3.0.nupkg": "5f539f1602b642198ec6ed3ec567eac3fff62309f6ec65e28db2751a488ec30d",
+      "DocumentFormat.OpenXml.Framework.dll": "5b8c2b9ca1aa70539af0b8054d649bd09fdce4dec812b263ab511b13789c8589",
+      "system.io.packaging.8.0.1.nupkg": "c5fd0101fa90bc84e89a906cbdfa7188bb6cffab11404cdd8cd0377ffabfbd8e",
+      "System.IO.Packaging.dll": "12ddc8bff279fad856551a74894dc52b80fa437d5d2b32722e70ae6899217b7c"
+    },
+    "assembly_sha256": "77b80ecfa6082d482f18c7646582645ae94d0ee70e724de5e2e3bb5bbbb9ef38"
+  },
+  "renderer": {
+    "format_version": 1,
+    "renderer": {
+      "product": "LibreOffice",
+      "version": "24.2.7.2",
+      "build_id": "ee3885777aa7032db5a9b65deec9457448a91162",
+      "platform": "Linux x86_64 official Debian binary distribution",
+      "invocation": "LibreOfficeKit embedding API; not the standalone soffice conversion CLI",
+      "archive": {
+        "path": "/workspace/scratch/07eb2580faa9/runtime/libreoffice-242/LibreOffice_24.2.7.2_Linux_x86-64_deb.tar.gz",
+        "bytes": 213396806,
+        "sha256": "be967ebc63cb15b831b4e8176492e83eb625dc00852eb96eda2b299b6e74bb74",
+        "official_url": "https://downloadarchive.documentfoundation.org/libreoffice/old/24.2.7.2/deb/x86_64/LibreOffice_24.2.7.2_Linux_x86-64_deb.tar.gz",
+        "expected_sha256_from_official_mirrorlist": "be967ebc63cb15b831b4e8176492e83eb625dc00852eb96eda2b299b6e74bb74"
+      },
+      "headers": [
+        {
+          "path": "/workspace/scratch/07eb2580faa9/runtime/libreoffice-242/include/LibreOfficeKit/LibreOfficeKit.h",
+          "bytes": 20545,
+          "sha256": "af1f5c90f39a885bd0f2ba50bb5c68f40cf2fac88cfcc6b6a76a4522fab0b676",
+          "source_url": "https://raw.githubusercontent.com/LibreOffice/core/libreoffice-24.2.7.2/include/LibreOfficeKit/LibreOfficeKit.h"
+        },
+        {
+          "path": "/workspace/scratch/07eb2580faa9/runtime/libreoffice-242/include/LibreOfficeKit/LibreOfficeKitInit.h",
+          "bytes": 10287,
+          "sha256": "16feb15e51651387d223f3e156bc876d5d9826078651cfb12e4f035dcc0d2dc0",
+          "source_url": "https://raw.githubusercontent.com/LibreOffice/core/libreoffice-24.2.7.2/include/LibreOfficeKit/LibreOfficeKitInit.h"
+        },
+        {
+          "path": "/workspace/scratch/07eb2580faa9/runtime/libreoffice-242/include/LibreOfficeKit/LibreOfficeKitTypes.h",
+          "bytes": 983,
+          "sha256": "64eee50e2e74d2d33368e1a7b50683fe2e5fec9f3fd4952ebea24195f3dffa43",
+          "source_url": "https://raw.githubusercontent.com/LibreOffice/core/libreoffice-24.2.7.2/include/LibreOfficeKit/LibreOfficeKitTypes.h"
+        }
+      ]
+    },
+    "adapter": {
+      "artifacts": [
+        {
+          "path": "/workspace/scratch/07eb2580faa9/runtime/libreoffice-242/lok_convert.c",
+          "bytes": 2652,
+          "sha256": "1f23398b945320057ca8695a6f9a9fe3db87e232998800691dacd571d87fc496"
+        },
+        {
+          "path": "/workspace/scratch/07eb2580faa9/runtime/libreoffice-242/lok_convert",
+          "bytes": 17144,
+          "sha256": "b69aa183cd4d2852ed011b280e667cf54c2fb6cd63e8295783732259f9b84c89"
+        },
+        {
+          "path": "/workspace/scratch/07eb2580faa9/runtime/lok242-bin/libreoffice",
+          "bytes": 1960,
+          "sha256": "4087cfbf62a50717804ce883618227756dfe3d41d5cf7ab9f11f0e849c2653df"
+        },
+        {
+          "path": "/workspace/scratch/07eb2580faa9/runtime/libreoffice-242/root/opt/libreoffice24.2/program/libmergedlo.so",
+          "bytes": 78181760,
+          "sha256": "b482c62fa4a1f064ca4a07422c7164827d6c1a3b5c9a0850a21609f5ec9ac540"
+        }
+      ],
+      "build_command": "cc -std=gnu11 -Wall -Wextra -I runtime/libreoffice-242/include runtime/libreoffice-242/lok_convert.c -o runtime/libreoffice-242/lok_convert -ldl",
+      "compiler": "cc (Debian 14.2.0-19) 14.2.0",
+      "load_api": "documentLoadWithOptions(office, input, \"Batch=true\")",
+      "load_option_provenance": {
+        "url": "https://raw.githubusercontent.com/LibreOffice/core/libreoffice-24.2.7.2/desktop/source/lib/init.cxx",
+        "sha256": "df90a4177ce8882eba9f205c3654b7e4b26c9bd77a791406bee27a83ee9d77b2",
+        "reason": "The official Batch option sets DialogCancelMode::LOKSilent and the loader Silent property; this prevents unanswered import dialogs."
+      },
+      "export_api": "saveAs(document, output, \"pdf\", NULL)",
+      "success_rule": "Native synchronous saveAs succeeds and native document destructor returns; then flush streams and end the isolated worker process.",
+      "process_global_lifetime": "Office global teardown is owned by isolated process termination. Explicit global Office destruction crashed after successful Writer export in this host. Document destruction remains checked before success.",
+      "refusal_compatibility_rule": "Only a synchronous null native document with the exact native error loadComponentFromURL returned an empty reference maps to CLI exit 1 and Error: source file could not be loaded. The native error is also preserved verbatim.",
+      "other_statuses": {
+        "64": "Invalid helper arguments",
+        "65": "Other native import failure",
+        "70": "LibreOfficeKit initialization failure",
+        "74": "Native PDF export failure"
+      },
+      "signal_and_timeout_behavior": "Python adapter uses os.execv, leaving native signals and outer subprocess timeouts intact; they cannot enter the import-refusal compatibility rule."
+    },
+    "supporting_tools": {
+      "python": "Python 3.12.14",
+      "poppler": "pdftoppm version 26.05.0",
+      "tmpdir": "/workspace/scratch/07eb2580faa9/runtime/tmp-external"
+    },
+    "verified_source_commit": "7641d9cfa167987216134ebfc4772918cc945d97"
+  },
+  "renderer_source_sha256": "787d79602869da46442e40656d8d2cb95141a72d26433582fe58033bb7bea5a0",
+  "scope": "All schema and native checks bind the original and copied input bytes before and after rendering. Expected fixtures were promoted unchanged into engine/test/fixtures after rendering."
+}

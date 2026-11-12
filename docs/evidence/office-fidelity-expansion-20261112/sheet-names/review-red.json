@@ -1,0 +1,13 @@
+{
+  "status": "expected-regression-failures",
+  "implementation_base": "f0eb0cc",
+  "command": "dart test test/sheet_qualified_name_error_test.dart --reporter expanded",
+  "passed": 1,
+  "failed": 74,
+  "defects": [
+    "Future-prefixed LET has different graph scope than evaluation, causing false cycles.",
+    "Ordinary numeric consumers coerce genuine named errors to null/zero or another error.",
+    "IF evaluates unselected branches; IFERROR/IFNA evaluate unused fallback branches; an actual error predicate can become a false Boolean."
+  ],
+  "review_reproducer": "validation/formula-review/probe.dart (independent review by remote_ci_audit)"
+}

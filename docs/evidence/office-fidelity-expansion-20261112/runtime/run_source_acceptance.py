@@ -82,6 +82,7 @@ def plan(repo):
             ('corpus-oracle', ['python3', '../quds_office_engine/tool/fidelity/corpus.py', 'verify', 'build/fidelity']),
             ('bookmark-oracle', ['python3', '../quds_office_engine/tool/fidelity/bookmarks_oracle.py', '--editor-dir', 'build/fidelity-bookmarks-legacy']),
             ('control-oracle', ['python3', '../quds_office_engine/tool/fidelity/content_controls_oracle.py', '--editor-dir', 'build/fidelity-content-controls-legacy']),
+            ('bookmark-copy-oracle', ['python3', '../quds_office_engine/tool/fidelity/bookmark_copy_oracle.py', '--editor', '--root', 'build/fidelity-bookmark-copy']),
             ('inventory-verify', editor_inventory + ['verify'] + editor_options),
         ],
     }

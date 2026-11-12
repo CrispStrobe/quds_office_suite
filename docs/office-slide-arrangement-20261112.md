@@ -31,7 +31,9 @@ systems, preserve native group names/IDs, or implicitly change drawing order.
 Alignment, distribution, grouping and ungrouping now use one undo command each
 when they change state. Commands retain their original shape identities when
 the active slide changes. Insufficient selections, unchanged arranged geometry
-and ungrouping already ungrouped shapes do not consume history or discard redo.
+ungrouping already ungrouped shapes and regrouping an entire existing group do
+not consume history or discard redo. Native group IDs use available unsigned
+identities even when an existing shape occupies the maximum unsigned ID.
 Viewing and selecting modes remain read-only.
 
 ## Focused evidence
@@ -44,11 +46,15 @@ one-step history, dirty state, content revisions, slide switching, no-op behavio
 read-only modes and rejection without selection changes.
 
 The first runs against the original implementation reproduced seven engine
-and twelve editor failures. After the fixes, the focused cohorts pass 88 engine
-tests and 115 editor tests, including existing slide import, section reorder,
+and twelve editor failures. Two later engine assertions and one editor
+assertion also reproduced maximal-ID overflow and unnecessary regroup history.
+After the fixes, the focused cohorts pass 95 engine tests and 122 editor tests,
+including existing slide import, section reorder,
 feature and embedding regressions. Targeted analysis of the six changed Dart
 code/test files reports no issues. Original failure logs and the focused command
-outputs were retained for the final branch evidence review.
+outputs are retained in
+`docs/evidence/office-fidelity-expansion-20261112/slide-arrange`, together with
+the final source hashes, input manifest and independent schema/native receipts.
 
 The ungrouped reference `test/fixtures/fidelity/slide-arrange.pptx` is authored
 independently with python-pptx 1.0.2 by the explicit maintenance script

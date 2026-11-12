@@ -1,0 +1,117 @@
+00:00 +0: loading /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_arrange_history_test.dart
+00:00 +0: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_arrange_history_test.dart: independent groups never share a slide group identity
+00:00 +1: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_arrange_history_test.dart: left alignment is one owning-slide undo command
+00:00 +2: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_arrange_history_test.dart: center alignment is one owning-slide undo command
+00:00 +3: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_arrange_history_test.dart: right alignment is one owning-slide undo command
+00:00 +4: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_arrange_history_test.dart: top alignment is one owning-slide undo command
+00:00 +5: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_arrange_history_test.dart: middle alignment is one owning-slide undo command
+00:00 +6: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_arrange_history_test.dart: bottom alignment is one owning-slide undo command
+00:00 +7: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_arrange_history_test.dart: horizontal distribution preserves endpoints and history
+00:00 +8: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_arrange_history_test.dart: vertical distribution preserves endpoints and history
+00:00 +9: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_arrange_history_test.dart: group and ungroup restore earlier membership through undo and redo
+00:00 +10: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_arrange_history_test.dart: no-op arrangements retain clean state and redo history
+00:00 +11: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_arrange_history_test.dart: already arranged geometry does not consume another history step
+00:00 +12: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_arrange_history_test.dart: OfficeInteractionMode.viewing blocks arrangement and group changes
+00:00 +13: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_arrange_history_test.dart: OfficeInteractionMode.selecting blocks arrangement and group changes
+00:00 +14: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_arrange_history_test.dart: noncontiguous groups reject without changing state or selection
+00:00 +15: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_section_reorder_test.dart: forward moved active keeps memberships and exact undo/redo state
+00:00 +16: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: word controller inserts, undoes, and respects viewing mode
+00:00 +17: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: word controller inserts, undoes, and respects viewing mode
+00:00 +18: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_section_reorder_test.dart: backward moved active keeps memberships and exact undo/redo state
+00:00 +19: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_section_reorder_test.dart: backward moved active keeps memberships and exact undo/redo state
+00:00 +20: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_section_reorder_test.dart: backward moved active keeps memberships and exact undo/redo state
+00:00 +21: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_section_reorder_test.dart: backward moved active keeps memberships and exact undo/redo state
+00:00 +22: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_section_reorder_test.dart: backward moved active keeps memberships and exact undo/redo state
+00:00 +23: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: word ruler indent preview commits as one undo
+00:00 +24: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_section_reorder_test.dart: backward unaffected active keeps memberships and exact undo/redo state
+00:00 +25: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_section_reorder_test.dart: backward unaffected active keeps memberships and exact undo/redo state
+00:00 +26: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: word editor tab key inserts a tab
+00:00 +27: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: word editor tab key inserts a tab
+00:00 +28: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: word editor tab key inserts a tab
+00:00 +29: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: word editor tab key inserts a tab
+00:01 +30: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_section_reorder_test.dart: controller isolate save retains the redone move through three reopen cycles
+00:01 +31: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: word editor backspace key deletes a character
+00:01 +32: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_section_reorder_test.dart: ambiguous native membership fails before any editor state changes
+00:01 +33: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_section_reorder_test.dart: ambiguous native membership fails before any editor state changes
+00:01 +34: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: word editor ctrl+z undoes and ctrl+y redoes
+00:01 +35: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_section_reorder_test.dart: no-op and invalid indexes leave sections and history unchanged
+00:01 +36: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: word editor shift arrows grow and shrink the selection
+00:01 +37: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_section_reorder_test.dart: OfficeInteractionMode.viewing does not mutate section order or create history
+00:01 +38: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: word editor ctrl+a selects the whole document
+00:01 +39: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_section_reorder_test.dart: OfficeInteractionMode.selecting does not mutate section order or create history
+00:01 +40: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_section_reorder_test.dart: OfficeInteractionMode.selecting does not mutate section order or create history
+00:01 +41: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: sheet navigation follows Excel limits and keeps the cell in view
+00:01 +42: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: grid display uses the cell number format
+00:01 +43: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: selection fill covers every selected cell and undoes
+00:01 +44: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: merge and center joins the selection and can undo
+00:01 +45: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: freeze panes follow the Excel selection rules
+00:01 +46: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: sheet arrow keys move between cells
+00:01 +47: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: rtl sheet inverts horizontal arrow keys
+00:01 +48: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: sheet Ctrl+arrow jumps by same occupancy
+00:01 +49: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: sheet Ctrl+arrow keys follow same occupancy
+00:01 +50: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: sheet controller ctrl+a selects the used range
+00:01 +51: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: slide controller selectAll selects text while editing
+00:01 +52: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: reorderSlide moves a deck card and keeps the active index
+00:01 +53: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: slide text edit selects a word, paragraph, and drag range
+00:01 +54: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: word controller formats only the selected range
+00:01 +55: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: word controller applies font face and size at the caret run
+00:01 +56: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: word controller extends selection across table cells
+00:01 +57: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: word caret lands on a chart between paragraphs and can delete it
+00:01 +58: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: word range selection includes a chart between paragraphs
+00:01 +59: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: word arrows move the caret along a line
+00:01 +60: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: shift arrows grow and shrink the character selection
+00:01 +61: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: shift arrows grow and shrink an RTL selection
+00:01 +62: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: sheet controller selects a drawing and can delete it
+00:01 +63: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: linked sheet chart follows evaluated cells including zero
+00:01 +64: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: sheet chart drag on the canvas moves the drawing
+00:01 +65: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: sheet controller clears the selected cell
+00:01 +66: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: sheet controller edits a cell and can save bytes
+00:01 +67: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: sheet cell display evaluates formulas and edits in place
+00:01 +68: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: sheet commit evaluates formula and recalculates dependents
+00:01 +69: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: sheet edit backspace deletes and function suggestions apply
+00:01 +70: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: sheet edit click points at another cell instead of committing
+00:01 +71: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: tapping another cell inserts a formula reference
+00:01 +72: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: slide controller edits shape text in place
+00:01 +73: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: word clipboard pastes source formatting or plain text
+00:01 +74: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: word cut paste restores heading style and table structure
+00:01 +75: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: word merge and split consecutive table cells
+00:01 +76: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: word page margins and orientation update layout
+00:01 +77: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: landscape applies to the whole continuous section group
+00:01 +78: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: selectTable covers every cell paragraph
+00:01 +79: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: selectTableBand selects a column or row without the whole table
+00:01 +80: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: backspace deletes a selected table column or row
+00:01 +81: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: insertSectionBreak and header edit target the active section
+00:01 +82: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: header edit on a zero-margin then landscape section stays usable
+00:01 +83: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: word delete removes a selected table instead of emptying it
+00:01 +84: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: word delete of a spanning selection removes the table
+00:01 +85: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: sheet clipboard copies a range and pastes values
+00:01 +86: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: slide clipboard duplicates a selected shape
+00:01 +87: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: slide text edit keeps the shape rotation
+00:01 +88: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: slide controller nudges a shape via undoable transform
+00:01 +89: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: slide ctrl-select nudges together and groups as one unit
+00:01 +90: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: slide controller edits a picture visual
+00:01 +91: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: slide controller applies transitions, animations, and slideshow clicks
+00:02 +92: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: theme copyWith and Arabic strings stay typed
+00:02 +93: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: QudsOfficeHost embeds a word editor with custom chrome
+00:02 +94: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: QudsSheetEditor and QudsSlideEditor mount
+00:02 +95: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: choosing a transition or animation starts a quick preview
+00:02 +96: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: Morph preview uses the previous slide as the outgoing pair
+00:02 +97: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: F5 starts and ends a slide show
+00:02 +98: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: slide controller loads builder deck notes and word builder bytes
+00:02 +99: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: word controller inserts and deletes table rows and columns
+00:02 +100: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: word tab walks table cells across then down
+00:02 +101: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: sheet controller inserts rows and columns with undo
+00:02 +102: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: office context menu dismiss is safe to call twice
+00:02 +103: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: office context menu builds table actions
+00:02 +104: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: slide sorter hide and show actions toggle hidden with undo
+00:02 +105: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: slide sorter copy pastes a clone after any thumbnail
+00:02 +106: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: controllers expose find replace stats print and styles
+00:02 +107: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: studio ribbon APIs mutate word sheet and slides
+00:02 +108: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: word notes pane APIs jump and header flags
+00:02 +109: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: sheet extras and slide media
+00:02 +110: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: merged cells select as one named origin
+00:02 +111: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: find next wraps and revealFindHit moves the word caret
+00:02 +112: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: Ctrl+F requests find from the word surface
+00:02 +113: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: word lines laid out with paint metrics fit the column
+00:02 +114: /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/embed_test.dart: slide editor places the navigation and notes builders
+00:02 +115: All tests passed!

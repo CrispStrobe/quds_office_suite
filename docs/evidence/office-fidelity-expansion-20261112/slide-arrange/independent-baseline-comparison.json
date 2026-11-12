@@ -1,0 +1,33 @@
+{
+  "source": "fidelity-slide-arrange/source.pptx",
+  "input_manifest_sha256": "b869d08cdd31ce3157ea75e0987d35fffd9adbc1ca8aedcbf229789fb8c66bc0",
+  "source_fixture_sha256": "6d86b24c22bdaac9d2e57167f7f506626029b4060eb793f523bfe86bfe266b50",
+  "source_pages": 1,
+  "comparisons": [
+    {
+      "file": "fidelity-slide-arrange/direct-1.pptx",
+      "passed": true
+    },
+    {
+      "file": "fidelity-slide-arrange/direct-2.pptx",
+      "passed": true
+    },
+    {
+      "file": "fidelity-slide-arrange/direct-3.pptx",
+      "passed": true
+    },
+    {
+      "file": "fidelity-slide-arrange/isolate-1.pptx",
+      "passed": true
+    },
+    {
+      "file": "fidelity-slide-arrange/isolate-2.pptx",
+      "passed": true
+    },
+    {
+      "file": "fidelity-slide-arrange/isolate-3.pptx",
+      "passed": true
+    }
+  ],
+  "all_input_hashes_unchanged": true
+}

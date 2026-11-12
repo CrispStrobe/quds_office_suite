@@ -260,6 +260,11 @@ void main() {
       final output = Directory('build/fidelity-sheet-qualified-names')
         ..createSync(recursive: true);
       File('${output.path}/source.xlsx').writeAsBytesSync(source);
+      for (final phase in ['recalculated', 'renamed']) {
+        File(
+          'test/fixtures/fidelity/sheet-qualified-names-$phase-expected.xlsx',
+        ).copySync('${output.path}/expected-$phase.xlsx');
+      }
       var book = SheetDeserializer().readBytes(source);
       var expectedDefinitions = _definitions(OpcPackage.openBytes(source));
       const expected = <int, (String?, String)>{

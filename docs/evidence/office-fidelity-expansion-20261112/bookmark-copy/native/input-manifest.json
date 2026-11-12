@@ -1,0 +1,50 @@
+{
+  "count": 9,
+  "files": [
+    {
+      "source": "/workspace/scratch/07eb2580faa9/quds-word-expansion/packages/quds_office_engine/build/fidelity-bookmark-copy/source.docx",
+      "file": "/workspace/scratch/07eb2580faa9/validation/bookmark-expansion/native-reference/input/engine/fidelity-bookmark-copy/source.docx",
+      "sha256": "7634d9c2fc37a187b134e618a806f787fb8277ae6fd082f937e085662a3fe6ca"
+    },
+    {
+      "source": "/workspace/scratch/07eb2580faa9/quds-word-expansion/packages/quds_office_engine/build/fidelity-bookmark-copy/copied-expected.docx",
+      "file": "/workspace/scratch/07eb2580faa9/validation/bookmark-expansion/native-reference/input/engine/fidelity-bookmark-copy/copied-expected.docx",
+      "sha256": "4813413bbe1ac7b1cd927d0b40b07752c0944dc272d849a4274c627ce4d969b3"
+    },
+    {
+      "source": "/workspace/scratch/07eb2580faa9/quds-word-expansion/packages/quds_office_engine/build/fidelity-bookmark-copy/copied-1.docx",
+      "file": "/workspace/scratch/07eb2580faa9/validation/bookmark-expansion/native-reference/input/engine/fidelity-bookmark-copy/copied-1.docx",
+      "sha256": "85eff9cae0fab6be061ec0d32005c2d6e397ff563cdc9df141252f542f232d17"
+    },
+    {
+      "source": "/workspace/scratch/07eb2580faa9/quds-word-expansion/packages/quds_office_engine/build/fidelity-bookmark-copy/copied-2.docx",
+      "file": "/workspace/scratch/07eb2580faa9/validation/bookmark-expansion/native-reference/input/engine/fidelity-bookmark-copy/copied-2.docx",
+      "sha256": "073838b3fbed644da1004e3709ca23160420a2a585b11826980ea0e04dbf0bcf"
+    },
+    {
+      "source": "/workspace/scratch/07eb2580faa9/quds-word-expansion/packages/quds_office_engine/build/fidelity-bookmark-copy/copied-3.docx",
+      "file": "/workspace/scratch/07eb2580faa9/validation/bookmark-expansion/native-reference/input/engine/fidelity-bookmark-copy/copied-3.docx",
+      "sha256": "3c27b1ac45dda41fd47e61bed6c7ad6fc0def035ec470bf9a04cf9365d17473f"
+    },
+    {
+      "source": "/workspace/scratch/07eb2580faa9/quds-word-expansion/packages/quds_office_editor/build/fidelity-bookmark-copy/copied-expected.docx",
+      "file": "/workspace/scratch/07eb2580faa9/validation/bookmark-expansion/native-reference/input/editor/fidelity-bookmark-copy/copied-expected.docx",
+      "sha256": "4813413bbe1ac7b1cd927d0b40b07752c0944dc272d849a4274c627ce4d969b3"
+    },
+    {
+      "source": "/workspace/scratch/07eb2580faa9/quds-word-expansion/packages/quds_office_editor/build/fidelity-bookmark-copy/editor-1.docx",
+      "file": "/workspace/scratch/07eb2580faa9/validation/bookmark-expansion/native-reference/input/editor/fidelity-bookmark-copy/editor-1.docx",
+      "sha256": "4c4d365e43e238b508c2318cedb423cfbfb9684f619742f458391e50941f4bfa"
+    },
+    {
+      "source": "/workspace/scratch/07eb2580faa9/quds-word-expansion/packages/quds_office_editor/build/fidelity-bookmark-copy/editor-2.docx",
+      "file": "/workspace/scratch/07eb2580faa9/validation/bookmark-expansion/native-reference/input/editor/fidelity-bookmark-copy/editor-2.docx",
+      "sha256": "1160237c6a1d0e1e0a89da891d4fb727228f0010b08d40e2cb4dbcef1742620a"
+    },
+    {
+      "source": "/workspace/scratch/07eb2580faa9/quds-word-expansion/packages/quds_office_editor/build/fidelity-bookmark-copy/editor-3.docx",
+      "file": "/workspace/scratch/07eb2580faa9/validation/bookmark-expansion/native-reference/input/editor/fidelity-bookmark-copy/editor-3.docx",
+      "sha256": "482a6013d475b14071cf87670b92fff3f9e2c8859f2fe9c94b2f712d48a5fe7b"
+    }
+  ]
+}

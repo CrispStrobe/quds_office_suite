@@ -41,6 +41,7 @@ jobs:
         run: |
           dart analyze
           python3 tool/fidelity/collect_coverage.py --dart "$FLUTTER_ROOT/bin/cache/dart-sdk/bin/dart" coverage/vm
+          python3 tool/fidelity/feature_matrix.py run footnotes endnotes headings styles paragraphs images tables tocs textflow placement drawings references comments spreadsheets slides
           bash tool/fidelity/check.sh
           python3 tool/fidelity/coverage_report.py coverage/vm --require-receipt
       - name: Editor suite and reviewed visual goldens
@@ -52,6 +53,7 @@ jobs:
           python3 ../quds_office_engine/tool/fidelity/corpus.py verify build/fidelity
           python3 ../quds_office_engine/tool/fidelity/bookmarks_oracle.py --editor-dir build/fidelity-bookmarks-legacy
           python3 ../quds_office_engine/tool/fidelity/content_controls_oracle.py --editor-dir build/fidelity-content-controls-legacy
+          python3 ../quds_office_engine/tool/fidelity/bookmark_copy_oracle.py --editor --root build/fidelity-bookmark-copy
           python3 ../quds_office_engine/tool/fidelity/inventory.py verify --package quds_office_editor --manifest ../quds_office_engine/tool/fidelity/editor_output_manifest.json --package-root .
       - name: Collect exported Office packages
         run: |
