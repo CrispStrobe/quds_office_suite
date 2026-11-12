@@ -1,0 +1,45 @@
+{
+  "name": "engine-tests",
+  "command": [
+    "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+    "test",
+    "--reporter",
+    "expanded"
+  ],
+  "directory": "packages/quds_office_engine",
+  "exitCode": 1,
+  "durationSeconds": 119.904,
+  "environment": {
+    "CI": "true",
+    "TMPDIR": "/workspace/scratch/143959eed1a1/tmp",
+    "PUB_CACHE": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/pub-cache"
+  },
+  "classification": "environment-capacity-failure",
+  "failureCount": 5,
+  "failures": [
+    {
+      "test": "00:30 +1118 -1: test/scripted_workflows_test.dart: failed later edit leaves input and existing output untouched [E]",
+      "error": "FileSystemException: Creation of temporary directory failed, path = '/workspace/scratch/143959eed1a1/tmp/office-script-' (OS Error: No space left on device, errno = 28)"
+    },
+    {
+      "test": "00:30 +1119 -2: test/scripted_workflows_test.dart: output extension mismatch fails without creating output [E]",
+      "error": "FileSystemException: Creation of temporary directory failed, path = '/workspace/scratch/143959eed1a1/tmp/office-format-' (OS Error: No space left on device, errno = 28)"
+    },
+    {
+      "test": "00:30 +1119 -3: test/scripted_workflows_test.dart: script JSON must be an array of objects [E]",
+      "error": "FileSystemException: Creation of temporary directory failed, path = '/workspace/scratch/143959eed1a1/tmp/office-json-' (OS Error: No space left on device, errno = 28)"
+    },
+    {
+      "test": "00:35 +1291 ~1 -4: test/scripted_transitions_test.dart: empty range reports its indexed CLI step and leaves output untouched [E]",
+      "error": "FileSystemException: Creation of temporary directory failed, path = '/workspace/scratch/143959eed1a1/tmp/office-range-' (OS Error: No space left on device, errno = 28)"
+    },
+    {
+      "test": "00:37 +1402 ~1 -5: test/content_control_fidelity_test.dart: CLI rejects an inline control split before replacing an existing output [E]",
+      "error": "FileSystemException: Creation of temporary directory failed, path = '/workspace/scratch/143959eed1a1/tmp/quds-sdt-reject-' (OS Error: No space left on device, errno = 28)"
+    }
+  ],
+  "log": "engine-tests-enospc.log.gz",
+  "logSha256": "336f01b0d0383295599d2e14ff8d21c9fcd0ecc0c31c17127e926ac56f5eaee9",
+  "uncompressedLogSha256": "96563690f9027976d7ed24bcec13a25f9717558e77ffaedcdf77491857ea906a",
+  "sourceUnchangedBeforeRetry": true
+}

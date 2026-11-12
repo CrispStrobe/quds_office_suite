@@ -1,0 +1,152 @@
+{
+  "analysis": {
+    "engineIssues": 0,
+    "parser": {
+      "error": 0,
+      "info": 315,
+      "warning": 0
+    }
+  },
+  "ciWorkflowSha256": "c07b6d5337e9da3b212c86a53c9e7aa2cf42507ba2ac853f0e2b418559fdc5db",
+  "commands": [
+    {
+      "command": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "test",
+        "--reporter",
+        "expanded"
+      ],
+      "directory": "packages/legacy_doc_parser",
+      "durationSeconds": 16.93,
+      "environment": {
+        "CI": "true",
+        "PUB_CACHE": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/pub-cache",
+        "TMPDIR": "/workspace/scratch/143959eed1a1/tmp"
+      },
+      "exitCode": 0,
+      "log": {
+        "file": "parser-tests.log.gz",
+        "sha256": "015a1c04d6e7274653fecd3e597625ce304b8138500932697f76465bf44aa56f",
+        "uncompressedSha256": "0fbc9a91b9176c6dd9f27b6c3e90ccf6079ec0cc62564035b7a617bfdc5fd63c"
+      },
+      "name": "parser-tests"
+    },
+    {
+      "command": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "analyze"
+      ],
+      "directory": "packages/legacy_doc_parser",
+      "durationSeconds": 5.673,
+      "environment": {
+        "CI": "true",
+        "PUB_CACHE": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/pub-cache",
+        "TMPDIR": "/workspace/scratch/143959eed1a1/tmp"
+      },
+      "exitCode": 0,
+      "log": {
+        "file": "parser-analysis.log.gz",
+        "sha256": "3ad94c1de0451f5c5599aeb95bee3f54f06e8245905d7cedc15396c747a3654f",
+        "uncompressedSha256": "9033bb28921afdacf4cfa03a7b7bce5a299561df3098c43c4c7bab5c0538fd47"
+      },
+      "name": "parser-analysis"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_*.py"
+      ],
+      "directory": "packages/legacy_doc_parser",
+      "durationSeconds": 1.097,
+      "environment": {
+        "CI": "true",
+        "PUB_CACHE": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/pub-cache",
+        "TMPDIR": "/workspace/scratch/143959eed1a1/tmp"
+      },
+      "exitCode": 0,
+      "log": {
+        "file": "parser-python.log.gz",
+        "sha256": "b4f98d9c3994b6641efa52ea54d5cb3187c4c1ec7ee9cf398dfba07d4ffe35f4",
+        "uncompressedSha256": "533d04de89320efb9d9f54046d9fd6466260ea4b044fc996fec907e8b0e5371c"
+      },
+      "name": "parser-python"
+    },
+    {
+      "command": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "test",
+        "--reporter",
+        "expanded",
+        "test/legacy_word_document_test.dart",
+        "test/legacy_word_conversion_test.dart",
+        "test/note_marker_legacy_fidelity_test.dart"
+      ],
+      "directory": "packages/quds_office_engine",
+      "durationSeconds": 5.845,
+      "environment": {
+        "CI": "true",
+        "PUB_CACHE": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/pub-cache",
+        "TMPDIR": "/workspace/scratch/143959eed1a1/tmp"
+      },
+      "exitCode": 0,
+      "log": {
+        "file": "engine-legacy.log.gz",
+        "sha256": "a64dedc4d42e3a7f64097659c5f2b92acbb03cd0f39ec402707474279c89b323",
+        "uncompressedSha256": "a26e5fe7f4f5170658da8e8577304d82afd11b936788b1b51154dadc8efe4b61"
+      },
+      "name": "engine-legacy"
+    },
+    {
+      "command": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "analyze",
+        "--fatal-infos"
+      ],
+      "directory": "packages/quds_office_engine",
+      "durationSeconds": 11.667,
+      "environment": {
+        "CI": "true",
+        "PUB_CACHE": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/pub-cache",
+        "TMPDIR": "/workspace/scratch/143959eed1a1/tmp"
+      },
+      "exitCode": 0,
+      "log": {
+        "file": "engine-analysis.log.gz",
+        "sha256": "7ebbd8664f346a74eb817ae88e3b30f2d91550e9cc7799bdf2e5d2694c1c1c5d",
+        "uncompressedSha256": "c557a0c697cdb937104f1423d3c02d6a1062917cb0bcb2830d91db8cf6192af0"
+      },
+      "name": "engine-analysis"
+    }
+  ],
+  "qudsBaseCommit": "022d353acb12c6db92ec751075537dc7f627d10d",
+  "schema": "quds-office/legacy-parser-integration",
+  "scope": "Exact upstream mirror and consumer integration checks; native receipts retain their recorded source identity.",
+  "tests": {
+    "engineDart": {
+      "passed": 21,
+      "skipped": 0
+    },
+    "engineDartScope": "legacy-document-conversion-and-note-marker-suites",
+    "parserDart": {
+      "passed": 761,
+      "skipped": 0
+    },
+    "parserPythonPassed": 129
+  },
+  "upstream": {
+    "commit": "d28be0a173415ebb392a8309aacdbe2bb1a50da7",
+    "exactFileCount": 421,
+    "repository": "CrispStrobe/legacy-doc-parser",
+    "tree": "9cf883d7829627051a2f1068235dfe20d2e37383",
+    "upstreamFileCount": 422
+  },
+  "upstreamFilesReceiptSha256": "7d457f368720c67fbb286debd72c2b96ca39eeeb55c2c11094a7651ca7281ab9",
+  "version": 1,
+  "workspacePubspecSha256": "150af8d89562635bf5a876c0a539c20ae48b58ea3666db071b5e4ebd3addf153"
+}

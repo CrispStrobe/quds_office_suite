@@ -10,8 +10,9 @@ The only upstream file difference remains `pubspec.yaml`: Quds retains
 retain SHA-256
 `150af8d89562635bf5a876c0a539c20ae48b58ea3666db071b5e4ebd3addf153`.
 The portable parser SDK requirement is unchanged. The integrated branch also
-retains Quds main commit `e2b00bae0600e7e384ca633a7364e8dcd2e95c58` in its ancestry,
-including main's editor/reports dependency paths.
+retains Quds main commit `74960237cea7c560f3db7ee96ca37641c4438567` in its ancestry,
+including the editor/reports dependency paths, the editor URL-launcher
+dependency, and the strict native Word-picture package and raster checks.
 
 ## Checkpoint: parser 77b6b1d
 
@@ -92,6 +93,99 @@ The root engine CI job now sets up Python 3.12, installs the parser's exact
 the parser's Python test discovery. This avoids depending on an image library
 that happens to be preinstalled in a developer environment. The existing
 workspace Dart dependency settings remain unchanged.
+
+## Continuation checkpoint: parser 713973f
+
+The prior integration PR was merged into Quds main
+`9a0a0268aa57f0d61b4112e101968e29a3a5f077`. The continuation starts from that
+complete main tree, preserving its Word-package guards, native image oracles,
+editor URL-launcher declaration and plugin registrants. Its intermediate parser
+pin, `f689b4c7cc4f9fd4d28d855c8572664bd8c6dd27`, was verified against all
+340 unpatched upstream files; it introduced no Quds-specific parser adaptation.
+
+The next mirrored source is
+[`713973fb27330d190281cbe66193f6b22ec722f8`](https://github.com/CrispStrobe/legacy-doc-parser/commit/713973fb27330d190281cbe66193f6b22ec722f8).
+The [file receipt](evidence/legacy-doc-parser-integration-20261112/713973f/upstream-files.json)
+verifies all 355 unpatched upstream files against tree
+`a16bf1c9d3ddab00009c58dfcf8eaf706f1178d4`. The workspace pubspec remains
+byte-identical. This checkpoint carries bounded OfficeArt background-color and
+layout-in-cell context, textbox range-separator handling, authored regression
+fixtures, and the lossless archive of the earlier native DOC/DOCX stage files.
+The canonical upstream CI file removes a duplicate Python/Pillow setup; the
+active Quds root workflow retains its Python 3.12 dependency-install and test
+steps.
+
+The [integration receipt](evidence/legacy-doc-parser-integration-20261112/713973f/summary.json)
+records these fresh checks in the Quds dependency workspace:
+
+| Check | Result |
+| --- | --- |
+| Complete mirrored parser Dart suite | 647 passed |
+| Parser Python oracle/runner tests | 109 passed |
+| Complete engine Dart suite | 1,627 passed; one existing font-dependent skip |
+| Engine analysis with `--fatal-infos` | Clean |
+| Parser analysis | Exit 0; 287 infos, no warnings or errors |
+
+The first engine attempt encountered a full development filesystem. Its five
+temporary-directory creation failures and original log are retained in a
+[separate failed-run receipt](evidence/legacy-doc-parser-integration-20261112/713973f/engine-tests-enospc.json).
+After space was reclaimed from reproducible caches, the complete engine suite
+was rerun successfully with unchanged parser and engine source. The failed run
+is not counted as a successful gate. Historical native-rendering receipts keep
+their recorded source and renderer identities; this is an integration
+checkpoint, not a claim that the remaining fidelity gaps are closed.
+
+## Main reconciliation: parser f56dff2
+
+Quds main advanced to `74960237cea7c560f3db7ee96ca37641c4438567` while the
+continuation was being validated. Its parser pin is
+[`f56dff2842e0cb7f57e021b335618247ed8474bf`](https://github.com/CrispStrobe/legacy-doc-parser/commit/f56dff2842e0cb7f57e021b335618247ed8474bf),
+a descendant of the preceding `713973f` source. The merge preserves both the
+current main ancestry and the earlier integration receipts. The only merge
+conflict was the upstream pin metadata; no parser implementation was replaced
+with a Quds-specific adaptation.
+
+The [file receipt](evidence/legacy-doc-parser-integration-20261112/f56dff2/upstream-files.json)
+verifies all 374 unpatched parser files against tree
+`d1a8d5eac5d605fbaa5e405fad47314f5e649e26`. The existing workspace pubspec is
+unchanged. This retains main's bounded metafile-arc rendering, media-revision
+semantics, their authored controls, and the archived native evidence.
+
+The [fresh integration receipt](evidence/legacy-doc-parser-integration-20261112/f56dff2/summary.json)
+records 697 parser Dart tests, 115 Python tests and 21 focused engine tests
+across legacy document parsing, conversion and note-marker suites, all passing.
+Engine analysis with `--fatal-infos` is clean. Parser analysis exits zero with
+298 informational diagnostics and no warnings or errors under the workspace
+dependencies. The complete 1,627-test engine result above remains attributed
+to its original `713973f` checkpoint; this merge's local engine test scope is
+explicitly limited to those three integration suites.
+
+## Note and header boundary checkpoint: parser d28be0a
+
+The next source roll pins
+[`d28be0a173415ebb392a8309aacdbe2bb1a50da7`](https://github.com/CrispStrobe/legacy-doc-parser/commit/d28be0a173415ebb392a8309aacdbe2bb1a50da7),
+tree `9cf883d7829627051a2f1068235dfe20d2e37383`. The
+[file receipt](evidence/legacy-doc-parser-integration-20261112/d28be0a/upstream-files.json)
+verifies all 421 unpatched upstream files and the unchanged workspace pubspec.
+Quds main remains `74960237cea7c560f3db7ee96ca37641c4438567`, already in this
+branch's ancestry.
+
+This roll preserves every source paragraph in note and separator stories while
+avoiding an extra generated paragraph after a final table. Corroborated normal/
+first-header textbox aliases retain their source shapes and one-frame identity;
+shared review/event identities and independent media revision metadata exclude
+alias recovery. The earlier main arc and media revision work is retained.
+
+The [integration receipt](evidence/legacy-doc-parser-integration-20261112/d28be0a/summary.json)
+records 761 parser Dart tests, 129 Python tests and 21 focused engine tests,
+all passing. Engine analysis with `--fatal-infos` is clean. Parser analysis exits
+zero with 315 informational diagnostics and no warnings or errors under the
+preserved workspace dependency versions. The fresh engine scope is the three
+legacy document, conversion and note-marker suites. The full engine gate and
+the final native corpus receipt will follow after the native run is sealed.
+
+
+Historical parallel arc checkpoint (original pin and scope retained):
 
 ## Continuation: arcs and object revision provenance
 
