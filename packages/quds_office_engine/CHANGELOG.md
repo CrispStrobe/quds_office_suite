@@ -4,6 +4,12 @@ All notable changes to `quds_office_engine` are documented here.
 
 ## Unreleased
 
+- Add reference-aware worksheet renaming across formulas, names, native rules,
+  links, charts and pivot sources. Preserve strings, structured references and
+  external workbook qualifiers/cache data. Reversible edits preflight stale
+  model/native changes and opaque reference owners before mutation; repeated
+  whole-row/column qualifiers and three-dimensional endpoints are handled.
+
 - Preserve native slide section GUIDs, empty sections, membership metadata and
   foreign extension namespaces. Reorder slides through an atomic plan that
   adopts the original destination section while keeping every other membership;
