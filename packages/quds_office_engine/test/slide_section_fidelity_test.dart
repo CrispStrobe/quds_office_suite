@@ -267,6 +267,54 @@ void main() {
     expect(_parts(deck), parts);
   });
 
+  for (final issue in [
+    'missing relationship',
+    'wrong relationship type',
+    'external target',
+    'missing target part',
+    'wrong target part type',
+  ]) {
+    test('$issue guards section reorder and bypassed saves', () {
+      final package = OpcPackage.openBytes(File(_fixture).readAsBytesSync());
+      final rels = package.relationshipsFor('/ppt/presentation.xml');
+      final original = rels.firstByType(RelationshipTypes.slide)!;
+      if (issue == 'missing target part') {
+        package.deletePart(rels.resolve(original));
+      } else {
+        rels.removeById(original.id);
+        if (issue != 'missing relationship') {
+          rels.add(
+            id: original.id,
+            type: issue == 'wrong relationship type'
+                ? RelationshipTypes.slideLayout
+                : original.type,
+            target: switch (issue) {
+              'external target' => 'https://example.invalid/slide.xml',
+              'wrong target part type' => 'notesSlides/notesSlide1.xml',
+              _ => original.target,
+            },
+            targetMode: issue == 'external target'
+                ? RelationshipTargetMode.external
+                : RelationshipTargetMode.internal,
+          );
+        }
+      }
+      final deck = SlideDeserializer().read(package);
+      expect(deck.sectionSource?.issue, isNotNull);
+      final parts = _parts(deck);
+      expect(() => PmlSections.reorderSlide(deck, 0, 3), throwsStateError);
+      expect(
+        () => applySlideStep(deck, {'op': 'slideOrder', 'slide': 0, 'to': 3}),
+        throwsStateError,
+      );
+      expect(deck.slides.map((slide) => slide.id), _ids);
+      expect(_parts(deck), parts);
+      deck.slides = deck.slides.reversed.toList();
+      expect(() => SlideSerializer().writeBytes(deck), throwsStateError);
+      expect(_parts(deck), parts);
+    });
+  }
+
   test(
     'moving a native entry preserves a prefix scoped to its original section',
     () {

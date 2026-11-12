@@ -61,7 +61,9 @@ class SlideDeserializer {
             : presentationRels.byId(relId);
         if (rel == null ||
             rel.type != RelationshipTypes.slide ||
-            rel.targetMode == RelationshipTargetMode.external) {
+            rel.targetMode == RelationshipTargetMode.external ||
+            package.getPart(presentationRels.resolve(rel))?.contentType !=
+                OfficeContentTypes.slide) {
           slideRelationshipIssue =
               'Section membership requires modeled internal slide relationships.';
         }
