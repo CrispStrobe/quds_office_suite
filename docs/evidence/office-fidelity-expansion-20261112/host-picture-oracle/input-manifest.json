@@ -1,0 +1,26 @@
+[
+  {
+    "original": "/workspace/scratch/07eb2580faa9/acceptance-expansion/final-host/bounds-fixture-fix/inputs/slide-picture-bounds-1.pptx",
+    "snapshot": "/workspace/scratch/07eb2580faa9/acceptance-expansion/picture-oracle-fix/inputs/fidelity-host/slide-picture-bounds-1.pptx",
+    "sha256": "835c640f408dc76d2c6ea7b7aa62a25af77c0c7ad36761071feb3fdd8efb9a9a",
+    "original_sha256_after": "835c640f408dc76d2c6ea7b7aa62a25af77c0c7ad36761071feb3fdd8efb9a9a",
+    "snapshot_sha256_after": "835c640f408dc76d2c6ea7b7aa62a25af77c0c7ad36761071feb3fdd8efb9a9a",
+    "sdk_verified_exact_original_path_and_bytes": true
+  },
+  {
+    "original": "/workspace/scratch/07eb2580faa9/acceptance-expansion/final-host/bounds-fixture-fix/inputs/slide-picture-bounds-2.pptx",
+    "snapshot": "/workspace/scratch/07eb2580faa9/acceptance-expansion/picture-oracle-fix/inputs/fidelity-host/slide-picture-bounds-2.pptx",
+    "sha256": "3434bd353c8e1f2c253225448c7c73a8edb87ecd962dad2af51f6b1db18fc5c9",
+    "original_sha256_after": "3434bd353c8e1f2c253225448c7c73a8edb87ecd962dad2af51f6b1db18fc5c9",
+    "snapshot_sha256_after": "3434bd353c8e1f2c253225448c7c73a8edb87ecd962dad2af51f6b1db18fc5c9",
+    "sdk_verified_exact_original_path_and_bytes": true
+  },
+  {
+    "original": "/workspace/scratch/07eb2580faa9/acceptance-expansion/final-host/bounds-fixture-fix/inputs/slide-picture-bounds-3.pptx",
+    "snapshot": "/workspace/scratch/07eb2580faa9/acceptance-expansion/picture-oracle-fix/inputs/fidelity-host/slide-picture-bounds-3.pptx",
+    "sha256": "e591a1edf72097bda7c51a5e515d7edceaa50737ae9cbb78779eb193a027b1cf",
+    "original_sha256_after": "e591a1edf72097bda7c51a5e515d7edceaa50737ae9cbb78779eb193a027b1cf",
+    "snapshot_sha256_after": "e591a1edf72097bda7c51a5e515d7edceaa50737ae9cbb78779eb193a027b1cf",
+    "sdk_verified_exact_original_path_and_bytes": true
+  }
+]

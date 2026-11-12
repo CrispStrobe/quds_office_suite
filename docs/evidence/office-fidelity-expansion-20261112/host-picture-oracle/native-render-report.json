@@ -1,0 +1,240 @@
+{
+  "renderer": "LibreOffice 24.2.7.2 ee3885777aa7032db5a9b65deec9457448a91162 (LibreOfficeKit embedding API)",
+  "files": 3,
+  "rendered_files": 3,
+  "picture_pixel_oracle_files": 3,
+  "visual_input_files": 3,
+  "native_schema_only_files": 0,
+  "native_schema_only": [],
+  "schema_report": null,
+  "pixel_fingerprint": "SHA-256 of big-endian uint32 width/height followed by RGB bytes",
+  "cycle_groups": 1,
+  "cycle_comparisons": [
+    {
+      "case": "fidelity-host/slide-picture-bounds.pptx",
+      "expected_cycles": [
+        1,
+        2,
+        3
+      ],
+      "actual_cycles": [
+        1,
+        2,
+        3
+      ],
+      "files": [
+        "fidelity-host/slide-picture-bounds-1.pptx",
+        "fidelity-host/slide-picture-bounds-2.pptx",
+        "fidelity-host/slide-picture-bounds-3.pptx"
+      ],
+      "baseline": null,
+      "baseline_candidate": null,
+      "baseline_page_order": null,
+      "passed": true
+    }
+  ],
+  "baseline_comparisons": 0,
+  "page_order_comparisons": 0,
+  "render_only_files": [],
+  "failures": [],
+  "reports": [
+    {
+      "file": "fidelity-host/slide-picture-bounds-1.pptx",
+      "pages": 1,
+      "text": "\f",
+      "pixel_sha256": [
+        "73170e56a521dca5853c089bc36762bc8f9b4417784967ed9654d0328da684ff"
+      ],
+      "pdf": "000/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 101,
+          "height": 72,
+          "png": "000/page-0001.png",
+          "pixel_sha256": "73170e56a521dca5853c089bc36762bc8f9b4417784967ed9654d0328da684ff"
+        }
+      ],
+      "picture_pixel_evidence": {
+        "oracle": "host-slide-black-picture-v1",
+        "case": "bounds",
+        "dpi": 72,
+        "page_size": [
+          101,
+          72
+        ],
+        "expected_page_size": [
+          100,
+          72
+        ],
+        "page_size_points": [
+          100.006,
+          72.0
+        ],
+        "expected_rect": [
+          10,
+          7.2,
+          90,
+          45
+        ],
+        "source_geometry": {
+          "page_emu": [
+            1270000,
+            914400
+          ],
+          "rect_emu": [
+            127000,
+            91440,
+            1143000,
+            571500
+          ]
+        },
+        "pixel_sha256": "73170e56a521dca5853c089bc36762bc8f9b4417784967ed9654d0328da684ff",
+        "black_pixels": 4140,
+        "white_pixels": 3132,
+        "gray_pixels": 0,
+        "colored_pixels": 0,
+        "outside_nonwhite_pixels": 0,
+        "interior_nonblack_pixels": 0,
+        "black_bbox": [
+          10,
+          7,
+          100,
+          53
+        ]
+      }
+    },
+    {
+      "file": "fidelity-host/slide-picture-bounds-2.pptx",
+      "pages": 1,
+      "text": "\f",
+      "pixel_sha256": [
+        "73170e56a521dca5853c089bc36762bc8f9b4417784967ed9654d0328da684ff"
+      ],
+      "pdf": "001/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 101,
+          "height": 72,
+          "png": "001/page-0001.png",
+          "pixel_sha256": "73170e56a521dca5853c089bc36762bc8f9b4417784967ed9654d0328da684ff"
+        }
+      ],
+      "picture_pixel_evidence": {
+        "oracle": "host-slide-black-picture-v1",
+        "case": "bounds",
+        "dpi": 72,
+        "page_size": [
+          101,
+          72
+        ],
+        "expected_page_size": [
+          100,
+          72
+        ],
+        "page_size_points": [
+          100.006,
+          72.0
+        ],
+        "expected_rect": [
+          10,
+          7.2,
+          90,
+          45
+        ],
+        "source_geometry": {
+          "page_emu": [
+            1270000,
+            914400
+          ],
+          "rect_emu": [
+            127000,
+            91440,
+            1143000,
+            571500
+          ]
+        },
+        "pixel_sha256": "73170e56a521dca5853c089bc36762bc8f9b4417784967ed9654d0328da684ff",
+        "black_pixels": 4140,
+        "white_pixels": 3132,
+        "gray_pixels": 0,
+        "colored_pixels": 0,
+        "outside_nonwhite_pixels": 0,
+        "interior_nonblack_pixels": 0,
+        "black_bbox": [
+          10,
+          7,
+          100,
+          53
+        ]
+      }
+    },
+    {
+      "file": "fidelity-host/slide-picture-bounds-3.pptx",
+      "pages": 1,
+      "text": "\f",
+      "pixel_sha256": [
+        "73170e56a521dca5853c089bc36762bc8f9b4417784967ed9654d0328da684ff"
+      ],
+      "pdf": "002/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 101,
+          "height": 72,
+          "png": "002/page-0001.png",
+          "pixel_sha256": "73170e56a521dca5853c089bc36762bc8f9b4417784967ed9654d0328da684ff"
+        }
+      ],
+      "picture_pixel_evidence": {
+        "oracle": "host-slide-black-picture-v1",
+        "case": "bounds",
+        "dpi": 72,
+        "page_size": [
+          101,
+          72
+        ],
+        "expected_page_size": [
+          100,
+          72
+        ],
+        "page_size_points": [
+          100.006,
+          72.0
+        ],
+        "expected_rect": [
+          10,
+          7.2,
+          90,
+          45
+        ],
+        "source_geometry": {
+          "page_emu": [
+            1270000,
+            914400
+          ],
+          "rect_emu": [
+            127000,
+            91440,
+            1143000,
+            571500
+          ]
+        },
+        "pixel_sha256": "73170e56a521dca5853c089bc36762bc8f9b4417784967ed9654d0328da684ff",
+        "black_pixels": 4140,
+        "white_pixels": 3132,
+        "gray_pixels": 0,
+        "colored_pixels": 0,
+        "outside_nonwhite_pixels": 0,
+        "interior_nonblack_pixels": 0,
+        "black_bbox": [
+          10,
+          7,
+          100,
+          53
+        ]
+      }
+    }
+  ]
+}

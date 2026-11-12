@@ -1,0 +1,122 @@
+{
+  "status": "passed_focused_shared_renderer_correction",
+  "source_base_commit": "59177fa4f714219c503bea5c8cb6eb0e25213eed",
+  "host_corrected_fixture_commit": "a915cdaa61ddf19b868d52488d9018d261a60ebf",
+  "authored_expected_page_points": [
+    100,
+    72
+  ],
+  "authored_expected_picture_points": [
+    10,
+    7.2,
+    90,
+    45
+  ],
+  "authored_expected_geometry": {
+    "page_emu": [
+      1270000,
+      914400
+    ],
+    "rect_emu": [
+      127000,
+      91440,
+      1143000,
+      571500
+    ]
+  },
+  "controls": {
+    "command": "python3 -m unittest discover -s tool/office-validation -p 'test_*.py' -v",
+    "tests": 56,
+    "existing_tests": 54,
+    "new_regressions": 2,
+    "exit_code": 0
+  },
+  "red": {
+    "corrected_native_packages_rejected_by_old_oracle": 3,
+    "updated_render_controls_tests": 49,
+    "errors": 13,
+    "exit_code": 1
+  },
+  "native": {
+    "renderer": "LibreOffice 24.2.7.2 ee3885777aa7032db5a9b65deec9457448a91162 (LibreOfficeKit embedding API)",
+    "files": 3,
+    "pages": 3,
+    "three_save_series": 1,
+    "failures": 0,
+    "pixel_oracle_files": 3,
+    "same_pixels_across_three_saves": true,
+    "source_and_snapshot_hashes_unchanged": true,
+    "schema_files": 3,
+    "schema_errors": 0,
+    "schema_binding": "Existing independent SDK receipts match each original exact path and bytes; snapshot bytes equal those originals before and after rendering.",
+    "measured": [
+      {
+        "file": "fidelity-host/slide-picture-bounds-1.pptx",
+        "pixel_sha256": "73170e56a521dca5853c089bc36762bc8f9b4417784967ed9654d0328da684ff",
+        "page_size_points": [
+          100.006,
+          72.0
+        ],
+        "page_size_pixels": [
+          101,
+          72
+        ],
+        "black_bbox": [
+          10,
+          7,
+          100,
+          53
+        ],
+        "black_pixels": 4140,
+        "gray_pixels": 0
+      },
+      {
+        "file": "fidelity-host/slide-picture-bounds-2.pptx",
+        "pixel_sha256": "73170e56a521dca5853c089bc36762bc8f9b4417784967ed9654d0328da684ff",
+        "page_size_points": [
+          100.006,
+          72.0
+        ],
+        "page_size_pixels": [
+          101,
+          72
+        ],
+        "black_bbox": [
+          10,
+          7,
+          100,
+          53
+        ],
+        "black_pixels": 4140,
+        "gray_pixels": 0
+      },
+      {
+        "file": "fidelity-host/slide-picture-bounds-3.pptx",
+        "pixel_sha256": "73170e56a521dca5853c089bc36762bc8f9b4417784967ed9654d0328da684ff",
+        "page_size_points": [
+          100.006,
+          72.0
+        ],
+        "page_size_pixels": [
+          101,
+          72
+        ],
+        "black_bbox": [
+          10,
+          7,
+          100,
+          53
+        ],
+        "black_pixels": 4140,
+        "gray_pixels": 0
+      }
+    ]
+  },
+  "code_sha256": {
+    "tool/office-validation/render.py": "80ece704bac7215e2ae72f05e59df32472fc5ec9c767cb8af94f21e56530c9a6",
+    "tool/office-validation/test_render.py": "165556120a30aad0fb84c104e1e17856f662bf65281c16afa7f48ffea77cbc2a"
+  },
+  "native_proof_sha256": "47c30286ea42011fa6e16271d400ac61ef3c406a7888da85af685af4f20d285f",
+  "native_proof_bytes": 6686,
+  "scope": "Only the shared host bounds geometry oracle and controls changed. This focused result does not replace full source/host acceptance after the new shared source pin."
+}
