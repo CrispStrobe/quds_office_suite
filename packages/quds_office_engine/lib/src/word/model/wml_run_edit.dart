@@ -31,8 +31,8 @@ abstract final class WmlRunEdit {
       }
       final int end = offset + inline.text.length;
       if (index > offset && index < end) {
-        // A note mark is one field even when its displayed id has two digits.
-        if (inline.noteRefId != null) return;
+        // Note marks and cached inline field results are indivisible.
+        if (inline.isAtomic) return;
         final int local = index - offset;
         paragraph.inlines.replaceRange(i, i + 1, <WmlInline>[
           WmlRun(
@@ -42,6 +42,9 @@ abstract final class WmlRunEdit {
             commentIds: List<int>.from(inline.commentIds),
             noteRefId: inline.noteRefId,
             noteRefEndnote: inline.noteRefEndnote,
+            fieldInstruction: inline.fieldInstruction,
+            fieldLocked: inline.fieldLocked,
+            fieldDirty: inline.fieldDirty,
           ),
           WmlRun(
             text: inline.text.substring(local),
@@ -50,6 +53,9 @@ abstract final class WmlRunEdit {
             commentIds: List<int>.from(inline.commentIds),
             noteRefId: inline.noteRefId,
             noteRefEndnote: inline.noteRefEndnote,
+            fieldInstruction: inline.fieldInstruction,
+            fieldLocked: inline.fieldLocked,
+            fieldDirty: inline.fieldDirty,
           ),
         ]);
         return;
@@ -90,7 +96,7 @@ abstract final class WmlRunEdit {
       }
       final int runEnd = offset + inline.text.length;
       if (((offset >= start && runEnd <= end) ||
-              (inline.noteRefId != null && offset < end && runEnd > start)) &&
+              (inline.isAtomic && offset < end && runEnd > start)) &&
           inline.text.isNotEmpty) {
         update(inline.properties);
       }
@@ -178,10 +184,10 @@ abstract final class WmlRunEdit {
     coalesce(paragraph);
   }
 
-  /// Bounds for an edit that cannot split an atomic note-reference field.
+  /// Bounds for an edit that cannot split a note mark or inline field result.
   ///
-  /// A nonempty selection touching a note mark includes the whole mark. A
-  /// collapsed caret inside a multi-digit mark moves after it, just as
+  /// A nonempty selection touching an atomic field includes the whole result. A
+  /// collapsed caret inside a result moves after it, just as
   /// [insertRuns] does. Callers can use these bounds for undo and selection.
   static ({int start, int end}) normalizeRange(
     WmlParagraph paragraph,
@@ -200,7 +206,7 @@ abstract final class WmlRunEdit {
     var offset = 0;
     for (final WmlRun run in paragraph.inlines.whereType<WmlRun>()) {
       final int runEnd = offset + run.text.length;
-      if (run.noteRefId != null) {
+      if (run.isAtomic) {
         if (collapsed && start > offset && start < runEnd) {
           return (start: runEnd, end: runEnd);
         }
@@ -239,7 +245,7 @@ abstract final class WmlRunEdit {
       if (to > from) {
         out.add(
           WmlRun(
-            text: inline.noteRefId != null
+            text: inline.isAtomic
                 ? inline.text
                 : inline.text.substring(from - offset, to - offset),
             properties: inline.properties.copy(),
@@ -247,6 +253,9 @@ abstract final class WmlRunEdit {
             commentIds: List<int>.from(inline.commentIds),
             noteRefId: inline.noteRefId,
             noteRefEndnote: inline.noteRefEndnote,
+            fieldInstruction: inline.fieldInstruction,
+            fieldLocked: inline.fieldLocked,
+            fieldDirty: inline.fieldDirty,
           ),
         );
       }
@@ -286,6 +295,9 @@ abstract final class WmlRunEdit {
           commentIds: List<int>.from(run.commentIds),
           noteRefId: run.noteRefId,
           noteRefEndnote: run.noteRefEndnote,
+          fieldInstruction: run.fieldInstruction,
+          fieldLocked: run.fieldLocked,
+          fieldDirty: run.fieldDirty,
         ),
     ]);
     coalesce(paragraph);
@@ -330,8 +342,8 @@ abstract final class WmlRunEdit {
   }
 
   static bool _sameRun(WmlRun a, WmlRun b) {
-    return a.noteRefId == null &&
-        b.noteRefId == null &&
+    return !a.isAtomic &&
+        !b.isAtomic &&
         _sameProps(a.properties, b.properties) &&
         _sameLink(a.hyperlink, b.hyperlink) &&
         _sameInts(a.commentIds, b.commentIds);

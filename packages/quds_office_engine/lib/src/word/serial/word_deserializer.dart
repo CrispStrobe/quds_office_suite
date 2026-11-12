@@ -285,6 +285,9 @@ class WordDeserializer {
         paragraph.inlines.addAll(
           _readHyperlinkInlines(reader, package, docUri, paragraph),
         );
+      } else if (reader.localName == 'fldSimple' &&
+          reader.namespaceUri == OfficeNamespaces.w) {
+        paragraph.inlines.addAll(_readSimpleField(reader, package, docUri));
       } else if (reader.localName == 'commentRangeStart') {
         final int? id = int.tryParse(
           reader.getAttribute('id', namespaceUri: OfficeNamespaces.w) ?? '',
@@ -338,6 +341,58 @@ class WordDeserializer {
       }
     }
     return paragraph;
+  }
+
+  List<WmlInline> _readSimpleField(
+    XmlPullReader reader,
+    OpcPackage package,
+    String docUri,
+  ) {
+    final XmlElement source = XmlDocument.readElement(reader);
+    final String? instruction = source.getAttribute(
+      'instr',
+      namespaceUri: OfficeNamespaces.w,
+    );
+    final XmlPullReader inner = WordMarkupCompatibilityReader(
+      XmlDocument(root: source).toXmlString(declaration: false),
+    )..next();
+    final WmlParagraph result = _readParagraph(inner, package, docUri);
+    final List<XmlElement> children = source.childElements.toList();
+    final bool singleRun =
+        children.isEmpty ||
+        (children.length == 1 &&
+            children.single.localName == 'r' &&
+            children.single.namespaceUri == OfficeNamespaces.w);
+    // Retain the native one-run field boundary. Arbitrary rich/nested fields
+    // need a span model; do not turn their entire containing paragraph into a
+    // field or duplicate one instruction onto each result run.
+    if (instruction != null &&
+        singleRun &&
+        result.properties.fieldInstruction == null &&
+        result.inlines.length <= 1 &&
+        (result.inlines.isEmpty || result.inlines.single is WmlRun)) {
+      final WmlRun run = result.inlines.isEmpty
+          ? WmlRun()
+          : result.inlines.single as WmlRun;
+      if (!run.isAtomic) {
+        final String? locked = source.getAttribute(
+          'fldLock',
+          namespaceUri: OfficeNamespaces.w,
+        );
+        final String? dirty = source.getAttribute(
+          'dirty',
+          namespaceUri: OfficeNamespaces.w,
+        );
+        bool enabled(String? value) =>
+            value == '1' || value == 'true' || value == 'on';
+        run
+          ..fieldInstruction = instruction
+          ..fieldLocked = enabled(locked)
+          ..fieldDirty = dirty == null ? null : enabled(dirty);
+        return <WmlInline>[run];
+      }
+    }
+    return result.inlines;
   }
 
   List<WmlInline> _readRunInlines(
@@ -505,8 +560,9 @@ class WordDeserializer {
 
   void _readPPr(XmlPullReader reader, WmlParagraphProps props) {
     final XmlElement node = XmlDocument.readElement(reader);
-    props.sourcePropertiesXml = XmlDocument(root: node)
-        .toXmlString(declaration: false);
+    props.sourcePropertiesXml = XmlDocument(
+      root: node,
+    ).toXmlString(declaration: false);
     final XmlPullReader source = WordMarkupCompatibilityReader(
       props.sourcePropertiesXml!,
     )..next();
@@ -740,6 +796,17 @@ class WordDeserializer {
     if (rel == null || rel.target.isEmpty) {
       return null;
     }
+    if (rel.targetMode == RelationshipTargetMode.external) {
+      final String scheme =
+          Uri.tryParse(rel.target)?.scheme.toLowerCase() ?? '';
+      final bool drivePath = RegExp(r'^[A-Za-z]:[\\/]').hasMatch(rel.target);
+      if (scheme.isNotEmpty && scheme != 'file' && !drivePath) {
+        return WmlHyperlink(url: rel.target);
+      }
+      // Relationship targets are file/URI destinations, not bookmark names.
+      // In particular, an extensionless relative file must not become w:anchor.
+      return WmlHyperlink(file: rel.target);
+    }
     return WmlHyperlink.fromTarget(rel.target);
   }
 
@@ -881,8 +948,9 @@ class WordDeserializer {
 
   void _readRPr(XmlPullReader reader, WmlRunProps props) {
     final XmlElement node = XmlDocument.readElement(reader);
-    props.sourcePropertiesXml = XmlDocument(root: node)
-        .toXmlString(declaration: false);
+    props.sourcePropertiesXml = XmlDocument(
+      root: node,
+    ).toXmlString(declaration: false);
     final XmlPullReader source = WordMarkupCompatibilityReader(
       props.sourcePropertiesXml!,
     )..next();
@@ -985,8 +1053,9 @@ class WordDeserializer {
       }
       if (reader.localName == 'tblPr') {
         final XmlElement source = XmlDocument.readElement(reader);
-        final String xml = XmlDocument(root: source)
-            .toXmlString(declaration: false);
+        final String xml = XmlDocument(
+          root: source,
+        ).toXmlString(declaration: false);
         table.properties.sourcePropertiesXml = xml;
         _readTableProperties(WordMarkupCompatibilityReader(xml)..next(), table);
       } else if (reader.localName == 'gridCol') {
@@ -1322,8 +1391,9 @@ class WordDeserializer {
     String docUri,
   ) {
     final XmlElement source = XmlDocument.readElement(reader);
-    final String sourceXml = XmlDocument(root: source)
-        .toXmlString(declaration: false);
+    final String sourceXml = XmlDocument(
+      root: source,
+    ).toXmlString(declaration: false);
     reader = WordMarkupCompatibilityReader(sourceXml)..next();
     String? headerRid;
     String? footerRid;
@@ -1773,8 +1843,9 @@ class WordDeserializer {
     final PackagePart? part = package.getPart('/word/watermark.xml');
     if (part != null) {
       final String xml = part.readText();
-      final Match? match = RegExp(r'<w:watermark[^>]*>([^<]*)</w:watermark>')
-          .firstMatch(xml);
+      final Match? match = RegExp(
+        r'<w:watermark[^>]*>([^<]*)</w:watermark>',
+      ).firstMatch(xml);
       if (match != null) {
         document.watermark = match
             .group(1)!
