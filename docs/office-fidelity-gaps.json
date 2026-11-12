@@ -5,7 +5,7 @@
     "engine": "CrispStrobe/quds_office_suite",
     "host": "CrispStrobe/CrispCloud"
   },
-  "branch": "feature/office-fidelity-gap-closure-20261112",
+  "branch": "feature/office-fidelity-workflows-20261112",
   "scope": "Reproduced and investigated gaps; the source-hashed line inventory is separate. Closed means the cited bounded regression is covered, not exhaustive format support.",
   "status_definitions": {
     "closed": "Reproduced gap fixed and protected by named evidence.",
@@ -653,12 +653,16 @@
     },
     {
       "id": "FID-057",
-      "status": "partial",
-      "area": "Table and TOC script addressing",
-      "finding": "Table and TOC selectors traverse modeled body containers in depth-first order and mutate the actual owner. Table merge uses logical grid columns; cell edits and unmerge use physical row-cell indexes. Uniform merged-grid addressing remains open.",
+      "status": "closed",
+      "area": "Logical merged-table cell script addressing",
+      "finding": "Cell text/format/unmerge accept an explicit gridColumn, resolving horizontal spans and vertical continuations to the visible merge origin while retaining physical column compatibility. Inspect exposes both coordinate systems and merge origins; malformed chains reject before mutation. Nested tables retain their actual owner.",
       "evidence": [
-        "packages/quds_office_engine/tool/fidelity/word_structure_steps.dart"
-      ]
+        "packages/quds_office_engine/tool/fidelity/table_selector.dart",
+        "packages/quds_office_engine/test/table_grid_steps_test.dart",
+        "packages/quds_office_engine/tool/fidelity/table_grid_oracle.py",
+        "packages/quds_office_engine/tool/fidelity/test_table_grid_oracle.py"
+      ],
+      "limits": "This closes the explicit cell selector contract. Row/column structural edits still require supported rectangular topology; logical and legacy physical selectors intentionally remain distinct."
     },
     {
       "id": "FID-058",
@@ -895,6 +899,42 @@
         "docs/evidence/office-fidelity-gap-closure-20261112/focused-slide-native/render-report.json"
       ],
       "limits": "Closure is limited to modeled placeholder presence/type/index and the authored layouts. It does not certify every placeholder extension or arbitrary theme/master inheritance."
+    },
+    {
+      "id": "FID-077",
+      "status": "closed",
+      "area": "Native table-cell preferred widths",
+      "finding": "Import preserves native width XML and its point projection; explicit width edits serialize, clone/isolate retains provenance, and merge/unmerge uses logical grid widths instead of duplicating a merged width into each split cell. Independent authored expected packages cover unchanged and three scripted phases through three direct/isolate cycles.",
+      "evidence": [
+        "packages/quds_office_engine/test/table_grid_steps_test.dart",
+        "packages/quds_office_engine/tool/fidelity/table_grid_oracle.py",
+        "tool/office-validation/render.py",
+        "tool/office-validation/test_render.py"
+      ],
+      "limits": "The measured nested-table corpus has complete grids. Arbitrary auto-fit and percentage layout equivalence across Office applications are not certified."
+    },
+    {
+      "id": "FID-078",
+      "status": "closed",
+      "area": "Captured XML namespace and attribute collisions",
+      "finding": "XmlDocument.readElement matches namespace declarations by qualified name so xmlns:w cannot overwrite the real w:w width attribute. Local and inherited declarations and same-name unqualified attributes are protected.",
+      "evidence": [
+        "packages/quds_office_engine/test/xml_namespace_capture_test.dart",
+        "packages/quds_office_engine/test/table_grid_steps_test.dart"
+      ]
+    },
+    {
+      "id": "FID-079",
+      "status": "closed",
+      "area": "Coverage collection provenance",
+      "finding": "A fresh exclusive collector hashes inputs before execution, records runtime/command/exit metadata and seals successful output hashes. Reporting requires unchanged inputs and complete unchanged outputs, rejecting stale same-length edits and incomplete runs. Historical unbound reports are explicitly unverified.",
+      "evidence": [
+        "packages/quds_office_engine/tool/fidelity/collect_coverage.py",
+        "packages/quds_office_engine/tool/fidelity/coverage_report.py",
+        "packages/quds_office_engine/tool/fidelity/test_collect_coverage.py",
+        ".github/workflows/office-fidelity.yml"
+      ],
+      "limits": "This establishes source/output provenance, not branch correctness or hermetic dependencies; FID-008 remains open."
     }
   ],
   "evidence_path_convention": "Unprefixed paths are relative to quds_office_suite; CrispCloud: paths are relative to the host repository."
