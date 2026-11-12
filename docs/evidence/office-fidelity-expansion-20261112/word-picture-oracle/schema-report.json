@@ -1,0 +1,36 @@
+{
+  "Files": 6,
+  "Failures": 0,
+  "Reports": [
+    {
+      "File": "/workspace/scratch/07eb2580faa9/validation/word-picture-oracle/inputs/fidelity-host/word-picture-gif-1.docx",
+      "Sha256": "c4a9a1d30bffbea0d3747c0cd211535b30b12871292913dbdc3fbaa15afd1d14",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/07eb2580faa9/validation/word-picture-oracle/inputs/fidelity-host/word-picture-gif-2.docx",
+      "Sha256": "f189fd24987144a03b0e679c96b3111f725da52e5f9e9a020f54b508bf300851",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/07eb2580faa9/validation/word-picture-oracle/inputs/fidelity-host/word-picture-gif-3.docx",
+      "Sha256": "466768a669088b885efadef3c7efc013d0aa087e83904c47d0b5639afefe445c",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/07eb2580faa9/validation/word-picture-oracle/inputs/fidelity-host/word-picture-jpeg-1.docx",
+      "Sha256": "6e87f7dfec9884a920e438dd09e13aa893cd6d8aacd4a4d62656caeb92bf9ef8",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/07eb2580faa9/validation/word-picture-oracle/inputs/fidelity-host/word-picture-jpeg-2.docx",
+      "Sha256": "fa3b76a19a93cf2aeba376072c9953222efa6281eddfc81eeb939db4a7e422bb",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/07eb2580faa9/validation/word-picture-oracle/inputs/fidelity-host/word-picture-jpeg-3.docx",
+      "Sha256": "20fec4335389334934ab94dff9b7f72749e11c0caa500f8b5107b18b6c7de686",
+      "Errors": []
+    }
+  ]
+}

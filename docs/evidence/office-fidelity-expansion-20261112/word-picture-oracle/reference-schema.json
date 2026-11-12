@@ -1,0 +1,16 @@
+{
+  "Files": 2,
+  "Failures": 0,
+  "Reports": [
+    {
+      "File": "/workspace/scratch/07eb2580faa9/validation/word-picture-oracle/references/expected-gif.docx",
+      "Sha256": "2e95021f1d5d6854cb1c4a500e6e995f5f82752bce65778612859b8bc5011d9d",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/07eb2580faa9/validation/word-picture-oracle/references/expected-jpeg.docx",
+      "Sha256": "e123969710bfbc861f682cb9af7fda342cb7a710fc633e02f88613459207bd8a",
+      "Errors": []
+    }
+  ]
+}
