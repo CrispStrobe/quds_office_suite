@@ -10,8 +10,9 @@ The only upstream file difference remains `pubspec.yaml`: Quds retains
 retain SHA-256
 `150af8d89562635bf5a876c0a539c20ae48b58ea3666db071b5e4ebd3addf153`.
 The portable parser SDK requirement is unchanged. The integrated branch also
-retains Quds main commit `e2b00bae0600e7e384ca633a7364e8dcd2e95c58` in its ancestry,
-including main's editor/reports dependency paths.
+retains Quds main commit `9a0a0268aa57f0d61b4112e101968e29a3a5f077` in its ancestry,
+including the editor/reports dependency paths, the editor URL-launcher
+dependency, and the strict native Word-picture package and raster checks.
 
 ## Checkpoint: parser 77b6b1d
 
@@ -92,3 +93,44 @@ The root engine CI job now sets up Python 3.12, installs the parser's exact
 the parser's Python test discovery. This avoids depending on an image library
 that happens to be preinstalled in a developer environment. The existing
 workspace Dart dependency settings remain unchanged.
+
+## Continuation checkpoint: parser 713973f
+
+The prior integration PR was merged into Quds main
+`9a0a0268aa57f0d61b4112e101968e29a3a5f077`. The continuation starts from that
+complete main tree, preserving its Word-package guards, native image oracles,
+editor URL-launcher declaration and plugin registrants. Its intermediate parser
+pin, `f689b4c7cc4f9fd4d28d855c8572664bd8c6dd27`, was verified against all
+340 unpatched upstream files; it introduced no Quds-specific parser adaptation.
+
+The next mirrored source is
+[`713973fb27330d190281cbe66193f6b22ec722f8`](https://github.com/CrispStrobe/legacy-doc-parser/commit/713973fb27330d190281cbe66193f6b22ec722f8).
+The [file receipt](evidence/legacy-doc-parser-integration-20261112/713973f/upstream-files.json)
+verifies all 355 unpatched upstream files against tree
+`a16bf1c9d3ddab00009c58dfcf8eaf706f1178d4`. The workspace pubspec remains
+byte-identical. This checkpoint carries bounded OfficeArt background-color and
+layout-in-cell context, textbox range-separator handling, authored regression
+fixtures, and the lossless archive of the earlier native DOC/DOCX stage files.
+The canonical upstream CI file removes a duplicate Python/Pillow setup; the
+active Quds root workflow retains its Python 3.12 dependency-install and test
+steps.
+
+The [integration receipt](evidence/legacy-doc-parser-integration-20261112/713973f/summary.json)
+records these fresh checks in the Quds dependency workspace:
+
+| Check | Result |
+| --- | --- |
+| Complete mirrored parser Dart suite | 647 passed |
+| Parser Python oracle/runner tests | 109 passed |
+| Complete engine Dart suite | 1,627 passed; one existing font-dependent skip |
+| Engine analysis with `--fatal-infos` | Clean |
+| Parser analysis | Exit 0; 287 infos, no warnings or errors |
+
+The first engine attempt encountered a full development filesystem. Its five
+temporary-directory creation failures and original log are retained in a
+[separate failed-run receipt](evidence/legacy-doc-parser-integration-20261112/713973f/engine-tests-enospc.json).
+After space was reclaimed from reproducible caches, the complete engine suite
+was rerun successfully with unchanged parser and engine source. The failed run
+is not counted as a successful gate. Historical native-rendering receipts keep
+their recorded source and renderer identities; this is an integration
+checkpoint, not a claim that the remaining fidelity gaps are closed.
