@@ -1,0 +1,2405 @@
+{
+  "source_commit": "a9bd470a4807c65f65271be896703e587c12de00",
+  "count": 299,
+  "files": [
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-altchunk/altchunk-imported-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-altchunk/altchunk-imported-1.docx",
+      "sha256": "f376deb735daef532ba2ce94f161af1c557775c56f25395bdcc88a77c80d3ea1",
+      "package": "quds_office_engine",
+      "path": "fidelity-altchunk/altchunk-imported-1.docx",
+      "producer": "test/word_altchunk_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-altchunk/altchunk-imported-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-altchunk/altchunk-imported-2.docx",
+      "sha256": "70e472cf697c5ed56c142ee2aba11e5b13903df5012ded5b30368270b970f7e1",
+      "package": "quds_office_engine",
+      "path": "fidelity-altchunk/altchunk-imported-2.docx",
+      "producer": "test/word_altchunk_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-altchunk/altchunk-imported-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-altchunk/altchunk-imported-3.docx",
+      "sha256": "24511498a5dd87efaa33ac075316d097f5d10ba0c2e2822222b2e75f9753e4aa",
+      "package": "quds_office_engine",
+      "path": "fidelity-altchunk/altchunk-imported-3.docx",
+      "producer": "test/word_altchunk_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-altchunk/altchunk-moved-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-altchunk/altchunk-moved-1.docx",
+      "sha256": "55e460cf19a1169243397058311d29fb59e6c3b0bdaf6567f3ad739b732a9334",
+      "package": "quds_office_engine",
+      "path": "fidelity-altchunk/altchunk-moved-1.docx",
+      "producer": "test/word_altchunk_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-altchunk/altchunk-moved-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-altchunk/altchunk-moved-2.docx",
+      "sha256": "f09a521b04d1f448f8b0f6bf9b91a9605f010da3d4f065564d0e84ee42245cb5",
+      "package": "quds_office_engine",
+      "path": "fidelity-altchunk/altchunk-moved-2.docx",
+      "producer": "test/word_altchunk_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-altchunk/altchunk-moved-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-altchunk/altchunk-moved-3.docx",
+      "sha256": "6b9aad1b53368e8d54b8b0c8c7e9e9675c264c0e7ab125cb432701d0d11c364a",
+      "package": "quds_office_engine",
+      "path": "fidelity-altchunk/altchunk-moved-3.docx",
+      "producer": "test/word_altchunk_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-aux-controls/edited-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-aux-controls/edited-1.docx",
+      "sha256": "4812a4d9ab4b6d855e18c01484003a431929c52104aff0688db7cf2b31dade22",
+      "package": "quds_office_engine",
+      "path": "fidelity-aux-controls/edited-1.docx",
+      "producer": "test/word_auxiliary_content_control_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-aux-controls/edited-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-aux-controls/edited-2.docx",
+      "sha256": "8293eab76b397916d897689e05a68789606fb9d22ba1579910b23baa6552e561",
+      "package": "quds_office_engine",
+      "path": "fidelity-aux-controls/edited-2.docx",
+      "producer": "test/word_auxiliary_content_control_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-aux-controls/edited-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-aux-controls/edited-3.docx",
+      "sha256": "3223b97d37213b7e1b5a1f1eafa6003f9c64e77419134d8a94151494e3c59d72",
+      "package": "quds_office_engine",
+      "path": "fidelity-aux-controls/edited-3.docx",
+      "producer": "test/word_auxiliary_content_control_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-aux-controls/imported-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-aux-controls/imported-1.docx",
+      "sha256": "cff5391bb51afafa557b59aa23e6f077be859f604829694323d31c40a7159e8f",
+      "package": "quds_office_engine",
+      "path": "fidelity-aux-controls/imported-1.docx",
+      "producer": "test/word_auxiliary_content_control_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-aux-controls/imported-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-aux-controls/imported-2.docx",
+      "sha256": "09a77e59bab0d1e77f8edc039f8b8b264d0ca5d5fcf29c4c9c8e4fb171e00f3b",
+      "package": "quds_office_engine",
+      "path": "fidelity-aux-controls/imported-2.docx",
+      "producer": "test/word_auxiliary_content_control_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-aux-controls/imported-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-aux-controls/imported-3.docx",
+      "sha256": "2b7bb0ed74c4126ba218d52906a7fe942748316ff5cd2a89b243709283e37251",
+      "package": "quds_office_engine",
+      "path": "fidelity-aux-controls/imported-3.docx",
+      "producer": "test/word_auxiliary_content_control_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-aux-controls/source.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-aux-controls/source.docx",
+      "sha256": "fba38173b5148646d8cd00d1f18baffaf4a5bed829bc8d02583dacfbf75ddf4e",
+      "package": "quds_office_engine",
+      "path": "fidelity-aux-controls/source.docx",
+      "producer": "test/word_auxiliary_content_control_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-aux-header-footer/edited-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-aux-header-footer/edited-1.docx",
+      "sha256": "8a81d92802d2901973b8c67f536187246f1b93472c9995442b794939a8dddb95",
+      "package": "quds_office_engine",
+      "path": "fidelity-aux-header-footer/edited-1.docx",
+      "producer": "test/word_auxiliary_content_control_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-aux-header-footer/edited-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-aux-header-footer/edited-2.docx",
+      "sha256": "068071e0ae53370badf669ed3495270c4f29119606dcb0abd5ce5e69ae6cd880",
+      "package": "quds_office_engine",
+      "path": "fidelity-aux-header-footer/edited-2.docx",
+      "producer": "test/word_auxiliary_content_control_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-aux-header-footer/edited-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-aux-header-footer/edited-3.docx",
+      "sha256": "97741fc997a16e33764b62ed8389d6ff5ea27e1029d584338ea27cd93596c1cd",
+      "package": "quds_office_engine",
+      "path": "fidelity-aux-header-footer/edited-3.docx",
+      "producer": "test/word_auxiliary_content_control_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-aux-header-footer/imported-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-aux-header-footer/imported-1.docx",
+      "sha256": "30c3fee0a6b31b3300717dea11846063046391593abe0085b1edde4bbd11beba",
+      "package": "quds_office_engine",
+      "path": "fidelity-aux-header-footer/imported-1.docx",
+      "producer": "test/word_auxiliary_content_control_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-aux-header-footer/imported-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-aux-header-footer/imported-2.docx",
+      "sha256": "bfc6f3dae29391bcaeaa93e6bcb6daf44e4d3f40014944cd72a03010a7840bb8",
+      "package": "quds_office_engine",
+      "path": "fidelity-aux-header-footer/imported-2.docx",
+      "producer": "test/word_auxiliary_content_control_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-aux-header-footer/imported-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-aux-header-footer/imported-3.docx",
+      "sha256": "81c6ec3d8746e8573d081aaf7aa7aabad0c54a95a132b64591daa2e65ed31e88",
+      "package": "quds_office_engine",
+      "path": "fidelity-aux-header-footer/imported-3.docx",
+      "producer": "test/word_auxiliary_content_control_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-aux-header-footer/source.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-aux-header-footer/source.docx",
+      "sha256": "2d26c7e85810e0c1ed50483ed16e02e2d03c43f83b182e819571f1e0a66c7036",
+      "package": "quds_office_engine",
+      "path": "fidelity-aux-header-footer/source.docx",
+      "producer": "test/word_auxiliary_content_control_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-bibliography/direct-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-bibliography/direct-1.docx",
+      "sha256": "89cfbc46c85f7110e733325e803cfc05717ff4668a7c32b4a4b2ed87ade4b658",
+      "package": "quds_office_engine",
+      "path": "fidelity-bibliography/direct-1.docx",
+      "producer": "test/word_bibliography_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-bibliography/direct-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-bibliography/direct-2.docx",
+      "sha256": "d7554cf465869cb812f07a20a20b2ffcfff4e53155131a6b16fe18875b2bfe3b",
+      "package": "quds_office_engine",
+      "path": "fidelity-bibliography/direct-2.docx",
+      "producer": "test/word_bibliography_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-bibliography/direct-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-bibliography/direct-3.docx",
+      "sha256": "673031292c108183db4fc5f484b8e863e185084718ecfc93290a0a71f1c1efc1",
+      "package": "quds_office_engine",
+      "path": "fidelity-bibliography/direct-3.docx",
+      "producer": "test/word_bibliography_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-bibliography/isolate-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-bibliography/isolate-1.docx",
+      "sha256": "802bd4bf58cdb86284877cf3fe77b635ef4b655ee5d8b0e16873ee7706845cda",
+      "package": "quds_office_engine",
+      "path": "fidelity-bibliography/isolate-1.docx",
+      "producer": "test/word_bibliography_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-bibliography/isolate-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-bibliography/isolate-2.docx",
+      "sha256": "0d52c76587d4d9ce3d3a1c5b0d2c60c923abaaf61fb8831a51f3b5c9d813b51e",
+      "package": "quds_office_engine",
+      "path": "fidelity-bibliography/isolate-2.docx",
+      "producer": "test/word_bibliography_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-bibliography/isolate-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-bibliography/isolate-3.docx",
+      "sha256": "f2899b49278cca8df02b5144747af1794969c4ffb268d0193ea9f1eaa8b084ac",
+      "package": "quds_office_engine",
+      "path": "fidelity-bibliography/isolate-3.docx",
+      "producer": "test/word_bibliography_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-bookmarks-legacy/bookmarks-edited-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-bookmarks-legacy/bookmarks-edited-1.docx",
+      "sha256": "dc649a3a7e31dae5a91e14ae9a0e167fc9e07f849d651b224ab132d228e5a715",
+      "package": "quds_office_engine",
+      "path": "fidelity-bookmarks-legacy/bookmarks-edited-1.docx",
+      "producer": "test/bookmark_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-bookmarks-legacy/bookmarks-edited-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-bookmarks-legacy/bookmarks-edited-2.docx",
+      "sha256": "198b1d1b1462f56dc151edfc22fcbdf7cf137cf7c7397f392dd5709fcedaa689",
+      "package": "quds_office_engine",
+      "path": "fidelity-bookmarks-legacy/bookmarks-edited-2.docx",
+      "producer": "test/bookmark_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-bookmarks-legacy/bookmarks-edited-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-bookmarks-legacy/bookmarks-edited-3.docx",
+      "sha256": "9e4383f2eba549fc692f7f39f1d00868106a49e0375692d485c9f2bed28c8fbb",
+      "package": "quds_office_engine",
+      "path": "fidelity-bookmarks-legacy/bookmarks-edited-3.docx",
+      "producer": "test/bookmark_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-bookmarks-legacy/bookmarks-imported-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-bookmarks-legacy/bookmarks-imported-1.docx",
+      "sha256": "675a62365aa409ef501abfb9ae29998169c159f9365c0062ac391671787cd534",
+      "package": "quds_office_engine",
+      "path": "fidelity-bookmarks-legacy/bookmarks-imported-1.docx",
+      "producer": "test/bookmark_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-bookmarks-legacy/bookmarks-imported-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-bookmarks-legacy/bookmarks-imported-2.docx",
+      "sha256": "263e2eaa2ea85d0657eb82ce237e4333cf218b62394187373ee70bc20dc238c6",
+      "package": "quds_office_engine",
+      "path": "fidelity-bookmarks-legacy/bookmarks-imported-2.docx",
+      "producer": "test/bookmark_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-bookmarks-legacy/bookmarks-imported-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-bookmarks-legacy/bookmarks-imported-3.docx",
+      "sha256": "788fc22f580dd7d0203080b365137ebf4275053ac920e485b3cc6567004afe15",
+      "package": "quds_office_engine",
+      "path": "fidelity-bookmarks-legacy/bookmarks-imported-3.docx",
+      "producer": "test/bookmark_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-bookmarks-legacy/bookmarks-source.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-bookmarks-legacy/bookmarks-source.docx",
+      "sha256": "acc4bc7ef24543b75d2295dbbd37a58b9a4ac5a2105cef13ef186e8178ec05b6",
+      "package": "quds_office_engine",
+      "path": "fidelity-bookmarks-legacy/bookmarks-source.docx",
+      "producer": "test/bookmark_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-bookmarks/cloned-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-bookmarks/cloned-1.docx",
+      "sha256": "7cfd0e1d5712c902f353d9e43194e5b668d98046f42ffb42072c55a465dc6086",
+      "package": "quds_office_engine",
+      "path": "fidelity-bookmarks/cloned-1.docx",
+      "producer": "test/word_bookmark_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-bookmarks/cloned-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-bookmarks/cloned-2.docx",
+      "sha256": "a3b9a163c2c29f287163e333517e377690f77fec0bb59f1039f3d5c288fca721",
+      "package": "quds_office_engine",
+      "path": "fidelity-bookmarks/cloned-2.docx",
+      "producer": "test/word_bookmark_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-bookmarks/cloned-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-bookmarks/cloned-3.docx",
+      "sha256": "49489d810140673f0c328997958c2097f78ca84521d2c598b7aa8f94d27c59b3",
+      "package": "quds_office_engine",
+      "path": "fidelity-bookmarks/cloned-3.docx",
+      "producer": "test/word_bookmark_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-bookmarks/edited-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-bookmarks/edited-1.docx",
+      "sha256": "ef431018b42befd7f378b4a713aed0530c7960ad04a51b6e0295e052b4a0b553",
+      "package": "quds_office_engine",
+      "path": "fidelity-bookmarks/edited-1.docx",
+      "producer": "test/word_bookmark_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-bookmarks/edited-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-bookmarks/edited-2.docx",
+      "sha256": "858c30c89f28dc83754851f1392060834c66de4a0e0a6efd116cf9da416801d7",
+      "package": "quds_office_engine",
+      "path": "fidelity-bookmarks/edited-2.docx",
+      "producer": "test/word_bookmark_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-bookmarks/edited-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-bookmarks/edited-3.docx",
+      "sha256": "b178926e0692a0078d8d411d42e51b4705dab74ed8d8cf94229c8277a67ca514",
+      "package": "quds_office_engine",
+      "path": "fidelity-bookmarks/edited-3.docx",
+      "producer": "test/word_bookmark_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-bookmarks/frame-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-bookmarks/frame-1.docx",
+      "sha256": "fdb481008c4e8607544cabe67143dd3f144a6110e381ea60e4631cbee96849ec",
+      "package": "quds_office_engine",
+      "path": "fidelity-bookmarks/frame-1.docx",
+      "producer": "test/word_bookmark_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-bookmarks/frame-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-bookmarks/frame-2.docx",
+      "sha256": "511a744364193ccb5e94a3cc8358841895664f84ab2c63de5c906ece89fb3bee",
+      "package": "quds_office_engine",
+      "path": "fidelity-bookmarks/frame-2.docx",
+      "producer": "test/word_bookmark_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-bookmarks/frame-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-bookmarks/frame-3.docx",
+      "sha256": "305466fd9b83681a67d8b20d406c9dcd11ca01044762716f445edb2fea478f50",
+      "package": "quds_office_engine",
+      "path": "fidelity-bookmarks/frame-3.docx",
+      "producer": "test/word_bookmark_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-bookmarks/frame-source.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-bookmarks/frame-source.docx",
+      "sha256": "84efbba2da2751e303d812860309a701b71b6424ed13c811474f37081ce3d01a",
+      "package": "quds_office_engine",
+      "path": "fidelity-bookmarks/frame-source.docx",
+      "producer": "test/word_bookmark_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-bookmarks/imported-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-bookmarks/imported-1.docx",
+      "sha256": "fabb936f8e1e85d9f1f4152eff8b0d698ccb1da94701d462c7f5277413fc4213",
+      "package": "quds_office_engine",
+      "path": "fidelity-bookmarks/imported-1.docx",
+      "producer": "test/word_bookmark_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-bookmarks/imported-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-bookmarks/imported-2.docx",
+      "sha256": "78f6530daf96d7ce4b70d8a2770f8df64ceaea1205a9f59a4ed12452003ee6cf",
+      "package": "quds_office_engine",
+      "path": "fidelity-bookmarks/imported-2.docx",
+      "producer": "test/word_bookmark_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-bookmarks/imported-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-bookmarks/imported-3.docx",
+      "sha256": "d679c9841f7388acd51f4489c6674ea796a7a047f9bf11302f72b4c5e7659504",
+      "package": "quds_office_engine",
+      "path": "fidelity-bookmarks/imported-3.docx",
+      "producer": "test/word_bookmark_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-bookmarks/source.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-bookmarks/source.docx",
+      "sha256": "b469fc9d8ffc372e8dd6d84fc506acd19e47074262f9717e1fc0c6995758ea83",
+      "package": "quds_office_engine",
+      "path": "fidelity-bookmarks/source.docx",
+      "producer": "test/word_bookmark_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-comment-threads/threads-edited-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-comment-threads/threads-edited-1.docx",
+      "sha256": "7dedab79147ae5ec6c5c1cacc89d283c1e3cd39c639a6cb615a1cfaa376c430c",
+      "package": "quds_office_engine",
+      "path": "fidelity-comment-threads/threads-edited-1.docx",
+      "producer": "test/comment_thread_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-comment-threads/threads-edited-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-comment-threads/threads-edited-2.docx",
+      "sha256": "338ead93cc3d486f9e919ab57b3a25fc97aaee5cbb1963d6a3ee4253e2949c10",
+      "package": "quds_office_engine",
+      "path": "fidelity-comment-threads/threads-edited-2.docx",
+      "producer": "test/comment_thread_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-comment-threads/threads-edited-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-comment-threads/threads-edited-3.docx",
+      "sha256": "41dabd3542c3dea1e56b93d415f842a64995e59585d715fbccce10e5818cd8a0",
+      "package": "quds_office_engine",
+      "path": "fidelity-comment-threads/threads-edited-3.docx",
+      "producer": "test/comment_thread_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-comment-threads/threads-imported-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-comment-threads/threads-imported-1.docx",
+      "sha256": "a829d74fd6dca75d61d75d95e06504d43351346c90b8ab1d2eaf485bf126b2b6",
+      "package": "quds_office_engine",
+      "path": "fidelity-comment-threads/threads-imported-1.docx",
+      "producer": "test/comment_thread_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-comment-threads/threads-imported-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-comment-threads/threads-imported-2.docx",
+      "sha256": "d6efce1cf211778abac79692ace451780bab703380dca3c804ff486aa9048781",
+      "package": "quds_office_engine",
+      "path": "fidelity-comment-threads/threads-imported-2.docx",
+      "producer": "test/comment_thread_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-comment-threads/threads-imported-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-comment-threads/threads-imported-3.docx",
+      "sha256": "3b8db9ed33acc279f0e2b3a6459996a8d9f4836669fe994fea6be728b31bf153",
+      "package": "quds_office_engine",
+      "path": "fidelity-comment-threads/threads-imported-3.docx",
+      "producer": "test/comment_thread_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-comment-threads/threads-source.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-comment-threads/threads-source.docx",
+      "sha256": "d1763533e3733a93398a0cea7043b9d188f98f5a403ff5b7f3ed5869d654e9a4",
+      "package": "quds_office_engine",
+      "path": "fidelity-comment-threads/threads-source.docx",
+      "producer": "test/comment_thread_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-content-controls-legacy/controls-edited-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-content-controls-legacy/controls-edited-1.docx",
+      "sha256": "dadb10508a64b3a6b193ba4cbfc3bc5844a838429777d9ad2d3c87640085bf1d",
+      "package": "quds_office_engine",
+      "path": "fidelity-content-controls-legacy/controls-edited-1.docx",
+      "producer": "test/content_control_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-content-controls-legacy/controls-edited-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-content-controls-legacy/controls-edited-2.docx",
+      "sha256": "c278cc9ada481716790a7531fb133628616b09a580f21ade32e51f506defa9b0",
+      "package": "quds_office_engine",
+      "path": "fidelity-content-controls-legacy/controls-edited-2.docx",
+      "producer": "test/content_control_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-content-controls-legacy/controls-edited-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-content-controls-legacy/controls-edited-3.docx",
+      "sha256": "1d85b575e62b076b0fa2ce129a7248a9b3508692a7db4ed8bddf2b8eeb3bbbfe",
+      "package": "quds_office_engine",
+      "path": "fidelity-content-controls-legacy/controls-edited-3.docx",
+      "producer": "test/content_control_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-content-controls-legacy/controls-imported-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-content-controls-legacy/controls-imported-1.docx",
+      "sha256": "02350ca28c23e03a4b0fbfc2412a040bab1aad006591823043d5171331ec072f",
+      "package": "quds_office_engine",
+      "path": "fidelity-content-controls-legacy/controls-imported-1.docx",
+      "producer": "test/content_control_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-content-controls-legacy/controls-imported-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-content-controls-legacy/controls-imported-2.docx",
+      "sha256": "83f7da71c3930aedcd53fc20998556e95701f7914d27306b45aac7682a99bfa4",
+      "package": "quds_office_engine",
+      "path": "fidelity-content-controls-legacy/controls-imported-2.docx",
+      "producer": "test/content_control_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-content-controls-legacy/controls-imported-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-content-controls-legacy/controls-imported-3.docx",
+      "sha256": "5446fd224ef9ce527ca79b636bd2a3aced34e82104cb0e3d4718090cd56ec567",
+      "package": "quds_office_engine",
+      "path": "fidelity-content-controls-legacy/controls-imported-3.docx",
+      "producer": "test/content_control_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-content-controls-legacy/controls-source.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-content-controls-legacy/controls-source.docx",
+      "sha256": "a59cb0915fdadaa579bd28f028da5be1df2c8e036362e8e1fe21b789053b5e29",
+      "package": "quds_office_engine",
+      "path": "fidelity-content-controls-legacy/controls-source.docx",
+      "producer": "test/content_control_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-content-controls-legacy/legacy-frame-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-content-controls-legacy/legacy-frame-1.docx",
+      "sha256": "68902d606a51e4a4db841e467bde7477af0c09a656cc725bcc9f126fdc40806d",
+      "package": "quds_office_engine",
+      "path": "fidelity-content-controls-legacy/legacy-frame-1.docx",
+      "producer": "test/content_control_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-content-controls-legacy/legacy-frame-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-content-controls-legacy/legacy-frame-2.docx",
+      "sha256": "24359c3c192048a38d56a40c521b4baac95a0ac20d627d07d08c5695031a238b",
+      "package": "quds_office_engine",
+      "path": "fidelity-content-controls-legacy/legacy-frame-2.docx",
+      "producer": "test/content_control_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-content-controls-legacy/legacy-frame-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-content-controls-legacy/legacy-frame-3.docx",
+      "sha256": "cd7deae87642e40647520d8a78bbbe77a98177b18b8e48f3be39082e7eeb3e3a",
+      "package": "quds_office_engine",
+      "path": "fidelity-content-controls-legacy/legacy-frame-3.docx",
+      "producer": "test/content_control_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-content-controls/direct-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-content-controls/direct-1.docx",
+      "sha256": "1438adf873b0b0fcbff3d1a147a15034e1de71d11b10fab05176b5fa906d1225",
+      "package": "quds_office_engine",
+      "path": "fidelity-content-controls/direct-1.docx",
+      "producer": "test/word_content_control_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-content-controls/direct-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-content-controls/direct-2.docx",
+      "sha256": "2ca98ebadb2b0b11601683b25efe9701b407c45c1abd06f8f42032bc953e9be0",
+      "package": "quds_office_engine",
+      "path": "fidelity-content-controls/direct-2.docx",
+      "producer": "test/word_content_control_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-content-controls/direct-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-content-controls/direct-3.docx",
+      "sha256": "384b2bb9c037f8861070ba84d2b398d28ec04620e2c7d42f6a85ab0b067263cd",
+      "package": "quds_office_engine",
+      "path": "fidelity-content-controls/direct-3.docx",
+      "producer": "test/word_content_control_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-content-controls/imported-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-content-controls/imported-1.docx",
+      "sha256": "1b2771a3cca7cf2264bb284ff02f78ac98f32be83957ed1257e16aeb74477324",
+      "package": "quds_office_engine",
+      "path": "fidelity-content-controls/imported-1.docx",
+      "producer": "test/word_content_control_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-content-controls/imported-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-content-controls/imported-2.docx",
+      "sha256": "e124885eadc880c3fcf36dbdcd4c60d9c955bfed19be16078a0a513dcd058982",
+      "package": "quds_office_engine",
+      "path": "fidelity-content-controls/imported-2.docx",
+      "producer": "test/word_content_control_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-content-controls/imported-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-content-controls/imported-3.docx",
+      "sha256": "e3a55a24ca76258c1ac231a843d411b1249bdcd4394dfefbc08f17ab8665d59a",
+      "package": "quds_office_engine",
+      "path": "fidelity-content-controls/imported-3.docx",
+      "producer": "test/word_content_control_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-content-controls/isolate-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-content-controls/isolate-1.docx",
+      "sha256": "0a265503e55815d17e29ebe22adf454426864b6241102283fe546bb94562b7eb",
+      "package": "quds_office_engine",
+      "path": "fidelity-content-controls/isolate-1.docx",
+      "producer": "test/word_content_control_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-content-controls/isolate-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-content-controls/isolate-2.docx",
+      "sha256": "d665058ba57c5c05c78b751ea4dd8a3dd164a0e417e3a7b8ed12beeca6690517",
+      "package": "quds_office_engine",
+      "path": "fidelity-content-controls/isolate-2.docx",
+      "producer": "test/word_content_control_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-content-controls/isolate-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-content-controls/isolate-3.docx",
+      "sha256": "952cf1006203519365597f139a4f200a4b09834ded76413d45ffda8bbe5c9d1d",
+      "package": "quds_office_engine",
+      "path": "fidelity-content-controls/isolate-3.docx",
+      "producer": "test/word_content_control_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-content-controls/source.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-content-controls/source.docx",
+      "sha256": "5af5646742521142abb6295e0962e84a21de75f5959d66aa524f43ab48c11a40",
+      "package": "quds_office_engine",
+      "path": "fidelity-content-controls/source.docx",
+      "producer": "test/word_content_control_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-frame-wrap/none-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-frame-wrap/none-1.docx",
+      "sha256": "d7798363b6b156c1129c7d7920c898a39b4ff067858e69f29b102023ae8b0714",
+      "package": "quds_office_engine",
+      "path": "fidelity-frame-wrap/none-1.docx",
+      "producer": "test/word_frame_wrap_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-frame-wrap/none-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-frame-wrap/none-2.docx",
+      "sha256": "572d76df7c886603390f1f10418569dcaf2d94cb038e831fd3c25f7e97517605",
+      "package": "quds_office_engine",
+      "path": "fidelity-frame-wrap/none-2.docx",
+      "producer": "test/word_frame_wrap_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-frame-wrap/none-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-frame-wrap/none-3.docx",
+      "sha256": "63e5353fe0d89f276485836f022879bd276e987320bac1e962469ba94cbf0acc",
+      "package": "quds_office_engine",
+      "path": "fidelity-frame-wrap/none-3.docx",
+      "producer": "test/word_frame_wrap_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-frame-wrap/none-source.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-frame-wrap/none-source.docx",
+      "sha256": "956a75351e281d6fcaea42829e79262c4567eba6113ea67a82fc191a61d35543",
+      "package": "quds_office_engine",
+      "path": "fidelity-frame-wrap/none-source.docx",
+      "producer": "test/word_frame_wrap_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-frame-wrap/square-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-frame-wrap/square-1.docx",
+      "sha256": "8eeeb2ed564af33843f66175beb90392b22fd31d9946b24edb69a35a4bc03953",
+      "package": "quds_office_engine",
+      "path": "fidelity-frame-wrap/square-1.docx",
+      "producer": "test/word_frame_wrap_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-frame-wrap/square-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-frame-wrap/square-2.docx",
+      "sha256": "bb7b8f4ef3147e1976f05930a716d228245677d7f7635ae10be7b68948995164",
+      "package": "quds_office_engine",
+      "path": "fidelity-frame-wrap/square-2.docx",
+      "producer": "test/word_frame_wrap_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-frame-wrap/square-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-frame-wrap/square-3.docx",
+      "sha256": "f564f7f2206159ebb93229c762ac961f40e795010250c5ca946a2e75b2b1d423",
+      "package": "quds_office_engine",
+      "path": "fidelity-frame-wrap/square-3.docx",
+      "producer": "test/word_frame_wrap_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-frame-wrap/square-source.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-frame-wrap/square-source.docx",
+      "sha256": "cc13ec6ed3be7cfe0c37c56c0bcfd5fea15b4d5e0901ca896f18b111690ad567",
+      "package": "quds_office_engine",
+      "path": "fidelity-frame-wrap/square-source.docx",
+      "producer": "test/word_frame_wrap_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-frame-wrap/topBottom-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-frame-wrap/topBottom-1.docx",
+      "sha256": "228e1baa20fbcbfee68ed3256e07f4844caf71bfd223d3a74f7bd786f960424a",
+      "package": "quds_office_engine",
+      "path": "fidelity-frame-wrap/topBottom-1.docx",
+      "producer": "test/word_frame_wrap_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-frame-wrap/topBottom-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-frame-wrap/topBottom-2.docx",
+      "sha256": "3e4c1fec6e8e6ba8ddc08415e02584422a5013d5e9f32d64df205c3c5c39e5ca",
+      "package": "quds_office_engine",
+      "path": "fidelity-frame-wrap/topBottom-2.docx",
+      "producer": "test/word_frame_wrap_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-frame-wrap/topBottom-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-frame-wrap/topBottom-3.docx",
+      "sha256": "2af1820e4ab08bb14e954ae8e9ac3ac704d5e48f2352b8c64301035d2e4310d0",
+      "package": "quds_office_engine",
+      "path": "fidelity-frame-wrap/topBottom-3.docx",
+      "producer": "test/word_frame_wrap_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-frame-wrap/topBottom-source.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-frame-wrap/topBottom-source.docx",
+      "sha256": "e14aaadf28e887ae68c5492226c9d42d3954485be35511ec539bf27fe9bbf0ba",
+      "package": "quds_office_engine",
+      "path": "fidelity-frame-wrap/topBottom-source.docx",
+      "producer": "test/word_frame_wrap_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-image/replaced-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-image/replaced-1.docx",
+      "sha256": "ced91742a1c1ef2f4cb9757f4f8d7db49822d62a1877eb98512e5b9e92723542",
+      "package": "quds_office_engine",
+      "path": "fidelity-image/replaced-1.docx",
+      "producer": "test/office_steps_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-image/replaced-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-image/replaced-2.docx",
+      "sha256": "0c82452ff642b9c3d9c1dfab22c5d72c27c0d6f695331f989f01cf589e1d51a6",
+      "package": "quds_office_engine",
+      "path": "fidelity-image/replaced-2.docx",
+      "producer": "test/office_steps_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-image/replaced-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-image/replaced-3.docx",
+      "sha256": "0f2d10a72e24910065412c82633a0378073f151a76f386eca135457fd2cbe835",
+      "package": "quds_office_engine",
+      "path": "fidelity-image/replaced-3.docx",
+      "producer": "test/office_steps_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-inline-fields/direct-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-inline-fields/direct-1.docx",
+      "sha256": "31da81fd7e99ff47ebe775d75a12e5d80a2c3134d23b1ee075c46402691ae598",
+      "package": "quds_office_engine",
+      "path": "fidelity-inline-fields/direct-1.docx",
+      "producer": "test/inline_field_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-inline-fields/direct-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-inline-fields/direct-2.docx",
+      "sha256": "99621633e266ffd713f93d91b5465e7a7c226c94a9f22c9ad1c38f821211020c",
+      "package": "quds_office_engine",
+      "path": "fidelity-inline-fields/direct-2.docx",
+      "producer": "test/inline_field_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-inline-fields/direct-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-inline-fields/direct-3.docx",
+      "sha256": "2c808c628899a0a96700aee5d78dfa74db7d27415751a632f4eeae84a43b1cd0",
+      "package": "quds_office_engine",
+      "path": "fidelity-inline-fields/direct-3.docx",
+      "producer": "test/inline_field_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-inline-fields/isolate-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-inline-fields/isolate-1.docx",
+      "sha256": "de0f7130489fcc742c429bf19030cbc00dde074e8031d5673ee828299856ce66",
+      "package": "quds_office_engine",
+      "path": "fidelity-inline-fields/isolate-1.docx",
+      "producer": "test/inline_field_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-inline-fields/isolate-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-inline-fields/isolate-2.docx",
+      "sha256": "95caac97e08e5b4478077dd1a4f7d80de10b02e685471f7869a4e2cf1c50265d",
+      "package": "quds_office_engine",
+      "path": "fidelity-inline-fields/isolate-2.docx",
+      "producer": "test/inline_field_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-inline-fields/isolate-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-inline-fields/isolate-3.docx",
+      "sha256": "f06d95c605da71f401df1e1e247cf167b37e51c7903471e215674fe08210b0ee",
+      "package": "quds_office_engine",
+      "path": "fidelity-inline-fields/isolate-3.docx",
+      "producer": "test/inline_field_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-lists/restarted-0.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-lists/restarted-0.docx",
+      "sha256": "fb51cca1d608faf7e0a20c8444061f287a4d7d94aa21aea3f1a15c41dd32dab0",
+      "package": "quds_office_engine",
+      "path": "fidelity-lists/restarted-0.docx",
+      "producer": "test/list_restart_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-lists/restarted-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-lists/restarted-1.docx",
+      "sha256": "f88426c92205734b97cf77610e21e816332a02badf233dcc156f5411b37e64e5",
+      "package": "quds_office_engine",
+      "path": "fidelity-lists/restarted-1.docx",
+      "producer": "test/list_restart_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-lists/restarted-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-lists/restarted-2.docx",
+      "sha256": "a1f9f6fb19cfb1f39363be634c8ebf40def691cd613e28ffc114d7a80c9474c3",
+      "package": "quds_office_engine",
+      "path": "fidelity-lists/restarted-2.docx",
+      "producer": "test/list_restart_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-native/created-pivot-1.xlsx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-native/created-pivot-1.xlsx",
+      "sha256": "913b87ca7e37472ce980272c7277f044754d409160b982e94bde58b2805bcd74",
+      "package": "quds_office_engine",
+      "path": "fidelity-native/created-pivot-1.xlsx",
+      "producer": "test/native_spreadsheet_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-native/created-pivot-2.xlsx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-native/created-pivot-2.xlsx",
+      "sha256": "9db3b6abf1cd91f9f56e96e78ce761f2e6705386af865ecfd0cdf690c023be55",
+      "package": "quds_office_engine",
+      "path": "fidelity-native/created-pivot-2.xlsx",
+      "producer": "test/native_spreadsheet_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-native/created-pivot-3.xlsx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-native/created-pivot-3.xlsx",
+      "sha256": "0b34aea65ed4a67e80afa1bb011386659f7aac69528fd09d55ee75f8e63d4771",
+      "package": "quds_office_engine",
+      "path": "fidelity-native/created-pivot-3.xlsx",
+      "producer": "test/native_spreadsheet_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-native/native-sheet-edited-1.xlsx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-native/native-sheet-edited-1.xlsx",
+      "sha256": "60533ec6a236bd18d87021f405ca5840862ad429181e273a76e0af809da4bbf9",
+      "package": "quds_office_engine",
+      "path": "fidelity-native/native-sheet-edited-1.xlsx",
+      "producer": "test/native_spreadsheet_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-native/native-sheet-edited-2.xlsx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-native/native-sheet-edited-2.xlsx",
+      "sha256": "3d4dd127e9999f4afbc9aa7c09dd77d381ee943085cbabee8b89b4d1726e9d39",
+      "package": "quds_office_engine",
+      "path": "fidelity-native/native-sheet-edited-2.xlsx",
+      "producer": "test/native_spreadsheet_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-native/native-sheet-edited-3.xlsx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-native/native-sheet-edited-3.xlsx",
+      "sha256": "5c13f5d5ba6a00faf7f931356150c67c5b23ac9ba5d273bd439e1b38535d007e",
+      "package": "quds_office_engine",
+      "path": "fidelity-native/native-sheet-edited-3.xlsx",
+      "producer": "test/native_spreadsheet_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-native/native-sheet-imported-1.xlsx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-native/native-sheet-imported-1.xlsx",
+      "sha256": "18ab04bc8ea3d5a3bf46e26bc46326a6efe255fd833ce016c1f68f4b92610629",
+      "package": "quds_office_engine",
+      "path": "fidelity-native/native-sheet-imported-1.xlsx",
+      "producer": "test/native_spreadsheet_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-native/native-sheet-imported-2.xlsx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-native/native-sheet-imported-2.xlsx",
+      "sha256": "1556c020b03a168982c45c7d1530889897921f9d303d762476445acf74ce9395",
+      "package": "quds_office_engine",
+      "path": "fidelity-native/native-sheet-imported-2.xlsx",
+      "producer": "test/native_spreadsheet_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-native/native-sheet-imported-3.xlsx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-native/native-sheet-imported-3.xlsx",
+      "sha256": "f7f63c6d40a57541f3bafdeabe3d788508dc95cd52a23afea6f025ada9777c7d",
+      "package": "quds_office_engine",
+      "path": "fidelity-native/native-sheet-imported-3.xlsx",
+      "producer": "test/native_spreadsheet_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-native/native-slides-1.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-native/native-slides-1.pptx",
+      "sha256": "4d1bf362cef7f57cbcc4137174a79445a719aa7e59d46aa8b7e119c42b2ba876",
+      "package": "quds_office_engine",
+      "path": "fidelity-native/native-slides-1.pptx",
+      "producer": "test/native_presentation_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-native/native-slides-2.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-native/native-slides-2.pptx",
+      "sha256": "7b4a87779855e0f7a497fab003a927605556e82b596a93b3ffa5b8ccf87f3a59",
+      "package": "quds_office_engine",
+      "path": "fidelity-native/native-slides-2.pptx",
+      "producer": "test/native_presentation_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-native/native-slides-3.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-native/native-slides-3.pptx",
+      "sha256": "7a889b0b9c953598ece098f86814fa37abb4df559540cbe6ca890e717e59f41c",
+      "package": "quds_office_engine",
+      "path": "fidelity-native/native-slides-3.pptx",
+      "producer": "test/native_presentation_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-native/native-slides-edited-1.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-native/native-slides-edited-1.pptx",
+      "sha256": "c6a98ec053dfe1e8c7b97c959acdbd39e6dada72376a6703f3e6ba40b78a740b",
+      "package": "quds_office_engine",
+      "path": "fidelity-native/native-slides-edited-1.pptx",
+      "producer": "test/native_presentation_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-native/native-slides-edited-2.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-native/native-slides-edited-2.pptx",
+      "sha256": "2e84d089824e54d541bcd33a3e8bd2d46dddb8fa316ca7adb5e8a03617a58b74",
+      "package": "quds_office_engine",
+      "path": "fidelity-native/native-slides-edited-2.pptx",
+      "producer": "test/native_presentation_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-native/native-slides-edited-3.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-native/native-slides-edited-3.pptx",
+      "sha256": "5e1ae1c0e56225d33c34201c870bd6af90aaa36e791eb1f44c7d2617aebb1874",
+      "package": "quds_office_engine",
+      "path": "fidelity-native/native-slides-edited-3.pptx",
+      "producer": "test/native_presentation_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-note-markers-legacy/markers-edited-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-note-markers-legacy/markers-edited-1.docx",
+      "sha256": "cb270d3b61b6c6426e6097e62c987bf9a6eb9130018d73f587df1e777b59bc44",
+      "package": "quds_office_engine",
+      "path": "fidelity-note-markers-legacy/markers-edited-1.docx",
+      "producer": "test/note_marker_legacy_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-note-markers-legacy/markers-edited-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-note-markers-legacy/markers-edited-2.docx",
+      "sha256": "295fa2fa0f73606b2fd60de7ed0ff0897030dd2754d1dffa980ab05d2b05877c",
+      "package": "quds_office_engine",
+      "path": "fidelity-note-markers-legacy/markers-edited-2.docx",
+      "producer": "test/note_marker_legacy_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-note-markers-legacy/markers-edited-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-note-markers-legacy/markers-edited-3.docx",
+      "sha256": "6ee37ceb34fb510cad3336d6a8db851b7d11de31dd158242809d4ade1683b62e",
+      "package": "quds_office_engine",
+      "path": "fidelity-note-markers-legacy/markers-edited-3.docx",
+      "producer": "test/note_marker_legacy_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-note-markers-legacy/markers-imported-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-note-markers-legacy/markers-imported-1.docx",
+      "sha256": "506fac8133c6fafb8a2b3c6f4c05c6632c12be47533a2b5602226ff3c2c42db2",
+      "package": "quds_office_engine",
+      "path": "fidelity-note-markers-legacy/markers-imported-1.docx",
+      "producer": "test/note_marker_legacy_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-note-markers-legacy/markers-imported-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-note-markers-legacy/markers-imported-2.docx",
+      "sha256": "4cba002652245756d542efa083d697ab52cb2cf941bf0a24bc58e4b9f38fe203",
+      "package": "quds_office_engine",
+      "path": "fidelity-note-markers-legacy/markers-imported-2.docx",
+      "producer": "test/note_marker_legacy_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-note-markers-legacy/markers-imported-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-note-markers-legacy/markers-imported-3.docx",
+      "sha256": "625d4611736e43439bb6b95aa5c0c2f35f73aa02868fd282233db2d802cd4693",
+      "package": "quds_office_engine",
+      "path": "fidelity-note-markers-legacy/markers-imported-3.docx",
+      "producer": "test/note_marker_legacy_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-note-markers-legacy/markers-source.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-note-markers-legacy/markers-source.docx",
+      "sha256": "6f4e979c69c4a942796ea512490b791f8b3ea99a966c75593c1b2613880e7536",
+      "package": "quds_office_engine",
+      "path": "fidelity-note-markers-legacy/markers-source.docx",
+      "producer": "test/note_marker_legacy_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-note-markers/cloned-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-note-markers/cloned-1.docx",
+      "sha256": "0b0ca4c66b492b73ae3b7512623d2e36ac6b7b97f164b48d9491100b6761aeae",
+      "package": "quds_office_engine",
+      "path": "fidelity-note-markers/cloned-1.docx",
+      "producer": "test/note_marker_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-note-markers/cloned-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-note-markers/cloned-2.docx",
+      "sha256": "1e8bfd0252644eabd8e70c88cefbe84efd4065a1e28f4b91c60b91000efd3c0a",
+      "package": "quds_office_engine",
+      "path": "fidelity-note-markers/cloned-2.docx",
+      "producer": "test/note_marker_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-note-markers/cloned-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-note-markers/cloned-3.docx",
+      "sha256": "35db742bd2804a2f73356b8a38836ca9d1417e2a101b2145485596e3afbe7658",
+      "package": "quds_office_engine",
+      "path": "fidelity-note-markers/cloned-3.docx",
+      "producer": "test/note_marker_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-note-markers/edited-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-note-markers/edited-1.docx",
+      "sha256": "29d9d0ff1e9e35fea9fcfba225fc17221f8339abda1ab10dbe882cc0a9d34dc1",
+      "package": "quds_office_engine",
+      "path": "fidelity-note-markers/edited-1.docx",
+      "producer": "test/note_marker_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-note-markers/edited-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-note-markers/edited-2.docx",
+      "sha256": "02fb13f88c972dd985dea1e311b897b4dd62c5f5dfcbe77787b75684dd8a7d19",
+      "package": "quds_office_engine",
+      "path": "fidelity-note-markers/edited-2.docx",
+      "producer": "test/note_marker_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-note-markers/edited-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-note-markers/edited-3.docx",
+      "sha256": "6f887693031dd4e5f218a12df11510fcc102e227a32706b8d77f1f0dbf6982c2",
+      "package": "quds_office_engine",
+      "path": "fidelity-note-markers/edited-3.docx",
+      "producer": "test/note_marker_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-note-markers/imported-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-note-markers/imported-1.docx",
+      "sha256": "ff19e25c1ad0007cfcebec4d306dbe336dfe809cdf65e54d8cebaa73302c8245",
+      "package": "quds_office_engine",
+      "path": "fidelity-note-markers/imported-1.docx",
+      "producer": "test/note_marker_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-note-markers/imported-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-note-markers/imported-2.docx",
+      "sha256": "e82b77c0f8d66aaa4aefb4969baefbfa9f5efc9e4fa95305306e127aa0f7c20d",
+      "package": "quds_office_engine",
+      "path": "fidelity-note-markers/imported-2.docx",
+      "producer": "test/note_marker_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-note-markers/imported-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-note-markers/imported-3.docx",
+      "sha256": "703f4da51a250dc61bb5f32fda7441392fb8f684f50379b7de8bb1085b6711f7",
+      "package": "quds_office_engine",
+      "path": "fidelity-note-markers/imported-3.docx",
+      "producer": "test/note_marker_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-note-markers/source.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-note-markers/source.docx",
+      "sha256": "24d80e959d01435191ccaaa6d31bed1e214becbddef6eef8b87b69d79d357a48",
+      "package": "quds_office_engine",
+      "path": "fidelity-note-markers/source.docx",
+      "producer": "test/note_marker_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-notes/edited-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-notes/edited-1.docx",
+      "sha256": "841baf26b62b96298e339596cc9886687bc2d2582c16d59821a16909035c9815",
+      "package": "quds_office_engine",
+      "path": "fidelity-notes/edited-1.docx",
+      "producer": "tool/fidelity/notes.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-notes/edited-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-notes/edited-2.docx",
+      "sha256": "681fa0783aa5297e2194d9e5a0164c5d96aaf7c3241e770c7b5b9c7eab86255c",
+      "package": "quds_office_engine",
+      "path": "fidelity-notes/edited-2.docx",
+      "producer": "tool/fidelity/notes.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-notes/edited-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-notes/edited-3.docx",
+      "sha256": "c0dc6de323556c33b196b3d51f183df5016e83e07ba08b80940ba5166cc2bb7c",
+      "package": "quds_office_engine",
+      "path": "fidelity-notes/edited-3.docx",
+      "producer": "tool/fidelity/notes.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-notes/source.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-notes/source.docx",
+      "sha256": "11550ac3f3c06bd4093b61bf16cc879827587a53c1cf0abaf8dcbdffc19da59e",
+      "package": "quds_office_engine",
+      "path": "fidelity-notes/source.docx",
+      "producer": "tool/fidelity/notes.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-notes/unchanged-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-notes/unchanged-1.docx",
+      "sha256": "a667b0188a89c13dca3566642b3392807c27f4be059b34fd13f995817841cc1a",
+      "package": "quds_office_engine",
+      "path": "fidelity-notes/unchanged-1.docx",
+      "producer": "tool/fidelity/notes.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-notes/unchanged-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-notes/unchanged-2.docx",
+      "sha256": "9cab4e6ca8c1c64153853150d84c366df07369f5770584d1860794e30f8d4cec",
+      "package": "quds_office_engine",
+      "path": "fidelity-notes/unchanged-2.docx",
+      "producer": "tool/fidelity/notes.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-notes/unchanged-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-notes/unchanged-3.docx",
+      "sha256": "a2882bd3753cbcc42f1987a475ff35635bb86b7eb43aafd19c5117d3ff41fd0d",
+      "package": "quds_office_engine",
+      "path": "fidelity-notes/unchanged-3.docx",
+      "producer": "tool/fidelity/notes.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-opaque/opaque-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-opaque/opaque-1.docx",
+      "sha256": "254289a579639e03d746b48c6c07f800f222e98d2d30cfbf5df4f05559005373",
+      "package": "quds_office_engine",
+      "path": "fidelity-opaque/opaque-1.docx",
+      "producer": "test/opaque_word_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-opaque/opaque-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-opaque/opaque-2.docx",
+      "sha256": "5ad20ddd1c4d3116529d8593ce814cd62fb46a27d1a0e2110130390a852285df",
+      "package": "quds_office_engine",
+      "path": "fidelity-opaque/opaque-2.docx",
+      "producer": "test/opaque_word_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-opaque/opaque-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-opaque/opaque-3.docx",
+      "sha256": "044e62d3423c36e51c96599a5166487b878152989cfe682dc9b2639ea17d115b",
+      "package": "quds_office_engine",
+      "path": "fidelity-opaque/opaque-3.docx",
+      "producer": "test/opaque_word_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-revision-stories/direct-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-revision-stories/direct-1.docx",
+      "sha256": "43692c8e570db95231a3b4e58fb511354e0550e38afe0988bff6cdb66b2205f8",
+      "package": "quds_office_engine",
+      "path": "fidelity-revision-stories/direct-1.docx",
+      "producer": "test/word_revision_story_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-revision-stories/direct-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-revision-stories/direct-2.docx",
+      "sha256": "e2fa77446cfa535a309f0a92e6a34ab8a00c853158654d121c8943dfe9062c6b",
+      "package": "quds_office_engine",
+      "path": "fidelity-revision-stories/direct-2.docx",
+      "producer": "test/word_revision_story_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-revision-stories/direct-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-revision-stories/direct-3.docx",
+      "sha256": "9f42a2cda48c741327fa21b2f3d153fd144a28675b140bcc8a1745d6b9178304",
+      "package": "quds_office_engine",
+      "path": "fidelity-revision-stories/direct-3.docx",
+      "producer": "test/word_revision_story_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-revision-stories/isolate-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-revision-stories/isolate-1.docx",
+      "sha256": "806edc7390107734991c433506650b3bc90dd797feddb66bbd17991167023b06",
+      "package": "quds_office_engine",
+      "path": "fidelity-revision-stories/isolate-1.docx",
+      "producer": "test/word_revision_story_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-revision-stories/isolate-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-revision-stories/isolate-2.docx",
+      "sha256": "a34de3d28e23f679bc05a062fb223e10c7967f20f4ca142cb8bd58af4e7cfe9f",
+      "package": "quds_office_engine",
+      "path": "fidelity-revision-stories/isolate-2.docx",
+      "producer": "test/word_revision_story_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-revision-stories/isolate-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-revision-stories/isolate-3.docx",
+      "sha256": "fd41862b9827b6f8e22c6072ffe64e5642dba2e5dddb96dc35dc9e86e7b88e2f",
+      "package": "quds_office_engine",
+      "path": "fidelity-revision-stories/isolate-3.docx",
+      "producer": "test/word_revision_story_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-schema/column-metadata-1.xlsx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-schema/column-metadata-1.xlsx",
+      "sha256": "5e5275bf4581ec241cde1a7156eafcee48301b9efcb9b674d61df5dc9fdfd13b",
+      "package": "quds_office_engine",
+      "path": "fidelity-schema/column-metadata-1.xlsx",
+      "producer": "test/sheet_schema_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-schema/column-metadata-2.xlsx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-schema/column-metadata-2.xlsx",
+      "sha256": "ad8d55fecf67678b75bba85d55932ce9c6b72c1958472adb3edf371057abdbf7",
+      "package": "quds_office_engine",
+      "path": "fidelity-schema/column-metadata-2.xlsx",
+      "producer": "test/sheet_schema_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-schema/column-metadata-3.xlsx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-schema/column-metadata-3.xlsx",
+      "sha256": "0e608f7fe615cc7d88b74072deff2e4d4a62cf1fa0dd3fd9bdcc44899622b8d3",
+      "package": "quds_office_engine",
+      "path": "fidelity-schema/column-metadata-3.xlsx",
+      "producer": "test/sheet_schema_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-schema/sheet-style-1.xlsx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-schema/sheet-style-1.xlsx",
+      "sha256": "624c40c2e0bc5559897d3a1a7e47da384f417fcf01c5700660ca99bfec8ba8a2",
+      "package": "quds_office_engine",
+      "path": "fidelity-schema/sheet-style-1.xlsx",
+      "producer": "test/sheet_schema_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-schema/sheet-style-2.xlsx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-schema/sheet-style-2.xlsx",
+      "sha256": "1bd6533879022189d9f997175e8aeafa53ae724549bbb148ecd6edea5840dc12",
+      "package": "quds_office_engine",
+      "path": "fidelity-schema/sheet-style-2.xlsx",
+      "producer": "test/sheet_schema_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-schema/sheet-style-3.xlsx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-schema/sheet-style-3.xlsx",
+      "sha256": "14d7af52b42d781385d61dd5ca0dd8c9c67b5305f399f2c9d727ae93fea22c8a",
+      "package": "quds_office_engine",
+      "path": "fidelity-schema/sheet-style-3.xlsx",
+      "producer": "test/sheet_schema_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-script.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-script.docx",
+      "sha256": "a77b6894352bcd29fb6602b0d050904b60aedc34043ebce06719620aac627e99",
+      "package": "quds_office_engine",
+      "path": "fidelity-script.docx",
+      "producer": "tool/fidelity/check.sh"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-scripted/sheet/edited.xlsx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-scripted/sheet/edited.xlsx",
+      "sha256": "91cd85ec8eba365ea4a9767508913098939dd0fb3d75bacb46d7eb34c20e6788",
+      "package": "quds_office_engine",
+      "path": "fidelity-scripted/sheet/edited.xlsx",
+      "producer": "test/scripted_workflows_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-scripted/sheet/roundtrip-1.xlsx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-scripted/sheet/roundtrip-1.xlsx",
+      "sha256": "1e7c9916eeeed8120aa32430c7f50e0ccf7f5de27fec7122c6ff3f6621d64874",
+      "package": "quds_office_engine",
+      "path": "fidelity-scripted/sheet/roundtrip-1.xlsx",
+      "producer": "test/scripted_workflows_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-scripted/sheet/roundtrip-2.xlsx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-scripted/sheet/roundtrip-2.xlsx",
+      "sha256": "2716fa09697ce5b2bf7160f3c547c1b4a5e7e7b5a1337dda43a5a35c966edd58",
+      "package": "quds_office_engine",
+      "path": "fidelity-scripted/sheet/roundtrip-2.xlsx",
+      "producer": "test/scripted_workflows_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-scripted/sheet/roundtrip-3.xlsx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-scripted/sheet/roundtrip-3.xlsx",
+      "sha256": "dfd20b2bf2ed58d6e8fbd6479b8406950cd2d749a4a63001dd051f74fa837f62",
+      "package": "quds_office_engine",
+      "path": "fidelity-scripted/sheet/roundtrip-3.xlsx",
+      "producer": "test/scripted_workflows_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-scripted/slide/edited.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-scripted/slide/edited.pptx",
+      "sha256": "cc2a1b9c481f1cccd8550f9d9ac008637aa38d4297bf609ba6552cb0b2295c4c",
+      "package": "quds_office_engine",
+      "path": "fidelity-scripted/slide/edited.pptx",
+      "producer": "test/scripted_workflows_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-scripted/slide/roundtrip-1.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-scripted/slide/roundtrip-1.pptx",
+      "sha256": "aedd49ab4902be40e7562c659c29c9a9533796e5ad856aaf793ccc0e06c72075",
+      "package": "quds_office_engine",
+      "path": "fidelity-scripted/slide/roundtrip-1.pptx",
+      "producer": "test/scripted_workflows_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-scripted/slide/roundtrip-2.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-scripted/slide/roundtrip-2.pptx",
+      "sha256": "a294051593e8b487db4016f06e7e9db30445a49c1305551d2b4954ff00593dbf",
+      "package": "quds_office_engine",
+      "path": "fidelity-scripted/slide/roundtrip-2.pptx",
+      "producer": "test/scripted_workflows_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-scripted/slide/roundtrip-3.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-scripted/slide/roundtrip-3.pptx",
+      "sha256": "c73233f533306f8441f60dc0693d3a79d44551a18d5384eaf58be5ee2684d1a8",
+      "package": "quds_office_engine",
+      "path": "fidelity-scripted/slide/roundtrip-3.pptx",
+      "producer": "test/scripted_workflows_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-scripted/word/edited.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-scripted/word/edited.docx",
+      "sha256": "f144281875d49d0703b7b10c32037037d9889ea12ac4b9afa451b2dca24bdd76",
+      "package": "quds_office_engine",
+      "path": "fidelity-scripted/word/edited.docx",
+      "producer": "test/scripted_workflows_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-scripted/word/roundtrip-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-scripted/word/roundtrip-1.docx",
+      "sha256": "9705272fe79e46c3e4b9c7e612283804977cc15129930c9ca36ab63e7b91ab5e",
+      "package": "quds_office_engine",
+      "path": "fidelity-scripted/word/roundtrip-1.docx",
+      "producer": "test/scripted_workflows_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-scripted/word/roundtrip-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-scripted/word/roundtrip-2.docx",
+      "sha256": "0edf749635753df1a2d816398e1108031900f8136cff36aca683fdc523ef4c7a",
+      "package": "quds_office_engine",
+      "path": "fidelity-scripted/word/roundtrip-2.docx",
+      "producer": "test/scripted_workflows_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-scripted/word/roundtrip-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-scripted/word/roundtrip-3.docx",
+      "sha256": "2de589a6eabf29e458b698da1666d7a02ce3771ec4a5913ed52ad74710c6f0e8",
+      "package": "quds_office_engine",
+      "path": "fidelity-scripted/word/roundtrip-3.docx",
+      "producer": "test/scripted_workflows_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-section-clones/section-clone-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-section-clones/section-clone-1.docx",
+      "sha256": "bcab7b2f224fb717d9887ade707389fd7f6f61208a92c2d3589d0bea70a8b00e",
+      "package": "quds_office_engine",
+      "path": "fidelity-section-clones/section-clone-1.docx",
+      "producer": "test/word_section_clone_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-section-clones/section-clone-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-section-clones/section-clone-2.docx",
+      "sha256": "12b298a155a51c03fdc32d017d53411e7ed0acfdb84d38b435e1547191a5410d",
+      "package": "quds_office_engine",
+      "path": "fidelity-section-clones/section-clone-2.docx",
+      "producer": "test/word_section_clone_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-section-clones/section-clone-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-section-clones/section-clone-3.docx",
+      "sha256": "1223654ea2f0a38703848e7aafc99fb77ba454e902e61d7d8bf26c35513be1a8",
+      "package": "quds_office_engine",
+      "path": "fidelity-section-clones/section-clone-3.docx",
+      "producer": "test/word_section_clone_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-sheet-rename/renamed-1.xlsx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-sheet-rename/renamed-1.xlsx",
+      "sha256": "5599c7cd83db0c016b8da5ac45aeda7484624862eae274f7b298563531069be4",
+      "package": "quds_office_engine",
+      "path": "fidelity-sheet-rename/renamed-1.xlsx",
+      "producer": "test/sheet_rename_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-sheet-rename/renamed-2.xlsx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-sheet-rename/renamed-2.xlsx",
+      "sha256": "ceeb59898b03fa1d440af8ece0fa591d2851958c4ff14b9e8a7b58b63a8916e6",
+      "package": "quds_office_engine",
+      "path": "fidelity-sheet-rename/renamed-2.xlsx",
+      "producer": "test/sheet_rename_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-sheet-rename/renamed-3.xlsx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-sheet-rename/renamed-3.xlsx",
+      "sha256": "76f94eadce036f488ca8e93e75cdcd1e05c19db817eef8349094a6c60c50c5ef",
+      "package": "quds_office_engine",
+      "path": "fidelity-sheet-rename/renamed-3.xlsx",
+      "producer": "test/sheet_rename_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-sheet-rename/source.xlsx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-sheet-rename/source.xlsx",
+      "sha256": "561a2ebf80b6f02e8b1fc00648230b341ff68e1a3ee501ea026b9e69c35fc24b",
+      "package": "quds_office_engine",
+      "path": "fidelity-sheet-rename/source.xlsx",
+      "producer": "test/sheet_rename_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/direct/backward-1.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-sections/direct/backward-1.pptx",
+      "sha256": "2dca88f03c2ecfe3290d7ce81debc424fc9273e25f3457f2a8676f65d1f8e756",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-sections/direct/backward-1.pptx",
+      "producer": "test/slide_section_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/direct/backward-2.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-sections/direct/backward-2.pptx",
+      "sha256": "7690f0258f315246d01de6f9e75d2375c2be7571425752f7f302a80a03fde303",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-sections/direct/backward-2.pptx",
+      "producer": "test/slide_section_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/direct/backward-3.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-sections/direct/backward-3.pptx",
+      "sha256": "f9e96edcf414652fc0de70ec7ee4e3e431213e2da6c7548f3cbfca745f73a3d9",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-sections/direct/backward-3.pptx",
+      "producer": "test/slide_section_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/direct/emptied-1.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-sections/direct/emptied-1.pptx",
+      "sha256": "7c833b66b7e888899a54126188f1ef54c927e5b6661e9c4dde7ad0843e0a8b8c",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-sections/direct/emptied-1.pptx",
+      "producer": "test/slide_section_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/direct/emptied-2.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-sections/direct/emptied-2.pptx",
+      "sha256": "0670c6823d68ee943f657c9e94644e6791226aa399e7be2336e500f4c962db32",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-sections/direct/emptied-2.pptx",
+      "producer": "test/slide_section_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/direct/emptied-3.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-sections/direct/emptied-3.pptx",
+      "sha256": "de54d3e4dce680da09cd5102ac1cd6897bc8b5d39e15210ecd7f240d3a36a323",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-sections/direct/emptied-3.pptx",
+      "producer": "test/slide_section_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/direct/forward-1.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-sections/direct/forward-1.pptx",
+      "sha256": "9f88478b064441bcb2ec71bdf5216271e6353437a5b93b846eaa814f52817f54",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-sections/direct/forward-1.pptx",
+      "producer": "test/slide_section_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/direct/forward-2.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-sections/direct/forward-2.pptx",
+      "sha256": "c33a49bbeb2e839d77bd12790a077449df79deadcce46a047cec6bfdabe1e7ce",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-sections/direct/forward-2.pptx",
+      "producer": "test/slide_section_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/direct/forward-3.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-sections/direct/forward-3.pptx",
+      "sha256": "145bc345ddcd6dd3650559e58e1985505c002eb3d8c4c2c1a9670eccd4eb057d",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-sections/direct/forward-3.pptx",
+      "producer": "test/slide_section_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/direct/source.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-sections/direct/source.pptx",
+      "sha256": "fbbaacf2b6bbc657568bb3e507e062a949ce5304d2f77fb51bd3c9f3ec5bb39c",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-sections/direct/source.pptx",
+      "producer": "test/slide_section_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/direct/unchanged-1.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-sections/direct/unchanged-1.pptx",
+      "sha256": "94620bc31be2cd8f567cbf893d285da28b18454cf804a1662a93bfd58a5a1be0",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-sections/direct/unchanged-1.pptx",
+      "producer": "test/slide_section_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/direct/unchanged-2.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-sections/direct/unchanged-2.pptx",
+      "sha256": "0ea443573d35fa2adf02dede237e2cd88993fd17e3f615c88cfc0d797102d1fb",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-sections/direct/unchanged-2.pptx",
+      "producer": "test/slide_section_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/direct/unchanged-3.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-sections/direct/unchanged-3.pptx",
+      "sha256": "17beb2e78f746d3a2f14dd141be99c45a81b02683f6731ed81d803c8440362f6",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-sections/direct/unchanged-3.pptx",
+      "producer": "test/slide_section_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/direct/within-1.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-sections/direct/within-1.pptx",
+      "sha256": "760d9c04e6441e1c1fd04460470c507b14141f5398ecdd1629b3513862b10fab",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-sections/direct/within-1.pptx",
+      "producer": "test/slide_section_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/direct/within-2.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-sections/direct/within-2.pptx",
+      "sha256": "3de52074946c0e10bb707070b8bc52018196336b3a54f191ef25547846b5ac65",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-sections/direct/within-2.pptx",
+      "producer": "test/slide_section_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/direct/within-3.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-sections/direct/within-3.pptx",
+      "sha256": "7409271131c463b238cc19491b2a691547ae83aa288bdabaaf3aba6c2806069e",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-sections/direct/within-3.pptx",
+      "producer": "test/slide_section_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/isolate/backward-1.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-sections/isolate/backward-1.pptx",
+      "sha256": "b243a842bc92cb79fc2a1b9d663c04189b6ed69ff864bc8bdd89e87e7e0f15cc",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-sections/isolate/backward-1.pptx",
+      "producer": "test/slide_section_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/isolate/backward-2.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-sections/isolate/backward-2.pptx",
+      "sha256": "30c262dd87430a48ec5e80474641650c17ee15008eedda7f2aa6d870bbd05841",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-sections/isolate/backward-2.pptx",
+      "producer": "test/slide_section_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/isolate/backward-3.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-sections/isolate/backward-3.pptx",
+      "sha256": "79ae2568334e1013ad06d0cffe12dbf8c1d6a7d26004165a697da74674287afb",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-sections/isolate/backward-3.pptx",
+      "producer": "test/slide_section_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/isolate/emptied-1.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-sections/isolate/emptied-1.pptx",
+      "sha256": "44c03885e71a594bfdcfaa6d3f989dd81e8de28995fdff12ceec53086b7c297a",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-sections/isolate/emptied-1.pptx",
+      "producer": "test/slide_section_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/isolate/emptied-2.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-sections/isolate/emptied-2.pptx",
+      "sha256": "db132c6107e93b505e3823bfe6f74dec2442981f3bea4e5126d7d9cf1bb5a443",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-sections/isolate/emptied-2.pptx",
+      "producer": "test/slide_section_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/isolate/emptied-3.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-sections/isolate/emptied-3.pptx",
+      "sha256": "ed6cee68084af16aaac51540bfca7aed25e0ab2475ab280bf80373729fb27d77",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-sections/isolate/emptied-3.pptx",
+      "producer": "test/slide_section_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/isolate/forward-1.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-sections/isolate/forward-1.pptx",
+      "sha256": "d76306f422b5cf9ac29e2438eb1c6af5f67c15180b40fb70ee93d6ce315a3d08",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-sections/isolate/forward-1.pptx",
+      "producer": "test/slide_section_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/isolate/forward-2.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-sections/isolate/forward-2.pptx",
+      "sha256": "c134a9abec0ff01d55262429a6c573128f6864decf87a21e5cb4b650917d240a",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-sections/isolate/forward-2.pptx",
+      "producer": "test/slide_section_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/isolate/forward-3.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-sections/isolate/forward-3.pptx",
+      "sha256": "433d0550477823795603005147e3af28e24146ed957f05435497a513cd11a2ae",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-sections/isolate/forward-3.pptx",
+      "producer": "test/slide_section_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/isolate/source.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-sections/isolate/source.pptx",
+      "sha256": "fbbaacf2b6bbc657568bb3e507e062a949ce5304d2f77fb51bd3c9f3ec5bb39c",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-sections/isolate/source.pptx",
+      "producer": "test/slide_section_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/isolate/unchanged-1.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-sections/isolate/unchanged-1.pptx",
+      "sha256": "8fa74d8240a1213ef896da6b1da6132cdc5c984892faf123afc8f1dabcd8ba45",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-sections/isolate/unchanged-1.pptx",
+      "producer": "test/slide_section_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/isolate/unchanged-2.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-sections/isolate/unchanged-2.pptx",
+      "sha256": "68db9c22b83ee7e6b06debb609bbf83202c639c7cbe05908459595580976c7f8",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-sections/isolate/unchanged-2.pptx",
+      "producer": "test/slide_section_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/isolate/unchanged-3.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-sections/isolate/unchanged-3.pptx",
+      "sha256": "daf65af2eb6357e983fce042fe17fac94d620e4da7773d1264374afdba3b072b",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-sections/isolate/unchanged-3.pptx",
+      "producer": "test/slide_section_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/isolate/within-1.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-sections/isolate/within-1.pptx",
+      "sha256": "87954a5f99c28bdc1fda4e11c2054ea57a74b4da6d2330d748eee5b07a98a4a4",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-sections/isolate/within-1.pptx",
+      "producer": "test/slide_section_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/isolate/within-2.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-sections/isolate/within-2.pptx",
+      "sha256": "7b4d8f9f0c7086e4ab4dd0ef40c8590a2e3923ed40ce1da87524e9a394eca96d",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-sections/isolate/within-2.pptx",
+      "producer": "test/slide_section_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/isolate/within-3.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-sections/isolate/within-3.pptx",
+      "sha256": "ff6886836461dbc4a4e0b1d9b5973bd217bd77fcbeff5b3f3936cc7ff0055698",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-sections/isolate/within-3.pptx",
+      "producer": "test/slide_section_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-text/rich-edited-1.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-text/rich-edited-1.pptx",
+      "sha256": "c0fb094690057a555bfeb9a149e21b769d844ad7793a48c497d1ac114eeb5479",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-text/rich-edited-1.pptx",
+      "producer": "test/slide_text_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-text/rich-edited-2.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-text/rich-edited-2.pptx",
+      "sha256": "6ee94e5ddce4f13c4508b86191eefe7301cb88ce80c2330ee0aae7115159a031",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-text/rich-edited-2.pptx",
+      "producer": "test/slide_text_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-text/rich-edited-3.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-text/rich-edited-3.pptx",
+      "sha256": "8cf1a94663a6a3504fafdbc7f51da9029c194c4686141f5244b8821d6d615927",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-text/rich-edited-3.pptx",
+      "producer": "test/slide_text_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-text/rich-imported-1.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-text/rich-imported-1.pptx",
+      "sha256": "d310b4b056dc06b39c03f67af22ad5962afbde4ae7531e42834eafaf2cb5b1fb",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-text/rich-imported-1.pptx",
+      "producer": "test/slide_text_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-text/rich-imported-2.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-text/rich-imported-2.pptx",
+      "sha256": "d70f4aa431376b8f7794a51e1d474ae19c6b380a711071a1c002a7a0e6c638be",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-text/rich-imported-2.pptx",
+      "producer": "test/slide_text_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-text/rich-imported-3.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-slide-text/rich-imported-3.pptx",
+      "sha256": "1095d0ffff72755762e529a99629d6d02cfa2a452077f5e18faaa99976c26ab1",
+      "package": "quds_office_engine",
+      "path": "fidelity-slide-text/rich-imported-3.pptx",
+      "producer": "test/slide_text_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-story-media/relocated-edited-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-story-media/relocated-edited-1.docx",
+      "sha256": "31ef657fc6b6830d3d11ebd8db466682d8e8098dbcc27317cc96582243d2afe8",
+      "package": "quds_office_engine",
+      "path": "fidelity-story-media/relocated-edited-1.docx",
+      "producer": "test/word_part_routing_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-story-media/relocated-edited-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-story-media/relocated-edited-2.docx",
+      "sha256": "1ef31b42002caf5640848d741c45d4a8e8a3fb2ecaafe8943d2c0e72d427156c",
+      "package": "quds_office_engine",
+      "path": "fidelity-story-media/relocated-edited-2.docx",
+      "producer": "test/word_part_routing_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-story-media/relocated-edited-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-story-media/relocated-edited-3.docx",
+      "sha256": "82644f3f3b247a587e5fcf2e29295644efc0c759b66547041a9165b67b44b8c3",
+      "package": "quds_office_engine",
+      "path": "fidelity-story-media/relocated-edited-3.docx",
+      "producer": "test/word_part_routing_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-story-media/story-edited-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-story-media/story-edited-1.docx",
+      "sha256": "725c2e8eae8dfe225b81e4108ae089ebc136fbc17e8564cce5b913c802a2cc0f",
+      "package": "quds_office_engine",
+      "path": "fidelity-story-media/story-edited-1.docx",
+      "producer": "test/story_media_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-story-media/story-edited-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-story-media/story-edited-2.docx",
+      "sha256": "ced4eb4f6bd604fa615cc4066753039a19c730238da5c6eb52efd54db570e4e9",
+      "package": "quds_office_engine",
+      "path": "fidelity-story-media/story-edited-2.docx",
+      "producer": "test/story_media_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-story-media/story-edited-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-story-media/story-edited-3.docx",
+      "sha256": "34d86e495d4d1b1a2b4994286ea9fe5425e82024a683369899ebe870e82618ec",
+      "package": "quds_office_engine",
+      "path": "fidelity-story-media/story-edited-3.docx",
+      "producer": "test/story_media_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-story-media/story-imported-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-story-media/story-imported-1.docx",
+      "sha256": "c23d249a635b4e6666cd74515aba16e030ee5b2806e23148f16cb15db1ae9a7d",
+      "package": "quds_office_engine",
+      "path": "fidelity-story-media/story-imported-1.docx",
+      "producer": "test/story_media_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-story-media/story-imported-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-story-media/story-imported-2.docx",
+      "sha256": "56a5f059263ed7ad3c86e7f6b9fc7b6703e10b4728d98a5cb61a8fae71ec6be2",
+      "package": "quds_office_engine",
+      "path": "fidelity-story-media/story-imported-2.docx",
+      "producer": "test/story_media_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-story-media/story-imported-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-story-media/story-imported-3.docx",
+      "sha256": "3ee4fd9599f5b4290fb008ab4b4ded45040a0df4c8a23823915855c52e9e93ef",
+      "package": "quds_office_engine",
+      "path": "fidelity-story-media/story-imported-3.docx",
+      "producer": "test/story_media_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-structure/create/edited.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-structure/create/edited.docx",
+      "sha256": "f4a572111ea7c52ec26acbd6743262e5ef5e42d284cb5e93656c6488e90e1e90",
+      "package": "quds_office_engine",
+      "path": "fidelity-structure/create/edited.docx",
+      "producer": "test/word_structure_steps_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-structure/create/roundtrip-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-structure/create/roundtrip-1.docx",
+      "sha256": "6da4295b7d1e3a81a6ab73a0bcc98f7371aef6c51e8984ba7d3d6d33adb6ca5c",
+      "package": "quds_office_engine",
+      "path": "fidelity-structure/create/roundtrip-1.docx",
+      "producer": "test/word_structure_steps_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-structure/create/roundtrip-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-structure/create/roundtrip-2.docx",
+      "sha256": "7825692e5d7ae0c364da324fb3f9634f8ffe2b4fb94e5e310c1f04c74283f0e5",
+      "package": "quds_office_engine",
+      "path": "fidelity-structure/create/roundtrip-2.docx",
+      "producer": "test/word_structure_steps_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-structure/create/roundtrip-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-structure/create/roundtrip-3.docx",
+      "sha256": "9a581ed605d5d3a5287bb6117382c4edff914f81b7b917e0302a3d68e2ffb548",
+      "package": "quds_office_engine",
+      "path": "fidelity-structure/create/roundtrip-3.docx",
+      "producer": "test/word_structure_steps_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-structure/edit/edited.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-structure/edit/edited.docx",
+      "sha256": "3776c999dc8792f08fb81b9c6e408c4532cae0b64370ce886606c5b58659dac8",
+      "package": "quds_office_engine",
+      "path": "fidelity-structure/edit/edited.docx",
+      "producer": "test/word_structure_steps_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-structure/edit/roundtrip-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-structure/edit/roundtrip-1.docx",
+      "sha256": "27286b89a27874e9379a50359595f1d28576cfdd244d9ae142d97f96627cbb42",
+      "package": "quds_office_engine",
+      "path": "fidelity-structure/edit/roundtrip-1.docx",
+      "producer": "test/word_structure_steps_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-structure/edit/roundtrip-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-structure/edit/roundtrip-2.docx",
+      "sha256": "9042f12e89b08cb161ab2b6b39d61b5fa0bc49c4a37e0bd4b9251280cbda33d4",
+      "package": "quds_office_engine",
+      "path": "fidelity-structure/edit/roundtrip-2.docx",
+      "producer": "test/word_structure_steps_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-structure/edit/roundtrip-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-structure/edit/roundtrip-3.docx",
+      "sha256": "5d80a1b2d96255e4f1918cedd0a6cc498adad2c41a9f9ea5049daec533f8954d",
+      "package": "quds_office_engine",
+      "path": "fidelity-structure/edit/roundtrip-3.docx",
+      "producer": "test/word_structure_steps_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-structure/remove/edited.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-structure/remove/edited.docx",
+      "sha256": "eae9c4de36133df30329bc9d57fbe575e6a0ea51e0ee9dbc3a4edf55e8c58328",
+      "package": "quds_office_engine",
+      "path": "fidelity-structure/remove/edited.docx",
+      "producer": "test/word_structure_steps_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-structure/remove/roundtrip-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-structure/remove/roundtrip-1.docx",
+      "sha256": "443e799239d64f0521797c4891fe401247df94ff2276d8ca6a61da200f834cf6",
+      "package": "quds_office_engine",
+      "path": "fidelity-structure/remove/roundtrip-1.docx",
+      "producer": "test/word_structure_steps_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-structure/remove/roundtrip-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-structure/remove/roundtrip-2.docx",
+      "sha256": "d1d506986782c541f981fdb2594b5b282e2a577ffdc9121c7e8f7640bbe62433",
+      "package": "quds_office_engine",
+      "path": "fidelity-structure/remove/roundtrip-2.docx",
+      "producer": "test/word_structure_steps_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-structure/remove/roundtrip-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-structure/remove/roundtrip-3.docx",
+      "sha256": "4ae558e3fc7935c33591adc87ed6e0abde3c35062d524087f1ab85a66dda0074",
+      "package": "quds_office_engine",
+      "path": "fidelity-structure/remove/roundtrip-3.docx",
+      "producer": "test/word_structure_steps_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-structure/source.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-structure/source.docx",
+      "sha256": "19d3d78dd6823d8b2ad7173f0eb82be7b2ccf4224d50fdb889dee758ab64e88f",
+      "package": "quds_office_engine",
+      "path": "fidelity-structure/source.docx",
+      "producer": "test/word_structure_steps_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-style-toggles/toggle-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-style-toggles/toggle-1.docx",
+      "sha256": "9a5627881e7f3ddd6462b4f8e5735acf77fb9afecd01d6f61041e078d5399139",
+      "package": "quds_office_engine",
+      "path": "fidelity-style-toggles/toggle-1.docx",
+      "producer": "test/style_cascade_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-style-toggles/toggle-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-style-toggles/toggle-2.docx",
+      "sha256": "d65d7cf84dd74990cde5bea6dd8e87fbb37c6d7e293571c45cac431ce812ecd5",
+      "package": "quds_office_engine",
+      "path": "fidelity-style-toggles/toggle-2.docx",
+      "producer": "test/style_cascade_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-style-toggles/toggle-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-style-toggles/toggle-3.docx",
+      "sha256": "964f9f921595d3c98682a0bd8874dfcbd1072d1c80151ffed53967a247b0b594",
+      "package": "quds_office_engine",
+      "path": "fidelity-style-toggles/toggle-3.docx",
+      "producer": "test/style_cascade_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-styles/edited-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-styles/edited-1.docx",
+      "sha256": "c61344feee0d8a116cdb54b8315c467402b1ba0bd341e477019f582ded4fa0e5",
+      "package": "quds_office_engine",
+      "path": "fidelity-styles/edited-1.docx",
+      "producer": "test/style_cascade_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-styles/edited-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-styles/edited-2.docx",
+      "sha256": "3b38a57b2b92deb4533da6896a74ff82bcf62b2f20543c14263d5e39a5b5bed9",
+      "package": "quds_office_engine",
+      "path": "fidelity-styles/edited-2.docx",
+      "producer": "test/style_cascade_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-styles/edited-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-styles/edited-3.docx",
+      "sha256": "3537bc0923bc831c981c758365bde8c6eeb0c7745681049539b19df1b7d83df5",
+      "package": "quds_office_engine",
+      "path": "fidelity-styles/edited-3.docx",
+      "producer": "test/style_cascade_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-styles/unchanged-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-styles/unchanged-1.docx",
+      "sha256": "61cfb6622ae4d314b367a166041c7d726559a5ca3a696ba9f24c1978479c93ce",
+      "package": "quds_office_engine",
+      "path": "fidelity-styles/unchanged-1.docx",
+      "producer": "test/style_cascade_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-styles/unchanged-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-styles/unchanged-2.docx",
+      "sha256": "d8fde5e4632caf81aa6d2a0dfbf7c9360eabc48ebf6860ced2222d7edab49d2d",
+      "package": "quds_office_engine",
+      "path": "fidelity-styles/unchanged-2.docx",
+      "producer": "test/style_cascade_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-styles/unchanged-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-styles/unchanged-3.docx",
+      "sha256": "c75be8e31bc42ee40ae75277fca2166dca77fa895c5ffa756fbeb72b1d48db8a",
+      "package": "quds_office_engine",
+      "path": "fidelity-styles/unchanged-3.docx",
+      "producer": "test/style_cascade_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-table-borders/tables-edited-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-table-borders/tables-edited-1.docx",
+      "sha256": "ce6235703e933b51a24fedc1de12c6c31b735340f524c1168d999799360e65de",
+      "package": "quds_office_engine",
+      "path": "fidelity-table-borders/tables-edited-1.docx",
+      "producer": "test/table_border_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-table-borders/tables-edited-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-table-borders/tables-edited-2.docx",
+      "sha256": "d584d23791dc36a20203a9e37e3edfa6159a3fdee2492d73244efc663d75c4cd",
+      "package": "quds_office_engine",
+      "path": "fidelity-table-borders/tables-edited-2.docx",
+      "producer": "test/table_border_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-table-borders/tables-edited-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-table-borders/tables-edited-3.docx",
+      "sha256": "a77c686f51e2f36777f76f606aaea5a83060680554b31a0cde15461a4d72fb78",
+      "package": "quds_office_engine",
+      "path": "fidelity-table-borders/tables-edited-3.docx",
+      "producer": "test/table_border_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-table-borders/tables-imported-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-table-borders/tables-imported-1.docx",
+      "sha256": "3813cd0bf3fdcb51f0ec44700b49610ac5727dce115aa75d024190ac3924e2f3",
+      "package": "quds_office_engine",
+      "path": "fidelity-table-borders/tables-imported-1.docx",
+      "producer": "test/table_border_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-table-borders/tables-imported-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-table-borders/tables-imported-2.docx",
+      "sha256": "3f8c10af8e1a0e770d6ecc6136a582a07477d3ca7794abbf7486d7a879d677e5",
+      "package": "quds_office_engine",
+      "path": "fidelity-table-borders/tables-imported-2.docx",
+      "producer": "test/table_border_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-table-borders/tables-imported-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-table-borders/tables-imported-3.docx",
+      "sha256": "765378925ef6e21d2da5b181353c7a72d8d68d931aa85629a8c13fd697e872bc",
+      "package": "quds_office_engine",
+      "path": "fidelity-table-borders/tables-imported-3.docx",
+      "producer": "test/table_border_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-word-compatibility/compatibility-edited-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-word-compatibility/compatibility-edited-1.docx",
+      "sha256": "5bdde798905d369fbc34bbc811f52ca5b69cc88565b4caf4ef87727f7781b4e9",
+      "package": "quds_office_engine",
+      "path": "fidelity-word-compatibility/compatibility-edited-1.docx",
+      "producer": "test/word_compatibility_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-word-compatibility/compatibility-edited-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-word-compatibility/compatibility-edited-2.docx",
+      "sha256": "ad5d81d7547d4839141a5c7c8cd60c0479e26fdb06ab7c8322766433e602971f",
+      "package": "quds_office_engine",
+      "path": "fidelity-word-compatibility/compatibility-edited-2.docx",
+      "producer": "test/word_compatibility_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-word-compatibility/compatibility-edited-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-word-compatibility/compatibility-edited-3.docx",
+      "sha256": "b8628b95f05ea42ef9d04ec1f04ecc1aeaa33e721848971f59a41154b667828b",
+      "package": "quds_office_engine",
+      "path": "fidelity-word-compatibility/compatibility-edited-3.docx",
+      "producer": "test/word_compatibility_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-word-compatibility/compatibility-imported-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-word-compatibility/compatibility-imported-1.docx",
+      "sha256": "41ef1a64b20125b2e85b0a48ab524d9b477f4a3d74a17658e891c13ed66d0db3",
+      "package": "quds_office_engine",
+      "path": "fidelity-word-compatibility/compatibility-imported-1.docx",
+      "producer": "test/word_compatibility_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-word-compatibility/compatibility-imported-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-word-compatibility/compatibility-imported-2.docx",
+      "sha256": "23d8428e703c5fabf64d113e5b9e0c7594922c14448ebf3bfadf75d3b26845b8",
+      "package": "quds_office_engine",
+      "path": "fidelity-word-compatibility/compatibility-imported-2.docx",
+      "producer": "test/word_compatibility_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-word-compatibility/compatibility-imported-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-word-compatibility/compatibility-imported-3.docx",
+      "sha256": "95017b8423e9f1974bae990b91d6db761aa6eb244f0cce2274687ee24cbb788c",
+      "package": "quds_office_engine",
+      "path": "fidelity-word-compatibility/compatibility-imported-3.docx",
+      "producer": "test/word_compatibility_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-word-edits/breaks-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-word-edits/breaks-1.docx",
+      "sha256": "00d9cb09ae3e69a8e740ed4a741f56b702c84465b85f119b01502b60008130aa",
+      "package": "quds_office_engine",
+      "path": "fidelity-word-edits/breaks-1.docx",
+      "producer": "test/word_referenced_styles_and_breaks_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-word-edits/breaks-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-word-edits/breaks-2.docx",
+      "sha256": "82e70b2b38df7f5f8343218744e650865b6dc24b27b2c3c673dae2994a72712d",
+      "package": "quds_office_engine",
+      "path": "fidelity-word-edits/breaks-2.docx",
+      "producer": "test/word_referenced_styles_and_breaks_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-word-edits/breaks-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-word-edits/breaks-3.docx",
+      "sha256": "8d857b885a05acf16286caa30e35092301099bda412ccd29e99494eda2b6a7f5",
+      "package": "quds_office_engine",
+      "path": "fidelity-word-edits/breaks-3.docx",
+      "producer": "test/word_referenced_styles_and_breaks_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-word-edits/styles-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-word-edits/styles-1.docx",
+      "sha256": "65e3168fa6d6185dcc09bcac61773c0e875f1bd01bf0dc44ff7807a41f4daa3c",
+      "package": "quds_office_engine",
+      "path": "fidelity-word-edits/styles-1.docx",
+      "producer": "test/word_referenced_styles_and_breaks_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-word-edits/styles-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-word-edits/styles-2.docx",
+      "sha256": "8e715b83c1dcaea0b9871b5ff50adcb4d0d5b186eb947ed3166c9639cc5ffdb6",
+      "package": "quds_office_engine",
+      "path": "fidelity-word-edits/styles-2.docx",
+      "producer": "test/word_referenced_styles_and_breaks_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-word-edits/styles-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-word-edits/styles-3.docx",
+      "sha256": "eb5f3fc5816944d7f7ec3a3edf78453401cda121ef5771169e5318aefa53ea1a",
+      "package": "quds_office_engine",
+      "path": "fidelity-word-edits/styles-3.docx",
+      "producer": "test/word_referenced_styles_and_breaks_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity/edited-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity/edited-1.docx",
+      "sha256": "73c2759867c5a00716df130b46f1b96108dba446408c7205758de4308381ccca",
+      "package": "quds_office_engine",
+      "path": "fidelity/edited-1.docx",
+      "producer": "tool/fidelity/scenarios.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity/edited-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity/edited-2.docx",
+      "sha256": "835916223b531289a26fe4e7484a368534628ca64e27d0427a033dcbf06875f1",
+      "package": "quds_office_engine",
+      "path": "fidelity/edited-2.docx",
+      "producer": "tool/fidelity/scenarios.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity/edited-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity/edited-3.docx",
+      "sha256": "0a2307ff86b60efd0aaa3a415e5f663e18b68ec5e4037bbada84da8b5437376d",
+      "package": "quds_office_engine",
+      "path": "fidelity/edited-3.docx",
+      "producer": "tool/fidelity/scenarios.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity/sheet-edited-1.xlsx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity/sheet-edited-1.xlsx",
+      "sha256": "fa5fd43461000ccfd2bd2a0816372934a075af9714056f85f5b40dd1d16a7bdc",
+      "package": "quds_office_engine",
+      "path": "fidelity/sheet-edited-1.xlsx",
+      "producer": "tool/fidelity/cross_format.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity/sheet-edited-2.xlsx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity/sheet-edited-2.xlsx",
+      "sha256": "fca7e3a71603cf7155b84d6c973ba9e8996b62068af910daf803e6af85a56ff5",
+      "package": "quds_office_engine",
+      "path": "fidelity/sheet-edited-2.xlsx",
+      "producer": "tool/fidelity/cross_format.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity/sheet-edited-3.xlsx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity/sheet-edited-3.xlsx",
+      "sha256": "737c22aa6be262b93386ba3dd95e6fd281309b97f327949d2d936f0e9f12b571",
+      "package": "quds_office_engine",
+      "path": "fidelity/sheet-edited-3.xlsx",
+      "producer": "tool/fidelity/cross_format.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity/sheet-imported-1.xlsx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity/sheet-imported-1.xlsx",
+      "sha256": "6a20d348dd3788c6a7dd69ba4adc501953675a6490b5b820b6fec572afe75386",
+      "package": "quds_office_engine",
+      "path": "fidelity/sheet-imported-1.xlsx",
+      "producer": "tool/fidelity/cross_format.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity/sheet-imported-2.xlsx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity/sheet-imported-2.xlsx",
+      "sha256": "d7f2e19d18276d7b0123f088ce1c32ea8c00e58c91d580970bcf733bc747e047",
+      "package": "quds_office_engine",
+      "path": "fidelity/sheet-imported-2.xlsx",
+      "producer": "tool/fidelity/cross_format.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity/sheet-imported-3.xlsx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity/sheet-imported-3.xlsx",
+      "sha256": "0f4d4645b8ed65a32ff6e3082b38587780003bbd930794ba7a0cf4172ca2bd2e",
+      "package": "quds_office_engine",
+      "path": "fidelity/sheet-imported-3.xlsx",
+      "producer": "tool/fidelity/cross_format.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity/slide-edited-1.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity/slide-edited-1.pptx",
+      "sha256": "664f56204a940a01c640de8edc1d5c2ce977cf613484dc3315cf4a0e91ac55d6",
+      "package": "quds_office_engine",
+      "path": "fidelity/slide-edited-1.pptx",
+      "producer": "tool/fidelity/cross_format.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity/slide-edited-2.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity/slide-edited-2.pptx",
+      "sha256": "0c4cc7ebfdabda0d399c0c57358aacb2f4e048f13f0208195c5b72a8f791c257",
+      "package": "quds_office_engine",
+      "path": "fidelity/slide-edited-2.pptx",
+      "producer": "tool/fidelity/cross_format.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity/slide-edited-3.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity/slide-edited-3.pptx",
+      "sha256": "71788052a9888be987f835a0ca7c1481f4b3c8b0c50c02481f7f656d05c2cae8",
+      "package": "quds_office_engine",
+      "path": "fidelity/slide-edited-3.pptx",
+      "producer": "tool/fidelity/cross_format.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity/slide-imported-1.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity/slide-imported-1.pptx",
+      "sha256": "aeea4e51bcb037a44689032bcb578d1282036270fd8d3fcda2f80ff88bbdcf93",
+      "package": "quds_office_engine",
+      "path": "fidelity/slide-imported-1.pptx",
+      "producer": "tool/fidelity/cross_format.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity/slide-imported-2.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity/slide-imported-2.pptx",
+      "sha256": "ad75c5fa62f80ad23c2702aefbdb5035bf7e00d082dede2be1765736119728d8",
+      "package": "quds_office_engine",
+      "path": "fidelity/slide-imported-2.pptx",
+      "producer": "tool/fidelity/cross_format.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity/slide-imported-3.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity/slide-imported-3.pptx",
+      "sha256": "06e947eb32d080933f402fddfa2904b8cd1a5ef3173d41271025de04be9145af",
+      "package": "quds_office_engine",
+      "path": "fidelity/slide-imported-3.pptx",
+      "producer": "tool/fidelity/cross_format.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity/unchanged-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity/unchanged-1.docx",
+      "sha256": "285890e8f3ba6b6e8b04e633c47ec70941e8030aecf94e2f7995ea1eb2648844",
+      "package": "quds_office_engine",
+      "path": "fidelity/unchanged-1.docx",
+      "producer": "tool/fidelity/scenarios.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity/unchanged-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity/unchanged-2.docx",
+      "sha256": "871c72b1cdcb7d473b8b2355eea9da79993616cab35e4ca8e1b1f7c3b9990b60",
+      "package": "quds_office_engine",
+      "path": "fidelity/unchanged-2.docx",
+      "producer": "tool/fidelity/scenarios.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity/unchanged-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity/unchanged-3.docx",
+      "sha256": "fc569d4f8d7195097631e568d4598ff67bdae72c6900e457335ae8c6997393e8",
+      "package": "quds_office_engine",
+      "path": "fidelity/unchanged-3.docx",
+      "producer": "tool/fidelity/scenarios.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_editor/build/fidelity-bookmarks-legacy/editor-bookmarks-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_editor/fidelity-bookmarks-legacy/editor-bookmarks-1.docx",
+      "sha256": "f294895c49d81ca49ff70ec7ffd287c37f76b33556f9f361204e37688139bb07",
+      "package": "quds_office_editor",
+      "path": "fidelity-bookmarks-legacy/editor-bookmarks-1.docx",
+      "producer": "test/word_bookmark_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_editor/build/fidelity-bookmarks-legacy/editor-bookmarks-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_editor/fidelity-bookmarks-legacy/editor-bookmarks-2.docx",
+      "sha256": "9e5b9e8116df5966801233bd1b49cf18013ae644e50661cb37627f7b1f514714",
+      "package": "quds_office_editor",
+      "path": "fidelity-bookmarks-legacy/editor-bookmarks-2.docx",
+      "producer": "test/word_bookmark_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_editor/build/fidelity-bookmarks-legacy/editor-bookmarks-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_editor/fidelity-bookmarks-legacy/editor-bookmarks-3.docx",
+      "sha256": "41b932e5403dc77f688fca2283bf0580bdbb5d19f8ded93465ff3c18a07c81bc",
+      "package": "quds_office_editor",
+      "path": "fidelity-bookmarks-legacy/editor-bookmarks-3.docx",
+      "producer": "test/word_bookmark_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_editor/build/fidelity-content-controls-legacy/editor-controls-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_editor/fidelity-content-controls-legacy/editor-controls-1.docx",
+      "sha256": "a752049a81b0575ef0877536b9c382cf83c9f6a2c3c907d0df50be4f40bab454",
+      "package": "quds_office_editor",
+      "path": "fidelity-content-controls-legacy/editor-controls-1.docx",
+      "producer": "test/word_content_control_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_editor/build/fidelity-content-controls-legacy/editor-controls-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_editor/fidelity-content-controls-legacy/editor-controls-2.docx",
+      "sha256": "8e2c17cc9124bbecf79bbb0ab8affb3364331084025c873f98b8c1344004408d",
+      "package": "quds_office_editor",
+      "path": "fidelity-content-controls-legacy/editor-controls-2.docx",
+      "producer": "test/word_content_control_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_editor/build/fidelity-content-controls-legacy/editor-controls-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_editor/fidelity-content-controls-legacy/editor-controls-3.docx",
+      "sha256": "be7133e089e70cb8dbee2b9f47c00de1b0f7c5557c2d8d2ebc287c589047ac5b",
+      "package": "quds_office_editor",
+      "path": "fidelity-content-controls-legacy/editor-controls-3.docx",
+      "producer": "test/word_content_control_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_editor/build/fidelity-layout/columns_sections-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_editor/fidelity-layout/columns_sections-1.docx",
+      "sha256": "5bbabefed81efc8b796ba6c15922cd3f363de9640455a16cc6af2669c9744321",
+      "package": "quds_office_editor",
+      "path": "fidelity-layout/columns_sections-1.docx",
+      "producer": "test/office_layout_goldens_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_editor/build/fidelity-layout/columns_sections-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_editor/fidelity-layout/columns_sections-2.docx",
+      "sha256": "e7cef0e83ede2745547526bbc3432a557639d23c43c5ba739b516efe307e7495",
+      "package": "quds_office_editor",
+      "path": "fidelity-layout/columns_sections-2.docx",
+      "producer": "test/office_layout_goldens_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_editor/build/fidelity-layout/columns_sections-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_editor/fidelity-layout/columns_sections-3.docx",
+      "sha256": "95551a4640800eb2697d0880329ccdcf1fe6ddc892d713c50a2556ddefdb9399",
+      "package": "quds_office_editor",
+      "path": "fidelity-layout/columns_sections-3.docx",
+      "producer": "test/office_layout_goldens_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_editor/build/fidelity-layout/continued_notes-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_editor/fidelity-layout/continued_notes-1.docx",
+      "sha256": "17a4aa30a2104248ce071f39af870462397e188a06c3f4f11724059bf3e72516",
+      "package": "quds_office_editor",
+      "path": "fidelity-layout/continued_notes-1.docx",
+      "producer": "test/office_layout_goldens_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_editor/build/fidelity-layout/continued_notes-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_editor/fidelity-layout/continued_notes-2.docx",
+      "sha256": "59b6a6ebc80f9f0fc459c3c758f1ddc26a71f2c63a2e6d025318ef1a320fafdb",
+      "package": "quds_office_editor",
+      "path": "fidelity-layout/continued_notes-2.docx",
+      "producer": "test/office_layout_goldens_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_editor/build/fidelity-layout/continued_notes-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_editor/fidelity-layout/continued_notes-3.docx",
+      "sha256": "bbe1a260c4ea2f236f341bebd03e181f8e566dc5d05f079194eed5a8e8ffa933",
+      "package": "quds_office_editor",
+      "path": "fidelity-layout/continued_notes-3.docx",
+      "producer": "test/office_layout_goldens_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_editor/build/fidelity-layout/rtl-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_editor/fidelity-layout/rtl-1.docx",
+      "sha256": "fc0e0ef1d4087ca6c64aee322f6d4f36b773233a346815941b2349756a7b492f",
+      "package": "quds_office_editor",
+      "path": "fidelity-layout/rtl-1.docx",
+      "producer": "test/office_layout_goldens_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_editor/build/fidelity-layout/rtl-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_editor/fidelity-layout/rtl-2.docx",
+      "sha256": "d4fc5c8fa4afa0eb8acd2dc02d189b2c2b55cae03ed56addd39f6926c3a903de",
+      "package": "quds_office_editor",
+      "path": "fidelity-layout/rtl-2.docx",
+      "producer": "test/office_layout_goldens_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_editor/build/fidelity-layout/rtl-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_editor/fidelity-layout/rtl-3.docx",
+      "sha256": "d793216b3acf36ccb9d911921496f51c0bd25296863d4b3a05ea8f016323bf4a",
+      "package": "quds_office_editor",
+      "path": "fidelity-layout/rtl-3.docx",
+      "producer": "test/office_layout_goldens_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_editor/build/fidelity-layout/tall_table-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_editor/fidelity-layout/tall_table-1.docx",
+      "sha256": "76abb2609d9ab993a8ee4b86404516dd9ec9f0c48defc0bfbaf82129b5f4a5d1",
+      "package": "quds_office_editor",
+      "path": "fidelity-layout/tall_table-1.docx",
+      "producer": "test/office_layout_goldens_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_editor/build/fidelity-layout/tall_table-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_editor/fidelity-layout/tall_table-2.docx",
+      "sha256": "e4a8ad4cdb7017b326beeb7bf67053344ae44cd691ef6850b7221c47114354a9",
+      "package": "quds_office_editor",
+      "path": "fidelity-layout/tall_table-2.docx",
+      "producer": "test/office_layout_goldens_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_editor/build/fidelity-layout/tall_table-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_editor/fidelity-layout/tall_table-3.docx",
+      "sha256": "9510ea19b2fbd897375ca989567df94fd3fb9f5dd4ca5f31b2e35d9a4a2c0501",
+      "package": "quds_office_editor",
+      "path": "fidelity-layout/tall_table-3.docx",
+      "producer": "test/office_layout_goldens_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_editor/build/fidelity-story-goldens/three-pages-1.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_editor/fidelity-story-goldens/three-pages-1.docx",
+      "sha256": "918e9f0e01a56fe2880638ad0ed50dba9df0e30369bc9d71f05d0e7a1221db11",
+      "package": "quds_office_editor",
+      "path": "fidelity-story-goldens/three-pages-1.docx",
+      "producer": "test/office_story_golden_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_editor/build/fidelity-story-goldens/three-pages-2.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_editor/fidelity-story-goldens/three-pages-2.docx",
+      "sha256": "810e580ab59a35a79cd3f3f982721369984dbbde9e32cd35b178909388b025d3",
+      "package": "quds_office_editor",
+      "path": "fidelity-story-goldens/three-pages-2.docx",
+      "producer": "test/office_story_golden_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_editor/build/fidelity-story-goldens/three-pages-3.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_editor/fidelity-story-goldens/three-pages-3.docx",
+      "sha256": "3c1dbe9b2704b6a2629b8d7f77391beb4ed68871b791f95ffe84bd83fc774922",
+      "package": "quds_office_editor",
+      "path": "fidelity-story-goldens/three-pages-3.docx",
+      "producer": "test/office_story_golden_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_editor/build/fidelity/unchanged-controller.docx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_editor/fidelity/unchanged-controller.docx",
+      "sha256": "4a6599a86b0c1a519ef577ddbb799325fc5943f70168c24f18f432efb3e99b3e",
+      "package": "quds_office_editor",
+      "path": "fidelity/unchanged-controller.docx",
+      "producer": "test/office_fidelity_workflow_test.dart"
+    }
+  ],
+  "engine_source_tree_sha256": "fde9742cd73d555014cad3a8c4fd31f637702d27176b827b2acd2e77bd24c88a",
+  "renderer_source_sha256": "a6918966d591cef510bd46c6e9d25f8ec7ace37dbfe6f1fb94404c3d6bd9cd3f",
+  "validator_source_sha256": "4d41f286855ed11a12ecdf0641773c33285847180a3e5cdbf43ce2385a099880",
+  "producer_receipts_sha256": {
+    "engine": "aa634a02ae4a5a9b9bbb6492f752597e8eca1e0232340b2ab3e41d354ed1c3ea",
+    "editor": "488f2c4ba6e63d3ad3d204940612d3f904ffb2db4759424f0630c8f166d0f6ac"
+  }
+}

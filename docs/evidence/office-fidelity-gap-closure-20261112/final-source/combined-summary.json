@@ -1,0 +1,168 @@
+{
+  "status": "passed",
+  "source_commit": "a9bd470a4807c65f65271be896703e587c12de00",
+  "source_snapshot_sha256": "05a859bae3877c9fa7f5df45674a4f59c75beda9793daac55df913e58671a589",
+  "engine": {
+    "analyzer": "passed",
+    "full_tests": {
+      "success_marker": "02:20 +1336 ~1: All tests passed!",
+      "passed": 1336,
+      "skipped": 1,
+      "skip_diagnostics": [
+        "01:13 +970: test/wave4_platform_test.dart: multi-face PDF embeds distinct font resources\n  Latin face already covers Arabic; cannot force F3\n01:13 +970 ~1: test/report_engine_test.dart: Ready-made templates class_certificate_ar parses, validates, and exports"
+      ]
+    },
+    "mandatory_tests": {
+      "success_marker": "00:21 +873: All tests passed!",
+      "passed": 873,
+      "skipped": 0,
+      "python_controls": 344,
+      "skip_diagnostics": []
+    },
+    "operations": 67,
+    "inventory": {
+      "version": 1,
+      "ok": true,
+      "package": "quds_office_engine",
+      "artifact_root": "build",
+      "manifest_sha256": "3d11c081e471990115d975f73c0fb0496de2ba9ba5d41445baed02422105d2a3",
+      "expected_files": 277,
+      "observed_files": 277,
+      "verified_files": 277,
+      "three_cycle_series": 84,
+      "standalone_files": 25,
+      "errors": []
+    },
+    "coverage": {
+      "covered_lines": 44293,
+      "instrumented_lines": 53926,
+      "source_tree_sha256": "fde9742cd73d555014cad3a8c4fd31f637702d27176b827b2acd2e77bd24c88a",
+      "fresh_vm_files": 113
+    },
+    "coverage_percent": 82.13663168045099,
+    "runtime": {
+      "dart": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.44/bin/cache/dart-sdk/bin/dart",
+      "flutter": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.44/bin/flutter",
+      "python3": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3"
+    }
+  },
+  "editor": {
+    "analyzer": "passed",
+    "full_tests": {
+      "success_marker": "00:27 +448 ~1: All tests passed!",
+      "passed": 448,
+      "skipped": 1,
+      "skip_diagnostics": [
+        "00:03 +52: /workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_editor/test/pdf_pixel_compare_render_test.dart: render al_tahreer pages for pixel compare\n  Skip: needs /home/mohammed/Desktop/al_tahreer_profile.pdf (local compare tool)\n00:03 +52 ~1: /workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_editor/test/editor_test.dart: Word canvas and sheet grid mount as RenderBoxes"
+      ]
+    },
+    "independent_oracles": [
+      "corpus-oracle",
+      "bookmark-oracle",
+      "control-oracle"
+    ],
+    "inventory": {
+      "version": 1,
+      "ok": true,
+      "package": "quds_office_editor",
+      "artifact_root": "build",
+      "manifest_sha256": "b170c6eece7065845c2d2b18a7f91d8fb7155094a838f69391f8a2e95b3d6e83",
+      "expected_files": 22,
+      "observed_files": 22,
+      "verified_files": 22,
+      "three_cycle_series": 7,
+      "standalone_files": 1,
+      "errors": []
+    },
+    "tracked_goldens_unchanged": true
+  },
+  "external": {
+    "inputs": 299,
+    "schema_failures": 0,
+    "rendered_files": 292,
+    "rendered_pages": 592,
+    "native_schema_only_files": 7,
+    "cycle_groups": 89,
+    "baseline_comparisons": 29,
+    "page_order_comparisons": 10,
+    "sheet_expected_native_matches": 3,
+    "sheet_classified_cell_checks": 42,
+    "failures": []
+  },
+  "scope_limits": [
+    "Seven exact schema-validated auxiliary packages retain the existing qualified native importer refusal; they have no visual certification.",
+    "The focused Sheet comparison certifies the authored rename case and five explicit cache outcomes; unsupported evaluator and opaque formula forms remain outside this claim."
+  ],
+  "receipts": [
+    {
+      "path": "/workspace/scratch/e445bd9b965c/validation/source-engine-a9bd470/acceptance.json",
+      "bytes": 261593,
+      "sha256": "aa634a02ae4a5a9b9bbb6492f752597e8eca1e0232340b2ab3e41d354ed1c3ea"
+    },
+    {
+      "path": "/workspace/scratch/e445bd9b965c/validation/source-engine-a9bd470/inventory.json",
+      "bytes": 64676,
+      "sha256": "66d51284e539e9a97adca3c650997ec5f83745551033c10deef3fdaf36e1eb70"
+    },
+    {
+      "path": "/workspace/scratch/e445bd9b965c/validation/source-engine-a9bd470/coverage-gaps.json",
+      "bytes": 188388,
+      "sha256": "ce824ac898d3cafb0736df41ea7420059a6e44bb302cf8d6f00b5ddc2be6a756"
+    },
+    {
+      "path": "/workspace/scratch/e445bd9b965c/validation/source-editor-a9bd470/acceptance.json",
+      "bytes": 262661,
+      "sha256": "488f2c4ba6e63d3ad3d204940612d3f904ffb2db4759424f0630c8f166d0f6ac"
+    },
+    {
+      "path": "/workspace/scratch/e445bd9b965c/validation/source-editor-a9bd470/inventory.json",
+      "bytes": 5492,
+      "sha256": "ed8d10d54b4f64dfd42c46c0ac10eab416922cc268daf324488eb351a7343820"
+    },
+    {
+      "path": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/acceptance-summary.json",
+      "bytes": 4554,
+      "sha256": "9952320aa305ec46e327135480de36a67f31b9f997d3f28cc65d5c5ba6aa1b3a"
+    },
+    {
+      "path": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input-manifest.json",
+      "bytes": 162781,
+      "sha256": "ee99077919363e5388e7633161cb960030112a317c57a387845c5017e5a63a73"
+    },
+    {
+      "path": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/schema-report.json",
+      "bytes": 79350,
+      "sha256": "a2dda2d68dc86213c700358cabcb9702cc1f73fdb41e8d4098fea99184632c47"
+    },
+    {
+      "path": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/render/render-report.json",
+      "bytes": 403842,
+      "sha256": "16bfe933a0ce2154e1191cf8ed70b118d7dba745b0ad628b5729453cd45a6973"
+    },
+    {
+      "path": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/focused-sheet/classified-native-comparison.json",
+      "bytes": 28515,
+      "sha256": "c7a3acb1b5b91241c1f5e6146d0fd100e1a2b2c9e53ed170135f56e187666a81"
+    },
+    {
+      "path": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/renderer-provenance.json",
+      "bytes": 8875,
+      "sha256": "c3373f2976319d7d0e6971fd358a29af931a38df8536144e99077afaf2bb6791"
+    },
+    {
+      "path": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/schema-validator-provenance.json",
+      "bytes": 1245,
+      "sha256": "1792ca2643130a95639b4e31cfce27eeee15586e6fdb6e277fd8dce7b4b1a27c"
+    }
+  ],
+  "helper_receipts": [
+    {
+      "path": "/workspace/scratch/e445bd9b965c/runtime/run_source_acceptance.py",
+      "sha256": "7ae82daec7c5559eb4a538805b3ea5ec38909f79d67df131b6a0e77c5f1d0b2e"
+    },
+    {
+      "path": "/workspace/scratch/e445bd9b965c/runtime/run_source_external.py",
+      "sha256": "141f97d072d681c4df64fcf9543e05cd76d557331e03426a2399b56976518858"
+    }
+  ]
+}

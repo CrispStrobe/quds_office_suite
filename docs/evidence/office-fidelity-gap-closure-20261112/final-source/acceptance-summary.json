@@ -1,0 +1,104 @@
+{
+  "status": "passed",
+  "source_commit": "a9bd470a4807c65f65271be896703e587c12de00",
+  "started_utc": "2026-11-12T11:15:09.137095+00:00",
+  "commands": [
+    {
+      "name": "sdk-selftest",
+      "command": [
+        "dotnet",
+        "/workspace/scratch/e445bd9b965c/runtime/validator/OfficeValidation.dll",
+        "--self-test"
+      ],
+      "cwd": "/workspace/scratch/e445bd9b965c/quds_office_suite",
+      "exit_code": 0,
+      "elapsed_seconds": 0.42233998099982273,
+      "log": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/sdk-selftest.log",
+      "log_sha256": "4945b06eb2eda6b4b7dd4ab50752ac76d91e73af5045d5bb39b3ecda55e25c56"
+    },
+    {
+      "name": "schema",
+      "command": [
+        "dotnet",
+        "/workspace/scratch/e445bd9b965c/runtime/validator/OfficeValidation.dll",
+        "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input",
+        "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/schema-report.json"
+      ],
+      "cwd": "/workspace/scratch/e445bd9b965c/quds_office_suite",
+      "exit_code": 0,
+      "elapsed_seconds": 7.044924978999916,
+      "log": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/schema.log",
+      "log_sha256": "3a60f3cdbc193fa3be122be31a6ea78b7be5c8af2fb9ccec4b4fe812511da4ed"
+    },
+    {
+      "name": "renderer-controls",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/office-validation",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/workspace/scratch/e445bd9b965c/quds_office_suite",
+      "exit_code": 0,
+      "elapsed_seconds": 0.31602505599948927,
+      "log": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/renderer-controls.log",
+      "log_sha256": "db82666bfe5cac34f5edb36e8f5f60fbecdb8b04f0104717beaecc24089b7bc2"
+    },
+    {
+      "name": "native-render",
+      "command": [
+        "python3",
+        "/workspace/scratch/e445bd9b965c/quds_office_suite/tool/office-validation/render.py",
+        "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input",
+        "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/render",
+        "--schema-report",
+        "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/schema-report.json"
+      ],
+      "cwd": "/workspace/scratch/e445bd9b965c/quds_office_suite",
+      "exit_code": 0,
+      "elapsed_seconds": 230.68056220400103,
+      "log": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/native-render.log",
+      "log_sha256": "4e1fae23b66b2264f04370b30e3ace554b0a4d58cdf4070c8ff0c2ba4a1745e4"
+    },
+    {
+      "name": "sheet-classification",
+      "command": [
+        "python3",
+        "/workspace/scratch/e445bd9b965c/quds_office_suite/docs/evidence/office-fidelity-gap-closure-20261112/focused-sheet-native/reproduce/compare_native.py",
+        "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/focused-sheet",
+        "/workspace/scratch/e445bd9b965c/validation/fid027-expected-native",
+        "/workspace/scratch/e445bd9b965c/quds_office_suite/tool/office-validation/render.py"
+      ],
+      "cwd": "/workspace/scratch/e445bd9b965c/quds_office_suite",
+      "exit_code": 0,
+      "elapsed_seconds": 0.06496722200063232,
+      "log": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/sheet-classification.log",
+      "log_sha256": "7bee36a0426ab9f70b6b510025d19b117e47c06c5480c7bad4b4a89020ac4122"
+    }
+  ],
+  "inputs": 299,
+  "schema_failures": 0,
+  "rendered_files": 292,
+  "rendered_pages": 592,
+  "native_schema_only_files": 7,
+  "cycle_groups": 89,
+  "baseline_comparisons": 29,
+  "page_order_comparisons": 10,
+  "sheet_expected_native_matches": 3,
+  "sheet_classified_cell_checks": 42,
+  "failures": [],
+  "report_sha256": {
+    "input-manifest.json": "ee99077919363e5388e7633161cb960030112a317c57a387845c5017e5a63a73",
+    "schema-report.json": "a2dda2d68dc86213c700358cabcb9702cc1f73fdb41e8d4098fea99184632c47",
+    "render/render-report.json": "16bfe933a0ce2154e1191cf8ed70b118d7dba745b0ad628b5729453cd45a6973",
+    "renderer-provenance.json": "c3373f2976319d7d0e6971fd358a29af931a38df8536144e99077afaf2bb6791",
+    "schema-validator-provenance.json": "1792ca2643130a95639b4e31cfce27eeee15586e6fdb6e277fd8dce7b4b1a27c",
+    "focused-sheet/classified-native-comparison.json": "c7a3acb1b5b91241c1f5e6146d0fd100e1a2b2c9e53ed170135f56e187666a81"
+  },
+  "finished_utc": "2026-11-12T11:19:07.723483+00:00"
+}

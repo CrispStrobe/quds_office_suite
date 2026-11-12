@@ -178,14 +178,59 @@ partial and FID-061 retains its bounded closure.
 
 ## Final combined acceptance
 
-Final source, host, schema, renderer, inventory and coverage receipts are
-recorded alongside this report under
-`evidence/office-fidelity-gap-closure-20261112/`. Results in this section will be
-filled from the clean, combined branch execution before the final checkpoint.
+Acceptance ran on clean implementation commit
+`a9bd470a4807c65f65271be896703e587c12de00`. Later evidence/report commits do not
+change its engine, editor, gates or reviewed goldens. Source fingerprints were
+checked before and after execution. The corresponding clean app implementation
+is `5202d362a929c30266519dee178a441884056ca0`, with **352 managed files** pinned
+to this exact source revision.
+
+| Gate | Final result |
+| --- | --- |
+| Engine analysis | Passed |
+| Complete engine suite | 1,336 passed; one existing font-capability skip |
+| Mandatory fidelity gate | 873 Dart cases and 344 Python controls passed |
+| Script operation scenarios | 67/67 |
+| Engine export inventory | 277/277; 84 three-cycle series and 25 standalone files |
+| Editor analysis and complete suite | Passed; 448 tests, with one existing local PDF-fixture skip |
+| Reviewed Flutter goldens | All 23 page images pass; no changes during final acceptance |
+| Editor oracles and export inventory | All three oracles; 22/22 files |
+| Open XML SDK | All 299 source inputs pass exact per-file SHA validation |
+| Native renderer controls | 39 passed |
+| Native rendering | 292 packages, 592 pages; seven existing qualified schema-only cases |
+| Native comparison | 89 save-cycle groups, 29 baselines and ten slide page-order comparisons pass |
+| Final Sheet native classification | 42 cell checks and three independent full-page matches pass |
+| Fresh engine line coverage | 44,293/53,926 instrumented lines (82.1366%); 113 fresh VM files |
+| Complete app mandatory gate | 873 engine and 140 host cases; all required independent controls pass |
+| App exact outputs and SDK | 277 engine + 59 host = 336/336 valid packages |
+| Supplementary actual-host native probe | 11 uploads rendered to 23 pages; no failures |
+
+The source runtime was Flutter 3.44.0 / Dart 3.12.0, with the engine using the
+direct cached Dart binary. The app used Flutter 3.47.8 / Dart 3.13.7. The pinned
+external validator and official LibreOffice 24.2.7.2 LibreOfficeKit adapter were
+rehashed before execution. Native checks use complete text and RGB fingerprints;
+no new mask, tolerance or importer exemption was introduced.
+
+The source coverage report lists ten files absent from instrumentation, including
+barrels and optional helpers. Branch coverage remains unmeasured. App coverage
+is 2,223/3,558 instrumented lines (62.5%), with all ten declared host integration
+files present. Its denominator changed as shared code moved upstream and three
+host conversion components were added, so older host percentages are not a
+like-for-like comparison.
+
+[The evidence index](evidence/office-fidelity-gap-closure-20261112/README.md)
+links the exact producer receipts, coverage, inventories, SDK/native reports,
+independent Sheet classification, runtime provenance and reproduction scripts.
+The final remote audit at 11:18:56 UTC found source main `50f16f8` and app main
+`977b5037` already in the tested ancestry. PR55's latest `36f6d8c3` contains
+KeePass/export-review changes and documentation, with no missing Office
+implementation. The source and app Actions runs were queued at that observation;
+local acceptance does not establish remote CI success.
 
 ## Remaining scope
 
-The gap ledger remains the authoritative list of open, partial and guarded work.
+The 76-entry gap ledger contains 62 closed, eight partial, five open and one
+guarded entry. It remains the authoritative list of bounded claims and remaining work.
 The broad outstanding items include full Microsoft Office/platform equivalence,
 branch coverage, nondefault spreadsheet Normal-font metrics, complex content
 control bindings/locking/repeating structures, mixed bookmark drawing remapping,

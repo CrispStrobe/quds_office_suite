@@ -1,0 +1,28 @@
+{
+  "Files": 4,
+  "Failures": 0,
+  "Reports": [
+    {
+      "File": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-sheet-rename/renamed-1.xlsx",
+      "Sha256": "5599c7cd83db0c016b8da5ac45aeda7484624862eae274f7b298563531069be4",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-sheet-rename/renamed-2.xlsx",
+      "Sha256": "ceeb59898b03fa1d440af8ece0fa591d2851958c4ff14b9e8a7b58b63a8916e6",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-sheet-rename/renamed-3.xlsx",
+      "Sha256": "76f94eadce036f488ca8e93e75cdcd1e05c19db817eef8349094a6c60c50c5ef",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/input/quds_office_engine/fidelity-sheet-rename/source.xlsx",
+      "Sha256": "561a2ebf80b6f02e8b1fc00648230b341ff68e1a3ee501ea026b9e69c35fc24b",
+      "Errors": []
+    }
+  ],
+  "derived_from": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/schema-report.json",
+  "derived_from_sha256": "a2dda2d68dc86213c700358cabcb9702cc1f73fdb41e8d4098fea99184632c47"
+}

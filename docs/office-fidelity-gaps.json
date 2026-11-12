@@ -449,7 +449,7 @@
       "id": "FID-039",
       "status": "closed",
       "area": "Actual host outputs and coverage provenance",
-      "finding": "The host requires exactly fifty-nine valid captured DOCX outputs and validates the captured bytes independently with Open XML SDK. Fresh Office LCOV and engine VM reports list unhit instrumented lines, absent files and current source hashes. The explicit host coverage scope contains ten host integration files, including captured conversion destinations and the conversion action/dialog; six reusable parsing/package/conversion modules are maintained in Quds. Coverage percentages across the old and new scopes are not directly comparable. Helpers reject malformed records, missing source paths and out-of-range line numbers; fresh clean-directory collection is required because same-length stale input cannot be detected from coverage alone.",
+      "finding": "The host requires exactly fifty-nine valid captured Office outputs and validates the captured bytes independently with Open XML SDK. Fresh Office LCOV and engine VM reports list unhit instrumented lines, absent files and current source hashes. The explicit host coverage scope contains ten host integration files, including captured conversion destinations and the conversion action/dialog; six reusable parsing/package/conversion modules are maintained in Quds. Coverage percentages across the old and new scopes are not directly comparable. Helpers reject malformed records, missing source paths and out-of-range line numbers; fresh clean-directory collection is required because same-length stale input cannot be detected from coverage alone.",
       "evidence": [
         "CrispCloud:tool/office_host_evidence.py",
         "CrispCloud:tool/test_office_host_evidence.py",

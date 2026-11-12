@@ -1,0 +1,115 @@
+{
+  "files": 4,
+  "rendered_files": 4,
+  "native_schema_only_files": 0,
+  "reports": [
+    {
+      "file": "quds_office_engine/fidelity-sheet-rename/renamed-1.xlsx",
+      "pages": 2,
+      "text": "Region            Value          Total\nNorth                     2.00            6\nSouth                        5           15\n\nNative workbook\n\fRegion    Sum of Value           2\nNorth          2.00              5\nSouth          5.00             42\nTotal Resul    7.00             42\n                                42\n                                42\n                                42\n                         Data!A1 \"quoted\"\n                           Err:509\n                                42\n                                42\n                                42\n                             #REF!\n                                 4\n\f",
+      "pixel_sha256": [
+        "caa114fad5cf8775495e623cfac3776b455293ea544ea705087701b4e4ddbce5",
+        "4226165ee7151bd02b74cec6d93c88881569515a079d53591948282ab7cf35dc"
+      ],
+      "pdf": "208/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "208/page-0001.png",
+          "pixel_sha256": "caa114fad5cf8775495e623cfac3776b455293ea544ea705087701b4e4ddbce5"
+        },
+        {
+          "page": 2,
+          "width": 612,
+          "height": 792,
+          "png": "208/page-0002.png",
+          "pixel_sha256": "4226165ee7151bd02b74cec6d93c88881569515a079d53591948282ab7cf35dc"
+        }
+      ]
+    },
+    {
+      "file": "quds_office_engine/fidelity-sheet-rename/renamed-2.xlsx",
+      "pages": 2,
+      "text": "Region            Value          Total\nNorth                     2.00            6\nSouth                        5           15\n\nNative workbook\n\fRegion    Sum of Value           2\nNorth          2.00              5\nSouth          5.00             42\nTotal Resul    7.00             42\n                                42\n                                42\n                                42\n                         Data!A1 \"quoted\"\n                           Err:509\n                                42\n                                42\n                                42\n                             #REF!\n                                 4\n\f",
+      "pixel_sha256": [
+        "caa114fad5cf8775495e623cfac3776b455293ea544ea705087701b4e4ddbce5",
+        "4226165ee7151bd02b74cec6d93c88881569515a079d53591948282ab7cf35dc"
+      ],
+      "pdf": "209/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "209/page-0001.png",
+          "pixel_sha256": "caa114fad5cf8775495e623cfac3776b455293ea544ea705087701b4e4ddbce5"
+        },
+        {
+          "page": 2,
+          "width": 612,
+          "height": 792,
+          "png": "209/page-0002.png",
+          "pixel_sha256": "4226165ee7151bd02b74cec6d93c88881569515a079d53591948282ab7cf35dc"
+        }
+      ]
+    },
+    {
+      "file": "quds_office_engine/fidelity-sheet-rename/renamed-3.xlsx",
+      "pages": 2,
+      "text": "Region            Value          Total\nNorth                     2.00            6\nSouth                        5           15\n\nNative workbook\n\fRegion    Sum of Value           2\nNorth          2.00              5\nSouth          5.00             42\nTotal Resul    7.00             42\n                                42\n                                42\n                                42\n                         Data!A1 \"quoted\"\n                           Err:509\n                                42\n                                42\n                                42\n                             #REF!\n                                 4\n\f",
+      "pixel_sha256": [
+        "caa114fad5cf8775495e623cfac3776b455293ea544ea705087701b4e4ddbce5",
+        "4226165ee7151bd02b74cec6d93c88881569515a079d53591948282ab7cf35dc"
+      ],
+      "pdf": "210/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "210/page-0001.png",
+          "pixel_sha256": "caa114fad5cf8775495e623cfac3776b455293ea544ea705087701b4e4ddbce5"
+        },
+        {
+          "page": 2,
+          "width": 612,
+          "height": 792,
+          "png": "210/page-0002.png",
+          "pixel_sha256": "4226165ee7151bd02b74cec6d93c88881569515a079d53591948282ab7cf35dc"
+        }
+      ]
+    },
+    {
+      "file": "quds_office_engine/fidelity-sheet-rename/source.xlsx",
+      "pages": 2,
+      "text": "Region            Value          Total\nNorth                     2.00            6\nSouth                        5           15\n\nNative workbook\n\fRegion    Sum of Value        42\nNorth          2.00           42\nSouth          5.00           42\nTotal Resul    7.00           42\n                              42\n                              42\n                              42\n                              42\n                         Err:509\n                              42\n                              42\n                              42\n                            2.00\n                              42\n\f",
+      "pixel_sha256": [
+        "caa114fad5cf8775495e623cfac3776b455293ea544ea705087701b4e4ddbce5",
+        "e117eabae7d7d7a5d5857e9a01872d1b86a31b7b71e28ce54abc3b668d5974f5"
+      ],
+      "pdf": "211/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "211/page-0001.png",
+          "pixel_sha256": "caa114fad5cf8775495e623cfac3776b455293ea544ea705087701b4e4ddbce5"
+        },
+        {
+          "page": 2,
+          "width": 612,
+          "height": 792,
+          "png": "211/page-0002.png",
+          "pixel_sha256": "e117eabae7d7d7a5d5857e9a01872d1b86a31b7b71e28ce54abc3b668d5974f5"
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "derived_from": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/render/render-report.json",
+  "derived_from_sha256": "16bfe933a0ce2154e1191cf8ed70b118d7dba745b0ad628b5729453cd45a6973",
+  "artifact_root": "/workspace/scratch/e445bd9b965c/validation/source-external-a9bd470/render"
+}
