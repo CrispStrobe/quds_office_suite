@@ -5,7 +5,7 @@
     "engine": "CrispStrobe/quds_office_suite",
     "host": "CrispStrobe/CrispCloud"
   },
-  "branch": "feature/office-fidelity-followup-20261112",
+  "branch": "feature/office-fidelity-expansion-20261112",
   "scope": "Reproduced and investigated gaps; the source-hashed line inventory is separate. Closed means the cited bounded regression is covered, not exhaustive format support.",
   "status_definitions": {
     "closed": "Reproduced gap fixed and protected by named evidence.",
@@ -84,14 +84,15 @@
       "id": "FID-007",
       "status": "partial",
       "area": "Visual/platform breadth",
-      "finding": "Twenty-three reviewed page images cover notes, note continuation, first/even/default stories, columns, tall tables, structural create/edit/remove workflows, three native frame wrap modes and rich nested cells on pinned Linux Flutter 3.44.0. Other platforms and arbitrary scripts/fonts remain unproven.",
+      "finding": "Twenty-seven reviewed page images cover notes, note continuation, first/even/default stories, columns, tall tables, structural create/edit/remove workflows, three native frame wrap modes rich nested cells and four authored merged-table editing phases on pinned Linux Flutter 3.44.0. Other platforms and arbitrary scripts/fonts remain unproven.",
       "evidence": [
         "packages/quds_office_editor/test/office_fidelity_golden_test.dart",
         "packages/quds_office_editor/test/office_story_golden_test.dart",
         "packages/quds_office_editor/test/office_structure_goldens_test.dart",
         "docs/office-golden-review-20261112.md",
         "packages/quds_office_editor/test/office_frame_wrap_golden_test.dart",
-        "packages/quds_office_editor/test/office_nested_table_golden_test.dart"
+        "packages/quds_office_editor/test/office_nested_table_golden_test.dart",
+        "packages/quds_office_editor/test/office_table_grid_golden_test.dart"
       ]
     },
     {
@@ -674,7 +675,11 @@
         "packages/quds_office_editor/test/word_table_grid_history_test.dart",
         "docs/evidence/office-fidelity-followup-20261112/table-grid/red-green.json",
         "docs/evidence/office-fidelity-followup-20261112/table-grid/native-corrected/summary.json",
-        "docs/evidence/office-fidelity-followup-20261112/resumed-source/focused-followup-summary.json"
+        "docs/evidence/office-fidelity-followup-20261112/resumed-source/focused-followup-summary.json",
+        "packages/quds_office_engine/tool/fidelity/table_selector.dart",
+        "packages/quds_office_engine/test/table_grid_steps_test.dart",
+        "packages/quds_office_engine/tool/fidelity/table_grid_oracle.py",
+        "packages/quds_office_engine/tool/fidelity/test_table_grid_oracle.py"
       ]
     },
     {
@@ -920,6 +925,165 @@
         "docs/evidence/office-fidelity-gap-closure-20261112/focused-slide-native/render-report.json"
       ],
       "limits": "Closure is limited to modeled placeholder presence/type/index and the authored layouts. It does not certify every placeholder extension or arbitrary theme/master inheritance."
+    },
+    {
+      "id": "FID-077",
+      "status": "closed",
+      "area": "Native table-cell preferred widths",
+      "finding": "Import preserves native width XML and its point projection; explicit width edits serialize, clone/isolate retains provenance, and merge/unmerge uses logical grid widths instead of duplicating a merged width into each split cell. Independent authored expected packages cover unchanged and three scripted phases through three direct/isolate cycles.",
+      "evidence": [
+        "packages/quds_office_engine/test/table_grid_steps_test.dart",
+        "packages/quds_office_engine/tool/fidelity/table_grid_oracle.py",
+        "tool/office-validation/render.py",
+        "tool/office-validation/test_render.py"
+      ],
+      "limits": "The measured nested-table corpus has complete grids. Arbitrary auto-fit and percentage layout equivalence across Office applications are not certified."
+    },
+    {
+      "id": "FID-078",
+      "status": "closed",
+      "area": "Captured XML namespace and attribute collisions",
+      "finding": "XmlDocument.readElement matches namespace declarations by qualified name so xmlns:w cannot overwrite the real w:w width attribute. Local and inherited declarations and same-name unqualified attributes are protected.",
+      "evidence": [
+        "packages/quds_office_engine/test/xml_namespace_capture_test.dart",
+        "packages/quds_office_engine/test/table_grid_steps_test.dart"
+      ]
+    },
+    {
+      "id": "FID-079",
+      "status": "closed",
+      "area": "Coverage collection provenance",
+      "finding": "A fresh exclusive collector hashes inputs before execution, records runtime/command/exit metadata and seals successful output hashes. Reporting requires unchanged inputs and complete unchanged outputs, rejecting stale same-length edits and incomplete runs. Historical unbound reports are explicitly unverified.",
+      "evidence": [
+        "packages/quds_office_engine/tool/fidelity/collect_coverage.py",
+        "packages/quds_office_engine/tool/fidelity/coverage_report.py",
+        "packages/quds_office_engine/tool/fidelity/test_collect_coverage.py",
+        ".github/workflows/office-fidelity.yml"
+      ],
+      "limits": "This establishes source/output provenance, not branch correctness or hermetic dependencies; FID-008 remains open."
+    },
+    {
+      "id": "FID-080",
+      "status": "closed",
+      "area": "Explicit host font intent",
+      "finding": "The actual font dialog preserves imported precision and mixed run properties. Only controls explicitly used by the user are applied; choosing a displayed value can normalize a mixed selection. Unchanged Apply stays clean.",
+      "evidence": [
+        "CrispCloud:test/widget/office_font_fidelity_test.dart",
+        "CrispCloud:docs/office-font-fidelity-20261112.md"
+      ]
+    },
+    {
+      "id": "FID-081",
+      "status": "closed",
+      "area": "Asynchronous host editing targets",
+      "finding": "Font and picture results are tied to their original controller, content revision, story, selection and interaction mode. Stale results cannot edit replacement documents, new targets or disposed widgets.",
+      "evidence": [
+        "CrispCloud:test/widget/office_font_fidelity_test.dart",
+        "CrispCloud:test/widget/office_picture_fidelity_test.dart"
+      ]
+    },
+    {
+      "id": "FID-082",
+      "status": "closed",
+      "area": "Host picture proportions and native extents",
+      "finding": "Word and slide insertions derive proportional dimensions from validated PNG/JPEG/GIF data and fit the available content box. Native transforms agree with visual geometry; original media bytes survive three saves.",
+      "evidence": [
+        "CrispCloud:lib/services/office_picture.dart",
+        "CrispCloud:test/widget/office_picture_fidelity_test.dart",
+        "CrispCloud:docs/office-picture-fidelity-20261112.md"
+      ]
+    },
+    {
+      "id": "FID-083",
+      "status": "closed",
+      "area": "Slide drawing history after changing slide",
+      "finding": "Host shape insertion commands retain the owning slide so undo and redo cannot remove or duplicate a picture or rectangle on the newly selected slide. Independent exported XML checks both slides.",
+      "evidence": [
+        "CrispCloud:test/widget/office_picture_fidelity_test.dart"
+      ]
+    },
+    {
+      "id": "FID-084",
+      "status": "closed",
+      "area": "Host evidence format and main-part identity",
+      "finding": "The host inventory supports DOCX/XLSX/PPTX, follows the actual OPC officeDocument target and requires matching MIME and namespace/root. Wrong-format renames, duplicate members, invalid targets and missing outputs fail.",
+      "evidence": [
+        "CrispCloud:tool/office_host_evidence.py",
+        "CrispCloud:tool/test_office_host_evidence.py",
+        "CrispCloud:tool/office_host_evidence.json"
+      ]
+    },
+    {
+      "id": "FID-085",
+      "status": "closed",
+      "area": "Feature-directed import edit export acceptance",
+      "finding": "A strict matrix maps fifteen feature areas to producers, independent oracles, corruption controls and separately listed goldens. Runs delete only selected managed outputs, require regeneration and reject stale receipts, input changes, missing/corrupt outputs and concurrent ownership.",
+      "evidence": [
+        "packages/quds_office_engine/tool/fidelity/feature_matrix.py",
+        "packages/quds_office_engine/tool/fidelity/feature_matrix.json",
+        "packages/quds_office_engine/tool/fidelity/test_feature_matrix.py"
+      ]
+    },
+    {
+      "id": "FID-086",
+      "status": "closed",
+      "area": "Long words in narrow nested cells",
+      "finding": "Constrained Word cell/frame paragraphs emergency-wrap oversized tokens at whole grapheme boundaries and grow rows instead of clipping text. Default body line breaking remains unchanged. Flag pairs and emoji modifiers remain intact; supplementary UTF-16 ranges and RTL shaped-glyph ownership are protected. Authored nested-grid phases and three direct/isolate saves have semantic bounds checks and reviewed pixels.",
+      "evidence": [
+        "packages/quds_office_engine/test/word_contained_text_wrap_test.dart",
+        "packages/quds_office_engine/lib/src/bidi/line_breaker.dart",
+        "packages/quds_office_engine/lib/src/bidi/grapheme_clusters.dart",
+        "packages/quds_office_editor/test/office_table_grid_golden_test.dart",
+        "docs/office-golden-review-20261112.md"
+      ],
+      "limits": "A single grapheme wider than the entire content box cannot be made narrower without scaling or clipping. The fallback metric remains conservative when no font is supplied; this correction does not promise native Word line-break equivalence."
+    },
+    {
+      "id": "FID-087",
+      "status": "closed",
+      "area": "Actual host coverage provenance and complete records",
+      "finding": "Fresh collection binds host/shared source, tests, shipped assets, configuration, resolution files, pinned vendor bytes and exact LCOV to a successful unchanged Flutter run. Complete scoped LF/LH/end records prevent a truncated denominator. Verification rechecks after parsing; failed or interrupted retries cannot leave an old verified report, and source-completeness checks precede publication.",
+      "evidence": [
+        "CrispCloud:tool/collect_office_host_coverage.py",
+        "CrispCloud:tool/office_host_coverage.py",
+        "CrispCloud:tool/test_collect_office_host_coverage.py",
+        "CrispCloud:tool/test_office_host_coverage.py",
+        "CrispCloud:tool/check_office_fidelity.sh"
+      ],
+      "limits": "The effective SQLite-hook configuration is part of the measured input. Collection and verification use the same wrapper. These are source/output provenance guarantees, not branch correctness or hermetic dependency verification."
+    },
+    {
+      "id": "FID-088",
+      "status": "closed",
+      "area": "Failed engine coverage report freshness",
+      "finding": "A failed or interrupted report attempt replaces the requested summary with explicit unverified running/failed state. It cannot retain an older verified success at that destination or overwrite raw VM evidence. Same-length source edits and coverage changes during reporting reject.",
+      "evidence": [
+        "packages/quds_office_engine/tool/fidelity/coverage_report.py",
+        "packages/quds_office_engine/tool/fidelity/test_collect_coverage.py"
+      ]
+    },
+    {
+      "id": "FID-089",
+      "status": "open",
+      "area": "Additional host authoring controls",
+      "finding": "The actual host still lacks dedicated Word image wrap/anchor/crop/rotation controls, Word drawing creation and bookmark/citation/cross-reference authoring. Native note-menu action bridging is separate from the tested Flutter ribbon. Engine/script operations do not imply these host controls exist.",
+      "evidence": [
+        "CrispCloud:docs/office-picture-fidelity-20261112.md",
+        "CrispCloud:docs/office-fidelity.md"
+      ]
+    },
+    {
+      "id": "FID-090",
+      "status": "closed",
+      "area": "Native evidence for picture-only host slides",
+      "finding": "The twelve authored landscape, portrait, square and bounded slide exports require measured native page and black-rectangle geometry, solid interior, grayscale color and white exterior. Empty extracted text can pass only with those pixel measurements. A separate OOXML transform check rejects invisible overflow clipped by the page. Each of four three-save groups must retain identical validated pixels and metrics.",
+      "evidence": [
+        "tool/office-validation/render.py",
+        "tool/office-validation/test_render.py",
+        "CrispCloud:test/widget/office_picture_fidelity_test.dart",
+        "CrispCloud:.github/workflows/office-fidelity.yml"
+      ],
+      "limits": "This is an independent oracle for the exact twelve authored image-only fixtures, not a blanket permission for empty or blank render output. Physical page rounding is bounded by 0.03 point and rectangle raster edges by one pixel."
     }
   ],
   "evidence_path_convention": "Unprefixed paths are relative to quds_office_suite; CrispCloud: paths are relative to the host repository."

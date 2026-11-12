@@ -4,11 +4,14 @@ cd "$(dirname "$0")/../.."
 # Generate every required output before running the independent oracles. Missing
 # or stale/incomplete inventories fail; this command never regenerates goldens.
 python3 tool/fidelity/inventory.py clean
+python3 tool/fidelity/feature_matrix.py list > /dev/null
 dart test \
   test/legacy_word_document_test.dart test/bounded_cfb_reader_test.dart \
   test/legacy_word_conversion_test.dart test/opc_word_kind_test.dart \
   test/word_package_preservation_test.dart test/zip_bounded_read_test.dart \
   test/drawing_line_style_test.dart \
+  test/table_grid_steps_test.dart test/xml_namespace_capture_test.dart \
+  test/word_contained_text_wrap_test.dart \
   test/office_package_parts_test.dart test/office_search_fidelity_test.dart \
   test/office_fidelity_oracle_test.dart test/office_steps_test.dart \
   test/scripted_workflows_test.dart test/numbering_collision_test.dart \
@@ -68,6 +71,7 @@ python3 tool/fidelity/comment_threads_oracle.py
 python3 tool/fidelity/altchunk_oracle.py
 python3 tool/fidelity/edge_oracle.py
 python3 tool/fidelity/table_borders_oracle.py
+python3 tool/fidelity/table_grid_oracle.py
 python3 tool/fidelity/note_markers_legacy_oracle.py
 python3 tool/fidelity/bookmarks_oracle.py
 python3 tool/fidelity/content_controls_oracle.py
