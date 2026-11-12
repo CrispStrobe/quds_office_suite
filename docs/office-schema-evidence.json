@@ -1,336 +1,1180 @@
 {
-  "Files": 65,
+  "Files": 233,
   "Failures": 0,
   "Reports": [
     {
       "File": "quds_office_editor/fidelity-layout/columns_sections-1.docx",
-      "Errors": [],
-      "InputSha256": "add817c43d310a53eb563c5fd3572f1117e64f81ff2094025eabd16ae5586cc8"
+      "Sha256": "718b69eccf295cbdcf5c86ad890f56dc6f8ef77677edd4dac3f6b95aab3a85fd",
+      "Errors": []
     },
     {
       "File": "quds_office_editor/fidelity-layout/columns_sections-2.docx",
-      "Errors": [],
-      "InputSha256": "a0b2532e120298471581ed7e10746c818c7baf5a62df293e5250509fa1863287"
+      "Sha256": "af3659b55dd85bdf664d53921401e50988fa61b43e49fd258e38fb7bbb151a6a",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_editor/fidelity-layout/columns_sections-3.docx",
+      "Sha256": "284d9e7545816c7ca573d72143615fd31ae0e86a3cc20822b66f7acab290a1b6",
+      "Errors": []
     },
     {
       "File": "quds_office_editor/fidelity-layout/continued_notes-1.docx",
-      "Errors": [],
-      "InputSha256": "00e277c72fab047fe2eaf91fc2d481bc94957bb12f3a1d362b60165b82a6344c"
+      "Sha256": "f8a92a7c74ad6b16c620f105a7869daa475b122f7bf0ba7b224f4260e72143e5",
+      "Errors": []
     },
     {
       "File": "quds_office_editor/fidelity-layout/continued_notes-2.docx",
-      "Errors": [],
-      "InputSha256": "621523421c83e02cf8b7b997806351fafcea2fa452dd5b22e8360e0552ec59be"
+      "Sha256": "ae15f0b26c031e4760aea5d876f8409a59445c80b5dffcd558e4bf8ecc0fb2c9",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_editor/fidelity-layout/continued_notes-3.docx",
+      "Sha256": "2780ecc3be7d36420b0a7daf2ed12fe0b57896670dbff4439556e0ddf77a81b3",
+      "Errors": []
     },
     {
       "File": "quds_office_editor/fidelity-layout/rtl-1.docx",
-      "Errors": [],
-      "InputSha256": "b91ce232adde8fffd02a217133e2c5cf1519bed4c07d246b3c8d95309f3080f7"
+      "Sha256": "0c111ae3427d91531538627dc03e94c341e443aa311ab72394d76fab1ff2557f",
+      "Errors": []
     },
     {
       "File": "quds_office_editor/fidelity-layout/rtl-2.docx",
-      "Errors": [],
-      "InputSha256": "b334ac774b663005a9cdad374b14468c80983df1e4e9d11d74bee2c1f96df531"
+      "Sha256": "ddbdd7489cebfe7426f613540cb2dd5fa587567f736c624041df3dc393adb2c6",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_editor/fidelity-layout/rtl-3.docx",
+      "Sha256": "1b23798cc88b59e8dda41948aa3a4e5437e5a2228b50529f13f6f3941368c610",
+      "Errors": []
     },
     {
       "File": "quds_office_editor/fidelity-layout/tall_table-1.docx",
-      "Errors": [],
-      "InputSha256": "335f2b644599004477e6d4ce6ec60b2183245dca147c87cba1f0ab4609988191"
+      "Sha256": "86282d5263804b679ed48653a061549f869d2c489cc0f6db490c86594350c465",
+      "Errors": []
     },
     {
       "File": "quds_office_editor/fidelity-layout/tall_table-2.docx",
-      "Errors": [],
-      "InputSha256": "ce5c509690bd625c69beb0626e2d1e052e151d10c972c469db8c28d5b95127cc"
+      "Sha256": "cd94b17353fbb37881d25ee20b810b3f587ff5ca5629f5b40fe4e636f0609926",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_editor/fidelity-layout/tall_table-3.docx",
+      "Sha256": "a3a4414f83a3ac16e886a292afa0c1ed394134f14846b1fbee35b3db2909487f",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_editor/fidelity-story-goldens/three-pages-1.docx",
+      "Sha256": "4fefdb32ad16b66cfaa1870658336f82dbd599c62ea3dab6ed7eaa7d2d967643",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_editor/fidelity-story-goldens/three-pages-2.docx",
+      "Sha256": "31f2cf8e6c7822ad78a4d809bd00f94ba67d6fcc13742adbe5756abffdf062e2",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_editor/fidelity-story-goldens/three-pages-3.docx",
+      "Sha256": "f0c63c08987c4f6db16fc9fdb4457dc372560600c668704002fea1332191a418",
+      "Errors": []
     },
     {
       "File": "quds_office_editor/fidelity/unchanged-controller.docx",
-      "Errors": [],
-      "InputSha256": "536221981c3b18a032721a650d75283b978051b20be5fb66a30c0c335065b012"
+      "Sha256": "e1eed602bfe057b611fa5cbd0da377c5c9af30b0ab441ac302a04fd66c13be4b",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-altchunk/altchunk-imported-1.docx",
+      "Sha256": "035bef0a3ffde5551865c9a119f599a6ecc24591516c52c5f37aa0342a520f11",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-altchunk/altchunk-imported-2.docx",
+      "Sha256": "dd82260df8e406a5fa83e772a1df80f79edbc760566a476e1c6a86723c5a3d42",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-altchunk/altchunk-imported-3.docx",
+      "Sha256": "0e23057b9681c419c2559ed0f663f4362329c0d1d7dc4204b1ebd8c4f0193c1a",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-altchunk/altchunk-moved-1.docx",
+      "Sha256": "4d25e0792e0f02ad50c7cc9c0ae14d77764d9d90f662d2abadc9f9db7d6fdda6",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-altchunk/altchunk-moved-2.docx",
+      "Sha256": "64600842e974fcf809238dd0cd09563ba35572cb9847d19a8fc772799da04f0f",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-altchunk/altchunk-moved-3.docx",
+      "Sha256": "75685751d4bb1cc0355e96729eccf5750e030523c5111ff721933fba9a3835b6",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-aux-controls/edited-1.docx",
+      "Sha256": "13e4c6098ccb5cd75765a078f118f3a979115625c584a37c526f7f66bf01fa07",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-aux-controls/edited-2.docx",
+      "Sha256": "6d2dfa3ab5eaa3c33b38bb0a53eb2f5beab044c45606e99df28238e41ebf1d35",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-aux-controls/edited-3.docx",
+      "Sha256": "fce060a827b4d570193a81c333a3992a7bcf0f760acffb7874cc9cf66f285fb5",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-aux-controls/imported-1.docx",
+      "Sha256": "b2ec912231b0d5e75b26762de63415f85d9d9e7f553abe645b114c75de811f6f",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-aux-controls/imported-2.docx",
+      "Sha256": "b1ffde891b7f68aaa1ce44214f2151437283834431af2301eae465a5e655c058",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-aux-controls/imported-3.docx",
+      "Sha256": "6856d6e954cd2a65504f0ded46613c359bfd738a741ab812e0fce591bdc9947c",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-aux-controls/source.docx",
+      "Sha256": "fba38173b5148646d8cd00d1f18baffaf4a5bed829bc8d02583dacfbf75ddf4e",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-aux-header-footer/edited-1.docx",
+      "Sha256": "8578c1fe095894c7cab8cc4d7ad1f1325681b7bfe8e1510dbf4b81cc28acf925",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-aux-header-footer/edited-2.docx",
+      "Sha256": "0c39d510940597ef363b62e0a426f18847d2ee5a88d05de1ad60d39530a9f9c3",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-aux-header-footer/edited-3.docx",
+      "Sha256": "bbe19a5d9a9569c27ecdf0e04238a99235629da16e65c020c03011c6181d9376",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-aux-header-footer/imported-1.docx",
+      "Sha256": "f85afa910a3f3dcb342fc760a843c8e2b4e02df4a96f618c0199f09fe11c1a8b",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-aux-header-footer/imported-2.docx",
+      "Sha256": "b7c8e6ef7eb9ee9ac3659d0ccf587ad2c5ce03fe6e7a76cfbf3b994e9fddbb10",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-aux-header-footer/imported-3.docx",
+      "Sha256": "d5bb494723ff7983755979287c0eda320e5530cdded6a5441d5caad684801f64",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-aux-header-footer/source.docx",
+      "Sha256": "2d26c7e85810e0c1ed50483ed16e02e2d03c43f83b182e819571f1e0a66c7036",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-bibliography/direct-1.docx",
+      "Sha256": "c48870e42a6b437940ee1c5246af8a7a5d7f9030a2adc83d7577645357a2b4c1",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-bibliography/direct-2.docx",
+      "Sha256": "bb491856ff187374be5e01b6dad986d81ef88a7e029ae93989339f83f99020fe",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-bibliography/direct-3.docx",
+      "Sha256": "6d28bd25c3768eee87fa3b92dd29e9654eca58913234f9fe2a68a1a1de54d945",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-bibliography/isolate-1.docx",
+      "Sha256": "a3240346710221bc4c1cce51b64a5e31bab637be1ae52f467f5c30686b63138c",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-bibliography/isolate-2.docx",
+      "Sha256": "fd8348aec8944520ce7b105b7e383043a9a350da5d2e7545b9d448969599d0c6",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-bibliography/isolate-3.docx",
+      "Sha256": "72286617bca91734dd20b2236b7dbee63fd2b63fa3fb43fec315cbd034c035eb",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-bookmarks/cloned-1.docx",
+      "Sha256": "735202b65afb2c945a2a9d478ac2bb4af4c5aeeb07f143564783004507ba7bf3",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-bookmarks/cloned-2.docx",
+      "Sha256": "59481274502533afb48fe8c16c5b844fc7f7127d4ae74a48367cc792716d90a1",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-bookmarks/cloned-3.docx",
+      "Sha256": "c3ee6491e3a81d81e65f593996a750bfb2b20c552a7e40dc2dc937dba3f6364d",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-bookmarks/edited-1.docx",
+      "Sha256": "e177b2c25622bfb2b07e7ce270c3991188ea58a0db66ba59288c6409378f6519",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-bookmarks/edited-2.docx",
+      "Sha256": "62dee62505980749f1d3ae7ecef6009e194a27345241c552c670a8887d7eb159",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-bookmarks/edited-3.docx",
+      "Sha256": "3cb10a0c04c024b7b71c9e93efd670761c4d0b1ebb7e966569c12f0813e4cce4",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-bookmarks/frame-1.docx",
+      "Sha256": "49c8520385af9f61188656afd46b19c2fdb5515f63fdbff98bb69bfd3876f091",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-bookmarks/frame-2.docx",
+      "Sha256": "b32215dd5b7018b5953411cd6737be8ba49533621cc53dc7868c53222602dda7",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-bookmarks/frame-3.docx",
+      "Sha256": "6f06f16e7d57395761dc07eff9ddbd4de265648fe128849fac6258a01c84c8be",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-bookmarks/frame-source.docx",
+      "Sha256": "84efbba2da2751e303d812860309a701b71b6424ed13c811474f37081ce3d01a",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-bookmarks/imported-1.docx",
+      "Sha256": "c4909855e8baf06b345a54bfd5e82a260c0465b48c6de993da9654eb3a596b2a",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-bookmarks/imported-2.docx",
+      "Sha256": "31e400664c15914c237a32161b5ba768d886dd032e73bbc6c440f89ef55c8801",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-bookmarks/imported-3.docx",
+      "Sha256": "5e277b0b79800420be015fa806d422fbcd582fafd815ee8ac41e9b0c2cb10e31",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-bookmarks/source.docx",
+      "Sha256": "b469fc9d8ffc372e8dd6d84fc506acd19e47074262f9717e1fc0c6995758ea83",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-comment-threads/threads-edited-1.docx",
+      "Sha256": "c0c538b87957a634a4f8df547c456e9f3e27da576df509f7201c9001253f7410",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-comment-threads/threads-edited-2.docx",
+      "Sha256": "a680d2b126c675837cba1542cb69b5de74e5ed456944819a59f09925fe38467c",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-comment-threads/threads-edited-3.docx",
+      "Sha256": "47f25ff6769fded3bb44588bd29dab1b7ce0a3f3374d3819f1a8c8f88467a72e",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-comment-threads/threads-imported-1.docx",
+      "Sha256": "f7cac6c3addee20fe5de17787bf631eee0cf0a7c7e6b220c1f0fda9086d08bb1",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-comment-threads/threads-imported-2.docx",
+      "Sha256": "bad0202ca8ae9c1da6bba6d34365f700e691c8137320d96385cb4a62b1a35e52",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-comment-threads/threads-imported-3.docx",
+      "Sha256": "42854aceaecabe5f24d05673c459cb869ab9858b7c00ecc3f463698a7c4eda58",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-comment-threads/threads-source.docx",
+      "Sha256": "d1763533e3733a93398a0cea7043b9d188f98f5a403ff5b7f3ed5869d654e9a4",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-content-controls/direct-1.docx",
+      "Sha256": "e5699e5806baf266a6ce11eeefdd392f5663f8501bc08eb1720a583c88923b7b",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-content-controls/direct-2.docx",
+      "Sha256": "b234387fcc45b53afc8745fae14ead54c016f2822d60e76b5b1dca578d5a9c49",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-content-controls/direct-3.docx",
+      "Sha256": "e69e7fb6d7bf382985780e9818c753decec06070ea59fa751470d24b630f3b9d",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-content-controls/imported-1.docx",
+      "Sha256": "474ee015fc157f3a2b7e3c57621f2f54f205667b18cda09999d254b21b6d4c91",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-content-controls/imported-2.docx",
+      "Sha256": "931e71e8fe8d0b205abf5cf672cd63b86d297d1481b2d97c28aebc5c4fb958cc",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-content-controls/imported-3.docx",
+      "Sha256": "ccfe6d0b6fa0d0b13cec515261a04f8d65fd3419f9f66c474c1419dd6dd841fd",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-content-controls/isolate-1.docx",
+      "Sha256": "4675376c96307578299f751fb24ba124e1fc672b2dc68bf284b004826932eb71",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-content-controls/isolate-2.docx",
+      "Sha256": "66de29a5d47c4a6349fd7e4ac6655ea84019728973a3ef310df1c09d95e03c07",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-content-controls/isolate-3.docx",
+      "Sha256": "b0b2180983b6c568b8c62a8c8f2cc7ae26e3785c3c8e37b561cc2056f46cf24f",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-content-controls/source.docx",
+      "Sha256": "5af5646742521142abb6295e0962e84a21de75f5959d66aa524f43ab48c11a40",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-frame-wrap/none-1.docx",
+      "Sha256": "f8a7fc5b79abdca24a2d18f1ab277367ed68826c73bb21e5da38ad4b3d7d5ccf",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-frame-wrap/none-2.docx",
+      "Sha256": "dc75b08c8c999d68ac82f7dc98eec556c0459bb81046126d15872804fe2a6210",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-frame-wrap/none-3.docx",
+      "Sha256": "ae0e54dffb0dbc9bcaf5a4e0c959851c07226785214bf8cb85cadad2d24c0816",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-frame-wrap/none-source.docx",
+      "Sha256": "956a75351e281d6fcaea42829e79262c4567eba6113ea67a82fc191a61d35543",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-frame-wrap/square-1.docx",
+      "Sha256": "9675fcf444a05870e45e643d7eb00b619d0f4e2c4d28a1f88a005bf4378fe988",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-frame-wrap/square-2.docx",
+      "Sha256": "c9d83da3198e578f47bc461d353d2a7d5d89a2dfd8b754aee66de3936655e7b6",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-frame-wrap/square-3.docx",
+      "Sha256": "4717c7adbc7d2dde9e8a207365a20d00d087432a05f6dcbf16c0d8542cb31392",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-frame-wrap/square-source.docx",
+      "Sha256": "cc13ec6ed3be7cfe0c37c56c0bcfd5fea15b4d5e0901ca896f18b111690ad567",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-frame-wrap/topBottom-1.docx",
+      "Sha256": "70e0abdcbbf41088c2724cde80f37bfcb72d8e1942b2348291a8f0239fee5271",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-frame-wrap/topBottom-2.docx",
+      "Sha256": "93ac2c0e79520e0f900d1f37624197c350bf428b83d74eae982f450fba27a32e",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-frame-wrap/topBottom-3.docx",
+      "Sha256": "c3d485be9c75e30e5ee478f4f5e99648975c0903396ba027f27300a4626798a0",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-frame-wrap/topBottom-source.docx",
+      "Sha256": "e14aaadf28e887ae68c5492226c9d42d3954485be35511ec539bf27fe9bbf0ba",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-image/replaced-1.docx",
-      "Errors": [],
-      "InputSha256": "92cfa7d2793c4139ec05343ad02788650cda197c189220ff8d5a72328ad66d92"
+      "Sha256": "e7a62c9107fd66db2600180636da03f9e4ff99d5539160d968954679f3933ff5",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-image/replaced-2.docx",
-      "Errors": [],
-      "InputSha256": "af798e1792ef508060f0afe52e5174cc25b5beda734028dd958cada26848fefd"
+      "Sha256": "5794d31b24c01d2c8e887398dc9fcf08fa2e146a48ed7ca172c86d7b719f8a66",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-image/replaced-3.docx",
-      "Errors": [],
-      "InputSha256": "022391b99bbc10e92fa0d197db6bb81c999b2dae226696cf40bf9773a3021e6d"
+      "Sha256": "7236ff7a382beb2f2135049fcd3ddd7988c1dcd1af642040c812d71711ca3892",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-inline-fields/direct-1.docx",
+      "Sha256": "8d859c363b623dac7fbe471554868e7bdcc3d03f910fb90feb3d37821b4810a0",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-inline-fields/direct-2.docx",
+      "Sha256": "7ee7dce0abfbca1591ee2e74c716c8413ebb718ff6b63d2ee803140a0228b7dd",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-inline-fields/direct-3.docx",
+      "Sha256": "4360bc366a616e8292eb99fa844b4f823b4f9a82a8400b7330e09dde187e3291",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-inline-fields/isolate-1.docx",
+      "Sha256": "5287e0f0d1937c9b13f5e724e0e4fa5d54408dc50e79ef7796b6391ff03d005a",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-inline-fields/isolate-2.docx",
+      "Sha256": "a887b34b8c6f7e160f402455e2bfee7de3da5b3fc91cb07e9aa1fb01fe64fa03",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-inline-fields/isolate-3.docx",
+      "Sha256": "dbca92b3d49be5f98f002ac6a474dcdd52e086e75ac1befc224e5b8a768be2ab",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-lists/restarted-0.docx",
+      "Sha256": "5c9e6084fa41f00d33af12d15b982f0d371af8a5fb0e0749fac5d7c8908a6bb1",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-lists/restarted-1.docx",
+      "Sha256": "871172032211aa1341919d2673b83eeceaed7d4bc550d9a2f0c2ce29855dff67",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-lists/restarted-2.docx",
+      "Sha256": "337a08365b525030d40b4a6a8c5a729f7cf0085c633c8cc3eb3fb25d0eef62da",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-native/created-pivot-1.xlsx",
-      "Errors": [],
-      "InputSha256": "92e9ff83df006a6d5502e41c332a1db743c30f24a464778fba373000b8c32233"
+      "Sha256": "c66160ffede8f33852dcbcff8862242724b5ea1b145494f1b6a3e1914c04ef20",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-native/created-pivot-2.xlsx",
-      "Errors": [],
-      "InputSha256": "f35f939f986b662d0c24f52d0f36b91c5877e13bd08ce9e2242c0d289016833c"
+      "Sha256": "16aa0ddfb8a1a7d4c57397daea4785dba28fed552856ece8587e22c2f36f4069",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-native/created-pivot-3.xlsx",
-      "Errors": [],
-      "InputSha256": "3e3bcb2e6f9f6f3602873020e452e6237d3b713589a1635807c6aa4c5d94784f"
+      "Sha256": "afd57070be6cf41e4f8427ca225141b07558ee84b7a4b290717e80d6d3e8255b",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-native/native-sheet-edited-1.xlsx",
-      "Errors": [],
-      "InputSha256": "5083f5882261c84bcdb3eb5e64441ece19472c814710bad4e8ecac318f95404a"
+      "Sha256": "4c89f0b64caebd8ec3c7302d9b6fcd6c06956147a51b5029decd8e7eecfc9bbe",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-native/native-sheet-edited-2.xlsx",
-      "Errors": [],
-      "InputSha256": "018d95d2e24a4162c6943c2c0e724b4364863ec18cac70339ca9ad5f8b395153"
+      "Sha256": "d90e4a9e785fad343eefdbc6f3ccf09696614b50aa04614dfc3565f982343588",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-native/native-sheet-edited-3.xlsx",
-      "Errors": [],
-      "InputSha256": "62291c8b23c2177369bbabe049da22eba7ddf8a38b61617351a872a88dfb824b"
+      "Sha256": "cee21c2ad16df2b1314a8fc8b3fba6a1b86ced8fe0bb629e1261a49b23758fbd",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-native/native-sheet-imported-1.xlsx",
-      "Errors": [],
-      "InputSha256": "217e2340d76be8b582f1d6d81d52f8614fcd441f6a726d0639da0289c349fd69"
+      "Sha256": "68eb8844185ef8d537c5edcd893807449cb8e649fa62f02f6f400b082ab723e5",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-native/native-sheet-imported-2.xlsx",
-      "Errors": [],
-      "InputSha256": "ebfdec505bacd1f55714e6c97093672e7b47701f2389b6161a102e113937e946"
+      "Sha256": "284db9aae53c121bae194fd960c20da0d26a04f5e0f88e981c3d72e9b7412019",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-native/native-sheet-imported-3.xlsx",
-      "Errors": [],
-      "InputSha256": "a263bf033914af28c3d84b71308997488be321c70ccdddc804dcba0448ff4679"
+      "Sha256": "4c0e9d3369bdd74008cb1fcd2856006088ffaf25c973387867979a451f15436a",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-native/native-slides-1.pptx",
-      "Errors": [],
-      "InputSha256": "2bd7924d16a45f0baac23f9abdc3bca6f9474e0b745d1ad36fbcbad9bdccd515"
+      "Sha256": "6103918beb3016c9f102094a4eb37b817ae556715a7df62b3b75dcb7fe39f79e",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-native/native-slides-2.pptx",
-      "Errors": [],
-      "InputSha256": "40062c55c75f6f40c71f93f4cb6b2252a5ef5df8f3a20ca91a07ee5ed83620a9"
+      "Sha256": "0ab9ae5418074d509ad67591e6ac928af8647a133ead9cfeb2341cc6040ef8ee",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-native/native-slides-3.pptx",
-      "Errors": [],
-      "InputSha256": "0c28556cdc8d78d4cdd53e03c64ae1b93e442d9d06e255cded1315796431d986"
+      "Sha256": "9f7eadf7bd627d3c5a14dd284d4188639b33f944d44a546c0ddd13de4b698392",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-native/native-slides-edited-1.pptx",
-      "Errors": [],
-      "InputSha256": "ee0702f0826cc2ef98fe97bdc53e5aed417dfb0a6e0a1bcda432cf01af03b6e7"
+      "Sha256": "2d14761886994e6e66d786ea4ec49a4a8967cf4a0d0abbf2fc93151d5b87eff8",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-native/native-slides-edited-2.pptx",
-      "Errors": [],
-      "InputSha256": "5ceaf461158ddbbc718a1a786d04a6dd5823c94983dfee6e76b240606a2e8c9c"
+      "Sha256": "ef2b3051f43b497fb24aa8b5c248847eb4e78e3bdca5a35b2960e6dceb321960",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-native/native-slides-edited-3.pptx",
-      "Errors": [],
-      "InputSha256": "7a31ffdad6552d7b0aab7d13757d072cf7d7b534a0a2c88cd7b85076d07e93b4"
+      "Sha256": "4affde0655a7273295239c8902828f1ea3b6501238fa69c73c510030a04abe5e",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-note-markers/cloned-1.docx",
+      "Sha256": "b7630d4541769b1047e2b8c553ef614cb57619d5a51d17bb8d94143e1168faca",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-note-markers/cloned-2.docx",
+      "Sha256": "a9e95769e1c602543face0abb100b98e362b26abbbc68d88806045f0d0477977",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-note-markers/cloned-3.docx",
+      "Sha256": "c1a410990834c84bb3783adf5382de4a821ba6064298c65727fe3afbdcc51f9d",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-note-markers/edited-1.docx",
+      "Sha256": "9349975ff5c5777e698a4b032a80309719f282ad201242f1963668e73b56ecbe",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-note-markers/edited-2.docx",
+      "Sha256": "531b75c53844a248e5c3d573862da644fa33d94b7cd254ce1742753e5b949c84",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-note-markers/edited-3.docx",
+      "Sha256": "095eaea419b5c583c2c1fec3661ff8f65f475e1fbd6d287d7fb706c4f29ece06",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-note-markers/imported-1.docx",
+      "Sha256": "f9e274105ff0a1a2254b781744469835cf8225e1a22718ba0387678f6421da63",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-note-markers/imported-2.docx",
+      "Sha256": "e22a6fe602be313f8316d78c1f1fe2f437823280b1d39cd81df527d25d0df4c9",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-note-markers/imported-3.docx",
+      "Sha256": "079dddcd072440ca8d2e9d76c5a58c3cfd8450f647abaa57feb6d9314bf64a2e",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-note-markers/source.docx",
+      "Sha256": "24d80e959d01435191ccaaa6d31bed1e214becbddef6eef8b87b69d79d357a48",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-notes/edited-1.docx",
-      "Errors": [],
-      "InputSha256": "79c4dd3c5c8de979f84f305f03ee17f10e95e00cfbf21e1923e4a16c67570bf7"
+      "Sha256": "4bc0bef09c043099bb25e7eff47e9e2315d68a3bbd8250cb629954916b8fa97d",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-notes/edited-2.docx",
-      "Errors": [],
-      "InputSha256": "e1003ad1c32dec3dd976b23138376d086f4383c958896aadc29ae2557206431f"
+      "Sha256": "9166e739956950157229f8dabbd83410d810e9937007d835feedd498e911cead",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-notes/edited-3.docx",
-      "Errors": [],
-      "InputSha256": "820be770fe5595c0f255ef12b1f9a7ea09a3e95edfa6caabc3fb55aad0d2e9de"
+      "Sha256": "9896d84a50792aa70609e2d2c7c205c493b575dce28336a0732d05ca926ae26d",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-notes/source.docx",
-      "Errors": [],
-      "InputSha256": "11550ac3f3c06bd4093b61bf16cc879827587a53c1cf0abaf8dcbdffc19da59e"
+      "Sha256": "11550ac3f3c06bd4093b61bf16cc879827587a53c1cf0abaf8dcbdffc19da59e",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-notes/unchanged-1.docx",
-      "Errors": [],
-      "InputSha256": "49f451aaa5b74f6ffab6d933396411ab51855ca0b3fa5bf9e893f628d000a6ad"
+      "Sha256": "9f9f1be37b6317d2881c964b8f3baa7c2fa42981de9859eebb98467da6a4bd94",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-notes/unchanged-2.docx",
-      "Errors": [],
-      "InputSha256": "6f171609be9a59f2e50a707c1c0004e00fed52d90af74c398fa1ab83644a8225"
+      "Sha256": "e3b9a55ade08779d6ca4787a1e03062173b9b4a37564fac8a523251e6a4f9e99",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-notes/unchanged-3.docx",
-      "Errors": [],
-      "InputSha256": "4c00f8211ab7edbaca63e60e05611d072fb2b5b58ecc7df8c88567470cf7d3d7"
+      "Sha256": "fcdca2bc42cdab728cdca5048a0d8b80c0138b181d0d40188c72bea377003891",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-opaque/opaque-1.docx",
-      "Errors": [],
-      "InputSha256": "327e349390019f0ddbda0a83ee9a06f39069017564a2642ce591ee1710769674"
+      "Sha256": "e16dde03fd74c467e2f1820bbd8f0673581b3356a61ec917f7929032838b383c",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-opaque/opaque-2.docx",
-      "Errors": [],
-      "InputSha256": "35032e53c79355d98fde75f0157781f6941bfb8138a7c2f123f27a70a71d70cb"
+      "Sha256": "eff7e6d970ae7369917c3c082d21106cab647ac0535dbecdc11adb9aec54a394",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-opaque/opaque-3.docx",
-      "Errors": [],
-      "InputSha256": "e6479d6e3dc7e1f0c3bf6ff698b8bc293e31b5b116586e14bc6360b5e1f0f04e"
+      "Sha256": "6b548c4dcc1fd80c5cb96ee593992bced9d53cbf529fee8d6db80a7590c87291",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-revision-stories/direct-1.docx",
+      "Sha256": "72d8a1acc456a7c77b31aca610d0c99d93ec9cb68d1b712b0f864f7f9f3cf584",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-revision-stories/direct-2.docx",
+      "Sha256": "82b5294ec1ccf787fac84755438b18632c31219537635c0bb8153052b80957b0",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-revision-stories/direct-3.docx",
+      "Sha256": "2289c962bc5a9d5f4e6acf1cc32d7c7c71de45159ff1a1e2619a40dc28de356e",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-revision-stories/isolate-1.docx",
+      "Sha256": "f62fb6975302eb7753385e4c74c61a458f41c65e0b70335e51c491e3f51bf219",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-revision-stories/isolate-2.docx",
+      "Sha256": "c4ed7ec38428f5d568a42335b417c198165d3587e3ce53fdb0ddeda064507e76",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-revision-stories/isolate-3.docx",
+      "Sha256": "8ca32db4a2cdded55db4a175ffef365eca6336cc7072cced3fa67530c01332ad",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-schema/column-metadata-1.xlsx",
+      "Sha256": "cd1c34255049dc161b1e7313bab30589c839842c31e8635f5f9e9698dff16879",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-schema/column-metadata-2.xlsx",
+      "Sha256": "67d3dcdab70087052e80689b10c1fa9322dad317a41e3250e34fb1842b4474ec",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-schema/column-metadata-3.xlsx",
+      "Sha256": "40269535e3bd68a4b9fb62b39758a7b563ea7d6f1c94f614d23fd5d22582a510",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-schema/sheet-style-1.xlsx",
+      "Sha256": "df799af20ba6b3a644b538054cbd326eab197a2ebf9d5415b34e9803ecb0a006",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-schema/sheet-style-2.xlsx",
+      "Sha256": "31691a6406f28b390fb79d7312a312b1087bf50c86f2d26034e36e330d7ed5c5",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-schema/sheet-style-3.xlsx",
+      "Sha256": "679762ba3fb802022568e495b499761345eba07a6d34db55aef85a0b6f8f2846",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-script.docx",
-      "Errors": [],
-      "InputSha256": "c66255c54538c9ed0be52fbdf32f27d277ceed37071c57ab7ee0ef784f71101d"
+      "Sha256": "8d66a1e31988b99c5db9799184e938953a7ea8bf8db417cf9791e3f65d1946e6",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-scripted/sheet/edited.xlsx",
+      "Sha256": "8da7ea15e1e158ebbf297d9b03f48b2d60a28dfbe0fd792ec1bfc4dc46826016",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-scripted/sheet/roundtrip-1.xlsx",
+      "Sha256": "84c2aa4806a445f48c801d568b416df5617d50e8808f711ca133c86e1b61ce94",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-scripted/sheet/roundtrip-2.xlsx",
+      "Sha256": "cd3c78d9052ead8592d94e0547c95d87c4babb1b5932d15120345e4c321f905a",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-scripted/sheet/roundtrip-3.xlsx",
+      "Sha256": "a8e0daf1fa7d9c54edfdf29791fa9d94198912f13a2bc7566224f74098f680aa",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-scripted/slide/edited.pptx",
+      "Sha256": "61f8f346506a33e695e65d234cc7d192b4fbb4fc0bac7e0db6a9df827b838f39",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-scripted/slide/roundtrip-1.pptx",
+      "Sha256": "c137cd8752e67fd27d9499c1c2a5a899f7c2e43e805b1320644c379984429459",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-scripted/slide/roundtrip-2.pptx",
+      "Sha256": "6bf6d7c9e64d476083198f23a682c908db560b3d451dfd405bd8d67eaebe2699",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-scripted/slide/roundtrip-3.pptx",
+      "Sha256": "a7134803ad6208cd69675f0568ab43917c28d9d1cd4382b4ba6c1f73b6445fd8",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-scripted/word/edited.docx",
+      "Sha256": "c75bf8593ed3a69599e1e0a7233c9ee044b339aeb912a629fb61299d140368be",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-scripted/word/roundtrip-1.docx",
+      "Sha256": "a3e889fc664e7800dd7203472562598e788ed43f6a8ad7bd913e8e8c449d07fd",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-scripted/word/roundtrip-2.docx",
+      "Sha256": "4afc9d6f5d2bef9239414270fc6727e6daa2054f42fc5dff15d0599a965a7ba5",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-scripted/word/roundtrip-3.docx",
+      "Sha256": "4b35cfb4f442268399bd09b3d88d70b0da1696e9db2a5316de4894759c0fc8df",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-section-clones/section-clone-1.docx",
+      "Sha256": "2615ad1370b8584927884be40c707e8f93a75c18051e4c7a39aca5faec615e14",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-section-clones/section-clone-2.docx",
+      "Sha256": "5e2d968f4e1145f8766d9d9152d47ddbb4581e08380ff9300016c09e9fa866c8",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-section-clones/section-clone-3.docx",
+      "Sha256": "4d1b3d28e9d005812272c085d64d7cd5364237666b2dd11f51cf87128258eb07",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-slide-text/rich-edited-1.pptx",
+      "Sha256": "c2479aa10e299e5a356583275277bcd26da6f86ae1e2409e69d28f75f35af358",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-slide-text/rich-edited-2.pptx",
+      "Sha256": "e9f78ff5b364f63e7cc613dec935c88c0c322732ae979a4f3af231e5095d822b",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-slide-text/rich-edited-3.pptx",
+      "Sha256": "29739055624f8de6e847cf5ba95992a4cdd4b7306bda13d2c7b56dc8b534fbb6",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-slide-text/rich-imported-1.pptx",
+      "Sha256": "d0f157c2469643ea90176831348fc317ef9fc1905238f9a214b3881e8b2b5203",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-slide-text/rich-imported-2.pptx",
+      "Sha256": "fb44a59e6a8ee1b66a023092adb7684f521f72e24587d9f113d9d844921447c2",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-slide-text/rich-imported-3.pptx",
+      "Sha256": "604719c18fbf17b5303eaaf477687d09fb94a67a33c1b4660bd54c7cc1ae658c",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-story-media/relocated-edited-1.docx",
+      "Sha256": "9d108d6cb1996b91ca731c11104d936306392190db5f5d7643bfc84b4729b974",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-story-media/relocated-edited-2.docx",
+      "Sha256": "41e7e0b96183b1c3214e23359fe2e7432ea60f44ffb946e0f159bd9ac459473f",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-story-media/relocated-edited-3.docx",
+      "Sha256": "0b0432b920f66e3af86d0622206d689dc4359982b472adf13dcf1890e0ac31ca",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-story-media/story-edited-1.docx",
+      "Sha256": "a9b4747881002ce7722a20ac041b6e1b60e34aad3bc0ec773ee1478d706faeb9",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-story-media/story-edited-2.docx",
+      "Sha256": "174d116dc1f4c3f56490321a7bc82afbb92ce88717176cbcc8d9328ecfdf0078",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-story-media/story-edited-3.docx",
+      "Sha256": "49288596f0ee9bd5f11fbe2ae756002bc4e182513a8e64dc2f354ac94b7daf46",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-story-media/story-imported-1.docx",
+      "Sha256": "5176f26e8aa40a3e87be29262ff673d05e57cbab2e215cf1cc28e209d9095dff",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-story-media/story-imported-2.docx",
+      "Sha256": "5855552678c424655a90947d793abd3df83bd20417d107ce87b77a4354eecd0e",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-story-media/story-imported-3.docx",
+      "Sha256": "0d828071649c1387a745aba303e50f67c265da52fb7584891f43f403586274b5",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-structure/create/edited.docx",
+      "Sha256": "9437688bc7f0815802d6dcf338c7fe7532e6acb1092bf8fe4d1828f3720d5c4f",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-structure/create/roundtrip-1.docx",
+      "Sha256": "041e99acd18bfe739581085a0977173fd7e124f54baa7291b6c5279d8a74d6cb",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-structure/create/roundtrip-2.docx",
+      "Sha256": "ec216bc602a213f3ffa2fbca2a0ae71c3b2548f67d8addda749f5b429f3b360e",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-structure/create/roundtrip-3.docx",
+      "Sha256": "2f56c2e7aaec340c2aa4b632a7735a16364a6ecb2761fdd54f055bae852ab9d0",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-structure/edit/edited.docx",
+      "Sha256": "a6728c8923e20e1e852033757b4c9588a4b89ac724fda37b8c31bc4b3338eb44",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-structure/edit/roundtrip-1.docx",
+      "Sha256": "5af24a78ffa101cb0ab28694e00f6883765cad6d5cb307ad1363b14dc2590dbe",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-structure/edit/roundtrip-2.docx",
+      "Sha256": "5825eb46e48e73794364e4d79a709887427c2272d542572673609b83dde61e5a",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-structure/edit/roundtrip-3.docx",
+      "Sha256": "b9843112089e36f866c6077ea18013893d09ef14df65dda72d3c231a5a5c7ccf",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-structure/remove/edited.docx",
+      "Sha256": "f774a48be4f4aeb141342328f29e1fe88d3ee226b6aba54b2126678bc5a0d8d3",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-structure/remove/roundtrip-1.docx",
+      "Sha256": "04908f45d036b46e42c7678f7bfdcd503fc62a6007ad3bb065a303be51b7fef7",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-structure/remove/roundtrip-2.docx",
+      "Sha256": "c4317f818864b381a1c80296cb43079a4a4d927fb62cc38af70a19d8b48a8665",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-structure/remove/roundtrip-3.docx",
+      "Sha256": "bfd35d55a855c66dee8e6de3060a866f7790a0b53cf70823045fdbdcdd07503b",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-structure/source.docx",
+      "Sha256": "19d3d78dd6823d8b2ad7173f0eb82be7b2ccf4224d50fdb889dee758ab64e88f",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-style-toggles/toggle-1.docx",
-      "Errors": [],
-      "InputSha256": "757b7b40e2c0ff5f0a37505aba3dd1ef31de17c9c5d2051f92b523fb4d5fed71"
+      "Sha256": "cac97b310244008d853aba4a6083a61b7b5356937eae609accb5f6d9eee2cca8",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-style-toggles/toggle-2.docx",
-      "Errors": [],
-      "InputSha256": "8df0eb8a4f76b796a50c8bbb7f9c3453b0396e1d4e78ce91712793f8c1b82c0e"
+      "Sha256": "52c29f1fbe6615657ac11b3c6e654d53200ffffe6f034f87059335b7c1fbb5cb",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-style-toggles/toggle-3.docx",
-      "Errors": [],
-      "InputSha256": "5239fa5a49656c4cb65f728e1bb6df247865f910425467e5df5b2145c249ac61"
+      "Sha256": "69cd13e873708600ee953d3f3c64463fe7afd9a0c563002000fc583c87791753",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-styles/edited-1.docx",
-      "Errors": [],
-      "InputSha256": "7923d2510036005b888972d0592951aa4b2b75be118994fd22d4c3770f985450"
+      "Sha256": "6f68a3ded4474535890032612b4a722698d8e18313271adeaf5ce96350f0f2cb",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-styles/edited-2.docx",
-      "Errors": [],
-      "InputSha256": "ebd01a433268c9aef39ceb750536413c055aca29b3ca093deb2d34f8edab3d35"
+      "Sha256": "ebb804af5cf495b417b63f4ab01321ad8b8a650290a352421ec182e454558354",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-styles/edited-3.docx",
-      "Errors": [],
-      "InputSha256": "f9d6e54e87a6eb6bb7181e5bcd8e1f2bf7c4967af5fed1583f67745c1dda9176"
+      "Sha256": "2d6792f0089f1fc264b462efe28eb5e1db1663592d98c401849efcd5a84e33f1",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-styles/unchanged-1.docx",
-      "Errors": [],
-      "InputSha256": "44e723bf5141b370959f7b2a24e1208e6e3a563a4302344c13191983d0778306"
+      "Sha256": "8c044d5ba18495a85aa27c07f02b48e60e49b9a45cb90cf4ad35ea31bd1f4eeb",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-styles/unchanged-2.docx",
-      "Errors": [],
-      "InputSha256": "781ee2d5cec047e47b9894d8ab95709f59e3b110522aacc9c3efecc439eb9e78"
+      "Sha256": "377a07728bf2b1112ec8b731c665cbcfd9e420bcd702b84a7992b92996b3dc2e",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity-styles/unchanged-3.docx",
-      "Errors": [],
-      "InputSha256": "2a71afbefe988c9d4be9aff81e61f9b652227b47f81a4078ccda0df9d0b81123"
+      "Sha256": "badc89c0457b758a94842d6f795f665078b456d8906886b7005bba232e37c8be",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-table-borders/tables-edited-1.docx",
+      "Sha256": "566e4a89b964a14f73165f5e16c6d444b15c694c330143d199d165a1074af94f",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-table-borders/tables-edited-2.docx",
+      "Sha256": "b439d6be33235c3c4a0e7cba8e701bb5a2da33fcbc47ef12889e9453c2b98e84",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-table-borders/tables-edited-3.docx",
+      "Sha256": "2321d8e3277b4f719a618fed9cbf964258b27523fedc81fe5fda572d6b00bdbf",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-table-borders/tables-imported-1.docx",
+      "Sha256": "d8c21151f8730ff290db42f2280d3aebdbfea955e1f71ba9d8a459179372a54b",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-table-borders/tables-imported-2.docx",
+      "Sha256": "3d1cf91bb92a38813d5f31ac5b81f136a4764027e927998552c49514d1dfeb25",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-table-borders/tables-imported-3.docx",
+      "Sha256": "c9f9db5b0d6418e61eba6407893deaf0726477a51abe14b5592088e23a36d6d9",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-word-compatibility/compatibility-edited-1.docx",
+      "Sha256": "4c8d5a3f64264a586cbdc43ed82c71777f972d65dce6b7f0002bfd60dbd3e1a8",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-word-compatibility/compatibility-edited-2.docx",
+      "Sha256": "1433ad0f62664be0e72d0e50952d6d182a4726f6f3bef46ae45e70317f553b83",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-word-compatibility/compatibility-edited-3.docx",
+      "Sha256": "b7c8b1d63c9c39ea1f5ce395e9363c52f5308acf0cae78c36cb8575d0512b88b",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-word-compatibility/compatibility-imported-1.docx",
+      "Sha256": "c99953ff0f8b1f0f7d276cc27dea1d538437586382fb38d5b7f5a424e8326d59",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-word-compatibility/compatibility-imported-2.docx",
+      "Sha256": "33e888cb591eaaddcfd59c224909c6947404409225e9297a83704c330465cbb2",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-word-compatibility/compatibility-imported-3.docx",
+      "Sha256": "9cacb67ec22cdb9b885924a2d02e4ff486c8424d27227fedd11dd242267b5275",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-word-edits/breaks-1.docx",
+      "Sha256": "d56dd2beb89cbfbdb43bff395db112947ca8ab037e8280cce5214cf9d7555a22",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-word-edits/breaks-2.docx",
+      "Sha256": "f8566e512b6355a2accead4404973cd88dc1c8f3d423dd76aa6adb3c18e885cd",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-word-edits/breaks-3.docx",
+      "Sha256": "cf6d90903f03915be8b475a3b3418f5dfeb2926fd0226f10c5eb3e6fe9fbcf7a",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-word-edits/styles-1.docx",
+      "Sha256": "14eab7b554371e747bb362e48fe031d0fe028d6939fe7ed5d5a0d30ba4a2d957",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-word-edits/styles-2.docx",
+      "Sha256": "2229fdab4febd1db57980ba33fe8f89d7e338178abc9f6951c54c2cbfa17ecda",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_engine/fidelity-word-edits/styles-3.docx",
+      "Sha256": "0808b55c803cad9953b5f7de0e7a58699de4699adaccdbf976aa701c0ea1458d",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity/edited-1.docx",
-      "Errors": [],
-      "InputSha256": "272a14b1035dc6ebacc86f66af8ba44f07fe8918fce34db69aaee0f440aa8bea"
+      "Sha256": "61690125cabecea51ed27f774a70a6a4ef783ca33c5f57024d54878b971ac0ad",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity/edited-2.docx",
-      "Errors": [],
-      "InputSha256": "49ebc48acf255ff2498403064379573693a8519a8c8603f6bfa0863302a47041"
+      "Sha256": "18732e10ab5dc64c946b70dca50a593b2545d65c493036463857802cc0517ec8",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity/edited-3.docx",
-      "Errors": [],
-      "InputSha256": "56a98f5371be68fc24a7de51ecf4e17c6f702b4b2adc1a815445a5620e049296"
+      "Sha256": "8e86a97196a3d90a8f2b4dedb7aac49de6dd31e1b21fbbeb83bb4b63f167050a",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity/sheet-edited-1.xlsx",
-      "Errors": [],
-      "InputSha256": "44093b2a6ab795867b294cdbf5bdca1f06c29a3d8d569b823a9cec5371150444"
+      "Sha256": "9b65730c44207080185194b1cf18bc7d68ac4a66ffcb11a3e11f381726a3a0b9",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity/sheet-edited-2.xlsx",
-      "Errors": [],
-      "InputSha256": "0d446577891018233407ae2864cff0a551947d0b94d9b3c283766b728cce3b7b"
+      "Sha256": "4c8372938b567daf241d76b97cdf35ebbcd96415b560e24f179e2af2f335d069",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity/sheet-edited-3.xlsx",
-      "Errors": [],
-      "InputSha256": "71a12193bbaa34f62fb021798f311d07cfc74ebe0e5f56914ed5898d4ce6cc5d"
+      "Sha256": "c981908fa8234b922aed991950311ff648a83bf637ef1577a02a71d177716303",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity/sheet-imported-1.xlsx",
-      "Errors": [],
-      "InputSha256": "23e89edd7ac41e88d2711989f883107d5deddf82b399f490f88336c8429038bd"
+      "Sha256": "0217e21256591480a1c54c8f617066ba03c89f73078c232f0caa35ee52a009ab",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity/sheet-imported-2.xlsx",
-      "Errors": [],
-      "InputSha256": "d8e727fbc0728eed185a8d9e55638724f367d9221d11a2f2505df6b2743217d2"
+      "Sha256": "b27e1c321e92bb0c8276776edd0f991bcecba819d6375227fae038e837e420bf",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity/sheet-imported-3.xlsx",
-      "Errors": [],
-      "InputSha256": "e24493d381046bbb148227efcc801b20b82abbee0ce1de84bb7f3f56bbdc6e06"
+      "Sha256": "0865690a5cbab15d1c0ba4a0e4762a0b93cc1d1244ba4fea2286c43c333fa1a0",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity/slide-edited-1.pptx",
-      "Errors": [],
-      "InputSha256": "d35f2fa8fa2cd37412979766544b052d3d3760a95417b51c2bfe9d18aa754e58"
+      "Sha256": "4bff8103d9007ff1431e35c802b4223e313864d2d26c87ecf5c921423cc80413",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity/slide-edited-2.pptx",
-      "Errors": [],
-      "InputSha256": "69fa4d27ad12076643dbe66a416aaa68581529d47813e8b4736d2050ef669d87"
+      "Sha256": "091d6ed3860a5b6a281b758f67b64d2dc47c4a755e0a58f1ba93352526d42baf",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity/slide-edited-3.pptx",
-      "Errors": [],
-      "InputSha256": "82b13e03e056948723007f3203ce32d1d6f4e0ec6a7b80070947b02cb2e0c11d"
+      "Sha256": "fac2513faf9a2d84b0ae760dca17e07621fd0f03466b86bca3fb2c0279f0f40e",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity/slide-imported-1.pptx",
-      "Errors": [],
-      "InputSha256": "6dcfc095cd2d8cd3e46d3f68cbf3a451bf800c8117dd3537c6aa4abf91a6073f"
+      "Sha256": "cf00d6d385dd3fae8e85a6a61c08971d7ae47626379d738f252c9a020d4f41ce",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity/slide-imported-2.pptx",
-      "Errors": [],
-      "InputSha256": "8e5d532df8e310e1cc977a8133d6e9b6ebd63c9da745ffc1bafcd86489b8afbc"
+      "Sha256": "5beae9a37332c900a1e4dba820edbec8b18207281a2cfee238b9d5c313d071f5",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity/slide-imported-3.pptx",
-      "Errors": [],
-      "InputSha256": "4acd82469f06e39217656c8c448d5d67668f0bf3f8d8d7dae3735640757f7c0b"
+      "Sha256": "231fcb7503298046911d03cb4920a9c07dc0a11dff6ffd1d6fee31470d8387f7",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity/unchanged-1.docx",
-      "Errors": [],
-      "InputSha256": "fbdc3f4b162965bae6a53b0bbdccde579897b07eda5a900c71e490a6b6d2eda5"
+      "Sha256": "aa94129eecf3808c7fcfc69a30a1ecced0c0e566bfc443b96f4878f41da72b7e",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity/unchanged-2.docx",
-      "Errors": [],
-      "InputSha256": "21373affe895cd72c1d3582a2eaf827806d965bd1958db95c0289b000bfb02b3"
+      "Sha256": "4c77b1bf9ff13c8856e4f54afc34163f23833f13ef0ee23ff35f289b440d1ef4",
+      "Errors": []
     },
     {
       "File": "quds_office_engine/fidelity/unchanged-3.docx",
-      "Errors": [],
-      "InputSha256": "da3986572f5731313aa91e871ffd09da585a2aabf0112f29c797cd2a5aa9c603"
+      "Sha256": "aa1351f8db51b8de34fc5937175c1d076c9c7cb0790e5e3987340b5dc8cb4bf6",
+      "Errors": []
     }
   ],
-  "SourceCommit": "a79b7d832e080e6e551547ec79c0bb83b7312710",
+  "SourceCommit": "31add77938bb1242d510ab544dbe886d87ebdf75",
   "Validator": "DocumentFormat.OpenXml 3.3.0",
   "Target": "Office2019",
   "PositiveAndNegativeControls": "passed",
-  "SuppressedErrors": 0
+  "SuppressedErrors": 0,
+  "ValidationEnvironment": "Local .NET SDK 8.0.428 / runtime 8.0.34; unchanged Program.cs compiled with Roslyn and exact declared official NuGet packages",
+  "CanonicalReportSha256": "3d465a7ba362a5897d9c66a72a40f139860567f6139719a5ff149bdd3e6a02b5",
+  "PathsRelativeTo": "build/office-evidence",
+  "ReceiptUsage": "Historical source-bound evidence; the render gate requires fresh canonical path/hash receipts for its exact current input files."
 }

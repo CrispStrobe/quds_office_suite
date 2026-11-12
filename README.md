@@ -169,26 +169,34 @@ never by blessing our own output:
 - A .NET tool (`tool/office-validation`) validates every exported package with
   the Open XML SDK.
 - Save/reopen exports across DOCX, XLSX and PPTX, scripted edits, and a
-  reviewed full-page visual golden.
-- The `office-fidelity` CI workflow runs all of it; the engine's own suite has
-  about 490 tests.
+  reviewed full-page visual goldens.
+- The `office-fidelity` CI workflow runs the engine suite, semantic and negative
+  controls, editor goldens, SDK validation and independent rendering. Current
+  counts belong to the exact source checkpoint in the validation evidence.
 
 Run it locally from `packages/quds_office_engine`: `dart test`, then
-`tool/fidelity/check.sh`. The full gap list, feature matrix and coverage
-inventory are in [`docs/office-fidelity-audit.md`](docs/office-fidelity-audit.md)
-and [`docs/office-coverage-gaps.json`](docs/office-coverage-gaps.json); the
-runnable guide is
-[`packages/quds_office_engine/tool/fidelity/README.md`](packages/quds_office_engine/tool/fidelity/README.md).
+`bash tool/fidelity/check.sh`. Start with the
+[current consolidation and validation report](docs/office-fidelity-consolidation-20261112.md)
+and [bounded gap ledger](docs/office-fidelity-gaps.json). The
+[operation guide](packages/quds_office_engine/tool/fidelity/README.md) documents
+all import/edit/export commands. The historical
+[coverage-branch guide](docs/office-fidelity-coverage-20261112.md) and its
+[source-hashed coverage inventory](docs/office-coverage-gaps.json) record the
+earlier `31add779` source snapshot. The
+[11 November audit](docs/office-fidelity-audit.md) is a historical checkpoint,
+not a measurement of the current branch.
 
 ### Known limits
 
-- The page golden is reviewed on Linux with Flutter 3.44.0 (what CI uses). On
-  macOS or another Flutter version it differs by about 0.6% of pixels from
-  font rasterization. That is not a regression; do not regenerate the golden
-  from a different platform.
-- Engine line coverage is 79.4% (line, not branch, coverage).
-- Fidelity is proven for the features in the audit matrix; anything listed
-  there as a gap may still be simplified on save.
+- The goldens are reviewed on Linux with the suite's pinned Flutter 3.44.0.
+  A prior single-page cross-platform comparison differed by about 0.6% of
+  pixels; that observation is not a tolerance for the expanded corpus. Do not
+  regenerate reviewed images from another platform to conceal a difference.
+- Coverage reports measure executed instrumented lines and list absent source
+  files; they do not measure branch coverage or establish correctness.
+- Each closed gap names a bounded regression and its evidence. Partial and
+  unsupported format/layout behaviors remain explicit in the current ledger;
+  native Microsoft Office pixel equivalence is not certified.
 
 ---
 

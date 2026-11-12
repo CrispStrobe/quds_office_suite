@@ -1,0 +1,147 @@
+{
+  "version": 1,
+  "ok": true,
+  "package": "quds_office_editor",
+  "artifact_root": "build",
+  "manifest_sha256": "b170c6eece7065845c2d2b18a7f91d8fb7155094a838f69391f8a2e95b3d6e83",
+  "expected_files": 22,
+  "observed_files": 22,
+  "verified_files": 22,
+  "three_cycle_series": 7,
+  "standalone_files": 1,
+  "files": [
+    {
+      "path": "fidelity-bookmarks-legacy/editor-bookmarks-1.docx",
+      "bytes": 7614,
+      "sha256": "e0fdbd36855f92a7bbdec59eb25714b83c7f9c0442ca678e0a21df2f0ea6c46b",
+      "producer": "test/word_bookmark_fidelity_test.dart"
+    },
+    {
+      "path": "fidelity-bookmarks-legacy/editor-bookmarks-2.docx",
+      "bytes": 7651,
+      "sha256": "e14d1dd08cb845e6b8d5497263af8db31fb9d6e9fc1c9df26bcfe29bd97e54fb",
+      "producer": "test/word_bookmark_fidelity_test.dart"
+    },
+    {
+      "path": "fidelity-bookmarks-legacy/editor-bookmarks-3.docx",
+      "bytes": 7652,
+      "sha256": "ba260ab40e002d7fb6326198415ef618dba017df049dc30c295c989cbff2b5d4",
+      "producer": "test/word_bookmark_fidelity_test.dart"
+    },
+    {
+      "path": "fidelity-content-controls-legacy/editor-controls-1.docx",
+      "bytes": 5419,
+      "sha256": "88b772ca154cabbfe750b95f28c25247701c4e51e4393999888f9d9109940c82",
+      "producer": "test/word_content_control_fidelity_test.dart"
+    },
+    {
+      "path": "fidelity-content-controls-legacy/editor-controls-2.docx",
+      "bytes": 5475,
+      "sha256": "d670297ee53c81e5015758a59df0deb3943c89b12a2873eb8c94e8d18c2e1759",
+      "producer": "test/word_content_control_fidelity_test.dart"
+    },
+    {
+      "path": "fidelity-content-controls-legacy/editor-controls-3.docx",
+      "bytes": 5475,
+      "sha256": "e56ca09675bc5a4d90690a1f2f149eecb4529b8a14cb9c9d1b518e1dc9f90b05",
+      "producer": "test/word_content_control_fidelity_test.dart"
+    },
+    {
+      "path": "fidelity-layout/columns_sections-1.docx",
+      "bytes": 5296,
+      "sha256": "7a916cbb31c7f5ffb983c2fcce1ae48628496f22c13c3074f3fc3ac1a9ca4521",
+      "producer": "test/office_layout_goldens_test.dart"
+    },
+    {
+      "path": "fidelity-layout/columns_sections-2.docx",
+      "bytes": 5357,
+      "sha256": "b49d365bc85ce4729adcf57d7bdc1fe6ae391109fa00b6073c9e170fb1919b3f",
+      "producer": "test/office_layout_goldens_test.dart"
+    },
+    {
+      "path": "fidelity-layout/columns_sections-3.docx",
+      "bytes": 5357,
+      "sha256": "4e61bcd684eb1e4324451d04e13bf9907fa9e3259fab31117d7d48b644f28d05",
+      "producer": "test/office_layout_goldens_test.dart"
+    },
+    {
+      "path": "fidelity-layout/continued_notes-1.docx",
+      "bytes": 5833,
+      "sha256": "9f154ac70f5289986af5add0123378ef5c4782d6bb6bac0c6c68f4b20849f339",
+      "producer": "test/office_layout_goldens_test.dart"
+    },
+    {
+      "path": "fidelity-layout/continued_notes-2.docx",
+      "bytes": 5899,
+      "sha256": "db54e01cae5b570ad9b4ef13442e136803edff568d220eae56199b85994ee485",
+      "producer": "test/office_layout_goldens_test.dart"
+    },
+    {
+      "path": "fidelity-layout/continued_notes-3.docx",
+      "bytes": 5900,
+      "sha256": "38b704300d53c15303557698f8f45d6bf8716e488845a48cb833c3cd226f7678",
+      "producer": "test/office_layout_goldens_test.dart"
+    },
+    {
+      "path": "fidelity-layout/rtl-1.docx",
+      "bytes": 5475,
+      "sha256": "bd4006f9034d3657994d835a1d4373365cfa182272cfda302fe25a8a35c6f479",
+      "producer": "test/office_layout_goldens_test.dart"
+    },
+    {
+      "path": "fidelity-layout/rtl-2.docx",
+      "bytes": 5550,
+      "sha256": "45d13cc9b8bf45d5bda060ad45d9b6f42b81d069919b983613a267513bbe8a44",
+      "producer": "test/office_layout_goldens_test.dart"
+    },
+    {
+      "path": "fidelity-layout/rtl-3.docx",
+      "bytes": 5551,
+      "sha256": "1dce237f821b9d9de339369b53d26fc35528184e4bc4691dd1021208b1a2dd39",
+      "producer": "test/office_layout_goldens_test.dart"
+    },
+    {
+      "path": "fidelity-layout/tall_table-1.docx",
+      "bytes": 5966,
+      "sha256": "a86c95ee4dafc9ababaf2c52fca5a9236306c2ecdb31af1f88223dfae24f93b2",
+      "producer": "test/office_layout_goldens_test.dart"
+    },
+    {
+      "path": "fidelity-layout/tall_table-2.docx",
+      "bytes": 6053,
+      "sha256": "0eed1992c7635c409a9f64117632e912abb074414602e37882a7b239adf7af63",
+      "producer": "test/office_layout_goldens_test.dart"
+    },
+    {
+      "path": "fidelity-layout/tall_table-3.docx",
+      "bytes": 6054,
+      "sha256": "0e605ec82335f6426ce8f4f383f061767dd3689dbcba44a6fc9746789e87e37a",
+      "producer": "test/office_layout_goldens_test.dart"
+    },
+    {
+      "path": "fidelity-story-goldens/three-pages-1.docx",
+      "bytes": 22259,
+      "sha256": "356cc78d7f88d8bffd503f395e116e02fd96fe1813aa1bef05cbd021d32129bc",
+      "producer": "test/office_story_golden_test.dart"
+    },
+    {
+      "path": "fidelity-story-goldens/three-pages-2.docx",
+      "bytes": 22232,
+      "sha256": "5d82d9e5ae3a548bf6738a467d81a2e2ee3000cc21f2e9945eeaca9012c00c97",
+      "producer": "test/office_story_golden_test.dart"
+    },
+    {
+      "path": "fidelity-story-goldens/three-pages-3.docx",
+      "bytes": 22232,
+      "sha256": "0799333c4b382c24828e26f07bb07466c4fc5e339a3c0887b23a31d514137d8b",
+      "producer": "test/office_story_golden_test.dart"
+    },
+    {
+      "path": "fidelity/unchanged-controller.docx",
+      "bytes": 8248,
+      "sha256": "2911ab2785bb26e8ea7543d5b79007e68b9a014e51fdcc1fe2412b6d67e52118",
+      "producer": "test/office_fidelity_workflow_test.dart"
+    }
+  ],
+  "errors": []
+}

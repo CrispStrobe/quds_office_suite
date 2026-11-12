@@ -1,0 +1,50 @@
+{
+  "status": "passed",
+  "source_commit": "7bd56f609d5ec63e44e0393560b3ec1055c3bf7e",
+  "input_count": 263,
+  "input_counts": {
+    "quds_office_editor": 22,
+    "quds_office_engine": 241
+  },
+  "schema": {
+    "files": 263,
+    "failures": 0
+  },
+  "integrity": {
+    "inputs_match_manifest": true,
+    "all_sdk_receipts_match_exact_inputs": true
+  },
+  "report_sha256": {
+    "manifest": "c8c37a63c346c40ac1e2beba5b79d516f32a2f68931edc8f6503b2f0b2e070b3",
+    "schema": "914ab7c30268cd1fea3e775ffcbbd5a3da1480419ad458073286578ffe5a7faa",
+    "render": "c744dc559e5e8c7540ffb48491f0cf80ee5d381311178f8c2a075dcb0632f76b"
+  },
+  "render": {
+    "renderer": "LibreOffice 24.2.7.2 ee3885777aa7032db5a9b65deec9457448a91162 (LibreOfficeKit embedding API)",
+    "files": 263,
+    "rendered_files": 256,
+    "visual_input_files": 256,
+    "native_schema_only_files": 7,
+    "cycle_series": 78,
+    "all_cycle_series_passed": true,
+    "baseline_comparisons": 19,
+    "render_only_files": [
+      "quds_office_editor/fidelity/unchanged-controller.docx",
+      "quds_office_engine/fidelity-bookmarks/frame-source.docx",
+      "quds_office_engine/fidelity-script.docx",
+      "quds_office_engine/fidelity-structure/source.docx"
+    ],
+    "rendered_pages": 392,
+    "failures": 0,
+    "native_schema_only_inputs": [
+      "quds_office_engine/fidelity-aux-controls/edited-1.docx",
+      "quds_office_engine/fidelity-aux-controls/edited-2.docx",
+      "quds_office_engine/fidelity-aux-controls/edited-3.docx",
+      "quds_office_engine/fidelity-aux-controls/imported-1.docx",
+      "quds_office_engine/fidelity-aux-controls/imported-2.docx",
+      "quds_office_engine/fidelity-aux-controls/imported-3.docx",
+      "quds_office_engine/fidelity-aux-controls/source.docx"
+    ],
+    "native_only_meaning": "Exact schema and semantic acceptance only; no visual certification"
+  }
+}

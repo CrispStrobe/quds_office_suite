@@ -1,0 +1,43 @@
+{
+  "source_commit": "7bd56f609d5ec63e44e0393560b3ec1055c3bf7e",
+  "source_tree_git_sha1": "78af0e77de4a98e3503cc6873cfe651b52709fbc",
+  "editor_lib_tree_git_sha1": "016223b02eedb98866fbe736a7ee3a94fa64658a",
+  "editor_test_tree_git_sha1": "86fff2e6c74306117735c4bbf2a9363fe663be41",
+  "full_tests_passed": 410,
+  "full_tests_skipped": 1,
+  "skip_reason": "Existing compare test requires a developer-local PDF that is not a repository fixture.",
+  "production_analysis": "No issues found",
+  "required_editor_exports": 22,
+  "independent_oracles": [
+    "unchanged controller corpus",
+    "legacy controller bookmarks",
+    "legacy controller content controls"
+  ],
+  "goldens": {
+    "reviewed_page_images": 23,
+    "incoming_only_change": {
+      "path": "packages/quds_office_editor/test/goldens/office_stories_page_1.png",
+      "incoming_commit": "31add77938bb1242d510ab544dbe886d87ebdf75",
+      "git_blob": "ec146581907479e328065c548f58704e852445ef",
+      "changed_pixels": 1248,
+      "pixel_bbox_exclusive": [
+        160,
+        916,
+        784,
+        918
+      ],
+      "image_size": [
+        900,
+        1120
+      ],
+      "reason": "Suppress separator absent in native source",
+      "all_other_page_pixels_unchanged": true
+    }
+  },
+  "logs": {
+    "source-editor-final-analyze.log": "e41ed47a1d0e6e1d03ea2c257412f80581c552c58fa7254d0a3dfd3f44e83bca",
+    "source-editor-final-tests.log": "b6c1b17e0057933f4d59b0892958da8251c7dc82ac34dc541ab279980d0fd29b",
+    "source-editor-final-oracles.log": "eae4ec532ea11e3d125699e7308ab963522217bf9bd6d405f180318d4674cde2",
+    "source-editor-final-inventory.log": "b23779dcfcaeff94bc3d97202de3742fdfb5a2f149b472c7bb5e5817f24c3373"
+  }
+}

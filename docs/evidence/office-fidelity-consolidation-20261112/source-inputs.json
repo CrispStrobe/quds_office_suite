@@ -1,0 +1,1334 @@
+{
+  "source_commit": "7bd56f609d5ec63e44e0393560b3ec1055c3bf7e",
+  "collected_utc": "2026-11-12T09:04:09.078605+00:00",
+  "validator_source_sha256": "4d41f286855ed11a12ecdf0641773c33285847180a3e5cdbf43ce2385a099880",
+  "files": [
+    {
+      "path": "quds_office_editor/fidelity/unchanged-controller.docx",
+      "sha256": "2911ab2785bb26e8ea7543d5b79007e68b9a014e51fdcc1fe2412b6d67e52118",
+      "bytes": 8248
+    },
+    {
+      "path": "quds_office_editor/fidelity-bookmarks-legacy/editor-bookmarks-1.docx",
+      "sha256": "e0fdbd36855f92a7bbdec59eb25714b83c7f9c0442ca678e0a21df2f0ea6c46b",
+      "bytes": 7614
+    },
+    {
+      "path": "quds_office_editor/fidelity-bookmarks-legacy/editor-bookmarks-2.docx",
+      "sha256": "e14d1dd08cb845e6b8d5497263af8db31fb9d6e9fc1c9df26bcfe29bd97e54fb",
+      "bytes": 7651
+    },
+    {
+      "path": "quds_office_editor/fidelity-bookmarks-legacy/editor-bookmarks-3.docx",
+      "sha256": "ba260ab40e002d7fb6326198415ef618dba017df049dc30c295c989cbff2b5d4",
+      "bytes": 7652
+    },
+    {
+      "path": "quds_office_editor/fidelity-content-controls-legacy/editor-controls-1.docx",
+      "sha256": "88b772ca154cabbfe750b95f28c25247701c4e51e4393999888f9d9109940c82",
+      "bytes": 5419
+    },
+    {
+      "path": "quds_office_editor/fidelity-content-controls-legacy/editor-controls-2.docx",
+      "sha256": "d670297ee53c81e5015758a59df0deb3943c89b12a2873eb8c94e8d18c2e1759",
+      "bytes": 5475
+    },
+    {
+      "path": "quds_office_editor/fidelity-content-controls-legacy/editor-controls-3.docx",
+      "sha256": "e56ca09675bc5a4d90690a1f2f149eecb4529b8a14cb9c9d1b518e1dc9f90b05",
+      "bytes": 5475
+    },
+    {
+      "path": "quds_office_editor/fidelity-layout/columns_sections-1.docx",
+      "sha256": "7a916cbb31c7f5ffb983c2fcce1ae48628496f22c13c3074f3fc3ac1a9ca4521",
+      "bytes": 5296
+    },
+    {
+      "path": "quds_office_editor/fidelity-layout/columns_sections-2.docx",
+      "sha256": "b49d365bc85ce4729adcf57d7bdc1fe6ae391109fa00b6073c9e170fb1919b3f",
+      "bytes": 5357
+    },
+    {
+      "path": "quds_office_editor/fidelity-layout/columns_sections-3.docx",
+      "sha256": "4e61bcd684eb1e4324451d04e13bf9907fa9e3259fab31117d7d48b644f28d05",
+      "bytes": 5357
+    },
+    {
+      "path": "quds_office_editor/fidelity-layout/continued_notes-1.docx",
+      "sha256": "9f154ac70f5289986af5add0123378ef5c4782d6bb6bac0c6c68f4b20849f339",
+      "bytes": 5833
+    },
+    {
+      "path": "quds_office_editor/fidelity-layout/continued_notes-2.docx",
+      "sha256": "db54e01cae5b570ad9b4ef13442e136803edff568d220eae56199b85994ee485",
+      "bytes": 5899
+    },
+    {
+      "path": "quds_office_editor/fidelity-layout/continued_notes-3.docx",
+      "sha256": "38b704300d53c15303557698f8f45d6bf8716e488845a48cb833c3cd226f7678",
+      "bytes": 5900
+    },
+    {
+      "path": "quds_office_editor/fidelity-layout/rtl-1.docx",
+      "sha256": "bd4006f9034d3657994d835a1d4373365cfa182272cfda302fe25a8a35c6f479",
+      "bytes": 5475
+    },
+    {
+      "path": "quds_office_editor/fidelity-layout/rtl-2.docx",
+      "sha256": "45d13cc9b8bf45d5bda060ad45d9b6f42b81d069919b983613a267513bbe8a44",
+      "bytes": 5550
+    },
+    {
+      "path": "quds_office_editor/fidelity-layout/rtl-3.docx",
+      "sha256": "1dce237f821b9d9de339369b53d26fc35528184e4bc4691dd1021208b1a2dd39",
+      "bytes": 5551
+    },
+    {
+      "path": "quds_office_editor/fidelity-layout/tall_table-1.docx",
+      "sha256": "a86c95ee4dafc9ababaf2c52fca5a9236306c2ecdb31af1f88223dfae24f93b2",
+      "bytes": 5966
+    },
+    {
+      "path": "quds_office_editor/fidelity-layout/tall_table-2.docx",
+      "sha256": "0eed1992c7635c409a9f64117632e912abb074414602e37882a7b239adf7af63",
+      "bytes": 6053
+    },
+    {
+      "path": "quds_office_editor/fidelity-layout/tall_table-3.docx",
+      "sha256": "0e605ec82335f6426ce8f4f383f061767dd3689dbcba44a6fc9746789e87e37a",
+      "bytes": 6054
+    },
+    {
+      "path": "quds_office_editor/fidelity-story-goldens/three-pages-1.docx",
+      "sha256": "356cc78d7f88d8bffd503f395e116e02fd96fe1813aa1bef05cbd021d32129bc",
+      "bytes": 22259
+    },
+    {
+      "path": "quds_office_editor/fidelity-story-goldens/three-pages-2.docx",
+      "sha256": "5d82d9e5ae3a548bf6738a467d81a2e2ee3000cc21f2e9945eeaca9012c00c97",
+      "bytes": 22232
+    },
+    {
+      "path": "quds_office_editor/fidelity-story-goldens/three-pages-3.docx",
+      "sha256": "0799333c4b382c24828e26f07bb07466c4fc5e339a3c0887b23a31d514137d8b",
+      "bytes": 22232
+    },
+    {
+      "path": "quds_office_engine/fidelity/edited-1.docx",
+      "sha256": "cecbb336d5b02ba6260a52894e649b10a9b3cd2aa829019fa1885141160ef8a1",
+      "bytes": 8217
+    },
+    {
+      "path": "quds_office_engine/fidelity/edited-2.docx",
+      "sha256": "3913005f3c4709fab2eae7a581661dd01ff0b9c1ed8c3aa43da007681d5583e7",
+      "bytes": 8252
+    },
+    {
+      "path": "quds_office_engine/fidelity/edited-3.docx",
+      "sha256": "1018ccda3c1646b53166e48610f23b0409fa52573f11760029b3a70e624ed997",
+      "bytes": 8252
+    },
+    {
+      "path": "quds_office_engine/fidelity/sheet-edited-1.xlsx",
+      "sha256": "66f71092808c16f50056a051ddf0c2e47a61310ac996eea336a102c1b8d30990",
+      "bytes": 3211
+    },
+    {
+      "path": "quds_office_engine/fidelity/sheet-edited-2.xlsx",
+      "sha256": "a9438db99bcea5d79c20413577b7994f43e554913a956d022bedb5f5792cc494",
+      "bytes": 3219
+    },
+    {
+      "path": "quds_office_engine/fidelity/sheet-edited-3.xlsx",
+      "sha256": "3c1d9e310c1f362b0636e365655b39c4ad33bf807fba0f27a4095d614e444bf7",
+      "bytes": 3219
+    },
+    {
+      "path": "quds_office_engine/fidelity/sheet-imported-1.xlsx",
+      "sha256": "34563ffb45aa5639e9a12d18241cc06db2b307707dec9b86405dd617edbe250d",
+      "bytes": 3211
+    },
+    {
+      "path": "quds_office_engine/fidelity/sheet-imported-2.xlsx",
+      "sha256": "d5ebbfbed47326807870259a11b9e932e3e7b4329c2a236e604480c433abc469",
+      "bytes": 3218
+    },
+    {
+      "path": "quds_office_engine/fidelity/sheet-imported-3.xlsx",
+      "sha256": "acf232415a30f6d9fd4bbb77eaf1b1756bd33d190f647412663a5bbd476d5c8a",
+      "bytes": 3218
+    },
+    {
+      "path": "quds_office_engine/fidelity/slide-edited-1.pptx",
+      "sha256": "8e79196e6c8eb9ba3d7221d86aa9d3fdd5b80a4d785219a9bf49388664e4949d",
+      "bytes": 6139
+    },
+    {
+      "path": "quds_office_engine/fidelity/slide-edited-2.pptx",
+      "sha256": "c42147858978fe2f32367bc3ba21ffb34375b0af428e9d82f7bcaeed20aa2742",
+      "bytes": 6146
+    },
+    {
+      "path": "quds_office_engine/fidelity/slide-edited-3.pptx",
+      "sha256": "4d310de4adc92872a790c08b8357bc22fa9a08df27a601f20964040213940299",
+      "bytes": 6145
+    },
+    {
+      "path": "quds_office_engine/fidelity/slide-imported-1.pptx",
+      "sha256": "2151ff712a60379a6f46d3fdc56346b9e0b1b2e47912edab227ba5d96dea3615",
+      "bytes": 6138
+    },
+    {
+      "path": "quds_office_engine/fidelity/slide-imported-2.pptx",
+      "sha256": "8f00feec20adea834d8a86df1427f3ce3af2c07b90dc5ea1622cf9414bfdae20",
+      "bytes": 6145
+    },
+    {
+      "path": "quds_office_engine/fidelity/slide-imported-3.pptx",
+      "sha256": "a513d48b0e2730bc0cb8eaf52cd63a92cf85d3605b11629fa485669b850fb10c",
+      "bytes": 6145
+    },
+    {
+      "path": "quds_office_engine/fidelity/unchanged-1.docx",
+      "sha256": "2a9b88771672110ed22fa2026de6d7117ce5a47e8e332690834964a99a027780",
+      "bytes": 8208
+    },
+    {
+      "path": "quds_office_engine/fidelity/unchanged-2.docx",
+      "sha256": "c94496f0e782982f59458f82bbca8afb111af3c2e1ea70da643cc7e211453ddd",
+      "bytes": 8243
+    },
+    {
+      "path": "quds_office_engine/fidelity/unchanged-3.docx",
+      "sha256": "0eaeb9c5ceda94421a77267487d92b3e658f2d031d103cad6b8bfdcc54607d7d",
+      "bytes": 8244
+    },
+    {
+      "path": "quds_office_engine/fidelity-altchunk/altchunk-imported-1.docx",
+      "sha256": "5fe4a932a599e32d3e6aacb91bb37786e7142e299dd0afb7e5dba53d11484e12",
+      "bytes": 5471
+    },
+    {
+      "path": "quds_office_engine/fidelity-altchunk/altchunk-imported-2.docx",
+      "sha256": "1436ead05729be7e60e0b2d8973ddc71295dd2d7d1ad2cf2bf1bdb342ba9b0e8",
+      "bytes": 5503
+    },
+    {
+      "path": "quds_office_engine/fidelity-altchunk/altchunk-imported-3.docx",
+      "sha256": "e820a960ffd1c679834cd721c99bcb96e8417ea91ad8477519454c4183c3c0ed",
+      "bytes": 5503
+    },
+    {
+      "path": "quds_office_engine/fidelity-altchunk/altchunk-moved-1.docx",
+      "sha256": "0d0a3cc6732572b09ced88d83b3d61472df5491d82da5f4da5260d00d3dd0ee8",
+      "bytes": 5565
+    },
+    {
+      "path": "quds_office_engine/fidelity-altchunk/altchunk-moved-2.docx",
+      "sha256": "542a6374a6aadbba9b7367d10386d65c872f9173beade5aea11daf9a1b737750",
+      "bytes": 5593
+    },
+    {
+      "path": "quds_office_engine/fidelity-altchunk/altchunk-moved-3.docx",
+      "sha256": "dc0525e1cbd1e6a10921ee723a7a7fd50ac1c0fb145249642c59661a4b3fac8f",
+      "bytes": 5595
+    },
+    {
+      "path": "quds_office_engine/fidelity-aux-controls/edited-1.docx",
+      "sha256": "001345100ae34fe32c8f426281edc6e22ed4169d03babf83f3120c099da8d2b3",
+      "bytes": 17974
+    },
+    {
+      "path": "quds_office_engine/fidelity-aux-controls/edited-2.docx",
+      "sha256": "f9bc899232cf53a99663342face8a26aa8d3509277aa8fb0fd9d433f756e6510",
+      "bytes": 18008
+    },
+    {
+      "path": "quds_office_engine/fidelity-aux-controls/edited-3.docx",
+      "sha256": "2bfdcaa6c7066ed91b1b9248a0c24e52098be00af8c48d6a57fbe2978faec574",
+      "bytes": 18008
+    },
+    {
+      "path": "quds_office_engine/fidelity-aux-controls/imported-1.docx",
+      "sha256": "253ef3456552ce4694e1add6414f5ade82940d7e53060e714bcdfc90e23cb50f",
+      "bytes": 17917
+    },
+    {
+      "path": "quds_office_engine/fidelity-aux-controls/imported-2.docx",
+      "sha256": "69912cafcbba3b539d3042542ad2a4b493ec98d419573bfb704d7e0141c6ee7b",
+      "bytes": 17951
+    },
+    {
+      "path": "quds_office_engine/fidelity-aux-controls/imported-3.docx",
+      "sha256": "36c42280e909415459102f640db03dbfeb9ff4c4cdd2ff73cbdcc16b84705f75",
+      "bytes": 17952
+    },
+    {
+      "path": "quds_office_engine/fidelity-aux-controls/source.docx",
+      "sha256": "fba38173b5148646d8cd00d1f18baffaf4a5bed829bc8d02583dacfbf75ddf4e",
+      "bytes": 8995
+    },
+    {
+      "path": "quds_office_engine/fidelity-aux-header-footer/edited-1.docx",
+      "sha256": "f47312eb4da11e29f14255ada38e9e8a5b626571574031e2cdc9de0c7c9d6adf",
+      "bytes": 17828
+    },
+    {
+      "path": "quds_office_engine/fidelity-aux-header-footer/edited-2.docx",
+      "sha256": "658dbb41f385c7a43ecf21d4e9e23e0c1a28598aeeefe752ca977a9b9fd2392b",
+      "bytes": 17865
+    },
+    {
+      "path": "quds_office_engine/fidelity-aux-header-footer/edited-3.docx",
+      "sha256": "37d885b1ed79a8c0a56ed356c22f72b20f545dd09bd616d508f420803364688e",
+      "bytes": 17865
+    },
+    {
+      "path": "quds_office_engine/fidelity-aux-header-footer/imported-1.docx",
+      "sha256": "b8d93b782734a8afad6a750145e62457c1c60153ca1307242d53f99b45b63984",
+      "bytes": 17770
+    },
+    {
+      "path": "quds_office_engine/fidelity-aux-header-footer/imported-2.docx",
+      "sha256": "e4ba6ab075806dd46dc85dc0bdb37a0466605e499c471447c2ae983e5c2f4d6e",
+      "bytes": 17804
+    },
+    {
+      "path": "quds_office_engine/fidelity-aux-header-footer/imported-3.docx",
+      "sha256": "4419272ab842a47e24899279f4c061d9217ed38a795a1743ba6ec3c3fe5343d1",
+      "bytes": 17804
+    },
+    {
+      "path": "quds_office_engine/fidelity-aux-header-footer/source.docx",
+      "sha256": "2d26c7e85810e0c1ed50483ed16e02e2d03c43f83b182e819571f1e0a66c7036",
+      "bytes": 8857
+    },
+    {
+      "path": "quds_office_engine/fidelity-bibliography/direct-1.docx",
+      "sha256": "d5a29bfa3ff8d676b2d966fd86587519d9bda0ebcfe74b167e6eeed29cf9061e",
+      "bytes": 6337
+    },
+    {
+      "path": "quds_office_engine/fidelity-bibliography/direct-2.docx",
+      "sha256": "9acc5b81b4780ec4c6463c0dd7586e95a46fd79638492abf643f869454bd4c2e",
+      "bytes": 6370
+    },
+    {
+      "path": "quds_office_engine/fidelity-bibliography/direct-3.docx",
+      "sha256": "31bf012f5c9b6e9ac687432cb98daf73c982a2a042245aaba3fc49f16029ee7f",
+      "bytes": 6370
+    },
+    {
+      "path": "quds_office_engine/fidelity-bibliography/isolate-1.docx",
+      "sha256": "af29776cdbe65e874d93011ce62beb5379daee99b0ab7da78aec8f055f228299",
+      "bytes": 6337
+    },
+    {
+      "path": "quds_office_engine/fidelity-bibliography/isolate-2.docx",
+      "sha256": "412b2f803c9580264e0d1c9ae659fb8119514da12af36edf9bc38deecf0d8cb1",
+      "bytes": 6371
+    },
+    {
+      "path": "quds_office_engine/fidelity-bibliography/isolate-3.docx",
+      "sha256": "fb2a45534eee3a56340966f3c253f4fc4106c8ce28077c871e05b701c74b1e64",
+      "bytes": 6371
+    },
+    {
+      "path": "quds_office_engine/fidelity-bookmarks/cloned-1.docx",
+      "sha256": "ec68def253956568ae4e20d907c068e59fd5154bc11c1fcc408c32c255692346",
+      "bytes": 4821
+    },
+    {
+      "path": "quds_office_engine/fidelity-bookmarks/cloned-2.docx",
+      "sha256": "de2684a22b363e457518ce6857e948f6ac753f4fcb45714b698394da62d6c9b9",
+      "bytes": 4870
+    },
+    {
+      "path": "quds_office_engine/fidelity-bookmarks/cloned-3.docx",
+      "sha256": "1d4442c018e3b08908c79d7e1e338c64819af3cbaaa507d096763f1fcfc720d9",
+      "bytes": 4870
+    },
+    {
+      "path": "quds_office_engine/fidelity-bookmarks/edited-1.docx",
+      "sha256": "6b091293072f363e4349e389f78e4db7a31c2ec0a7572f719095d13c1f2bb2ac",
+      "bytes": 5405
+    },
+    {
+      "path": "quds_office_engine/fidelity-bookmarks/edited-2.docx",
+      "sha256": "ab29ee6176f63be3d510ef1db2acd7d7adcdafc2ae32ac65345870a5bfa2656d",
+      "bytes": 5422
+    },
+    {
+      "path": "quds_office_engine/fidelity-bookmarks/edited-3.docx",
+      "sha256": "7aa3025f5ca1f05faa6c0f0ca0aa66ff8d703efaf6afc0cacea803a8dfdf3cdd",
+      "bytes": 5422
+    },
+    {
+      "path": "quds_office_engine/fidelity-bookmarks/frame-1.docx",
+      "sha256": "e8dbbee993f3a413e29809743675c2b49fc5f6619ef451ff4a7d54b8fdd09551",
+      "bytes": 5208
+    },
+    {
+      "path": "quds_office_engine/fidelity-bookmarks/frame-2.docx",
+      "sha256": "8d7bc3082b88600f3043d55a0e188a04cbe9d0e63d0dc82e33263b9b5529a7f9",
+      "bytes": 5252
+    },
+    {
+      "path": "quds_office_engine/fidelity-bookmarks/frame-3.docx",
+      "sha256": "99bfe37f194b13530a1b17feb9e0738ceed6249441423152360f0746f25da4e4",
+      "bytes": 5252
+    },
+    {
+      "path": "quds_office_engine/fidelity-bookmarks/frame-source.docx",
+      "sha256": "84efbba2da2751e303d812860309a701b71b6424ed13c811474f37081ce3d01a",
+      "bytes": 1700
+    },
+    {
+      "path": "quds_office_engine/fidelity-bookmarks/imported-1.docx",
+      "sha256": "3bfb9478498183021050f717c9b7ba759684d5d624c12a40af022df6ccb9557e",
+      "bytes": 4821
+    },
+    {
+      "path": "quds_office_engine/fidelity-bookmarks/imported-2.docx",
+      "sha256": "2b86b08246744a6dd831618aaa919c8544eabc407d01f453a6fe83dea27e76da",
+      "bytes": 4870
+    },
+    {
+      "path": "quds_office_engine/fidelity-bookmarks/imported-3.docx",
+      "sha256": "5325cd20efca42dc4f5f911c82d784816d11a479e4caef4ba36c0d0a52e62754",
+      "bytes": 4870
+    },
+    {
+      "path": "quds_office_engine/fidelity-bookmarks/source.docx",
+      "sha256": "b469fc9d8ffc372e8dd6d84fc506acd19e47074262f9717e1fc0c6995758ea83",
+      "bytes": 2140
+    },
+    {
+      "path": "quds_office_engine/fidelity-bookmarks-legacy/bookmarks-edited-1.docx",
+      "sha256": "a8d41992afd4151bf2d7e72754ee466a3594ca043d7cf092f13343a6806b1edc",
+      "bytes": 7610
+    },
+    {
+      "path": "quds_office_engine/fidelity-bookmarks-legacy/bookmarks-edited-2.docx",
+      "sha256": "bfa2d2d28b12bdb2d503938ecb1c5ac613baf93e1a58fe952fd01f0055b0bf94",
+      "bytes": 7675
+    },
+    {
+      "path": "quds_office_engine/fidelity-bookmarks-legacy/bookmarks-edited-3.docx",
+      "sha256": "8b5d93f3fac6e11d71e1ddeb6f983074998fe9946ef36d0ddca30b7ffb2038dc",
+      "bytes": 7675
+    },
+    {
+      "path": "quds_office_engine/fidelity-bookmarks-legacy/bookmarks-imported-1.docx",
+      "sha256": "3da2b0a76f497806fc8d53e1b16f0185df26a44f2ca778d83e0339bdf8379cdf",
+      "bytes": 7558
+    },
+    {
+      "path": "quds_office_engine/fidelity-bookmarks-legacy/bookmarks-imported-2.docx",
+      "sha256": "4df2e5d57e0625c8efcc3c3f8b3f1473ad8f61bc63e8721819ee07afa4726216",
+      "bytes": 7625
+    },
+    {
+      "path": "quds_office_engine/fidelity-bookmarks-legacy/bookmarks-imported-3.docx",
+      "sha256": "d953fedc5bfaa20f39526698e89856767d3c53f1392a6c3d223a72206224875c",
+      "bytes": 7625
+    },
+    {
+      "path": "quds_office_engine/fidelity-bookmarks-legacy/bookmarks-source.docx",
+      "sha256": "acc4bc7ef24543b75d2295dbbd37a58b9a4ac5a2105cef13ef186e8178ec05b6",
+      "bytes": 4446
+    },
+    {
+      "path": "quds_office_engine/fidelity-comment-threads/threads-edited-1.docx",
+      "sha256": "b6496f507b6b4447efd8d31f718f96e038417ba1e83e414f023b1f2f7fdf4b76",
+      "bytes": 5589
+    },
+    {
+      "path": "quds_office_engine/fidelity-comment-threads/threads-edited-2.docx",
+      "sha256": "20c1abb6d19c664be1f79ee13bcf9cf0e22bdae66a3c2bee3fcb7a9112aad754",
+      "bytes": 5622
+    },
+    {
+      "path": "quds_office_engine/fidelity-comment-threads/threads-edited-3.docx",
+      "sha256": "78bf49de44b8d964f0d2b606aaec0ed7418880b390c035fbc1ab8f062706440c",
+      "bytes": 5626
+    },
+    {
+      "path": "quds_office_engine/fidelity-comment-threads/threads-imported-1.docx",
+      "sha256": "89d1436d5fdbe09f43c97d97b2562737a75a80eea1e2248e05685dcb9e478dc2",
+      "bytes": 5541
+    },
+    {
+      "path": "quds_office_engine/fidelity-comment-threads/threads-imported-2.docx",
+      "sha256": "2601fec9e1ea40256bc5e24e7334d6d0199a023018bb91d81d24e924e026ddd1",
+      "bytes": 5576
+    },
+    {
+      "path": "quds_office_engine/fidelity-comment-threads/threads-imported-3.docx",
+      "sha256": "44169a46104a58a41ce22383da3d076f268d8ff9c1ca03d38ebe784d84246f86",
+      "bytes": 5576
+    },
+    {
+      "path": "quds_office_engine/fidelity-comment-threads/threads-source.docx",
+      "sha256": "d1763533e3733a93398a0cea7043b9d188f98f5a403ff5b7f3ed5869d654e9a4",
+      "bytes": 2376
+    },
+    {
+      "path": "quds_office_engine/fidelity-content-controls/direct-1.docx",
+      "sha256": "6be511dcbec267c77199c4ab5df3cdffa8bae631fb0eb627a859ea54e272edb7",
+      "bytes": 15424
+    },
+    {
+      "path": "quds_office_engine/fidelity-content-controls/direct-2.docx",
+      "sha256": "80c85f0046dedb4f7a3de77b009862541978d1ca895940c6c052f8505e16af62",
+      "bytes": 15495
+    },
+    {
+      "path": "quds_office_engine/fidelity-content-controls/direct-3.docx",
+      "sha256": "a6af3aec6b24ccc3219455e3fa098df7699f78a699ed3ddd41277205d427c90f",
+      "bytes": 15496
+    },
+    {
+      "path": "quds_office_engine/fidelity-content-controls/imported-1.docx",
+      "sha256": "260752e8fad6d72ee13c347429c9fa28164b4b49baf6ad1e058b8ca700ecc39a",
+      "bytes": 15214
+    },
+    {
+      "path": "quds_office_engine/fidelity-content-controls/imported-2.docx",
+      "sha256": "db7c86efd77d7fd50ca0c4b8c7e773f9e5578d721d518847b6ea40d6737f3a0d",
+      "bytes": 15256
+    },
+    {
+      "path": "quds_office_engine/fidelity-content-controls/imported-3.docx",
+      "sha256": "3b86f3b487bc213f16c1acf125bf72e3555e9efeca33e59bb47b420c4b19b596",
+      "bytes": 15256
+    },
+    {
+      "path": "quds_office_engine/fidelity-content-controls/isolate-1.docx",
+      "sha256": "0426dab9ed38e24ee9bf7f7d3cb038af6783d88acb8a708aafd1e0bb86b57675",
+      "bytes": 15424
+    },
+    {
+      "path": "quds_office_engine/fidelity-content-controls/isolate-2.docx",
+      "sha256": "02de702b001803e64691583809aa5b9b5e4a40f476e63c53d961d2c7c167234a",
+      "bytes": 15496
+    },
+    {
+      "path": "quds_office_engine/fidelity-content-controls/isolate-3.docx",
+      "sha256": "73c72abc2db149293a5b0965102e0365a6171f3d9cfc6b92a2cbd4d82283b7d8",
+      "bytes": 15496
+    },
+    {
+      "path": "quds_office_engine/fidelity-content-controls/source.docx",
+      "sha256": "5af5646742521142abb6295e0962e84a21de75f5959d66aa524f43ab48c11a40",
+      "bytes": 8712
+    },
+    {
+      "path": "quds_office_engine/fidelity-content-controls-legacy/controls-edited-1.docx",
+      "sha256": "1276102524d094c837f071d9bea817b635df5236705641246887899ba58e03a0",
+      "bytes": 5414
+    },
+    {
+      "path": "quds_office_engine/fidelity-content-controls-legacy/controls-edited-2.docx",
+      "sha256": "a943d58c2a729a12574e336083d9be75778cb3bd94f8a68defbfd59beee6e486",
+      "bytes": 5464
+    },
+    {
+      "path": "quds_office_engine/fidelity-content-controls-legacy/controls-edited-3.docx",
+      "sha256": "52252f6552fbbf7478d080d6ab757e0d8af36118640816fda1b01f317e4d0820",
+      "bytes": 5465
+    },
+    {
+      "path": "quds_office_engine/fidelity-content-controls-legacy/controls-imported-1.docx",
+      "sha256": "e96624afb48116b31f11ba6ac75423d3ad4e872a6fb530be5842498812f7cd27",
+      "bytes": 5408
+    },
+    {
+      "path": "quds_office_engine/fidelity-content-controls-legacy/controls-imported-2.docx",
+      "sha256": "e7aa2fc1d3f098883b05a3ef8e39d124bf0afe56c9588c06c6029a046f4e23e0",
+      "bytes": 5463
+    },
+    {
+      "path": "quds_office_engine/fidelity-content-controls-legacy/controls-imported-3.docx",
+      "sha256": "5e1d2c95e5ae873919fef91e09a9676e051fd8365d80cb7e938e01b7e3b86a72",
+      "bytes": 5463
+    },
+    {
+      "path": "quds_office_engine/fidelity-content-controls-legacy/controls-source.docx",
+      "sha256": "a59cb0915fdadaa579bd28f028da5be1df2c8e036362e8e1fe21b789053b5e29",
+      "bytes": 2620
+    },
+    {
+      "path": "quds_office_engine/fidelity-content-controls-legacy/legacy-frame-1.docx",
+      "sha256": "08490f573107ac99f73cc0da410b63b71c75ca4ebfc990619bda8cd772548fb0",
+      "bytes": 6326
+    },
+    {
+      "path": "quds_office_engine/fidelity-content-controls-legacy/legacy-frame-2.docx",
+      "sha256": "4642ece248d2228b853b557367aafad470f1793e3fc1d5d687b7953af5461c81",
+      "bytes": 6404
+    },
+    {
+      "path": "quds_office_engine/fidelity-content-controls-legacy/legacy-frame-3.docx",
+      "sha256": "93a6df94a9759fca5da522286f0bf915b6783df5e74f7f4c9c884e4744950737",
+      "bytes": 6405
+    },
+    {
+      "path": "quds_office_engine/fidelity-frame-wrap/none-1.docx",
+      "sha256": "ce3dd5d83fe8d2c7ce05df2174d5153785f6cf7808eefc3b89250a6958b8e6e0",
+      "bytes": 5210
+    },
+    {
+      "path": "quds_office_engine/fidelity-frame-wrap/none-2.docx",
+      "sha256": "57ddc9ec2dc1b05d06d5979848764734c00f48a445ce3a6c109a299e010a2d2a",
+      "bytes": 5247
+    },
+    {
+      "path": "quds_office_engine/fidelity-frame-wrap/none-3.docx",
+      "sha256": "1a87636b5c25dd9b8c28723eecac740014b00b55c86471e0ef5c84f084c0a7a4",
+      "bytes": 5246
+    },
+    {
+      "path": "quds_office_engine/fidelity-frame-wrap/none-source.docx",
+      "sha256": "956a75351e281d6fcaea42829e79262c4567eba6113ea67a82fc191a61d35543",
+      "bytes": 1959
+    },
+    {
+      "path": "quds_office_engine/fidelity-frame-wrap/square-1.docx",
+      "sha256": "d6684e9a17e1aa7817b630201e32ba2d31e619d441e498a7f34b29a1d79dd05f",
+      "bytes": 5230
+    },
+    {
+      "path": "quds_office_engine/fidelity-frame-wrap/square-2.docx",
+      "sha256": "5fac88ee3c435719e111085ce5fa891d1ac237c0104ccdc991e951597388d157",
+      "bytes": 5265
+    },
+    {
+      "path": "quds_office_engine/fidelity-frame-wrap/square-3.docx",
+      "sha256": "3798747b5d7c24ec61cb5330c4ac3ec50515e0d760a7a7c2faa4f9a447ad7ba9",
+      "bytes": 5268
+    },
+    {
+      "path": "quds_office_engine/fidelity-frame-wrap/square-source.docx",
+      "sha256": "cc13ec6ed3be7cfe0c37c56c0bcfd5fea15b4d5e0901ca896f18b111690ad567",
+      "bytes": 1979
+    },
+    {
+      "path": "quds_office_engine/fidelity-frame-wrap/topBottom-1.docx",
+      "sha256": "3bf65e08f8a13ca0319f737323fcc94e0473c1b01c74a3d2bccc04504a6f9423",
+      "bytes": 5247
+    },
+    {
+      "path": "quds_office_engine/fidelity-frame-wrap/topBottom-2.docx",
+      "sha256": "e50000fc2308ff32bf4f97061da111726d41fa5fd6ef0d0d5170a8f4868d770a",
+      "bytes": 5283
+    },
+    {
+      "path": "quds_office_engine/fidelity-frame-wrap/topBottom-3.docx",
+      "sha256": "2caa06ef1f29e2417fdf8c6e2bc75b69eeea4ca7d844ba663a03e79c64c70e5c",
+      "bytes": 5283
+    },
+    {
+      "path": "quds_office_engine/fidelity-frame-wrap/topBottom-source.docx",
+      "sha256": "e14aaadf28e887ae68c5492226c9d42d3954485be35511ec539bf27fe9bbf0ba",
+      "bytes": 1965
+    },
+    {
+      "path": "quds_office_engine/fidelity-image/replaced-1.docx",
+      "sha256": "d63e31158100b8236318b2449715f30fffaeb5480073ac4a6fd3c859450a28b2",
+      "bytes": 8201
+    },
+    {
+      "path": "quds_office_engine/fidelity-image/replaced-2.docx",
+      "sha256": "62db915f722d0aeecee3887fad1ec319f52bea782b6951fc3d1eb29091398fb1",
+      "bytes": 8235
+    },
+    {
+      "path": "quds_office_engine/fidelity-image/replaced-3.docx",
+      "sha256": "0a59911fc5e5ecf1f23f47d6d441676d35c048857af7a5af624221d08ea653bd",
+      "bytes": 8240
+    },
+    {
+      "path": "quds_office_engine/fidelity-inline-fields/direct-1.docx",
+      "sha256": "317dce1623345401ae1f1f26cf1c2cbb6a19e4d462510378ef9a887e0516a9de",
+      "bytes": 5634
+    },
+    {
+      "path": "quds_office_engine/fidelity-inline-fields/direct-2.docx",
+      "sha256": "c8073671fee52b5fa00c353373a078712e5592db3d88f13a50684a7b141c775c",
+      "bytes": 5681
+    },
+    {
+      "path": "quds_office_engine/fidelity-inline-fields/direct-3.docx",
+      "sha256": "5e252b4074e7b78c0458a0017b974c407487f07a28bb03f05ecdbcb3c503dae5",
+      "bytes": 5680
+    },
+    {
+      "path": "quds_office_engine/fidelity-inline-fields/isolate-1.docx",
+      "sha256": "66a04f2ff7f2024be9ef12fb622ddecad1ee50c813e6baf14fc0048bcb118c3c",
+      "bytes": 5634
+    },
+    {
+      "path": "quds_office_engine/fidelity-inline-fields/isolate-2.docx",
+      "sha256": "180285e8ecf97dc2cb8b14b0d6c77e4a929a5e911902bf2d47bb367e544ff884",
+      "bytes": 5680
+    },
+    {
+      "path": "quds_office_engine/fidelity-inline-fields/isolate-3.docx",
+      "sha256": "b02e7df8de6849fa3bc4c6ff29c2ad919495617d436525abefb5e8abcd68556c",
+      "bytes": 5680
+    },
+    {
+      "path": "quds_office_engine/fidelity-lists/restarted-0.docx",
+      "sha256": "912bf3faa93323862ea3961c14d30d9c0d63a4340facf5101de84330cb42749f",
+      "bytes": 4562
+    },
+    {
+      "path": "quds_office_engine/fidelity-lists/restarted-1.docx",
+      "sha256": "a5063e57f0fa76e9f08d20263dd388aa4fef3f03c09d901b3d7eeb17d328eb91",
+      "bytes": 4562
+    },
+    {
+      "path": "quds_office_engine/fidelity-lists/restarted-2.docx",
+      "sha256": "52d61065860e029463028ec72ed075c35f8cd4098366bd51d268146dcb0167e7",
+      "bytes": 4562
+    },
+    {
+      "path": "quds_office_engine/fidelity-native/created-pivot-1.xlsx",
+      "sha256": "7bae9023e8cfe83b1a0a27bc265779decfc36cc71bbd5617d5cc33febde02331",
+      "bytes": 9729
+    },
+    {
+      "path": "quds_office_engine/fidelity-native/created-pivot-2.xlsx",
+      "sha256": "d228fdc71d986ca7c41137e33f7ac9c24aadff480176180f1a0d68ca2ee050a0",
+      "bytes": 9742
+    },
+    {
+      "path": "quds_office_engine/fidelity-native/created-pivot-3.xlsx",
+      "sha256": "2e0a57cea1efb6b0a8ce5a5f32504f7cd5fe6ff9b6025b72f7dc6ca87be36b98",
+      "bytes": 9742
+    },
+    {
+      "path": "quds_office_engine/fidelity-native/native-sheet-edited-1.xlsx",
+      "sha256": "8bcfce3b335ab1577a945d8fd512b554102e365cf0d84fa95f8941b07f1ffab7",
+      "bytes": 12999
+    },
+    {
+      "path": "quds_office_engine/fidelity-native/native-sheet-edited-2.xlsx",
+      "sha256": "1ab4808befe0e1730c38624fa4b963db35e4da499baf6ab6d00d5c25ca264de2",
+      "bytes": 12999
+    },
+    {
+      "path": "quds_office_engine/fidelity-native/native-sheet-edited-3.xlsx",
+      "sha256": "d50052559258ccdcb24c581226e4077e42eb5d22f4d58d647f07d638bf4645b6",
+      "bytes": 12998
+    },
+    {
+      "path": "quds_office_engine/fidelity-native/native-sheet-imported-1.xlsx",
+      "sha256": "2954b9bda4c112dc6e0142cf417eaea8c9bb6717995f556b482ed897c3bcf669",
+      "bytes": 12972
+    },
+    {
+      "path": "quds_office_engine/fidelity-native/native-sheet-imported-2.xlsx",
+      "sha256": "2e4e54c85d744a6ce4ce23f3e6584368b53dfea74a4014d8d5fecc0a8b44536f",
+      "bytes": 12972
+    },
+    {
+      "path": "quds_office_engine/fidelity-native/native-sheet-imported-3.xlsx",
+      "sha256": "ac855f40864861e6e2c42813c117581a2c55514f2b5e39415176ae33711ee22d",
+      "bytes": 12972
+    },
+    {
+      "path": "quds_office_engine/fidelity-native/native-slides-1.pptx",
+      "sha256": "8f1723407ed78a7c511cd593513feb89d7d8b44550fecee63cb84865d694f4cb",
+      "bytes": 55713
+    },
+    {
+      "path": "quds_office_engine/fidelity-native/native-slides-2.pptx",
+      "sha256": "d1ab71fc48fe8448666c05eafb52de97acb6d55613629c97788a3407621a6735",
+      "bytes": 55713
+    },
+    {
+      "path": "quds_office_engine/fidelity-native/native-slides-3.pptx",
+      "sha256": "0349b606cb31ca1c063827fe99b3e91aac22d78f4c6c7ebcfab7698a6a12f270",
+      "bytes": 55713
+    },
+    {
+      "path": "quds_office_engine/fidelity-native/native-slides-edited-1.pptx",
+      "sha256": "a23400ad7c0a05a598df9cdf991866d31c42fe34748b427e2596cf209922a0c5",
+      "bytes": 56018
+    },
+    {
+      "path": "quds_office_engine/fidelity-native/native-slides-edited-2.pptx",
+      "sha256": "6a68ca2d4e6ec2ab429acb772d8c2402f8acfb52ff47afd0c6683c6b645baf7d",
+      "bytes": 56020
+    },
+    {
+      "path": "quds_office_engine/fidelity-native/native-slides-edited-3.pptx",
+      "sha256": "7c7391fb5e9a7dccbcda30dc2175a00cafdbf905e904497383f52bc561bedb45",
+      "bytes": 56020
+    },
+    {
+      "path": "quds_office_engine/fidelity-note-markers/cloned-1.docx",
+      "sha256": "a49901f7325e55d0dd26647e4624079ceb4caad17862fea3efc9290361f74fed",
+      "bytes": 5063
+    },
+    {
+      "path": "quds_office_engine/fidelity-note-markers/cloned-2.docx",
+      "sha256": "d526dc4ec39f5a324935578242b6e6042fe7f504e6528997fcce316cf8d230db",
+      "bytes": 5104
+    },
+    {
+      "path": "quds_office_engine/fidelity-note-markers/cloned-3.docx",
+      "sha256": "d3d8ca83812c5f73103d8ca6066aadacee98b31bc48a1cb84284692cb284244f",
+      "bytes": 5104
+    },
+    {
+      "path": "quds_office_engine/fidelity-note-markers/edited-1.docx",
+      "sha256": "4570e226b68aec7597a964153a9be78e28ac5ca77b4a143d55b4d98a69b89365",
+      "bytes": 5089
+    },
+    {
+      "path": "quds_office_engine/fidelity-note-markers/edited-2.docx",
+      "sha256": "b09f991e2d12e2455229ba4eefc6db9d460b9ab3fe2ef1a9106a4020379c4e65",
+      "bytes": 5130
+    },
+    {
+      "path": "quds_office_engine/fidelity-note-markers/edited-3.docx",
+      "sha256": "90c8cc8b6aeba88ba13d49bf8a752507f9e87c529b5a60c9294bb45d8cf82717",
+      "bytes": 5131
+    },
+    {
+      "path": "quds_office_engine/fidelity-note-markers/imported-1.docx",
+      "sha256": "a509c952d664528e4becb1064ef094ed54050aa494f7f8110bfb0f34b84c370b",
+      "bytes": 5063
+    },
+    {
+      "path": "quds_office_engine/fidelity-note-markers/imported-2.docx",
+      "sha256": "494834f1ab8c41d5a3909456ac375712d2f33a19325b378e6f7e77dfe7e8efaa",
+      "bytes": 5107
+    },
+    {
+      "path": "quds_office_engine/fidelity-note-markers/imported-3.docx",
+      "sha256": "cce5646b550240af61b65e9ca0d6165f1f702e99eead0f3f1e176f29b5a8c5ef",
+      "bytes": 5107
+    },
+    {
+      "path": "quds_office_engine/fidelity-note-markers/source.docx",
+      "sha256": "24d80e959d01435191ccaaa6d31bed1e214becbddef6eef8b87b69d79d357a48",
+      "bytes": 2987
+    },
+    {
+      "path": "quds_office_engine/fidelity-note-markers-legacy/markers-edited-1.docx",
+      "sha256": "d059c73db33d2ce2da3ba8208bd354cbd26deddb294ad8d9071e96bb60383a2f",
+      "bytes": 5015
+    },
+    {
+      "path": "quds_office_engine/fidelity-note-markers-legacy/markers-edited-2.docx",
+      "sha256": "278c59b82e7fa9ac4ed22d288655a78113bcfabaf5cdd57c32814f1a9a1db641",
+      "bytes": 5037
+    },
+    {
+      "path": "quds_office_engine/fidelity-note-markers-legacy/markers-edited-3.docx",
+      "sha256": "e5e939c88a90c761a61604df042f2d006f8f91b368ba8b0e9b12242a00753b2a",
+      "bytes": 5037
+    },
+    {
+      "path": "quds_office_engine/fidelity-note-markers-legacy/markers-imported-1.docx",
+      "sha256": "a623e8bd9f98e90e0339d6256feb09390e6fd45bf5b7c40f04662463a38a73a3",
+      "bytes": 4724
+    },
+    {
+      "path": "quds_office_engine/fidelity-note-markers-legacy/markers-imported-2.docx",
+      "sha256": "dbd468c749911db0c38a86bd665aee83753722c51b12cd7c57bf9be828c2f299",
+      "bytes": 4747
+    },
+    {
+      "path": "quds_office_engine/fidelity-note-markers-legacy/markers-imported-3.docx",
+      "sha256": "5616855bf29b31c45c8df3c3d22b4cdf8256dedc3f2663457a43937ce17abeb0",
+      "bytes": 4747
+    },
+    {
+      "path": "quds_office_engine/fidelity-note-markers-legacy/markers-source.docx",
+      "sha256": "6f4e979c69c4a942796ea512490b791f8b3ea99a966c75593c1b2613880e7536",
+      "bytes": 2428
+    },
+    {
+      "path": "quds_office_engine/fidelity-notes/edited-1.docx",
+      "sha256": "2ab726fad9ecb0566fb676651dff6034af8dad62e38f4ddfb6b114721eded72f",
+      "bytes": 9108
+    },
+    {
+      "path": "quds_office_engine/fidelity-notes/edited-2.docx",
+      "sha256": "976afab7288ee52e7d6f7f65ea87ec3f08477445fa0ed83f79b894fd8787d855",
+      "bytes": 9142
+    },
+    {
+      "path": "quds_office_engine/fidelity-notes/edited-3.docx",
+      "sha256": "9087de4f6a39fbeba35f09ac59af4a992e57c5b927b67b0f9440fe102c8c86f7",
+      "bytes": 9142
+    },
+    {
+      "path": "quds_office_engine/fidelity-notes/source.docx",
+      "sha256": "11550ac3f3c06bd4093b61bf16cc879827587a53c1cf0abaf8dcbdffc19da59e",
+      "bytes": 6100
+    },
+    {
+      "path": "quds_office_engine/fidelity-notes/unchanged-1.docx",
+      "sha256": "27424cfc2abde94850cb1c147ebd031fa28c1b6530085070c1d59d0556511dd8",
+      "bytes": 9102
+    },
+    {
+      "path": "quds_office_engine/fidelity-notes/unchanged-2.docx",
+      "sha256": "9f2f1cc054c806bcf1ff25da8dd2ca448b02ad60d7d656dd754baba25b79ebce",
+      "bytes": 9135
+    },
+    {
+      "path": "quds_office_engine/fidelity-notes/unchanged-3.docx",
+      "sha256": "d6fb5f37665addf7b599a6654423f413769391b9855bf820e26cefbc9b8f5d40",
+      "bytes": 9135
+    },
+    {
+      "path": "quds_office_engine/fidelity-opaque/opaque-1.docx",
+      "sha256": "3f5b3416a083da876b028e1b92f4df47b9c5736fa7fc90ab44ff5befef594b7f",
+      "bytes": 4405
+    },
+    {
+      "path": "quds_office_engine/fidelity-opaque/opaque-2.docx",
+      "sha256": "6382d90e7ed658cdb436319f478e1e355cbeffe35984e4138527cd3b79100cac",
+      "bytes": 4440
+    },
+    {
+      "path": "quds_office_engine/fidelity-opaque/opaque-3.docx",
+      "sha256": "ce644a67f150b1b6032ce94c848b676986bc855552fdf9223b75aedd2f29c081",
+      "bytes": 4440
+    },
+    {
+      "path": "quds_office_engine/fidelity-revision-stories/direct-1.docx",
+      "sha256": "6eee3db92edd08fc1d79e21ff7a20314c17ed5c81c783454b218d33d90fa75c5",
+      "bytes": 11760
+    },
+    {
+      "path": "quds_office_engine/fidelity-revision-stories/direct-2.docx",
+      "sha256": "cfa548f662d57acc80d80af76280403262f8f83eb7be7179ddcfae70b67ee865",
+      "bytes": 11802
+    },
+    {
+      "path": "quds_office_engine/fidelity-revision-stories/direct-3.docx",
+      "sha256": "8936db75144c44441ed8b30d94f2b5fbefc70c4a57d514da9dd31a96831bf4f2",
+      "bytes": 11804
+    },
+    {
+      "path": "quds_office_engine/fidelity-revision-stories/isolate-1.docx",
+      "sha256": "1f3c80e36593907bb89f7ab0683b6bf08f4f19fcc6fb9113b94cc0e4bf4e36e3",
+      "bytes": 11760
+    },
+    {
+      "path": "quds_office_engine/fidelity-revision-stories/isolate-2.docx",
+      "sha256": "976a5859c67fa6c998c6b5097d545dd9cb977976babf8bb254fb843c9e4113a7",
+      "bytes": 11801
+    },
+    {
+      "path": "quds_office_engine/fidelity-revision-stories/isolate-3.docx",
+      "sha256": "b64e584c4d6e0ecc9671d6589e377f6b646f6bb9c449d5593d89e9c5db63eb04",
+      "bytes": 11801
+    },
+    {
+      "path": "quds_office_engine/fidelity-schema/column-metadata-1.xlsx",
+      "sha256": "b23d0170f1dda7c6b00cf33d308b098eb6c3fce49735cd5c08d8b7093e60e778",
+      "bytes": 13066
+    },
+    {
+      "path": "quds_office_engine/fidelity-schema/column-metadata-2.xlsx",
+      "sha256": "fef705f970c1786f2082ba8b43fcfa3fa32c26f01bc5d850974de34c24e71c65",
+      "bytes": 13068
+    },
+    {
+      "path": "quds_office_engine/fidelity-schema/column-metadata-3.xlsx",
+      "sha256": "b483f215a50ab11b4a3710455be87633a0d0aab00e570c06afd43f838c47292e",
+      "bytes": 13068
+    },
+    {
+      "path": "quds_office_engine/fidelity-schema/sheet-style-1.xlsx",
+      "sha256": "56fc1a65fe9aefb065d8662199e905a62c3878bebd5bbc5190582a84a2d0449d",
+      "bytes": 13060
+    },
+    {
+      "path": "quds_office_engine/fidelity-schema/sheet-style-2.xlsx",
+      "sha256": "5d67b610a47138e34742ae782cb4a39d57c7fc1efb5a17ede51f3502ac4a8b84",
+      "bytes": 13060
+    },
+    {
+      "path": "quds_office_engine/fidelity-schema/sheet-style-3.xlsx",
+      "sha256": "6ecbe4cfa8d4125b6539386d721743095b342468c538d56541b690ec0b6c248f",
+      "bytes": 13060
+    },
+    {
+      "path": "quds_office_engine/fidelity-script.docx",
+      "sha256": "0b234e00217eddf53c483f59c311732aa744fd35f33f09eddbbc483b155fb71c",
+      "bytes": 8746
+    },
+    {
+      "path": "quds_office_engine/fidelity-scripted/sheet/edited.xlsx",
+      "sha256": "d2635e796da52d9bdcff6d2ebe455862180d530a9de8b4aab45f1536696c393d",
+      "bytes": 13157
+    },
+    {
+      "path": "quds_office_engine/fidelity-scripted/sheet/roundtrip-1.xlsx",
+      "sha256": "7669b04adc71e8a1dd7e40152ba34aa7047698cc7270d80890fa7f4c665d4a1e",
+      "bytes": 13154
+    },
+    {
+      "path": "quds_office_engine/fidelity-scripted/sheet/roundtrip-2.xlsx",
+      "sha256": "af91500f75c0c56fe6490d277c9890dbf074a314114de8e0e167f1193397a51a",
+      "bytes": 13154
+    },
+    {
+      "path": "quds_office_engine/fidelity-scripted/sheet/roundtrip-3.xlsx",
+      "sha256": "67a752336abaa11405418ab049ee2051b60d6ed0a02ac34aca2795de0aaac19e",
+      "bytes": 13154
+    },
+    {
+      "path": "quds_office_engine/fidelity-scripted/slide/edited.pptx",
+      "sha256": "58474f3196ef92a9e9c5cb993d562607322413524b76fe1bd482856ac2f213e8",
+      "bytes": 55609
+    },
+    {
+      "path": "quds_office_engine/fidelity-scripted/slide/roundtrip-1.pptx",
+      "sha256": "17d5c291ad4e1ed99db6563ddc4a3a34e004e0276a1fe7af1571827fadd961dd",
+      "bytes": 55608
+    },
+    {
+      "path": "quds_office_engine/fidelity-scripted/slide/roundtrip-2.pptx",
+      "sha256": "129c1564f3552032adad2340bee7195af3fe79af34577d4b0bf15bcb26b9d04b",
+      "bytes": 55609
+    },
+    {
+      "path": "quds_office_engine/fidelity-scripted/slide/roundtrip-3.pptx",
+      "sha256": "ceb144892d6694559caab76601408f5a446d1a6e81be8e6a99e56592fcebe7d9",
+      "bytes": 55609
+    },
+    {
+      "path": "quds_office_engine/fidelity-scripted/word/edited.docx",
+      "sha256": "3c11f174508feb147ece648b42e80abc61fbb6638fbc1a939f6db9e5a89c406d",
+      "bytes": 9126
+    },
+    {
+      "path": "quds_office_engine/fidelity-scripted/word/roundtrip-1.docx",
+      "sha256": "606d5b9cb99e3f825cd5daee19cf461899b54cf4d315dc65810089dc064457ec",
+      "bytes": 9200
+    },
+    {
+      "path": "quds_office_engine/fidelity-scripted/word/roundtrip-2.docx",
+      "sha256": "bb969d67c2dce2989300165940f32f75d92849b9454a58a972b647458deb1f49",
+      "bytes": 9198
+    },
+    {
+      "path": "quds_office_engine/fidelity-scripted/word/roundtrip-3.docx",
+      "sha256": "a65a060733937c4e56a3a2ee96cb6915eb6c703cd83a8b87d5d1c1c29d3c03e8",
+      "bytes": 9198
+    },
+    {
+      "path": "quds_office_engine/fidelity-section-clones/section-clone-1.docx",
+      "sha256": "c1f0ac670c30c184ad9e318028f2b0b44673d0952e9c83d398bbfc49cac8b90d",
+      "bytes": 8388
+    },
+    {
+      "path": "quds_office_engine/fidelity-section-clones/section-clone-2.docx",
+      "sha256": "1c1d676dd967ccae0b0400bbc63eb52a4be648651361dc481880514fdb33b176",
+      "bytes": 8456
+    },
+    {
+      "path": "quds_office_engine/fidelity-section-clones/section-clone-3.docx",
+      "sha256": "66dc331f6a4a540f124120d7ec4e5b577812bfdb31a634e6d89971e8040809e3",
+      "bytes": 8457
+    },
+    {
+      "path": "quds_office_engine/fidelity-slide-text/rich-edited-1.pptx",
+      "sha256": "ef9037613033a93c41d5f74a4a3b3a5dcec42f00c76cf075befa0d777dfa49a8",
+      "bytes": 6304
+    },
+    {
+      "path": "quds_office_engine/fidelity-slide-text/rich-edited-2.pptx",
+      "sha256": "c033f4f55333d3709e750291519b419bd15c0970b0381a11ccd8b35a3d4e9789",
+      "bytes": 6310
+    },
+    {
+      "path": "quds_office_engine/fidelity-slide-text/rich-edited-3.pptx",
+      "sha256": "c1f896c39ece2842b252fc4915b4203ffbcacf25b7ba51069555143dc6a0eb19",
+      "bytes": 6311
+    },
+    {
+      "path": "quds_office_engine/fidelity-slide-text/rich-imported-1.pptx",
+      "sha256": "c0dcf62490f23ac27f6105b367098e88560a01ffe8236c019f249ed4331b765b",
+      "bytes": 6300
+    },
+    {
+      "path": "quds_office_engine/fidelity-slide-text/rich-imported-2.pptx",
+      "sha256": "06d07a67597efab575bdc635d2823fc82a51fe03098a340a319705c3d4385e61",
+      "bytes": 6307
+    },
+    {
+      "path": "quds_office_engine/fidelity-slide-text/rich-imported-3.pptx",
+      "sha256": "ae7ff8bd95c87d5fe26cf1d6aeb09c7f6f41221aff18d03f16c8b30e7fe2c70f",
+      "bytes": 6307
+    },
+    {
+      "path": "quds_office_engine/fidelity-story-media/relocated-edited-1.docx",
+      "sha256": "99687ff4eaf0f727bd8ea2ff2b39f5aaeb9c240f996a42f93bb5e9188037034b",
+      "bytes": 22497
+    },
+    {
+      "path": "quds_office_engine/fidelity-story-media/relocated-edited-2.docx",
+      "sha256": "9f5ef5aa31b03a4443be1352b5a5d3791b6f40f31b6b4d33ed01a9ae13403a46",
+      "bytes": 22527
+    },
+    {
+      "path": "quds_office_engine/fidelity-story-media/relocated-edited-3.docx",
+      "sha256": "238e255a48eec985b41f16c3b971e3a1bce16e1e5f60230539eb8445856d4510",
+      "bytes": 22527
+    },
+    {
+      "path": "quds_office_engine/fidelity-story-media/story-edited-1.docx",
+      "sha256": "c8cea6645a6d25cf1b711327bce58880e61a9d44a616a52401d605886b19c37c",
+      "bytes": 22133
+    },
+    {
+      "path": "quds_office_engine/fidelity-story-media/story-edited-2.docx",
+      "sha256": "3d40aee65290f5ed3461548e4079ccb06b9237647fae96c6bc8626d0dfb25056",
+      "bytes": 22171
+    },
+    {
+      "path": "quds_office_engine/fidelity-story-media/story-edited-3.docx",
+      "sha256": "9010fe35a9775fd6a440812b0f657a8556c39eec189d94f0d4d2f98cafc33630",
+      "bytes": 22173
+    },
+    {
+      "path": "quds_office_engine/fidelity-story-media/story-imported-1.docx",
+      "sha256": "335381806f2377650c709c795a7f686c0b021de56e6fb9b483f93179519c1af5",
+      "bytes": 21840
+    },
+    {
+      "path": "quds_office_engine/fidelity-story-media/story-imported-2.docx",
+      "sha256": "f5bb328f6015779cf8214112b2898ef2689f5fd47c4e6dbf32656244db7238bc",
+      "bytes": 21870
+    },
+    {
+      "path": "quds_office_engine/fidelity-story-media/story-imported-3.docx",
+      "sha256": "fa15000918660afa45fa51cca4f4bcdf40ec66ee50ad6025d782912a7d11ec4e",
+      "bytes": 21870
+    },
+    {
+      "path": "quds_office_engine/fidelity-structure/create/edited.docx",
+      "sha256": "44a11d84ec6b3d7580b2f9d78a39ed0ccf1423f43d08ccfe23aa76711cbfb6b3",
+      "bytes": 8312
+    },
+    {
+      "path": "quds_office_engine/fidelity-structure/create/roundtrip-1.docx",
+      "sha256": "9e136b91cf5ef3656d87f1e9f4a48b6bc940394a916990ddfe82fae692993292",
+      "bytes": 8382
+    },
+    {
+      "path": "quds_office_engine/fidelity-structure/create/roundtrip-2.docx",
+      "sha256": "1cf2c7d59e7aa540a4195fb8fee8389b1037ed8e8ddf22444c3cd183b7189d0a",
+      "bytes": 8383
+    },
+    {
+      "path": "quds_office_engine/fidelity-structure/create/roundtrip-3.docx",
+      "sha256": "0831ebd1f740761f2506498486ef7f3bcccb50c83a5c236d398b868654899227",
+      "bytes": 8383
+    },
+    {
+      "path": "quds_office_engine/fidelity-structure/edit/edited.docx",
+      "sha256": "8be01bf675682530817631d989987bc784fd3798123610fdf4c82efe7208f35b",
+      "bytes": 8339
+    },
+    {
+      "path": "quds_office_engine/fidelity-structure/edit/roundtrip-1.docx",
+      "sha256": "6666556fb86598239d9774aab69184cd87b80acd5056fb16f07189010e7a7994",
+      "bytes": 8340
+    },
+    {
+      "path": "quds_office_engine/fidelity-structure/edit/roundtrip-2.docx",
+      "sha256": "52941e969fe1b0bd4689d121ff3ca43cf82c735fabfd387e65813dd1d648c44e",
+      "bytes": 8341
+    },
+    {
+      "path": "quds_office_engine/fidelity-structure/edit/roundtrip-3.docx",
+      "sha256": "f991830c373896ba02b6e1ce88bced35f24d76faa9d6de6ffb746d8cfb9f0e56",
+      "bytes": 8341
+    },
+    {
+      "path": "quds_office_engine/fidelity-structure/remove/edited.docx",
+      "sha256": "79484f97b9ae6963a761807a1e567baa02a0917aa24a6267106af4cf85119007",
+      "bytes": 6293
+    },
+    {
+      "path": "quds_office_engine/fidelity-structure/remove/roundtrip-1.docx",
+      "sha256": "afceb2fe356fbd1d248d078abc1ff19c34226f6f7d4d2e25bad97f223d1e8549",
+      "bytes": 6291
+    },
+    {
+      "path": "quds_office_engine/fidelity-structure/remove/roundtrip-2.docx",
+      "sha256": "52633cbbe70e56c6f7226e26ada18d666e7550d4ea6710c0bfd54acb11da5a80",
+      "bytes": 6291
+    },
+    {
+      "path": "quds_office_engine/fidelity-structure/remove/roundtrip-3.docx",
+      "sha256": "5e5aaa43127a3dea58d4237e9f019e756d9ac30d6c6eb30151d0f7f801d0e553",
+      "bytes": 6291
+    },
+    {
+      "path": "quds_office_engine/fidelity-structure/source.docx",
+      "sha256": "19d3d78dd6823d8b2ad7173f0eb82be7b2ccf4224d50fdb889dee758ab64e88f",
+      "bytes": 1231
+    },
+    {
+      "path": "quds_office_engine/fidelity-style-toggles/toggle-1.docx",
+      "sha256": "75314d229c627e6c7a2d816b48a40270cb8f9013c1b28cff602a350a6a423aac",
+      "bytes": 6967
+    },
+    {
+      "path": "quds_office_engine/fidelity-style-toggles/toggle-2.docx",
+      "sha256": "11fc1017a1caf6471690a28f144721bd11668b4202461cb550379cdd9ec44a2c",
+      "bytes": 6967
+    },
+    {
+      "path": "quds_office_engine/fidelity-style-toggles/toggle-3.docx",
+      "sha256": "2b7d1b796db9692a6a32a812b239a34bf1d08046cb66bbeefad68aa791a046a8",
+      "bytes": 6968
+    },
+    {
+      "path": "quds_office_engine/fidelity-styles/edited-1.docx",
+      "sha256": "7349556f6caaa252c34f9db227fe64d3dd3289c1155ba1c21de624768b88bde8",
+      "bytes": 7168
+    },
+    {
+      "path": "quds_office_engine/fidelity-styles/edited-2.docx",
+      "sha256": "2d4bfd556285b6bde0ced702ac8e6999bc55674c6ae2efe3dec6f4885629bfba",
+      "bytes": 7168
+    },
+    {
+      "path": "quds_office_engine/fidelity-styles/edited-3.docx",
+      "sha256": "dd868e7d5cb5ca00b673b42f8b7637f94bae4127acfdff990b59ff6be2b48969",
+      "bytes": 7168
+    },
+    {
+      "path": "quds_office_engine/fidelity-styles/unchanged-1.docx",
+      "sha256": "7337a4cb6a55e60025762a826f32dbb8e3f14454d3587e7d7ef155c1f666c701",
+      "bytes": 7125
+    },
+    {
+      "path": "quds_office_engine/fidelity-styles/unchanged-2.docx",
+      "sha256": "c936fbe767824404a57f85b1dd875b7aac7d7d2dc1f5548be8d90ec8998d8444",
+      "bytes": 7160
+    },
+    {
+      "path": "quds_office_engine/fidelity-styles/unchanged-3.docx",
+      "sha256": "3f885fce118f149e6511d1d403d3033ba4dda4b5d29a8ea4160b86b856f63908",
+      "bytes": 7161
+    },
+    {
+      "path": "quds_office_engine/fidelity-table-borders/tables-edited-1.docx",
+      "sha256": "73d9713d07284f3ae8a1d83756ad457342e81ed3cb206f1aa0c42a5394350d07",
+      "bytes": 5131
+    },
+    {
+      "path": "quds_office_engine/fidelity-table-borders/tables-edited-2.docx",
+      "sha256": "614c9d1e80ee33160e1f57d005fcf75ccf19186b9f30513e3829d1d7b0e8d51c",
+      "bytes": 5165
+    },
+    {
+      "path": "quds_office_engine/fidelity-table-borders/tables-edited-3.docx",
+      "sha256": "615de69a701e99786b8e412338dd44e5b5155bf4a74d602d0e5282311f8c8912",
+      "bytes": 5164
+    },
+    {
+      "path": "quds_office_engine/fidelity-table-borders/tables-imported-1.docx",
+      "sha256": "7c046659541e6bcf823234dc2f8d52749590c5261ce811c0d826a3df956aff5a",
+      "bytes": 4970
+    },
+    {
+      "path": "quds_office_engine/fidelity-table-borders/tables-imported-2.docx",
+      "sha256": "85a27a1c3a7af425c48f4f1ab4e532ca703c29ab7529440f99561df43654695a",
+      "bytes": 5008
+    },
+    {
+      "path": "quds_office_engine/fidelity-table-borders/tables-imported-3.docx",
+      "sha256": "08567d28bd991a8dc4f7dde3820be996b23c267609125818a48130e51e99232d",
+      "bytes": 5008
+    },
+    {
+      "path": "quds_office_engine/fidelity-word-compatibility/compatibility-edited-1.docx",
+      "sha256": "5af90bdd8a5c9e907ee745866f261772a8eaaec219d82c2f72441ff6e53b6cec",
+      "bytes": 7280
+    },
+    {
+      "path": "quds_office_engine/fidelity-word-compatibility/compatibility-edited-2.docx",
+      "sha256": "a15911db9b68192e6e4e5983325007eb430eb981464ab1edb824ed85387cfda2",
+      "bytes": 7322
+    },
+    {
+      "path": "quds_office_engine/fidelity-word-compatibility/compatibility-edited-3.docx",
+      "sha256": "d5d7d4da1df5bdfbdd865a4df534a98d886ccd78e9f27b3448582c2098ca62dd",
+      "bytes": 7321
+    },
+    {
+      "path": "quds_office_engine/fidelity-word-compatibility/compatibility-imported-1.docx",
+      "sha256": "6f619a00ba4fe0b766924b71b00ab15cadabcf3bab5eda709be9866b832b10e3",
+      "bytes": 7346
+    },
+    {
+      "path": "quds_office_engine/fidelity-word-compatibility/compatibility-imported-2.docx",
+      "sha256": "76340b5266874f836bb5b4db8130e9f08fc21a9085cafd8649f783387862fae0",
+      "bytes": 7387
+    },
+    {
+      "path": "quds_office_engine/fidelity-word-compatibility/compatibility-imported-3.docx",
+      "sha256": "c2eea510ee1b62e5c23304762f29d51caac89affbcb532aaf64dc1e975d59413",
+      "bytes": 7388
+    },
+    {
+      "path": "quds_office_engine/fidelity-word-edits/breaks-1.docx",
+      "sha256": "5e3e9dba427d82685bab7b45d12355e0e293b267b78b2be474a42390c7a31d30",
+      "bytes": 6246
+    },
+    {
+      "path": "quds_office_engine/fidelity-word-edits/breaks-2.docx",
+      "sha256": "b15fd670be7d8ac2c89f1ca1c004622efc23fae952c5e1cfd9219cbffc789d4f",
+      "bytes": 6310
+    },
+    {
+      "path": "quds_office_engine/fidelity-word-edits/breaks-3.docx",
+      "sha256": "615ab34ce6a93773dfb603b4572fc162a4449f914c68951ee1df555288c6b3b6",
+      "bytes": 6310
+    },
+    {
+      "path": "quds_office_engine/fidelity-word-edits/styles-1.docx",
+      "sha256": "f9aef6569033b95b75001a7c1e9e53dbe094351e234794fd0e4cef849d4cd790",
+      "bytes": 5899
+    },
+    {
+      "path": "quds_office_engine/fidelity-word-edits/styles-2.docx",
+      "sha256": "e48d731d1813394a3378645702828b1d663d66bc75d19fc1bc253b387b91fea6",
+      "bytes": 5963
+    },
+    {
+      "path": "quds_office_engine/fidelity-word-edits/styles-3.docx",
+      "sha256": "3f260f29c7b7d8ffe4c9e3690c50ca10025ddbb21e8abea7d2f49a63de03140b",
+      "bytes": 5964
+    }
+  ],
+  "counts": {
+    "quds_office_editor": 22,
+    "quds_office_engine": 241
+  },
+  "total": 263,
+  "collection": "Fresh workflow-equivalent copy of packages/quds_office_*/build/fidelity* after final engine and editor gates; previous 261 snapshot retained separately.",
+  "schema_validation_refresh": {
+    "reason": "Validate Word macro-enabled documents and templates, including package type matching.",
+    "previous_validator_source_sha256": "755bd8c32ce0b4c23ecb38c614f316150722e06ea07dd296988a7fa743618a13",
+    "schema_receipts_byte_identical": true,
+    "office_input_bytes_changed": false
+  }
+}

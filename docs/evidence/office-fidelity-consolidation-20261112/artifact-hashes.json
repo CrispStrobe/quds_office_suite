@@ -1,0 +1,82 @@
+[
+  {
+    "path": "engine-acceptance.json",
+    "bytes": 1739,
+    "sha256": "dc7b4a667cdce4d875cc995818d5154252bbc3b1971b96a9d2c77e5ea15f2fd2"
+  },
+  {
+    "path": "editor-acceptance.json",
+    "bytes": 1701,
+    "sha256": "4e20f89729b643b151d1a4dcae9eafe86d883f0442c3b905935c1b9e072c97b9"
+  },
+  {
+    "path": "engine-coverage.json",
+    "bytes": 186062,
+    "sha256": "092c6259053eef4f6f1fa9a2af3bd380a540c8521845442dfdb94b5460efdbd7"
+  },
+  {
+    "path": "engine-inventory.json",
+    "bytes": 56057,
+    "sha256": "fef244c9ad431092a72b5b4705ae6f65684dd08edcd86524e75318ed8cffa1da"
+  },
+  {
+    "path": "editor-inventory.json",
+    "bytes": 5492,
+    "sha256": "301df03a2e86f5e20d56728c71f6cc0ca3f16b3e60a1605de3430232572e3f5d"
+  },
+  {
+    "path": "external-acceptance.json",
+    "bytes": 1867,
+    "sha256": "b37fea3a6d3b9b6c5604f7d13131b9af8c3ee58ca6de7739684be0b47f900520"
+  },
+  {
+    "path": "source-inputs.json",
+    "bytes": 51521,
+    "sha256": "c8c37a63c346c40ac1e2beba5b79d516f32a2f68931edc8f6503b2f0b2e070b3"
+  },
+  {
+    "path": "source-schema.json",
+    "bytes": 56198,
+    "sha256": "914ab7c30268cd1fea3e775ffcbbd5a3da1480419ad458073286578ffe5a7faa"
+  },
+  {
+    "path": "source-render.json",
+    "bytes": 311700,
+    "sha256": "c744dc559e5e8c7540ffb48491f0cf80ee5d381311178f8c2a075dcb0632f76b"
+  },
+  {
+    "path": "renderer-provenance.json",
+    "bytes": 9872,
+    "sha256": "f4590fe7b329bffeb48510e7ef3d01718e0371b100a1997f33d5c5bfa480e365"
+  },
+  {
+    "path": "schema-validator-provenance.json",
+    "bytes": 5174,
+    "sha256": "c7c0d3dc7b73698a01ad930981c5477dc561b2a441de0c90c9c274908ffb0f3f"
+  },
+  {
+    "path": "runtime/validator/build_validator.py",
+    "bytes": 2747,
+    "sha256": "f4af656d4c2c0a6149b6fe8b38476c92f9aae80896a1eceb1dfa7594524dce19"
+  },
+  {
+    "path": "runtime/validator/build-receipt.json",
+    "bytes": 1002,
+    "sha256": "728acba67f7792c82afb131df84c0b4f4271889d8ae1eb1b23dbf4e8fa6d2817"
+  },
+  {
+    "path": "runtime/libreoffice-242/lok_convert.c",
+    "bytes": 2652,
+    "sha256": "1f23398b945320057ca8695a6f9a9fe3db87e232998800691dacd571d87fc496"
+  },
+  {
+    "path": "runtime/libreoffice-242/probe_adapter.py",
+    "bytes": 4302,
+    "sha256": "ae69f5147df6169a37e697265f78869f838d1280868d9ccd635c1ff987533612"
+  },
+  {
+    "path": "runtime/lok242-bin/libreoffice",
+    "bytes": 1960,
+    "sha256": "4087cfbf62a50717804ce883618227756dfe3d41d5cf7ab9f11f0e849c2653df"
+  }
+]

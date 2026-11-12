@@ -1,0 +1,60 @@
+{
+  "commit": "7bd56f609d5ec63e44e0393560b3ec1055c3bf7e",
+  "dirty_at_coverage": false,
+  "current_head": "7bd56f609d5ec63e44e0393560b3ec1055c3bf7e",
+  "current_status": "",
+  "source_tree_sha256": "2891da0e0eb8336310cfc80ae98c0be7b0d1988037bc099463870a3c8e1f31b8",
+  "source_unchanged_during_acceptance": true,
+  "analyzer": "No issues found",
+  "full_tests_passed": 1061,
+  "full_tests_skipped": 1,
+  "skip_diagnostics": [
+    "test/wave4_platform_test.dart: multi-face PDF embeds distinct font resources \u2014 Latin face already covers Arabic; cannot force F3"
+  ],
+  "fidelity_tests_passed": 598,
+  "python_controls_passed": 308,
+  "operations": 67,
+  "coverage_files": 100,
+  "covered_lines": 42488,
+  "instrumented_lines": 52127,
+  "coverage_percent": 81.5086,
+  "uninstrumented_files": 10,
+  "components": {
+    "word": {
+      "covered_lines": 9124,
+      "instrumented_lines": 10838,
+      "uninstrumented_files": []
+    },
+    "sheet": {
+      "covered_lines": 3139,
+      "instrumented_lines": 3959,
+      "uninstrumented_files": []
+    },
+    "slide": {
+      "covered_lines": 1806,
+      "instrumented_lines": 2278,
+      "uninstrumented_files": []
+    },
+    "pdf": {
+      "covered_lines": 11834,
+      "instrumented_lines": 15289,
+      "uninstrumented_files": [
+        "lib/src/pdf/templates/suite_index.dart"
+      ]
+    },
+    "reports": {
+      "covered_lines": 9588,
+      "instrumented_lines": 11295,
+      "uninstrumented_files": []
+    }
+  },
+  "inventory": {
+    "expected_files": 241,
+    "observed_files": 241,
+    "verified_files": 241,
+    "three_cycle_series": 73,
+    "standalone_files": 22,
+    "manifest_sha256": "7a662a9b8f16d856d06586485fcca52c4ceee5b9a61b6d86473e24b91fee54da",
+    "errors": []
+  }
+}
