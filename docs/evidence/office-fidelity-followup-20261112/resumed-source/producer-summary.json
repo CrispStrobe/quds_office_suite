@@ -1,0 +1,112 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-11-12T13:55:06.811497+00:00",
+  "source_commit": "7641d9cfa167987216134ebfc4772918cc945d97",
+  "source_tree": "19ab1dc5bf3b0f3a93e2d17cac76aa9fe3cb111f6e81abe2ed4f959d3b13be88",
+  "runtime": {
+    "frameworkVersion": "3.44.0",
+    "frameworkRevision": "559ffa3f75e7402d65a8def9c28389a9b2e6fe42",
+    "engineRevision": "4c525dac5ebe5971c5708ef73558ed8edcf4a362",
+    "dartSdkVersion": "3.12.0"
+  },
+  "engine": {
+    "full_tests_passed": 1384,
+    "full_tests_skipped": 1,
+    "mandatory_tests_passed": 921,
+    "mandatory_tests_skipped": 0,
+    "python_controls": 344,
+    "outputs": {
+      "version": 1,
+      "ok": true,
+      "package": "quds_office_engine",
+      "artifact_root": "build",
+      "manifest_sha256": "afd6ba8068bae37959cc365b15648a1901f51538c3ffeea3236e822a5d203fdc",
+      "expected_files": 296,
+      "observed_files": 296,
+      "verified_files": 296,
+      "three_cycle_series": 89,
+      "standalone_files": 29,
+      "errors": []
+    },
+    "coverage": {
+      "covered_lines": 44568,
+      "instrumented_lines": 54173,
+      "source_tree_sha256": "ffd7e386098f5221cdace89da2c7277136514b6fb29e6932bb461dab96d4473a",
+      "fresh_vm_files": 116
+    }
+  },
+  "editor": {
+    "full_tests_passed": 478,
+    "full_tests_skipped": 1,
+    "outputs": {
+      "version": 1,
+      "ok": true,
+      "package": "quds_office_editor",
+      "artifact_root": "build",
+      "manifest_sha256": "07e327478612e0213f4b6d92a6a675465ecf523f0083c01435a46ad275082ef7",
+      "expected_files": 25,
+      "observed_files": 25,
+      "verified_files": 25,
+      "three_cycle_series": 8,
+      "standalone_files": 1,
+      "errors": []
+    }
+  },
+  "analyzers": "Engine full dart analyze and editor flutter analyze --no-pub lib both passed with no issues.",
+  "source_after": {
+    "clean_tree": true,
+    "all_fingerprints_unchanged": true
+  },
+  "existing_skips": [
+    {
+      "package": "engine",
+      "test": "test/wave4_platform_test.dart: multi-face PDF embeds distinct font resources",
+      "reason": "Latin face already covers Arabic; cannot force F3"
+    },
+    {
+      "package": "editor",
+      "test": "test/pdf_pixel_compare_render_test.dart: render al_tahreer pages for pixel compare",
+      "reason": "Requires /home/mohammed/Desktop/al_tahreer_profile.pdf (local comparison tool)."
+    }
+  ],
+  "orchestration_note": "The historical helper allowed concurrent engine/editor gates, but editor bookmark/control oracles also read engine exports. The first bookmark check ran before engine producer completion and correctly rejected missing files. Its failed receipt/log are preserved. After the engine passed, only outstanding editor oracles and inventory were run, while verifying the same source fingerprint. No tests or goldens were changed or regenerated.",
+  "receipts": {
+    "validation/source-engine/acceptance.json": {
+      "sha256": "200d1fc42407034269bb57209f37ce2558f73c4351bf41b1bc7bbfba1d9b03e6",
+      "bytes": 265120
+    },
+    "validation/source-editor/acceptance-sequential.json": {
+      "sha256": "2fe351b9b96d9e0dc71cb0a85a8017706dcd1875c3a92b0b8cf5f52233cb3cdb",
+      "bytes": 268212
+    },
+    "validation/source-editor/acceptance.json": {
+      "sha256": "d7574ea6a3200210c6e9674b5eb5d31d00e44f27971105a684affe805c1fb650",
+      "bytes": 136534
+    },
+    "validation/source-engine/inventory.json": {
+      "sha256": "aa7482d7043f97609cfaf531cd9eca152c7dc7f02ac3b2d2b5dc337348a872ca",
+      "bytes": 69175
+    },
+    "validation/source-editor/inventory.json": {
+      "sha256": "369fa6d48a50f763bead861a28c46caca4689feab02b2ec5631e349da733d5be",
+      "bytes": 6188
+    },
+    "validation/source-engine/coverage-gaps.json": {
+      "sha256": "e3b93b147ebc9ecfb391b66988ac63ac8dd25db88c117df8e50cd4d8a09d0e72",
+      "bytes": 188041
+    },
+    "runtime/env-source.sh": {
+      "sha256": "a0a8d81fffac9916623a39d41766c73d575ed9cd94ac96a3c423cd70a0ad6041",
+      "bytes": 757
+    },
+    "runtime/finish_source_editor.py": {
+      "sha256": "d27ed43e280df7dbd3cda66b14689b022b976a9db0817f7ea0e55943ffb123c2",
+      "bytes": 5895
+    }
+  },
+  "dependencies": {
+    "workspace_lock_sha256": "bc5e5e3971d870180044f69ef1c6a2f1473cbb15a63316fecd9b8f172ce3804f",
+    "resolution": "flutter pub get --offline, using existing preserved pub cache; workspace lock is ignored by source repository."
+  },
+  "counts_note": "The 921 mandatory tests overlap the 1,384 full engine tests; do not add them as unique tests. External schema/render acceptance is separate."
+}

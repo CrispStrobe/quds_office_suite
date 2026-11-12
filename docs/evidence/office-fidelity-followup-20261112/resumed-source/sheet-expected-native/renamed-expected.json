@@ -1,0 +1,46 @@
+{
+  "source": "quds_office_suite/packages/quds_office_engine/test/fixtures/fidelity/sheet-rename-native.xlsx",
+  "source_sha256": "561a2ebf80b6f02e8b1fc00648230b341ff68e1a3ee501ea026b9e69c35fc24b",
+  "reference": "validation/sheet-expected-native/renamed-expected.xlsx",
+  "reference_sha256": "f6c4c756d03d5dee78cfd66853df6f6c82c5e3d8793d327070a8271455bfa4f8",
+  "changed_parts": [
+    "xl/charts/chart1.xml",
+    "xl/pivotCache/pivotCacheDefinition1.xml",
+    "xl/workbook.xml",
+    "xl/worksheets/sheet2.xml"
+  ],
+  "explicit_cache_changes": [
+    {
+      "cell": "D1",
+      "source_value": "42",
+      "expected_type": null,
+      "expected_value": "2"
+    },
+    {
+      "cell": "D2",
+      "source_value": "42",
+      "expected_type": null,
+      "expected_value": "5"
+    },
+    {
+      "cell": "D8",
+      "source_value": "42",
+      "expected_type": "str",
+      "expected_value": "Data!A1 \"quoted\""
+    },
+    {
+      "cell": "D13",
+      "source_value": "42",
+      "expected_type": "e",
+      "expected_value": "#REF!"
+    },
+    {
+      "cell": "D14",
+      "source_value": "42",
+      "expected_type": null,
+      "expected_value": "4"
+    }
+  ],
+  "all_other_parts_byte_identical": true,
+  "author_script_sha256": "7aa338fdb9c7d80a8468f2877f796b452c2c244b0d2afdd546b0d328104c07f3"
+}

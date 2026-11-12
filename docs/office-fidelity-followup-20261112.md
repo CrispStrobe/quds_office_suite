@@ -138,3 +138,22 @@ personal PDF. Neither mandatory fidelity nor host integration skipped a case.
 Line coverage measures executed instrumented lines, not branch completeness.
 Exact raw logs, the initial sequencing failure and every final byte receipt are
 preserved under [final-source](evidence/office-fidelity-followup-20261112/final-source/summary.json).
+
+## Verification after the interrupted connection
+
+A fresh run against the same `7641d9c` implementation independently reproduced
+the full source counts and native results above. While saving that run, remote
+commit `83ec9de` supplied the interrupted session's final report. That report and
+its original evidence remain intact; the
+[resumed source receipts](evidence/office-fidelity-followup-20261112/resumed-source/README.md)
+record the additional run separately. No source or golden changed.
+
+The resumed formula check explicitly classified 42 results across three renamed
+saves: nine supported numeric recalculations, 27 retained unsupported caches,
+three exact string results and three intentional INDIRECT reference errors.
+All three saved workbooks matched the independently authored native expected
+result. The [classified comparison](evidence/office-fidelity-followup-20261112/resumed-source/focused-sheet/classified-native-comparison.json)
+and [focused font/table/tab summary](evidence/office-fidelity-followup-20261112/resumed-source/focused-followup-summary.json)
+retain the exact output hashes and bounded comparison claims. Formula support,
+unknown-font fallbacks, unsupported table topology and remaining style UI limits
+are unchanged.

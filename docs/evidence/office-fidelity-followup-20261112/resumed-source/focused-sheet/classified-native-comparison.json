@@ -1,0 +1,1003 @@
+{
+  "status": "passed",
+  "source_equality_claimed": false,
+  "expected_native_package": "/workspace/scratch/07eb2580faa9/validation/sheet-expected-native/renamed-expected.xlsx",
+  "expected_native_sha256": "f6c4c756d03d5dee78cfd66853df6f6c82c5e3d8793d327070a8271455bfa4f8",
+  "expected_native_authoring_report_sha256": "9062d03b6d5e09640220552a9079fc3bf887b53258752b01ed588ad11ab8d219",
+  "input_manifest_sha256": "e79645f5b9eb70585dd488a249ebae22af633202db993fcc9939a2c08474087b",
+  "renderer_sha256": "787d79602869da46442e40656d8d2cb95141a72d26433582fe58033bb7bea5a0",
+  "comparison_script_sha256": "ad701470737d238b2913fbb1ac545f28c127b2e7fc2a1c3cf22758d34bc95e8e",
+  "masking_or_tolerance": false,
+  "cache_classifications": [
+    {
+      "file": "renamed-1.xlsx",
+      "cell": "D1",
+      "source": {
+        "formula": "Data!$B$2",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "'O''Brien 2026'!$B$2",
+        "type": null,
+        "value": "2"
+      },
+      "actual": {
+        "formula": "'O''Brien 2026'!$B$2",
+        "type": null,
+        "value": "2.0"
+      },
+      "classification": "supported_numeric_recalculation",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-1.xlsx",
+      "cell": "D2",
+      "source": {
+        "formula": "'Data'!$B$3",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "'O''Brien 2026'!$B$3",
+        "type": null,
+        "value": "5"
+      },
+      "actual": {
+        "formula": "'O''Brien 2026'!$B$3",
+        "type": null,
+        "value": "5.0"
+      },
+      "classification": "supported_numeric_recalculation",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-1.xlsx",
+      "cell": "D3",
+      "source": {
+        "formula": "SUM(Data:Summary!B2)",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "SUM('O''Brien 2026:Summary'!B2)",
+        "type": null,
+        "value": "42"
+      },
+      "actual": {
+        "formula": "SUM('O''Brien 2026:Summary'!B2)",
+        "type": null,
+        "value": "42.0"
+      },
+      "classification": "retained_unsupported_cache",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-1.xlsx",
+      "cell": "D4",
+      "source": {
+        "formula": "SUM('Data:Summary'!B2)",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "SUM('O''Brien 2026:Summary'!B2)",
+        "type": null,
+        "value": "42"
+      },
+      "actual": {
+        "formula": "SUM('O''Brien 2026:Summary'!B2)",
+        "type": null,
+        "value": "42.0"
+      },
+      "classification": "retained_unsupported_cache",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-1.xlsx",
+      "cell": "D5",
+      "source": {
+        "formula": "SUM('Data':'Summary'!B2)",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "SUM('O''Brien 2026:Summary'!B2)",
+        "type": null,
+        "value": "42"
+      },
+      "actual": {
+        "formula": "SUM('O''Brien 2026:Summary'!B2)",
+        "type": null,
+        "value": "42.0"
+      },
+      "classification": "retained_unsupported_cache",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-1.xlsx",
+      "cell": "D6",
+      "source": {
+        "formula": "[1]Data!B2",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "[1]Data!B2",
+        "type": null,
+        "value": "42"
+      },
+      "actual": {
+        "formula": "[1]Data!B2",
+        "type": null,
+        "value": "42.0"
+      },
+      "classification": "retained_unsupported_cache",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-1.xlsx",
+      "cell": "D7",
+      "source": {
+        "formula": "'[Remote.xlsx]Data'!B2",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "'[Remote.xlsx]Data'!B2",
+        "type": null,
+        "value": "42"
+      },
+      "actual": {
+        "formula": "'[Remote.xlsx]Data'!B2",
+        "type": null,
+        "value": "42.0"
+      },
+      "classification": "retained_unsupported_cache",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-1.xlsx",
+      "cell": "D8",
+      "source": {
+        "formula": "IF(Data!B2>0,\"Data!A1 \"\"quoted\"\"\",\"'Data'!B2\")",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "IF('O''Brien 2026'!B2>0,\"Data!A1 \"\"quoted\"\"\",\"'Data'!B2\")",
+        "type": "str",
+        "value": "Data!A1 \"quoted\""
+      },
+      "actual": {
+        "formula": "IF('O''Brien 2026'!B2>0,\"Data!A1 \"\"quoted\"\"\",\"'Data'!B2\")",
+        "type": "str",
+        "value": "Data!A1 \"quoted\""
+      },
+      "classification": "supported_exact_string_result",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-1.xlsx",
+      "cell": "D9",
+      "source": {
+        "formula": "RenameTable[Data!A1]",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "RenameTable[Data!A1]",
+        "type": null,
+        "value": "42"
+      },
+      "actual": {
+        "formula": "RenameTable[Data!A1]",
+        "type": null,
+        "value": "42.0"
+      },
+      "classification": "retained_unsupported_cache",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-1.xlsx",
+      "cell": "D10",
+      "source": {
+        "formula": "Data!LocalRange",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "'O''Brien 2026'!LocalRange",
+        "type": null,
+        "value": "42"
+      },
+      "actual": {
+        "formula": "'O''Brien 2026'!LocalRange",
+        "type": null,
+        "value": "42.0"
+      },
+      "classification": "retained_unsupported_cache",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-1.xlsx",
+      "cell": "D11",
+      "source": {
+        "formula": "SUM('Data'!$A:$B)",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "SUM('O''Brien 2026'!$A:$B)",
+        "type": null,
+        "value": "42"
+      },
+      "actual": {
+        "formula": "SUM('O''Brien 2026'!$A:$B)",
+        "type": null,
+        "value": "42.0"
+      },
+      "classification": "retained_unsupported_cache",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-1.xlsx",
+      "cell": "D12",
+      "source": {
+        "formula": "SUM(Data!1:3)",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "SUM('O''Brien 2026'!1:3)",
+        "type": null,
+        "value": "42"
+      },
+      "actual": {
+        "formula": "SUM('O''Brien 2026'!1:3)",
+        "type": null,
+        "value": "42.0"
+      },
+      "classification": "retained_unsupported_cache",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-1.xlsx",
+      "cell": "D13",
+      "source": {
+        "formula": "INDIRECT(\"Data!B2\")",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "INDIRECT(\"Data!B2\")",
+        "type": "e",
+        "value": "#REF!"
+      },
+      "actual": {
+        "formula": "INDIRECT(\"Data!B2\")",
+        "type": "e",
+        "value": "#REF!"
+      },
+      "classification": "intended_indirect_reference_error",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-1.xlsx",
+      "cell": "D14",
+      "source": {
+        "formula": "dAtA!b2+Summary!B2",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "'O''Brien 2026'!b2+Summary!B2",
+        "type": null,
+        "value": "4"
+      },
+      "actual": {
+        "formula": "'O''Brien 2026'!b2+Summary!B2",
+        "type": null,
+        "value": "4.0"
+      },
+      "classification": "supported_numeric_recalculation",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-2.xlsx",
+      "cell": "D1",
+      "source": {
+        "formula": "Data!$B$2",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "'O''Brien 2026'!$B$2",
+        "type": null,
+        "value": "2"
+      },
+      "actual": {
+        "formula": "'O''Brien 2026'!$B$2",
+        "type": null,
+        "value": "2.0"
+      },
+      "classification": "supported_numeric_recalculation",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-2.xlsx",
+      "cell": "D2",
+      "source": {
+        "formula": "'Data'!$B$3",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "'O''Brien 2026'!$B$3",
+        "type": null,
+        "value": "5"
+      },
+      "actual": {
+        "formula": "'O''Brien 2026'!$B$3",
+        "type": null,
+        "value": "5.0"
+      },
+      "classification": "supported_numeric_recalculation",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-2.xlsx",
+      "cell": "D3",
+      "source": {
+        "formula": "SUM(Data:Summary!B2)",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "SUM('O''Brien 2026:Summary'!B2)",
+        "type": null,
+        "value": "42"
+      },
+      "actual": {
+        "formula": "SUM('O''Brien 2026:Summary'!B2)",
+        "type": null,
+        "value": "42.0"
+      },
+      "classification": "retained_unsupported_cache",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-2.xlsx",
+      "cell": "D4",
+      "source": {
+        "formula": "SUM('Data:Summary'!B2)",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "SUM('O''Brien 2026:Summary'!B2)",
+        "type": null,
+        "value": "42"
+      },
+      "actual": {
+        "formula": "SUM('O''Brien 2026:Summary'!B2)",
+        "type": null,
+        "value": "42.0"
+      },
+      "classification": "retained_unsupported_cache",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-2.xlsx",
+      "cell": "D5",
+      "source": {
+        "formula": "SUM('Data':'Summary'!B2)",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "SUM('O''Brien 2026:Summary'!B2)",
+        "type": null,
+        "value": "42"
+      },
+      "actual": {
+        "formula": "SUM('O''Brien 2026:Summary'!B2)",
+        "type": null,
+        "value": "42.0"
+      },
+      "classification": "retained_unsupported_cache",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-2.xlsx",
+      "cell": "D6",
+      "source": {
+        "formula": "[1]Data!B2",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "[1]Data!B2",
+        "type": null,
+        "value": "42"
+      },
+      "actual": {
+        "formula": "[1]Data!B2",
+        "type": null,
+        "value": "42.0"
+      },
+      "classification": "retained_unsupported_cache",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-2.xlsx",
+      "cell": "D7",
+      "source": {
+        "formula": "'[Remote.xlsx]Data'!B2",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "'[Remote.xlsx]Data'!B2",
+        "type": null,
+        "value": "42"
+      },
+      "actual": {
+        "formula": "'[Remote.xlsx]Data'!B2",
+        "type": null,
+        "value": "42.0"
+      },
+      "classification": "retained_unsupported_cache",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-2.xlsx",
+      "cell": "D8",
+      "source": {
+        "formula": "IF(Data!B2>0,\"Data!A1 \"\"quoted\"\"\",\"'Data'!B2\")",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "IF('O''Brien 2026'!B2>0,\"Data!A1 \"\"quoted\"\"\",\"'Data'!B2\")",
+        "type": "str",
+        "value": "Data!A1 \"quoted\""
+      },
+      "actual": {
+        "formula": "IF('O''Brien 2026'!B2>0,\"Data!A1 \"\"quoted\"\"\",\"'Data'!B2\")",
+        "type": "str",
+        "value": "Data!A1 \"quoted\""
+      },
+      "classification": "supported_exact_string_result",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-2.xlsx",
+      "cell": "D9",
+      "source": {
+        "formula": "RenameTable[Data!A1]",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "RenameTable[Data!A1]",
+        "type": null,
+        "value": "42"
+      },
+      "actual": {
+        "formula": "RenameTable[Data!A1]",
+        "type": null,
+        "value": "42.0"
+      },
+      "classification": "retained_unsupported_cache",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-2.xlsx",
+      "cell": "D10",
+      "source": {
+        "formula": "Data!LocalRange",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "'O''Brien 2026'!LocalRange",
+        "type": null,
+        "value": "42"
+      },
+      "actual": {
+        "formula": "'O''Brien 2026'!LocalRange",
+        "type": null,
+        "value": "42.0"
+      },
+      "classification": "retained_unsupported_cache",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-2.xlsx",
+      "cell": "D11",
+      "source": {
+        "formula": "SUM('Data'!$A:$B)",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "SUM('O''Brien 2026'!$A:$B)",
+        "type": null,
+        "value": "42"
+      },
+      "actual": {
+        "formula": "SUM('O''Brien 2026'!$A:$B)",
+        "type": null,
+        "value": "42.0"
+      },
+      "classification": "retained_unsupported_cache",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-2.xlsx",
+      "cell": "D12",
+      "source": {
+        "formula": "SUM(Data!1:3)",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "SUM('O''Brien 2026'!1:3)",
+        "type": null,
+        "value": "42"
+      },
+      "actual": {
+        "formula": "SUM('O''Brien 2026'!1:3)",
+        "type": null,
+        "value": "42.0"
+      },
+      "classification": "retained_unsupported_cache",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-2.xlsx",
+      "cell": "D13",
+      "source": {
+        "formula": "INDIRECT(\"Data!B2\")",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "INDIRECT(\"Data!B2\")",
+        "type": "e",
+        "value": "#REF!"
+      },
+      "actual": {
+        "formula": "INDIRECT(\"Data!B2\")",
+        "type": "e",
+        "value": "#REF!"
+      },
+      "classification": "intended_indirect_reference_error",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-2.xlsx",
+      "cell": "D14",
+      "source": {
+        "formula": "dAtA!b2+Summary!B2",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "'O''Brien 2026'!b2+Summary!B2",
+        "type": null,
+        "value": "4"
+      },
+      "actual": {
+        "formula": "'O''Brien 2026'!b2+Summary!B2",
+        "type": null,
+        "value": "4.0"
+      },
+      "classification": "supported_numeric_recalculation",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-3.xlsx",
+      "cell": "D1",
+      "source": {
+        "formula": "Data!$B$2",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "'O''Brien 2026'!$B$2",
+        "type": null,
+        "value": "2"
+      },
+      "actual": {
+        "formula": "'O''Brien 2026'!$B$2",
+        "type": null,
+        "value": "2.0"
+      },
+      "classification": "supported_numeric_recalculation",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-3.xlsx",
+      "cell": "D2",
+      "source": {
+        "formula": "'Data'!$B$3",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "'O''Brien 2026'!$B$3",
+        "type": null,
+        "value": "5"
+      },
+      "actual": {
+        "formula": "'O''Brien 2026'!$B$3",
+        "type": null,
+        "value": "5.0"
+      },
+      "classification": "supported_numeric_recalculation",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-3.xlsx",
+      "cell": "D3",
+      "source": {
+        "formula": "SUM(Data:Summary!B2)",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "SUM('O''Brien 2026:Summary'!B2)",
+        "type": null,
+        "value": "42"
+      },
+      "actual": {
+        "formula": "SUM('O''Brien 2026:Summary'!B2)",
+        "type": null,
+        "value": "42.0"
+      },
+      "classification": "retained_unsupported_cache",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-3.xlsx",
+      "cell": "D4",
+      "source": {
+        "formula": "SUM('Data:Summary'!B2)",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "SUM('O''Brien 2026:Summary'!B2)",
+        "type": null,
+        "value": "42"
+      },
+      "actual": {
+        "formula": "SUM('O''Brien 2026:Summary'!B2)",
+        "type": null,
+        "value": "42.0"
+      },
+      "classification": "retained_unsupported_cache",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-3.xlsx",
+      "cell": "D5",
+      "source": {
+        "formula": "SUM('Data':'Summary'!B2)",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "SUM('O''Brien 2026:Summary'!B2)",
+        "type": null,
+        "value": "42"
+      },
+      "actual": {
+        "formula": "SUM('O''Brien 2026:Summary'!B2)",
+        "type": null,
+        "value": "42.0"
+      },
+      "classification": "retained_unsupported_cache",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-3.xlsx",
+      "cell": "D6",
+      "source": {
+        "formula": "[1]Data!B2",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "[1]Data!B2",
+        "type": null,
+        "value": "42"
+      },
+      "actual": {
+        "formula": "[1]Data!B2",
+        "type": null,
+        "value": "42.0"
+      },
+      "classification": "retained_unsupported_cache",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-3.xlsx",
+      "cell": "D7",
+      "source": {
+        "formula": "'[Remote.xlsx]Data'!B2",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "'[Remote.xlsx]Data'!B2",
+        "type": null,
+        "value": "42"
+      },
+      "actual": {
+        "formula": "'[Remote.xlsx]Data'!B2",
+        "type": null,
+        "value": "42.0"
+      },
+      "classification": "retained_unsupported_cache",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-3.xlsx",
+      "cell": "D8",
+      "source": {
+        "formula": "IF(Data!B2>0,\"Data!A1 \"\"quoted\"\"\",\"'Data'!B2\")",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "IF('O''Brien 2026'!B2>0,\"Data!A1 \"\"quoted\"\"\",\"'Data'!B2\")",
+        "type": "str",
+        "value": "Data!A1 \"quoted\""
+      },
+      "actual": {
+        "formula": "IF('O''Brien 2026'!B2>0,\"Data!A1 \"\"quoted\"\"\",\"'Data'!B2\")",
+        "type": "str",
+        "value": "Data!A1 \"quoted\""
+      },
+      "classification": "supported_exact_string_result",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-3.xlsx",
+      "cell": "D9",
+      "source": {
+        "formula": "RenameTable[Data!A1]",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "RenameTable[Data!A1]",
+        "type": null,
+        "value": "42"
+      },
+      "actual": {
+        "formula": "RenameTable[Data!A1]",
+        "type": null,
+        "value": "42.0"
+      },
+      "classification": "retained_unsupported_cache",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-3.xlsx",
+      "cell": "D10",
+      "source": {
+        "formula": "Data!LocalRange",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "'O''Brien 2026'!LocalRange",
+        "type": null,
+        "value": "42"
+      },
+      "actual": {
+        "formula": "'O''Brien 2026'!LocalRange",
+        "type": null,
+        "value": "42.0"
+      },
+      "classification": "retained_unsupported_cache",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-3.xlsx",
+      "cell": "D11",
+      "source": {
+        "formula": "SUM('Data'!$A:$B)",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "SUM('O''Brien 2026'!$A:$B)",
+        "type": null,
+        "value": "42"
+      },
+      "actual": {
+        "formula": "SUM('O''Brien 2026'!$A:$B)",
+        "type": null,
+        "value": "42.0"
+      },
+      "classification": "retained_unsupported_cache",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-3.xlsx",
+      "cell": "D12",
+      "source": {
+        "formula": "SUM(Data!1:3)",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "SUM('O''Brien 2026'!1:3)",
+        "type": null,
+        "value": "42"
+      },
+      "actual": {
+        "formula": "SUM('O''Brien 2026'!1:3)",
+        "type": null,
+        "value": "42.0"
+      },
+      "classification": "retained_unsupported_cache",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-3.xlsx",
+      "cell": "D13",
+      "source": {
+        "formula": "INDIRECT(\"Data!B2\")",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "INDIRECT(\"Data!B2\")",
+        "type": "e",
+        "value": "#REF!"
+      },
+      "actual": {
+        "formula": "INDIRECT(\"Data!B2\")",
+        "type": "e",
+        "value": "#REF!"
+      },
+      "classification": "intended_indirect_reference_error",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    },
+    {
+      "file": "renamed-3.xlsx",
+      "cell": "D14",
+      "source": {
+        "formula": "dAtA!b2+Summary!B2",
+        "type": null,
+        "value": "42"
+      },
+      "expected": {
+        "formula": "'O''Brien 2026'!b2+Summary!B2",
+        "type": null,
+        "value": "4"
+      },
+      "actual": {
+        "formula": "'O''Brien 2026'!b2+Summary!B2",
+        "type": null,
+        "value": "4.0"
+      },
+      "classification": "supported_numeric_recalculation",
+      "formula_exact": true,
+      "cache_and_type_exact": true,
+      "passed": true
+    }
+  ],
+  "native_comparisons": [
+    {
+      "file": "renamed-1.xlsx",
+      "expected_native_match": true,
+      "source_page1_exact": true,
+      "cycle_stable": true,
+      "source_to_actual_text_diff": "--- source.xlsx\n+++ renamed-1.xlsx\n@@ -4,18 +4,18 @@\n \n Native workbook\n \f-Region    Sum of Value        42\n-North          2.00           42\n-South          5.00           42\n-Total Resul    7.00           42\n-                              42\n-                              42\n-                              42\n-                              42\n-                         Err:509\n-                              42\n-                              42\n-                              42\n-                            2.00\n-                              42\n+Region    Sum of Value           2\n+North          2.00              5\n+South          5.00             42\n+Total Resul    7.00             42\n+                                42\n+                                42\n+                                42\n+                         Data!A1 \"quoted\"\n+                           Err:509\n+                                42\n+                                42\n+                                42\n+                             #REF!\n+                                 4\n \f"
+    },
+    {
+      "file": "renamed-2.xlsx",
+      "expected_native_match": true,
+      "source_page1_exact": true,
+      "cycle_stable": true,
+      "source_to_actual_text_diff": "--- source.xlsx\n+++ renamed-2.xlsx\n@@ -4,18 +4,18 @@\n \n Native workbook\n \f-Region    Sum of Value        42\n-North          2.00           42\n-South          5.00           42\n-Total Resul    7.00           42\n-                              42\n-                              42\n-                              42\n-                              42\n-                         Err:509\n-                              42\n-                              42\n-                              42\n-                            2.00\n-                              42\n+Region    Sum of Value           2\n+North          2.00              5\n+South          5.00             42\n+Total Resul    7.00             42\n+                                42\n+                                42\n+                                42\n+                         Data!A1 \"quoted\"\n+                           Err:509\n+                                42\n+                                42\n+                                42\n+                             #REF!\n+                                 4\n \f"
+    },
+    {
+      "file": "renamed-3.xlsx",
+      "expected_native_match": true,
+      "source_page1_exact": true,
+      "cycle_stable": true,
+      "source_to_actual_text_diff": "--- source.xlsx\n+++ renamed-3.xlsx\n@@ -4,18 +4,18 @@\n \n Native workbook\n \f-Region    Sum of Value        42\n-North          2.00           42\n-South          5.00           42\n-Total Resul    7.00           42\n-                              42\n-                              42\n-                              42\n-                              42\n-                         Err:509\n-                              42\n-                              42\n-                              42\n-                            2.00\n-                              42\n+Region    Sum of Value           2\n+North          2.00              5\n+South          5.00             42\n+Total Resul    7.00             42\n+                                42\n+                                42\n+                                42\n+                         Data!A1 \"quoted\"\n+                           Err:509\n+                                42\n+                                42\n+                                42\n+                             #REF!\n+                                 4\n \f"
+    }
+  ],
+  "failures": []
+}

@@ -313,7 +313,7 @@
       "id": "FID-027",
       "status": "partial",
       "area": "Formula-aware sheet renaming",
-      "finding": "The shared engine and editor now rename worksheets atomically across local formula qualifiers, defined/print names, validation/conditional rules, links, consolidation, chart references and pivot sources. Quoted names, apostrophes, case variants, repeated range endpoints and three-dimensional endpoints are covered; formula strings, structured references, external qualifiers and their caches remain unchanged. Undo and redo preserve unrelated later edits and save-generated cached results.",
+      "finding": "The shared engine and editor now rename worksheets atomically across local formula qualifiers, defined/print names, validation/conditional rules, links, consolidation, chart references and pivot sources. Quoted names, apostrophes, case variants, repeated range endpoints and three-dimensional endpoints are covered; formula strings, structured references, external qualifiers and their caches remain unchanged. Undo and redo preserve unrelated later edits and save-generated cached results. Cached results preserve native numeric, boolean, text and error types; text spelled like an error remains text, while genuine evaluated or referenced errors remain error caches across direct/isolate saves.",
       "evidence": [
         "packages/quds_office_engine/lib/src/sheet/model/sheet_rename.dart",
         "packages/quds_office_engine/test/sheet_rename_fidelity_test.dart",
@@ -322,9 +322,10 @@
         "packages/quds_office_editor/test/sheet_rename_controller_test.dart",
         "packages/quds_office_engine/tool/fidelity/sheet_rename_oracle.py",
         "packages/quds_office_engine/tool/fidelity/test_sheet_rename_oracle.py",
-        "docs/evidence/office-fidelity-gap-closure-20261112/focused-sheet-native/acceptance-summary.json"
+        "docs/evidence/office-fidelity-gap-closure-20261112/focused-sheet-native/acceptance-summary.json",
+        "docs/evidence/office-fidelity-followup-20261112/resumed-source/focused-sheet/classified-native-comparison.json"
       ],
-      "limits": "Opaque executable/data-model reference owners, unknown reference-bearing XML, lossy modified native projections, incomplete shared formulas and array/data-table formulas reject before mutation. Unsupported external, three-dimensional, whole-row/column and qualified-name evaluation retains authored caches; it is not claimed as evaluation support. Native acceptance covers one independently authored workbook and three renamed exports against a separately authored expected package with 34 prescribed scalar changes; it does not establish arbitrary Excel formula or Microsoft Office equivalence."
+      "limits": "Opaque executable/data-model reference owners, unknown reference-bearing XML, lossy modified native projections, incomplete shared formulas and array/data-table formulas reject before mutation. Unsupported external, three-dimensional, whole-row/column and qualified-name evaluation retains authored caches; it is not claimed as evaluation support. Native acceptance covers one independently authored workbook and three renamed exports against a separately authored expected package with 34 prescribed scalar changes; it does not establish arbitrary Excel formula or Microsoft Office equivalence. An untyped manually supplied error-looking formula cache is rejected when recalculation is bypassed rather than guessing its type."
     },
     {
       "id": "FID-028",
@@ -355,7 +356,8 @@
         "packages/quds_office_editor/test/sheet_normal_font_auto_test.dart",
         "packages/quds_office_editor/test/sheet_normal_font_metrics_test.dart",
         "packages/quds_office_editor/test/sheet_explicit_style_history_test.dart",
-        "docs/evidence/office-fidelity-followup-20261112/style-zero/summary.json"
+        "docs/evidence/office-fidelity-followup-20261112/style-zero/summary.json",
+        "docs/evidence/office-fidelity-followup-20261112/resumed-source/focused-followup-summary.json"
       ]
     },
     {
@@ -671,7 +673,8 @@
         "packages/quds_office_engine/test/word_step_atomicity_test.dart",
         "packages/quds_office_editor/test/word_table_grid_history_test.dart",
         "docs/evidence/office-fidelity-followup-20261112/table-grid/red-green.json",
-        "docs/evidence/office-fidelity-followup-20261112/table-grid/native-corrected/summary.json"
+        "docs/evidence/office-fidelity-followup-20261112/table-grid/native-corrected/summary.json",
+        "docs/evidence/office-fidelity-followup-20261112/resumed-source/focused-followup-summary.json"
       ]
     },
     {
@@ -806,7 +809,8 @@
         "CrispCloud:test/widget/office_paragraph_fidelity_test.dart",
         "CrispCloud:test/widget/office_save_fidelity_test.dart",
         "CrispCloud:docs/evidence/office-fidelity-followup-20261112/custom-tabs/host-focused-summary.json",
-        "CrispCloud:tool/office_fidelity_manifest.json"
+        "CrispCloud:tool/office_fidelity_manifest.json",
+        "docs/evidence/office-fidelity-followup-20261112/resumed-source/focused-followup-summary.json"
       ]
     },
     {

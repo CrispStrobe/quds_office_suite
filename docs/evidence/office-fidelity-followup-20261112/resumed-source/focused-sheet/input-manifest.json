@@ -1,0 +1,40 @@
+{
+  "source_commit": "7641d9cfa167987216134ebfc4772918cc945d97",
+  "files": [
+    {
+      "source": "/workspace/scratch/07eb2580faa9/quds_office_suite/packages/quds_office_engine/build/fidelity-sheet-rename/renamed-1.xlsx",
+      "file": "/workspace/scratch/07eb2580faa9/validation/source-external/input/quds_office_engine/fidelity-sheet-rename/renamed-1.xlsx",
+      "sha256": "33f4f1856881fc02ccfb3745c272ea92d89ffedb7f575e0580e5c808b0cc0920",
+      "package": "quds_office_engine",
+      "path": "fidelity-sheet-rename/renamed-1.xlsx",
+      "producer": "test/sheet_rename_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/07eb2580faa9/quds_office_suite/packages/quds_office_engine/build/fidelity-sheet-rename/renamed-2.xlsx",
+      "file": "/workspace/scratch/07eb2580faa9/validation/source-external/input/quds_office_engine/fidelity-sheet-rename/renamed-2.xlsx",
+      "sha256": "f3c53411ad5529f91a691aada7220f57093c5a311ae260a0a9640a5cb9758a0c",
+      "package": "quds_office_engine",
+      "path": "fidelity-sheet-rename/renamed-2.xlsx",
+      "producer": "test/sheet_rename_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/07eb2580faa9/quds_office_suite/packages/quds_office_engine/build/fidelity-sheet-rename/renamed-3.xlsx",
+      "file": "/workspace/scratch/07eb2580faa9/validation/source-external/input/quds_office_engine/fidelity-sheet-rename/renamed-3.xlsx",
+      "sha256": "d21b3a9626b75c722d3ca07f39c8c1e264f5030a73322cda87ce73d79a93ae43",
+      "package": "quds_office_engine",
+      "path": "fidelity-sheet-rename/renamed-3.xlsx",
+      "producer": "test/sheet_rename_fidelity_test.dart"
+    },
+    {
+      "source": "/workspace/scratch/07eb2580faa9/quds_office_suite/packages/quds_office_engine/build/fidelity-sheet-rename/source.xlsx",
+      "file": "/workspace/scratch/07eb2580faa9/validation/source-external/input/quds_office_engine/fidelity-sheet-rename/source.xlsx",
+      "sha256": "561a2ebf80b6f02e8b1fc00648230b341ff68e1a3ee501ea026b9e69c35fc24b",
+      "package": "quds_office_engine",
+      "path": "fidelity-sheet-rename/source.xlsx",
+      "producer": "test/sheet_rename_fidelity_test.dart"
+    }
+  ],
+  "count": 4,
+  "derived_from": "/workspace/scratch/07eb2580faa9/validation/source-external/input-manifest.json",
+  "derived_from_sha256": "606d82cd7250f6791bc1af94acf7606d4b0dc149842bb76708ea5e2604c320f1"
+}
