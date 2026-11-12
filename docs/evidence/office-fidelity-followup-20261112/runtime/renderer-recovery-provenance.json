@@ -1,0 +1,30 @@
+{
+  "archive_sha256": "be967ebc63cb15b831b4e8176492e83eb625dc00852eb96eda2b299b6e74bb74",
+  "headers": [
+    {
+      "path": "/workspace/scratch/e445bd9b965c/runtime/libreoffice-242/include/LibreOfficeKit/LibreOfficeKit.h",
+      "bytes": 20545,
+      "sha256": "af1f5c90f39a885bd0f2ba50bb5c68f40cf2fac88cfcc6b6a76a4522fab0b676",
+      "source_url": "https://raw.githubusercontent.com/LibreOffice/core/libreoffice-24.2.7.2/include/LibreOfficeKit/LibreOfficeKit.h",
+      "actual_sha256": "af1f5c90f39a885bd0f2ba50bb5c68f40cf2fac88cfcc6b6a76a4522fab0b676"
+    },
+    {
+      "path": "/workspace/scratch/e445bd9b965c/runtime/libreoffice-242/include/LibreOfficeKit/LibreOfficeKitInit.h",
+      "bytes": 10287,
+      "sha256": "16feb15e51651387d223f3e156bc876d5d9826078651cfb12e4f035dcc0d2dc0",
+      "source_url": "https://raw.githubusercontent.com/LibreOffice/core/libreoffice-24.2.7.2/include/LibreOfficeKit/LibreOfficeKitInit.h",
+      "actual_sha256": "16feb15e51651387d223f3e156bc876d5d9826078651cfb12e4f035dcc0d2dc0"
+    },
+    {
+      "path": "/workspace/scratch/e445bd9b965c/runtime/libreoffice-242/include/LibreOfficeKit/LibreOfficeKitTypes.h",
+      "bytes": 983,
+      "sha256": "64eee50e2e74d2d33368e1a7b50683fe2e5fec9f3fd4952ebea24195f3dffa43",
+      "source_url": "https://raw.githubusercontent.com/LibreOffice/core/libreoffice-24.2.7.2/include/LibreOfficeKit/LibreOfficeKitTypes.h",
+      "actual_sha256": "64eee50e2e74d2d33368e1a7b50683fe2e5fec9f3fd4952ebea24195f3dffa43"
+    }
+  ],
+  "adapter_source_sha256": "1f23398b945320057ca8695a6f9a9fe3db87e232998800691dacd571d87fc496",
+  "adapter_binary_sha256": "b69aa183cd4d2852ed011b280e667cf54c2fb6cd63e8295783732259f9b84c89",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "libmergedlo_sha256": "b482c62fa4a1f064ca4a07422c7164827d6c1a3b5c9a0850a21609f5ec9ac540"
+}

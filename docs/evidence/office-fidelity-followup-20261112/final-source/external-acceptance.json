@@ -1,0 +1,86 @@
+{
+  "status": "passed",
+  "source_commit": "7641d9cfa167987216134ebfc4772918cc945d97",
+  "started_utc": "2026-11-12T13:45:10.361230+00:00",
+  "commands": [
+    {
+      "name": "sdk-selftest",
+      "command": [
+        "dotnet",
+        "/workspace/scratch/10b2b87c2738/runtime/validator/OfficeValidation.dll",
+        "--self-test"
+      ],
+      "cwd": "/workspace/scratch/10b2b87c2738/quds_office_suite",
+      "exit_code": 0,
+      "elapsed_seconds": 0.6414409819990396,
+      "log": "/workspace/scratch/10b2b87c2738/validation/source-external-final/sdk-selftest.log",
+      "log_sha256": "4945b06eb2eda6b4b7dd4ab50752ac76d91e73af5045d5bb39b3ecda55e25c56"
+    },
+    {
+      "name": "schema",
+      "command": [
+        "dotnet",
+        "/workspace/scratch/10b2b87c2738/runtime/validator/OfficeValidation.dll",
+        "/workspace/scratch/10b2b87c2738/validation/source-external-final/input",
+        "/workspace/scratch/10b2b87c2738/validation/source-external-final/schema-report.json"
+      ],
+      "cwd": "/workspace/scratch/10b2b87c2738/quds_office_suite",
+      "exit_code": 0,
+      "elapsed_seconds": 5.891963062000286,
+      "log": "/workspace/scratch/10b2b87c2738/validation/source-external-final/schema.log",
+      "log_sha256": "7da12d0ae96d7c2fc4cb16dfafdf63736d3d718177f0730f7f4b1f279ac05f2f"
+    },
+    {
+      "name": "renderer-controls",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/office-validation",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/workspace/scratch/10b2b87c2738/quds_office_suite",
+      "exit_code": 0,
+      "elapsed_seconds": 0.3149719050015847,
+      "log": "/workspace/scratch/10b2b87c2738/validation/source-external-final/renderer-controls.log",
+      "log_sha256": "bc583578e73a0f221cf7fa7b87db09302fca24c70a6dea96316ee008f02b4b36"
+    },
+    {
+      "name": "native-render",
+      "command": [
+        "python3",
+        "/workspace/scratch/10b2b87c2738/quds_office_suite/tool/office-validation/render.py",
+        "/workspace/scratch/10b2b87c2738/validation/source-external-final/input",
+        "/workspace/scratch/10b2b87c2738/validation/source-external-final/render",
+        "--schema-report",
+        "/workspace/scratch/10b2b87c2738/validation/source-external-final/schema-report.json"
+      ],
+      "cwd": "/workspace/scratch/10b2b87c2738/quds_office_suite",
+      "exit_code": 0,
+      "elapsed_seconds": 255.499295100999,
+      "log": "/workspace/scratch/10b2b87c2738/validation/source-external-final/native-render.log",
+      "log_sha256": "4240cc18d474f5387d65e67e84c4e24dfc33c1dbd4202ab7f4dce2ff82f9de19"
+    }
+  ],
+  "inputs": 321,
+  "schema_failures": 0,
+  "rendered_files": 314,
+  "rendered_pages": 614,
+  "native_schema_only_files": 7,
+  "cycle_groups": 95,
+  "baseline_comparisons": 32,
+  "page_order_comparisons": 10,
+  "failures": [],
+  "report_sha256": {
+    "input-manifest.json": "46cf4663621a8980fd982983094b157814e1e25fd793ea126f621789ba8afbf0",
+    "schema-report.json": "af061a21e9e08e257c44681c917ff998a7e266d5fc6763b7ed0689a70df217eb",
+    "render/render-report.json": "149d9fbfeec3e960724482b614a647dcf77944d2d8c98a39538c433b5d4b473a",
+    "renderer-provenance.json": "a6d6e25ee4830af8af2350948c18574dc6e72843b618e017788844893afdd5fc",
+    "schema-validator-provenance.json": "fa247388c661779b0aa881f855b4d2723ed7788364f3489cd5b9f1a7628cc43a"
+  },
+  "finished_utc": "2026-11-12T13:49:32.839427+00:00"
+}
