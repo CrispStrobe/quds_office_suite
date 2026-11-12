@@ -1,9 +1,9 @@
 {
   "scope": "unresolved Word structure preservation",
-  "open_gaps": 2,
+  "open_gaps": 0,
   "probes": {
     "content-control": {
-      "status": "data_loss_observed",
+      "status": "source_structure_preserved",
       "source": {
         "content_controls": [
           {
@@ -22,9 +22,17 @@
       "cycles": [
         {
           "cycle": 1,
-          "preserved": false,
+          "preserved": true,
           "observed": {
-            "content_controls": [],
+            "content_controls": [
+              {
+                "alias": "Customer name",
+                "tag": "customer.name",
+                "id": "71",
+                "end_color": "4488AA",
+                "text": "Customer Alpha"
+              }
+            ],
             "bookmarks": [],
             "bookmark_start_count": 0,
             "bookmark_end_count": 0,
@@ -33,9 +41,17 @@
         },
         {
           "cycle": 2,
-          "preserved": false,
+          "preserved": true,
           "observed": {
-            "content_controls": [],
+            "content_controls": [
+              {
+                "alias": "Customer name",
+                "tag": "customer.name",
+                "id": "71",
+                "end_color": "4488AA",
+                "text": "Customer Alpha"
+              }
+            ],
             "bookmarks": [],
             "bookmark_start_count": 0,
             "bookmark_end_count": 0,
@@ -44,9 +60,17 @@
         },
         {
           "cycle": 3,
-          "preserved": false,
+          "preserved": true,
           "observed": {
-            "content_controls": [],
+            "content_controls": [
+              {
+                "alias": "Customer name",
+                "tag": "customer.name",
+                "id": "71",
+                "end_color": "4488AA",
+                "text": "Customer Alpha"
+              }
+            ],
             "bookmarks": [],
             "bookmark_start_count": 0,
             "bookmark_end_count": 0,
@@ -56,7 +80,7 @@
       ]
     },
     "bookmark-ranges": {
-      "status": "data_loss_observed",
+      "status": "source_structure_preserved",
       "source": {
         "content_controls": [],
         "bookmarks": [
@@ -101,7 +125,7 @@
       "cycles": [
         {
           "cycle": 1,
-          "preserved": false,
+          "preserved": true,
           "observed": {
             "content_controls": [],
             "bookmarks": [
@@ -112,8 +136,8 @@
                   0
                 ],
                 "end": [
-                  2,
-                  21
+                  3,
+                  19
                 ]
               },
               {
@@ -124,18 +148,29 @@
                 ],
                 "end": [
                   1,
+                  5
+                ]
+              },
+              {
+                "name": "Beta",
+                "start": [
+                  1,
+                  6
+                ],
+                "end": [
+                  1,
                   10
                 ]
               }
             ],
-            "bookmark_start_count": 2,
-            "bookmark_end_count": 2,
+            "bookmark_start_count": 3,
+            "bookmark_end_count": 3,
             "unmatched_end_ids": []
           }
         },
         {
           "cycle": 2,
-          "preserved": false,
+          "preserved": true,
           "observed": {
             "content_controls": [],
             "bookmarks": [
@@ -146,8 +181,8 @@
                   0
                 ],
                 "end": [
-                  2,
-                  21
+                  3,
+                  19
                 ]
               },
               {
@@ -158,18 +193,29 @@
                 ],
                 "end": [
                   1,
+                  5
+                ]
+              },
+              {
+                "name": "Beta",
+                "start": [
+                  1,
+                  6
+                ],
+                "end": [
+                  1,
                   10
                 ]
               }
             ],
-            "bookmark_start_count": 2,
-            "bookmark_end_count": 2,
+            "bookmark_start_count": 3,
+            "bookmark_end_count": 3,
             "unmatched_end_ids": []
           }
         },
         {
           "cycle": 3,
-          "preserved": false,
+          "preserved": true,
           "observed": {
             "content_controls": [],
             "bookmarks": [
@@ -180,8 +226,8 @@
                   0
                 ],
                 "end": [
-                  2,
-                  21
+                  3,
+                  19
                 ]
               },
               {
@@ -192,45 +238,27 @@
                 ],
                 "end": [
                   1,
+                  5
+                ]
+              },
+              {
+                "name": "Beta",
+                "start": [
+                  1,
+                  6
+                ],
+                "end": [
+                  1,
                   10
                 ]
               }
             ],
-            "bookmark_start_count": 2,
-            "bookmark_end_count": 2,
+            "bookmark_start_count": 3,
+            "bookmark_end_count": 3,
             "unmatched_end_ids": []
           }
         }
       ]
     }
-  },
-  "provenance": {
-    "source_repository": "https://github.com/CrispStrobe/quds_office_suite",
-    "source_git_commit": "692a326aae2e8133b793570344028a1ceffddbdc",
-    "source_git_dirty": false,
-    "source_tree_scope": "packages/quds_office_engine/lib/**/*.dart",
-    "source_tree_sha256": "ba4c6a739c5f1e73bbc420aa079570444047f6de7249e6522c859a2da95d5c3b",
-    "source_hash_algorithm": "SHA-256 of JSON mapping engine-relative Dart paths to file SHA-256, with sorted keys",
-    "probe_path": "packages/quds_office_engine/tool/fidelity/unsupported_word_audit.py",
-    "probe_sha256": "068fc50902136cdf64b128a9ad3329190c696684411ee270315bd741e32c72a6",
-    "cli_source_sha256": {
-      "packages/quds_office_engine/tool/fidelity/office_steps.dart": "8f674657a4384e39514ba3960c20a45eb7d772952d17c068d10fda00a7ef41d4",
-      "packages/quds_office_engine/tool/fidelity/word_steps.dart": "f493a90dca811e375b56919cd2b3bcc707c7f23501558109ba3a256f963bb53e",
-      "packages/quds_office_engine/tool/fidelity/step_input.dart": "ba9fcaa2bf4c04f7b90f39c6c2527971725664f4ecb01f9e75f362b2ceeea1ce"
-    },
-    "authored_input_sha256": {
-      "packages/quds_office_engine/test/fixtures/fidelity/loss-probes/content-control.xml": "3b777e3b32466d4f7ff2472542bfb78a2999d2f42c350537fecc3bf7cb34b1e0",
-      "packages/quds_office_engine/test/fixtures/fidelity/loss-probes/bookmark-ranges.xml": "bfaf0230acb82024f33a30f5ba5968275b22484e70b8766405f2892396288326"
-    },
-    "authored_inputs_match_source_commit": true,
-    "authored_inputs_unchanged_during_probe": true,
-    "engine_and_probe_unchanged_during_probe": true,
-    "command": "python3 tool/fidelity/unsupported_word_audit.py --dart /workspace/scratch/ba17989b29ae/flutter-3.44.0/bin/cache/dart-sdk/bin/dart",
-    "expected_exit_code": 1,
-    "observed_exit_code": 1,
-    "recorded_at_utc": "2026-11-11T21:32:36.802633+00:00",
-    "production_source_git_commit": "a7e1a207d99865f4d3d6791f90315a00a0e15269",
-    "production_source_matches_execution_checkpoint": true,
-    "source_tree_matches_fresh_coverage": true
   }
 }

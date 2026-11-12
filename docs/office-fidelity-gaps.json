@@ -83,10 +83,12 @@
       "id": "FID-007",
       "status": "partial",
       "area": "Visual/platform breadth",
-      "finding": "Reviewed four page images cover a rich-note document and first/even/default stories with columns; additional platforms and arbitrary scripts are not goldened.",
+      "finding": "Nineteen reviewed page images cover notes, note continuation, first/even/default stories, columns, tall tables and structural create/edit/remove workflows on pinned Linux Flutter 3.44.0. Other platforms and arbitrary scripts/fonts remain unproven.",
       "evidence": [
         "packages/quds_office_editor/test/office_fidelity_golden_test.dart",
-        "packages/quds_office_editor/test/office_story_golden_test.dart"
+        "packages/quds_office_editor/test/office_story_golden_test.dart",
+        "packages/quds_office_editor/test/office_structure_goldens_test.dart",
+        "docs/office-golden-review-20261112.md"
       ]
     },
     {
@@ -252,25 +254,33 @@
     },
     {
       "id": "FID-024",
-      "status": "open",
+      "status": "partial",
       "area": "Structured document tags / content controls",
-      "finding": "The modeled import flattens SDT content and loses wrapper metadata such as alias, tag, ID and end-run properties. The independent CLI probe reproduces the loss after an adjacent edit and three save/reopen cycles; full block and inline container editing is unimplemented.",
+      "finding": "Live block controls and paired inline boundaries preserve native wrapper attributes, IDs, aliases, tags, sdtPr and sdtEndPr through supported edits and three direct/isolate cycles. Nested body, note, table and frame controls use their real mutable parents. The original unchanged loss probe now passes.",
       "evidence": [
-        "packages/quds_office_engine/test/fixtures/fidelity/loss-probes/content-control.xml",
+        "packages/quds_office_engine/test/word_content_control_fidelity_test.dart",
+        "packages/quds_office_editor/test/word_content_control_history_test.dart",
+        "packages/quds_office_engine/tool/fidelity/content_control_oracle.py",
+        "packages/quds_office_engine/tool/fidelity/test_content_control_oracle.py",
         "packages/quds_office_engine/tool/fidelity/unsupported_word_audit.py",
         "docs/office-unsupported-word-probes.json"
-      ]
+      ],
+      "limits": "UI lock/data-binding behavior, repeating-section semantics and arbitrary topology remain open. Inline controls containing drawings/equations, block controls in paragraph-only headers/footers/comments, row/cell wrappers, boundary-crossing edits and duplicate-ID insertion fail explicitly before mutation."
     },
     {
       "id": "FID-025",
-      "status": "open",
+      "status": "partial",
       "area": "Multiple and cross-paragraph bookmarks",
-      "finding": "One paragraph bookmarkName cannot represent multiple independent endpoints or cross-paragraph ranges. The independent CLI probe reproduces expanded, dropped and collapsed bookmark ranges after an adjacent edit and three cycles.",
+      "finding": "Typed zero-width native endpoints preserve exact IDs, names, attributes, overlap order, empty ranges and partial/cross-paragraph ranges through edits, cloning, history and three exports. REF caches use exact marked UTF-16 text and isolate textbox stories. The original unchanged loss probe now passes.",
       "evidence": [
-        "packages/quds_office_engine/test/fixtures/fidelity/loss-probes/bookmark-ranges.xml",
+        "packages/quds_office_engine/test/word_bookmark_fidelity_test.dart",
+        "packages/quds_office_editor/test/word_bookmark_history_test.dart",
+        "packages/quds_office_engine/tool/fidelity/bookmark_ranges_oracle.py",
+        "packages/quds_office_engine/tool/fidelity/test_bookmark_ranges_oracle.py",
         "packages/quds_office_engine/tool/fidelity/unsupported_word_audit.py",
         "docs/office-unsupported-word-probes.json"
-      ]
+      ],
+      "limits": "Mixed text-and-drawing anchor endpoint order remains outside the block drawing model. Duplicate-producing copies and deletion of only one cross-paragraph endpoint are guarded until safe remapping is implemented. Arbitrary rich complex-field refresh remains FID-049."
     },
     {
       "id": "FID-026",
@@ -338,7 +348,7 @@
         "packages/quds_office_engine/tool/fidelity/notes_oracle.py",
         "packages/quds_office_engine/tool/fidelity/test_note_spacing_oracle.py"
       ],
-      "limits": "This regression covers conventional leading automatic markers. Arbitrary marker placement or source marker absence is not represented by the current note model."
+      "limits": "The original leading-marker regression is extended by FID-040 to arbitrary positions, marker absence, later paragraphs and nested cells. Whole-note text replacement intentionally replaces rich content."
     },
     {
       "id": "FID-033",
@@ -515,9 +525,11 @@
       "id": "FID-049",
       "status": "partial",
       "area": "Complex field editing",
-      "finding": "Simple inline native fields retain instruction, lock and dirty flags, and are atomic during supported edits. Arbitrarily nested, multi-run complex fields still need a range-aware model.",
+      "finding": "Simple inline native fields retain instruction, lock and dirty flags and remain atomic during supported edits. Automatic refresh preserves complex-field caches containing control/bookmark boundaries; destructive whole-field replacement is guarded. Arbitrarily nested, multi-run complex-field refresh still needs a richer range model.",
       "evidence": [
-        "packages/quds_office_engine/test/inline_field_fidelity_test.dart"
+        "packages/quds_office_engine/test/inline_field_fidelity_test.dart",
+        "packages/quds_office_engine/test/word_bookmark_fidelity_test.dart",
+        "packages/quds_office_engine/test/word_content_control_fidelity_test.dart"
       ]
     },
     {
@@ -528,7 +540,9 @@
       "evidence": [
         "packages/quds_office_editor/test/word_revision_rebase_test.dart",
         "packages/quds_office_engine/test/word_revision_validation_test.dart",
-        "packages/quds_office_engine/test/word_revision_story_test.dart"
+        "packages/quds_office_engine/test/word_revision_story_test.dart",
+        "packages/quds_office_editor/test/word_find_replace_history_test.dart",
+        "packages/quds_office_editor/test/word_content_control_history_test.dart"
       ],
       "limits": "Intersecting edits, splits through pending spans and overlapping changes are explicit conflicts. Undo the conflicting edit before resolving or exporting. Arbitrary external model edits are rejected on mismatch, not attributed automatically."
     },
@@ -580,20 +594,34 @@
     },
     {
       "id": "FID-056",
-      "status": "open",
+      "status": "partial",
       "area": "Positioned frame wrapping in Quds layout",
-      "finding": "Frame coordinates, anchor, fill and wrap metadata survive native exports. The Quds layout currently places frames absolutely and does not apply square/topBottom frame exclusions to surrounding body text; interactive/native layout equivalence remains unverified.",
+      "finding": "Following body paragraphs and TOCs reflow around anchored square frames and clear top-and-bottom frames. Variable-width layout preserves bidi shaping and exact logical character ownership through multiple frames, columns, page transitions and note reservation. Native none/square/topBottom values, coordinates, dimensions, fill and stroke pass nine independent native-export checks.",
       "evidence": [
-        "packages/quds_office_engine/lib/src/word/layout/word_layout.dart"
-      ]
+        "packages/quds_office_engine/test/word_frame_wrap_test.dart",
+        "packages/quds_office_engine/test/variable_line_breaker_test.dart",
+        "packages/quds_office_engine/tool/fidelity/frame_wrap_oracle.py",
+        "packages/quds_office_engine/tool/fidelity/test_frame_wrap_oracle.py"
+      ],
+      "limits": "The model chooses one available line interval. Earlier paragraphs are not retroactively reflowed around later anchors. Arbitrary picture contours, floating table exclusions and full Microsoft Word layout equivalence remain unverified."
     },
     {
       "id": "FID-057",
       "status": "partial",
       "area": "Table and TOC script addressing",
-      "finding": "Table merge uses logical grid columns; cell edits and unmerge use physical row-cell indexes. TOC selectors enumerate top-level section blocks. These selectors are explicit but nested TOC editing and uniform merged-grid addressing remain open.",
+      "finding": "Table and TOC selectors traverse modeled body containers in depth-first order and mutate the actual owner. Table merge uses logical grid columns; cell edits and unmerge use physical row-cell indexes. Uniform merged-grid addressing remains open.",
       "evidence": [
         "packages/quds_office_engine/tool/fidelity/word_structure_steps.dart"
+      ]
+    },
+    {
+      "id": "FID-058",
+      "status": "closed",
+      "area": "Atomic find/replace and rich history",
+      "finding": "Replace-all prepares and validates every affected paragraph before any mutation, rejects stale plans and unsupported later matches, and deduplicates repeated matches in atomic cached fields. Controller history retains rich tokens, native boundary identities and pending revision attribution in one undoable command.",
+      "evidence": [
+        "packages/quds_office_engine/test/word_find_replace_atomic_test.dart",
+        "packages/quds_office_editor/test/word_find_replace_history_test.dart"
       ]
     }
   ]
