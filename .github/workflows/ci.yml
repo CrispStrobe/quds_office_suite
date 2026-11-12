@@ -19,6 +19,7 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: stable
+          flutter-version: 3.47.8
       - name: Resolve workspace
         working-directory: .
         run: flutter pub get
@@ -36,6 +37,7 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: stable
+          flutter-version: 3.47.8
       - name: Resolve workspace
         working-directory: .
         run: flutter pub get
@@ -53,6 +55,7 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: stable
+          flutter-version: 3.47.8
       - name: Resolve workspace
         working-directory: .
         run: flutter pub get

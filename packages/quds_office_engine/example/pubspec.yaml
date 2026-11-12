@@ -8,3 +8,5 @@ environment:
 dependencies:
   quds_office_engine:
     path: ..
+
+resolution: workspace
