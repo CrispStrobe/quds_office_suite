@@ -84,14 +84,15 @@
       "id": "FID-007",
       "status": "partial",
       "area": "Visual/platform breadth",
-      "finding": "Twenty-three reviewed page images cover notes, note continuation, first/even/default stories, columns, tall tables, structural create/edit/remove workflows, three native frame wrap modes and rich nested cells on pinned Linux Flutter 3.44.0. Other platforms and arbitrary scripts/fonts remain unproven.",
+      "finding": "Twenty-seven reviewed page images cover notes, note continuation, first/even/default stories, columns, tall tables, structural create/edit/remove workflows, three native frame wrap modes rich nested cells and four authored merged-table editing phases on pinned Linux Flutter 3.44.0. Other platforms and arbitrary scripts/fonts remain unproven.",
       "evidence": [
         "packages/quds_office_editor/test/office_fidelity_golden_test.dart",
         "packages/quds_office_editor/test/office_story_golden_test.dart",
         "packages/quds_office_editor/test/office_structure_goldens_test.dart",
         "docs/office-golden-review-20261112.md",
         "packages/quds_office_editor/test/office_frame_wrap_golden_test.dart",
-        "packages/quds_office_editor/test/office_nested_table_golden_test.dart"
+        "packages/quds_office_editor/test/office_nested_table_golden_test.dart",
+        "packages/quds_office_editor/test/office_table_grid_golden_test.dart"
       ]
     },
     {
@@ -1000,11 +1001,50 @@
     },
     {
       "id": "FID-086",
-      "status": "in_progress",
+      "status": "closed",
       "area": "Long words in narrow nested cells",
-      "finding": "Visual inspection of the new authored table-grid scenes found words wider than a fixed cell being clipped. The new snapshots establish the reproduction; emergency wrapping and independent text-layout regressions are being implemented before visual acceptance.",
+      "finding": "Constrained Word cell/frame paragraphs emergency-wrap oversized tokens at whole grapheme boundaries and grow rows instead of clipping text. Default body line breaking remains unchanged. Flag pairs and emoji modifiers remain intact; supplementary UTF-16 ranges and RTL shaped-glyph ownership are protected. Authored nested-grid phases and three direct/isolate saves have semantic bounds checks and reviewed pixels.",
       "evidence": [
-        "packages/quds_office_editor/test/office_table_grid_golden_test.dart"
+        "packages/quds_office_engine/test/word_contained_text_wrap_test.dart",
+        "packages/quds_office_engine/lib/src/bidi/line_breaker.dart",
+        "packages/quds_office_engine/lib/src/bidi/grapheme_clusters.dart",
+        "packages/quds_office_editor/test/office_table_grid_golden_test.dart",
+        "docs/office-golden-review-20261112.md"
+      ],
+      "limits": "A single grapheme wider than the entire content box cannot be made narrower without scaling or clipping. The fallback metric remains conservative when no font is supplied; this correction does not promise native Word line-break equivalence."
+    },
+    {
+      "id": "FID-087",
+      "status": "closed",
+      "area": "Actual host coverage provenance and complete records",
+      "finding": "Fresh collection binds host/shared source, tests, shipped assets, configuration, resolution files, pinned vendor bytes and exact LCOV to a successful unchanged Flutter run. Complete scoped LF/LH/end records prevent a truncated denominator. Verification rechecks after parsing; failed or interrupted retries cannot leave an old verified report, and source-completeness checks precede publication.",
+      "evidence": [
+        "CrispCloud:tool/collect_office_host_coverage.py",
+        "CrispCloud:tool/office_host_coverage.py",
+        "CrispCloud:tool/test_collect_office_host_coverage.py",
+        "CrispCloud:tool/test_office_host_coverage.py",
+        "CrispCloud:tool/check_office_fidelity.sh"
+      ],
+      "limits": "The effective SQLite-hook configuration is part of the measured input. Collection and verification use the same wrapper. These are source/output provenance guarantees, not branch correctness or hermetic dependency verification."
+    },
+    {
+      "id": "FID-088",
+      "status": "closed",
+      "area": "Failed engine coverage report freshness",
+      "finding": "A failed or interrupted report attempt replaces the requested summary with explicit unverified running/failed state. It cannot retain an older verified success at that destination or overwrite raw VM evidence. Same-length source edits and coverage changes during reporting reject.",
+      "evidence": [
+        "packages/quds_office_engine/tool/fidelity/coverage_report.py",
+        "packages/quds_office_engine/tool/fidelity/test_collect_coverage.py"
+      ]
+    },
+    {
+      "id": "FID-089",
+      "status": "open",
+      "area": "Additional host authoring controls",
+      "finding": "The actual host still lacks dedicated Word image wrap/anchor/crop/rotation controls, Word drawing creation and bookmark/citation/cross-reference authoring. Native note-menu action bridging is separate from the tested Flutter ribbon. Engine/script operations do not imply these host controls exist.",
+      "evidence": [
+        "CrispCloud:docs/office-picture-fidelity-20261112.md",
+        "CrispCloud:docs/office-fidelity.md"
       ]
     }
   ],

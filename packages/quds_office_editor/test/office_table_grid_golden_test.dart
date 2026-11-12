@@ -51,6 +51,49 @@ Future<_Pixels> _paint(
     hasLength(phase == 'unmerge' ? 12 : 9),
     reason: 'Both the outer table and the nested grid must be laid out',
   );
+  final paragraphs = document.paragraphs.toList();
+  for (var index = 0; index < paragraphs.length; index++) {
+    final lines = layout.pages.single.lines.where(
+      (line) => line.paragraphIndex == index,
+    );
+    final offsets =
+        lines
+            .expand((line) => line.glyphs)
+            .where((glyph) => !glyph.glyph.isSpace)
+            .map((glyph) => glyph.glyph.logicalIndex)
+            .toList()
+          ..sort();
+    expect(
+      offsets,
+      [
+        for (var offset = 0; offset < paragraphs[index].text.length; offset++)
+          if (paragraphs[index].text.codeUnitAt(offset) != 32) offset,
+      ],
+      reason:
+          'Every authored Latin character must appear before pixel comparison',
+    );
+    final cells = layout.pages.single.frames.where(
+      (box) =>
+          box.kind == LaidOutBoxKind.tableCell &&
+          box.paragraphIndex != null &&
+          index >= box.paragraphIndex! &&
+          index <= (box.paragraphEnd ?? box.paragraphIndex!),
+    );
+    if (cells.isEmpty) continue;
+    final cell = cells.reduce((a, b) => a.width < b.width ? a : b);
+    for (final line in lines) {
+      expect(
+        line.x + line.width,
+        lessThanOrEqualTo(cell.x + cell.width - LaidOutLine.tableCellPad + .01),
+        reason:
+            'A reference cannot bless clipped text: ${paragraphs[index].text}',
+      );
+      expect(
+        line.y + line.height,
+        lessThanOrEqualTo(cell.y + cell.height + .01),
+      );
+    }
+  }
   await tester.pumpWidget(
     Directionality(
       textDirection: TextDirection.ltr,

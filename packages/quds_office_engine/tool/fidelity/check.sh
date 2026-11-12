@@ -11,6 +11,7 @@ dart test \
   test/word_package_preservation_test.dart test/zip_bounded_read_test.dart \
   test/drawing_line_style_test.dart \
   test/table_grid_steps_test.dart test/xml_namespace_capture_test.dart \
+  test/word_contained_text_wrap_test.dart \
   test/office_package_parts_test.dart test/office_search_fidelity_test.dart \
   test/office_fidelity_oracle_test.dart test/office_steps_test.dart \
   test/scripted_workflows_test.dart test/numbering_collision_test.dart \

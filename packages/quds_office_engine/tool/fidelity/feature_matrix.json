@@ -319,6 +319,7 @@
     "table-grid": {
       "tests": [
         "test/table_grid_steps_test.dart",
+        "test/word_contained_text_wrap_test.dart",
         "test/xml_namespace_capture_test.dart"
       ],
       "scripts": [],
@@ -334,6 +335,7 @@
     "frames": {
       "tests": [
         "test/word_frame_wrap_test.dart",
+        "test/word_contained_text_wrap_test.dart",
         "test/variable_line_breaker_test.dart",
         "test/drawing_line_style_test.dart",
         "test/word_table_tall_frame_layout_test.dart"

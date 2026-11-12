@@ -1,5 +1,10 @@
 # Reviewed Office renderer baselines — 12 November 2026
 
+The latest workflow follow-up passes **452 editor tests with one existing
+local-PDF skip** under Flutter 3.44.0, with **27 reviewed PNGs**. The four new
+merged-table images and the clipping correction are documented in the final
+section. The earlier checkpoint counts below retain their original scope.
+
 At suite code checkpoint `31add77938bb1242d510ab544dbe886d87ebdf75`, the full
 editor suite passed **365 tests with one documented skip** under pinned Flutter
 3.44.0 in ordinary comparison mode. This includes **13 golden cases covering 23
@@ -154,3 +159,38 @@ edit. The first six-point assertion fails against the archived renderer at
 source XML preservation; malformed and extreme patterns have bounded fallback
 controls. These tests do not certify theme inheritance, compound outlines,
 gradient/pattern strokes or complete native Word visual equivalence.
+
+
+## Logical merged-table editing and complete contained text
+
+The workflow follow-up adds `office_table_grid_golden_test.dart` and four
+640 by 900 PNGs for unchanged, format, replace and unmerge phases. The reference
+models come only from independently authored raw XML. Actual scripted models,
+then three direct and three isolate saves/reopens, compare exact RGBA pixels
+against the authored model. Those 32 comparisons remain mandatory even when
+an explicit maintenance run uses `--update-goldens`.
+
+Visual review of the first images found clipped words in narrow nested cells.
+The native source PDF displayed all letters on continuation lines. New semantic
+checks reproduced the right-edge overflow and required every contained line
+to fit the innermost cell and its growing row. The corrected line breaker
+emergency-wraps oversized tokens in fixed containers at whole grapheme
+boundaries; default body behavior is unchanged. Unicode controls protect
+regional-indicator pairs, emoji modifiers, ZWJ sequences, combining marks,
+UTF-16 ranges and RTL shaped-glyph ownership.
+
+All four corrected images were inspected. Nested labels are complete, blank
+cells remain blank, the selected merged origin retains the intended fill and
+formatting, replacement changes the intended text, and unmerge creates the
+expected grid. The row grows to contain every line, including the final nested
+tail, and the following body paragraph remains visible. No authored fixture
+width was enlarged to hide the defect. Only the four new PNGs changed; the
+earlier 23 baselines retain their bytes.
+
+These scenes intentionally use `WordLayoutEngine(font: null)` like the existing
+fallback-layout tests. Its conservative 0.72-em metric and the scaled nested
+grid produce very narrow content boxes, including one-grapheme lines. The
+images certify complete constrained text and stable edits/saves under that
+policy, not font-metric equality with LibreOffice or Microsoft Word. They bring
+the reviewed image set to 27 PNGs. Full editor acceptance is recorded separately
+for the exact implementation checkpoint.

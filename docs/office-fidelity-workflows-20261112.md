@@ -26,7 +26,7 @@ explicit synchronization; changes to the suite branch alone cannot update it.
 | Actual host font dialog | Opening and applying the dialog could round imported sizes, flatten mixed formatting and replace complex-script fonts | Preserve unchanged values and apply only explicitly requested properties; 17 real-dialog tests and 30 required exports |
 | Picture insertion and history | Fixed dimensions stretched images, stale pickers changed new targets, and drawing undo used the currently selected slide | Proportional bounded insertion, original-target checks and original-slide history; 20 host tests and 30 required exports |
 | Coverage and workflow selection | Stale artifacts could obscure missing producers, and feature commands needed manual assembly | Source-bound collection and a strict 15-area producer/oracle matrix with selected-output cleanup and receipts |
-| Narrow-cell rendering | Visual review found long words clipped in new nested-table scenes | Reproduced; the layout correction is in progress before accepting the four new PNGs |
+| Narrow-cell rendering | Visual review found long words clipped in new nested-table scenes | Emergency wrapping in fixed containers preserves whole graphemes and grows rows; 24 focused regressions and four reviewed PNGs |
 
 The full format-support ledger remains
 [`office-fidelity-gaps.json`](office-fidelity-gaps.json); these bounded fixes do
@@ -92,8 +92,11 @@ Controls deliberately corrupt 18 properties and remove each required file.
 The focused Open XML SDK run accepted all 28 packages with zero errors. The
 independent LibreOffice/Poppler run rendered all 28 packages, matched all eight
 first-save series to their authored baselines and accepted all eight repeated
-save groups without failures. Four additional Quds PNGs are being reviewed;
-that review exposed the narrow-cell rendering gap above. Native acceptance
+save groups without failures. Four additional Quds PNGs were reviewed; their initial review exposed and led
+to the narrow-cell rendering correction above. The new images retain all
+characters and expand the row. With no supplied font the existing fallback
+metrics wrap conservatively; these snapshots do not establish native line-break
+equivalence. Native acceptance
 does not certify Quds canvas layout or Microsoft Word rendering equivalence.
 
 Native percentage/automatic/nil preferred widths are preserved metadata. The
