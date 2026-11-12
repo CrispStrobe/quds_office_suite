@@ -504,3 +504,5 @@ The November integration also includes the completed worksheet-local-name, bookm
 The source-only fork also keeps `quds_reports` beside the engine and editor. Both editor dependencies use sibling paths, so standalone consumer checks cannot accidentally resolve a newer hosted reports/engine pair.
 
 The November integration uses the current standalone DOC parser source, including bounded image appearance, table revision history and native BLIP recovery. Source acceptance records are preserved from both Office branches. The current Word picture oracle retains the independently authored controller-default layout (picture y=94.45pt); historical exact-12pt workflow captures remain evidence for their distinct inputs.
+
+Final integration refresh includes the standalone parser evidence/CI declaration, with the canonical parser source pin recorded in `packages/legacy_doc_parser/UPSTREAM.json`. Studio parameter/template regressions run from the studio package and pass all 16 tests.
