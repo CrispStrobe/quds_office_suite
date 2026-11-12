@@ -4,6 +4,7 @@ cd "$(dirname "$0")/../.."
 # Generate every required output before running the independent oracles. Missing
 # or stale/incomplete inventories fail; this command never regenerates goldens.
 python3 tool/fidelity/inventory.py clean
+python3 tool/fidelity/feature_matrix.py list > /dev/null
 dart test \
   test/legacy_word_document_test.dart test/bounded_cfb_reader_test.dart \
   test/legacy_word_conversion_test.dart test/opc_word_kind_test.dart \

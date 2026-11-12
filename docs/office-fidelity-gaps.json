@@ -935,6 +935,77 @@
         ".github/workflows/office-fidelity.yml"
       ],
       "limits": "This establishes source/output provenance, not branch correctness or hermetic dependencies; FID-008 remains open."
+    },
+    {
+      "id": "FID-080",
+      "status": "closed",
+      "area": "Explicit host font intent",
+      "finding": "The actual font dialog preserves imported precision and mixed run properties. Only controls explicitly used by the user are applied; choosing a displayed value can normalize a mixed selection. Unchanged Apply stays clean.",
+      "evidence": [
+        "CrispCloud:test/widget/office_font_fidelity_test.dart",
+        "CrispCloud:docs/office-font-fidelity-20261112.md"
+      ]
+    },
+    {
+      "id": "FID-081",
+      "status": "closed",
+      "area": "Asynchronous host editing targets",
+      "finding": "Font and picture results are tied to their original controller, content revision, story, selection and interaction mode. Stale results cannot edit replacement documents, new targets or disposed widgets.",
+      "evidence": [
+        "CrispCloud:test/widget/office_font_fidelity_test.dart",
+        "CrispCloud:test/widget/office_picture_fidelity_test.dart"
+      ]
+    },
+    {
+      "id": "FID-082",
+      "status": "closed",
+      "area": "Host picture proportions and native extents",
+      "finding": "Word and slide insertions derive proportional dimensions from validated PNG/JPEG/GIF data and fit the available content box. Native transforms agree with visual geometry; original media bytes survive three saves.",
+      "evidence": [
+        "CrispCloud:lib/services/office_picture.dart",
+        "CrispCloud:test/widget/office_picture_fidelity_test.dart",
+        "CrispCloud:docs/office-picture-fidelity-20261112.md"
+      ]
+    },
+    {
+      "id": "FID-083",
+      "status": "closed",
+      "area": "Slide drawing history after changing slide",
+      "finding": "Host shape insertion commands retain the owning slide so undo and redo cannot remove or duplicate a picture or rectangle on the newly selected slide. Independent exported XML checks both slides.",
+      "evidence": [
+        "CrispCloud:test/widget/office_picture_fidelity_test.dart"
+      ]
+    },
+    {
+      "id": "FID-084",
+      "status": "closed",
+      "area": "Host evidence format and main-part identity",
+      "finding": "The host inventory supports DOCX/XLSX/PPTX, follows the actual OPC officeDocument target and requires matching MIME and namespace/root. Wrong-format renames, duplicate members, invalid targets and missing outputs fail.",
+      "evidence": [
+        "CrispCloud:tool/office_host_evidence.py",
+        "CrispCloud:tool/test_office_host_evidence.py",
+        "CrispCloud:tool/office_host_evidence.json"
+      ]
+    },
+    {
+      "id": "FID-085",
+      "status": "closed",
+      "area": "Feature-directed import edit export acceptance",
+      "finding": "A strict matrix maps fifteen feature areas to producers, independent oracles, corruption controls and separately listed goldens. Runs delete only selected managed outputs, require regeneration and reject stale receipts, input changes, missing/corrupt outputs and concurrent ownership.",
+      "evidence": [
+        "packages/quds_office_engine/tool/fidelity/feature_matrix.py",
+        "packages/quds_office_engine/tool/fidelity/feature_matrix.json",
+        "packages/quds_office_engine/tool/fidelity/test_feature_matrix.py"
+      ]
+    },
+    {
+      "id": "FID-086",
+      "status": "in_progress",
+      "area": "Long words in narrow nested cells",
+      "finding": "Visual inspection of the new authored table-grid scenes found words wider than a fixed cell being clipped. The new snapshots establish the reproduction; emergency wrapping and independent text-layout regressions are being implemented before visual acceptance.",
+      "evidence": [
+        "packages/quds_office_editor/test/office_table_grid_golden_test.dart"
+      ]
     }
   ],
   "evidence_path_convention": "Unprefixed paths are relative to quds_office_suite; CrispCloud: paths are relative to the host repository."
