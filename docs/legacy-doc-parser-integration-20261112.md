@@ -10,7 +10,7 @@ The only upstream file difference remains `pubspec.yaml`: Quds retains
 retain SHA-256
 `150af8d89562635bf5a876c0a539c20ae48b58ea3666db071b5e4ebd3addf153`.
 The portable parser SDK requirement is unchanged. The integrated branch also
-retains Quds main commit `9a0a0268aa57f0d61b4112e101968e29a3a5f077` in its ancestry,
+retains Quds main commit `74960237cea7c560f3db7ee96ca37641c4438567` in its ancestry,
 including the editor/reports dependency paths, the editor URL-launcher
 dependency, and the strict native Word-picture package and raster checks.
 
@@ -134,3 +134,28 @@ was rerun successfully with unchanged parser and engine source. The failed run
 is not counted as a successful gate. Historical native-rendering receipts keep
 their recorded source and renderer identities; this is an integration
 checkpoint, not a claim that the remaining fidelity gaps are closed.
+
+## Main reconciliation: parser f56dff2
+
+Quds main advanced to `74960237cea7c560f3db7ee96ca37641c4438567` while the
+continuation was being validated. Its parser pin is
+[`f56dff2842e0cb7f57e021b335618247ed8474bf`](https://github.com/CrispStrobe/legacy-doc-parser/commit/f56dff2842e0cb7f57e021b335618247ed8474bf),
+a descendant of the preceding `713973f` source. The merge preserves both the
+current main ancestry and the earlier integration receipts. The only merge
+conflict was the upstream pin metadata; no parser implementation was replaced
+with a Quds-specific adaptation.
+
+The [file receipt](evidence/legacy-doc-parser-integration-20261112/f56dff2/upstream-files.json)
+verifies all 374 unpatched parser files against tree
+`d1a8d5eac5d605fbaa5e405fad47314f5e649e26`. The existing workspace pubspec is
+unchanged. This retains main's bounded metafile-arc rendering, media-revision
+semantics, their authored controls, and the archived native evidence.
+
+The [fresh integration receipt](evidence/legacy-doc-parser-integration-20261112/f56dff2/summary.json)
+records 697 parser Dart tests, 115 Python tests and 21 focused engine tests
+across legacy document parsing, conversion and note-marker suites, all passing.
+Engine analysis with `--fatal-infos` is clean. Parser analysis exits zero with
+298 informational diagnostics and no warnings or errors under the workspace
+dependencies. The complete 1,627-test engine result above remains attributed
+to its original `713973f` checkpoint; this merge's local engine test scope is
+explicitly limited to those three integration suites.
