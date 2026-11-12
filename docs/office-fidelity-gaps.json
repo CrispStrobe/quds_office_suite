@@ -1046,6 +1046,19 @@
         "CrispCloud:docs/office-picture-fidelity-20261112.md",
         "CrispCloud:docs/office-fidelity.md"
       ]
+    },
+    {
+      "id": "FID-090",
+      "status": "closed",
+      "area": "Native evidence for picture-only host slides",
+      "finding": "The twelve authored landscape, portrait, square and bounded slide exports require measured native page and black-rectangle geometry, solid interior, grayscale color and white exterior. Empty extracted text can pass only with those pixel measurements. A separate OOXML transform check rejects invisible overflow clipped by the page. Each of four three-save groups must retain identical validated pixels and metrics.",
+      "evidence": [
+        "tool/office-validation/render.py",
+        "tool/office-validation/test_render.py",
+        "CrispCloud:test/widget/office_picture_fidelity_test.dart",
+        "CrispCloud:.github/workflows/office-fidelity.yml"
+      ],
+      "limits": "This is an independent oracle for the exact twelve authored image-only fixtures, not a blanket permission for empty or blank render output. Physical page rounding is bounded by 0.03 point and rectangle raster edges by one pixel."
     }
   ],
   "evidence_path_convention": "Unprefixed paths are relative to quds_office_suite; CrispCloud: paths are relative to the host repository."

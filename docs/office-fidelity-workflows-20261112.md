@@ -73,7 +73,7 @@ The matrix exposes footnotes, endnotes, headings, styles, paragraphs, images,
 tables, TOCs, textflow, placement, drawings, references, comments, spreadsheets
 and slides. It connects those 15 areas to 19 producer/oracle bundles and lists
 the pinned editor golden commands separately. The complete matrix run from a
-clean inventory passed 524 Dart tests, three additional Dart producers,
+clean inventory passed 548 Dart tests, three additional Dart producers,
 19 independent package oracles and 205 Python mutation controls. All 214
 selected Office packages were freshly regenerated and verified across 38
 successful commands. Full acceptance separately requires all 305 engine and
@@ -113,3 +113,16 @@ every executed line is correct or that every branch was tested.
 The collector and reporter controls include same-length source edits, fixture
 and lockfile changes, failed child processes, stale/missing/replaced coverage,
 unsafe destinations and malformed VM records. CI now requires the receipt.
+
+
+## Picture-only native evidence
+
+The twelve actual-host slide picture exports contain no text. Native acceptance
+requires an independently prescribed page size and black rectangle, its position,
+size, area, solid interior, grayscale color and white exterior. It also checks
+raw native transforms, because a picture extending past the page edge could
+otherwise look correct after clipping. All twelve real exports pass, as do all
+four repeated-save groups and 49 renderer control tests. Other text-free files
+are not accepted through this precise corpus rule. The app workflow now renders
+its exact downloaded host inventory after schema validation, retaining PDFs,
+PNGs and measured pixel receipts.
