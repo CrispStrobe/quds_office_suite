@@ -1,0 +1,124 @@
+{
+  "analysis": {
+    "engineFatalInfosExitCode": 0,
+    "engineIssues": 0,
+    "parser": {
+      "error": 0,
+      "info": 214,
+      "warning": 0
+    },
+    "parserExitCode": 0
+  },
+  "ciWorkflowSha256": "417809a2fd9e56c79ffc589d22c173bb688a500f424901c738dcb29cd3ae55db",
+  "commands": [
+    {
+      "arguments": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "test",
+        "--concurrency=4",
+        "--reporter",
+        "expanded"
+      ],
+      "exitCode": 0,
+      "log": {
+        "file": "parser-tests.log.gz",
+        "sha256": "58f46cccdd87508fbf5169084a3a9e247f4386a1ffa99799c253c62d521561ae",
+        "uncompressedSha256": "5660faf99b8e5b67146cbdc15bfdff095e6942b764a92053a4735356915c9dd1"
+      },
+      "name": "parser-tests",
+      "seconds": 34.253,
+      "workingDirectory": "packages/legacy_doc_parser"
+    },
+    {
+      "arguments": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "analyze"
+      ],
+      "exitCode": 0,
+      "log": {
+        "file": "parser-analysis.log.gz",
+        "sha256": "b9f069f7e3f0924420859f2d6249c6ffbd8c29d7ccebe71a51939692cb7ceb88",
+        "uncompressedSha256": "ff0c23a627a70f6135a040b7321857aec89506e35548452dfe568c5df3bd29d9"
+      },
+      "name": "parser-analysis",
+      "seconds": 3.786,
+      "workingDirectory": "packages/legacy_doc_parser"
+    },
+    {
+      "arguments": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "test",
+        "--concurrency=4",
+        "--reporter",
+        "expanded"
+      ],
+      "exitCode": 0,
+      "log": {
+        "file": "engine-tests.log.gz",
+        "sha256": "c806302d57ee20be88d2347b46ee67d70c23de17c61e6c5eaade762a696466f1",
+        "uncompressedSha256": "b53dbdb1cd7a466bcc834d319fb5a0fe010928cf99725c40fd13ccc05799c21a"
+      },
+      "name": "engine-tests",
+      "seconds": 117.733,
+      "workingDirectory": "packages/quds_office_engine"
+    },
+    {
+      "arguments": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.47.8/bin/cache/dart-sdk/bin/dart",
+        "analyze",
+        "--fatal-infos"
+      ],
+      "exitCode": 0,
+      "log": {
+        "file": "engine-analysis.log.gz",
+        "sha256": "7ebbd8664f346a74eb817ae88e3b30f2d91550e9cc7799bdf2e5d2694c1c1c5d",
+        "uncompressedSha256": "c557a0c697cdb937104f1423d3c02d6a1062917cb0bcb2830d91db8cf6192af0"
+      },
+      "name": "engine-analysis",
+      "seconds": 7.94,
+      "workingDirectory": "packages/quds_office_engine"
+    },
+    {
+      "arguments": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/fidelity",
+        "-p",
+        "test_*.py"
+      ],
+      "exitCode": 0,
+      "log": {
+        "file": "parser-python.log.gz",
+        "sha256": "acfc73b1b92441f43db829452d02a1e012b6da11d1d1a643e9f5afe8b1a05e04",
+        "uncompressedSha256": "bef32f696eb185c84fba36c5baa0cf2d6b1fb5d304f6645d2740fb3e12bf2e43"
+      },
+      "name": "parser-python",
+      "seconds": 1.046,
+      "workingDirectory": "packages/legacy_doc_parser"
+    }
+  ],
+  "preservedMainAncestor": "e2b00bae0600e7e384ca633a7364e8dcd2e95c58",
+  "qudsBaseCommit": "9fb8bf12703f32a487609a673f342a5ae0003de1",
+  "schema": "quds-office/legacy-parser-integration",
+  "scope": "Exact upstream mirror and Quds parser/engine integration checks. Historical native rendering/schema receipts retain their own upstream source identity; this is not a new native layout-equivalence claim.",
+  "tests": {
+    "engineDartPassed": 1627,
+    "engineDartSkipped": 1,
+    "engineSkipReason": "wave4_platform_test: Latin face already covers Arabic; cannot force F3",
+    "parserDartPassed": 571,
+    "parserPythonPassed": 98
+  },
+  "upstream": {
+    "commit": "77b6b1d6b3edc52e314b64043fc2e6d7585fe4d7",
+    "exactFiles": 288,
+    "repository": "CrispStrobe/legacy-doc-parser",
+    "tree": "869a0fc95891726eb9530fd0c6df16b036b583f8",
+    "upstreamFileCount": 289
+  },
+  "upstreamFilesReceiptSha256": "7e773537204018a885815df47fb1278e5205deb915101a392c3c951206b65768",
+  "version": 1,
+  "workspacePubspecSha256": "150af8d89562635bf5a876c0a539c20ae48b58ea3666db071b5e4ebd3addf153"
+}
