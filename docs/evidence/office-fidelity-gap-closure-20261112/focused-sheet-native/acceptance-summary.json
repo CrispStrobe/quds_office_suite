@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "source_equality_claimed": false,
+  "inputs": 4,
+  "schema_files": 4,
+  "schema_failures": 0,
+  "rendered_files": 4,
+  "rendered_pages": 8,
+  "cycle_groups": 1,
+  "expected_reference_sdk_clean": true,
+  "expected_reference_pages": 2,
+  "full_native_reference_matches": 3,
+  "source_page1_exact_matches": 3,
+  "classified_cell_checks": 42,
+  "permitted_changed_cells": [
+    "D1",
+    "D2",
+    "D8",
+    "D13",
+    "D14"
+  ],
+  "all_other_D1_D14_caches_retained": true,
+  "masks_or_tolerance": false,
+  "failures": [],
+  "known_defect_control_rejected": true,
+  "original_failure_directory": "/workspace/scratch/e445bd9b965c/validation/fid027-native-proof",
+  "expected_native_evidence_directory": "/workspace/scratch/e445bd9b965c/validation/fid027-expected-native",
+  "reference_authoring_property_changes": 34,
+  "reports_sha256": {
+    "input-manifest.json": "de55a95177f5af7ef4ab1781bf7c5aada1903cf9aa3a777af4fc9c0c46684bed",
+    "schema-report.json": "6045f9ded556a69667d2e26f0eccca84a5cdf0e6c119ae52c466004c21c29c30",
+    "classified-native-comparison.json": "3f0fdeabf84e23fe1f6d82473a3e8aceb2c3007de85fd90426421d3f9138d59f",
+    "render/render-report.json": "8e0a9fffb729549555704c8bda3f4893e896fa72ef421ddbd8f442b7ade8747c",
+    "renderer-provenance.json": "c6c241389297c9f5ffb7f1899c8acb91bf2c2cfbb883e76083a755d586afe3fc",
+    "command-results.json": "8778855ac8e29b9d2905bb9585ac45f0b49bea5615fefe5c66179fdc274aaa3a",
+    "reproduce/author_expected_native.py": "7aa338fdb9c7d80a8468f2877f796b452c2c244b0d2afdd546b0d328104c07f3",
+    "reproduce/compare_native.py": "ad701470737d238b2913fbb1ac545f28c127b2e7fc2a1c3cf22758d34bc95e8e"
+  },
+  "expected_reference_reports_sha256": {
+    "renamed-expected.xlsx": "f6c4c756d03d5dee78cfd66853df6f6c82c5e3d8793d327070a8271455bfa4f8",
+    "renamed-expected.json": "78616b826ccb622c689b2c5320fa4dd2e886d002e8dc82c6368757a707cb7ff8",
+    "schema-report.json": "dc65e64f4037a203a7ddd326a8c247e5f84ac560240e11bb78c1ffde042d8891",
+    "property-change-proof.json": "30da6defd90288580ce0f69036cd62d834e6eb83908674ae83563ebac6b273d1",
+    "render-record.json": "ab8323058f0c8a9b5c516b544ea59170ff3bb5271acda4c88e7b6bb4c8eb04eb"
+  }
+}

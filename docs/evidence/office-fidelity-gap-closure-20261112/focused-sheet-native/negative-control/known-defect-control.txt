@@ -1,0 +1,139 @@
+{
+  "status": "failed",
+  "cell_checks": 42,
+  "native_checks": 3,
+  "failures": [
+    {
+      "file": "renamed-1.xlsx",
+      "cell": "D3",
+      "error": "Unresolved formula/cache/type difference"
+    },
+    {
+      "file": "renamed-1.xlsx",
+      "cell": "D4",
+      "error": "Unresolved formula/cache/type difference"
+    },
+    {
+      "file": "renamed-1.xlsx",
+      "cell": "D5",
+      "error": "Unresolved formula/cache/type difference"
+    },
+    {
+      "file": "renamed-1.xlsx",
+      "cell": "D7",
+      "error": "Unresolved formula/cache/type difference"
+    },
+    {
+      "file": "renamed-1.xlsx",
+      "cell": "D8",
+      "error": "Unresolved formula/cache/type difference"
+    },
+    {
+      "file": "renamed-1.xlsx",
+      "cell": "D11",
+      "error": "Unresolved formula/cache/type difference"
+    },
+    {
+      "file": "renamed-1.xlsx",
+      "cell": "D12",
+      "error": "Unresolved formula/cache/type difference"
+    },
+    {
+      "file": "renamed-1.xlsx",
+      "cell": "D13",
+      "error": "Unresolved formula/cache/type difference"
+    },
+    {
+      "file": "renamed-1.xlsx",
+      "error": "Unresolved native render difference: Render changed (text): renamed-expected.xlsx -> fidelity-sheet-rename/renamed-1.xlsx"
+    },
+    {
+      "file": "renamed-2.xlsx",
+      "cell": "D3",
+      "error": "Unresolved formula/cache/type difference"
+    },
+    {
+      "file": "renamed-2.xlsx",
+      "cell": "D4",
+      "error": "Unresolved formula/cache/type difference"
+    },
+    {
+      "file": "renamed-2.xlsx",
+      "cell": "D5",
+      "error": "Unresolved formula/cache/type difference"
+    },
+    {
+      "file": "renamed-2.xlsx",
+      "cell": "D7",
+      "error": "Unresolved formula/cache/type difference"
+    },
+    {
+      "file": "renamed-2.xlsx",
+      "cell": "D8",
+      "error": "Unresolved formula/cache/type difference"
+    },
+    {
+      "file": "renamed-2.xlsx",
+      "cell": "D11",
+      "error": "Unresolved formula/cache/type difference"
+    },
+    {
+      "file": "renamed-2.xlsx",
+      "cell": "D12",
+      "error": "Unresolved formula/cache/type difference"
+    },
+    {
+      "file": "renamed-2.xlsx",
+      "cell": "D13",
+      "error": "Unresolved formula/cache/type difference"
+    },
+    {
+      "file": "renamed-2.xlsx",
+      "error": "Unresolved native render difference: Render changed (text): renamed-expected.xlsx -> fidelity-sheet-rename/renamed-2.xlsx"
+    },
+    {
+      "file": "renamed-3.xlsx",
+      "cell": "D3",
+      "error": "Unresolved formula/cache/type difference"
+    },
+    {
+      "file": "renamed-3.xlsx",
+      "cell": "D4",
+      "error": "Unresolved formula/cache/type difference"
+    },
+    {
+      "file": "renamed-3.xlsx",
+      "cell": "D5",
+      "error": "Unresolved formula/cache/type difference"
+    },
+    {
+      "file": "renamed-3.xlsx",
+      "cell": "D7",
+      "error": "Unresolved formula/cache/type difference"
+    },
+    {
+      "file": "renamed-3.xlsx",
+      "cell": "D8",
+      "error": "Unresolved formula/cache/type difference"
+    },
+    {
+      "file": "renamed-3.xlsx",
+      "cell": "D11",
+      "error": "Unresolved formula/cache/type difference"
+    },
+    {
+      "file": "renamed-3.xlsx",
+      "cell": "D12",
+      "error": "Unresolved formula/cache/type difference"
+    },
+    {
+      "file": "renamed-3.xlsx",
+      "cell": "D13",
+      "error": "Unresolved formula/cache/type difference"
+    },
+    {
+      "file": "renamed-3.xlsx",
+      "error": "Unresolved native render difference: Render changed (text): renamed-expected.xlsx -> fidelity-sheet-rename/renamed-3.xlsx"
+    }
+  ]
+}

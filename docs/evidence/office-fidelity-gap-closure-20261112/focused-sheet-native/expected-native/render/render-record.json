@@ -1,0 +1,31 @@
+{
+  "record": {
+    "file": "renamed-expected.xlsx",
+    "pages": 2,
+    "text": "Region            Value          Total\nNorth                     2.00            6\nSouth                        5           15\n\nNative workbook\n\fRegion    Sum of Value           2\nNorth          2.00              5\nSouth          5.00             42\nTotal Resul    7.00             42\n                                42\n                                42\n                                42\n                         Data!A1 \"quoted\"\n                           Err:509\n                                42\n                                42\n                                42\n                             #REF!\n                                 4\n\f",
+    "pixel_sha256": [
+      "caa114fad5cf8775495e623cfac3776b455293ea544ea705087701b4e4ddbce5",
+      "4226165ee7151bd02b74cec6d93c88881569515a079d53591948282ab7cf35dc"
+    ],
+    "pdf": "000/document.pdf",
+    "page_artifacts": [
+      {
+        "page": 1,
+        "width": 612,
+        "height": 792,
+        "png": "000/page-0001.png",
+        "pixel_sha256": "caa114fad5cf8775495e623cfac3776b455293ea544ea705087701b4e4ddbce5"
+      },
+      {
+        "page": 2,
+        "width": 612,
+        "height": 792,
+        "png": "000/page-0002.png",
+        "pixel_sha256": "4226165ee7151bd02b74cec6d93c88881569515a079d53591948282ab7cf35dc"
+      }
+    ]
+  },
+  "elapsed_seconds": 1.5286544989994582,
+  "renderer_source_sha256": "a6918966d591cef510bd46c6e9d25f8ec7ace37dbfe6f1fb94404c3d6bd9cd3f",
+  "input_sha256": "f6c4c756d03d5dee78cfd66853df6f6c82c5e3d8793d327070a8271455bfa4f8"
+}

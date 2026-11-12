@@ -1,0 +1,147 @@
+{
+  "renderer": "LibreOffice 24.2.7.2 ee3885777aa7032db5a9b65deec9457448a91162 (LibreOfficeKit embedding API)",
+  "files": 4,
+  "rendered_files": 4,
+  "visual_input_files": 4,
+  "native_schema_only_files": 0,
+  "native_schema_only": [],
+  "schema_report": "/workspace/scratch/e445bd9b965c/validation/fid027-native-final/schema-report.json",
+  "pixel_fingerprint": "SHA-256 of big-endian uint32 width/height followed by RGB bytes",
+  "cycle_groups": 1,
+  "cycle_comparisons": [
+    {
+      "case": "fidelity-sheet-rename/renamed.xlsx",
+      "expected_cycles": [
+        1,
+        2,
+        3
+      ],
+      "actual_cycles": [
+        1,
+        2,
+        3
+      ],
+      "files": [
+        "fidelity-sheet-rename/renamed-1.xlsx",
+        "fidelity-sheet-rename/renamed-2.xlsx",
+        "fidelity-sheet-rename/renamed-3.xlsx"
+      ],
+      "baseline": null,
+      "baseline_candidate": null,
+      "baseline_page_order": null,
+      "passed": true
+    }
+  ],
+  "baseline_comparisons": 0,
+  "page_order_comparisons": 0,
+  "render_only_files": [
+    "fidelity-sheet-rename/source.xlsx"
+  ],
+  "failures": [],
+  "reports": [
+    {
+      "file": "fidelity-sheet-rename/renamed-1.xlsx",
+      "pages": 2,
+      "text": "Region            Value          Total\nNorth                     2.00            6\nSouth                        5           15\n\nNative workbook\n\fRegion    Sum of Value           2\nNorth          2.00              5\nSouth          5.00             42\nTotal Resul    7.00             42\n                                42\n                                42\n                                42\n                         Data!A1 \"quoted\"\n                           Err:509\n                                42\n                                42\n                                42\n                             #REF!\n                                 4\n\f",
+      "pixel_sha256": [
+        "caa114fad5cf8775495e623cfac3776b455293ea544ea705087701b4e4ddbce5",
+        "4226165ee7151bd02b74cec6d93c88881569515a079d53591948282ab7cf35dc"
+      ],
+      "pdf": "000/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "000/page-0001.png",
+          "pixel_sha256": "caa114fad5cf8775495e623cfac3776b455293ea544ea705087701b4e4ddbce5"
+        },
+        {
+          "page": 2,
+          "width": 612,
+          "height": 792,
+          "png": "000/page-0002.png",
+          "pixel_sha256": "4226165ee7151bd02b74cec6d93c88881569515a079d53591948282ab7cf35dc"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-sheet-rename/renamed-2.xlsx",
+      "pages": 2,
+      "text": "Region            Value          Total\nNorth                     2.00            6\nSouth                        5           15\n\nNative workbook\n\fRegion    Sum of Value           2\nNorth          2.00              5\nSouth          5.00             42\nTotal Resul    7.00             42\n                                42\n                                42\n                                42\n                         Data!A1 \"quoted\"\n                           Err:509\n                                42\n                                42\n                                42\n                             #REF!\n                                 4\n\f",
+      "pixel_sha256": [
+        "caa114fad5cf8775495e623cfac3776b455293ea544ea705087701b4e4ddbce5",
+        "4226165ee7151bd02b74cec6d93c88881569515a079d53591948282ab7cf35dc"
+      ],
+      "pdf": "001/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "001/page-0001.png",
+          "pixel_sha256": "caa114fad5cf8775495e623cfac3776b455293ea544ea705087701b4e4ddbce5"
+        },
+        {
+          "page": 2,
+          "width": 612,
+          "height": 792,
+          "png": "001/page-0002.png",
+          "pixel_sha256": "4226165ee7151bd02b74cec6d93c88881569515a079d53591948282ab7cf35dc"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-sheet-rename/renamed-3.xlsx",
+      "pages": 2,
+      "text": "Region            Value          Total\nNorth                     2.00            6\nSouth                        5           15\n\nNative workbook\n\fRegion    Sum of Value           2\nNorth          2.00              5\nSouth          5.00             42\nTotal Resul    7.00             42\n                                42\n                                42\n                                42\n                         Data!A1 \"quoted\"\n                           Err:509\n                                42\n                                42\n                                42\n                             #REF!\n                                 4\n\f",
+      "pixel_sha256": [
+        "caa114fad5cf8775495e623cfac3776b455293ea544ea705087701b4e4ddbce5",
+        "4226165ee7151bd02b74cec6d93c88881569515a079d53591948282ab7cf35dc"
+      ],
+      "pdf": "002/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "002/page-0001.png",
+          "pixel_sha256": "caa114fad5cf8775495e623cfac3776b455293ea544ea705087701b4e4ddbce5"
+        },
+        {
+          "page": 2,
+          "width": 612,
+          "height": 792,
+          "png": "002/page-0002.png",
+          "pixel_sha256": "4226165ee7151bd02b74cec6d93c88881569515a079d53591948282ab7cf35dc"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-sheet-rename/source.xlsx",
+      "pages": 2,
+      "text": "Region            Value          Total\nNorth                     2.00            6\nSouth                        5           15\n\nNative workbook\n\fRegion    Sum of Value        42\nNorth          2.00           42\nSouth          5.00           42\nTotal Resul    7.00           42\n                              42\n                              42\n                              42\n                              42\n                         Err:509\n                              42\n                              42\n                              42\n                            2.00\n                              42\n\f",
+      "pixel_sha256": [
+        "caa114fad5cf8775495e623cfac3776b455293ea544ea705087701b4e4ddbce5",
+        "e117eabae7d7d7a5d5857e9a01872d1b86a31b7b71e28ce54abc3b668d5974f5"
+      ],
+      "pdf": "003/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "003/page-0001.png",
+          "pixel_sha256": "caa114fad5cf8775495e623cfac3776b455293ea544ea705087701b4e4ddbce5"
+        },
+        {
+          "page": 2,
+          "width": 612,
+          "height": 792,
+          "png": "003/page-0002.png",
+          "pixel_sha256": "e117eabae7d7d7a5d5857e9a01872d1b86a31b7b71e28ce54abc3b668d5974f5"
+        }
+      ]
+    }
+  ]
+}

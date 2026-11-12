@@ -1,0 +1,97 @@
+{
+  "format_version": 1,
+  "copied_evidence": [
+    {
+      "archive_path": "acceptance-summary.json",
+      "original_path": "/workspace/scratch/e445bd9b965c/validation/fid027-native-final/acceptance-summary.json",
+      "sha256": "5f7b1d334cf20200ce5c7be7eb7dbf7c7496b2a5e6975192f4d6649d70419100",
+      "bytes": 2204
+    },
+    {
+      "archive_path": "input-manifest.json",
+      "original_path": "/workspace/scratch/e445bd9b965c/validation/fid027-native-final/input-manifest.json",
+      "sha256": "de55a95177f5af7ef4ab1781bf7c5aada1903cf9aa3a777af4fc9c0c46684bed",
+      "bytes": 2599
+    },
+    {
+      "archive_path": "schema-report.json",
+      "original_path": "/workspace/scratch/e445bd9b965c/validation/fid027-native-final/schema-report.json",
+      "sha256": "6045f9ded556a69667d2e26f0eccca84a5cdf0e6c119ae52c466004c21c29c30",
+      "bytes": 1005
+    },
+    {
+      "archive_path": "classified-native-comparison.json",
+      "original_path": "/workspace/scratch/e445bd9b965c/validation/fid027-native-final/classified-native-comparison.json",
+      "sha256": "3f0fdeabf84e23fe1f6d82473a3e8aceb2c3007de85fd90426421d3f9138d59f",
+      "bytes": 28515
+    },
+    {
+      "archive_path": "renderer-provenance.json",
+      "original_path": "/workspace/scratch/e445bd9b965c/validation/fid027-native-final/renderer-provenance.json",
+      "sha256": "c6c241389297c9f5ffb7f1899c8acb91bf2c2cfbb883e76083a755d586afe3fc",
+      "bytes": 8272
+    },
+    {
+      "archive_path": "command-results.json",
+      "original_path": "/workspace/scratch/e445bd9b965c/validation/fid027-native-final/command-results.json",
+      "sha256": "8778855ac8e29b9d2905bb9585ac45f0b49bea5615fefe5c66179fdc274aaa3a",
+      "bytes": 1479
+    },
+    {
+      "archive_path": "render/render-report.json",
+      "original_path": "/workspace/scratch/e445bd9b965c/validation/fid027-native-final/render/render-report.json",
+      "sha256": "8e0a9fffb729549555704c8bda3f4893e896fa72ef421ddbd8f442b7ade8747c",
+      "bytes": 6943
+    },
+    {
+      "archive_path": "reproduce/author_expected_native.py",
+      "original_path": "/workspace/scratch/e445bd9b965c/validation/fid027-native-final/reproduce/author_expected_native.py",
+      "sha256": "7aa338fdb9c7d80a8468f2877f796b452c2c244b0d2afdd546b0d328104c07f3",
+      "bytes": 5917
+    },
+    {
+      "archive_path": "reproduce/compare_native.py",
+      "original_path": "/workspace/scratch/e445bd9b965c/validation/fid027-native-final/reproduce/compare_native.py",
+      "sha256": "ad701470737d238b2913fbb1ac545f28c127b2e7fc2a1c3cf22758d34bc95e8e",
+      "bytes": 7538
+    },
+    {
+      "archive_path": "expected-native/renamed-expected.json",
+      "original_path": "/workspace/scratch/e445bd9b965c/validation/fid027-expected-native/renamed-expected.json",
+      "sha256": "78616b826ccb622c689b2c5320fa4dd2e886d002e8dc82c6368757a707cb7ff8",
+      "bytes": 1365
+    },
+    {
+      "archive_path": "expected-native/schema-report.json",
+      "original_path": "/workspace/scratch/e445bd9b965c/validation/fid027-expected-native/schema-report.json",
+      "sha256": "dc65e64f4037a203a7ddd326a8c247e5f84ac560240e11bb78c1ffde042d8891",
+      "bytes": 273
+    },
+    {
+      "archive_path": "expected-native/property-change-proof.json",
+      "original_path": "/workspace/scratch/e445bd9b965c/validation/fid027-expected-native/property-change-proof.json",
+      "sha256": "30da6defd90288580ce0f69036cd62d834e6eb83908674ae83563ebac6b273d1",
+      "bytes": 6239
+    },
+    {
+      "archive_path": "expected-native/render/render-record.json",
+      "original_path": "/workspace/scratch/e445bd9b965c/validation/fid027-expected-native/render/render-record.json",
+      "sha256": "ab8323058f0c8a9b5c516b544ea59170ff3bb5271acda4c88e7b6bb4c8eb04eb",
+      "bytes": 1632
+    },
+    {
+      "archive_path": "negative-control/classified-native-comparison.json",
+      "original_path": "/workspace/scratch/e445bd9b965c/validation/fid027-native-proof/classified-native-comparison.json",
+      "sha256": "ee784ba4eaf3809721c18178f611fc668f57b0d293d1b656dd4ea7b58d65521c",
+      "bytes": 31613
+    },
+    {
+      "archive_path": "negative-control/known-defect-control.txt",
+      "original_path": "/workspace/scratch/e445bd9b965c/validation/fid027-expected-native/known-defect-control.log",
+      "sha256": "74d8ec97ff990a36909bf48a2d33231cd109a8b5370f322bddfee01889800e07",
+      "bytes": 3601
+    }
+  ],
+  "raw_receipts_modified": false,
+  "generated_office_pdf_png_files_committed": false
+}

@@ -1,0 +1,26 @@
+{
+  "Files": 4,
+  "Failures": 0,
+  "Reports": [
+    {
+      "File": "/workspace/scratch/e445bd9b965c/validation/fid027-native-final/input/fidelity-sheet-rename/renamed-1.xlsx",
+      "Sha256": "3656d277f464b249d3a52ff3a4ed1b7ba1878aa1ec1b93d7fc5c01194d011c40",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/e445bd9b965c/validation/fid027-native-final/input/fidelity-sheet-rename/renamed-2.xlsx",
+      "Sha256": "a18bd94332098ca29131733fd80cc12c2c1af98e9f5d6edf2a84087a0e197d7f",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/e445bd9b965c/validation/fid027-native-final/input/fidelity-sheet-rename/renamed-3.xlsx",
+      "Sha256": "1c2e525e4ba3ec01d899db83f9112932eaf63dd46ea800c61dc84e47f8b485e9",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/e445bd9b965c/validation/fid027-native-final/input/fidelity-sheet-rename/source.xlsx",
+      "Sha256": "561a2ebf80b6f02e8b1fc00648230b341ff68e1a3ee501ea026b9e69c35fc24b",
+      "Errors": []
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "source_sha256": "561a2ebf80b6f02e8b1fc00648230b341ff68e1a3ee501ea026b9e69c35fc24b",
+  "expected_sha256": "f6c4c756d03d5dee78cfd66853df6f6c82c5e3d8793d327070a8271455bfa4f8",
+  "part_count_unchanged": 20,
+  "all_other_parts_byte_identical": true,
+  "xml_structure_unchanged_in_modified_parts": true,
+  "property_change_count": 34,
+  "property_changes": [
+    {
+      "path": "xl/charts/chart1.xml/chart[1]/plotArea[1]/barChart[1]/ser[1]/tx[1]/strRef[1]/f[1]",
+      "text_before": "'Data'!B1",
+      "text_after": "'O''Brien 2026'!B1"
+    },
+    {
+      "path": "xl/charts/chart1.xml/chart[1]/plotArea[1]/barChart[1]/ser[1]/cat[1]/numRef[1]/f[1]",
+      "text_before": "'Data'!$A$2:$A$3",
+      "text_after": "'O''Brien 2026'!$A$2:$A$3"
+    },
+    {
+      "path": "xl/charts/chart1.xml/chart[1]/plotArea[1]/barChart[1]/ser[1]/val[1]/numRef[1]/f[1]",
+      "text_before": "'Data'!$B$2:$B$3",
+      "text_after": "'O''Brien 2026'!$B$2:$B$3"
+    },
+    {
+      "path": "xl/pivotCache/pivotCacheDefinition1.xml/cacheSource[1]/worksheetSource[1]",
+      "attribute": "sheet",
+      "before": "Data",
+      "after": "O'Brien 2026"
+    },
+    {
+      "path": "xl/workbook.xml/sheets[1]/sheet[1]",
+      "attribute": "name",
+      "before": "Data",
+      "after": "O'Brien 2026"
+    },
+    {
+      "path": "xl/workbook.xml/definedNames[1]/definedName[1]",
+      "text_before": "'Data'!$A$1:$B$3",
+      "text_after": "'O''Brien 2026'!$A$1:$B$3"
+    },
+    {
+      "path": "xl/workbook.xml/definedNames[1]/definedName[2]",
+      "text_before": "SUM(Data!$B$2,Summary!$B$2)",
+      "text_after": "SUM('O''Brien 2026'!$B$2,Summary!$B$2)"
+    },
+    {
+      "path": "xl/workbook.xml/definedNames[1]/definedName[3]",
+      "text_before": "Data!$B$2",
+      "text_after": "'O''Brien 2026'!$B$2"
+    },
+    {
+      "path": "xl/workbook.xml/definedNames[1]/definedName[5]",
+      "text_before": "SUM(Data:Summary!$B$2)",
+      "text_after": "SUM('O''Brien 2026:Summary'!$B$2)"
+    },
+    {
+      "path": "xl/workbook.xml/definedNames[1]/definedName[7]",
+      "text_before": "'Data'!$A$1:$C$5",
+      "text_after": "'O''Brien 2026'!$A$1:$C$5"
+    },
+    {
+      "path": "xl/workbook.xml/definedNames[1]/definedName[8]",
+      "text_before": "'Data'!$1:$1",
+      "text_after": "'O''Brien 2026'!$1:$1"
+    },
+    {
+      "path": "xl/worksheets/sheet2.xml/sheetData[1]/row[1]/c[3]/f[1]",
+      "text_before": "Data!$B$2",
+      "text_after": "'O''Brien 2026'!$B$2"
+    },
+    {
+      "path": "xl/worksheets/sheet2.xml/sheetData[1]/row[1]/c[3]/v[1]",
+      "text_before": "42",
+      "text_after": "2"
+    },
+    {
+      "path": "xl/worksheets/sheet2.xml/sheetData[1]/row[2]/c[3]/f[1]",
+      "text_before": "'Data'!$B$3",
+      "text_after": "'O''Brien 2026'!$B$3"
+    },
+    {
+      "path": "xl/worksheets/sheet2.xml/sheetData[1]/row[2]/c[3]/v[1]",
+      "text_before": "42",
+      "text_after": "5"
+    },
+    {
+      "path": "xl/worksheets/sheet2.xml/sheetData[1]/row[3]/c[3]/f[1]",
+      "text_before": "SUM(Data:Summary!B2)",
+      "text_after": "SUM('O''Brien 2026:Summary'!B2)"
+    },
+    {
+      "path": "xl/worksheets/sheet2.xml/sheetData[1]/row[4]/c[1]/f[1]",
+      "text_before": "SUM('Data:Summary'!B2)",
+      "text_after": "SUM('O''Brien 2026:Summary'!B2)"
+    },
+    {
+      "path": "xl/worksheets/sheet2.xml/sheetData[1]/row[5]/c[1]/f[1]",
+      "text_before": "SUM('Data':'Summary'!B2)",
+      "text_after": "SUM('O''Brien 2026:Summary'!B2)"
+    },
+    {
+      "path": "xl/worksheets/sheet2.xml/sheetData[1]/row[8]/c[1]",
+      "attribute": "t",
+      "before": null,
+      "after": "str"
+    },
+    {
+      "path": "xl/worksheets/sheet2.xml/sheetData[1]/row[8]/c[1]/f[1]",
+      "text_before": "IF(Data!B2>0,\"Data!A1 \"\"quoted\"\"\",\"'Data'!B2\")",
+      "text_after": "IF('O''Brien 2026'!B2>0,\"Data!A1 \"\"quoted\"\"\",\"'Data'!B2\")"
+    },
+    {
+      "path": "xl/worksheets/sheet2.xml/sheetData[1]/row[8]/c[1]/v[1]",
+      "text_before": "42",
+      "text_after": "Data!A1 \"quoted\""
+    },
+    {
+      "path": "xl/worksheets/sheet2.xml/sheetData[1]/row[10]/c[1]/f[1]",
+      "text_before": "Data!LocalRange",
+      "text_after": "'O''Brien 2026'!LocalRange"
+    },
+    {
+      "path": "xl/worksheets/sheet2.xml/sheetData[1]/row[11]/c[1]/f[1]",
+      "text_before": "SUM('Data'!$A:$B)",
+      "text_after": "SUM('O''Brien 2026'!$A:$B)"
+    },
+    {
+      "path": "xl/worksheets/sheet2.xml/sheetData[1]/row[12]/c[1]/f[1]",
+      "text_before": "SUM(Data!1:3)",
+      "text_after": "SUM('O''Brien 2026'!1:3)"
+    },
+    {
+      "path": "xl/worksheets/sheet2.xml/sheetData[1]/row[13]/c[1]",
+      "attribute": "t",
+      "before": null,
+      "after": "e"
+    },
+    {
+      "path": "xl/worksheets/sheet2.xml/sheetData[1]/row[13]/c[1]/v[1]",
+      "text_before": "42",
+      "text_after": "#REF!"
+    },
+    {
+      "path": "xl/worksheets/sheet2.xml/sheetData[1]/row[14]/c[1]/f[1]",
+      "text_before": "dAtA!b2+Summary!B2",
+      "text_after": "'O''Brien 2026'!b2+Summary!B2"
+    },
+    {
+      "path": "xl/worksheets/sheet2.xml/sheetData[1]/row[14]/c[1]/v[1]",
+      "text_before": "42",
+      "text_after": "4"
+    },
+    {
+      "path": "xl/worksheets/sheet2.xml/dataConsolidate[1]/dataRefs[1]/dataRef[1]",
+      "attribute": "sheet",
+      "before": "Data",
+      "after": "O'Brien 2026"
+    },
+    {
+      "path": "xl/worksheets/sheet2.xml/conditionalFormatting[1]/cfRule[1]/formula[1]",
+      "text_before": "Data!B2>0",
+      "text_after": "'O''Brien 2026'!B2>0"
+    },
+    {
+      "path": "xl/worksheets/sheet2.xml/conditionalFormatting[1]/cfRule[2]/formula[1]",
+      "text_before": "SUM(Data:Summary!B2)>1",
+      "text_after": "SUM('O''Brien 2026:Summary'!B2)>1"
+    },
+    {
+      "path": "xl/worksheets/sheet2.xml/dataValidations[1]/dataValidation[1]/formula1[1]",
+      "text_before": "Data!$B$2",
+      "text_after": "'O''Brien 2026'!$B$2"
+    },
+    {
+      "path": "xl/worksheets/sheet2.xml/dataValidations[1]/dataValidation[1]/formula2[1]",
+      "text_before": "'Data'!$B$3",
+      "text_after": "'O''Brien 2026'!$B$3"
+    },
+    {
+      "path": "xl/worksheets/sheet2.xml/hyperlinks[1]/hyperlink[1]",
+      "attribute": "location",
+      "before": "'Data'!A1",
+      "after": "'O''Brien 2026'!A1"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "sdk_selftest": {
+    "exit_code": 0,
+    "elapsed_seconds": 0.3336990589996276,
+    "command": [
+      "dotnet",
+      "/workspace/scratch/e445bd9b965c/runtime/validator/OfficeValidation.dll",
+      "--self-test"
+    ]
+  },
+  "schema": {
+    "exit_code": 0,
+    "elapsed_seconds": 0.7144895709989214,
+    "command": [
+      "dotnet",
+      "/workspace/scratch/e445bd9b965c/runtime/validator/OfficeValidation.dll",
+      "/workspace/scratch/e445bd9b965c/validation/fid027-native-final/input",
+      "/workspace/scratch/e445bd9b965c/validation/fid027-native-final/schema-report.json"
+    ]
+  },
+  "render": {
+    "exit_code": 0,
+    "elapsed_seconds": 4.72903968799983,
+    "command": [
+      "python3",
+      "tool/office-validation/render.py",
+      "/workspace/scratch/e445bd9b965c/validation/fid027-native-final/input",
+      "/workspace/scratch/e445bd9b965c/validation/fid027-native-final/render",
+      "--schema-report",
+      "/workspace/scratch/e445bd9b965c/validation/fid027-native-final/schema-report.json"
+    ]
+  },
+  "classification": {
+    "exit_code": 0,
+    "elapsed_seconds": 0.05487884399917675,
+    "command": [
+      "python3",
+      "/workspace/scratch/e445bd9b965c/validation/fid027_compare_native.py",
+      "/workspace/scratch/e445bd9b965c/validation/fid027-native-final",
+      "/workspace/scratch/e445bd9b965c/validation/fid027-expected-native",
+      "/workspace/scratch/e445bd9b965c/quds_office_suite/tool/office-validation/render.py"
+    ]
+  }
+}

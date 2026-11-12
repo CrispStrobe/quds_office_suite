@@ -1,0 +1,133 @@
+{
+  "version": 1,
+  "finding": "FID-027",
+  "scope": "Focused native result of Data to O'Brien 2026 rename with explicit supported cache recomputation",
+  "source_fixture": "packages/quds_office_engine/test/fixtures/fidelity/sheet-rename-native.xlsx",
+  "source_sha256": "561a2ebf80b6f02e8b1fc00648230b341ff68e1a3ee501ea026b9e69c35fc24b",
+  "expected_native_sha256": "f6c4c756d03d5dee78cfd66853df6f6c82c5e3d8793d327070a8271455bfa4f8",
+  "old_sheet_name": "Data",
+  "new_sheet_name": "O'Brien 2026",
+  "reference_property_change_count": 34,
+  "reference_changed_parts": [
+    "xl/charts/chart1.xml",
+    "xl/pivotCache/pivotCacheDefinition1.xml",
+    "xl/workbook.xml",
+    "xl/worksheets/sheet2.xml"
+  ],
+  "reference_xml_structure_unchanged": true,
+  "all_other_zip_members_byte_identical": true,
+  "formulas": {
+    "D1": "'O''Brien 2026'!$B$2",
+    "D2": "'O''Brien 2026'!$B$3",
+    "D3": "SUM('O''Brien 2026:Summary'!B2)",
+    "D4": "SUM('O''Brien 2026:Summary'!B2)",
+    "D5": "SUM('O''Brien 2026:Summary'!B2)",
+    "D6": "[1]Data!B2",
+    "D7": "'[Remote.xlsx]Data'!B2",
+    "D8": "IF('O''Brien 2026'!B2>0,\"Data!A1 \"\"quoted\"\"\",\"'Data'!B2\")",
+    "D9": "RenameTable[Data!A1]",
+    "D10": "'O''Brien 2026'!LocalRange",
+    "D11": "SUM('O''Brien 2026'!$A:$B)",
+    "D12": "SUM('O''Brien 2026'!1:3)",
+    "D13": "INDIRECT(\"Data!B2\")",
+    "D14": "'O''Brien 2026'!b2+Summary!B2"
+  },
+  "defined_names": [
+    {
+      "name": "NativeRange",
+      "local_sheet_id": null,
+      "formula": "'O''Brien 2026'!$A$1:$B$3"
+    },
+    {
+      "name": "Computed",
+      "local_sheet_id": null,
+      "formula": "SUM('O''Brien 2026'!$B$2,Summary!$B$2)"
+    },
+    {
+      "name": "LocalRange",
+      "local_sheet_id": "0",
+      "formula": "'O''Brien 2026'!$B$2"
+    },
+    {
+      "name": "LocalRange",
+      "local_sheet_id": "1",
+      "formula": "Summary!$B$2"
+    },
+    {
+      "name": "ThreeD",
+      "local_sheet_id": null,
+      "formula": "SUM('O''Brien 2026:Summary'!$B$2)"
+    },
+    {
+      "name": "Literal",
+      "local_sheet_id": null,
+      "formula": "\"Data!A1\""
+    },
+    {
+      "name": "_xlnm.Print_Area",
+      "local_sheet_id": "0",
+      "formula": "'O''Brien 2026'!$A$1:$C$5"
+    },
+    {
+      "name": "_xlnm.Print_Titles",
+      "local_sheet_id": "0",
+      "formula": "'O''Brien 2026'!$1:$1"
+    }
+  ],
+  "approved_cache_changes": [
+    {
+      "cell": "D1",
+      "source_value": "42",
+      "expected_type": null,
+      "expected_value": "2"
+    },
+    {
+      "cell": "D2",
+      "source_value": "42",
+      "expected_type": null,
+      "expected_value": "5"
+    },
+    {
+      "cell": "D8",
+      "source_value": "42",
+      "expected_type": "str",
+      "expected_value": "Data!A1 \"quoted\""
+    },
+    {
+      "cell": "D13",
+      "source_value": "42",
+      "expected_type": "e",
+      "expected_value": "#REF!"
+    },
+    {
+      "cell": "D14",
+      "source_value": "42",
+      "expected_type": null,
+      "expected_value": "4"
+    }
+  ],
+  "retained_numeric_cache": {
+    "value": "42",
+    "cells": [
+      "D3",
+      "D4",
+      "D5",
+      "D6",
+      "D7",
+      "D9",
+      "D10",
+      "D11",
+      "D12"
+    ]
+  },
+  "required_visual_comparison": {
+    "source_first_page": "Exact text and RGB fingerprint equality for every saved file",
+    "independent_expected_native": "Exact full-document page count, text, and all RGB fingerprints for all three saved files",
+    "save_cycles": "Exact repeated-save equality",
+    "D8_printed_text": "Data!A1 \"quoted\"",
+    "source_workbook_equality_claimed": false,
+    "pixel_masks": false,
+    "numeric_or_image_tolerance": false
+  },
+  "limitations": "This receipt does not extend the evaluator to unsupported references, dynamic strings or opaque formula owners; FID-027 remains partial."
+}
