@@ -11663,6 +11663,7 @@ class _SheetGridSnap {
             value: cell.value,
             formula: cell.formula,
             styleIndex: cell.styleIndex,
+            hasExplicitStyleIndex: cell.hasExplicitStyleIndex,
             horizontalAlign: cell.horizontalAlign,
             fillRgb: cell.fillRgb,
             fontRgb: cell.fontRgb,
@@ -11700,6 +11701,7 @@ class _SheetGridSnap {
         ..value = cell.value
         ..formula = cell.formula
         ..styleIndex = cell.styleIndex
+        ..hasExplicitStyleIndex = cell.hasExplicitStyleIndex
         ..horizontalAlign = cell.horizontalAlign
         ..fillRgb = cell.fillRgb
         ..fontRgb = cell.fontRgb

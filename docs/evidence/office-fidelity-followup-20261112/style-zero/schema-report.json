@@ -1,0 +1,41 @@
+{
+  "Files": 7,
+  "Failures": 0,
+  "Reports": [
+    {
+      "File": "/workspace/scratch/10b2b87c2738/validation/fid029-style-zero-probe/final-input/normal-font-1.xlsx",
+      "Sha256": "5c076a9f7b717158ad99d0594d4fb847760390c1f48bde48a425d538f7a16130",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/10b2b87c2738/validation/fid029-style-zero-probe/final-input/normal-font-2.xlsx",
+      "Sha256": "4a1392cbebd0098f39caad9dd74719a4ff97d671b7f10bd76bf61f25ccc7cbf1",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/10b2b87c2738/validation/fid029-style-zero-probe/final-input/normal-font-3.xlsx",
+      "Sha256": "435ee6f6d3a64d747bb992b1a8c4e24389bc7d022c00ac3186ce246ee1ae51db",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/10b2b87c2738/validation/fid029-style-zero-probe/final-input/source.xlsx",
+      "Sha256": "7021b9a131d929d4ae6d4074a69056c997efa5b96f7693d4ba15d6c9a41b737f",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/10b2b87c2738/validation/fid029-style-zero-probe/final-input/unchanged-1.xlsx",
+      "Sha256": "bfc366ec6f39ea902c73d827b1cee0698d7f58c623f72a3224876ddf60fcbaaf",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/10b2b87c2738/validation/fid029-style-zero-probe/final-input/unchanged-2.xlsx",
+      "Sha256": "868b3a3f7b07aa6bea31638cbafa8bfcf89724d9692a6635f671a19b9a9cb5b2",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/10b2b87c2738/validation/fid029-style-zero-probe/final-input/unchanged-3.xlsx",
+      "Sha256": "526268334b206a2f4d2388ed769ab6e82ed40123df1dd651164b38e228b3f43c",
+      "Errors": []
+    }
+  ]
+}

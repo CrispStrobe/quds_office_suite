@@ -26,9 +26,9 @@ creation, image replacement and opaque body XML (`w:altChunk` and any other
 unmodeled body element, with its relationship provenance). The editor adds
 layout exports and the async controller export.
 
-The authored manifests require **241 engine files** and **22 editor files**.
-The engine has 73 complete three-save series and 22 standalone inputs/exports;
-the editor has seven complete three-save series and one standalone export.
+The authored manifests require **296 engine files** and **25 editor files**.
+The engine has 89 complete three-save series and 29 standalone inputs/exports;
+the editor has eight complete three-save series and one standalone export.
 Exact inventory checks reject missing, extra, empty or invalid packages and
 retain SHA-256 receipts. Authored source/edited baselines also participate in
 external render comparisons; exports without a declared comparison baseline

@@ -23,6 +23,33 @@ const _nativeTable = '''
 <w:tc><w:tcPr><w:gridSpan w:val="2"/></w:tcPr>
 <w:p><w:r><w:t>Third last</w:t></w:r></w:p></w:tc></w:tr></w:tbl>''';
 
+const _omittedTable =
+    '<w:tbl><w:tblPr/><w:tblGrid><w:gridCol w:w="1200"/>'
+    '<w:gridCol w:w="1200"/><w:gridCol w:w="1200"/><w:gridCol w:w="1200"/>'
+    '</w:tblGrid><w:tr><w:trPr><w:gridBefore w:val="1"/>'
+    '<w:gridAfter w:val="1"/></w:trPr>'
+    '<w:tc><w:p><w:r><w:t>First physical</w:t></w:r></w:p></w:tc>'
+    '<w:tc><w:p><w:r><w:t>Second physical</w:t></w:r></w:p></w:tc>'
+    '</w:tr></w:tbl>';
+
+// tableCellText authors a new plain paragraph, including the public defaults:
+// Arial 11pt, black, left aligned, 1.15 lines and 8pt after spacing. This native
+// expectation replaces only the first cell's paragraph in the authored source;
+// it never reads an engine export or serializes a model to create its baseline.
+const _omittedEditedTable =
+    '<w:tbl><w:tblPr/><w:tblGrid><w:gridCol w:w="1200"/>'
+    '<w:gridCol w:w="1200"/><w:gridCol w:w="1200"/><w:gridCol w:w="1200"/>'
+    '</w:tblGrid><w:tr><w:trPr><w:gridBefore w:val="1"/>'
+    '<w:gridAfter w:val="1"/></w:trPr>'
+    '<w:tc><w:p><w:pPr><w:spacing w:before="0" w:after="160" '
+    'w:line="276" w:lineRule="auto"/><w:ind w:left="0" w:right="0"/>'
+    '<w:jc w:val="left"/></w:pPr><w:r><w:rPr>'
+    '<w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>'
+    '<w:b w:val="0"/><w:i w:val="0"/><w:color w:val="000000"/>'
+    '<w:sz w:val="22"/></w:rPr><w:t>Still editable</w:t></w:r></w:p></w:tc>'
+    '<w:tc><w:p><w:r><w:t>Second physical</w:t></w:r></w:p></w:tc>'
+    '</w:tr></w:tbl>';
+
 OpcPackage _package([String body = _nativeTable]) {
   final package = OpcPackage.create(OpcPackageKind.word);
   package
@@ -310,18 +337,29 @@ void main() {
   );
 
   test(
-    'native omitted-grid metadata stays readable, cloneable and preserved',
+    'native omitted-grid source remains unchanged through three saves',
     () async {
-      const omitted =
-          '<w:tbl><w:tblPr/><w:tblGrid><w:gridCol w:w="1200"/>'
-          '<w:gridCol w:w="1200"/><w:gridCol w:w="1200"/><w:gridCol w:w="1200"/>'
-          '</w:tblGrid><w:tr><w:trPr><w:gridBefore w:val="1"/>'
-          '<w:gridAfter w:val="1"/></w:trPr>'
-          '<w:tc><w:p><w:r><w:t>First physical</w:t></w:r></w:p></w:tc>'
-          '<w:tc><w:p><w:r><w:t>Second physical</w:t></w:r></w:p></w:tc>'
-          '</w:tr></w:tbl>';
-      final package = _package(omitted);
+      final package = _package(_omittedTable);
       _write('omitted-source', package.save());
+      var doc = WordDeserializer().read(package);
+      for (var cycle = 0; cycle < 3; cycle++) {
+        final bytes = cycle == 1
+            ? await OfficeIsolateSave.word(doc)
+            : WordSerializer().write(doc).save();
+        _write('omitted-${cycle + 1}', bytes);
+        doc = WordDeserializer().readBytes(bytes);
+        final row = _table(doc).rows.single;
+        expect((row.gridBefore, row.gridAfter), (1, 1));
+        expect(row.cells.map(_text), ['First physical', 'Second physical']);
+      }
+    },
+  );
+
+  test(
+    'physical text edits preserve omitted-grid metadata through three saves',
+    () async {
+      final package = _package(_omittedTable);
+      _write('omitted-edited-expected', _package(_omittedEditedTable).save());
       var doc = WordDeserializer().read(package);
       final clone = WmlClone.table(_table(doc));
       expect(
@@ -378,7 +416,7 @@ void main() {
         final bytes = cycle == 1
             ? await OfficeIsolateSave.word(doc)
             : WordSerializer().write(doc).save();
-        _write('omitted-${cycle + 1}', bytes);
+        _write('omitted-edited-${cycle + 1}', bytes);
         final xml = OpcPackage.openBytes(
           bytes,
         ).getPart('/word/document.xml')!.readText();

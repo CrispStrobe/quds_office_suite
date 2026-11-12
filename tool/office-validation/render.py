@@ -40,6 +40,9 @@ REQUIRED_SERIES_BASELINES = {
     ('fidelity-frame-wrap', 'topBottom.docx'): 'topBottom-source.docx',
     # This native-row omission series has no intended visible edits.
     ('fidelity-table-grid', 'omitted.docx'): 'omitted-source.docx',
+    # Physical story replacement has prescribed text and plain-paragraph
+    # defaults. Its expected native package is authored independently of saves.
+    ('fidelity-table-grid', 'omitted-edited.docx'): 'omitted-edited-expected.docx',
 }
 # This six-slide native fixture changes only slide order and section membership.
 # These are authored page orders, independent of the engine/XML oracle. Scope

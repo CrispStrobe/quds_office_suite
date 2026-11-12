@@ -432,9 +432,11 @@ class SheetDeserializer {
         final String ref = reader.getAttribute('r') ?? 'A1';
         final String? t = reader.getAttribute('t');
         valueType = t;
-        final int s = int.parse(reader.getAttribute('s') ?? '0');
+        final String? nativeStyle = reader.getAttribute('s');
+        final int s = int.parse(nativeStyle ?? '0');
         current = sheet.cellA1(ref);
         current.styleIndex = s;
+        current.hasExplicitStyleIndex = nativeStyle != null;
         current.horizontalAlign = styles?.alignAt(s) ?? SmlHAlign.general;
         current.fillRgb = styles?.fillAt(s) ?? '';
         current.fontRgb = styles?.fontAt(s) ?? '';
@@ -1029,7 +1031,7 @@ class SheetSerializer {
         final SmlCell cell = row.cells[c]!;
         w.writeStartElement('c');
         w.writeAttribute('r', cell.ref.a1);
-        if (cell.styleIndex != 0) {
+        if (cell.styleIndex != 0 || cell.hasExplicitStyleIndex) {
           w.writeAttribute('s', '${cell.styleIndex}');
         }
         if (cell.formula != null) {
