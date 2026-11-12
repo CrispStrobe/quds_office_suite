@@ -55,7 +55,8 @@ dependencies:
     sdk: flutter
   quds_office_engine:
     path: ../quds_office_engine
-  quds_reports: ^1.5.0
+  quds_reports:
+    path: ../quds_reports
 
 dev_dependencies:
   flutter_lints: ^6.0.0
