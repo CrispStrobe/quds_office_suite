@@ -1,0 +1,83 @@
+{
+  "scope": "FID-057 bounded logical table addressing, continuation integrity, and omitted-row metadata preservation/guards",
+  "base_commit": "51454a72986b6768108d20edecab28a17d3f0c13",
+  "worktree_modified": true,
+  "engine_tests": {
+    "passed": 106,
+    "files": [
+      "word_table_grid_addressing_test.dart",
+      "word_table_test.dart",
+      "word_structure_steps_test.dart",
+      "word_step_atomicity_test.dart",
+      "word_structure_integrity_test.dart"
+    ]
+  },
+  "editor_tests": {
+    "passed": 74,
+    "files": [
+      "word_table_grid_history_test.dart",
+      "word_structural_history_test.dart",
+      "word_operation_history_test.dart",
+      "word_bookmark_history_test.dart",
+      "word_revision_rebase_test.dart"
+    ]
+  },
+  "new_tests": {
+    "engine": 21,
+    "editor": 2
+  },
+  "analysis": "No issues found",
+  "red_green": {
+    "baseline_commit": "54f0f8de01416640560519aa9d732f668f603709",
+    "partial_vertical_merge": {
+      "expected": false,
+      "before": true,
+      "after": false
+    },
+    "bookmark_owner_removal_rejected": {
+      "expected": true,
+      "before": false,
+      "after": true
+    },
+    "revision_owner_removal_rejected": {
+      "expected": true,
+      "before": false,
+      "after": true
+    }
+  },
+  "implementation_sha256": {
+    "packages/quds_office_engine/lib/src/word/model/wml_document.dart": "f02fa5d94d09ae3e552819e9281093d11b9c65f9c687a05af04c38442d10b51d",
+    "packages/quds_office_engine/lib/src/word/model/wml_clone.dart": "02604a61668f3a7a5f83738746516bec1012af8579c4e950f69b5ddc9984e593",
+    "packages/quds_office_engine/lib/src/word/model/word_table.dart": "5166c711ec18f10d339ed87251a7d0fff271b2e23ba8e9f4ecb61fbb182c6096",
+    "packages/quds_office_engine/lib/src/word/serial/word_deserializer.dart": "6347291fe36c17cadac0de5feacbc015c939b5fa437749d2bfd61cc6048484e4",
+    "packages/quds_office_engine/lib/src/word/serial/word_serializer.dart": "d5f26d5a92dcf6340779a7fedc7cd8ca34c29c6da80b2a0660c8c0a635364b01",
+    "packages/quds_office_engine/tool/fidelity/word_steps.dart": "c14316835bac78fb2a3f69cd884e6bba24e4632cf5bff3c1bc34c68e9a97024b",
+    "packages/quds_office_engine/tool/fidelity/word_structure_steps.dart": "06252e9cbb9382e6226671adcbb07b1bee5be79c69679e628552db7bb8dfb062",
+    "packages/quds_office_engine/tool/fidelity/office_steps.dart": "616313ca226747df2958480caf9d1e050555c0f3ea663d234b5e5baac50bbc5c",
+    "packages/quds_office_engine/tool/fidelity/README.md": "f378548b94e29e2bb352af1282bdeed5c8e79e94455950741b4bff8fc31f1310",
+    "packages/quds_office_engine/test/word_table_grid_addressing_test.dart": "91367d9471235ed615b552c6c3baec8deae1d9722c18dbe47a98d99a3e27a8d0",
+    "packages/quds_office_editor/lib/src/editor_word/table_history.dart": "5bb83807c45fd62aa5e3ae55def7538fb5da904c7237f43c51311994fa0c8640",
+    "packages/quds_office_editor/lib/src/embed/office_controller.dart": "dd3590a3624b00e771836ee3e9054288a5ad7663e2fb3538b44c772471864a74",
+    "packages/quds_office_editor/test/word_table_grid_history_test.dart": "e8058115b6654094d37d98a87e1adbd64e367a431666f601eefde491ca149a7a"
+  },
+  "test_logs_sha256": {
+    "engine-tests.log": "ae5baf6138de503e7856b21ccda028dc773d0d620934590b66b1124f09a0aae8",
+    "editor-tests.log": "cf413e938ee7eb35ffd62268f6b6e1a4575770fa732778a94e2938cd5cde78dc",
+    "analysis.log": "e89491637530549e0ef98d0622b5a69f694615307270203eeba2b37adb0be9be"
+  },
+  "output_sha256": {
+    "edited-1.docx": "a163e14e952be1cf0fdddcc8ed6bad07fdd581fa128b32864ea4694c4fe67086",
+    "edited-2.docx": "8cf7b83666382379cd138da6e54f0d6d0047bb13e67de19794fe0d61b5ed8d2f",
+    "edited-3.docx": "37deac26dc026be3953d13fc40bf789069691af0fac4dd4cfafae3c24a5d0b3b",
+    "omitted-1.docx": "6e6ba0ebf40caac8b3ef3312c14c8f1be1c293001ea701ff33d7b09cb3dd9caf",
+    "omitted-2.docx": "135ca6fb23c22cb364921b61974abd613abc274ef49e8e35aa713721bbba054a",
+    "omitted-3.docx": "3fe24875ef617a756ae39d5b106cadb22ee00473d5b43ba6857e4d6a82582f22",
+    "omitted-source.docx": "708b3d662d51f21ea30441df04cba4cdcb2fcad89d2da84d5dedb82a08fb0853",
+    "source.docx": "8f44b7cbf776d0378c5964c45708d745dcb01eed3679a025bf7225bba297f107"
+  },
+  "limits": [
+    "gridBefore/gridAfter counts are preserved; omitted-row layout and logical edits are not certified",
+    "physical column semantics remain unchanged; gridColumn is opt-in",
+    "no arbitrary Word merged-table topology or Microsoft Office equivalence claim"
+  ]
+}

@@ -1,0 +1,303 @@
+{
+  "renderer": "LibreOffice 24.2.7.2 ee3885777aa7032db5a9b65deec9457448a91162 (LibreOfficeKit embedding API)",
+  "files": 12,
+  "rendered_files": 12,
+  "visual_input_files": 12,
+  "native_schema_only_files": 0,
+  "native_schema_only": [],
+  "schema_report": "/workspace/scratch/10b2b87c2738/validation/fid057-native-corrected/schema-report.json",
+  "pixel_fingerprint": "SHA-256 of big-endian uint32 width/height followed by RGB bytes",
+  "cycle_groups": 3,
+  "cycle_comparisons": [
+    {
+      "case": "engine/fidelity-table-grid/edited.docx",
+      "expected_cycles": [
+        1,
+        2,
+        3
+      ],
+      "actual_cycles": [
+        1,
+        2,
+        3
+      ],
+      "files": [
+        "engine/fidelity-table-grid/edited-1.docx",
+        "engine/fidelity-table-grid/edited-2.docx",
+        "engine/fidelity-table-grid/edited-3.docx"
+      ],
+      "baseline": null,
+      "baseline_candidate": null,
+      "baseline_page_order": null,
+      "passed": true
+    },
+    {
+      "case": "engine/fidelity-table-grid/omitted-edited.docx",
+      "expected_cycles": [
+        1,
+        2,
+        3
+      ],
+      "actual_cycles": [
+        1,
+        2,
+        3
+      ],
+      "files": [
+        "engine/fidelity-table-grid/omitted-edited-1.docx",
+        "engine/fidelity-table-grid/omitted-edited-2.docx",
+        "engine/fidelity-table-grid/omitted-edited-3.docx"
+      ],
+      "baseline": "engine/fidelity-table-grid/omitted-edited-expected.docx",
+      "baseline_candidate": "engine/fidelity-table-grid/omitted-edited-expected.docx",
+      "baseline_page_order": null,
+      "passed": true
+    },
+    {
+      "case": "engine/fidelity-table-grid/omitted.docx",
+      "expected_cycles": [
+        1,
+        2,
+        3
+      ],
+      "actual_cycles": [
+        1,
+        2,
+        3
+      ],
+      "files": [
+        "engine/fidelity-table-grid/omitted-1.docx",
+        "engine/fidelity-table-grid/omitted-2.docx",
+        "engine/fidelity-table-grid/omitted-3.docx"
+      ],
+      "baseline": "engine/fidelity-table-grid/omitted-source.docx",
+      "baseline_candidate": "engine/fidelity-table-grid/omitted-source.docx",
+      "baseline_page_order": null,
+      "passed": true
+    }
+  ],
+  "baseline_comparisons": 2,
+  "page_order_comparisons": 0,
+  "render_only_files": [
+    "engine/fidelity-table-grid/source.docx"
+  ],
+  "failures": [],
+  "reports": [
+    {
+      "file": "engine/fidelity-table-grid/edited-1.docx",
+      "pages": 1,
+      "text": "Edited                 Top          Top last\nmaster                 neighbor\n\n                       Bottom       Bottom\n                       neighbor     last\nThird first   Third    Third last\n              second\n\f",
+      "pixel_sha256": [
+        "fe68dd1cab67e71e6099516ca50a76328d51c9f1dc36d36c4270e9c0fad40e5b"
+      ],
+      "pdf": "000/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "000/page-0001.png",
+          "pixel_sha256": "fe68dd1cab67e71e6099516ca50a76328d51c9f1dc36d36c4270e9c0fad40e5b"
+        }
+      ]
+    },
+    {
+      "file": "engine/fidelity-table-grid/edited-2.docx",
+      "pages": 1,
+      "text": "Edited                 Top          Top last\nmaster                 neighbor\n\n                       Bottom       Bottom\n                       neighbor     last\nThird first   Third    Third last\n              second\n\f",
+      "pixel_sha256": [
+        "fe68dd1cab67e71e6099516ca50a76328d51c9f1dc36d36c4270e9c0fad40e5b"
+      ],
+      "pdf": "001/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "001/page-0001.png",
+          "pixel_sha256": "fe68dd1cab67e71e6099516ca50a76328d51c9f1dc36d36c4270e9c0fad40e5b"
+        }
+      ]
+    },
+    {
+      "file": "engine/fidelity-table-grid/edited-3.docx",
+      "pages": 1,
+      "text": "Edited                 Top          Top last\nmaster                 neighbor\n\n                       Bottom       Bottom\n                       neighbor     last\nThird first   Third    Third last\n              second\n\f",
+      "pixel_sha256": [
+        "fe68dd1cab67e71e6099516ca50a76328d51c9f1dc36d36c4270e9c0fad40e5b"
+      ],
+      "pdf": "002/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "002/page-0001.png",
+          "pixel_sha256": "fe68dd1cab67e71e6099516ca50a76328d51c9f1dc36d36c4270e9c0fad40e5b"
+        }
+      ]
+    },
+    {
+      "file": "engine/fidelity-table-grid/omitted-1.docx",
+      "pages": 1,
+      "text": "First      Second\nphysical   physical\n\f",
+      "pixel_sha256": [
+        "815c8e37fdf807a224bc52404ac0e69c3995bdfd007be29b5750feeedd6e8acd"
+      ],
+      "pdf": "003/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "003/page-0001.png",
+          "pixel_sha256": "815c8e37fdf807a224bc52404ac0e69c3995bdfd007be29b5750feeedd6e8acd"
+        }
+      ]
+    },
+    {
+      "file": "engine/fidelity-table-grid/omitted-2.docx",
+      "pages": 1,
+      "text": "First      Second\nphysical   physical\n\f",
+      "pixel_sha256": [
+        "815c8e37fdf807a224bc52404ac0e69c3995bdfd007be29b5750feeedd6e8acd"
+      ],
+      "pdf": "004/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "004/page-0001.png",
+          "pixel_sha256": "815c8e37fdf807a224bc52404ac0e69c3995bdfd007be29b5750feeedd6e8acd"
+        }
+      ]
+    },
+    {
+      "file": "engine/fidelity-table-grid/omitted-3.docx",
+      "pages": 1,
+      "text": "First      Second\nphysical   physical\n\f",
+      "pixel_sha256": [
+        "815c8e37fdf807a224bc52404ac0e69c3995bdfd007be29b5750feeedd6e8acd"
+      ],
+      "pdf": "005/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "005/page-0001.png",
+          "pixel_sha256": "815c8e37fdf807a224bc52404ac0e69c3995bdfd007be29b5750feeedd6e8acd"
+        }
+      ]
+    },
+    {
+      "file": "engine/fidelity-table-grid/omitted-edited-1.docx",
+      "pages": 1,
+      "text": "Still      Second\neditable   physical\n\f",
+      "pixel_sha256": [
+        "6b91bb809129bd77d2ee8d161832072a1c8b3a100b09b5412f8afb690571b5b4"
+      ],
+      "pdf": "006/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "006/page-0001.png",
+          "pixel_sha256": "6b91bb809129bd77d2ee8d161832072a1c8b3a100b09b5412f8afb690571b5b4"
+        }
+      ]
+    },
+    {
+      "file": "engine/fidelity-table-grid/omitted-edited-2.docx",
+      "pages": 1,
+      "text": "Still      Second\neditable   physical\n\f",
+      "pixel_sha256": [
+        "6b91bb809129bd77d2ee8d161832072a1c8b3a100b09b5412f8afb690571b5b4"
+      ],
+      "pdf": "007/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "007/page-0001.png",
+          "pixel_sha256": "6b91bb809129bd77d2ee8d161832072a1c8b3a100b09b5412f8afb690571b5b4"
+        }
+      ]
+    },
+    {
+      "file": "engine/fidelity-table-grid/omitted-edited-3.docx",
+      "pages": 1,
+      "text": "Still      Second\neditable   physical\n\f",
+      "pixel_sha256": [
+        "6b91bb809129bd77d2ee8d161832072a1c8b3a100b09b5412f8afb690571b5b4"
+      ],
+      "pdf": "008/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "008/page-0001.png",
+          "pixel_sha256": "6b91bb809129bd77d2ee8d161832072a1c8b3a100b09b5412f8afb690571b5b4"
+        }
+      ]
+    },
+    {
+      "file": "engine/fidelity-table-grid/omitted-edited-expected.docx",
+      "pages": 1,
+      "text": "Still      Second\neditable   physical\n\f",
+      "pixel_sha256": [
+        "6b91bb809129bd77d2ee8d161832072a1c8b3a100b09b5412f8afb690571b5b4"
+      ],
+      "pdf": "009/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "009/page-0001.png",
+          "pixel_sha256": "6b91bb809129bd77d2ee8d161832072a1c8b3a100b09b5412f8afb690571b5b4"
+        }
+      ]
+    },
+    {
+      "file": "engine/fidelity-table-grid/omitted-source.docx",
+      "pages": 1,
+      "text": "First      Second\nphysical   physical\n\f",
+      "pixel_sha256": [
+        "815c8e37fdf807a224bc52404ac0e69c3995bdfd007be29b5750feeedd6e8acd"
+      ],
+      "pdf": "010/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "010/page-0001.png",
+          "pixel_sha256": "815c8e37fdf807a224bc52404ac0e69c3995bdfd007be29b5750feeedd6e8acd"
+        }
+      ]
+    },
+    {
+      "file": "engine/fidelity-table-grid/source.docx",
+      "pages": 1,
+      "text": "Master                 Top          Top last\n                       neighbor\n                       Bottom       Bottom\n                       neighbor     last\nThird first   Third    Third last\n              second\n\f",
+      "pixel_sha256": [
+        "2c5e4be1779498c996b024d30fd4ff8eb21871611fee452c970929fdd893a1bf"
+      ],
+      "pdf": "011/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "011/page-0001.png",
+          "pixel_sha256": "2c5e4be1779498c996b024d30fd4ff8eb21871611fee452c970929fdd893a1bf"
+        }
+      ]
+    }
+  ]
+}

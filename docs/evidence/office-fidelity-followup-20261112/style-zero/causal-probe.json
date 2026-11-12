@@ -1,0 +1,12 @@
+{
+  "source": "/workspace/scratch/10b2b87c2738/validation/followup-native/input/engine/fidelity-sheet-normal-font/unchanged-1.xlsx",
+  "probe": "/workspace/scratch/10b2b87c2738/validation/fid029-style-zero-probe/input/restored-style-zero.xlsx",
+  "changed_parts": [
+    {
+      "part": "xl/worksheets/sheet1.xml",
+      "old_sha256": "31d2171a766ad40e71fdef5757aea0a26e69350bbb83e01144943fc6c7dc73a1",
+      "new_sha256": "ebc0a23447df27f1679b944a7bb27147f650ecad58d2249920260f9bb36ec5d4",
+      "change": "Only add s=\"0\" to A1; no other content change"
+    }
+  ]
+}

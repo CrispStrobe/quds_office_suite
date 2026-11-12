@@ -1,0 +1,18 @@
+{
+  "baseline_commit": "54f0f8de01416640560519aa9d732f668f603709",
+  "partial_vertical_merge": {
+    "expected": false,
+    "before": true,
+    "after": false
+  },
+  "bookmark_owner_removal_rejected": {
+    "expected": true,
+    "before": false,
+    "after": true
+  },
+  "revision_owner_removal_rejected": {
+    "expected": true,
+    "before": false,
+    "after": true
+  }
+}

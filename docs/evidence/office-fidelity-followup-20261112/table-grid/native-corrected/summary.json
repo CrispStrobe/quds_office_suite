@@ -1,0 +1,134 @@
+{
+  "scope": "FID-057 native omitted-row no-op and physical story replacement corpus correction",
+  "checked_at_utc": "2026-11-12T13:35:23.583665+00:00",
+  "source_head": "c0a97cd258184c4b9fbe505b855e1a1407c816ae",
+  "worktree_patch_sha256": {
+    "packages/quds_office_engine/test/word_table_grid_addressing_test.dart": "233fc8df983ebc59b3d3d6b61311a50038b35231826ddd0bfd78ab07ff927a42",
+    "packages/quds_office_engine/tool/fidelity/output_manifest.json": "afd6ba8068bae37959cc365b15648a1901f51538c3ffeea3236e822a5d203fdc",
+    "tool/office-validation/render.py": "787d79602869da46442e40656d8d2cb95141a72d26433582fe58033bb7bea5a0",
+    "tool/office-validation/test_render.py": "dcd46ad23c9f0b1714b407ecc80b1fd35ad0cf605e4c2f7b6089964c2ab8bbf2"
+  },
+  "previous_failure_cause": "The previous omitted-{cycle} series applied tableCellText to First physical before save, yet required omitted-source as its unchanged native baseline. Text changed to Still editable and a new plain paragraph acquired the documented public defaults. The baseline mismatch was correctly detected.",
+  "production_change_required": false,
+  "corrected_oracles": {
+    "omitted.docx": {
+      "source": "omitted-source.docx",
+      "operation": "No-op import and three save/reopen cycles (direct, isolate, direct). Native row gridBefore/gridAfter counts and original cell stories are preserved.",
+      "baseline_origin": "Independent literal native source table XML in _omittedTable; no model serialization."
+    },
+    "omitted-edited.docx": {
+      "source": "omitted-edited-expected.docx",
+      "operation": "Legacy physical column 0 tableCellText replacement of first cell story with Still editable, then three save/reopen cycles (direct, isolate, direct).",
+      "baseline_origin": "Independent literal native XML in _omittedEditedTable, authored from source geometry and prescribed whole-story edit; expected package never reads engine output or serializes a model.",
+      "public_paragraph_defaults": "Arial 11pt, black, not bold/italic; left alignment, zero left/right indent, 1.15 line spacing, 0pt before and 8pt after."
+    }
+  },
+  "tests": {
+    "engine_table_cohort_passed": 107,
+    "renderer_control_tests_passed": 41,
+    "manifest_authored_paths": 296,
+    "table_manifest_paths": 12,
+    "sdk_files": 12,
+    "sdk_failures": 0,
+    "native_rendered_files": 12,
+    "native_cycle_groups": 3,
+    "native_baseline_comparisons": 2,
+    "native_failures": 0
+  },
+  "negative_controls": "Required original no-op baseline remains enforced. Edited series requires its authored expected baseline even when original source is present; wrong text, pixels, page counts, absent expected baseline and consistently unchanged outputs fail. Both bare and engine/ prefixed paths are tested.",
+  "renderer": "LibreOffice 24.2.7.2 ee3885777aa7032db5a9b65deec9457448a91162 (LibreOfficeKit embedding API)",
+  "native_comparisons": [
+    {
+      "case": "engine/fidelity-table-grid/edited.docx",
+      "expected_cycles": [
+        1,
+        2,
+        3
+      ],
+      "actual_cycles": [
+        1,
+        2,
+        3
+      ],
+      "files": [
+        "engine/fidelity-table-grid/edited-1.docx",
+        "engine/fidelity-table-grid/edited-2.docx",
+        "engine/fidelity-table-grid/edited-3.docx"
+      ],
+      "baseline": null,
+      "baseline_candidate": null,
+      "baseline_page_order": null,
+      "passed": true
+    },
+    {
+      "case": "engine/fidelity-table-grid/omitted-edited.docx",
+      "expected_cycles": [
+        1,
+        2,
+        3
+      ],
+      "actual_cycles": [
+        1,
+        2,
+        3
+      ],
+      "files": [
+        "engine/fidelity-table-grid/omitted-edited-1.docx",
+        "engine/fidelity-table-grid/omitted-edited-2.docx",
+        "engine/fidelity-table-grid/omitted-edited-3.docx"
+      ],
+      "baseline": "engine/fidelity-table-grid/omitted-edited-expected.docx",
+      "baseline_candidate": "engine/fidelity-table-grid/omitted-edited-expected.docx",
+      "baseline_page_order": null,
+      "passed": true
+    },
+    {
+      "case": "engine/fidelity-table-grid/omitted.docx",
+      "expected_cycles": [
+        1,
+        2,
+        3
+      ],
+      "actual_cycles": [
+        1,
+        2,
+        3
+      ],
+      "files": [
+        "engine/fidelity-table-grid/omitted-1.docx",
+        "engine/fidelity-table-grid/omitted-2.docx",
+        "engine/fidelity-table-grid/omitted-3.docx"
+      ],
+      "baseline": "engine/fidelity-table-grid/omitted-source.docx",
+      "baseline_candidate": "engine/fidelity-table-grid/omitted-source.docx",
+      "baseline_page_order": null,
+      "passed": true
+    }
+  ],
+  "input_files_sha256": {
+    "engine/fidelity-table-grid/edited-1.docx": "8a3529709e0024ec73da6661d3de8986c244d9a831d2a4972328a9ed24aae492",
+    "engine/fidelity-table-grid/edited-2.docx": "2055fb12fc7ae86fe0c792deb106af45c79a57094e4def430966514bd04df8bc",
+    "engine/fidelity-table-grid/edited-3.docx": "2408aadda8a9a8369fafda2bfe1c28836b8f185a5f8b5e2fb799f7bc012cdb1b",
+    "engine/fidelity-table-grid/omitted-1.docx": "85aea16ea096865593c442f4cef63c26828c31e8e653b4f3f607d461696510a5",
+    "engine/fidelity-table-grid/omitted-2.docx": "e7ff6e7ab29dac1a90cace0002570ece260342b812f93e61be457ce4fb71bc40",
+    "engine/fidelity-table-grid/omitted-3.docx": "95bf16abfa290240ed291dd61efe61e2651b7246329ef9e80417346b0a890fd5",
+    "engine/fidelity-table-grid/omitted-edited-1.docx": "2e560db9c2e2cfa164b3c4919906dd1bb54c829b5b1856480aa6b44ad2b5c567",
+    "engine/fidelity-table-grid/omitted-edited-2.docx": "a5c2bd606f3eab00968e0a268659468f9e352a3f9b4b6ac28b99f18315ac74a4",
+    "engine/fidelity-table-grid/omitted-edited-3.docx": "5bca8c68e4ce18cc96bd6751f9ab7aaf1a2e8541439eb822b9ce60d4d9a8fb0a",
+    "engine/fidelity-table-grid/omitted-edited-expected.docx": "f56030b12e3b91fde86de919e9cb9ec38eb2ddadd2c00bc0aea443c1f05b6507",
+    "engine/fidelity-table-grid/omitted-source.docx": "708b3d662d51f21ea30441df04cba4cdcb2fcad89d2da84d5dedb82a08fb0853",
+    "engine/fidelity-table-grid/source.docx": "8f44b7cbf776d0378c5964c45708d745dcb01eed3679a025bf7225bba297f107"
+  },
+  "exact_input_hash_postcheck": true,
+  "sdk_receipt_matches_exact_input_hashes": true,
+  "evidence_sha256": {
+    "validation/fid057/engine-native-corrected.log": "111db1e1a0a579e1e0a78ceb1452912739a738c5b5afea163f93163f5241cbdf",
+    "validation/fid057/renderer-controls.log": "2ade4cba390343c46d588c43f8e58105d5111278d7bf4247cc0405d4124c34c7",
+    "validation/fid057-native-corrected/schema.log": "2514022c7320fad7c5d130dd5476320bbd7c3edbbb1c9e48c065a2da26172723",
+    "validation/fid057-native-corrected/schema-report.json": "6495b05ae7112313ea5ed02507afd1a19a8b0d833d68430851c72d678fc9e7e9",
+    "validation/fid057-native-corrected/render.log": "61ad708eb0844716e9ff89bfc2c54991c463fbad406e530050a87a34d93303e9",
+    "validation/fid057-native-corrected/render/render-report.json": "8777071d00b842a24c1b2b752ba043f05cf408fc0b8cc11daaa83c7ab87e65d8",
+    "validation/fid057-native-corrected/input-manifest.json": "4290fe734a03dedd401d8b3477846b47ac1401aea092cd85701fce04bb478f09"
+  },
+  "acceptance_boundary": "Native equivalence is bounded to the authored fixtures and LibreOffice 24.2.7.2 in this runtime. The separate regular merged-table edited series proves repeat-cycle stability only; native source is render-only because that series intentionally edits/unmerges. No arbitrary omitted-row layout claim."
+}

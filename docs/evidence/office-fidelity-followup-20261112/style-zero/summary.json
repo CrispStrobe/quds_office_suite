@@ -1,0 +1,218 @@
+{
+  "generated_utc": "2026-11-12T13:36:33.040887+00:00",
+  "starting_head": "c0a97cd258184c4b9fbe505b855e1a1407c816ae",
+  "scope": "Preserve explicit cell style index zero without adding style attributes where the source omitted them.",
+  "causal_probe": {
+    "change": "Only restored A1 s=\"0\" to the previously exported worksheet XML. All other ZIP part bytes unchanged.",
+    "source_pages": 1,
+    "broken_export_pages": 2,
+    "restored_pages": 1,
+    "source_pixel_sha256": [
+      "1cf691b30b12b0b3cfc9ef7961d328722575fcbf6ab93dae5a529aab80b696e1"
+    ],
+    "restored_pixel_sha256": [
+      "1cf691b30b12b0b3cfc9ef7961d328722575fcbf6ab93dae5a529aab80b696e1"
+    ],
+    "exact_source_text_and_rgb": true,
+    "observed_fonts": "Source PDF LiberationSans (Arial14 cell XF0); broken export LiberationMono (Normal24), with unchanged styles.xml."
+  },
+  "tests": {
+    "red": {
+      "command": "dart test test/sheet_explicit_style_fidelity_test.dart --reporter expanded",
+      "exit_code": 1,
+      "passed": 1,
+      "failed": 6,
+      "note": "The source-absent control passed; every explicit-zero case detected omission."
+    },
+    "green_engine": {
+      "command": "dart test test/sheet_explicit_style_fidelity_test.dart test/sheet_normal_font_metrics_test.dart --reporter expanded",
+      "exit_code": 0,
+      "passed": 26,
+      "note": "7newstylepresence cases and19metrics cases, including existing7-file export producer."
+    },
+    "green_editor": {
+      "command": "flutter test --no-pub test/sheet_explicit_style_history_test.dart --reporter expanded",
+      "exit_code": 0,
+      "passed": 3
+    },
+    "analyzer_engine": {
+      "command": "dart analyze lib/src/sheet/serial/sheet_serial.dart lib/src/sheet/model/sml_workbook.dart lib/src/sheet/model/sml_analysis.dart test/sheet_explicit_style_fidelity_test.dart",
+      "exit_code": 0,
+      "issues": 0
+    },
+    "analyzer_editor": {
+      "command": "flutter analyze --no-pub lib/src/embed/office_controller.dart test/sheet_explicit_style_history_test.dart",
+      "exit_code": 0,
+      "issues": 0
+    }
+  },
+  "external": {
+    "environment": "source /workspace/scratch/10b2b87c2738/runtime/env-source.sh; PATH=/workspace/scratch/10b2b87c2738/runtime/lok242-bin:$PATH",
+    "schema_command": "/workspace/scratch/10b2b87c2738/runtime/dotnet/dotnet /workspace/scratch/10b2b87c2738/runtime/validator/OfficeValidation.dll /workspace/scratch/10b2b87c2738/validation/fid029-style-zero-probe/final-input /workspace/scratch/10b2b87c2738/validation/fid029-style-zero-probe/final-schema.json",
+    "schema_exit_code": 0,
+    "schema_files": 7,
+    "schema_failures": 0,
+    "render_command": "python3 tool/office-validation/render.py /workspace/scratch/10b2b87c2738/validation/fid029-style-zero-probe/final-input /workspace/scratch/10b2b87c2738/validation/fid029-style-zero-probe/final-render --schema-report /workspace/scratch/10b2b87c2738/validation/fid029-style-zero-probe/final-schema.json",
+    "render_exit_code": 0,
+    "rendered_files": 7,
+    "rendered_pages": 7,
+    "cycle_groups": 2,
+    "source_baseline_comparisons": 1,
+    "failures": [],
+    "renderer": "LibreOffice 24.2.7.2 ee3885777aa7032db5a9b65deec9457448a91162 (LibreOfficeKit embedding API)",
+    "all_inputs_rehashed_after": true,
+    "qualification": "Full decoded RGB fingerprints and complete page text; no mask, tolerance, new exemption or renderer change."
+  },
+  "source_fingerprints": [
+    {
+      "path": "/workspace/scratch/10b2b87c2738/quds_office_suite/packages/quds_office_engine/lib/src/sheet/model/sml_workbook.dart",
+      "bytes": 42851,
+      "sha256": "3774356849c378705c114178645f3be6d5593a9869b5d0ab787bf7c97d1a69b7"
+    },
+    {
+      "path": "/workspace/scratch/10b2b87c2738/quds_office_suite/packages/quds_office_engine/lib/src/sheet/model/sml_analysis.dart",
+      "bytes": 16528,
+      "sha256": "3e4aaf3eeacf46d13456dc2591127b019f6d5e5639b7fb96c8dcb463b1a38bc9"
+    },
+    {
+      "path": "/workspace/scratch/10b2b87c2738/quds_office_suite/packages/quds_office_engine/lib/src/sheet/serial/sheet_serial.dart",
+      "bytes": 45081,
+      "sha256": "6aa2dda8decfdef515a975f057c37c6ac0a20f9f1f0e954728692a90462d5efb"
+    },
+    {
+      "path": "/workspace/scratch/10b2b87c2738/quds_office_suite/packages/quds_office_editor/lib/src/embed/office_controller.dart",
+      "bytes": 330340,
+      "sha256": "23973ded8344737babd015a9670db9a8b88fc3157d0617b78456678c898302fc"
+    },
+    {
+      "path": "/workspace/scratch/10b2b87c2738/quds_office_suite/packages/quds_office_engine/test/sheet_explicit_style_fidelity_test.dart",
+      "bytes": 5606,
+      "sha256": "f9e383c54eb3c17d210335064ec8c252fa38dd2faed77c2369fcae95e7ecf3b9"
+    },
+    {
+      "path": "/workspace/scratch/10b2b87c2738/quds_office_suite/packages/quds_office_editor/test/sheet_explicit_style_history_test.dart",
+      "bytes": 2935,
+      "sha256": "85daba158d05b4ac1f6cbdcc84b348dc534e5d569a833a30488cf22e241c07e1"
+    },
+    {
+      "path": "/workspace/scratch/10b2b87c2738/quds_office_suite/packages/quds_office_engine/tool/fidelity/check.sh",
+      "bytes": 4912,
+      "sha256": "922eaad04b137e60c29cce6790c6a7b5091e0a8347965267ff9867f3038577fc"
+    }
+  ],
+  "receipts": [
+    {
+      "path": "/workspace/scratch/10b2b87c2738/validation/fid029-style-zero-probe/red-tests.log",
+      "bytes": 3308,
+      "sha256": "8d123c4b5a6fe9edd771a8c5748db980a74ec4fe0dc3adb63e6904a2cce97a32"
+    },
+    {
+      "path": "/workspace/scratch/10b2b87c2738/validation/fid029-style-zero-probe/green-engine.log",
+      "bytes": 3207,
+      "sha256": "4abfd0b4dd45eafa75145ae2164af254462ddd33ac97c5f5b529eba69fbe4674"
+    },
+    {
+      "path": "/workspace/scratch/10b2b87c2738/validation/fid029-style-zero-probe/green-editor.log",
+      "bytes": 381,
+      "sha256": "5fbd70dc501b7e6bb0491923ff796e91e93b2c84e23c393a4e493031b0fb46ff"
+    },
+    {
+      "path": "/workspace/scratch/10b2b87c2738/validation/fid029-style-zero-probe/analysis-engine.log",
+      "bytes": 127,
+      "sha256": "0cfbc80ce554def357b98a57139ea01cb4d8e2ae44584cc665f44973dc10598e"
+    },
+    {
+      "path": "/workspace/scratch/10b2b87c2738/validation/fid029-style-zero-probe/analysis-editor.log",
+      "bytes": 97,
+      "sha256": "2b3cf739df6b9cf6d631ee3da8534f0a34af10d2a591fe9fad74617ec62c92ee"
+    },
+    {
+      "path": "/workspace/scratch/10b2b87c2738/validation/fid029-style-zero-probe/before-render-report.json",
+      "bytes": 15260,
+      "sha256": "d8ada123beb4b47a15a991e91ff01aecbbc8a37aad580734e1f8031bee38b00c"
+    },
+    {
+      "path": "/workspace/scratch/10b2b87c2738/validation/fid029-style-zero-probe/probe.json",
+      "bytes": 568,
+      "sha256": "07489531344cce9d04093d83de267c60b1cada7daf3ed95cc64939484dc76b14"
+    },
+    {
+      "path": "/workspace/scratch/10b2b87c2738/validation/fid029-style-zero-probe/render/render-report.json",
+      "bytes": 1075,
+      "sha256": "8d3b2e2186350c9717682ff5d4452a4b2939b8d3176dfa566cdb88a4fa256908"
+    },
+    {
+      "path": "/workspace/scratch/10b2b87c2738/validation/fid029-style-zero-probe/final-input-manifest.json",
+      "bytes": 2654,
+      "sha256": "804572223f4672cab17ac450d1e75db528ac73420650dda8861ea2b0de99c3bd"
+    },
+    {
+      "path": "/workspace/scratch/10b2b87c2738/validation/fid029-style-zero-probe/final-schema.json",
+      "bytes": 1656,
+      "sha256": "f7e3e1f98937cdf7134b3744b2ab61a17d95f3ccb9fe7bbb3aeec76fb1f0a524"
+    },
+    {
+      "path": "/workspace/scratch/10b2b87c2738/validation/fid029-style-zero-probe/final-schema.log",
+      "bytes": 820,
+      "sha256": "4edc9bbfcc25ee2c97ffd51949964a7a258d44e5eca6a50537efd95102502d87"
+    },
+    {
+      "path": "/workspace/scratch/10b2b87c2738/validation/fid029-style-zero-probe/final-render/render-report.json",
+      "bytes": 4996,
+      "sha256": "bc5a5f693c68edf97ab6de699fe7bf0a0969c86baaec535148fe3fda0bc6400c"
+    },
+    {
+      "path": "/workspace/scratch/10b2b87c2738/validation/fid029-style-zero-probe/final-render.log",
+      "bytes": 246,
+      "sha256": "401352c558746565489a552e73db0afdd6b1a11b979fb926fd10513f748cbb42"
+    }
+  ],
+  "outputs": [
+    {
+      "source": "/workspace/scratch/10b2b87c2738/quds_office_suite/packages/quds_office_engine/build/fidelity-sheet-normal-font/normal-font-1.xlsx",
+      "file": "/workspace/scratch/10b2b87c2738/validation/fid029-style-zero-probe/final-input/normal-font-1.xlsx",
+      "size": 3748,
+      "sha256": "5c076a9f7b717158ad99d0594d4fb847760390c1f48bde48a425d538f7a16130"
+    },
+    {
+      "source": "/workspace/scratch/10b2b87c2738/quds_office_suite/packages/quds_office_engine/build/fidelity-sheet-normal-font/normal-font-2.xlsx",
+      "file": "/workspace/scratch/10b2b87c2738/validation/fid029-style-zero-probe/final-input/normal-font-2.xlsx",
+      "size": 3755,
+      "sha256": "4a1392cbebd0098f39caad9dd74719a4ff97d671b7f10bd76bf61f25ccc7cbf1"
+    },
+    {
+      "source": "/workspace/scratch/10b2b87c2738/quds_office_suite/packages/quds_office_engine/build/fidelity-sheet-normal-font/normal-font-3.xlsx",
+      "file": "/workspace/scratch/10b2b87c2738/validation/fid029-style-zero-probe/final-input/normal-font-3.xlsx",
+      "size": 3755,
+      "sha256": "435ee6f6d3a64d747bb992b1a8c4e24389bc7d022c00ac3186ce246ee1ae51db"
+    },
+    {
+      "source": "/workspace/scratch/10b2b87c2738/quds_office_suite/packages/quds_office_engine/build/fidelity-sheet-normal-font/source.xlsx",
+      "file": "/workspace/scratch/10b2b87c2738/validation/fid029-style-zero-probe/final-input/source.xlsx",
+      "size": 2258,
+      "sha256": "7021b9a131d929d4ae6d4074a69056c997efa5b96f7693d4ba15d6c9a41b737f"
+    },
+    {
+      "source": "/workspace/scratch/10b2b87c2738/quds_office_suite/packages/quds_office_engine/build/fidelity-sheet-normal-font/unchanged-1.xlsx",
+      "file": "/workspace/scratch/10b2b87c2738/validation/fid029-style-zero-probe/final-input/unchanged-1.xlsx",
+      "size": 3742,
+      "sha256": "bfc366ec6f39ea902c73d827b1cee0698d7f58c623f72a3224876ddf60fcbaaf"
+    },
+    {
+      "source": "/workspace/scratch/10b2b87c2738/quds_office_suite/packages/quds_office_engine/build/fidelity-sheet-normal-font/unchanged-2.xlsx",
+      "file": "/workspace/scratch/10b2b87c2738/validation/fid029-style-zero-probe/final-input/unchanged-2.xlsx",
+      "size": 3749,
+      "sha256": "868b3a3f7b07aa6bea31638cbafa8bfcf89724d9692a6635f671a19b9a9cb5b2"
+    },
+    {
+      "source": "/workspace/scratch/10b2b87c2738/quds_office_suite/packages/quds_office_engine/build/fidelity-sheet-normal-font/unchanged-3.xlsx",
+      "file": "/workspace/scratch/10b2b87c2738/validation/fid029-style-zero-probe/final-input/unchanged-3.xlsx",
+      "size": 3749,
+      "sha256": "526268334b206a2f4d2388ed769ab6e82ed40123df1dd651164b38e228b3f43c"
+    }
+  ],
+  "limits": [
+    "Preserves native style attribute presence, including style0; no expansion of general Excel style semantics.",
+    "Seven-file visual proof is the independently authored Normal-font fixture, three unchanged and three width-edited outputs."
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "renderer": "LibreOffice 24.2.7.2 ee3885777aa7032db5a9b65deec9457448a91162 (LibreOfficeKit embedding API)",
+  "files": 7,
+  "rendered_files": 7,
+  "visual_input_files": 7,
+  "native_schema_only_files": 0,
+  "native_schema_only": [],
+  "schema_report": "/workspace/scratch/10b2b87c2738/validation/fid029-style-zero-probe/final-schema.json",
+  "pixel_fingerprint": "SHA-256 of big-endian uint32 width/height followed by RGB bytes",
+  "cycle_groups": 2,
+  "cycle_comparisons": [
+    {
+      "case": "normal-font.xlsx",
+      "expected_cycles": [
+        1,
+        2,
+        3
+      ],
+      "actual_cycles": [
+        1,
+        2,
+        3
+      ],
+      "files": [
+        "normal-font-1.xlsx",
+        "normal-font-2.xlsx",
+        "normal-font-3.xlsx"
+      ],
+      "baseline": null,
+      "baseline_candidate": null,
+      "baseline_page_order": null,
+      "passed": true
+    },
+    {
+      "case": "unchanged.xlsx",
+      "expected_cycles": [
+        1,
+        2,
+        3
+      ],
+      "actual_cycles": [
+        1,
+        2,
+        3
+      ],
+      "files": [
+        "unchanged-1.xlsx",
+        "unchanged-2.xlsx",
+        "unchanged-3.xlsx"
+      ],
+      "baseline": "source.xlsx",
+      "baseline_candidate": "source.xlsx",
+      "baseline_page_order": null,
+      "passed": true
+    }
+  ],
+  "baseline_comparisons": 1,
+  "page_order_comparisons": 0,
+  "render_only_files": [],
+  "failures": [],
+  "reports": [
+    {
+      "file": "normal-font-1.xlsx",
+      "pages": 1,
+      "text": "Normal-font column widths\n\f",
+      "pixel_sha256": [
+        "1cf691b30b12b0b3cfc9ef7961d328722575fcbf6ab93dae5a529aab80b696e1"
+      ],
+      "pdf": "000/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "000/page-0001.png",
+          "pixel_sha256": "1cf691b30b12b0b3cfc9ef7961d328722575fcbf6ab93dae5a529aab80b696e1"
+        }
+      ]
+    },
+    {
+      "file": "normal-font-2.xlsx",
+      "pages": 1,
+      "text": "Normal-font column widths\n\f",
+      "pixel_sha256": [
+        "1cf691b30b12b0b3cfc9ef7961d328722575fcbf6ab93dae5a529aab80b696e1"
+      ],
+      "pdf": "001/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "001/page-0001.png",
+          "pixel_sha256": "1cf691b30b12b0b3cfc9ef7961d328722575fcbf6ab93dae5a529aab80b696e1"
+        }
+      ]
+    },
+    {
+      "file": "normal-font-3.xlsx",
+      "pages": 1,
+      "text": "Normal-font column widths\n\f",
+      "pixel_sha256": [
+        "1cf691b30b12b0b3cfc9ef7961d328722575fcbf6ab93dae5a529aab80b696e1"
+      ],
+      "pdf": "002/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "002/page-0001.png",
+          "pixel_sha256": "1cf691b30b12b0b3cfc9ef7961d328722575fcbf6ab93dae5a529aab80b696e1"
+        }
+      ]
+    },
+    {
+      "file": "source.xlsx",
+      "pages": 1,
+      "text": "Normal-font column widths\n\f",
+      "pixel_sha256": [
+        "1cf691b30b12b0b3cfc9ef7961d328722575fcbf6ab93dae5a529aab80b696e1"
+      ],
+      "pdf": "003/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "003/page-0001.png",
+          "pixel_sha256": "1cf691b30b12b0b3cfc9ef7961d328722575fcbf6ab93dae5a529aab80b696e1"
+        }
+      ]
+    },
+    {
+      "file": "unchanged-1.xlsx",
+      "pages": 1,
+      "text": "Normal-font column widths\n\f",
+      "pixel_sha256": [
+        "1cf691b30b12b0b3cfc9ef7961d328722575fcbf6ab93dae5a529aab80b696e1"
+      ],
+      "pdf": "004/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "004/page-0001.png",
+          "pixel_sha256": "1cf691b30b12b0b3cfc9ef7961d328722575fcbf6ab93dae5a529aab80b696e1"
+        }
+      ]
+    },
+    {
+      "file": "unchanged-2.xlsx",
+      "pages": 1,
+      "text": "Normal-font column widths\n\f",
+      "pixel_sha256": [
+        "1cf691b30b12b0b3cfc9ef7961d328722575fcbf6ab93dae5a529aab80b696e1"
+      ],
+      "pdf": "005/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "005/page-0001.png",
+          "pixel_sha256": "1cf691b30b12b0b3cfc9ef7961d328722575fcbf6ab93dae5a529aab80b696e1"
+        }
+      ]
+    },
+    {
+      "file": "unchanged-3.xlsx",
+      "pages": 1,
+      "text": "Normal-font column widths\n\f",
+      "pixel_sha256": [
+        "1cf691b30b12b0b3cfc9ef7961d328722575fcbf6ab93dae5a529aab80b696e1"
+      ],
+      "pdf": "006/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "006/page-0001.png",
+          "pixel_sha256": "1cf691b30b12b0b3cfc9ef7961d328722575fcbf6ab93dae5a529aab80b696e1"
+        }
+      ]
+    }
+  ]
+}

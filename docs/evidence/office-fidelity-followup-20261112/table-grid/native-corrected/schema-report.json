@@ -1,0 +1,66 @@
+{
+  "Files": 12,
+  "Failures": 0,
+  "Reports": [
+    {
+      "File": "validation/fid057-native-corrected/input/engine/fidelity-table-grid/edited-1.docx",
+      "Sha256": "8a3529709e0024ec73da6661d3de8986c244d9a831d2a4972328a9ed24aae492",
+      "Errors": []
+    },
+    {
+      "File": "validation/fid057-native-corrected/input/engine/fidelity-table-grid/edited-2.docx",
+      "Sha256": "2055fb12fc7ae86fe0c792deb106af45c79a57094e4def430966514bd04df8bc",
+      "Errors": []
+    },
+    {
+      "File": "validation/fid057-native-corrected/input/engine/fidelity-table-grid/edited-3.docx",
+      "Sha256": "2408aadda8a9a8369fafda2bfe1c28836b8f185a5f8b5e2fb799f7bc012cdb1b",
+      "Errors": []
+    },
+    {
+      "File": "validation/fid057-native-corrected/input/engine/fidelity-table-grid/omitted-1.docx",
+      "Sha256": "85aea16ea096865593c442f4cef63c26828c31e8e653b4f3f607d461696510a5",
+      "Errors": []
+    },
+    {
+      "File": "validation/fid057-native-corrected/input/engine/fidelity-table-grid/omitted-2.docx",
+      "Sha256": "e7ff6e7ab29dac1a90cace0002570ece260342b812f93e61be457ce4fb71bc40",
+      "Errors": []
+    },
+    {
+      "File": "validation/fid057-native-corrected/input/engine/fidelity-table-grid/omitted-3.docx",
+      "Sha256": "95bf16abfa290240ed291dd61efe61e2651b7246329ef9e80417346b0a890fd5",
+      "Errors": []
+    },
+    {
+      "File": "validation/fid057-native-corrected/input/engine/fidelity-table-grid/omitted-edited-1.docx",
+      "Sha256": "2e560db9c2e2cfa164b3c4919906dd1bb54c829b5b1856480aa6b44ad2b5c567",
+      "Errors": []
+    },
+    {
+      "File": "validation/fid057-native-corrected/input/engine/fidelity-table-grid/omitted-edited-2.docx",
+      "Sha256": "a5c2bd606f3eab00968e0a268659468f9e352a3f9b4b6ac28b99f18315ac74a4",
+      "Errors": []
+    },
+    {
+      "File": "validation/fid057-native-corrected/input/engine/fidelity-table-grid/omitted-edited-3.docx",
+      "Sha256": "5bca8c68e4ce18cc96bd6751f9ab7aaf1a2e8541439eb822b9ce60d4d9a8fb0a",
+      "Errors": []
+    },
+    {
+      "File": "validation/fid057-native-corrected/input/engine/fidelity-table-grid/omitted-edited-expected.docx",
+      "Sha256": "f56030b12e3b91fde86de919e9cb9ec38eb2ddadd2c00bc0aea443c1f05b6507",
+      "Errors": []
+    },
+    {
+      "File": "validation/fid057-native-corrected/input/engine/fidelity-table-grid/omitted-source.docx",
+      "Sha256": "708b3d662d51f21ea30441df04cba4cdcb2fcad89d2da84d5dedb82a08fb0853",
+      "Errors": []
+    },
+    {
+      "File": "validation/fid057-native-corrected/input/engine/fidelity-table-grid/source.docx",
+      "Sha256": "8f44b7cbf776d0378c5964c45708d745dcb01eed3679a025bf7225bba297f107",
+      "Errors": []
+    }
+  ]
+}
