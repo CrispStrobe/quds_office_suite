@@ -1,0 +1,30 @@
+00:00 +0: loading /workspace/scratch/07eb2580faa9/quds-word-expansion/packages/quds_office_editor/test/word_bookmark_copy_test.dart
+00:00 +0: complete native bookmark copy keeps ranges, history and three exports
+00:00 +0 -1: complete native bookmark copy keeps ranges, history and three exports [E]
+  Unsupported operation: Pasting this bookmark requires remapping its native ID and name before it can be added to the same story.
+  package:quds_office_editor/src/embed/office_controller.dart 3013:9  WordEditorController._assertIncomingBookmarks
+  package:quds_office_editor/src/embed/office_controller.dart 2927:5  WordEditorController._pasteWordBlocks
+  package:quds_office_editor/src/embed/office_controller.dart 2606:7  WordEditorController.pasteFromClipboard
+  
+00:00 +0 -1: pasting the same payload twice allocates a fresh complete set
+00:00 +0 -2: pasting the same payload twice allocates a fresh complete set [E]
+  Unsupported operation: Pasting this bookmark requires remapping its native ID and name before it can be added to the same story.
+  package:quds_office_editor/src/embed/office_controller.dart 3013:9  WordEditorController._assertIncomingBookmarks
+  package:quds_office_editor/src/embed/office_controller.dart 2927:5  WordEditorController._pasteWordBlocks
+  package:quds_office_editor/src/embed/office_controller.dart 2606:7  WordEditorController.pasteFromClipboard
+  
+00:00 +0 -2: partial copy fails before replacing text or changing existing history
+00:00 +1 -2: empty paste does not allocate bookmarks or create history
+00:00 +2 -2: body copy history remains bound to its story after switching to header
+00:00 +2 -3: body copy history remains bound to its story after switching to header [E]
+  Unsupported operation: Pasting this bookmark requires remapping its native ID and name before it can be added to the same story.
+  package:quds_office_editor/src/embed/office_controller.dart 3013:9  WordEditorController._assertIncomingBookmarks
+  package:quds_office_editor/src/embed/office_controller.dart 2927:5  WordEditorController._pasteWordBlocks
+  package:quds_office_editor/src/embed/office_controller.dart 2606:7  WordEditorController.pasteFromClipboard
+  
+00:00 +2 -3: Some tests failed.
+
+Failing tests:
+  /workspace/scratch/07eb2580faa9/quds-word-expansion/packages/quds_office_editor/test/word_bookmark_copy_test.dart: body copy history remains bound to its story after switching to header
+  /workspace/scratch/07eb2580faa9/quds-word-expansion/packages/quds_office_editor/test/word_bookmark_copy_test.dart: complete native bookmark copy keeps ranges, history and three exports
+  /workspace/scratch/07eb2580faa9/quds-word-expansion/packages/quds_office_editor/test/word_bookmark_copy_test.dart: pasting the same payload twice allocates a fresh complete set

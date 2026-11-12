@@ -1,0 +1,14 @@
+{
+  "status": "expected_red",
+  "base_commit": "91a68001d9b4f416cf647b218b082aa0da46da30",
+  "command": "flutter test --no-pub --reporter expanded test/word_bookmark_copy_test.dart",
+  "toolchain": "Flutter 3.44.0 / Dart 3.12.0",
+  "passed": 2,
+  "failed": 3,
+  "failure": "Complete duplicate-producing paste is rejected by the existing _assertIncomingBookmarks guard. Partial-range rejection and empty paste already pass.",
+  "files": {
+    "packages/quds_office_engine/test/fixtures/fidelity/bookmark_copy.xml": "6353fd1493111a544b371711a40b028cb3e21eb811007b64a00a1047e5a5425a",
+    "packages/quds_office_editor/test/word_bookmark_copy_test.dart": "294b5b39dae5af39e9514f39dac3fd97f1f94dc8e02425a87da1775372774b7d",
+    "docs/evidence/office-fidelity-expansion-20261112/bookmark-copy/editor-red.txt": "ea61098acc0825a15e727a3328a0fd9ee9e9ae1017b7e9d810006847de1e133a"
+  }
+}
