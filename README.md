@@ -498,3 +498,5 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md). Issues and pull requests are welcome.
 ## License
 
 [MIT](LICENSE) © Mohammed Asaad Asaad. Fork changes © CrispStrobe, same license.
+
+The November integration also includes the completed worksheet-local-name, bookmark-copy and slide-arrangement regressions from the expansion branch, with the earlier logical-table selector guards retained. The standalone DOC parser is pinned in `packages/legacy_doc_parser/UPSTREAM.json`; its nested tables, bounded metafile images, pagination settings, revision and comment preservation remain subject to the parser’s documented fidelity limits. Historical evidence describes its recorded source checkpoint; integrated CI validates the combined tree.
