@@ -509,4 +509,6 @@ Final integration refresh includes the standalone parser evidence/CI declaration
 
 The next integration refresh mirrors the canonical parser shape/textbox/metafile/schema updates, while retaining the shared engine/editor implementation and Word input guards. Engine legacy-document consumer regressions pass all 21 cases; both implementation analyzers report no issues.
 
-The current combined parser mirror includes note/header boundary preservation, isolated textbox table indentation and corrected semantic oracle contexts. Its canonical source passes 773 Dart tests, 156 Python controls and independent Open XML SDK validation of 217 DOCX outputs. Native rendering evidence remains scoped to its authored cases and records remaining failures.
+The current combined parser mirror includes note/header boundary preservation, native-backed textbox table indentation and corrected semantic oracle contexts. Its canonical source passes 773 Dart tests, 156 Python controls and independent Open XML SDK validation of 217 DOCX outputs. Native rendering evidence remains scoped to its authored cases and records remaining failures.
+
+The final parser refresh retains corroborated shared header shapes with their original IDs and per-anchor geometry. A native rendering counterexample retracted the experimental textbox table-depth reset. Canonical acceptance now covers 809 Dart tests, 162 Python controls and 218 independent SDK-validated DOCX outputs.
