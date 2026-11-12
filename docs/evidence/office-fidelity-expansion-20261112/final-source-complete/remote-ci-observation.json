@@ -1,0 +1,140 @@
+{
+  "observed_at_utc": "2026-11-12 16:13:30 UTC",
+  "observation_completed_utc": "2026-11-12 16:15:56 UTC",
+  "scope": "Read-only exact implementation-pin Office CI observation and focused source-oracle publication audit. Local acceptance results are separate.",
+  "source": {
+    "repository": "CrispStrobe/quds_office_suite",
+    "implementation_commit": "73ad0c42a8ecc81fb11dbde05c6f0cf10b9a1c74",
+    "pull_request": {
+      "number": 3,
+      "url": "https://github.com/CrispStrobe/quds_office_suite/pull/3",
+      "state": "open",
+      "draft": true,
+      "head": "feature/office-fidelity-expansion-20261112",
+      "head_sha": "73ad0c42a8ecc81fb11dbde05c6f0cf10b9a1c74",
+      "base": "feature/office-fidelity-followup-20261112"
+    },
+    "office_runs": [
+      {
+        "id": 43255908816,
+        "event": "pull_request",
+        "status": "queued",
+        "conclusion": null,
+        "head_sha": "73ad0c42a8ecc81fb11dbde05c6f0cf10b9a1c74",
+        "url": "https://github.com/CrispStrobe/quds_office_suite/actions/runs/43255908816"
+      },
+      {
+        "id": 43255894844,
+        "event": "push",
+        "status": "queued",
+        "conclusion": null,
+        "head_sha": "73ad0c42a8ecc81fb11dbde05c6f0cf10b9a1c74",
+        "url": "https://github.com/CrispStrobe/quds_office_suite/actions/runs/43255894844"
+      }
+    ],
+    "office_jobs": {
+      "push": {
+        "total_count": 1,
+        "jobs": [
+          {
+            "id": 131313871976,
+            "name": "office-fidelity",
+            "status": "queued",
+            "conclusion": null,
+            "started_at": "2026-11-12T16:11:16Z",
+            "completed_at": null,
+            "steps": []
+          }
+        ]
+      },
+      "pull_request": {
+        "total_count": 1,
+        "jobs": [
+          {
+            "id": 131313921859,
+            "name": "office-fidelity",
+            "status": "queued",
+            "conclusion": null,
+            "started_at": "2026-11-12T16:11:21Z",
+            "completed_at": null,
+            "steps": []
+          }
+        ]
+      }
+    }
+  },
+  "host": {
+    "repository": "CrispStrobe/CrispCloud",
+    "implementation_commit": "78ea8a020bb9acd6e8b1f26d8caf82c34a99202f",
+    "source_pin": "73ad0c42a8ecc81fb11dbde05c6f0cf10b9a1c74",
+    "pull_request": {
+      "number": 85,
+      "url": "https://github.com/CrispStrobe/CrispCloud/pull/85",
+      "state": "open",
+      "draft": true,
+      "head": "feature/office-fidelity-expansion-20261112",
+      "head_sha": "78ea8a020bb9acd6e8b1f26d8caf82c34a99202f",
+      "base": "feature/office-fidelity-followup-20261112"
+    },
+    "office_runs": [
+      {
+        "id": 43256170521,
+        "event": "pull_request",
+        "status": "queued",
+        "conclusion": null,
+        "head_sha": "78ea8a020bb9acd6e8b1f26d8caf82c34a99202f",
+        "url": "https://github.com/CrispStrobe/CrispCloud/actions/runs/43256170521"
+      },
+      {
+        "id": 43256157579,
+        "event": "push",
+        "status": "queued",
+        "conclusion": null,
+        "head_sha": "78ea8a020bb9acd6e8b1f26d8caf82c34a99202f",
+        "url": "https://github.com/CrispStrobe/CrispCloud/actions/runs/43256157579"
+      }
+    ],
+    "office_jobs": {
+      "push": {
+        "total_count": 1,
+        "jobs": [
+          {
+            "id": 131314821357,
+            "name": "host-roundtrip",
+            "status": "queued",
+            "conclusion": null,
+            "started_at": "2026-11-12T16:12:43Z",
+            "completed_at": null,
+            "steps": []
+          }
+        ]
+      },
+      "pull_request": {
+        "total_count": 0,
+        "jobs": []
+      }
+    }
+  },
+  "execution_observation": "All four Office runs were queued. Source push/PR and host push endpoints returned queued jobs with zero steps; the host PR endpoint returned zero job records. No steps were observed executing.",
+  "conclusion": "No completed remote green result or remote Office test failure is established for these exact implementation pins. No cancellation cause is inferred.",
+  "focused_oracle_publication": {
+    "status": "passed",
+    "source_commit": "73ad0c42a8ecc81fb11dbde05c6f0cf10b9a1c74",
+    "parent_commit": "142b9c7444ec584b4f283e455122397e22e647a8",
+    "changed_files_verified": 22,
+    "focused_evidence_files": 20,
+    "renderer_code_files": 2,
+    "artifact_hashes_verified": 19,
+    "proof_archive_members_verified": 33,
+    "verification": "GitHub commit blob identities match exact local committed/worktree bytes; SHA-256 evidence/source inventories and all archived member hashes match.",
+    "tests_or_rendering_rerun": false
+  },
+  "previous_implementation_observation": {
+    "source": "1d19150ff35e95374fa3c11e0b6a43d187d24024",
+    "host": "561f486b9f13248f90dba679bdbf60bf8dc8ffcf",
+    "preserved_unchanged": true,
+    "compact_sha256": "c693c3aa5c29278c6ca273bd6f4ffa92ffd2cbb4f1cad0857494a43e3873f99f",
+    "raw_gzip_sha256": "bd8151da0a65358d200685b0fdf8e3852179dd27aed2953dcf2b2d4f421e606c"
+  },
+  "mutations_performed": []
+}

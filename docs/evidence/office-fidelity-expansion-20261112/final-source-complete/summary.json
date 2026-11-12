@@ -1,0 +1,277 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-11-12T16:25:40.658861+00:00",
+  "source_commit": "73ad0c42a8ecc81fb11dbde05c6f0cf10b9a1c74",
+  "source_tree": "27ae08a9ed307500a87113669a95f6656dcc7cad",
+  "evidence_packaging_parent": "73ad0c42a8ecc81fb11dbde05c6f0cf10b9a1c74",
+  "checkout": "/workspace/scratch/07eb2580faa9/quds-expansion-validation-complete",
+  "full_worktree_clean": true,
+  "source_files_verified": 947,
+  "source_snapshot_sha256": "7388ac729d0cacb9b219f14cc8199cecfda61568ed942fd20a9f6874ed1a0c85",
+  "runtime": {
+    "flutter": "3.44.0",
+    "flutter_revision": "559ffa3f75e7402d65a8def9c28389a9b2e6fe42",
+    "dart": "Dart SDK version: 3.12.0 (stable) (Fri May 8 01:51:14 2026 -0700) on \"linux_x64\""
+  },
+  "engine": {
+    "analyzer": "passed",
+    "full_suite": {
+      "success_marker": "02:21 +1610 ~1: All tests passed!",
+      "passed": 1610,
+      "skipped": 1,
+      "skip_diagnostics": [
+        "01:21 +1220: test/wave4_platform_test.dart: multi-face PDF embeds distinct font resources\n  Latin face already covers Arabic; cannot force F3\n01:21 +1220 ~1: test/report_engine_test.dart: Ready-made templates class_certificate_ar parses, validates, and exports"
+      ]
+    },
+    "mandatory_fidelity": {
+      "success_marker": "00:21 +1147: All tests passed!",
+      "passed": 1147,
+      "skipped": 0,
+      "python_controls": 436,
+      "skip_diagnostics": []
+    },
+    "inventory_files": 346,
+    "three_cycle_series": 102,
+    "standalone_files": 40,
+    "feature_workflows": {
+      "features": [
+        "comments",
+        "drawings",
+        "endnotes",
+        "footnotes",
+        "headings",
+        "images",
+        "paragraphs",
+        "placement",
+        "references",
+        "slides",
+        "spreadsheets",
+        "styles",
+        "tables",
+        "textflow",
+        "tocs"
+      ],
+      "bundles": [
+        "base-word",
+        "bibliography",
+        "bookmark-copy",
+        "bookmarks",
+        "comments",
+        "cross-format",
+        "frames",
+        "image-replacement",
+        "inline-fields",
+        "native-sheets-slides",
+        "note-markers",
+        "notes",
+        "scripted",
+        "sheet-qualified-names",
+        "sheet-rename",
+        "slide-arrange",
+        "slide-sections",
+        "story-media",
+        "structure",
+        "styles",
+        "table-borders",
+        "table-grid"
+      ],
+      "matrix_sha256": "c07da134e864e9501963c08456a31605ac3af904591ae2251e6aa57960abd7ea",
+      "output_manifest_sha256": "3995809ba6d473cd0a390e0fbc6aeb7d8770b39b89064c166b435224c65a8be0",
+      "scope": "Selected producer scenarios and independent package oracles; not full-suite, branch-coverage or Microsoft Office visual-equivalence certification.",
+      "outputs": 236,
+      "commands": 44
+    },
+    "coverage": {
+      "covered_lines": 45186,
+      "instrumented_lines": 54575,
+      "percent": 82.796152,
+      "fresh_vm_files": 123,
+      "verified_collection": true,
+      "components": {
+        "word": {
+          "covered_lines": 9681,
+          "instrumented_lines": 11364,
+          "uninstrumented_files": [],
+          "percent": 85.190074
+        },
+        "sheet": {
+          "covered_lines": 4251,
+          "instrumented_lines": 5023,
+          "uninstrumented_files": [],
+          "percent": 84.630699
+        },
+        "slide": {
+          "covered_lines": 2182,
+          "instrumented_lines": 2541,
+          "uninstrumented_files": [],
+          "percent": 85.871704
+        },
+        "pdf": {
+          "covered_lines": 11834,
+          "instrumented_lines": 15289,
+          "uninstrumented_files": [
+            "lib/src/pdf/templates/suite_index.dart"
+          ],
+          "percent": 77.402054
+        },
+        "reports": {
+          "covered_lines": 9588,
+          "instrumented_lines": 11295,
+          "uninstrumented_files": [],
+          "percent": 84.887118
+        }
+      }
+    }
+  },
+  "editor": {
+    "analyzer": "passed",
+    "full_suite": {
+      "success_marker": "00:37 +521 ~1: All tests passed!",
+      "passed": 521,
+      "skipped": 1,
+      "skip_diagnostics": [
+        "00:08 +109: /workspace/scratch/07eb2580faa9/quds-expansion-validation-complete/packages/quds_office_editor/test/pdf_pixel_compare_render_test.dart: render al_tahreer pages for pixel compare\n  Skip: needs /home/mohammed/Desktop/al_tahreer_profile.pdf (local compare tool)\n00:08 +109 ~1: /workspace/scratch/07eb2580faa9/quds-expansion-validation-complete/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: alignment and leader controls export native values through history and three saves"
+      ]
+    },
+    "all_native_oracles": "passed",
+    "inventory_files": 29,
+    "three_cycle_series": 9,
+    "standalone_files": 2,
+    "engine_prerequisite_verified": {
+      "path": "/workspace/scratch/07eb2580faa9/acceptance-expansion/final-source-complete/engine/acceptance.json",
+      "sha256": "282517d5f845125420482f2c29276f1b99df0e1df5e56adf946178e1177f9151",
+      "commit": "73ad0c42a8ecc81fb11dbde05c6f0cf10b9a1c74",
+      "source_snapshot_sha256": "7388ac729d0cacb9b219f14cc8199cecfda61568ed942fd20a9f6874ed1a0c85",
+      "finished_utc": "2026-11-12T16:17:17.767745+00:00"
+    }
+  },
+  "external": {
+    "inputs": 375,
+    "schema_failures": 0,
+    "rendered_files": 368,
+    "rendered_pages": 687,
+    "native_schema_only_files": 7,
+    "cycle_groups": 109,
+    "baseline_comparisons": 47,
+    "page_order_comparisons": 10,
+    "all_producer_source_fingerprints_unchanged": true,
+    "all_original_and_snapshot_hashes_unchanged": true,
+    "failures": []
+  },
+  "renderer_controls": 66,
+  "qualified_native_files": [
+    {
+      "file": "quds_office_engine/fidelity-aux-controls/edited-1.docx",
+      "status": "native_schema_only",
+      "reason": "LibreOffice rejected the authored native block content control in a comment. These exact files passed the independent native XML oracle and matching Open XML SDK receipts; they have no visual certification from this renderer.",
+      "source": "quds_office_engine/fidelity-aux-controls/source.docx",
+      "source_diagnostic": "{ \"ProductName\": \"LibreOffice\", \"ProductVersion\": \"24.2\", \"ProductExtension\": \".7.2\", \"BuildId\": \"ee3885777aa7032db5a9b65deec9457448a91162\" }\n\nLOK stage: load\nNo language allowlisted, turning off the language support.\nLibreOfficeKit import failed: loadComponentFromURL returned an empty reference\nError: source file could not be loaded\n",
+      "source_conversion": {
+        "returncode": 1,
+        "stdout": "{ \"ProductName\": \"LibreOffice\", \"ProductVersion\": \"24.2\", \"ProductExtension\": \".7.2\", \"BuildId\": \"ee3885777aa7032db5a9b65deec9457448a91162\" }\n",
+        "stderr": "LOK stage: load\nNo language allowlisted, turning off the language support.\nLibreOfficeKit import failed: loadComponentFromURL returned an empty reference\nError: source file could not be loaded\n"
+      },
+      "schema_sha256": "f0931e7a205b1c73dfdfdb11887b363f42ca8508c90f0bcc6fb6647701a5f1d7"
+    },
+    {
+      "file": "quds_office_engine/fidelity-aux-controls/edited-2.docx",
+      "status": "native_schema_only",
+      "reason": "LibreOffice rejected the authored native block content control in a comment. These exact files passed the independent native XML oracle and matching Open XML SDK receipts; they have no visual certification from this renderer.",
+      "source": "quds_office_engine/fidelity-aux-controls/source.docx",
+      "source_diagnostic": "{ \"ProductName\": \"LibreOffice\", \"ProductVersion\": \"24.2\", \"ProductExtension\": \".7.2\", \"BuildId\": \"ee3885777aa7032db5a9b65deec9457448a91162\" }\n\nLOK stage: load\nNo language allowlisted, turning off the language support.\nLibreOfficeKit import failed: loadComponentFromURL returned an empty reference\nError: source file could not be loaded\n",
+      "source_conversion": {
+        "returncode": 1,
+        "stdout": "{ \"ProductName\": \"LibreOffice\", \"ProductVersion\": \"24.2\", \"ProductExtension\": \".7.2\", \"BuildId\": \"ee3885777aa7032db5a9b65deec9457448a91162\" }\n",
+        "stderr": "LOK stage: load\nNo language allowlisted, turning off the language support.\nLibreOfficeKit import failed: loadComponentFromURL returned an empty reference\nError: source file could not be loaded\n"
+      },
+      "schema_sha256": "e3f4d9126ba776e21139f8728140ac0332d7c37527b5f3aa46c27e045f35a0d9"
+    },
+    {
+      "file": "quds_office_engine/fidelity-aux-controls/edited-3.docx",
+      "status": "native_schema_only",
+      "reason": "LibreOffice rejected the authored native block content control in a comment. These exact files passed the independent native XML oracle and matching Open XML SDK receipts; they have no visual certification from this renderer.",
+      "source": "quds_office_engine/fidelity-aux-controls/source.docx",
+      "source_diagnostic": "{ \"ProductName\": \"LibreOffice\", \"ProductVersion\": \"24.2\", \"ProductExtension\": \".7.2\", \"BuildId\": \"ee3885777aa7032db5a9b65deec9457448a91162\" }\n\nLOK stage: load\nNo language allowlisted, turning off the language support.\nLibreOfficeKit import failed: loadComponentFromURL returned an empty reference\nError: source file could not be loaded\n",
+      "source_conversion": {
+        "returncode": 1,
+        "stdout": "{ \"ProductName\": \"LibreOffice\", \"ProductVersion\": \"24.2\", \"ProductExtension\": \".7.2\", \"BuildId\": \"ee3885777aa7032db5a9b65deec9457448a91162\" }\n",
+        "stderr": "LOK stage: load\nNo language allowlisted, turning off the language support.\nLibreOfficeKit import failed: loadComponentFromURL returned an empty reference\nError: source file could not be loaded\n"
+      },
+      "schema_sha256": "c5ee753d6ae2a7d0a7067ebc2509ead1d5d719ed7ebc93dc1b3f644d6fc71f9b"
+    },
+    {
+      "file": "quds_office_engine/fidelity-aux-controls/imported-1.docx",
+      "status": "native_schema_only",
+      "reason": "LibreOffice rejected the authored native block content control in a comment. These exact files passed the independent native XML oracle and matching Open XML SDK receipts; they have no visual certification from this renderer.",
+      "source": "quds_office_engine/fidelity-aux-controls/source.docx",
+      "source_diagnostic": "{ \"ProductName\": \"LibreOffice\", \"ProductVersion\": \"24.2\", \"ProductExtension\": \".7.2\", \"BuildId\": \"ee3885777aa7032db5a9b65deec9457448a91162\" }\n\nLOK stage: load\nNo language allowlisted, turning off the language support.\nLibreOfficeKit import failed: loadComponentFromURL returned an empty reference\nError: source file could not be loaded\n",
+      "source_conversion": {
+        "returncode": 1,
+        "stdout": "{ \"ProductName\": \"LibreOffice\", \"ProductVersion\": \"24.2\", \"ProductExtension\": \".7.2\", \"BuildId\": \"ee3885777aa7032db5a9b65deec9457448a91162\" }\n",
+        "stderr": "LOK stage: load\nNo language allowlisted, turning off the language support.\nLibreOfficeKit import failed: loadComponentFromURL returned an empty reference\nError: source file could not be loaded\n"
+      },
+      "schema_sha256": "4db271b7fdd3c073ff3c549545e86add815d0453eb093792a22207c4df9e17cc"
+    },
+    {
+      "file": "quds_office_engine/fidelity-aux-controls/imported-2.docx",
+      "status": "native_schema_only",
+      "reason": "LibreOffice rejected the authored native block content control in a comment. These exact files passed the independent native XML oracle and matching Open XML SDK receipts; they have no visual certification from this renderer.",
+      "source": "quds_office_engine/fidelity-aux-controls/source.docx",
+      "source_diagnostic": "{ \"ProductName\": \"LibreOffice\", \"ProductVersion\": \"24.2\", \"ProductExtension\": \".7.2\", \"BuildId\": \"ee3885777aa7032db5a9b65deec9457448a91162\" }\n\nLOK stage: load\nNo language allowlisted, turning off the language support.\nLibreOfficeKit import failed: loadComponentFromURL returned an empty reference\nError: source file could not be loaded\n",
+      "source_conversion": {
+        "returncode": 1,
+        "stdout": "{ \"ProductName\": \"LibreOffice\", \"ProductVersion\": \"24.2\", \"ProductExtension\": \".7.2\", \"BuildId\": \"ee3885777aa7032db5a9b65deec9457448a91162\" }\n",
+        "stderr": "LOK stage: load\nNo language allowlisted, turning off the language support.\nLibreOfficeKit import failed: loadComponentFromURL returned an empty reference\nError: source file could not be loaded\n"
+      },
+      "schema_sha256": "510d86a35bb7713a05ad925dfb530f1a39340ceae4aa320578f09a52a6ce130b"
+    },
+    {
+      "file": "quds_office_engine/fidelity-aux-controls/imported-3.docx",
+      "status": "native_schema_only",
+      "reason": "LibreOffice rejected the authored native block content control in a comment. These exact files passed the independent native XML oracle and matching Open XML SDK receipts; they have no visual certification from this renderer.",
+      "source": "quds_office_engine/fidelity-aux-controls/source.docx",
+      "source_diagnostic": "{ \"ProductName\": \"LibreOffice\", \"ProductVersion\": \"24.2\", \"ProductExtension\": \".7.2\", \"BuildId\": \"ee3885777aa7032db5a9b65deec9457448a91162\" }\n\nLOK stage: load\nNo language allowlisted, turning off the language support.\nLibreOfficeKit import failed: loadComponentFromURL returned an empty reference\nError: source file could not be loaded\n",
+      "source_conversion": {
+        "returncode": 1,
+        "stdout": "{ \"ProductName\": \"LibreOffice\", \"ProductVersion\": \"24.2\", \"ProductExtension\": \".7.2\", \"BuildId\": \"ee3885777aa7032db5a9b65deec9457448a91162\" }\n",
+        "stderr": "LOK stage: load\nNo language allowlisted, turning off the language support.\nLibreOfficeKit import failed: loadComponentFromURL returned an empty reference\nError: source file could not be loaded\n"
+      },
+      "schema_sha256": "50bd2674130c27d1397897477214edfd789ecc4e0947dc3c448befbae028b40a"
+    },
+    {
+      "file": "quds_office_engine/fidelity-aux-controls/source.docx",
+      "status": "native_schema_only",
+      "reason": "LibreOffice rejected the authored native block content control in a comment. These exact files passed the independent native XML oracle and matching Open XML SDK receipts; they have no visual certification from this renderer.",
+      "source": "quds_office_engine/fidelity-aux-controls/source.docx",
+      "source_diagnostic": "{ \"ProductName\": \"LibreOffice\", \"ProductVersion\": \"24.2\", \"ProductExtension\": \".7.2\", \"BuildId\": \"ee3885777aa7032db5a9b65deec9457448a91162\" }\n\nLOK stage: load\nNo language allowlisted, turning off the language support.\nLibreOfficeKit import failed: loadComponentFromURL returned an empty reference\nError: source file could not be loaded\n",
+      "source_conversion": {
+        "returncode": 1,
+        "stdout": "{ \"ProductName\": \"LibreOffice\", \"ProductVersion\": \"24.2\", \"ProductExtension\": \".7.2\", \"BuildId\": \"ee3885777aa7032db5a9b65deec9457448a91162\" }\n",
+        "stderr": "LOK stage: load\nNo language allowlisted, turning off the language support.\nLibreOfficeKit import failed: loadComponentFromURL returned an empty reference\nError: source file could not be loaded\n"
+      },
+      "schema_sha256": "fba38173b5148646d8cd00d1f18baffaf4a5bed829bc8d02583dacfbf75ddf4e"
+    }
+  ],
+  "scope": "Full source engine/editor gates, fresh source-bound line coverage, all 15 selected feature workflows, exact 375-input SDK and native corpus acceptance. Native-schema-only files have no native visual certification; feature workflows and line coverage do not imply complete Office parity.",
+  "prior_acceptance": {
+    "source_commit": "1d19150ff35e95374fa3c11e0b6a43d187d24024",
+    "relative_receipts": "../final-source-current",
+    "reason_for_fresh_run": "The shared renderer now verifies the six image-only Word GIF/JPEG captures using independently authored package and raster expectations. All source gates were rerun at this shared source pin; both prior full acceptance packages are retained unchanged."
+  },
+  "artifact_sha256": {
+    "plan.json": "96c46c5c9663e9ac92aa90815193c1b04c3d9810f665aaaedfa6f9825613d595",
+    "engine/acceptance.json": "282517d5f845125420482f2c29276f1b99df0e1df5e56adf946178e1177f9151",
+    "engine/inventory.json": "d35d55d4ab6ace7f5b9a5fe1d1d2dfbab78e028fa9e73902562b54986598b7d3",
+    "engine/coverage-gaps.json": "b2de43d535f363799174b0e06fd8de772aee9261a45b586276b17e88c135d321",
+    "engine/collection-receipt.json": "1cf49c678bb9220ac53cbc30632d9c18424b1f1f0c118abdbe1c4e9ad0ce5089",
+    "engine/feature-workflows.json": "0543490cb5f01eaafec5b9a91ab2afafa445c85c9ad3b0c600e148a1b7334f9b",
+    "editor/acceptance.json": "eeeedfda16bdf28906c15c80a400ab97edd6759f868ca7b7c4ecc4ddbd8b40a2",
+    "editor/inventory.json": "c78097671c8ef3df9f43d9b46d7c33e5a1d3e0140c4e861ece8627a4b53dc4ec",
+    "external/acceptance-summary.json": "004cbe06c17e160b09fa4dde4e95553dd3505d65b88c9629c54c576a66becfe6",
+    "external/input-manifest.json": "5bbbcff950871d84874e462a94901db620b25c76f56c379027c0a030bee626ec",
+    "external/schema-report.json": "66bc65faa1deb850e6a44bab52e38cf2c80a6a404a19bf42097bcfc0d59ee943",
+    "external/render/render-report.json": "27b846fdf35014a1ca5a18b12da2c3559323707938fbd9332c27fe507af6b64f",
+    "external/renderer-provenance.json": "bf99a536448bf938a9b917335d3b9380493b84a07b355039c33808f3ff278d12",
+    "external/schema-validator-provenance.json": "94cd085d040f70c25bc50208c50d4d6655542b06dc794c618fa33bd2373d385e"
+  }
+}

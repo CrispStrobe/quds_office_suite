@@ -1128,6 +1128,24 @@
         "CrispCloud:tool/office_host_evidence.json"
       ],
       "limits": "This covers package rendering and the already modeled save formats; it does not execute or certify macros."
+    },
+    {
+      "id": "FID-093",
+      "status": "closed",
+      "area": "Native evidence for image-only Word GIF/JPEG captures",
+      "finding": "The six authored Word GIF/JPEG exports now require strict package/media validation and measured native page and image content. An independent hand-authored DOCX reference uses opaque black 80x40 media, A4 with 72-point margins, an initial empty Arial 11 paragraph with 1.15 automatic line spacing and 8 points after, then a 60x30-point inline picture. Its native reference fixes the expected top-left position at (72, 94.45) points. The oracle checks the authored layout, native media format/dimensions, single page, empty text, black rectangle bounds and solid interior, white exterior, and identical validated evidence across both three-save groups. All six focused native exports match their independently authored references in complete RGB pixels.",
+      "evidence": [
+        "tool/office-validation/render.py",
+        "tool/office-validation/test_render.py",
+        "docs/evidence/office-fidelity-expansion-20261112/word-picture-oracle/summary.json",
+        "docs/evidence/office-fidelity-expansion-20261112/word-picture-oracle/author_reference.py",
+        "docs/evidence/office-fidelity-expansion-20261112/word-picture-oracle/reference-geometry.json",
+        "docs/evidence/office-fidelity-expansion-20261112/word-picture-oracle/renderer-provenance.json",
+        "docs/evidence/office-fidelity-expansion-20261112/final-source-complete/summary.json",
+        "CrispCloud:test/widget/office_picture_fidelity_test.dart",
+        "CrispCloud:tool/office_host_evidence.json"
+      ],
+      "limits": "Exactly word-picture-gif-[123].docx and word-picture-jpeg-[123].docx under fidelity-host, with the authored A4/Arial 11 layout and recorded native runtime provenance. Physical page rounding is bounded by 0.03 point and raster edges by one pixel. This adds no generic blank-document allowance and does not certify full Word image parity, other image layouts or arbitrary font environments. Additional host authoring controls remain open in FID-089; FID-090 retains its separate twelve-slide scope."
     }
   ],
   "evidence_path_convention": "Unprefixed paths are relative to quds_office_suite; CrispCloud: paths are relative to the host repository."
