@@ -1,0 +1,41 @@
+{
+  "Files": 7,
+  "Failures": 0,
+  "Reports": [
+    {
+      "File": "quds_office_suite/packages/quds_office_engine/build/fidelity-sheet-normal-font/normal-font-1.xlsx",
+      "Sha256": "23748a6871bd7dc62f839ff1e9383697f0f50be72d0c1d09d4c4f6d0a103f79c",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_suite/packages/quds_office_engine/build/fidelity-sheet-normal-font/normal-font-2.xlsx",
+      "Sha256": "afc84fdd504859b3670298d87b2a9133a3804bf7b96c5927f8d1067bf23311b3",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_suite/packages/quds_office_engine/build/fidelity-sheet-normal-font/normal-font-3.xlsx",
+      "Sha256": "0e1689f313e0b6b6faa4d4bae4c2eba6f50212747d6842d0d728058eab0f5e9c",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_suite/packages/quds_office_engine/build/fidelity-sheet-normal-font/source.xlsx",
+      "Sha256": "7021b9a131d929d4ae6d4074a69056c997efa5b96f7693d4ba15d6c9a41b737f",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_suite/packages/quds_office_engine/build/fidelity-sheet-normal-font/unchanged-1.xlsx",
+      "Sha256": "3ca635a214e54b343c3789d6abe1c1a079330b6f35f9422f03109b743740321f",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_suite/packages/quds_office_engine/build/fidelity-sheet-normal-font/unchanged-2.xlsx",
+      "Sha256": "368a4713d37e40083b1760fde1d7100fd46835bfae1e5c69db25500f5571bfcf",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_suite/packages/quds_office_engine/build/fidelity-sheet-normal-font/unchanged-3.xlsx",
+      "Sha256": "ed26819ff9cf7b2d3f18bceb656e7f00db7d271f4082e14fe1aff1dda19fa5e4",
+      "Errors": []
+    }
+  ]
+}

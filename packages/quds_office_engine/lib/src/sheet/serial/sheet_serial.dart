@@ -25,6 +25,11 @@ part 'sheet_package_fidelity.dart';
 
 /// Class SheetDeserializer.
 class SheetDeserializer {
+  /// Font lookup stays with the caller; null leaves the documented 7px fallback.
+  SheetDeserializer({this.columnMetricsResolver});
+
+  final SmlColumnMetricsResolver? columnMetricsResolver;
+
   /// read API.
   SmlWorkbook read(OpcPackage package) {
     final SharedStringTable sst =
@@ -36,13 +41,16 @@ class SheetDeserializer {
     SmlStyleSheet? styles;
     if (package.getPart('/xl/styles.xml') != null) {
       List<String>? theme;
+      Map<String, String>? themeFonts;
       final PackagePart? themePart = package.getPart('/xl/theme/theme1.xml');
       if (themePart != null) {
         theme = SmlStyleSheet.parseTheme(themePart.readText());
+        themeFonts = SmlStyleSheet.parseThemeFontFamilies(themePart.readText());
       }
       styles = SmlStyleSheet.parse(
         package.getPart('/xl/styles.xml')!.readText(),
         themeColors: theme,
+        themeFontFamilies: themeFonts,
       );
     }
     final SmlWorkbook book = SmlWorkbook(
@@ -88,6 +96,8 @@ class SheetDeserializer {
     if (book.sheets.isEmpty) {
       book.sheets.add(SmlWorksheet(name: 'Sheet1', sheetId: 1));
     }
+    final resolver = columnMetricsResolver;
+    if (resolver != null) book.resolveColumnMetrics(resolver);
     _readDefinedNames(wb.readText(), book);
     book.sourceDefinedNameState = book.definedNameState();
     SheetChartData.refreshWorkbook(book);
@@ -367,6 +377,19 @@ class SheetDeserializer {
         sheet.freezeRows = y.clamp(0, SmlWorksheet.excelRowCount - 1);
       }
       if (reader.eventType == XmlEventType.startElement &&
+          reader.localName == 'sheetFormatPr') {
+        final width = double.tryParse(
+          reader.getAttribute('defaultColWidth') ?? '',
+        );
+        final base = int.tryParse(reader.getAttribute('baseColWidth') ?? '');
+        sheet.importDefaultColumnWidth(
+          excelWidth: width != null && width.isFinite && width >= 0
+              ? width
+              : null,
+          baseCharacters: base != null && base >= 0 ? base : null,
+        );
+      }
+      if (reader.eventType == XmlEventType.startElement &&
           reader.localName == 'col') {
         final int min = int.tryParse(reader.getAttribute('min') ?? '1') ?? 1;
         final int max =
@@ -635,6 +658,7 @@ class SheetSerializer {
 
   /// write API.
   OpcPackage write(SmlWorkbook book, {bool recalculate = true}) {
+    book.applyResolvedColumnMetrics();
     if (recalculate) {
       FormulaDepGraph(book).recalculate();
     }

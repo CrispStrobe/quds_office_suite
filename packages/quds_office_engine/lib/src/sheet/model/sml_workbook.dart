@@ -338,6 +338,22 @@ class SmlHeaderFooter {
   );
 }
 
+/// Reversible column state, retaining imported width precision and the metric
+/// under which its pixel projection was captured.
+class SmlColumnSnapshot {
+  SmlColumnSnapshot._({
+    required this.pixelWidth,
+    required this.nativeWidth,
+    required this.maximumDigitWidthPx,
+    required Map<String, String> properties,
+  }) : properties = Map<String, String>.unmodifiable(properties);
+
+  final double? pixelWidth;
+  final double? nativeWidth;
+  final int maximumDigitWidthPx;
+  final Map<String, String> properties;
+}
+
 /// Class SmlWorksheet.
 class SmlWorksheet {
   /// SmlWorksheet API.
@@ -478,6 +494,142 @@ class SmlWorksheet {
   // Preserve original character widths when an import is saved unchanged:
   // several stored widths can map to the same integral pixel width.
   final Map<int, double> _importedColumnWidths = <int, double>{};
+
+  int _maximumDigitWidthPx = defaultMaximumDigitWidthPx;
+  double? _nativeDefaultColumnWidth;
+  int? _nativeBaseColumnWidth;
+
+  /// Active 96-dpi Normal-font metric. Seven is an explicit unresolved fallback.
+  int get maximumDigitWidthPx => _maximumDigitWidthPx;
+
+  /// Native default widths use the same Normal-font metric as explicit columns.
+  /// Files omitting both default/base width retain the historical 64px default.
+  double get effectiveDefaultColumnWidthPx {
+    final width = _nativeDefaultColumnWidth;
+    if (width != null) {
+      return columnWidthFromExcel(
+        width,
+        maximumDigitWidth: maximumDigitWidthPx,
+      );
+    }
+    final base = _nativeBaseColumnWidth;
+    return base == null
+        ? defaultColumnWidthPx
+        : base * maximumDigitWidthPx + 5.0;
+  }
+
+  /// Retains native sheetFormatPr values; the serializer keeps their source XML.
+  void importDefaultColumnWidth({double? excelWidth, int? baseCharacters}) {
+    if (excelWidth != null && (!excelWidth.isFinite || excelWidth < 0)) {
+      throw ArgumentError.value(excelWidth, 'excelWidth');
+    }
+    if (baseCharacters != null && baseCharacters < 0) {
+      throw ArgumentError.value(baseCharacters, 'baseCharacters');
+    }
+    _nativeDefaultColumnWidth = excelWidth;
+    _nativeBaseColumnWidth = baseCharacters;
+  }
+
+  /// Captures a column for editor history without flattening its native width.
+  SmlColumnSnapshot captureColumn(int col) => SmlColumnSnapshot._(
+    pixelWidth: columnWidths[col],
+    nativeWidth: _importedColumnWidths[col],
+    maximumDigitWidthPx: maximumDigitWidthPx,
+    properties: columnProperties[col] ?? const <String, String>{},
+  );
+
+  /// Projects a history state under the current font; authored pixel edits stay
+  /// pixels, whereas untouched native widths follow the resolved Normal font.
+  double projectedColumnWidth(SmlColumnSnapshot state) {
+    final pixels = state.pixelWidth;
+    if (pixels == null) return effectiveDefaultColumnWidthPx;
+    final native = state.nativeWidth;
+    if (native != null &&
+        pixels ==
+            columnWidthFromExcel(
+              native,
+              maximumDigitWidth: state.maximumDigitWidthPx,
+            )) {
+      return columnWidthFromExcel(
+        native,
+        maximumDigitWidth: maximumDigitWidthPx,
+      );
+    }
+    return pixels;
+  }
+
+  /// Restores a native-aware history state. Width-only actions preserve later
+  /// unrelated formatting, including column style, grouping and visibility.
+  void restoreColumn(
+    int col,
+    SmlColumnSnapshot state, {
+    bool widthOnly = false,
+  }) {
+    if (state.pixelWidth == null) {
+      columnWidths.remove(col);
+    } else {
+      columnWidths[col] = projectedColumnWidth(state);
+    }
+    if (state.nativeWidth == null) {
+      _importedColumnWidths.remove(col);
+    } else {
+      _importedColumnWidths[col] = state.nativeWidth!;
+    }
+    if (widthOnly) {
+      final custom = state.properties['customWidth'];
+      if (custom == null) {
+        columnProperties[col]?.remove('customWidth');
+      } else {
+        (columnProperties[col] ??= <String, String>{})['customWidth'] = custom;
+      }
+    } else if (state.properties.isEmpty) {
+      columnProperties.remove(col);
+    } else {
+      columnProperties[col] = Map<String, String>.of(state.properties);
+    }
+  }
+
+  /// Captures all modeled and native column dimensions for grid history.
+  Map<int, SmlColumnSnapshot> captureColumns() => {
+    for (final col in {
+      ...columnWidths.keys,
+      ..._importedColumnWidths.keys,
+      ...columnProperties.keys,
+    })
+      col: captureColumn(col),
+  };
+
+  /// Restores grid dimensions after a structural history action.
+  void restoreColumns(Map<int, SmlColumnSnapshot> columns) {
+    columnWidths.clear();
+    _importedColumnWidths.clear();
+    columnProperties.clear();
+    for (final entry in columns.entries) {
+      restoreColumn(entry.key, entry.value);
+    }
+  }
+
+  /// Reprojects untouched imported widths, retaining native precision and later
+  /// explicit pixel edits. It changes view geometry, not document content.
+  void applyColumnMetrics(int maximumDigitWidth) {
+    if (maximumDigitWidth <= 0) {
+      throw ArgumentError.value(maximumDigitWidth, 'maximumDigitWidth');
+    }
+    if (maximumDigitWidth == _maximumDigitWidthPx) return;
+    for (final entry in _importedColumnWidths.entries) {
+      if (columnWidths[entry.key] ==
+          columnWidthFromExcel(
+            entry.value,
+            maximumDigitWidth: _maximumDigitWidthPx,
+          )) {
+        columnWidths[entry.key] = columnWidthFromExcel(
+          entry.value,
+          maximumDigitWidth: maximumDigitWidth,
+        );
+      }
+    }
+    _maximumDigitWidthPx = maximumDigitWidth;
+  }
 
   /// Custom row heights in CSS pixels, keyed by 0-based row index.
   final Map<int, double> rowHeights;
@@ -685,18 +837,26 @@ class SmlWorksheet {
 
   /// Records both the imported character width and its rendered pixel width.
   void importColumnWidth(int col, double excelWidth) {
-    columnWidths[col] = columnWidthFromExcel(excelWidth);
+    columnWidths[col] = columnWidthFromExcel(
+      excelWidth,
+      maximumDigitWidth: maximumDigitWidthPx,
+    );
     _importedColumnWidths[col] = excelWidth;
   }
 
   /// Retains untouched import precision and converts edited pixel widths.
   double exportColumnWidth(int col) {
-    final px = columnWidths[col] ?? defaultColumnWidthPx;
+    final px = columnWidths[col] ?? effectiveDefaultColumnWidthPx;
     final imported = _importedColumnWidths[col];
-    if (imported != null && columnWidthFromExcel(imported) == px) {
+    if (imported != null &&
+        columnWidthFromExcel(
+              imported,
+              maximumDigitWidth: maximumDigitWidthPx,
+            ) ==
+            px) {
       return imported;
     }
-    return columnWidthToExcel(px);
+    return columnWidthToExcel(px, maximumDigitWidth: maximumDigitWidthPx);
   }
 
   /// Column formatting to export, marking explicit width edits as custom.
@@ -707,7 +867,12 @@ class SmlWorksheet {
     final width = columnWidths[col];
     final original = _importedColumnWidths[col];
     if (width != null &&
-        (original == null || columnWidthFromExcel(original) != width)) {
+        (original == null ||
+            columnWidthFromExcel(
+                  original,
+                  maximumDigitWidth: maximumDigitWidthPx,
+                ) !=
+                width)) {
       properties['customWidth'] = '1';
     }
     return properties;
@@ -720,7 +885,8 @@ class SmlWorksheet {
   static double rowHeightToExcel(double px) => px * 72 / 96;
 
   /// columnWidth API.
-  double columnWidth(int col) => columnWidths[col] ?? defaultColumnWidthPx;
+  double columnWidth(int col) =>
+      columnWidths[col] ?? effectiveDefaultColumnWidthPx;
 
   /// rowHeightAt API.
   double rowHeightAt(int row) {
@@ -737,7 +903,7 @@ class SmlWorksheet {
     }
     final double v = px.clamp(minColumnWidthPx, maxColumnWidthPx);
     _importedColumnWidths.remove(col);
-    if ((v - defaultColumnWidthPx).abs() < 0.5) {
+    if ((v - effectiveDefaultColumnWidthPx).abs() < 0.5) {
       columnWidths.remove(col);
       columnProperties[col]?.remove('customWidth');
     } else {
@@ -764,13 +930,14 @@ class SmlWorksheet {
     final int c = col < 0
         ? 0
         : (col > excelColumnCount ? excelColumnCount : col);
-    var x = c * defaultColumnWidthPx;
+    final defaultWidth = effectiveDefaultColumnWidthPx;
+    var x = c * defaultWidth;
     if (columnWidths.isEmpty) {
       return x;
     }
     for (final MapEntry<int, double> e in columnWidths.entries) {
       if (e.key >= 0 && e.key < c) {
-        x += e.value - defaultColumnWidthPx;
+        x += e.value - defaultWidth;
       }
     }
     return x;
@@ -797,10 +964,15 @@ class SmlWorksheet {
     if (x <= 0) {
       return 0;
     }
+    final defaultWidth = effectiveDefaultColumnWidthPx;
     if (columnWidths.isEmpty) {
-      return (x / defaultColumnWidthPx).floor().clamp(0, excelColumnCount - 1);
+      return defaultWidth > 0
+          ? (x / defaultWidth).floor().clamp(0, excelColumnCount - 1)
+          : excelColumnCount - 1;
     }
-    var col = (x / defaultColumnWidthPx).floor().clamp(0, excelColumnCount - 1);
+    var col = defaultWidth > 0
+        ? (x / defaultWidth).floor().clamp(0, excelColumnCount - 1)
+        : 0;
     var left = columnLeft(col);
     var width = columnWidth(col);
     var guard = 0;
@@ -1264,6 +1436,35 @@ class SmlWorkbook {
 
   /// styles API.
   SmlStyleSheet? styles;
+
+  /// Last successfully measured font, or null while using fallback metrics.
+  SmlColumnMetrics? get columnMetrics => _columnMetrics;
+  SmlColumnMetrics? _columnMetrics;
+
+  /// Gives newly added sheets the already resolved workbook font before export.
+  void applyResolvedColumnMetrics() {
+    final metrics = _columnMetrics;
+    if (metrics == null) return;
+    for (final sheet in sheets) {
+      sheet.applyColumnMetrics(metrics.maximumDigitWidthPx);
+    }
+  }
+
+  /// Resolves the native Normal style without asking the pure engine to locate
+  /// platform fonts. Null results leave the current metric and geometry intact.
+  bool resolveColumnMetrics(SmlColumnMetricsResolver resolver) {
+    final font = styles?.normalFont;
+    if (font == null) return false;
+    final measured = resolver(font);
+    if (measured == null) return false;
+    if (measured.maximumDigitWidthPx <= 0 ||
+        measured.resolvedFontFamily.trim().isEmpty) {
+      throw ArgumentError.value(measured, 'columnMetrics');
+    }
+    _columnMetrics = measured;
+    applyResolvedColumnMetrics();
+    return true;
+  }
 
   /// firstSheet API.
   SmlWorksheet get firstSheet => sheets.first;
