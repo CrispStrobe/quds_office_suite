@@ -1,0 +1,21 @@
+{
+  "Files": 3,
+  "Failures": 0,
+  "Reports": [
+    {
+      "File": "quds_office_suite/packages/quds_office_editor/build/fidelity-custom-tabs/editor-tabs-1.docx",
+      "Sha256": "e64b09fb7666ca51684bf8723a48f8ee51ec35043bb8e29550275207f17e19a5",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_suite/packages/quds_office_editor/build/fidelity-custom-tabs/editor-tabs-2.docx",
+      "Sha256": "2271dacab2c110cf6c5160dcde65c937df4e9e5288eeb2178ee411e82342d39a",
+      "Errors": []
+    },
+    {
+      "File": "quds_office_suite/packages/quds_office_editor/build/fidelity-custom-tabs/editor-tabs-3.docx",
+      "Sha256": "3f81beac74233d4490aea3d0252b300b4feb051bc63e2a6951b4beedeed12e2e",
+      "Errors": []
+    }
+  ]
+}
