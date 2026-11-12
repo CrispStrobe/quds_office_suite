@@ -309,11 +309,10 @@ From `packages/quds_office_engine`:
 
 ```sh
 dart analyze
-# Use an empty directory; never combine coverage from different source revisions.
-rm -rf coverage/vm
-dart test --coverage=coverage/vm
+# Use a new directory; the collector refuses to overwrite an earlier run.
+python3 tool/fidelity/collect_coverage.py coverage/vm
 bash tool/fidelity/check.sh
-python3 tool/fidelity/coverage_report.py coverage/vm
+python3 tool/fidelity/coverage_report.py coverage/vm --require-receipt
 cd ../quds_office_editor
 python3 ../quds_office_engine/tool/fidelity/inventory.py clean \
   --package quds_office_editor --package-root . \
