@@ -1,0 +1,104 @@
+00:00 +0: loading /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart
+00:00 +0: body rejects a generated bookmark property merge before any mutation
+00:00 +0 -1: body rejects a generated bookmark property merge before any mutation [E]
+  Expected: throws <Instance of 'UnsupportedError'>
+    Actual: <Instance of 'Future<void>'>
+     Which: emitted <null>
+  
+  package:matcher                                     expectLater
+  package:flutter_test/src/widget_tester.dart 507:8   expectLater
+  test/word_generated_bookmark_paste_test.dart 87:17  main.<fn>
+  ===== asynchronous gap ===========================
+  dart:async                                          _CustomZone.registerUnaryCallback
+  test/word_generated_bookmark_paste_test.dart 59:27  main.<fn>
+  
+00:00 +0 -1: header rejects a generated bookmark property merge before any mutation
+00:00 +0 -2: header rejects a generated bookmark property merge before any mutation [E]
+  Expected: throws <Instance of 'UnsupportedError'>
+    Actual: <Instance of 'Future<void>'>
+     Which: emitted <null>
+  
+  package:matcher                                     expectLater
+  package:flutter_test/src/widget_tester.dart 507:8   expectLater
+  test/word_generated_bookmark_paste_test.dart 87:17  main.<fn>
+  ===== asynchronous gap ===========================
+  dart:async                                          _CustomZone.registerUnaryCallback
+  test/word_generated_bookmark_paste_test.dart 59:27  main.<fn>
+  
+00:00 +0 -2: header rejects a generated bookmark property merge before any mutation in a later paragraph
+00:00 +0 -3: header rejects a generated bookmark property merge before any mutation in a later paragraph [E]
+  Expected: throws <Instance of 'UnsupportedError'>
+    Actual: <Instance of 'Future<void>'>
+     Which: emitted <null>
+  
+  package:matcher                                     expectLater
+  package:flutter_test/src/widget_tester.dart 507:8   expectLater
+  test/word_generated_bookmark_paste_test.dart 87:17  main.<fn>
+  ===== asynchronous gap ===========================
+  dart:async                                          _CustomZone.registerUnaryCallback
+  test/word_generated_bookmark_paste_test.dart 59:27  main.<fn>
+  
+00:00 +0 -3: footer rejects a generated bookmark property merge before any mutation
+00:00 +0 -4: footer rejects a generated bookmark property merge before any mutation [E]
+  Expected: throws <Instance of 'UnsupportedError'>
+    Actual: <Instance of 'Future<void>'>
+     Which: emitted <null>
+  
+  package:matcher                                     expectLater
+  package:flutter_test/src/widget_tester.dart 507:8   expectLater
+  test/word_generated_bookmark_paste_test.dart 87:17  main.<fn>
+  ===== asynchronous gap ===========================
+  dart:async                                          _CustomZone.registerUnaryCallback
+  test/word_generated_bookmark_paste_test.dart 59:27  main.<fn>
+  
+00:00 +0 -4: footer rejects a generated bookmark property merge before any mutation in a later paragraph
+00:00 +0 -5: footer rejects a generated bookmark property merge before any mutation in a later paragraph [E]
+  Expected: throws <Instance of 'UnsupportedError'>
+    Actual: <Instance of 'Future<void>'>
+     Which: emitted <null>
+  
+  package:matcher                                     expectLater
+  package:flutter_test/src/widget_tester.dart 507:8   expectLater
+  test/word_generated_bookmark_paste_test.dart 87:17  main.<fn>
+  ===== asynchronous gap ===========================
+  dart:async                                          _CustomZone.registerUnaryCallback
+  test/word_generated_bookmark_paste_test.dart 59:27  main.<fn>
+  
+00:00 +0 -5: comment rejects a generated bookmark property merge before any mutation
+00:00 +0 -6: comment rejects a generated bookmark property merge before any mutation [E]
+  Expected: throws <Instance of 'UnsupportedError'>
+    Actual: <Instance of 'Future<void>'>
+     Which: emitted <null>
+  
+  package:matcher                                     expectLater
+  package:flutter_test/src/widget_tester.dart 507:8   expectLater
+  test/word_generated_bookmark_paste_test.dart 87:17  main.<fn>
+  ===== asynchronous gap ===========================
+  dart:async                                          _CustomZone.registerUnaryCallback
+  test/word_generated_bookmark_paste_test.dart 59:27  main.<fn>
+  
+00:00 +0 -6: comment rejects a generated bookmark property merge before any mutation in a later paragraph
+00:00 +0 -7: comment rejects a generated bookmark property merge before any mutation in a later paragraph [E]
+  Expected: throws <Instance of 'UnsupportedError'>
+    Actual: <Instance of 'Future<void>'>
+     Which: emitted <null>
+  
+  package:matcher                                     expectLater
+  package:flutter_test/src/widget_tester.dart 507:8   expectLater
+  test/word_generated_bookmark_paste_test.dart 87:17  main.<fn>
+  ===== asynchronous gap ===========================
+  dart:async                                          _CustomZone.registerUnaryCallback
+  test/word_generated_bookmark_paste_test.dart 59:27  main.<fn>
+  
+00:00 +0 -7: an empty target paragraph retains the generated bookmark and history
+00:01 +1 -7: an empty document retains the generated bookmark and history
+00:02 +2 -7: a later complete generated paragraph stays a separate block
+00:02 +3 -7: native endpoint bookmarks still merge into a header with history
+00:02 +4 -7: Some tests failed.
+
+Failing tests:
+  /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart: body rejects a generated bookmark property merge before any mutation
+  /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart: comment rejects a generated bookmark property merge before any mutation
+  /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart: comment rejects a generated bookmark property merge before any mutation in a later paragraph
+  /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart: footer rejects a generated bookmark property merge before any mutation
+  ... and 3 more

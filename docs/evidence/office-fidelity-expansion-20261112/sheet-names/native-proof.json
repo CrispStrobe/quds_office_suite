@@ -1,0 +1,13 @@
+{
+  "path": "native-proof.tar.gz",
+  "bytes": 207512,
+  "sha256": "ba7f27ae8326f22c0694295604129806fab9ea3d20298da83b84a2d69f515111",
+  "schema_files": 10,
+  "rendered_files": 10,
+  "rendered_pages": 29,
+  "exact_native_comparisons": 6,
+  "typed_cache_assertions": 120,
+  "qualified_oracle_controls": 14,
+  "current_rename_oracle_controls": 19,
+  "historical_evidence_modified": false
+}

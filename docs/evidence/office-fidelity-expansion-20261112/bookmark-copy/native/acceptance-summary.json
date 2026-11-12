@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "source_commit": "f217475e1563043707e05b8da3d86da965170258",
+  "producer_files": 9,
+  "source_export_files": 7,
+  "independent_native_reference_files": 2,
+  "schema_files": 9,
+  "schema_failures": 0,
+  "rendered_files": 9,
+  "native_pages": 9,
+  "native_schema_only_files": 0,
+  "cycle_groups": 2,
+  "comparisons": [
+    {
+      "file": "editor/fidelity-bookmark-copy/copied-expected.docx",
+      "baseline": "engine/fidelity-bookmark-copy/copied-expected.docx",
+      "status": "exact_native_match"
+    },
+    {
+      "file": "editor/fidelity-bookmark-copy/editor-1.docx",
+      "baseline": "engine/fidelity-bookmark-copy/copied-expected.docx",
+      "status": "exact_native_match"
+    },
+    {
+      "file": "editor/fidelity-bookmark-copy/editor-2.docx",
+      "baseline": "engine/fidelity-bookmark-copy/copied-expected.docx",
+      "status": "exact_native_match"
+    },
+    {
+      "file": "editor/fidelity-bookmark-copy/editor-3.docx",
+      "baseline": "engine/fidelity-bookmark-copy/copied-expected.docx",
+      "status": "exact_native_match"
+    },
+    {
+      "file": "engine/fidelity-bookmark-copy/copied-1.docx",
+      "baseline": "engine/fidelity-bookmark-copy/copied-expected.docx",
+      "status": "exact_native_match"
+    },
+    {
+      "file": "engine/fidelity-bookmark-copy/copied-2.docx",
+      "baseline": "engine/fidelity-bookmark-copy/copied-expected.docx",
+      "status": "exact_native_match"
+    },
+    {
+      "file": "engine/fidelity-bookmark-copy/copied-3.docx",
+      "baseline": "engine/fidelity-bookmark-copy/copied-expected.docx",
+      "status": "exact_native_match"
+    }
+  ],
+  "renderer_source_sha256": "bf2edbf2f1fa89f2857c3b03f5e494420cfdf02b1a55405a6cccc328e8a522fd",
+  "validator_source_sha256": "4d41f286855ed11a12ecdf0641773c33285847180a3e5cdbf43ce2385a099880",
+  "validator_build_receipt_sha256": "17e857813747994eaf69a5e05cc242bea546471bc00965ff13634661b37e5367",
+  "renderer_provenance_sha256": "0ccd0f13183f25bc77e9f805dfa10db8e78056ea80a68da9bd3ef3db188ad891",
+  "producer_and_snapshot_hashes_unchanged": true
+}

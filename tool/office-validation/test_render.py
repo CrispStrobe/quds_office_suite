@@ -445,6 +445,35 @@ class CycleComparisonTests(unittest.TestCase):
                 self.assertIn('Render changed', result['failures'][0]['error'])
                 self.assertFalse(result['cycle_comparisons'][0]['passed'])
 
+    def test_expansion_first_saves_require_their_independent_native_references(self):
+        authored = [
+            ('fidelity-bookmark-copy', 'copied', '.docx', 'copied-expected.docx'),
+            ('fidelity-bookmark-copy', 'editor', '.docx', 'copied-expected.docx'),
+            ('fidelity-sheet-qualified-names', 'recalculated', '.xlsx', 'expected-recalculated.xlsx'),
+            ('fidelity-sheet-qualified-names', 'renamed', '.xlsx', 'expected-renamed.xlsx'),
+            ('fidelity-sheet-rename', 'renamed', '.xlsx', 'qualified-expected.xlsx'),
+            ('fidelity-slide-arrange', 'direct', '.pptx', 'source.pptx'),
+            ('fidelity-slide-arrange', 'isolate', '.pptx', 'source.pptx'),
+        ]
+        for folder, stem, suffix, expected in authored:
+            with self.subTest(folder=folder, case=stem):
+                cycles = [f'package/{folder}/{stem}-{n}{suffix}' for n in (1, 2, 3)]
+                baseline = f'package/{folder}/{expected}'
+                files = cycles + [baseline]
+                records = {name: record(name) for name in files}
+                passing = render.cycle_coverage(files, records)
+                self.assertEqual(passing['failures'], [])
+                self.assertEqual(passing['baseline_comparisons'], 1)
+                self.assertEqual(passing['cycle_comparisons'][0]['baseline'], baseline)
+                missing = render.cycle_coverage(cycles, records)
+                self.assertIn('Missing required native baseline', missing['failures'][0]['error'])
+                for difference in ({'text': 'Different authored content'},
+                                   {'pixels': ['9' * 64]}, {'pages': 2}):
+                    records[baseline] = record(baseline, **difference)
+                    failure = render.cycle_coverage(files, records)
+                    self.assertEqual(len(failure['failures']), 1)
+                    self.assertIn('Render changed', failure['failures'][0]['error'])
+
     def test_explicit_clone_mapping_does_not_guess_other_scenario_baselines(self):
         for folder, case, suffix in (
                 ('other-corpus', 'cloned', '.docx'),
@@ -482,7 +511,7 @@ class CycleComparisonTests(unittest.TestCase):
 
 class TableGridBaselineTests(unittest.TestCase):
     def test_each_phase_and_route_requires_authored_native_baseline(self):
-        for prefix in ('fidelity-table-grid', 'engine/fidelity-table-grid'):
+        for prefix in ('fidelity-table-widths', 'engine/fidelity-table-widths'):
             for route in ('direct', 'isolate'):
                 for phase in ('unchanged', 'format', 'replace', 'unmerge'):
                     with self.subTest(prefix=prefix, route=route, phase=phase):
@@ -501,10 +530,10 @@ class TableGridBaselineTests(unittest.TestCase):
                         self.assertIn('Render changed (pixel_sha256)', changed['failures'][0]['error'])
 
     def test_corpus_root_preserves_mapping_and_other_names_are_not_guessed(self):
-        self.assertEqual(render.table_grid_baseline(Path('direct/format.docx'), '/tmp/fidelity-table-grid'),
+        self.assertEqual(render.table_grid_baseline(Path('direct/format.docx'), '/tmp/fidelity-table-widths'),
                          'expected-format.docx')
-        for case in ('fidelity-table-grid/preview/format.docx', 'other/direct/format.docx',
-                     'fidelity-table-grid/direct/format.xlsx', 'fidelity-table-grid/direct/other.docx'):
+        for case in ('fidelity-table-widths/preview/format.docx', 'other/direct/format.docx',
+                     'fidelity-table-widths/direct/format.xlsx', 'fidelity-table-widths/direct/other.docx'):
             self.assertIsNone(render.table_grid_baseline(Path(case)))
 
 

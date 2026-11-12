@@ -1,5 +1,9 @@
 # Office workflow and evidence follow-up
 
+Recovered from workflow branch commit `b1bb296` during the expansion integration.
+The counts and source pins below describe that historical run; the merged
+expansion requires its own current inventories and acceptance receipts.
+
 ## Source relationship
 
 The requested `crispcloud` branch is at `c9655003f14c87ec0c11d481341126ebb08a1419`.

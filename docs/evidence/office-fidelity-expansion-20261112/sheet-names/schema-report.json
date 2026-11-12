@@ -1,0 +1,56 @@
+{
+  "Files": 10,
+  "Failures": 0,
+  "Reports": [
+    {
+      "File": "/workspace/scratch/07eb2580faa9/validation/sheet-expansion/native-input/qualified-recalculated-expected.xlsx",
+      "Sha256": "ee946f7410d3aa2cdd26ec88005ebe9fdbb5d5fc2c497ca1e4f4575411f9da64",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/07eb2580faa9/validation/sheet-expansion/native-input/qualified-renamed-expected.xlsx",
+      "Sha256": "e800d3126a5c031181d7fb0fd2b86ac43a4c6b47d34f6acaf4aa3cb90dfa10d0",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/07eb2580faa9/validation/sheet-expansion/native-input/recalculated-1.xlsx",
+      "Sha256": "c4fa52c78f004ccbcaba782d72abd673aa46a84585cf15b86c27a730a1a349cf",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/07eb2580faa9/validation/sheet-expansion/native-input/recalculated-2.xlsx",
+      "Sha256": "c3f75281234a1068d659f5f03eabbd2010be479c5c91882efeb5bbd775f160d3",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/07eb2580faa9/validation/sheet-expansion/native-input/recalculated-3.xlsx",
+      "Sha256": "d462e993d71869bd6fe74ba9172a6dfc6a28824214a3c0c6718566fd5d86943c",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/07eb2580faa9/validation/sheet-expansion/native-input/renamed-1.xlsx",
+      "Sha256": "37308248e1d94dc391cc86e03e6dc699ca2dd9ca4ddcbc4622e56756ebd64e27",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/07eb2580faa9/validation/sheet-expansion/native-input/renamed-2.xlsx",
+      "Sha256": "c2521837da04db528fc88ebc4eee61e42c9725c813e4b92a9a91d70e641a9c5e",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/07eb2580faa9/validation/sheet-expansion/native-input/renamed-3.xlsx",
+      "Sha256": "a22b8db0c0a72d08247517fd3313cf45a84863c38ddebad87b4157b24434a067",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/07eb2580faa9/validation/sheet-expansion/native-input/sheet-rename-qualified-expected.xlsx",
+      "Sha256": "b885842cbd380e906aa58c56e01152115ae4d77e62e018764d9bec9a568f6c3d",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/07eb2580faa9/validation/sheet-expansion/native-input/source.xlsx",
+      "Sha256": "aeb3b6c808a4d4ad43b61e45e8e04664e9cc3581c65c6d94eac8590030ff0d8f",
+      "Errors": []
+    }
+  ]
+}

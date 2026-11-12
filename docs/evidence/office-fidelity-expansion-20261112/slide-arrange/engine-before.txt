@@ -1,0 +1,86 @@
+00:00 +0: loading test/slide_arrange_fidelity_test.dart
+00:00 +0: left aligns modeled bounds and preserves dimensions
+00:00 +1: center aligns modeled bounds and preserves dimensions
+00:00 +2: right aligns modeled bounds and preserves dimensions
+00:00 +3: top aligns modeled bounds and preserves dimensions
+00:00 +4: middle aligns modeled bounds and preserves dimensions
+00:00 +5: bottom aligns modeled bounds and preserves dimensions
+00:00 +6: horizontal gap distribution fixes both endpoints
+00:00 +6 -1: horizontal gap distribution fixes both endpoints [E]
+  Expected: [-20, 12, 52, 83]
+    Actual: MappedListIterable<PmlShape, int>:[-20, 12, 51, 82]
+     Which: at location [2] is <51> instead of <52>
+  
+  package:matcher                               expect
+  test/slide_arrange_fidelity_test.dart 158:11  main.<fn>
+  
+00:00 +6 -1: horizontal overlap distribution fixes both endpoints
+00:00 +6 -2: horizontal overlap distribution fixes both endpoints [E]
+  Expected: [-20, -11, 2, 10]
+    Actual: MappedListIterable<PmlShape, int>:[-20, -11, 3, 11]
+     Which: at location [2] is <3> instead of <2>
+  
+  package:matcher                               expect
+  test/slide_arrange_fidelity_test.dart 158:11  main.<fn>
+  
+00:00 +6 -2: vertical gap distribution fixes both endpoints
+00:00 +6 -3: vertical gap distribution fixes both endpoints [E]
+  Expected: [-20, 12, 52, 83]
+    Actual: MappedListIterable<PmlShape, int>:[-20, 12, 51, 82]
+     Which: at location [2] is <51> instead of <52>
+  
+  package:matcher                               expect
+  test/slide_arrange_fidelity_test.dart 158:11  main.<fn>
+  
+00:00 +6 -3: vertical overlap distribution fixes both endpoints
+00:00 +6 -4: vertical overlap distribution fixes both endpoints [E]
+  Expected: [-20, -11, 2, 10]
+    Actual: MappedListIterable<PmlShape, int>:[-20, -11, 3, 11]
+     Which: at location [2] is <3> instead of <2>
+  
+  package:matcher                               expect
+  test/slide_arrange_fidelity_test.dart 158:11  main.<fn>
+  
+00:00 +6 -4: insufficient selections leave original transform objects untouched
+00:00 +7 -4: direct flat group membership and unique native IDs survive three saves
+00:00 +7 -5: direct flat group membership and unique native IDs survive three saves [E]
+  Expected: an object with length of <8>
+    Actual: Set:[1, 2, 3, 4, 5, 6]
+     Which: has length of <6>
+  Native IDs are unique.
+  
+  package:matcher                              expect
+  test/slide_arrange_fidelity_test.dart 68:3   _expectNativeGroups
+  test/slide_arrange_fidelity_test.dart 198:9  main.<fn>
+  
+00:00 +7 -5: isolate flat group membership and unique native IDs survive three saves
+00:00 +7 -6: isolate flat group membership and unique native IDs survive three saves [E]
+  Expected: an object with length of <8>
+    Actual: Set:[1, 2, 3, 4, 5, 6]
+     Which: has length of <6>
+  Native IDs are unique.
+  
+  package:matcher                              expect
+  test/slide_arrange_fidelity_test.dart 68:3   _expectNativeGroups
+  test/slide_arrange_fidelity_test.dart 198:9  main.<fn>
+  
+00:00 +7 -6: noncontiguous membership rejects before changing imported package parts
+00:00 +7 -7: noncontiguous membership rejects before changing imported package parts [E]
+  Expected: throws <Instance of 'StateError'>
+    Actual: <Closure: () => OpcPackage>
+     Which: returned <Instance of 'OpcPackage'>
+  
+  package:matcher                              expect
+  test/slide_arrange_fidelity_test.dart 218:5  main.<fn>
+  
+00:00 +7 -7: Some tests failed.
+
+Failing tests:
+  test/slide_arrange_fidelity_test.dart: direct flat group membership and unique native IDs survive three saves
+  test/slide_arrange_fidelity_test.dart: horizontal gap distribution fixes both endpoints
+  test/slide_arrange_fidelity_test.dart: horizontal overlap distribution fixes both endpoints
+  test/slide_arrange_fidelity_test.dart: isolate flat group membership and unique native IDs survive three saves
+  ... and 3 more
+
+Consider enabling the flag chain-stack-traces to receive more detailed exceptions.
+For example, 'dart test --chain-stack-traces'.

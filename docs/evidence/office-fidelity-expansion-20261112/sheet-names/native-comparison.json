@@ -1,0 +1,66 @@
+{
+  "status": "passed",
+  "schema_files": 10,
+  "rendered_files": 10,
+  "rendered_pages": 29,
+  "comparisons": [
+    {
+      "file": "recalculated-1.xlsx",
+      "expected": "qualified-recalculated-expected.xlsx",
+      "pages": 3,
+      "page_count_text_pixels_exact": true,
+      "three_save_cycle_stable": true
+    },
+    {
+      "file": "recalculated-2.xlsx",
+      "expected": "qualified-recalculated-expected.xlsx",
+      "pages": 3,
+      "page_count_text_pixels_exact": true,
+      "three_save_cycle_stable": true
+    },
+    {
+      "file": "recalculated-3.xlsx",
+      "expected": "qualified-recalculated-expected.xlsx",
+      "pages": 3,
+      "page_count_text_pixels_exact": true,
+      "three_save_cycle_stable": true
+    },
+    {
+      "file": "renamed-1.xlsx",
+      "expected": "qualified-renamed-expected.xlsx",
+      "pages": 3,
+      "page_count_text_pixels_exact": true,
+      "three_save_cycle_stable": true
+    },
+    {
+      "file": "renamed-2.xlsx",
+      "expected": "qualified-renamed-expected.xlsx",
+      "pages": 3,
+      "page_count_text_pixels_exact": true,
+      "three_save_cycle_stable": true
+    },
+    {
+      "file": "renamed-3.xlsx",
+      "expected": "qualified-renamed-expected.xlsx",
+      "pages": 3,
+      "page_count_text_pixels_exact": true,
+      "three_save_cycle_stable": true
+    }
+  ],
+  "all_original_and_snapshot_hashes_unchanged": true,
+  "masking_or_tolerance": false,
+  "renderer": "LibreOffice 24.2.7.2 ee3885777aa7032db5a9b65deec9457448a91162 (LibreOfficeKit embedding API)",
+  "renderer_script_sha256": "787d79602869da46442e40656d8d2cb95141a72d26433582fe58033bb7bea5a0",
+  "comparison_script_sha256": "7f10147293df6d6484ca5d3b5f3eb9e8ac86d983ad8933652607d5cf7768035f",
+  "inventory_sha256": "6fd2c15d33ba04b9e71093819126dfe89cbf2a7e548a3b7d0f0fc34d627a16b4",
+  "schema_report_sha256": "2e9fdef7d002e9be4975c33d70a6fc00d4f762562ba22a287367f313c98e7b7e",
+  "render_report_sha256": "87886287e40a684d56444231445f99555746aa75828da73341d8327ccf3ae5fe",
+  "scope": "Seven qualified-name source/export packages plus two independently authored name expectations and one current independent rename expectation. Six new exports match their respective authored references across all pages. The old rename expectation updates only D10 from unsupported cache 42 to supported numeric 2; its three final exports are checked by the aggregate source acceptance.",
+  "unsupported_name_boundaries": [
+    "Explicit worksheet qualification without a local definition",
+    "Computed and relative defined-name expressions",
+    "External workbook and 3D references",
+    "Whole-row and whole-column references",
+    "OFFSET with scoped-name origins"
+  ]
+}

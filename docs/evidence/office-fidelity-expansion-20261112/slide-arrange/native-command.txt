@@ -1,0 +1,7 @@
+fidelity-slide-arrange/direct-1.pptx: rendered 1 pages
+fidelity-slide-arrange/direct-2.pptx: rendered 1 pages
+fidelity-slide-arrange/direct-3.pptx: rendered 1 pages
+fidelity-slide-arrange/isolate-1.pptx: rendered 1 pages
+fidelity-slide-arrange/isolate-2.pptx: rendered 1 pages
+fidelity-slide-arrange/isolate-3.pptx: rendered 1 pages
+fidelity-slide-arrange/source.pptx: rendered 1 pages

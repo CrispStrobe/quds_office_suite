@@ -1,0 +1,400 @@
+{
+  "renderer": "LibreOffice 24.2.7.2 ee3885777aa7032db5a9b65deec9457448a91162 (LibreOfficeKit embedding API)",
+  "files": 10,
+  "rendered_files": 10,
+  "visual_input_files": 10,
+  "native_schema_only_files": 0,
+  "native_schema_only": [],
+  "schema_report": "/workspace/scratch/07eb2580faa9/validation/sheet-expansion/schema-report.json",
+  "pixel_fingerprint": "SHA-256 of big-endian uint32 width/height followed by RGB bytes",
+  "cycle_groups": 2,
+  "cycle_comparisons": [
+    {
+      "case": "recalculated.xlsx",
+      "expected_cycles": [
+        1,
+        2,
+        3
+      ],
+      "actual_cycles": [
+        1,
+        2,
+        3
+      ],
+      "files": [
+        "recalculated-1.xlsx",
+        "recalculated-2.xlsx",
+        "recalculated-3.xlsx"
+      ],
+      "baseline": null,
+      "baseline_candidate": null,
+      "baseline_page_order": null,
+      "passed": true
+    },
+    {
+      "case": "renamed.xlsx",
+      "expected_cycles": [
+        1,
+        2,
+        3
+      ],
+      "actual_cycles": [
+        1,
+        2,
+        3
+      ],
+      "files": [
+        "renamed-1.xlsx",
+        "renamed-2.xlsx",
+        "renamed-3.xlsx"
+      ],
+      "baseline": null,
+      "baseline_candidate": null,
+      "baseline_page_order": null,
+      "passed": true
+    }
+  ],
+  "baseline_comparisons": 0,
+  "page_order_comparisons": 0,
+  "render_only_files": [
+    "qualified-recalculated-expected.xlsx",
+    "qualified-renamed-expected.xlsx",
+    "sheet-rename-qualified-expected.xlsx",
+    "source.xlsx"
+  ],
+  "failures": [],
+  "reports": [
+    {
+      "file": "qualified-recalculated-expected.xlsx",
+      "pages": 3,
+      "text": "     13\n11\n13\n17\n\f            7\n       7\n       9\n\n  #DIV/0!\n#REF!\n\f       13\n         7\n       16\n       17\n   TRUE\n#REF!\n   #REF!\n      -2.5\n         9\n         7\n       11\n  #DIV/0!\n       42\n  Err:540\n         0\n #VALUE!\n       81\n       73\n\f",
+      "pixel_sha256": [
+        "b60652736f5320c76a878aa2e360e6c24b22f4edc65c8f3f262662182fe16008",
+        "265b68a4c862ca62c025ac41b2cc5858a0b155ee3a82c7fa4f1f3289accb3ee7",
+        "60db4dbff99ded2d071160f673854b5c1aaf030d168efb12b89db8f7711faf08"
+      ],
+      "pdf": "000/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "000/page-0001.png",
+          "pixel_sha256": "b60652736f5320c76a878aa2e360e6c24b22f4edc65c8f3f262662182fe16008"
+        },
+        {
+          "page": 2,
+          "width": 612,
+          "height": 792,
+          "png": "000/page-0002.png",
+          "pixel_sha256": "265b68a4c862ca62c025ac41b2cc5858a0b155ee3a82c7fa4f1f3289accb3ee7"
+        },
+        {
+          "page": 3,
+          "width": 612,
+          "height": 792,
+          "png": "000/page-0003.png",
+          "pixel_sha256": "60db4dbff99ded2d071160f673854b5c1aaf030d168efb12b89db8f7711faf08"
+        }
+      ]
+    },
+    {
+      "file": "qualified-renamed-expected.xlsx",
+      "pages": 3,
+      "text": "     13\n11\n13\n17\n\f            7\n       7\n       9\n\n  #DIV/0!\n#REF!\n\f       13\n         7\n       16\n       17\n   TRUE\n#REF!\n   #REF!\n      -2.5\n         9\n         7\n       11\n  #DIV/0!\n       42\n  Err:540\n         0\n #VALUE!\n       81\n       73\n\f",
+      "pixel_sha256": [
+        "b60652736f5320c76a878aa2e360e6c24b22f4edc65c8f3f262662182fe16008",
+        "265b68a4c862ca62c025ac41b2cc5858a0b155ee3a82c7fa4f1f3289accb3ee7",
+        "60db4dbff99ded2d071160f673854b5c1aaf030d168efb12b89db8f7711faf08"
+      ],
+      "pdf": "001/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "001/page-0001.png",
+          "pixel_sha256": "b60652736f5320c76a878aa2e360e6c24b22f4edc65c8f3f262662182fe16008"
+        },
+        {
+          "page": 2,
+          "width": 612,
+          "height": 792,
+          "png": "001/page-0002.png",
+          "pixel_sha256": "265b68a4c862ca62c025ac41b2cc5858a0b155ee3a82c7fa4f1f3289accb3ee7"
+        },
+        {
+          "page": 3,
+          "width": 612,
+          "height": 792,
+          "png": "001/page-0003.png",
+          "pixel_sha256": "60db4dbff99ded2d071160f673854b5c1aaf030d168efb12b89db8f7711faf08"
+        }
+      ]
+    },
+    {
+      "file": "recalculated-1.xlsx",
+      "pages": 3,
+      "text": "     13\n11\n13\n17\n\f            7\n       7\n       9\n\n  #DIV/0!\n#REF!\n\f       13\n         7\n       16\n       17\n   TRUE\n#REF!\n   #REF!\n      -2.5\n         9\n         7\n       11\n  #DIV/0!\n       42\n  Err:540\n         0\n #VALUE!\n       81\n       73\n\f",
+      "pixel_sha256": [
+        "b60652736f5320c76a878aa2e360e6c24b22f4edc65c8f3f262662182fe16008",
+        "265b68a4c862ca62c025ac41b2cc5858a0b155ee3a82c7fa4f1f3289accb3ee7",
+        "60db4dbff99ded2d071160f673854b5c1aaf030d168efb12b89db8f7711faf08"
+      ],
+      "pdf": "002/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "002/page-0001.png",
+          "pixel_sha256": "b60652736f5320c76a878aa2e360e6c24b22f4edc65c8f3f262662182fe16008"
+        },
+        {
+          "page": 2,
+          "width": 612,
+          "height": 792,
+          "png": "002/page-0002.png",
+          "pixel_sha256": "265b68a4c862ca62c025ac41b2cc5858a0b155ee3a82c7fa4f1f3289accb3ee7"
+        },
+        {
+          "page": 3,
+          "width": 612,
+          "height": 792,
+          "png": "002/page-0003.png",
+          "pixel_sha256": "60db4dbff99ded2d071160f673854b5c1aaf030d168efb12b89db8f7711faf08"
+        }
+      ]
+    },
+    {
+      "file": "recalculated-2.xlsx",
+      "pages": 3,
+      "text": "     13\n11\n13\n17\n\f            7\n       7\n       9\n\n  #DIV/0!\n#REF!\n\f       13\n         7\n       16\n       17\n   TRUE\n#REF!\n   #REF!\n      -2.5\n         9\n         7\n       11\n  #DIV/0!\n       42\n  Err:540\n         0\n #VALUE!\n       81\n       73\n\f",
+      "pixel_sha256": [
+        "b60652736f5320c76a878aa2e360e6c24b22f4edc65c8f3f262662182fe16008",
+        "265b68a4c862ca62c025ac41b2cc5858a0b155ee3a82c7fa4f1f3289accb3ee7",
+        "60db4dbff99ded2d071160f673854b5c1aaf030d168efb12b89db8f7711faf08"
+      ],
+      "pdf": "003/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "003/page-0001.png",
+          "pixel_sha256": "b60652736f5320c76a878aa2e360e6c24b22f4edc65c8f3f262662182fe16008"
+        },
+        {
+          "page": 2,
+          "width": 612,
+          "height": 792,
+          "png": "003/page-0002.png",
+          "pixel_sha256": "265b68a4c862ca62c025ac41b2cc5858a0b155ee3a82c7fa4f1f3289accb3ee7"
+        },
+        {
+          "page": 3,
+          "width": 612,
+          "height": 792,
+          "png": "003/page-0003.png",
+          "pixel_sha256": "60db4dbff99ded2d071160f673854b5c1aaf030d168efb12b89db8f7711faf08"
+        }
+      ]
+    },
+    {
+      "file": "recalculated-3.xlsx",
+      "pages": 3,
+      "text": "     13\n11\n13\n17\n\f            7\n       7\n       9\n\n  #DIV/0!\n#REF!\n\f       13\n         7\n       16\n       17\n   TRUE\n#REF!\n   #REF!\n      -2.5\n         9\n         7\n       11\n  #DIV/0!\n       42\n  Err:540\n         0\n #VALUE!\n       81\n       73\n\f",
+      "pixel_sha256": [
+        "b60652736f5320c76a878aa2e360e6c24b22f4edc65c8f3f262662182fe16008",
+        "265b68a4c862ca62c025ac41b2cc5858a0b155ee3a82c7fa4f1f3289accb3ee7",
+        "60db4dbff99ded2d071160f673854b5c1aaf030d168efb12b89db8f7711faf08"
+      ],
+      "pdf": "004/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "004/page-0001.png",
+          "pixel_sha256": "b60652736f5320c76a878aa2e360e6c24b22f4edc65c8f3f262662182fe16008"
+        },
+        {
+          "page": 2,
+          "width": 612,
+          "height": 792,
+          "png": "004/page-0002.png",
+          "pixel_sha256": "265b68a4c862ca62c025ac41b2cc5858a0b155ee3a82c7fa4f1f3289accb3ee7"
+        },
+        {
+          "page": 3,
+          "width": 612,
+          "height": 792,
+          "png": "004/page-0003.png",
+          "pixel_sha256": "60db4dbff99ded2d071160f673854b5c1aaf030d168efb12b89db8f7711faf08"
+        }
+      ]
+    },
+    {
+      "file": "renamed-1.xlsx",
+      "pages": 3,
+      "text": "     13\n11\n13\n17\n\f            7\n       7\n       9\n\n  #DIV/0!\n#REF!\n\f       13\n         7\n       16\n       17\n   TRUE\n#REF!\n   #REF!\n      -2.5\n         9\n         7\n       11\n  #DIV/0!\n       42\n  Err:540\n         0\n #VALUE!\n       81\n       73\n\f",
+      "pixel_sha256": [
+        "b60652736f5320c76a878aa2e360e6c24b22f4edc65c8f3f262662182fe16008",
+        "265b68a4c862ca62c025ac41b2cc5858a0b155ee3a82c7fa4f1f3289accb3ee7",
+        "60db4dbff99ded2d071160f673854b5c1aaf030d168efb12b89db8f7711faf08"
+      ],
+      "pdf": "005/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "005/page-0001.png",
+          "pixel_sha256": "b60652736f5320c76a878aa2e360e6c24b22f4edc65c8f3f262662182fe16008"
+        },
+        {
+          "page": 2,
+          "width": 612,
+          "height": 792,
+          "png": "005/page-0002.png",
+          "pixel_sha256": "265b68a4c862ca62c025ac41b2cc5858a0b155ee3a82c7fa4f1f3289accb3ee7"
+        },
+        {
+          "page": 3,
+          "width": 612,
+          "height": 792,
+          "png": "005/page-0003.png",
+          "pixel_sha256": "60db4dbff99ded2d071160f673854b5c1aaf030d168efb12b89db8f7711faf08"
+        }
+      ]
+    },
+    {
+      "file": "renamed-2.xlsx",
+      "pages": 3,
+      "text": "     13\n11\n13\n17\n\f            7\n       7\n       9\n\n  #DIV/0!\n#REF!\n\f       13\n         7\n       16\n       17\n   TRUE\n#REF!\n   #REF!\n      -2.5\n         9\n         7\n       11\n  #DIV/0!\n       42\n  Err:540\n         0\n #VALUE!\n       81\n       73\n\f",
+      "pixel_sha256": [
+        "b60652736f5320c76a878aa2e360e6c24b22f4edc65c8f3f262662182fe16008",
+        "265b68a4c862ca62c025ac41b2cc5858a0b155ee3a82c7fa4f1f3289accb3ee7",
+        "60db4dbff99ded2d071160f673854b5c1aaf030d168efb12b89db8f7711faf08"
+      ],
+      "pdf": "006/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "006/page-0001.png",
+          "pixel_sha256": "b60652736f5320c76a878aa2e360e6c24b22f4edc65c8f3f262662182fe16008"
+        },
+        {
+          "page": 2,
+          "width": 612,
+          "height": 792,
+          "png": "006/page-0002.png",
+          "pixel_sha256": "265b68a4c862ca62c025ac41b2cc5858a0b155ee3a82c7fa4f1f3289accb3ee7"
+        },
+        {
+          "page": 3,
+          "width": 612,
+          "height": 792,
+          "png": "006/page-0003.png",
+          "pixel_sha256": "60db4dbff99ded2d071160f673854b5c1aaf030d168efb12b89db8f7711faf08"
+        }
+      ]
+    },
+    {
+      "file": "renamed-3.xlsx",
+      "pages": 3,
+      "text": "     13\n11\n13\n17\n\f            7\n       7\n       9\n\n  #DIV/0!\n#REF!\n\f       13\n         7\n       16\n       17\n   TRUE\n#REF!\n   #REF!\n      -2.5\n         9\n         7\n       11\n  #DIV/0!\n       42\n  Err:540\n         0\n #VALUE!\n       81\n       73\n\f",
+      "pixel_sha256": [
+        "b60652736f5320c76a878aa2e360e6c24b22f4edc65c8f3f262662182fe16008",
+        "265b68a4c862ca62c025ac41b2cc5858a0b155ee3a82c7fa4f1f3289accb3ee7",
+        "60db4dbff99ded2d071160f673854b5c1aaf030d168efb12b89db8f7711faf08"
+      ],
+      "pdf": "007/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "007/page-0001.png",
+          "pixel_sha256": "b60652736f5320c76a878aa2e360e6c24b22f4edc65c8f3f262662182fe16008"
+        },
+        {
+          "page": 2,
+          "width": 612,
+          "height": 792,
+          "png": "007/page-0002.png",
+          "pixel_sha256": "265b68a4c862ca62c025ac41b2cc5858a0b155ee3a82c7fa4f1f3289accb3ee7"
+        },
+        {
+          "page": 3,
+          "width": 612,
+          "height": 792,
+          "png": "007/page-0003.png",
+          "pixel_sha256": "60db4dbff99ded2d071160f673854b5c1aaf030d168efb12b89db8f7711faf08"
+        }
+      ]
+    },
+    {
+      "file": "sheet-rename-qualified-expected.xlsx",
+      "pages": 2,
+      "text": "Region            Value          Total\nNorth                     2.00            6\nSouth                        5           15\n\nNative workbook\n\fRegion    Sum of Value           2\nNorth          2.00              5\nSouth          5.00             42\nTotal Resul    7.00             42\n                                42\n                                42\n                                42\n                         Data!A1 \"quoted\"\n                           Err:509\n                                 2\n                                42\n                                42\n                             #REF!\n                                 4\n\f",
+      "pixel_sha256": [
+        "caa114fad5cf8775495e623cfac3776b455293ea544ea705087701b4e4ddbce5",
+        "33ecf0e71a647ee0c981bf3d8a8ac3b1d6f7b84e85150bdaa98566caad170a50"
+      ],
+      "pdf": "008/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "008/page-0001.png",
+          "pixel_sha256": "caa114fad5cf8775495e623cfac3776b455293ea544ea705087701b4e4ddbce5"
+        },
+        {
+          "page": 2,
+          "width": 612,
+          "height": 792,
+          "png": "008/page-0002.png",
+          "pixel_sha256": "33ecf0e71a647ee0c981bf3d8a8ac3b1d6f7b84e85150bdaa98566caad170a50"
+        }
+      ]
+    },
+    {
+      "file": "source.xlsx",
+      "pages": 3,
+      "text": "     42\n11\n13\n17\n\f            42\n       7\n       9\n\n  #DIV/0!\n#REF!\n\f       42\n       42\n       42\n       42\n   TRUE\n#REF!\n   #REF!\n       42\n       42\n       42\n       42\n       42\n       42\n  Err:540\n        0\n #VALUE!\n       81\n       73\n\f",
+      "pixel_sha256": [
+        "c65449a419a664b58c88d487beeeba2f0ff27c948abc1dee3ff7f25cc77c2699",
+        "9014712ddbd0c712698c5b6d26c96f668f99dde5dd07c8bb0063ad88f2a5cd87",
+        "b79c651c8403598e9d68a8df9314c9a826da6becbd8d7126b5c7dc2e8ea02474"
+      ],
+      "pdf": "009/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "009/page-0001.png",
+          "pixel_sha256": "c65449a419a664b58c88d487beeeba2f0ff27c948abc1dee3ff7f25cc77c2699"
+        },
+        {
+          "page": 2,
+          "width": 612,
+          "height": 792,
+          "png": "009/page-0002.png",
+          "pixel_sha256": "9014712ddbd0c712698c5b6d26c96f668f99dde5dd07c8bb0063ad88f2a5cd87"
+        },
+        {
+          "page": 3,
+          "width": 612,
+          "height": 792,
+          "png": "009/page-0003.png",
+          "pixel_sha256": "b79c651c8403598e9d68a8df9314c9a826da6becbd8d7126b5c7dc2e8ea02474"
+        }
+      ]
+    }
+  ]
+}

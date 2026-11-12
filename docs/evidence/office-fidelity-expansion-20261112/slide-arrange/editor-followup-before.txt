@@ -1,0 +1,35 @@
+00:00 +0: loading /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_arrange_history_test.dart
+00:00 +0: independent groups never share a slide group identity
+00:00 +1: left alignment is one owning-slide undo command
+00:00 +2: center alignment is one owning-slide undo command
+00:00 +3: right alignment is one owning-slide undo command
+00:00 +4: top alignment is one owning-slide undo command
+00:00 +5: middle alignment is one owning-slide undo command
+00:00 +6: bottom alignment is one owning-slide undo command
+00:00 +7: horizontal distribution preserves endpoints and history
+00:00 +8: vertical distribution preserves endpoints and history
+00:00 +9: group and ungroup restore earlier membership through undo and redo
+00:00 +10: no-op arrangements retain clean state and redo history
+00:00 +11: already arranged geometry does not consume another history step
+00:00 +12: OfficeInteractionMode.viewing blocks arrangement and group changes
+00:00 +13: OfficeInteractionMode.selecting blocks arrangement and group changes
+00:00 +14: noncontiguous groups reject without changing state or selection
+00:00 +15: regroup cannot split an existing group
+00:00 +16: ungroup cannot split an existing group
+00:00 +17: group rejects duplicate and foreign shapes atomically
+00:00 +18: ungroup rejects duplicate and foreign shapes atomically
+00:00 +19: align rejects duplicate and foreign shapes atomically
+00:00 +20: distribute rejects duplicate and foreign shapes atomically
+00:00 +21: regrouping an entire existing group preserves identity and redo
+00:00 +21 -1: regrouping an entire existing group preserves identity and redo [E]
+  Expected: <1>
+    Actual: <2>
+  
+  package:matcher                                     expect
+  package:flutter_test/src/widget_tester.dart 473:18  expect
+  test/slide_arrange_history_test.dart 266:5          main.<fn>
+  
+00:00 +21 -1: Some tests failed.
+
+Failing tests:
+  /workspace/scratch/07eb2580faa9/quds-slide-expansion/packages/quds_office_editor/test/slide_arrange_history_test.dart: regrouping an entire existing group preserves identity and redo

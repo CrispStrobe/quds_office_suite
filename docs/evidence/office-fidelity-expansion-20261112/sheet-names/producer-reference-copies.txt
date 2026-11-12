@@ -1,0 +1,71 @@
+00:00 +0: loading test/sheet_qualified_names_test.dart
+00:00 +0: test/sheet_qualified_names_test.dart: localSheetId is the worksheet index and locals precede global names
+00:00 +1: test/sheet_qualified_names_test.dart: localSheetId is the worksheet index and locals precede global names
+00:00 +2: test/sheet_qualified_names_test.dart: localSheetId is the worksheet index and locals precede global names
+00:00 +3: test/sheet_qualified_names_test.dart: localSheetId is the worksheet index and locals precede global names
+00:00 +4: test/sheet_qualified_names_test.dart: localSheetId is the worksheet index and locals precede global names
+00:00 +5: test/sheet_qualified_names_test.dart: localSheetId is the worksheet index and locals precede global names
+00:00 +6: test/sheet_qualified_names_test.dart: localSheetId is the worksheet index and locals precede global names
+00:00 +7: test/sheet_qualified_names_test.dart: localSheetId is the worksheet index and locals precede global names
+00:00 +8: test/sheet_qualified_names_test.dart: localSheetId is the worksheet index and locals precede global names
+00:00 +9: test/sheet_qualified_names_test.dart: localSheetId is the worksheet index and locals precede global names
+00:00 +10: test/sheet_rename_fidelity_test.dart: sheet qualifier lexer [1]Data!A1+[1]First:Data!B2
+00:00 +11: test/sheet_qualified_names_test.dart: qualified names select their scope independently of the target sheet
+00:00 +12: test/sheet_qualified_names_test.dart: qualified names select their scope independently of the target sheet
+00:00 +13: test/sheet_qualified_names_test.dart: qualified names select their scope independently of the target sheet
+00:00 +14: test/sheet_qualified_names_test.dart: qualified names select their scope independently of the target sheet
+00:00 +15: test/sheet_qualified_names_test.dart: qualified names select their scope independently of the target sheet
+00:00 +16: test/sheet_qualified_names_test.dart: qualified names select their scope independently of the target sheet
+00:00 +17: test/sheet_qualified_names_test.dart: qualified names select their scope independently of the target sheet
+00:00 +18: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:00 +19: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:00 +20: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:00 +21: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:00 +22: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:00 +23: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:00 +24: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:00 +25: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:00 +26: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:00 +27: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:00 +28: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:00 +29: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:00 +30: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:00 +31: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:00 +32: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:00 +33: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:00 +34: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:00 +35: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:00 +36: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:00 +37: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:00 +38: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:00 +39: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:00 +40: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:00 +41: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:01 +42: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:01 +43: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:01 +44: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:01 +45: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:01 +46: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:01 +47: test/sheet_qualified_names_test.dart: scoped caches and native definitions survive three saves and rename
+00:01 +48: test/sheet_rename_fidelity_test.dart: unknown XML formula owner rejects without any model or native mutation
+00:01 +49: test/sheet_qualified_names_test.dart: editing one range preserves opaque owners, scope and metadata on rebuild
+00:01 +50: test/sheet_rename_fidelity_test.dart: unknown XML sheet attribute rejects without any model or native mutation
+00:01 +51: test/sheet_rename_fidelity_test.dart: unknown extension formula namespace rejects without any model or native mutation
+00:01 +52: test/sheet_rename_fidelity_test.dart: opaque executable owner rejects before mutation
+00:01 +53: test/sheet_rename_fidelity_test.dart: renaming after source cell changes keeps native chart references and fresh values
+00:01 +54: test/sheet_rename_fidelity_test.dart: array formula topology is guarded before model changes
+00:01 +55: test/sheet_rename_fidelity_test.dart: unrelated opaque text and a valid exclamation mark in a sheet name
+00:01 +56: test/sheet_rename_fidelity_test.dart: modified native name projection is guarded atomically
+00:01 +57: test/sheet_rename_fidelity_test.dart: modified native validation projection is guarded atomically
+00:01 +58: test/sheet_rename_fidelity_test.dart: modified native conditional projection is guarded atomically
+00:01 +59: test/sheet_rename_fidelity_test.dart: modified native chart projection is guarded atomically
+00:01 +60: test/sheet_rename_fidelity_test.dart: invalid names and malformed qualifiers cannot partially rename
+00:02 +61: test/sheet_rename_fidelity_test.dart: no-op is clean and undo/redo preserves saved values and native references
+00:02 +62: test/sheet_rename_fidelity_test.dart: script renames native references before three direct/isolate saves
+00:02 +63: test/sheet_rename_fidelity_test.dart: edited native formula =Data!B2+1 remains owned by the model across save and undo
+00:02 +64: test/sheet_rename_fidelity_test.dart: edited native formula null remains owned by the model across save and undo
+00:02 +65: test/sheet_rename_fidelity_test.dart: unqualified native shared formula topology rejects atomically
+00:02 +66: test/sheet_rename_fidelity_test.dart: unqualified native array formula topology rejects atomically
+00:02 +67: test/sheet_rename_fidelity_test.dart: unqualified native dataTable formula topology rejects atomically
+00:02 +68: test/sheet_rename_fidelity_test.dart: complete shared formula groups rename as equivalent independent formulas
+00:02 +69: All tests passed!

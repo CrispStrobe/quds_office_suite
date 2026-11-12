@@ -1,0 +1,7 @@
+/workspace/scratch/07eb2580faa9/validation/slide-arrange-final-input/fidelity-slide-arrange/direct-1.pptx: 0 validation errors
+/workspace/scratch/07eb2580faa9/validation/slide-arrange-final-input/fidelity-slide-arrange/direct-2.pptx: 0 validation errors
+/workspace/scratch/07eb2580faa9/validation/slide-arrange-final-input/fidelity-slide-arrange/direct-3.pptx: 0 validation errors
+/workspace/scratch/07eb2580faa9/validation/slide-arrange-final-input/fidelity-slide-arrange/isolate-1.pptx: 0 validation errors
+/workspace/scratch/07eb2580faa9/validation/slide-arrange-final-input/fidelity-slide-arrange/isolate-2.pptx: 0 validation errors
+/workspace/scratch/07eb2580faa9/validation/slide-arrange-final-input/fidelity-slide-arrange/isolate-3.pptx: 0 validation errors
+/workspace/scratch/07eb2580faa9/validation/slide-arrange-final-input/fidelity-slide-arrange/source.pptx: 0 validation errors

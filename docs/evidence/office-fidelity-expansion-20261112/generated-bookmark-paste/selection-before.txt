@@ -1,0 +1,18 @@
+00:00 +0: loading /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart
+00:00 +0: selection ending in an empty paragraph rejects before a retained prefix can lose the bookmark
+00:00 +0 -1: selection ending in an empty paragraph rejects before a retained prefix can lose the bookmark [E]
+  Expected: throws <Instance of 'UnsupportedError'>
+    Actual: <Instance of 'Future<void>'>
+     Which: emitted <null>
+  
+  package:matcher                                      expectLater
+  package:flutter_test/src/widget_tester.dart 507:8    expectLater
+  test/word_generated_bookmark_paste_test.dart 171:11  main.<fn>
+  ===== asynchronous gap ===========================
+  dart:async                                           _CustomZone.registerUnaryCallback
+  test/word_generated_bookmark_paste_test.dart 161:5   main.<fn>
+  
+00:00 +0 -1: Some tests failed.
+
+Failing tests:
+  /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart: selection ending in an empty paragraph rejects before a retained prefix can lose the bookmark

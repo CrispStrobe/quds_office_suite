@@ -1,0 +1,141 @@
+{
+  "status": "focused_recovery_passed",
+  "recorded_utc": "2026-11-12T14:23:24.124433+00:00",
+  "base_commit": "08b09485588d2b6270f594a07c983689c087587d",
+  "recovered_commit": "b1bb296c646df4279ae236a00e89a009554a46d0",
+  "runtime": "Flutter3.44.0 / Dart3.12.0",
+  "engine_analyzer": "passed; full package, zero issues",
+  "focused_engine_passed": 198,
+  "focused_editor_passed": 14,
+  "focused_skips": 0,
+  "independent_table_width_packages": 28,
+  "python_controls": {
+    "coverage": 16,
+    "feature_matrix": 16,
+    "table_width_oracle": 4,
+    "renderer": 51,
+    "audit_operations": 8
+  },
+  "expected_engine_inventory": {
+    "files": 324,
+    "unique_paths": 324,
+    "three_save_series": 97,
+    "standalone": 33
+  },
+  "expected_editor_inventory": 25,
+  "goldens": "Four recovered reviewed PNGs byte-identical to b1bb296 and passed without update flag. Existing nested-table and history/custom-tab tests also passed.",
+  "merge_decisions": [
+    "Use shared WordTable.cellAtGrid as the single topology authority; keep omitted-row, ragged-grid and partial-merge guards.",
+    "Keep legacy physical column selectors and explicit gridColumn/endGridColumn support. Inspect adds merge origin and diagnostics while preserving gridBefore offsets.",
+    "Keep current whole-cell bookmark/revision preflight and late legacy revision binding.",
+    "Recover preferred native cell widths, namespace-capture correction and merge/unmerge grid-width redistribution.",
+    "Recover15-area feature runner, receipt-bound coverage collection and picture-only native oracle.",
+    "Rename recovered28-file width corpus to fidelity-table-widths, preserving the separate current12-file fidelity-table-grid corpus.",
+    "Retain all current shared spreadsheet metrics, explicit style zero, custom-tab controls and history code."
+  ],
+  "initial_integration_failure": "Feature controls rejected duplicate fidelity-table-grid/source.docx. Distinct authored sources now have distinct corpus roots; no deduplication or silent overwrite. Original failure log retained.",
+  "scope": "Focused integration evidence, not a new full engine/editor/host/schema/native acceptance claim. Historical workflow counts and receipts retain their original scope. The existing valid-surrogate UTF16 line-end regression is included and passes.",
+  "validated_changed_source_sha256": {
+    ".github/workflows/office-fidelity.yml": "6857d2bbbe804e27a390f1c7ad43917e42f757c54c7bd55fb6f2defd042e73ee",
+    "packages/quds_office_editor/test/goldens/table_grid_format.png": "9cf755191700aea6837d03ca1961649c45803bbe9b82958b7246bf5368af3c7e",
+    "packages/quds_office_editor/test/goldens/table_grid_replace.png": "82da57f70b729f872e315897cbdff2aea95bab58604511d0e6d33ad1d6c6caa3",
+    "packages/quds_office_editor/test/goldens/table_grid_unchanged.png": "13c467235eec72a5a5e59b87d08163016232bce5a80136b1a4c3c58a87cb2d97",
+    "packages/quds_office_editor/test/goldens/table_grid_unmerge.png": "d820b08284a6405c18c2f7fd46284f9839aef1c12032036b21481100c828007c",
+    "packages/quds_office_editor/test/office_table_grid_golden_test.dart": "97cdc4f46e1aba60117d588be874bb0836d2d5e7d040288cce35b4ea49f1a0c3",
+    "packages/quds_office_engine/CHANGELOG.md": "75df2a8eb341bb88f1d30387ea6530746376a787f5b3dc776907bcf8403b5061",
+    "packages/quds_office_engine/lib/src/bidi/grapheme_clusters.dart": "1fa4c95090c12d367589917a886ef31280a0b2080ee2320328a6a38234aaec32",
+    "packages/quds_office_engine/lib/src/bidi/line_breaker.dart": "4fdcce0cd1fe989f433a2cf6e1c383ae3ec124daf46821f31b16b0d2a169660f",
+    "packages/quds_office_engine/lib/src/word/layout/word_layout.dart": "98f005c454a5ebf30f0c27e51cf1d60264af131d80406c671e647d1324b4a126",
+    "packages/quds_office_engine/lib/src/word/model/wml_clone.dart": "24953ade7527d448bc028a623a6cc5babc4700764b312e83f7290e213e48fbdb",
+    "packages/quds_office_engine/lib/src/word/model/wml_document.dart": "a119f98e30e38fecc551635f7bc65c4b0e93df65d726578dad9083a5b3c7d0ea",
+    "packages/quds_office_engine/lib/src/word/model/word_table.dart": "70832100a936de09391ff2b38a7151503a937653fbd55ca20d8a7c3beac71c2f",
+    "packages/quds_office_engine/lib/src/word/serial/word_deserializer.dart": "9775743c9d32b4ab4189b1949302c75d0b0e96c8fb5347957fe6652c64b33155",
+    "packages/quds_office_engine/lib/src/word/serial/word_serializer.dart": "c697e76958d314637ce205d080f440436fac6960304ec60a186d7508abea3ddf",
+    "packages/quds_office_engine/lib/src/xml/xml_node.dart": "911378e591f1092b51cce5cba72aeede115dceb06e1a3e5171687bad56a7408c",
+    "packages/quds_office_engine/test/fixtures/fidelity/scripts/table-grid-format.json": "f656d1f06e15d92265f747ecb6792f0190a851c425a78c94e0e3b0fec85a0500",
+    "packages/quds_office_engine/test/fixtures/fidelity/scripts/table-grid-replace.json": "d1347eadead68f07789dcc3d6294f201b0ec6ce60d08610c59e7390c050f7b27",
+    "packages/quds_office_engine/test/fixtures/fidelity/scripts/table-grid-unmerge.json": "bbaf97b292fe051d327a1f0782ca2c27070225e0eb2efbf2b1bd9965df2161c3",
+    "packages/quds_office_engine/test/fixtures/fidelity/table_grid_expected.json": "5686627072176230c02f2cc1d2b6153223aaba211c5d99b00daf1572d3c67d29",
+    "packages/quds_office_engine/test/fixtures/fidelity/table_grid_format_expected.xml": "9513a34f21cc933cf130085b9216a03596144cdf6c94fe4d15ce62ac194f9573",
+    "packages/quds_office_engine/test/fixtures/fidelity/table_grid_replace_expected.xml": "980d47424827dfc142c0480a946bf28847d82c50b352ad9f8d80a7a9cf076318",
+    "packages/quds_office_engine/test/fixtures/fidelity/table_grid_source.xml": "a3c2ce118b3e0f1ff3f714c6b8b87da75bcf495d2050d7e10fcb070a638d4e98",
+    "packages/quds_office_engine/test/fixtures/fidelity/table_grid_unmerge_expected.xml": "85156dabab3ae1b4d4498e948fa0b6ad236f478a50f27721b0c5912f47b473e0",
+    "packages/quds_office_engine/test/table_grid_steps_test.dart": "fed913b1156ec039506047827e671b5b527ed616fbfc11dae93bf03da4a5af0b",
+    "packages/quds_office_engine/test/word_contained_text_wrap_test.dart": "e247199264fe161bb2238b3b4c69da62d7a8345ff068833474661e7f04ae4067",
+    "packages/quds_office_engine/test/xml_namespace_capture_test.dart": "b738ee09a955bf35d16e4fcbe9a97db5482270d76627a2494150a3ef6114859c",
+    "packages/quds_office_engine/tool/fidelity/README.md": "ff6c1bd72f68536351fa53ee7b6996365691b8dd033f1b497e0d4cda9a21bc74",
+    "packages/quds_office_engine/tool/fidelity/audit_operations.py": "44c2821d062bd2b0ce221db63d41c3cce26b68d6d9dbff05ccc977c162e58d88",
+    "packages/quds_office_engine/tool/fidelity/check.sh": "cc721d4b6135cb093acd47d38a471f20e1de8ac640985e65546d6a8d753946b9",
+    "packages/quds_office_engine/tool/fidelity/collect_coverage.py": "fffd9daf2beece4248a0f83ed951c100e53e41bf9c9bd8bff8f36fb34c5e23a0",
+    "packages/quds_office_engine/tool/fidelity/coverage_report.py": "c4c5a6ceb1d664b3b1de175e3b8529d0d95d7bf9d5c01dd96c1a232c3a54f765",
+    "packages/quds_office_engine/tool/fidelity/feature_matrix.json": "1034ab412107ebcf97c49e9bd212e8dec38e7e5e367207f3b04d6c143e2bca0e",
+    "packages/quds_office_engine/tool/fidelity/feature_matrix.py": "48f6e9749ae9f46444f56885b127c72f4003833c73fc041b6d756506b28a586d",
+    "packages/quds_office_engine/tool/fidelity/office_steps.dart": "614f3e09f83e70f61b3512d06daef4134e5dbafaa7f3af7ea27e4be91a07991b",
+    "packages/quds_office_engine/tool/fidelity/output_manifest.json": "54ceb28ddb942a8182afdc7ef24ef8f5c995384063c1dd7f539f01e7276a656a",
+    "packages/quds_office_engine/tool/fidelity/table_grid_fixtures.py": "86c0e348de7e9718e17c40c182d15357e38a5c138d08441b22c95c851686f4cf",
+    "packages/quds_office_engine/tool/fidelity/table_grid_oracle.py": "b84bc20f9e7bb47d02342ef39dfe65ccded0c8e5f6f538f542caea1521f3fbfa",
+    "packages/quds_office_engine/tool/fidelity/table_selector.dart": "c8669e4281007d81edc6bf96c48411d9ad5e01653ab58b469afb8e532ea008fe",
+    "packages/quds_office_engine/tool/fidelity/test_audit_operations.py": "135ece21aab8f92e6d53be2917208d010e15942533d9ca41ae4e40b6e8f799d0",
+    "packages/quds_office_engine/tool/fidelity/test_collect_coverage.py": "6d8b6adce3f190223c990cc9282f6000677226686687ec9f4724941e868b000b",
+    "packages/quds_office_engine/tool/fidelity/test_feature_matrix.py": "d08833a9d9613276f3ad33b1761b4530fde6494033750991ddbb5de90bb20afc",
+    "packages/quds_office_engine/tool/fidelity/test_table_grid_oracle.py": "26833a22fd4e21727084e33ff99287c055b9fa0f1de5e8849fe7a869beeadbfd",
+    "packages/quds_office_engine/tool/fidelity/word_structure_steps.dart": "c1be2b878fc14edc3607e1f2afc81b63ee1b8a084ceb717a57cbabf0c3ad42f4",
+    "tool/office-validation/render.py": "bf2edbf2f1fa89f2857c3b03f5e494420cfdf02b1a55405a6cccc328e8a522fd",
+    "tool/office-validation/test_render.py": "e22391f962421dbce565b757fcecdc20eb250ea6ca1fdde872e47f81f1048a6e"
+  },
+  "logs": {
+    "audit-controls.log": {
+      "bytes": 106,
+      "sha256": "6ff8cb6673e52248481ba0fa0eca3657ce430b443dbc93e93c7a3e25938b7877"
+    },
+    "coverage-controls.log": {
+      "bytes": 115,
+      "sha256": "9829b3769d62a0d8bfc42a951885c810585b702c2467273eafa3d94490e76ea6"
+    },
+    "editor-focused-recovered.log": {
+      "bytes": 3073,
+      "sha256": "9d3c5b9d699fb356a3016757cfdd83555e9d994c0bca60413d7c506705d10b2b"
+    },
+    "engine-analyze-final.log": {
+      "bytes": 49,
+      "sha256": "c557a0c697cdb937104f1423d3c02d6a1062917cb0bcb2830d91db8cf6192af0"
+    },
+    "engine-analyze.log": {
+      "bytes": 49,
+      "sha256": "c557a0c697cdb937104f1423d3c02d6a1062917cb0bcb2830d91db8cf6192af0"
+    },
+    "engine-focused-recovered.log": {
+      "bytes": 24402,
+      "sha256": "f0011fc31bc8ba3f14b744a8a501786bfaae48482f9236b0176c9df8e44f460e"
+    },
+    "engine-focused.log": {
+      "bytes": 24620,
+      "sha256": "284365c1ce9d6e59e106232a34d91b017f4e5252f822356903918c6a22cf9353"
+    },
+    "feature-controls-recovered.log": {
+      "bytes": 115,
+      "sha256": "089ea9a28239a84c451fa250cbece3bb9748f343028e4c7ad63a9fd83a0a72d4"
+    },
+    "feature-controls.log": {
+      "bytes": 1555,
+      "sha256": "39317e60572433fdac3e8b56754552e8b1074db408ebea218a90d6ecb25ec607"
+    },
+    "renderer-controls-recovered.log": {
+      "bytes": 423,
+      "sha256": "edf56343fdaebcd0ed519c2885e635d305d33ab269c56eb66df10c80f6611365"
+    },
+    "renderer-controls.log": {
+      "bytes": 423,
+      "sha256": "b20f1e0dd649ec9a7c721593232c0ccfdd4ead59cae06c8f68cdacc8cf1c6258"
+    },
+    "table-controls.log": {
+      "bytes": 102,
+      "sha256": "2447fd79a71c32258513eb5b87e6bffe669db9fae096604218b20bd867a11c6e"
+    },
+    "table-widths-oracle.log": {
+      "bytes": 39,
+      "sha256": "3887d1e3558f7b9b0cbba0670c03337a6d36adb66a86e5696ca7ec244bdba780"
+    }
+  },
+  "log_archive_sha256": "828a2921da6c6a4be7699f13a807ed9e6153d59eb0de8942e6433fab3fe8de96"
+}

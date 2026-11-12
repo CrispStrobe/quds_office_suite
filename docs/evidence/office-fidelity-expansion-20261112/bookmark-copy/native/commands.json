@@ -1,0 +1,26 @@
+[
+  {
+    "name": "schema",
+    "command": [
+      "dotnet",
+      "/workspace/scratch/07eb2580faa9/runtime/validator/OfficeValidation.dll",
+      "/workspace/scratch/07eb2580faa9/validation/bookmark-expansion/native-reference/input",
+      "/workspace/scratch/07eb2580faa9/validation/bookmark-expansion/native-reference/schema-report.json"
+    ],
+    "exit_code": 0,
+    "log_sha256": "c3f0c73481fa59b8a47c4f84c17f910a0024cae85819184beaeb3a1c110341cf"
+  },
+  {
+    "name": "render",
+    "command": [
+      "python3",
+      "/workspace/scratch/07eb2580faa9/quds-word-expansion/tool/office-validation/render.py",
+      "/workspace/scratch/07eb2580faa9/validation/bookmark-expansion/native-reference/input",
+      "/workspace/scratch/07eb2580faa9/validation/bookmark-expansion/native-reference/render",
+      "--schema-report",
+      "/workspace/scratch/07eb2580faa9/validation/bookmark-expansion/native-reference/schema-report.json"
+    ],
+    "exit_code": 0,
+    "log_sha256": "5d956b29d4eec0a1bb010b3ff489c236996b6f3a15e839159380ae6fab22756d"
+  }
+]

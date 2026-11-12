@@ -1,0 +1,89 @@
+{
+  "kind": "focused-local-validation",
+  "parent_commit": "c12798c4d58872e3d29f3bef3d66d8a808589b95",
+  "source_note": "Final hashes bind the focused source and test files; the combined source-pinned engine/editor/host gates are separate. Initial negative logs were captured while drafting the regressions before fixes; the test drafts evolved to use the committed independent PPTX fixture.",
+  "final_source_sha256": {
+    "packages/quds_office_engine/lib/src/slide/model/pml_arrange.dart": "55b511cf38d76de917fcbde0d80990a2e5eb99f7caf80d5c9c51da48a05948b7",
+    "packages/quds_office_engine/lib/src/slide/shapes/drawingml.dart": "db979f21e10238a4c87731f35e29c267bda82891b0809c8c27ed206a83c8da37",
+    "packages/quds_office_engine/lib/src/slide/serial/slide_serial.dart": "32cd83f0f106845e8f1dea1e64c2d1d7c91c9d9852737893986b18c7ea75f6f9",
+    "packages/quds_office_editor/lib/src/embed/office_controller.dart": "1c14720558feb017fc1f0812eb3970e1bcfcac230c2409eb7f3be79d7d871371",
+    "packages/quds_office_engine/test/slide_arrange_fidelity_test.dart": "be83f895df9ee9e6435791ed12c874379172aad9d1546b1ca18e8e7e11db42f6",
+    "packages/quds_office_editor/test/slide_arrange_history_test.dart": "58db66ae020a48df80d15c9e4dd373223bfb4e58fb3ce2f0a83df5acf80eae81",
+    "packages/quds_office_engine/test/fixtures/fidelity/slide-arrange.pptx": "6d86b24c22bdaac9d2e57167f7f506626029b4060eb793f523bfe86bfe266b50",
+    "packages/quds_office_engine/tool/fidelity/generate_slide_arrange_fixture.py": "62eba78f32805df0d04ad4c2a6e4ade7758af8598daef573923dff7598242ae0"
+  },
+  "negative_controls": {
+    "original_engine_failures": 7,
+    "original_editor_failures": 12,
+    "followup_engine_failures": 2,
+    "followup_editor_failures": 1
+  },
+  "engine": {
+    "passed": 95,
+    "exit_code": 0,
+    "package": "quds_office_engine",
+    "tests": [
+      "test/slide_arrange_fidelity_test.dart",
+      "test/slide_test.dart",
+      "test/slide_import_fidelity_test.dart",
+      "test/office_features_test.dart",
+      "test/slide_section_fidelity_test.dart"
+    ]
+  },
+  "editor": {
+    "passed": 122,
+    "exit_code": 0,
+    "package": "quds_office_editor",
+    "tests": [
+      "test/slide_arrange_history_test.dart",
+      "test/slide_section_reorder_test.dart",
+      "test/embed_test.dart"
+    ]
+  },
+  "analyzer": {
+    "exit_code": 0,
+    "result": "No issues found",
+    "files": [
+      "packages/quds_office_engine/lib/src/slide/model/pml_arrange.dart",
+      "packages/quds_office_engine/lib/src/slide/shapes/drawingml.dart",
+      "packages/quds_office_engine/lib/src/slide/serial/slide_serial.dart",
+      "packages/quds_office_editor/lib/src/embed/office_controller.dart",
+      "packages/quds_office_engine/test/slide_arrange_fidelity_test.dart",
+      "packages/quds_office_editor/test/slide_arrange_history_test.dart"
+    ]
+  },
+  "startup_retry": "Concurrent SDK wrappers raced on engine.stamp.tmp.18 before two commands started; their errors are retained and both commands subsequently passed when invoked sequentially.",
+  "external": {
+    "schema_files": 7,
+    "schema_failures": 0,
+    "rendered_files": 7,
+    "rendered_pages": 7,
+    "native_failures": 0,
+    "independent_source_comparisons": 6,
+    "source_pages": 1,
+    "cycle_groups": 2,
+    "all_snapshot_input_hashes_unchanged": true,
+    "renderer_script_sha256": "787d79602869da46442e40656d8d2cb95141a72d26433582fe58033bb7bea5a0"
+  },
+  "artifacts_sha256": {
+    "analyze-final.txt": "5eda3cd48abe53c748692a99cf8e1f48d6dff2bfec80503e1414d946b938deb1",
+    "analyze-startup-retry.txt": "6470e93a90d7eaf6be83fae5a696f09b2ed9d6bfd93e271cd5c88016f93c2562",
+    "editor-before.txt": "c3d678ccd7142cec69c47837aab90c5ce04d794efde9c1e012d361cfd56fbd54",
+    "editor-final-green.txt": "008dfa7d1a71519c936d722e280314dc4ec7ec35223227e96cc7bc9f102600a8",
+    "editor-followup-before.txt": "bddf4d3bb6c6a1932951dab5bc68e31a3c4dbfd7a5b4d381a36604725169879d",
+    "editor-initial-green.txt": "ba79f04991a2e4db4e49f033f8a297692523dcf6a3790c79c38d78e91aff1221",
+    "editor-startup-retry.txt": "ef0f68ce5511764f79c61514f08ea677eac2ddef1b11f4dc8faf29704def0bd6",
+    "engine-before.txt": "ef9becf7c70ec20de1cbf0759a31aa5d0fcf51835180d2017c9524522856f755",
+    "engine-final-green.txt": "5c06e9fb3aa6ca77846b0c9b44b5b35417a1ba1e65194d2af92e198495bb6b11",
+    "engine-followup-before.txt": "35feb85cd8aed4672242b7d151798ab0cf24c3c41aa0e0b64e88c447c3e8997a",
+    "engine-initial-green.txt": "753d17051e1147b5da95171ea48bcec4e657d70f20ca8935a6cac6e66faf299b",
+    "independent-baseline-comparison.json": "4b598f7455bc6142df5c81d74eb59807dd472ee874fc092183a4a69caf3c436d",
+    "input-manifest.json": "b869d08cdd31ce3157ea75e0987d35fffd9adbc1ca8aedcbf229789fb8c66bc0",
+    "native-command.txt": "4f02e18f40b4f524538cc1c91fd22517c44573bd5868598e777ec5dafad92c21",
+    "native-report.json": "02cfbcbe570f2388d7f5b0f04b6f444b9ca8a996158030f78b29f743fa32f5ea",
+    "renderer-runtime.json": "0ccd0f13183f25bc77e9f805dfa10db8e78056ea80a68da9bd3ef3db188ad891",
+    "schema-command.txt": "24ba739f6f605f893441b20845742185424884ca68d509c06aa7519451bdda97",
+    "schema-report.json": "a07ff0a68f7f497539b1467a538953a161ba1f786070292bab65ba718ef4eb73",
+    "validator-build.json": "17e857813747994eaf69a5e05cc242bea546471bc00965ff13634661b37e5367"
+  }
+}

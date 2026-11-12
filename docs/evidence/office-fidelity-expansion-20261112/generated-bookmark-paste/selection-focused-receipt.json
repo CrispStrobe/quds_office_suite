@@ -1,0 +1,29 @@
+{
+  "kind": "focused-selection-regression",
+  "parent_commit": "9499d3ebae3794567ef91c5c67f9d3ac19857a76",
+  "source_sha256": {
+    "packages/quds_office_editor/lib/src/embed/office_controller.dart": "1d5c4d08fdadc4565611e3eab326c71071adb85cac7db994e6c4bb24b0183ed7",
+    "packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart": "569aa5646657ff427d11facc5c0f19925e1945992069bfadc940ba90b6d19a3f"
+  },
+  "before": {
+    "failed": 1,
+    "exit_code": 1,
+    "scenario": "Forward selection from a retained body prefix to an empty final paragraph silently lost an incoming generated bookmark."
+  },
+  "after": {
+    "passed": 52,
+    "failed": 0,
+    "exit_code": 0,
+    "scope": "Same five-file generated/native bookmark and content-control cohort, including twelve new generated-paste cases."
+  },
+  "analyzer": {
+    "exit_code": 0,
+    "result": "No issues found"
+  },
+  "artifacts_sha256": {
+    "selection-before.txt": "9f6af1b259fe91dfd66625a7c3b21c0c3b3ec4e2d8c3cf91d041c558507122fc",
+    "selection-after.txt": "a5819face35494663138d1b555437f2a1e6f3955e69a7e38a1a48e9791fa8ed3",
+    "selection-analyze.txt": "2bc7ab9c15cad1a54bcd1543a564a7cbfa5eceff3e962a769b59149ffa8d8334"
+  },
+  "scope": "Reject noncollapsed body generated-bookmark merges before deletion; retain collapsed empty-target and native-endpoint cases."
+}

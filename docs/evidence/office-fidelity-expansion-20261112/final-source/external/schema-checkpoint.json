@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "scope": "Schema-only checkpoint while full native conversion continues.",
+  "implementation_commit": "2d6529e52f389e8c491ce75331d9efe6bd59a821",
+  "files": 375,
+  "schema_failures": 0,
+  "original_and_snapshot_sha256_match": true,
+  "schema_report_sha256": "d47c94ee801ec3a721d72b717d80df4dbf9331888061b648802e23fd8129e8a9",
+  "input_manifest_sha256": "532c01d574461c28d084e1803df2a9e5fb7e46d03804f37bcc2fa0863f7fab0f"
+}

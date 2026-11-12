@@ -1,0 +1,191 @@
+{
+  "renderer": "LibreOffice 24.2.7.2 ee3885777aa7032db5a9b65deec9457448a91162 (LibreOfficeKit embedding API)",
+  "files": 7,
+  "rendered_files": 7,
+  "visual_input_files": 7,
+  "native_schema_only_files": 0,
+  "native_schema_only": [],
+  "schema_report": "/workspace/scratch/07eb2580faa9/validation/slide-arrange-final-schema.json",
+  "pixel_fingerprint": "SHA-256 of big-endian uint32 width/height followed by RGB bytes",
+  "cycle_groups": 2,
+  "cycle_comparisons": [
+    {
+      "case": "fidelity-slide-arrange/direct.pptx",
+      "expected_cycles": [
+        1,
+        2,
+        3
+      ],
+      "actual_cycles": [
+        1,
+        2,
+        3
+      ],
+      "files": [
+        "fidelity-slide-arrange/direct-1.pptx",
+        "fidelity-slide-arrange/direct-2.pptx",
+        "fidelity-slide-arrange/direct-3.pptx"
+      ],
+      "baseline": null,
+      "baseline_candidate": null,
+      "baseline_page_order": null,
+      "passed": true
+    },
+    {
+      "case": "fidelity-slide-arrange/isolate.pptx",
+      "expected_cycles": [
+        1,
+        2,
+        3
+      ],
+      "actual_cycles": [
+        1,
+        2,
+        3
+      ],
+      "files": [
+        "fidelity-slide-arrange/isolate-1.pptx",
+        "fidelity-slide-arrange/isolate-2.pptx",
+        "fidelity-slide-arrange/isolate-3.pptx"
+      ],
+      "baseline": null,
+      "baseline_candidate": null,
+      "baseline_page_order": null,
+      "passed": true
+    }
+  ],
+  "baseline_comparisons": 0,
+  "page_order_comparisons": 0,
+  "render_only_files": [
+    "fidelity-slide-arrange/source.pptx"
+  ],
+  "failures": [],
+  "reports": [
+    {
+      "file": "fidelity-slide-arrange/direct-1.pptx",
+      "pages": 1,
+      "text": "Card 1   Card 2   Card 3   Card 4   Card 5\n\f",
+      "pixel_sha256": [
+        "bf4dca49d3b7f2cc985b8e28c203388313bb1b8cbd65a8078b909dc1b613a216"
+      ],
+      "pdf": "000/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "000/page-0001.png",
+          "pixel_sha256": "bf4dca49d3b7f2cc985b8e28c203388313bb1b8cbd65a8078b909dc1b613a216"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-arrange/direct-2.pptx",
+      "pages": 1,
+      "text": "Card 1   Card 2   Card 3   Card 4   Card 5\n\f",
+      "pixel_sha256": [
+        "bf4dca49d3b7f2cc985b8e28c203388313bb1b8cbd65a8078b909dc1b613a216"
+      ],
+      "pdf": "001/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "001/page-0001.png",
+          "pixel_sha256": "bf4dca49d3b7f2cc985b8e28c203388313bb1b8cbd65a8078b909dc1b613a216"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-arrange/direct-3.pptx",
+      "pages": 1,
+      "text": "Card 1   Card 2   Card 3   Card 4   Card 5\n\f",
+      "pixel_sha256": [
+        "bf4dca49d3b7f2cc985b8e28c203388313bb1b8cbd65a8078b909dc1b613a216"
+      ],
+      "pdf": "002/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "002/page-0001.png",
+          "pixel_sha256": "bf4dca49d3b7f2cc985b8e28c203388313bb1b8cbd65a8078b909dc1b613a216"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-arrange/isolate-1.pptx",
+      "pages": 1,
+      "text": "Card 1   Card 2   Card 3   Card 4   Card 5\n\f",
+      "pixel_sha256": [
+        "bf4dca49d3b7f2cc985b8e28c203388313bb1b8cbd65a8078b909dc1b613a216"
+      ],
+      "pdf": "003/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "003/page-0001.png",
+          "pixel_sha256": "bf4dca49d3b7f2cc985b8e28c203388313bb1b8cbd65a8078b909dc1b613a216"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-arrange/isolate-2.pptx",
+      "pages": 1,
+      "text": "Card 1   Card 2   Card 3   Card 4   Card 5\n\f",
+      "pixel_sha256": [
+        "bf4dca49d3b7f2cc985b8e28c203388313bb1b8cbd65a8078b909dc1b613a216"
+      ],
+      "pdf": "004/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "004/page-0001.png",
+          "pixel_sha256": "bf4dca49d3b7f2cc985b8e28c203388313bb1b8cbd65a8078b909dc1b613a216"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-arrange/isolate-3.pptx",
+      "pages": 1,
+      "text": "Card 1   Card 2   Card 3   Card 4   Card 5\n\f",
+      "pixel_sha256": [
+        "bf4dca49d3b7f2cc985b8e28c203388313bb1b8cbd65a8078b909dc1b613a216"
+      ],
+      "pdf": "005/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "005/page-0001.png",
+          "pixel_sha256": "bf4dca49d3b7f2cc985b8e28c203388313bb1b8cbd65a8078b909dc1b613a216"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-arrange/source.pptx",
+      "pages": 1,
+      "text": "Card 1   Card 2   Card 3   Card 4   Card 5\n\f",
+      "pixel_sha256": [
+        "bf4dca49d3b7f2cc985b8e28c203388313bb1b8cbd65a8078b909dc1b613a216"
+      ],
+      "pdf": "006/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "006/page-0001.png",
+          "pixel_sha256": "bf4dca49d3b7f2cc985b8e28c203388313bb1b8cbd65a8078b909dc1b613a216"
+        }
+      ]
+    }
+  ]
+}

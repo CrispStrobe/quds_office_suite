@@ -1,0 +1,767 @@
+00:00 +0: loading test/sheet_qualified_name_error_test.dart
+00:00 +0: qualified-name LET shadowing agrees with graph for 
+00:00 +1: qualified-name LET shadowing agrees with graph for _xlfn.
+00:00 +1 -1: qualified-name LET shadowing agrees with graph for _xlfn. [E]
+  Expected: empty
+    Actual: Set:['Alpha!B3']
+  
+  package:matcher                                 expect
+  test/sheet_qualified_name_error_test.dart 35:7  main.<fn>
+  
+00:00 +1 -1: qualified-name LET shadowing agrees with graph for _xlfn._xlws.
+00:00 +1 -2: qualified-name LET shadowing agrees with graph for _xlfn._xlws. [E]
+  Expected: empty
+    Actual: Set:['Alpha!B3']
+  
+  package:matcher                                 expect
+  test/sheet_qualified_name_error_test.dart 35:7  main.<fn>
+  
+00:00 +1 -2: numeric consumer retains a genuine named error: ABS(@)
+00:00 +1 -3: numeric consumer retains a genuine named error: ABS(@) [E]
+  Expected: '#REF!'
+    Actual: <null>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -3: numeric consumer retains a genuine named error: ROUND(@,0)
+00:00 +1 -4: numeric consumer retains a genuine named error: ROUND(@,0) [E]
+  Expected: '#REF!'
+    Actual: <0.0>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -4: numeric consumer retains a genuine named error: ROUND(3,@)
+00:00 +1 -5: numeric consumer retains a genuine named error: ROUND(3,@) [E]
+  Expected: '#REF!'
+    Actual: <3.0>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -5: numeric consumer retains a genuine named error: ROUNDUP(@,0)
+00:00 +1 -6: numeric consumer retains a genuine named error: ROUNDUP(@,0) [E]
+  Expected: '#REF!'
+    Actual: <0.0>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -6: numeric consumer retains a genuine named error: ROUNDDOWN(@,0)
+00:00 +1 -7: numeric consumer retains a genuine named error: ROUNDDOWN(@,0) [E]
+  Expected: '#REF!'
+    Actual: <0.0>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -7: numeric consumer retains a genuine named error: MOD(@,2)
+00:00 +1 -8: numeric consumer retains a genuine named error: MOD(@,2) [E]
+  Expected: '#REF!'
+    Actual: '#DIV/0!'
+     Which: is different.
+            Expected: #REF!
+              Actual: #DIV/0!
+                       ^
+             Differ at offset 1
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -8: numeric consumer retains a genuine named error: POWER(2,@)
+00:00 +1 -9: numeric consumer retains a genuine named error: POWER(2,@) [E]
+  Expected: '#REF!'
+    Actual: <1.0>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -9: numeric consumer retains a genuine named error: POW(@,2)
+00:00 +1 -10: numeric consumer retains a genuine named error: POW(@,2) [E]
+  Expected: '#REF!'
+    Actual: <0.0>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -10: numeric consumer retains a genuine named error: SQRT(@)
+00:00 +1 -11: numeric consumer retains a genuine named error: SQRT(@) [E]
+  Expected: '#REF!'
+    Actual: '#NUM!'
+     Which: is different.
+            Expected: #REF!
+              Actual: #NUM!
+                       ^
+             Differ at offset 1
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -11: numeric consumer retains a genuine named error: EXP(@)
+00:00 +1 -12: numeric consumer retains a genuine named error: EXP(@) [E]
+  Expected: '#REF!'
+    Actual: <1.0>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -12: numeric consumer retains a genuine named error: LN(@)
+00:00 +1 -13: numeric consumer retains a genuine named error: LN(@) [E]
+  Expected: '#REF!'
+    Actual: <NaN>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -13: numeric consumer retains a genuine named error: LOG(2,@)
+00:00 +1 -14: numeric consumer retains a genuine named error: LOG(2,@) [E]
+  Expected: '#REF!'
+    Actual: <0.3010299956639812>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -14: numeric consumer retains a genuine named error: LOG10(@)
+00:00 +1 -15: numeric consumer retains a genuine named error: LOG10(@) [E]
+  Expected: '#REF!'
+    Actual: '#ERROR! FormatException: Unparsed formula token ('
+     Which: is different.
+            Expected: #REF!
+              Actual: #ERROR! For ...
+                       ^
+             Differ at offset 1
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -15: numeric consumer retains a genuine named error: SIGN(@)
+00:00 +1 -16: numeric consumer retains a genuine named error: SIGN(@) [E]
+  Expected: '#REF!'
+    Actual: <0>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -16: numeric consumer retains a genuine named error: INT(@)
+00:00 +1 -17: numeric consumer retains a genuine named error: INT(@) [E]
+  Expected: '#REF!'
+    Actual: <null>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -17: numeric consumer retains a genuine named error: TRUNC(@)
+00:00 +1 -18: numeric consumer retains a genuine named error: TRUNC(@) [E]
+  Expected: '#REF!'
+    Actual: <null>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -18: numeric consumer retains a genuine named error: CEILING(@)
+00:00 +1 -19: numeric consumer retains a genuine named error: CEILING(@) [E]
+  Expected: '#REF!'
+    Actual: <null>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -19: numeric consumer retains a genuine named error: FLOOR(@)
+00:00 +1 -20: numeric consumer retains a genuine named error: FLOOR(@) [E]
+  Expected: '#REF!'
+    Actual: <null>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -20: numeric consumer retains a genuine named error: EVEN(@)
+00:00 +1 -21: numeric consumer retains a genuine named error: EVEN(@) [E]
+  Expected: '#REF!'
+    Actual: <0.0>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -21: numeric consumer retains a genuine named error: ODD(@)
+00:00 +1 -22: numeric consumer retains a genuine named error: ODD(@) [E]
+  Expected: '#REF!'
+    Actual: <1.0>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -22: numeric consumer retains a genuine named error: FACT(@)
+00:00 +1 -23: numeric consumer retains a genuine named error: FACT(@) [E]
+  Expected: '#REF!'
+    Actual: <1.0>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -23: numeric consumer retains a genuine named error: GCD(1,@)
+00:00 +1 -24: numeric consumer retains a genuine named error: GCD(1,@) [E]
+  Expected: '#REF!'
+    Actual: <1>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -24: numeric consumer retains a genuine named error: LCM(1,@)
+00:00 +1 -25: numeric consumer retains a genuine named error: LCM(1,@) [E]
+  Expected: '#REF!'
+    Actual: <1>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -25: numeric consumer retains a genuine named error: QUOTIENT(8,@)
+00:00 +1 -26: numeric consumer retains a genuine named error: QUOTIENT(8,@) [E]
+  Expected: '#REF!'
+    Actual: '#DIV/0!'
+     Which: is different.
+            Expected: #REF!
+              Actual: #DIV/0!
+                       ^
+             Differ at offset 1
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -26: numeric consumer retains a genuine named error: MROUND(8,@)
+00:00 +1 -27: numeric consumer retains a genuine named error: MROUND(8,@) [E]
+  Expected: '#REF!'
+    Actual: <0>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -27: numeric consumer retains a genuine named error: MEDIAN(1,@)
+00:00 +1 -28: numeric consumer retains a genuine named error: MEDIAN(1,@) [E]
+  Expected: '#REF!'
+    Actual: <1.0>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -28: numeric consumer retains a genuine named error: AVEDEV(1,@)
+00:00 +1 -29: numeric consumer retains a genuine named error: AVEDEV(1,@) [E]
+  Expected: '#REF!'
+    Actual: <0.0>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -29: numeric consumer retains a genuine named error: STDEV(1,@)
+00:00 +1 -30: numeric consumer retains a genuine named error: STDEV(1,@) [E]
+  Expected: '#REF!'
+    Actual: '#DIV/0!'
+     Which: is different.
+            Expected: #REF!
+              Actual: #DIV/0!
+                       ^
+             Differ at offset 1
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -30: numeric consumer retains a genuine named error: STDEVP(1,@)
+00:00 +1 -31: numeric consumer retains a genuine named error: STDEVP(1,@) [E]
+  Expected: '#REF!'
+    Actual: <0.0>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -31: numeric consumer retains a genuine named error: VAR(1,@)
+00:00 +1 -32: numeric consumer retains a genuine named error: VAR(1,@) [E]
+  Expected: '#REF!'
+    Actual: '#DIV/0!'
+     Which: is different.
+            Expected: #REF!
+              Actual: #DIV/0!
+                       ^
+             Differ at offset 1
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -32: numeric consumer retains a genuine named error: VARP(1,@)
+00:00 +1 -33: numeric consumer retains a genuine named error: VARP(1,@) [E]
+  Expected: '#REF!'
+    Actual: <0.0>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -33: numeric consumer retains a genuine named error: RANDBETWEEN(1,@)
+00:00 +1 -34: numeric consumer retains a genuine named error: RANDBETWEEN(1,@) [E]
+  Expected: '#REF!'
+    Actual: <1.0>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -34: numeric consumer retains a genuine named error: IRR(@)
+00:00 +1 -35: numeric consumer retains a genuine named error: IRR(@) [E]
+  Expected: '#REF!'
+    Actual: '#NUM!'
+     Which: is different.
+            Expected: #REF!
+              Actual: #NUM!
+                       ^
+             Differ at offset 1
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -35: numeric consumer retains a genuine named error: TIME(1,@,0)
+00:00 +1 -36: numeric consumer retains a genuine named error: TIME(1,@,0) [E]
+  Expected: '#REF!'
+    Actual: <0.041666666666666664>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -36: numeric consumer retains a genuine named error: DAYS(2,@)
+00:00 +1 -37: numeric consumer retains a genuine named error: DAYS(2,@) [E]
+  Expected: '#REF!'
+    Actual: '#VALUE!'
+     Which: is different.
+            Expected: #REF!
+              Actual: #VALUE!
+                       ^
+             Differ at offset 1
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -37: numeric consumer retains a genuine named error: VALUE(@)
+00:00 +1 -38: numeric consumer retains a genuine named error: VALUE(@) [E]
+  Expected: '#REF!'
+    Actual: '#VALUE!'
+     Which: is different.
+            Expected: #REF!
+              Actual: #VALUE!
+                       ^
+             Differ at offset 1
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -38: numeric consumer retains a genuine named error: CHAR(@)
+00:00 +1 -39: numeric consumer retains a genuine named error: CHAR(@) [E]
+  Expected: '#REF!'
+    Actual: '\x00'
+     Which: is different.
+            Expected: #REF!
+              Actual: \x00
+                      ^
+             Differ at offset 0
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -39: numeric consumer retains a genuine named error: CODE(@)
+00:00 +1 -40: numeric consumer retains a genuine named error: CODE(@) [E]
+  Expected: '#REF!'
+    Actual: <35.0>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -40: numeric consumer retains a genuine named error: UNICHAR(@)
+00:00 +1 -41: numeric consumer retains a genuine named error: UNICHAR(@) [E]
+  Expected: '#REF!'
+    Actual: '\x00'
+     Which: is different.
+            Expected: #REF!
+              Actual: \x00
+                      ^
+             Differ at offset 0
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -41: numeric consumer retains a genuine named error: UNICODE(@)
+00:00 +1 -42: numeric consumer retains a genuine named error: UNICODE(@) [E]
+  Expected: '#REF!'
+    Actual: <35.0>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -42: numeric consumer retains a genuine named error: LEN(@)
+00:00 +1 -43: numeric consumer retains a genuine named error: LEN(@) [E]
+  Expected: '#REF!'
+    Actual: <5.0>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -43: numeric consumer retains a genuine named error: FIND(@,"text")
+00:00 +1 -44: numeric consumer retains a genuine named error: FIND(@,"text") [E]
+  Expected: '#REF!'
+    Actual: '#VALUE!'
+     Which: is different.
+            Expected: #REF!
+              Actual: #VALUE!
+                       ^
+             Differ at offset 1
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -44: numeric consumer retains a genuine named error: SEARCH("t",@)
+00:00 +1 -45: numeric consumer retains a genuine named error: SEARCH("t",@) [E]
+  Expected: '#REF!'
+    Actual: '#VALUE!'
+     Which: is different.
+            Expected: #REF!
+              Actual: #VALUE!
+                       ^
+             Differ at offset 1
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -45: numeric consumer retains a genuine named error: N(@)
+00:00 +1 -46: numeric consumer retains a genuine named error: N(@) [E]
+  Expected: '#REF!'
+    Actual: <0>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -46: numeric consumer retains a genuine named error: ADDRESS(1,@)
+00:00 +1 -47: numeric consumer retains a genuine named error: ADDRESS(1,@) [E]
+  Expected: '#REF!'
+    Actual: '$A$1'
+     Which: is different.
+            Expected: #REF!
+              Actual: $A$1
+                      ^
+             Differ at offset 0
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -47: numeric consumer retains a genuine named error: FIXED(@)
+00:00 +1 -48: numeric consumer retains a genuine named error: FIXED(@) [E]
+  Expected: '#REF!'
+    Actual: '0.00'
+     Which: is different.
+            Expected: #REF!
+              Actual: 0.00
+                      ^
+             Differ at offset 0
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -48: numeric consumer retains a genuine named error: DOLLAR(@)
+00:00 +1 -49: numeric consumer retains a genuine named error: DOLLAR(@) [E]
+  Expected: '#REF!'
+    Actual: '$0.00'
+     Which: is different.
+            Expected: #REF!
+              Actual: $0.00
+                      ^
+             Differ at offset 0
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -49: numeric consumer retains a genuine named error: RMB(@)
+00:00 +1 -50: numeric consumer retains a genuine named error: RMB(@) [E]
+  Expected: '#REF!'
+    Actual: '¥0.00'
+     Which: is different.
+            Expected: #REF!
+              Actual: ¥0.00
+                      ^
+             Differ at offset 0
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -50: numeric consumer retains a genuine named error: YEN(@)
+00:00 +1 -51: numeric consumer retains a genuine named error: YEN(@) [E]
+  Expected: '#REF!'
+    Actual: '¥0.00'
+     Which: is different.
+            Expected: #REF!
+              Actual: ¥0.00
+                      ^
+             Differ at offset 0
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -51: numeric consumer retains a genuine named error: BAHTTEXT(@)
+00:00 +1 -52: numeric consumer retains a genuine named error: BAHTTEXT(@) [E]
+  Expected: '#REF!'
+    Actual: '0.00'
+     Which: is different.
+            Expected: #REF!
+              Actual: 0.00
+                      ^
+             Differ at offset 0
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -52: numeric consumer retains a genuine named error: DATE(2026,1,@)
+00:00 +1 -53: numeric consumer retains a genuine named error: DATE(2026,1,@) [E]
+  Expected: '#REF!'
+    Actual: <20453.958333333332>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -53: numeric consumer retains a genuine named error: YEAR(@)
+00:00 +1 -54: numeric consumer retains a genuine named error: YEAR(@) [E]
+  Expected: '#REF!'
+    Actual: '#VALUE!'
+     Which: is different.
+            Expected: #REF!
+              Actual: #VALUE!
+                       ^
+             Differ at offset 1
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -54: numeric consumer retains a genuine named error: MONTH(@)
+00:00 +1 -55: numeric consumer retains a genuine named error: MONTH(@) [E]
+  Expected: '#REF!'
+    Actual: '#VALUE!'
+     Which: is different.
+            Expected: #REF!
+              Actual: #VALUE!
+                       ^
+             Differ at offset 1
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -55: numeric consumer retains a genuine named error: DAY(@)
+00:00 +1 -56: numeric consumer retains a genuine named error: DAY(@) [E]
+  Expected: '#REF!'
+    Actual: '#VALUE!'
+     Which: is different.
+            Expected: #REF!
+              Actual: #VALUE!
+                       ^
+             Differ at offset 1
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -56: numeric consumer retains a genuine named error: HOUR(@)
+00:00 +1 -57: numeric consumer retains a genuine named error: HOUR(@) [E]
+  Expected: '#REF!'
+    Actual: <0>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -57: numeric consumer retains a genuine named error: MINUTE(@)
+00:00 +1 -58: numeric consumer retains a genuine named error: MINUTE(@) [E]
+  Expected: '#REF!'
+    Actual: <0>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -58: numeric consumer retains a genuine named error: SECOND(@)
+00:00 +1 -59: numeric consumer retains a genuine named error: SECOND(@) [E]
+  Expected: '#REF!'
+    Actual: <0>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -59: numeric consumer retains a genuine named error: WEEKDAY(@)
+00:00 +1 -60: numeric consumer retains a genuine named error: WEEKDAY(@) [E]
+  Expected: '#REF!'
+    Actual: <2>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -60: numeric consumer retains a genuine named error: PV(0.1,1,@)
+00:00 +1 -61: numeric consumer retains a genuine named error: PV(0.1,1,@) [E]
+  Expected: '#REF!'
+    Actual: <0.0>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -61: numeric consumer retains a genuine named error: FV(0.1,1,@)
+00:00 +1 -62: numeric consumer retains a genuine named error: FV(0.1,1,@) [E]
+  Expected: '#REF!'
+    Actual: <-0.0>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -62: numeric consumer retains a genuine named error: PMT(0.1,1,@)
+00:00 +1 -63: numeric consumer retains a genuine named error: PMT(0.1,1,@) [E]
+  Expected: '#REF!'
+    Actual: <-0.0>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -63: numeric consumer retains a genuine named error: NPV(0.1,1,@)
+00:00 +1 -64: numeric consumer retains a genuine named error: NPV(0.1,1,@) [E]
+  Expected: '#REF!'
+    Actual: <0.9090909090909091>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -64: numeric consumer retains a genuine named error: SIN(@)
+00:00 +1 -65: numeric consumer retains a genuine named error: SIN(@) [E]
+  Expected: '#REF!'
+    Actual: <0.0>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -65: numeric consumer retains a genuine named error: COS(@)
+00:00 +1 -66: numeric consumer retains a genuine named error: COS(@) [E]
+  Expected: '#REF!'
+    Actual: <1.0>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -66: numeric consumer retains a genuine named error: TAN(@)
+00:00 +1 -67: numeric consumer retains a genuine named error: TAN(@) [E]
+  Expected: '#REF!'
+    Actual: <0.0>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -67: numeric consumer retains a genuine named error: EDATE(1,@)
+00:00 +1 -68: numeric consumer retains a genuine named error: EDATE(1,@) [E]
+  Expected: '#REF!'
+    Actual: <1.0>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -68: numeric consumer retains a genuine named error: EOMONTH(1,@)
+00:00 +1 -69: numeric consumer retains a genuine named error: EOMONTH(1,@) [E]
+  Expected: '#REF!'
+    Actual: <30.0>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -69: numeric consumer retains a genuine named error: NETWORKDAYS(1,@)
+00:00 +1 -70: numeric consumer retains a genuine named error: NETWORKDAYS(1,@) [E]
+  Expected: '#REF!'
+    Actual: '#VALUE!'
+     Which: is different.
+            Expected: #REF!
+              Actual: #VALUE!
+                       ^
+             Differ at offset 1
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -70: numeric consumer retains a genuine named error: SEQUENCE(1,1,@)
+00:00 +1 -71: numeric consumer retains a genuine named error: SEQUENCE(1,1,@) [E]
+  Expected: '#REF!'
+    Actual: <1.0>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 115:7  main.<fn>
+  
+00:00 +1 -71: error handlers and type predicates consume genuine errors explicitly
+00:00 +1 -72: error handlers and type predicates consume genuine errors explicitly [E]
+  Expected: <12>
+    Actual: <null>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 129:7  main.<fn>
+  
+00:00 +1 -72: IF evaluates only its selected branch and preserves predicate errors
+00:00 +1 -73: IF evaluates only its selected branch and preserves predicate errors [E]
+  Expected: '#REF!'
+    Actual: <7.0>
+     Which: not an <Instance of 'String'>
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 146:7  main.<fn>
+  
+00:00 +1 -73: IFERROR and IFNA evaluate fallback expressions only when selected
+00:00 +1 -74: IFERROR and IFNA evaluate fallback expressions only when selected [E]
+  Expected: <7>
+    Actual: '#ERROR! Unsupported operation: Unmodeled defined-name expression SUM(Alpha!$B$2,Alpha!$B$3)'
+  
+  package:matcher                                  expect
+  test/sheet_qualified_name_error_test.dart 154:5  main.<fn>
+  
+00:00 +1 -74: Some tests failed.
+
+Failing tests:
+  test/sheet_qualified_name_error_test.dart: IF evaluates only its selected branch and preserves predicate errors
+  test/sheet_qualified_name_error_test.dart: IFERROR and IFNA evaluate fallback expressions only when selected
+  test/sheet_qualified_name_error_test.dart: error handlers and type predicates consume genuine errors explicitly
+  test/sheet_qualified_name_error_test.dart: numeric consumer retains a genuine named error: ABS(@)
+  ... and 70 more
+
+Consider enabling the flag chain-stack-traces to receive more detailed exceptions.
+For example, 'dart test --chain-stack-traces'.

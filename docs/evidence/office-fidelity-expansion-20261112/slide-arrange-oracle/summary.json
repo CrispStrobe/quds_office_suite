@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "base_commit": "47358ef187f339c8e501e8777c6d29d233b9b59b",
+  "scope": "Independent native XML oracle and controls for the existing seven-file slide arrangement corpus; no production changes and no additional native-render claim.",
+  "toolchain": "Flutter 3.44.0 / Dart 3.12.0; Python standard library only",
+  "producer_tests": 21,
+  "independent_controls": 20,
+  "files_verified": 7,
+  "checks": [
+    "Exact authored source bytes, including a pinned fixture fingerprint",
+    "One native slide and five literal named shape coordinates, extents and text values",
+    "Two ordered flat groups and the fifth shape outside groups",
+    "Unique numeric uint32 IDs including native root, groups and shapes",
+    "Identity container transforms, with no rotation or reflection",
+    "Stable native identities and membership across three direct and three isolate saves"
+  ],
+  "negative_controls": [
+    "Root/group and group/shape duplicate IDs, including different decimal spelling",
+    "Duplicate shape IDs and values outside uint32",
+    "Missing root identity",
+    "Changed position, extent, text, or shape name",
+    "Wrong group membership, grouping of the ungrouped shape, changed draw order and nesting",
+    "Nonidentity group translation and shape rotation",
+    "Valid ZIP whose bytes no longer match the authored source",
+    "Missing save, unexpected nested export, and legal but unstable later-cycle identity"
+  ],
+  "commands": {
+    "producer": "dart test --reporter expanded test/slide_arrange_fidelity_test.dart",
+    "oracle": "python3 tool/fidelity/slide_arrange_oracle.py",
+    "controls": "python3 -m unittest discover -s tool/fidelity -p test_slide_arrange_oracle.py -v"
+  },
+  "files_sha256": {
+    "packages/quds_office_engine/tool/fidelity/slide_arrange_oracle.py": "a1ee0bcfc59b29e3831ad39b58985d19c41b5ab539ec2d8562408e3997a81d99",
+    "packages/quds_office_engine/tool/fidelity/test_slide_arrange_oracle.py": "0f07fd9e0ab235cc7b987bd5ac8bb8ab9b6a00506e3b175be7626db68fa97766",
+    "packages/quds_office_engine/test/slide_arrange_fidelity_test.dart": "be83f895df9ee9e6435791ed12c874379172aad9d1546b1ca18e8e7e11db42f6",
+    "packages/quds_office_engine/test/fixtures/fidelity/slide-arrange.pptx": "6d86b24c22bdaac9d2e57167f7f506626029b4060eb793f523bfe86bfe266b50",
+    "packages/quds_office_engine/tool/fidelity/generate_slide_arrange_fixture.py": "62eba78f32805df0d04ad4c2a6e4ade7758af8598daef573923dff7598242ae0"
+  },
+  "logs_sha256": {
+    "controls.log": "85060aa4e0c50f681d01a6000700d07d6fbbb88a8c5fad47b0c4ad7446371734",
+    "oracle.log": "780e979effc383697decefa2fbdf25ea8b53889e978171ff6cec9bc3ec3c5d88",
+    "producer.log": "27bef6dd80294e1ce6a917377a89e2eae5287a4e8400b587fc86031fe5d1a9e2",
+    "pub-get.log": "9c130dcbdcf9fa97f02b41c21f7f739b0be9ed9e0c80f52d854281723b215959"
+  },
+  "logs_archive_sha256": "3e445613cb6d920ed6bfc32f0b47e53368cfb5dd278c07f28a534f7e590c12d7"
+}

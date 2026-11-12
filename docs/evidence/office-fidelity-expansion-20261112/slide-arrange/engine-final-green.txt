@@ -1,0 +1,97 @@
+00:00 +0: loading test/slide_arrange_fidelity_test.dart
+00:00 +0: test/slide_arrange_fidelity_test.dart: left aligns modeled bounds and preserves dimensions
+00:00 +1: test/slide_arrange_fidelity_test.dart: center aligns modeled bounds and preserves dimensions
+00:00 +2: test/slide_arrange_fidelity_test.dart: right aligns modeled bounds and preserves dimensions
+00:00 +3: test/slide_arrange_fidelity_test.dart: top aligns modeled bounds and preserves dimensions
+00:00 +4: test/slide_arrange_fidelity_test.dart: middle aligns modeled bounds and preserves dimensions
+00:00 +5: test/slide_arrange_fidelity_test.dart: bottom aligns modeled bounds and preserves dimensions
+00:00 +6: test/slide_arrange_fidelity_test.dart: horizontal gap distribution fixes both endpoints
+00:00 +7: test/slide_arrange_fidelity_test.dart: horizontal overlap distribution fixes both endpoints
+00:00 +8: test/slide_arrange_fidelity_test.dart: vertical gap distribution fixes both endpoints
+00:00 +9: test/slide_arrange_fidelity_test.dart: vertical overlap distribution fixes both endpoints
+00:00 +10: test/slide_arrange_fidelity_test.dart: insufficient selections leave original transform objects untouched
+00:00 +11: test/slide_arrange_fidelity_test.dart: direct flat group membership and unique native IDs survive three saves
+00:00 +12: test/slide_arrange_fidelity_test.dart: direct flat group membership and unique native IDs survive three saves
+00:00 +13: test/slide_arrange_fidelity_test.dart: direct flat group membership and unique native IDs survive three saves
+00:00 +14: test/slide_arrange_fidelity_test.dart: direct flat group membership and unique native IDs survive three saves
+00:00 +15: test/slide_arrange_fidelity_test.dart: direct flat group membership and unique native IDs survive three saves
+00:00 +16: test/slide_arrange_fidelity_test.dart: direct flat group membership and unique native IDs survive three saves
+00:00 +17: test/slide_arrange_fidelity_test.dart: direct flat group membership and unique native IDs survive three saves
+00:00 +18: test/slide_arrange_fidelity_test.dart: direct flat group membership and unique native IDs survive three saves
+00:00 +19: test/slide_arrange_fidelity_test.dart: direct flat group membership and unique native IDs survive three saves
+00:00 +20: test/slide_arrange_fidelity_test.dart: direct flat group membership and unique native IDs survive three saves
+00:00 +21: test/slide_arrange_fidelity_test.dart: direct flat group membership and unique native IDs survive three saves
+00:00 +22: test/slide_arrange_fidelity_test.dart: direct flat group membership and unique native IDs survive three saves
+00:00 +23: test/slide_arrange_fidelity_test.dart: direct flat group membership and unique native IDs survive three saves
+00:00 +24: test/slide_arrange_fidelity_test.dart: direct flat group membership and unique native IDs survive three saves
+00:00 +25: test/slide_arrange_fidelity_test.dart: direct flat group membership and unique native IDs survive three saves
+00:00 +26: test/slide_arrange_fidelity_test.dart: direct flat group membership and unique native IDs survive three saves
+00:00 +27: test/slide_arrange_fidelity_test.dart: direct flat group membership and unique native IDs survive three saves
+00:00 +28: test/slide_arrange_fidelity_test.dart: direct flat group membership and unique native IDs survive three saves
+00:00 +29: test/slide_arrange_fidelity_test.dart: direct flat group membership and unique native IDs survive three saves
+00:00 +30: test/slide_arrange_fidelity_test.dart: direct flat group membership and unique native IDs survive three saves
+00:00 +31: test/slide_arrange_fidelity_test.dart: direct flat group membership and unique native IDs survive three saves
+00:00 +32: test/slide_arrange_fidelity_test.dart: direct flat group membership and unique native IDs survive three saves
+00:00 +33: test/slide_arrange_fidelity_test.dart: direct flat group membership and unique native IDs survive three saves
+00:00 +34: test/slide_arrange_fidelity_test.dart: direct flat group membership and unique native IDs survive three saves
+00:00 +35: test/slide_arrange_fidelity_test.dart: direct flat group membership and unique native IDs survive three saves
+00:00 +36: test/slide_arrange_fidelity_test.dart: direct flat group membership and unique native IDs survive three saves
+00:00 +37: test/slide_arrange_fidelity_test.dart: direct flat group membership and unique native IDs survive three saves
+00:00 +38: test/slide_arrange_fidelity_test.dart: direct flat group membership and unique native IDs survive three saves
+00:00 +39: test/slide_arrange_fidelity_test.dart: direct flat group membership and unique native IDs survive three saves
+00:00 +40: test/slide_arrange_fidelity_test.dart: direct flat group membership and unique native IDs survive three saves
+00:00 +41: test/office_features_test.dart: evaluates live fields and round-trips a watermark
+00:00 +42: test/slide_arrange_fidelity_test.dart: isolate flat group membership and unique native IDs survive three saves
+00:00 +43: test/slide_arrange_fidelity_test.dart: isolate flat group membership and unique native IDs survive three saves
+00:00 +44: test/office_features_test.dart: round-trips first headers notes styles and slide sections
+00:00 +45: test/slide_section_fidelity_test.dart: native GUIDs, empty sections and namespace distinctions are imported
+00:00 +46: test/slide_section_fidelity_test.dart: native GUIDs, empty sections and namespace distinctions are imported
+00:00 +47: test/slide_section_fidelity_test.dart: native GUIDs, empty sections and namespace distinctions are imported
+00:00 +48: test/slide_section_fidelity_test.dart: native GUIDs, empty sections and namespace distinctions are imported
+00:00 +49: test/slide_section_fidelity_test.dart: native GUIDs, empty sections and namespace distinctions are imported
+00:00 +50: test/slide_section_fidelity_test.dart: native GUIDs, empty sections and namespace distinctions are imported
+00:00 +51: test/slide_section_fidelity_test.dart: native GUIDs, empty sections and namespace distinctions are imported
+00:00 +52: test/slide_section_fidelity_test.dart: native GUIDs, empty sections and namespace distinctions are imported
+00:00 +53: test/slide_section_fidelity_test.dart: native GUIDs, empty sections and namespace distinctions are imported
+00:00 +54: test/slide_section_fidelity_test.dart: native GUIDs, empty sections and namespace distinctions are imported
+00:00 +55: test/slide_section_fidelity_test.dart: native GUIDs, empty sections and namespace distinctions are imported
+00:00 +56: test/slide_section_fidelity_test.dart: native GUIDs, empty sections and namespace distinctions are imported
+00:00 +57: test/slide_section_fidelity_test.dart: native GUIDs, empty sections and namespace distinctions are imported
+00:00 +58: test/slide_section_fidelity_test.dart: native GUIDs, empty sections and namespace distinctions are imported
+00:00 +59: test/slide_section_fidelity_test.dart: native GUIDs, empty sections and namespace distinctions are imported
+00:00 +60: test/slide_section_fidelity_test.dart: native GUIDs, empty sections and namespace distinctions are imported
+00:00 +61: test/slide_section_fidelity_test.dart: native GUIDs, empty sections and namespace distinctions are imported
+00:00 +62: test/slide_arrange_fidelity_test.dart: native group IDs stay in unsigned range with a maximal existing shape ID
+00:00 +63: test/slide_section_fidelity_test.dart: direct unchanged retains section identity and membership through three saves
+00:00 +64: test/slide_section_fidelity_test.dart: direct within retains section identity and membership through three saves
+00:01 +65: test/slide_section_fidelity_test.dart: direct forward retains section identity and membership through three saves
+00:01 +66: test/slide_section_fidelity_test.dart: direct backward retains section identity and membership through three saves
+00:01 +67: test/slide_section_fidelity_test.dart: direct emptied retains section identity and membership through three saves
+00:01 +68: test/slide_section_fidelity_test.dart: isolate unchanged retains section identity and membership through three saves
+00:01 +69: test/slide_section_fidelity_test.dart: isolate within retains section identity and membership through three saves
+00:01 +70: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:01 +71: test/slide_section_fidelity_test.dart: isolate backward retains section identity and membership through three saves
+00:01 +72: test/slide_section_fidelity_test.dart: isolate emptied retains section identity and membership through three saves
+00:01 +73: test/slide_section_fidelity_test.dart: a planned cross-section move restores exact boundaries on undo and redo
+00:01 +74: test/slide_section_fidelity_test.dart: a stale plan rejects changed section state without touching slides
+00:01 +75: test/slide_section_fidelity_test.dart: moving to or from an unsectioned prefix preserves unaffected membership
+00:01 +76: test/slide_section_fidelity_test.dart: duplicate membership guards script/API/save before any package mutation
+00:02 +77: test/slide_section_fidelity_test.dart: orphan membership guards script/API/save before any package mutation
+00:02 +78: test/slide_section_fidelity_test.dart: nonconsecutive membership guards script/API/save before any package mutation
+00:02 +79: test/slide_section_fidelity_test.dart: duplicate GUID guards script/API/save before any package mutation
+00:02 +80: test/slide_section_fidelity_test.dart: invalid GUID guards script/API/save before any package mutation
+00:02 +81: test/slide_section_fidelity_test.dart: duplicate native list guards script/API/save before any package mutation
+00:02 +82: test/slide_section_fidelity_test.dart: unmodeled membership child guards script/API/save before any package mutation
+00:02 +83: test/slide_section_fidelity_test.dart: unmodeled membership property guards script/API/save before any package mutation
+00:02 +84: test/slide_section_fidelity_test.dart: duplicate slide ID guards script/API/save before any package mutation
+00:02 +85: test/slide_section_fidelity_test.dart: invalid model boundaries and ranges reject before mutation
+00:02 +86: test/slide_section_fidelity_test.dart: missing relationship guards section reorder and bypassed saves
+00:02 +87: test/slide_section_fidelity_test.dart: wrong relationship type guards section reorder and bypassed saves
+00:02 +88: test/slide_section_fidelity_test.dart: external target guards section reorder and bypassed saves
+00:02 +89: test/slide_section_fidelity_test.dart: missing target part guards section reorder and bypassed saves
+00:02 +90: test/slide_section_fidelity_test.dart: wrong target part type guards section reorder and bypassed saves
+00:02 +91: test/slide_section_fidelity_test.dart: moving a native entry preserves a prefix scoped to its original section
+00:02 +92: test/slide_section_fidelity_test.dart: opaque attributes sharing native local names are not rewritten
+00:02 +93: test/slide_section_fidelity_test.dart: optional native name and GUID absence survives a section-aware move
+00:02 +94: test/slide_section_fidelity_test.dart: unmodeled native membership is preserved when slide order is unchanged
+00:02 +95: All tests passed!

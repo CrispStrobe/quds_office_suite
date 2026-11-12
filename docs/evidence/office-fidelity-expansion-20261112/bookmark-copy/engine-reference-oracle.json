@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "producer": "engine",
+  "files_verified": 5,
+  "files": [
+    {
+      "name": "source.docx",
+      "sha256": "7634d9c2fc37a187b134e618a806f787fb8277ae6fd082f937e085662a3fe6ca"
+    },
+    {
+      "name": "copied-expected.docx",
+      "sha256": "4813413bbe1ac7b1cd927d0b40b07752c0944dc272d849a4274c627ce4d969b3"
+    },
+    {
+      "name": "copied-1.docx",
+      "sha256": "85eff9cae0fab6be061ec0d32005c2d6e397ff563cdc9df141252f542f232d17"
+    },
+    {
+      "name": "copied-2.docx",
+      "sha256": "073838b3fbed644da1004e3709ca23160420a2a585b11826980ea0e04dbf0bcf"
+    },
+    {
+      "name": "copied-3.docx",
+      "sha256": "3c27b1ac45dda41fd47e61bed6c7ad6fc0def035ec470bf9a04cf9365d17473f"
+    }
+  ],
+  "checks": [
+    "exact marker order and native attributes",
+    "unchanged source IDs",
+    "explicit free copy IDs and names",
+    "UTF-16 and empty ranges",
+    "cross-paragraph overlapping range text",
+    "unchanged REF and hyperlink targets",
+    "source bold formatting"
+  ],
+  "bounds": [
+    "complete editable ranges only",
+    "opaque and native TOC cache copies rejected",
+    "partial ranges rejected before mutation",
+    "no reference target retargeting"
+  ]
+}
