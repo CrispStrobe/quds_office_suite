@@ -17,6 +17,7 @@ import '../model/word_revision.dart';
 import '../model/word_styles.dart';
 import '../model/word_toc.dart';
 import '../properties/wml_properties.dart';
+import 'word_bibliography_io.dart';
 import 'word_comment_io.dart';
 import 'word_drawing_io.dart';
 import 'word_markup_compatibility.dart';
@@ -137,7 +138,7 @@ class WordDeserializer {
     _readComments(document, package, docUri);
     _readCommentsExtended(document, package, docUri);
     _readWatermark(document, package);
-    _readCitations(document, package);
+    WordBibliographyIo.read(document, package, docUri);
     _readSettingsFlags(document, package, docUri);
     final Map<WmlParagraph, int> bodyIndices = <WmlParagraph, int>{
       for (final entry in document.paragraphs.indexed) entry.$2: entry.$1,
@@ -223,6 +224,7 @@ class WordDeserializer {
         paragraph.inlines.isEmpty && _pendingEquations.isNotEmpty;
     final bool drawingHost =
         paragraph.text.trim().isEmpty &&
+        !paragraph.inlines.any((inline) => inline is WmlNoteMarker) &&
         (_pendingVisuals.isNotEmpty || _pendingFrames.isNotEmpty);
     if (!mathOnly && !drawingHost) {
       blocks.add(paragraph);
@@ -466,6 +468,26 @@ class WordDeserializer {
         paragraph.properties.endnoteRef = run.noteRefEndnote;
       } else if (reader.localName == 'footnoteRef' ||
           reader.localName == 'endnoteRef') {
+        if (run.text.isNotEmpty) {
+          inlines.add(
+            WmlRun(
+              text: run.text,
+              properties: run.properties.copy(),
+              commentIds: List<int>.of(_openCommentIds),
+            ),
+          );
+          run.text = '';
+        }
+        final WmlRunProps markerProperties = run.properties.copy();
+        markerProperties.importedValues = WordPropertyIo.runValues(
+          markerProperties,
+        );
+        inlines.add(
+          WmlNoteMarker(
+            endnote: reader.localName == 'endnoteRef',
+            properties: markerProperties,
+          ),
+        );
         if (_readingNote != null && !_noteMarkCaptured) {
           _readingNote!.referencePropertiesXml =
               run.properties.sourcePropertiesXml ?? '';
@@ -1909,52 +1931,6 @@ class WordDeserializer {
     }
   }
 
-  void _readCitations(WmlDocument document, OpcPackage package) {
-    final PackagePart? part =
-        package.getPart('/customXml/sources.xml') ??
-        package.getPart('/customXml/item1.xml');
-    if (part == null) {
-      return;
-    }
-    final XmlPullReader reader = WordMarkupCompatibilityReader(part.readText());
-    String tag = '';
-    String author = '';
-    String title = '';
-    String year = '';
-    while (reader.next()) {
-      if (reader.eventType == XmlEventType.startElement &&
-          reader.localName == 'Source') {
-        tag = '';
-        author = '';
-        title = '';
-        year = '';
-      } else if (reader.eventType == XmlEventType.startElement &&
-          (reader.localName == 'Tag' ||
-              reader.localName == 'Author' ||
-              reader.localName == 'Title' ||
-              reader.localName == 'Year')) {
-        final String name = reader.localName;
-        final String text = _elementText(reader);
-        switch (name) {
-          case 'Tag':
-            tag = text;
-          case 'Author':
-            author = text;
-          case 'Title':
-            title = text;
-          case 'Year':
-            year = text;
-        }
-      } else if (reader.eventType == XmlEventType.endElement &&
-          reader.localName == 'Source' &&
-          tag.isNotEmpty) {
-        document.citations.add(
-          WmlCitation(tag: tag, author: author, title: title, year: year),
-        );
-      }
-    }
-  }
-
   void _readNotes(WmlDocument document, OpcPackage package, String docUri) {
     _readNotesPart(
       document.footnotes,
@@ -2025,6 +2001,7 @@ class WordDeserializer {
       final WmlNote note = WmlNote(
         id: id,
         endnote: endnote,
+        addReference: false,
         addReferenceSpace: false,
         referencePropertiesXml: '',
       );

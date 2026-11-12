@@ -415,7 +415,11 @@ abstract final class WordToc {
       inlines: <WmlInline>[
         WmlRun(
           text: entry.text,
-          properties: WmlRunProps(fontSizeHalfPoints: 22, color: '2E75B6'),
+          properties: WmlRunProps(
+            fontSizeHalfPoints: 22,
+            color: '2E75B6',
+            underline: link == null ? WmlUnderline.none : WmlUnderline.single,
+          ),
           hyperlink: link,
         ),
       ],

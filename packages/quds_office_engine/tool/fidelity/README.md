@@ -96,7 +96,10 @@ stories use `section` (default 0); note stories require the actual `note` ID; co
 
 ### Word structure operations
 
-These 24 additional commands use body indexes shown by `inspect`. Exact required
+These 24 additional commands use body indexes shown by `inspect`. `tableMerge`
+uses logical grid columns; `tableUnmerge`, `tableCellText` and `tableCellFormat`
+use physical cell indexes within the selected row. TOC indexes address top-level
+section TOCs. Exact required
 fields and accepted optional fields are available from `operations`.
 
 | Operations | Purpose and important fields |

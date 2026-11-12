@@ -1086,6 +1086,7 @@ class WordEditorController extends OfficeController {
       _commitParagraphInlines(
         paragraph,
         () => WmlRunEdit.insertRuns(paragraph, at, <WmlRun>[run]),
+        textEdit: (start: at, end: at, insertedLength: text.length),
       );
       if (document.trackRevisions) {
         _recordRevision(
@@ -2906,6 +2907,7 @@ class WordEditorController extends OfficeController {
         _commitParagraphInlines(
           para,
           () => WmlRunEdit.replaceRange(para, start, start, line),
+          textEdit: (start: start, end: start, insertedLength: line.length),
         );
         caret.logicalIndex = start + lines[i].length;
         caret.collapseSelection();
@@ -3120,25 +3122,14 @@ class WordEditorController extends OfficeController {
       caret.logicalIndex,
       caret.logicalIndex,
     ).start;
-    final List<WmlInline> before = _cloneInlines(para);
     final List<WmlRun> runs = <WmlRun>[
       for (final OfficeClipboardSpan span in spans) span.toRun(),
     ];
     final int added = runs.fold<int>(0, (int n, WmlRun r) => n + r.text.length);
-    commands.commit(
-      _CallbackCommand(
-        executeFn: () {
-          para.inlines
-            ..clear()
-            ..addAll(_cloneInlinesFrom(before));
-          WmlRunEdit.insertRuns(para, start, runs);
-        },
-        undoFn: () {
-          para.inlines
-            ..clear()
-            ..addAll(_cloneInlinesFrom(before));
-        },
-      ),
+    _commitParagraphInlines(
+      para,
+      () => WmlRunEdit.insertRuns(para, start, runs),
+      textEdit: (start: start, end: start, insertedLength: added),
     );
     caret.logicalIndex = start + added;
     caret.collapseSelection();
@@ -3155,6 +3146,7 @@ class WordEditorController extends OfficeController {
       caret.logicalIndex,
     ).start;
     final List<WmlInline> before = _cloneInlines(para);
+    final WmlRevisionSnapshot revisions = WordRevisions.capture(document);
     final List<WmlRun> tail = WmlRunEdit.extractRuns(
       para,
       index,
@@ -3179,9 +3171,11 @@ class WordEditorController extends OfficeController {
     commands.commit(
       _CallbackCommand(
         executeFn: () {
+          revisions.restore(document);
           para.inlines
             ..clear()
             ..addAll(_cloneInlinesFrom(before));
+          WordRevisions.splitParagraph(document, para, next, index);
           if (index < para.text.length) {
             WmlRunEdit.replaceRange(para, index, para.text.length, '');
           }
@@ -3192,6 +3186,7 @@ class WordEditorController extends OfficeController {
           para.inlines
             ..clear()
             ..addAll(_cloneInlinesFrom(before));
+          revisions.restore(document);
         },
       ),
     );
@@ -3319,39 +3314,41 @@ class WordEditorController extends OfficeController {
   static List<WmlInline> _cloneInlines(WmlParagraph para) =>
       _cloneInlinesFrom(para.inlines);
 
-  static List<WmlInline> _cloneInlinesFrom(List<WmlInline> source) {
-    return <WmlInline>[
-      for (final WmlInline inline in source)
-        if (inline is WmlRun)
-          WmlRun(
-            text: inline.text,
-            properties: inline.properties.copy(),
-            hyperlink: inline.hyperlink,
-            commentIds: List<int>.from(inline.commentIds),
-            noteRefId: inline.noteRefId,
-            noteRefEndnote: inline.noteRefEndnote,
-            fieldInstruction: inline.fieldInstruction,
-            fieldLocked: inline.fieldLocked,
-            fieldDirty: inline.fieldDirty,
-          )
-        else
-          inline,
-    ];
-  }
+  static List<WmlInline> _cloneInlinesFrom(List<WmlInline> source) =>
+      WmlClone.inlines(source);
 
-  void _commitParagraphInlines(WmlParagraph paragraph, void Function() update) {
+  void _commitParagraphInlines(
+    WmlParagraph paragraph,
+    void Function() update, {
+    ({int start, int end, int insertedLength})? textEdit,
+  }) {
     final List<WmlInline> before = _cloneInlines(paragraph);
+    final WmlRevisionSnapshot revisions = WordRevisions.capture(document);
+    final String oldText = paragraph.text;
     void restore() {
       paragraph.inlines
         ..clear()
         ..addAll(_cloneInlinesFrom(before));
+      revisions.restore(document);
     }
 
     commands.commit(
       _CallbackCommand(
         executeFn: () {
           restore();
+          if (textEdit != null) {
+            WordRevisions.rebaseEdit(
+              document,
+              paragraph,
+              start: textEdit.start,
+              end: textEdit.end,
+              insertedLength: textEdit.insertedLength,
+            );
+          }
           update();
+          if (textEdit == null) {
+            WordRevisions.rebaseTextChange(document, paragraph, oldText);
+          }
         },
         undoFn: restore,
       ),
@@ -3366,13 +3363,13 @@ class WordEditorController extends OfficeController {
     required int end,
     required String text,
   }) {
-    final bool beforeTracking = document.trackRevisions;
-    WmlRevision? revision;
+    final WmlRevisionSnapshot before = WordRevisions.capture(document);
+    WmlRevisionSnapshot? after;
     commands.commit(
       _CallbackCommand(
         executeFn: () {
-          if (revision == null) {
-            revision = WordRevisions.record(
+          if (after == null) {
+            WordRevisions.record(
               document,
               kind: kind,
               paragraph: paragraph,
@@ -3381,15 +3378,12 @@ class WordEditorController extends OfficeController {
               end: end,
               text: text,
             );
+            after = WordRevisions.capture(document);
           } else {
-            document.trackRevisions = true;
-            document.revisions.add(revision!);
+            after!.restore(document);
           }
         },
-        undoFn: () {
-          document.revisions.remove(revision);
-          document.trackRevisions = beforeTracking;
-        },
+        undoFn: () => before.restore(document),
       ),
     );
   }
@@ -3421,6 +3415,7 @@ class WordEditorController extends OfficeController {
     _commitParagraphInlines(
       para,
       () => WmlRunEdit.replaceRange(para, start, start, text),
+      textEdit: (start: start, end: start, insertedLength: text.length),
     );
     if (document.trackRevisions) {
       _recordRevision(
@@ -3528,6 +3523,7 @@ class WordEditorController extends OfficeController {
     _commitParagraphInlines(
       paragraph,
       () => WmlRunEdit.replaceRange(paragraph, range.start, range.end, ''),
+      textEdit: (start: range.start, end: range.end, insertedLength: 0),
     );
     caret.logicalIndex = range.start;
     caret.collapseSelection();
@@ -3579,15 +3575,14 @@ class WordEditorController extends OfficeController {
     final WmlParagraph first = parent[range.startPara];
     final WmlParagraph last = parent[range.endPara];
     final List<WmlInline> inlines = _cloneInlines(first);
+    final List<WmlInline> lastInlines = _cloneInlines(last);
+    final WmlRevisionSnapshot revisions = WordRevisions.capture(document);
     final int from = WmlRunEdit.normalizeRange(
       first,
       range.startIdx,
       first.text.length,
     ).start;
     final int to = WmlRunEdit.normalizeRange(last, 0, range.endIdx).end;
-    final WmlParagraph tail = WmlClone.paragraph(last);
-    WmlRunEdit.replaceRange(tail, 0, to, '');
-    final List<WmlInline> suffix = _cloneInlines(tail);
     void restore() {
       parent
         ..clear()
@@ -3595,20 +3590,41 @@ class WordEditorController extends OfficeController {
       first.inlines
         ..clear()
         ..addAll(_cloneInlinesFrom(inlines));
+      last.inlines
+        ..clear()
+        ..addAll(_cloneInlinesFrom(lastInlines));
+      revisions.restore(document);
     }
 
     commands.commit(
       _CallbackCommand(
         executeFn: () {
           restore();
+          WordRevisions.rebaseEdit(
+            document,
+            first,
+            start: from,
+            end: first.text.length,
+            insertedLength: 0,
+          );
           WmlRunEdit.replaceRange(first, from, first.text.length, '');
+          WordRevisions.rebaseEdit(
+            document,
+            last,
+            start: 0,
+            end: to,
+            insertedLength: 0,
+          );
+          WmlRunEdit.replaceRange(last, 0, to, '');
+          WordRevisions.joinParagraphs(document, first, last);
           first.inlines.addAll(
             _cloneInlinesFrom(
-              suffix,
+              last.inlines,
             ).where((inline) => inline is! WmlRun || inline.text.isNotEmpty),
           );
           WmlRunEdit.coalesce(first);
           parent.removeRange(range.startPara + 1, range.endPara + 1);
+          WordRevisions.markDetached(document);
         },
         undoFn: restore,
       ),
@@ -3653,6 +3669,7 @@ class WordEditorController extends OfficeController {
         _commitParagraphInlines(
           para,
           () => WmlRunEdit.replaceRange(para, from, to, ''),
+          textEdit: (start: from, end: to, insertedLength: 0),
         );
       }
     }
@@ -3662,6 +3679,7 @@ class WordEditorController extends OfficeController {
   }
 
   void _replaceDocumentWithEmptyParagraph() {
+    final WmlRevisionSnapshot revisions = WordRevisions.capture(document);
     final List<({WmlSection section, List<WmlBlock> blocks})> before =
         <({WmlSection section, List<WmlBlock> blocks})>[
           for (final WmlSection section in document.sections)
@@ -3671,10 +3689,12 @@ class WordEditorController extends OfficeController {
     commands.commit(
       _CallbackCommand(
         executeFn: () {
+          revisions.restore(document);
           for (final WmlSection section in document.sections) {
             section.blocks.clear();
           }
           document.sections.first.blocks.add(empty);
+          WordRevisions.markDetached(document);
           selectedTable = null;
           selectedVisual = null;
           selectedEquation = null;
@@ -3688,6 +3708,7 @@ class WordEditorController extends OfficeController {
               ..clear()
               ..addAll(snap.blocks);
           }
+          revisions.restore(document);
         },
       ),
     );
@@ -3703,6 +3724,7 @@ class WordEditorController extends OfficeController {
     int endIdx,
   ) {
     final WmlParagraph startIdentity = paras[startPara];
+    final WmlRevisionSnapshot revisions = WordRevisions.capture(document);
     final List<({WmlSection section, List<WmlBlock> blocks})> sectionSnaps =
         <({WmlSection section, List<WmlBlock> blocks})>[
           for (final WmlSection section in document.sections)
@@ -3725,6 +3747,7 @@ class WordEditorController extends OfficeController {
     commands.commit(
       _CallbackCommand(
         executeFn: () {
+          revisions.restore(document);
           for (final WmlBlock block in remove) {
             final List<WmlBlock>? parent = _parentBlocksOfBlock(block);
             parent?.remove(block);
@@ -3738,10 +3761,19 @@ class WordEditorController extends OfficeController {
             final int from = p == startPara ? startIdx : 0;
             final int to = p == endPara ? endIdx : para.text.length;
             if (to > from) {
+              final range = WmlRunEdit.normalizeRange(para, from, to);
+              WordRevisions.rebaseEdit(
+                document,
+                para,
+                start: range.start,
+                end: range.end,
+                insertedLength: 0,
+              );
               WmlRunEdit.replaceRange(para, from, to, '');
             }
           }
           _ensureBodyHasParagraph();
+          WordRevisions.markDetached(document);
           selectedTable = null;
           selectedVisual = null;
           selectedEquation = null;
@@ -3758,6 +3790,7 @@ class WordEditorController extends OfficeController {
               ..clear()
               ..addAll(_cloneInlinesFrom(inlines));
           });
+          revisions.restore(document);
         },
       ),
     );
@@ -4192,12 +4225,15 @@ class WordEditorController extends OfficeController {
     }
     final List<WmlInline> keepInlines = _cloneInlines(keep);
     final List<WmlInline> dropInlines = _cloneInlines(drop);
+    final WmlRevisionSnapshot revisions = WordRevisions.capture(document);
     commands.commit(
       _CallbackCommand(
         executeFn: () {
+          revisions.restore(document);
           keep.inlines
             ..clear()
             ..addAll(_cloneInlinesFrom(keepInlines));
+          WordRevisions.joinParagraphs(document, keep, drop);
           keep.inlines.addAll(
             _cloneInlinesFrom(
               dropInlines,
@@ -4216,6 +4252,7 @@ class WordEditorController extends OfficeController {
           if (!parent.contains(drop)) {
             parent.insert(dropAt.clamp(0, parent.length), drop);
           }
+          revisions.restore(document);
         },
       ),
     );
@@ -4289,12 +4326,15 @@ class WordEditorController extends OfficeController {
     final int join = keep.text.length;
     final List<WmlInline> keepInlines = _cloneInlines(keep);
     final List<WmlInline> dropInlines = _cloneInlines(drop);
+    final WmlRevisionSnapshot revisions = WordRevisions.capture(document);
     commands.commit(
       _CallbackCommand(
         executeFn: () {
+          revisions.restore(document);
           keep.inlines
             ..clear()
             ..addAll(_cloneInlinesFrom(keepInlines));
+          WordRevisions.joinParagraphs(document, keep, drop);
           keep.inlines.addAll(
             _cloneInlinesFrom(
               dropInlines,
@@ -4313,6 +4353,7 @@ class WordEditorController extends OfficeController {
           if (!parent.contains(drop)) {
             parent.insert(dropAt.clamp(0, parent.length), drop);
           }
+          revisions.restore(document);
         },
       ),
     );
@@ -6409,6 +6450,10 @@ class WordEditorController extends OfficeController {
     if (targets.isEmpty) {
       return;
     }
+    // Validate the whole request before a command can mutate any paragraph.
+    for (final revision in targets) {
+      WordRevisions.validateRevision(document, revision);
+    }
     final Map<WmlParagraph, List<WmlInline>> inlines =
         <WmlParagraph, List<WmlInline>>{};
     for (final revision in targets) {
@@ -6420,10 +6465,7 @@ class WordEditorController extends OfficeController {
         inlines.putIfAbsent(paragraph, () => _cloneInlines(paragraph));
       }
     }
-    final List<WmlRevision> before = List<WmlRevision>.of(document.revisions);
-    final Map<WmlRevision, bool?> status = <WmlRevision, bool?>{
-      for (final revision in targets) revision: revision.accepted,
-    };
+    final WmlRevisionSnapshot before = WordRevisions.capture(document);
     final int? selected = selectedRevisionIndex;
     void restore() {
       for (final entry in inlines.entries) {
@@ -6431,12 +6473,7 @@ class WordEditorController extends OfficeController {
           ..clear()
           ..addAll(_cloneInlinesFrom(entry.value));
       }
-      document.revisions
-        ..clear()
-        ..addAll(before);
-      for (final entry in status.entries) {
-        entry.key.accepted = entry.value;
-      }
+      before.restore(document);
       selectedRevisionIndex = selected;
     }
 
@@ -6902,8 +6939,8 @@ class WordEditorController extends OfficeController {
   /// The text a notes editor shows for [note]: one line per paragraph.
   String noteEditText(WmlNote note) => WordNotes.editableText(note);
 
-  final Map<WmlNote, List<WmlBlock>> _noteEditStart =
-      <WmlNote, List<WmlBlock>>{};
+  final Map<WmlNote, _WordNoteEditSnapshot> _noteEditStart =
+      <WmlNote, _WordNoteEditSnapshot>{};
 
   /// Replaces the editable text of [note], keeping its formatting, tables,
   /// pictures and links (see [WordNotes.editText]).
@@ -6923,9 +6960,16 @@ class WordEditorController extends OfficeController {
     }
     _noteEditStart.putIfAbsent(
       note,
-      () => <WmlBlock>[for (final WmlBlock b in note.blocks) WmlClone.block(b)],
+      () => _WordNoteEditSnapshot(note, document),
     );
+    final Map<WmlParagraph, String> previousText = <WmlParagraph, String>{
+      for (final paragraph in note.paragraphs) paragraph: paragraph.text,
+    };
     WordNotes.editText(note, text);
+    for (final entry in previousText.entries) {
+      WordRevisions.rebaseTextChange(document, entry.key, entry.value);
+    }
+    WordRevisions.markDetached(document);
     _dirty = true;
     relayout();
     notifyListeners();
@@ -6947,29 +6991,21 @@ class WordEditorController extends OfficeController {
 
   /// Records the edit started by [setNoteText] as one undoable command.
   void commitNoteEdit(WmlNote note) {
-    final List<WmlBlock>? before = _noteEditStart.remove(note);
+    final _WordNoteEditSnapshot? before = _noteEditStart.remove(note);
     if (before == null) {
       return;
     }
-    final List<WmlBlock> after = <WmlBlock>[
-      for (final WmlBlock b in note.blocks) WmlClone.block(b),
-    ];
-    if (WmlClone.plainTextOf(before) == WmlClone.plainTextOf(after) &&
-        before.length == after.length) {
+    final _WordNoteEditSnapshot after = _WordNoteEditSnapshot(note, document);
+    if (before.text == after.text &&
+        listEquals(before.blocks, after.blocks) &&
+        before.revisions.matches(document)) {
       return;
-    }
-    void restore(List<WmlBlock> blocks) {
-      note.blocks
-        ..clear()
-        ..addAll(<WmlBlock>[
-          for (final WmlBlock b in blocks) WmlClone.block(b),
-        ]);
     }
 
     commands.commit(
       _CallbackCommand(
-        executeFn: () => restore(after),
-        undoFn: () => restore(before),
+        executeFn: () => after.restore(note, document),
+        undoFn: () => before.restore(note, document),
       ),
     );
   }
@@ -11103,6 +11139,36 @@ class SlideEditorController extends OfficeController {
     }
     presentation.master.background = rgb;
     notifyListeners();
+  }
+}
+
+// Notes-pane edits change existing paragraph runs and their ordering. Keeping
+// those paragraph objects is essential: revisions and later commands hold them.
+class _WordNoteEditSnapshot {
+  _WordNoteEditSnapshot(WmlNote note, WmlDocument document)
+    : blocks = List<WmlBlock>.of(note.blocks),
+      text = WmlClone.plainTextOf(note.blocks),
+      inlines = <WmlParagraph, List<WmlInline>>{
+        for (final paragraph in note.allParagraphs)
+          paragraph: WmlClone.inlines(paragraph.inlines),
+      },
+      revisions = WordRevisions.capture(document);
+
+  final List<WmlBlock> blocks;
+  final String text;
+  final Map<WmlParagraph, List<WmlInline>> inlines;
+  final WmlRevisionSnapshot revisions;
+
+  void restore(WmlNote note, WmlDocument document) {
+    note.blocks
+      ..clear()
+      ..addAll(blocks);
+    for (final entry in inlines.entries) {
+      entry.key.inlines
+        ..clear()
+        ..addAll(WmlClone.inlines(entry.value));
+    }
+    revisions.restore(document);
   }
 }
 

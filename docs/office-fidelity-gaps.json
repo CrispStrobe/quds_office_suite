@@ -416,14 +416,15 @@
     },
     {
       "id": "FID-040",
-      "status": "open",
+      "status": "closed",
       "area": "Imported note marker position and absence",
-      "finding": "The current note model preserves conventional leading marker properties but manufactures a leading marker when imported source markers are absent or later. Exact ordered marker placement requires a model and codec change; it is not yet a passing fix.",
+      "finding": "Imported footnote and endnote markers are zero-width ordered inline tokens. Exact source position, kind, run properties and absence survive deep clone, minimal text edits and three save/reopen cycles, including nested table cells and marker-only notes. New-note layout uses the same superscript marker and separator as native export.",
       "evidence": [
-        "packages/quds_office_engine/lib/src/word/model/word_notes.dart",
-        "packages/quds_office_engine/lib/src/word/serial/word_deserializer.dart",
-        "packages/quds_office_engine/lib/src/word/serial/word_serializer.dart"
-      ]
+        "packages/quds_office_engine/test/note_marker_fidelity_test.dart",
+        "packages/quds_office_engine/tool/fidelity/note_markers_oracle.py",
+        "packages/quds_office_engine/tool/fidelity/test_note_markers_oracle.py"
+      ],
+      "limits": "The legacy whole-note text setter intentionally replaces rich content and preserves one automatic reference marker. Use paragraph/run operations for rich edits."
     },
     {
       "id": "FID-041",
@@ -500,12 +501,15 @@
     },
     {
       "id": "FID-048",
-      "status": "open",
+      "status": "closed",
       "area": "Native bibliography part ownership",
-      "finding": "Bibliography export uses hardcoded duplicate custom XML paths and can overwrite unrelated custom XML. Native author containers and rich source metadata need independent preservation checks.",
+      "finding": "Bibliography discovery follows internal customXml relationships and verifies namespaces. Export allocates collision-free owned parts and preserves unrelated custom XML. Rich imported sources retain structured authors, source types, GUIDs, publishers and extensions through scalar edits and source removal.",
       "evidence": [
-        "packages/quds_office_engine/lib/src/word/serial/word_serializer.dart"
-      ]
+        "packages/quds_office_engine/test/word_bibliography_fidelity_test.dart",
+        "packages/quds_office_engine/tool/fidelity/bibliography_oracle.py",
+        "packages/quds_office_engine/tool/fidelity/test_bibliography_oracle.py"
+      ],
+      "limits": "New free-text authors are native literal corporate-author containers. Full personal-name parsing, native citation-style rendering and automatic retargeting of citation fields after direct tag mutation are not implemented."
     },
     {
       "id": "FID-049",
@@ -518,12 +522,15 @@
     },
     {
       "id": "FID-050",
-      "status": "open",
+      "status": "partial",
       "area": "Tracked revision range rebasing",
-      "finding": "Text insertion, paragraph splitting and overlapping edits within already tracked spans need explicit range transformation coverage; paragraph identity alone cannot establish character-range correctness.",
+      "finding": "Disjoint insertion/deletion and whole-span paragraph split/join rebase pending revision ranges, including auxiliary stories. Resolving an earlier change shifts later ranges. History restores target identity, bounds and conflict state. Destructive resolution and direct/isolate export validate bounds and recorded text before mutation.",
       "evidence": [
-        "packages/quds_office_editor/lib/src/embed/office_controller.dart"
-      ]
+        "packages/quds_office_editor/test/word_revision_rebase_test.dart",
+        "packages/quds_office_engine/test/word_revision_validation_test.dart",
+        "packages/quds_office_engine/test/word_revision_story_test.dart"
+      ],
+      "limits": "Intersecting edits, splits through pending spans and overlapping changes are explicit conflicts. Undo the conflicting edit before resolving or exporting. Arbitrary external model edits are rejected on mismatch, not attributed automatically."
     },
     {
       "id": "FID-051",
@@ -559,6 +566,34 @@
       "finding": "Replacing laid-out pages or compact mode invalidates layout, recalculating viewport extent and geometry before painting.",
       "evidence": [
         "packages/quds_office_editor/lib/src/editor_word/render_word_canvas.dart"
+      ]
+    },
+    {
+      "id": "FID-055",
+      "status": "closed",
+      "area": "Native table direction enumeration",
+      "finding": "Open XML SDK rejected numeric bidiVisual values. Generated edits now write native on/off values, with positive repeated exports and a numeric-value corruption control.",
+      "evidence": [
+        "packages/quds_office_engine/test/word_table_direction_test.dart",
+        "packages/quds_office_engine/tool/fidelity/test_word_structure_oracle.py"
+      ]
+    },
+    {
+      "id": "FID-056",
+      "status": "open",
+      "area": "Positioned frame wrapping in Quds layout",
+      "finding": "Frame coordinates, anchor, fill and wrap metadata survive native exports. The Quds layout currently places frames absolutely and does not apply square/topBottom frame exclusions to surrounding body text; interactive/native layout equivalence remains unverified.",
+      "evidence": [
+        "packages/quds_office_engine/lib/src/word/layout/word_layout.dart"
+      ]
+    },
+    {
+      "id": "FID-057",
+      "status": "partial",
+      "area": "Table and TOC script addressing",
+      "finding": "Table merge uses logical grid columns; cell edits and unmerge use physical row-cell indexes. TOC selectors enumerate top-level section blocks. These selectors are explicit but nested TOC editing and uniform merged-grid addressing remain open.",
+      "evidence": [
+        "packages/quds_office_engine/tool/fidelity/word_structure_steps.dart"
       ]
     }
   ]

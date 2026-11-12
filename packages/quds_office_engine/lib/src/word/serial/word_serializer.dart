@@ -17,6 +17,7 @@ import '../model/word_revision.dart';
 import '../model/word_styles.dart';
 import '../model/word_toc.dart';
 import '../properties/wml_properties.dart';
+import 'word_bibliography_io.dart';
 import 'word_comment_io.dart';
 import 'word_drawing_io.dart';
 import 'word_frame_io.dart';
@@ -62,6 +63,7 @@ class WordSerializer {
 
   /// write API.
   OpcPackage write(WmlDocument document) {
+    WordRevisions.validate(document);
     final OpcPackage package =
         document.package ?? OpcPackage.create(OpcPackageKind.word);
     final PackageRelationship? office = package.packageRelationships
@@ -116,7 +118,7 @@ class WordSerializer {
     _syncWatermark(document, package);
     _syncStyles(document, package);
     _syncNotes(document, package);
-    _syncCitations(document, package);
+    WordBibliographyIo.write(document, package, _mainPartUri);
     _syncSettings(document, package);
     document.properties.writeToPackage(package);
     document.package = package;
@@ -689,6 +691,20 @@ class WordSerializer {
         continue;
       }
       switch (inline) {
+        case WmlNoteMarker():
+          w.writeStartElement('r', prefix: 'w');
+          final marker = inline.properties;
+          final changed = WordPropertyIo.runValues(marker).entries.any(
+            (entry) => marker.importedValues?[entry.key] != entry.value,
+          );
+          if (marker.sourcePropertiesXml != '' || changed) {
+            _writeRPr(w, marker);
+          }
+          w.writeEmptyElement(
+            inline.endnote ? 'endnoteRef' : 'footnoteRef',
+            prefix: 'w',
+          );
+          w.writeEndElement();
         case WmlRun():
           if (pageFieldOpen) {
             _writePageFieldResult(w, inline);
@@ -1609,37 +1625,6 @@ class WordSerializer {
     w.writeEndElement();
   }
 
-  void _syncCitations(WmlDocument document, OpcPackage package) {
-    if (document.citations.isEmpty && document.indexMarks.isEmpty) {
-      return;
-    }
-    final StringBuffer sources = StringBuffer(
-      '<?xml version="1.0" encoding="UTF-8"?>'
-      '<b:Sources xmlns:b="http://schemas.openxmlformats.org/officeDocument/2006/bibliography">',
-    );
-    for (final WmlCitation citation in document.citations) {
-      sources.write(
-        '<b:Source><b:Tag>${_xmlEscape(citation.tag)}</b:Tag>'
-        '<b:Author>${_xmlEscape(citation.author)}</b:Author>'
-        '<b:Title>${_xmlEscape(citation.title)}</b:Title>'
-        '<b:Year>${_xmlEscape(citation.year)}</b:Year></b:Source>',
-      );
-    }
-    sources.write('</b:Sources>');
-    final String xml = sources.toString();
-    for (final String uri in <String>[
-      '/customXml/sources.xml',
-      '/customXml/item1.xml',
-    ]) {
-      final PackagePart? existing = package.getPart(uri);
-      if (existing == null) {
-        package.createPart(uri, 'application/xml', utf8.encode(xml));
-      } else {
-        existing.writeText(xml);
-      }
-    }
-  }
-
   void _syncNumbering(OpcPackage package) {
     final String uri = _relatedPartUri(
       package,
@@ -2070,7 +2055,9 @@ class WordSerializer {
     for (final WmlNote note in notes) {
       w.writeStartElement(item, prefix: 'w');
       w.writeAttribute('w:id', '${note.id}');
-      var referenceWritten = false;
+      // Imported absence is intentional. A marker already present in any
+      // paragraph or nested table must stay there without a second prefix.
+      var referenceWritten = !note.addReference || note.hasReferenceMarkers;
       for (final WmlBlock block in note.blocks) {
         if (!referenceWritten) {
           _writeParagraph(
@@ -2130,13 +2117,6 @@ class WordSerializer {
       throw FormatException('The Word $name part must be inside its package');
     }
     return rels.resolve(rel);
-  }
-
-  static String _xmlEscape(String text) {
-    return text
-        .replaceAll('&', '&amp;')
-        .replaceAll('<', '&lt;')
-        .replaceAll('>', '&gt;');
   }
 }
 

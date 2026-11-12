@@ -313,7 +313,7 @@ void applyStep(
         endnote: s.boolean('endnote', fallback: false),
       );
       if (note == null) throw ArgumentError('Unknown note id');
-      note.text = s.string('text');
+      WordNotes.editText(note, s.string('text'));
     case 'deleteNote':
       if (!WordNotes.delete(
         doc,
