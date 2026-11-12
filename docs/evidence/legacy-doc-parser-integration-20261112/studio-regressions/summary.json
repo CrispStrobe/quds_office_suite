@@ -1,0 +1,46 @@
+{
+  "afterSha256": "24a63b234bcbcb59a74bb8b42b1e49d0bb28e017d956ac0b9dc3906dc59776e9",
+  "analysis": {
+    "exitCode": 0,
+    "issues": 0
+  },
+  "applicationBehaviorChanged": false,
+  "baseCommit": "1e60025830c0cf07817e90a95cdb48a8e181f1a4",
+  "beforeSha256": "d24a3438cd468b1f5755ebad7341d9cbcd44f863277a47d5d4a90575b390d77c",
+  "changes": [
+    "Preserve the pre-existing template variables and the explicitly added value across save/open.",
+    "Exercise parameter-dialog cancellation and acceptance before printing; verify saved defaults, runtime answers, PDF identity and page size.",
+    "Wait for observed print completion using the existing bounded I/O helper."
+  ],
+  "environment": {
+    "CI": "true",
+    "purpose": "Use the Flutter CI startup path without probing cloud instance metadata."
+  },
+  "logs": {
+    "analysis": {
+      "file": "analysis.log.gz",
+      "sha256": "ad6fac91099c4294c8775a4aef349e549936d2fecba998bb237bd82fdada3275",
+      "uncompressedSha256": "13d8cd66597d3866b3b6e24d520a5b32141adbd7426d6c1bfd671bb567473dad"
+    },
+    "before": {
+      "file": "before.log.gz",
+      "sha256": "fd743da2898c09863fce98427d9b42da3d9d0454ca8cbfd8cd3d16b43c72ad73",
+      "uncompressedSha256": "83a86dbf949671f929190729a3ab422d3ea91d658f99bc27c258913809fbe8d8"
+    },
+    "suite": {
+      "file": "suite.log.gz",
+      "sha256": "c90515b2d3a0844b86d08757189b7911425328ed927effa438997d6e2d57f5e6",
+      "uncompressedSha256": "7fd919bb3ef5e633091993764675e898f6300d4dc6175bdda4c48a77d6f16ab7"
+    }
+  },
+  "schema": "quds-office/report-studio-ci-repair",
+  "testFile": "apps/quds_report_studio/test/widget_test.dart",
+  "testResults": {
+    "beforeFocusedFailures": 2,
+    "completeStudioPassed": 16,
+    "completeStudioSkipped": 2,
+    "skippedScope": "Existing opt-in screenshot producers"
+  },
+  "unchangedEarlierSourceCommit": "9fb8bf12703f32a487609a673f342a5ae0003de1",
+  "version": 1
+}

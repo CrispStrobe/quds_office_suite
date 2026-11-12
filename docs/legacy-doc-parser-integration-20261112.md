@@ -46,3 +46,24 @@ parser's native-rendering, round-trip, and SDK evidence retains the source
 identity recorded in each upstream receipt. This integration does not promote
 historical evidence to a claim of complete Office layout, geometry, table,
 comment, or revision fidelity.
+
+## Report-studio CI regressions
+
+The first integration CI run exposed two existing studio test failures. The
+[retained CI excerpts](evidence/legacy-doc-parser-integration-20261112/studio-regressions/ci-before.json)
+confirm the same assertions failed on the prior `9fb8bf1` checkpoint; the test
+and application sources were unchanged by the parser mirror update.
+
+The tests assumed that a bundled template had no variables and printed
+without a parameter prompt. The current feature-showcase template contains
+three variables and asks for values before printing. The corrected save/open
+test checks every pre-existing variable name/value plus the explicitly added
+value. The print test now checks cancellation, acceptance of an edited
+parameter, saved defaults staying unchanged, remembered runtime answers, and
+the PDF's name and page size. It waits for observed print completion through
+the existing bounded I/O helper.
+
+No application behavior changed. The [repair receipt](evidence/legacy-doc-parser-integration-20261112/studio-regressions/summary.json)
+retains the failing local reproduction and passing follow-up logs: both
+focused tests pass, the complete studio suite passes 16 tests with its two
+existing opt-in screenshot producers skipped, and studio analysis is clean.

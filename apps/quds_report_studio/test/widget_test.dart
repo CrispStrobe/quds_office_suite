@@ -46,7 +46,16 @@ void main() {
     expect(doc.dirty, isFalse);
     expect(doc.fileName, '${_bundled.first.id}.qrep');
 
-    doc.controller.addVariable();
+    final List<(String, String)> originalVariables = doc
+        .controller
+        .template
+        .variables
+        .map((ReportVariable variable) => (variable.name, variable.value))
+        .toList();
+    final ReportVariable added = doc.controller.addVariable(
+      name: 'roundTripAdded',
+      value: 'Persisted value',
+    );
     await Future<void>.delayed(const Duration(milliseconds: 300));
     expect(doc.dirty, isTrue);
 
@@ -65,7 +74,12 @@ void main() {
 
     final ReportDocument other = ReportDocument();
     await other.open(path);
-    expect(other.controller.template.variables, hasLength(1));
+    expect(
+      other.controller.template.variables.map(
+        (ReportVariable variable) => (variable.name, variable.value),
+      ),
+      <(String, String)>[...originalVariables, (added.name, added.value)],
+    );
     expect(other.dirty, isFalse);
     doc.dispose();
     other.dispose();
@@ -439,7 +453,7 @@ void main() {
     );
   });
 
-  testWidgets('prints the report at its page size', (
+  testWidgets('prints at its page size after accepting report parameters', (
     WidgetTester tester,
   ) async {
     tester.view.physicalSize = const Size(1600, 1000);
@@ -452,7 +466,14 @@ void main() {
         <(Uint8List, String, double, double)>[];
     await tester.pumpWidget(
       ReportStudioApp(
-        templates: _catalog(),
+        templates: StudioTemplates(
+          bundled: <ReportTemplateInfo>[
+            _bundled.singleWhere(
+              (ReportTemplateInfo info) => info.id == 'feature_showcase_en',
+            ),
+          ],
+          persist: false,
+        ),
         recent: recent,
         printer:
             (
@@ -471,25 +492,57 @@ void main() {
       find.byType(ReportStudioPage),
     );
     final ReportTemplate t = state.document.controller.template;
+    final List<String> savedDefaults = t.variables
+        .map((ReportVariable variable) => variable.value)
+        .toList();
+    expect(state.document.controller.promptVariables, isNotEmpty);
 
     await tester.tap(find.byTooltip('Print (Ctrl+P)'));
-    await tester.runAsync(
-      () => Future<void>.delayed(const Duration(milliseconds: 300)),
+    await tester.pumpAndSettle();
+    expect(find.text('Report parameters'), findsOneWidget);
+    expect(jobs, isEmpty);
+    await tester.tap(find.text('Cancel'));
+    await tester.pumpAndSettle();
+    expect(jobs, isEmpty);
+    expect(state.document.controller.runtimeVariables, isEmpty);
+
+    await tester.tap(find.byTooltip('Print (Ctrl+P)'));
+    await tester.pumpAndSettle();
+    final Finder parameterFields = find.descendant(
+      of: find.byType(Dialog),
+      matching: find.byType(TextField),
     );
-    await tester.pump();
+    await tester.enterText(parameterFields.first, 'Printed customer');
+    await tester.tap(find.text('Continue'));
+    await settleIo(tester, done: () => jobs.length == 1);
     expect(jobs, hasLength(1));
     expect(String.fromCharCodes(jobs.first.$1.take(5)), '%PDF-');
     expect(jobs.first.$2, state.document.name);
     expect(jobs.first.$3, t.pageWidth);
     expect(jobs.first.$4, t.pageHeight);
+    expect(
+      state.document.controller.runtimeVariables['customer'],
+      'Printed customer',
+    );
+    expect(
+      state.document.controller.template.variables.map(
+        (ReportVariable variable) => variable.value,
+      ),
+      savedDefaults,
+    );
 
     await tester.tap(find.text('File'));
     await tester.pumpAndSettle();
     await tester.tap(find.text('Print…'));
-    await tester.runAsync(
-      () => Future<void>.delayed(const Duration(milliseconds: 300)),
-    );
     await tester.pumpAndSettle();
+    expect(find.text('Report parameters'), findsOneWidget);
+    expect(jobs, hasLength(1));
+    expect(
+      tester.widget<TextField>(parameterFields.first).controller!.text,
+      'Printed customer',
+    );
+    await tester.tap(find.text('Continue'));
+    await settleIo(tester, done: () => jobs.length == 2);
     expect(jobs, hasLength(2));
   });
 
