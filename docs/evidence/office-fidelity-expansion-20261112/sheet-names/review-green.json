@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "command": "dart test test/sheet_qualified_name_error_test.dart test/sheet_qualified_names_test.dart test/sheet_formula_cache_fidelity_test.dart test/sheet_formula_test.dart --reporter expanded",
+  "passed": 181,
+  "failed": 0,
+  "analyzer": "No issues found: lib/src/sheet/formula and sheet_qualified_name_error_test.dart",
+  "fixes": [
+    "Dependency collection normalizes future-function prefixes before LET binding scope.",
+    "An explicit allow-list propagates genuine typed errors through existing numeric and scalar value consumers.",
+    "COUNT/COUNTA/COUNTBLANK, IS*/TYPE, criteria and lookup policies are excluded from blanket propagation; representative controls pass.",
+    "IF/IFERROR/IFNA evaluate only selected expressions and preserve unsupported-evaluation provenance.",
+    "Dependency collection chooses branches only from literal Boolean IF predicates or literal non-error IFERROR/IFNA arguments.",
+    "Incomplete dynamic dependencies preserve authored caches instead of computing against stale references; forced unsupported calculation returns an explicit error."
+  ],
+  "additional_validation": "ABS, ROUND and MEDIAN named errors retain native e cache types across direct/isolate/direct saves.",
+  "limits": [
+    "Bare LOG10 remains an existing cell-token parser ambiguity and keeps its cache; _xlfn.LOG10 exercises the existing numeric consumer without broadening parser support.",
+    "Dynamic conditionals containing opaque named dependencies stay cache fallbacks; no dependency selection uses a stale cached condition."
+  ],
+  "primary_sources": [
+    "https://support.microsoft.com/en-us/excel/functions/count-function",
+    "https://support.microsoft.com/en-gb/excel/functions/counta-function",
+    "https://learn.microsoft.com/en-us/office/vba/api/excel.worksheetfunction.median",
+    "https://support.microsoft.com/en-us/excel/functions/is-functions",
+    "https://support.microsoft.com/en-us/excel/functions/iferror-function"
+  ]
+}

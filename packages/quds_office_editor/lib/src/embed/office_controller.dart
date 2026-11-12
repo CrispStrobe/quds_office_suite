@@ -2943,6 +2943,17 @@ class WordEditorController extends OfficeController {
     final mergedParagraphs = paragraphStory
         ? blocks.whereType<WmlParagraph>()
         : blocks.take(1).whereType<WmlParagraph>();
+    if ((paragraphStory ||
+            (!_wordBodyIsBlank() &&
+                (!caret.isCollapsed || _activeParagraph.text.isNotEmpty))) &&
+        mergedParagraphs.any(
+          (paragraph) => WordBookmarks.generatedName(paragraph) != null,
+        )) {
+      throw UnsupportedError(
+        'Pasting a generated paragraph bookmark into this text would discard '
+        'its range. Retain it as a complete paragraph in an empty body target.',
+      );
+    }
     if ((paragraphStory || !_wordBodyIsBlank()) &&
         mergedParagraphs.any(
           (paragraph) =>

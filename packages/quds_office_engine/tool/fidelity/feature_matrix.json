@@ -483,7 +483,8 @@
     },
     "sheet-qualified-names": {
       "tests": [
-        "test/sheet_qualified_names_test.dart"
+        "test/sheet_qualified_names_test.dart",
+        "test/sheet_qualified_name_error_test.dart"
       ],
       "scripts": [],
       "oracles": [

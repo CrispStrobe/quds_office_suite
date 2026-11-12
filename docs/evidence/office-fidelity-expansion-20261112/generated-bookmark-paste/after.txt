@@ -1,0 +1,53 @@
+00:00 +0: loading /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart
+00:00 +0: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart: body rejects a generated bookmark property merge before any mutation
+00:00 +1: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart: header rejects a generated bookmark property merge before any mutation
+00:00 +2: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart: header rejects a generated bookmark property merge before any mutation in a later paragraph
+00:00 +3: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart: footer rejects a generated bookmark property merge before any mutation
+00:00 +4: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart: footer rejects a generated bookmark property merge before any mutation in a later paragraph
+00:00 +5: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart: comment rejects a generated bookmark property merge before any mutation
+00:00 +6: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart: comment rejects a generated bookmark property merge before any mutation in a later paragraph
+00:00 +7: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart: an empty target paragraph retains the generated bookmark and history
+00:01 +8: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_bookmark_copy_test.dart: complete native bookmark copy keeps ranges, history and three exports
+00:01 +9: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_bookmark_copy_test.dart: complete native bookmark copy keeps ranges, history and three exports
+00:01 +10: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_bookmark_copy_test.dart: complete native bookmark copy keeps ranges, history and three exports
+00:01 +11: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_bookmark_copy_test.dart: complete native bookmark copy keeps ranges, history and three exports
+00:01 +12: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_bookmark_history_test.dart: paragraph split at 4 preserves bookmark endpoints exactly once
+00:01 +13: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_bookmark_history_test.dart: paragraph split at 4 preserves bookmark endpoints exactly once
+00:01 +14: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_bookmark_history_test.dart: paragraph split at 4 preserves bookmark endpoints exactly once
+00:01 +15: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_bookmark_history_test.dart: paragraph split at 4 preserves bookmark endpoints exactly once
+00:01 +16: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_bookmark_history_test.dart: paragraph split at 4 preserves bookmark endpoints exactly once
+00:01 +17: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:01 +18: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:01 +19: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:01 +20: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:01 +21: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:01 +22: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:02 +23: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:02 +24: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:02 +25: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:02 +26: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:02 +27: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_content_control_history_test.dart: block control split, edit and formatting stay in their original owner
+00:02 +28: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_content_control_history_test.dart: block control split, edit and formatting stay in their original owner
+00:02 +29: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_content_control_history_test.dart: block control split, edit and formatting stay in their original owner
+00:02 +30: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_content_control_history_test.dart: block control split, edit and formatting stay in their original owner
+00:02 +31: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_content_control_history_test.dart: block insertion from a nested table stays inside the enclosing control
+00:02 +32: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_content_control_history_test.dart: a paragraph inside a frame and table uses its exact child list
+00:02 +33: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_content_control_history_test.dart: inline control text and formatting edits retain native wrapper metadata
+00:02 +34: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_content_control_history_test.dart: splitting at inline control boundary 2 preserves one complete wrapper
+00:02 +35: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_content_control_history_test.dart: splitting at inline control boundary 5 preserves one complete wrapper
+00:02 +36: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_content_control_history_test.dart: an empty inline control moves to exactly one side of a split
+00:02 +37: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_content_control_history_test.dart: pasting into an empty inline control retains its wrapper
+00:02 +38: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_content_control_history_test.dart: unsupported inline split rejects before typing history changes
+00:02 +39: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_content_control_history_test.dart: unsupported inline split rejects before selection replacement changes
+00:02 +40: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_content_control_history_test.dart: plain multiline paste preflights every split
+00:02 +41: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_content_control_history_test.dart: rich multiline paste preflights every split
+00:02 +42: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_content_control_history_test.dart: multi-paragraph inline-control deletion and joining fail before mutation
+00:02 +43: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_content_control_history_test.dart: notes-pane replacement validates all controlled paragraphs first
+00:02 +44: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_content_control_history_test.dart: unsupported IME replacement leaves typing and history usable
+00:02 +45: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_content_control_history_test.dart: copying a native block control refuses duplicate IDs before mutation
+00:02 +46: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_content_control_history_test.dart: copying a native inline control refuses duplicate IDs before mutation
+00:02 +47: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_content_control_history_test.dart: notes-pane edits retain nested control topology and revision identities
+00:02 +48: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_content_control_history_test.dart: header native paragraph control keeps rich history and guards structural edits
+00:02 +49: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_content_control_history_test.dart: footer native paragraph control keeps rich history and guards structural edits
+00:02 +50: /workspace/scratch/07eb2580faa9/quds-bookmark-review/packages/quds_office_editor/test/word_content_control_history_test.dart: comment native paragraph control keeps rich history and guards structural edits
+00:02 +51: All tests passed!

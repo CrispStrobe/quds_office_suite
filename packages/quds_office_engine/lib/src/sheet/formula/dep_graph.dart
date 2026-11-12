@@ -2,6 +2,7 @@ import '../model/sml_analysis.dart';
 import '../model/sml_workbook.dart';
 import 'formula_ast.dart';
 import 'formula_eval.dart';
+import 'formula_functions.dart';
 
 /// Dependency graph with topological recalculation and cycle detection.
 class FormulaDepGraph {
@@ -11,6 +12,7 @@ class FormulaDepGraph {
   /// workbook API.
   final SmlWorkbook workbook;
   final Map<String, Set<String>> _deps = <String, Set<String>>{};
+  final Set<String> _unmodeledDependencies = <String>{};
 
   /// circular API.
   final Set<String> circular = <String>{};
@@ -18,6 +20,7 @@ class FormulaDepGraph {
   /// rebuild API.
   void rebuild() {
     _deps.clear();
+    _unmodeledDependencies.clear();
     circular.clear();
     for (final SmlWorksheet sheet in workbook.sheets) {
       for (final SmlCell cell in sheet.allCells) {
@@ -25,7 +28,9 @@ class FormulaDepGraph {
           continue;
         }
         final String key = _key(sheet, cell.ref);
-        _deps[key] = _collect(cell.formula!, sheet);
+        final dependencies = _collect(cell.formula!, sheet);
+        _deps[key] = dependencies ?? <String>{};
+        if (dependencies == null) _unmodeledDependencies.add(key);
       }
     }
   }
@@ -70,6 +75,12 @@ class FormulaDepGraph {
     for (final String key in order) {
       final (SmlWorksheet sheet, SmlCellRef ref) = _parse(key);
       final SmlCell cell = sheet.cell(ref);
+      if (_unmodeledDependencies.contains(key)) {
+        if (keepCachedOnUnsupported && cell.value != null) continue;
+        cell.value = '#ERROR! Unmodeled formula dependencies';
+        cell.type = SmlCellType.error;
+        continue;
+      }
       if (circular.contains(key)) {
         cell.value = '#CIRC!';
         cell.type = SmlCellType.error;
@@ -107,7 +118,7 @@ class FormulaDepGraph {
     return order;
   }
 
-  Set<String> _collect(String formula, SmlWorksheet sheet) {
+  Set<String>? _collect(String formula, SmlWorksheet sheet) {
     final Set<String> out = <String>{};
     void walk(FormulaNode node, [Set<String> bindings = const {}]) {
       switch (node) {
@@ -131,7 +142,24 @@ class FormulaDepGraph {
         case UnaryNode(:final FormulaNode expr):
           walk(expr, bindings);
         case CallNode(:final String name, :final List<FormulaNode> args):
-          if (name == 'LET' && args.length >= 3 && args.length.isOdd) {
+          final function = FormulaFunctions.stripFutureFunctionPrefix(name);
+          if (function == 'IF' && args.isNotEmpty) {
+            if (args.first case LiteralNode(value: final bool condition)) {
+              // A constant predicate has one reachable branch. Opaque names in
+              // the unused branch cannot discard the selected branch's deps.
+              final selected = condition ? 1 : 2;
+              if (args.length > selected) walk(args[selected], bindings);
+              break;
+            }
+          }
+          if ((function == 'IFERROR' || function == 'IFNA') &&
+              args.isNotEmpty &&
+              args.first is LiteralNode) {
+            // Parsed scalar literals cannot be native errors; quoted error
+            // spellings are ordinary text and do not select the fallback.
+            break;
+          }
+          if (function == 'LET' && args.length >= 3 && args.length.isOdd) {
             final local = {...bindings};
             for (var i = 0; i < args.length - 1; i += 2) {
               walk(args[i + 1], local);
@@ -181,8 +209,10 @@ class FormulaDepGraph {
     try {
       walk(parseFormula(formula));
     } on Object {
-      // Broken or unsupported formula: discard every partial dependency.
-      out.clear();
+      // Never calculate against an incomplete dependency set. In particular,
+      // a dynamic conditional containing an opaque name remains a cache
+      // fallback even if direct scalar evaluation can choose another branch.
+      return null;
     }
     return out;
   }

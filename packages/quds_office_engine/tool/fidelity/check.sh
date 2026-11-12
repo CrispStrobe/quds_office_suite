@@ -18,7 +18,7 @@ dart test \
   test/list_restart_fidelity_test.dart test/rich_note_test.dart \
   test/native_presentation_test.dart test/native_spreadsheet_test.dart \
   test/slide_section_fidelity_test.dart test/slide_arrange_fidelity_test.dart \
-  test/sheet_rename_fidelity_test.dart test/sheet_qualified_names_test.dart \
+  test/sheet_rename_fidelity_test.dart test/sheet_qualified_names_test.dart test/sheet_qualified_name_error_test.dart \
   test/sheet_rename_adversarial_test.dart \
   test/sheet_formula_cache_fidelity_test.dart \
   test/sheet_normal_font_metrics_test.dart \

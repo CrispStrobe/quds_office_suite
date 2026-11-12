@@ -1,0 +1,127 @@
+{
+  "status": "passed",
+  "files_verified": 7,
+  "direct_cycles": 3,
+  "isolate_cycles": 3,
+  "fixture_sha256": "6d86b24c22bdaac9d2e57167f7f506626029b4060eb793f523bfe86bfe266b50",
+  "groups": [
+    [
+      "Card 1",
+      "Card 2"
+    ],
+    [
+      "Card 3",
+      "Card 4"
+    ]
+  ],
+  "ungrouped": [
+    "Card 5"
+  ],
+  "checks": [
+    "exact source bytes and seven-file inventory",
+    "literal five-card geometry and text",
+    "two flat ordered native groups",
+    "unchanged ungrouped card",
+    "unique uint32 root/group/shape IDs",
+    "identity group coordinate transforms",
+    "stable native identities across direct and isolate saves"
+  ],
+  "files": [
+    {
+      "name": "source.pptx",
+      "sha256": "6d86b24c22bdaac9d2e57167f7f506626029b4060eb793f523bfe86bfe266b50",
+      "native_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "name": "direct-1.pptx",
+      "sha256": "2ee05c286b342331be36f00ac98635170bc5def87b0daac7792132cc678c0ceb",
+      "native_ids": [
+        1,
+        7,
+        2,
+        3,
+        8,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "name": "direct-2.pptx",
+      "sha256": "63be10a685d016959bf89d0f9a1779c49504b5988bc3978c8e3a31ae66af0380",
+      "native_ids": [
+        1,
+        7,
+        2,
+        3,
+        8,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "name": "direct-3.pptx",
+      "sha256": "73177babed375acef7d7ff763c5ba118fbf006ef2a66408d3d4bfd1393312131",
+      "native_ids": [
+        1,
+        7,
+        2,
+        3,
+        8,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "name": "isolate-1.pptx",
+      "sha256": "bacd2f118aded49263bd4d8d10d4981e3bc549c3b1102a20ebcf9dbc8677a5ab",
+      "native_ids": [
+        1,
+        7,
+        2,
+        3,
+        8,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "name": "isolate-2.pptx",
+      "sha256": "12551b2b851d640c32cb9479e5579046cff16e4bec40058b92e7e3a18abf7d32",
+      "native_ids": [
+        1,
+        7,
+        2,
+        3,
+        8,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "name": "isolate-3.pptx",
+      "sha256": "7b640de03cffff1851bcace64f51d51dca5e93490bd61a6e52c3c2649e355440",
+      "native_ids": [
+        1,
+        7,
+        2,
+        3,
+        8,
+        4,
+        5,
+        6
+      ]
+    }
+  ]
+}

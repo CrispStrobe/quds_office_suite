@@ -1,0 +1,41 @@
+{
+  "kind": "focused-local-validation",
+  "parent_commit": "47358ef187f339c8e501e8777c6d29d233b9b59b",
+  "source_sha256": {
+    "packages/quds_office_editor/lib/src/embed/office_controller.dart": "1e911cc3df70ab2d6281c79c4966ed1ccbd71fa27c778eef7a0a9f65d759a99e",
+    "packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart": "8a86b2a7185e7f19cda74011685a26cee4d0c35bdcdc423045b556e783eeebed"
+  },
+  "before": {
+    "new_cases": 11,
+    "failed": 7,
+    "passed": 4,
+    "exit_code": 1,
+    "scope": "Generated paragraph properties silently discarded by inline-rich-paste merges; supported complete-block/native-endpoint controls passed."
+  },
+  "after": {
+    "passed": 51,
+    "failed": 0,
+    "exit_code": 0,
+    "tests": [
+      "test/word_generated_bookmark_paste_test.dart",
+      "test/word_bookmark_copy_test.dart",
+      "test/word_bookmark_history_test.dart",
+      "test/word_bookmark_fidelity_test.dart",
+      "test/word_content_control_history_test.dart"
+    ]
+  },
+  "analyzer": {
+    "files": [
+      "packages/quds_office_editor/lib/src/embed/office_controller.dart",
+      "packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart"
+    ],
+    "exit_code": 0,
+    "result": "No issues found"
+  },
+  "artifacts_sha256": {
+    "after.txt": "7d44473aac24018b32247396e59de4fa37d8973c3f185c6a5d10d41b68e906af",
+    "analyze.txt": "2bc7ab9c15cad1a54bcd1543a564a7cbfa5eceff3e962a769b59149ffa8d8334",
+    "before.txt": "374f0c5162435686b3ca272c9ac82b83ff65c0ddf45ff144aaf1c361754e737c"
+  },
+  "limits": "Focused local evidence; final combined source and host gate receipts are separate. Generated bookmark property merges reject before mutation; complete generated paragraphs and native endpoints retain support."
+}

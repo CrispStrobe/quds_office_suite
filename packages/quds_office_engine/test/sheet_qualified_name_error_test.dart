@@ -50,7 +50,7 @@ void main() {
     'EXP(@)',
     'LN(@)',
     'LOG(2,@)',
-    'LOG10(@)',
+    '_xlfn.LOG10(@)',
     'SIGN(@)',
     'INT(@)',
     'TRUNC(@)',
@@ -157,4 +157,126 @@ void main() {
     expect(_eval(book, 'IFNA($_problem,12)'), '#REF!');
     expect(_eval(book, 'IFNA(NA(),12)'), 12);
   });
+
+  test(
+    'counting, criteria and type functions keep their explicit error policy',
+    () {
+      final book = _read();
+      const errors = "'O''Brien Data'!Errors";
+      expect(_eval(book, 'COUNT(1,$_problem,$errors)'), 1);
+      expect(_eval(book, 'COUNTA($_problem,$errors)'), 3);
+      expect(_eval(book, 'COUNTBLANK($errors)'), 0);
+      expect(_eval(book, 'ISNUMBER($_problem)'), isFalse);
+      expect(_eval(book, 'ISNUMBER($_text)'), isFalse);
+      expect(_eval(book, 'ISERROR($_problem)'), isTrue);
+      expect(_eval(book, 'ISTEXT($_text)'), isTrue);
+      expect(_eval(book, 'TYPE($_problem)'), 16);
+      final sheet = book.sheets[2];
+      sheet.cellA1('Z2').value = 1;
+      sheet.cellA1('Z3').value = 2;
+      sheet.cellA1('AA2').value = 5;
+      sheet.cellA1('AA3')
+        ..value = '#REF!'
+        ..type = SmlCellType.error;
+      expect(_eval(book, 'SUMIF(Z2:Z3,1,AA2:AA3)'), 5);
+      expect(_eval(book, 'AVERAGEIF(Z2:Z3,1,AA2:AA3)'), 5);
+      expect(_eval(book, 'COUNTIF(Z2:Z3,1)'), 1);
+    },
+  );
+
+  test('unsupported parser/function/name paths keep authored caches', () {
+    final book = _read();
+    for (final formula in [
+      // Bare LOG10 is an existing cell-token ambiguity; the supported future
+      // prefix reaches the numeric function. This change does not alter lexing.
+      'LOG10($_problem)',
+      'IFERROR(UnmodeledFunction(),12)',
+      'IFERROR($_unsupported,12)',
+    ]) {
+      final cell = book.sheets[2].cellA1('Z30')
+        ..formula = formula
+        ..value = 97;
+      FormulaDepGraph(book).recalculate();
+      expect(cell.value, 97, reason: formula);
+    }
+  });
+
+  test(
+    'unused opaque constant branches cannot discard needed dependencies',
+    () {
+      final book = _read();
+      final source = book.sheets[2].cellA1('Z30')
+        ..formula = '2+5'
+        ..value = 42;
+      final target = book.firstSheet.cellA1('D1')
+        ..formula = 'IF(FALSE,$_unsupported,Summary!Z30)'
+        ..value = 97;
+      FormulaDepGraph(book).recalculate();
+      expect(source.value, 7);
+      expect(target.value, 7);
+      for (final formula in [
+        'IFERROR(7,$_unsupported)',
+        'IFNA(7,$_unsupported)',
+      ]) {
+        target
+          ..formula = formula
+          ..value = 97;
+        FormulaDepGraph(book).recalculate();
+        expect(target.value, 7);
+      }
+    },
+  );
+
+  test('dynamic opaque branches stay explicit cache fallbacks', () {
+    final book = _read();
+    book.firstSheet.cellA1('Z1').value = false;
+    final target = book.firstSheet.cellA1('D1')
+      ..formula = 'IF(Z1,$_unsupported,Summary!Z30)'
+      ..value = 97;
+    book.sheets[2].cellA1('Z30')
+      ..formula = '2+5'
+      ..value = 42;
+    FormulaDepGraph(book).recalculate();
+    expect(target.value, 97);
+    FormulaDepGraph(book).recalculate(keepCachedOnUnsupported: false);
+    expect(target.value, startsWith('#ERROR!'));
+    expect(target.type, SmlCellType.error);
+  });
+
+  test(
+    'numeric named errors retain error caches through three direct/isolate saves',
+    () async {
+      var book = _read();
+      for (final entry in {
+        'Z30': 'ABS($_problem)',
+        'Z31': 'ROUND($_problem,0)',
+        'Z32': 'MEDIAN($_problem)',
+      }.entries) {
+        book.sheets[2].cellA1(entry.key)
+          ..formula = entry.value
+          ..value = 42;
+      }
+      for (var cycle = 0; cycle < 3; cycle++) {
+        final bytes = cycle == 1
+            ? await OfficeIsolateSave.workbook(book)
+            : SheetSerializer().writeBytes(book);
+        final package = OpcPackage.openBytes(bytes);
+        final xml = XmlDocument.parse(
+          package.getPart('/xl/worksheets/sheet3.xml')!.readText(),
+        );
+        final cells = xml.root!
+            .firstChild('sheetData')!
+            .childrenNamed('row')
+            .expand((row) => row.childrenNamed('c'));
+        for (final ref in ['Z30', 'Z31', 'Z32']) {
+          final cell = cells.singleWhere(
+            (cell) => cell.getAttribute('r') == ref,
+          );
+          expect(cell.getAttribute('t'), 'e');
+          expect(cell.firstChild('v')!.text, '#REF!');
+        }
+        book = SheetDeserializer().read(package);
+      }
+    },
+  );
 }
