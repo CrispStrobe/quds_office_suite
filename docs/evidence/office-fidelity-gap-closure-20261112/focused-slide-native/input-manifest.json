@@ -1,0 +1,174 @@
+{
+  "base_commit": "90e49659e86a78a978b65d70000f6db289d42d5e",
+  "pending_source_sha256": {
+    "packages/quds_office_engine/lib/src/slide/shapes/drawingml.dart": "be6a6831c9e910b3056b3f4b7627bbb36e6911f4988cf63a476b6b49fe9b03c1",
+    "packages/quds_office_engine/test/slide_section_fidelity_test.dart": "205c65b324cf406daddea223e1dddc2a8b675c9dd1468848dbf1249f3ff55e53",
+    "packages/quds_office_engine/tool/fidelity/slide_sections_oracle.py": "88e3ac49ae50d978cf6ca78eb6b23bebb34150cdc2bd23ab866ee98e876787aa",
+    "packages/quds_office_engine/tool/fidelity/test_slide_sections_oracle.py": "5bea0ef7bab10ed6cc92920f448d41bb790bdc487af4fafa75603f50b1a4d167",
+    "tool/office-validation/render.py": "a6918966d591cef510bd46c6e9d25f8ec7ace37dbfe6f1fb94404c3d6bd9cd3f",
+    "tool/office-validation/test_render.py": "abc1e59fe44a30942d94d59157ff7b4f96538b205b7cad12aaa484f9d040f5a7"
+  },
+  "count": 32,
+  "files": [
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/direct/backward-1.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/fid028-native-final/input/fidelity-slide-sections/direct/backward-1.pptx",
+      "sha256": "56188a35171e12c0821264481f0ef02811aab9b3049bae4844ceaae927422ca9"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/direct/backward-2.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/fid028-native-final/input/fidelity-slide-sections/direct/backward-2.pptx",
+      "sha256": "87b2ed9efe140a25384eeb498a6d9e85368f0e725fc19e2611a870286484245b"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/direct/backward-3.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/fid028-native-final/input/fidelity-slide-sections/direct/backward-3.pptx",
+      "sha256": "e7047dfb3610d2c0f1f2b7d17be4ad600de6aa41b6a5bb1a2558c3d166dfce0c"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/direct/emptied-1.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/fid028-native-final/input/fidelity-slide-sections/direct/emptied-1.pptx",
+      "sha256": "78300e84e072f65c834d3ff4533f81493840bb6a1c205b03fa6b61a0cf7c5440"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/direct/emptied-2.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/fid028-native-final/input/fidelity-slide-sections/direct/emptied-2.pptx",
+      "sha256": "6f7b37615c4974b84895aeef513621e8faccca2c34bc60af4a62ce2ea6a2af6d"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/direct/emptied-3.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/fid028-native-final/input/fidelity-slide-sections/direct/emptied-3.pptx",
+      "sha256": "c9a60ef3cdcb6b55b51c281db72cc8b06f7db8788f6214ec9edd165bd58da1ec"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/direct/forward-1.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/fid028-native-final/input/fidelity-slide-sections/direct/forward-1.pptx",
+      "sha256": "240a8bfaba15d0d7808961c2c0ef3a52c528c3df870b313edebf3ae55cd816b6"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/direct/forward-2.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/fid028-native-final/input/fidelity-slide-sections/direct/forward-2.pptx",
+      "sha256": "a19fb69641c60de78c71ff2c446979e25c7bc9dbc9199d22ce0e78c950eaaced"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/direct/forward-3.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/fid028-native-final/input/fidelity-slide-sections/direct/forward-3.pptx",
+      "sha256": "4961594e7446150f06eef9d49ad1166364ba02199a567506f721336dee29e5fd"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/direct/source.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/fid028-native-final/input/fidelity-slide-sections/direct/source.pptx",
+      "sha256": "fbbaacf2b6bbc657568bb3e507e062a949ce5304d2f77fb51bd3c9f3ec5bb39c"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/direct/unchanged-1.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/fid028-native-final/input/fidelity-slide-sections/direct/unchanged-1.pptx",
+      "sha256": "508f1f26c7a16e2703f9edd5747e9417efcf2d1eff601aa9a20691daadbb3ef0"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/direct/unchanged-2.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/fid028-native-final/input/fidelity-slide-sections/direct/unchanged-2.pptx",
+      "sha256": "482290c5db270b7cdde488b8e5dbe58e5706336a2f14f192d32a687de1b64b57"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/direct/unchanged-3.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/fid028-native-final/input/fidelity-slide-sections/direct/unchanged-3.pptx",
+      "sha256": "75db5c4f5961b7679e874068594763e66c1610f39b5f52a44608f8d6fe1a6259"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/direct/within-1.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/fid028-native-final/input/fidelity-slide-sections/direct/within-1.pptx",
+      "sha256": "4765f84b80a6db8bf203aa87302d7ff29cbb20ff4d6e7dd86c21e2ec0e601fde"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/direct/within-2.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/fid028-native-final/input/fidelity-slide-sections/direct/within-2.pptx",
+      "sha256": "d103021ed26dbbd530954730248d27b16cda9cc89e051ccd3d371a743881e657"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/direct/within-3.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/fid028-native-final/input/fidelity-slide-sections/direct/within-3.pptx",
+      "sha256": "0fdaca81b18f3d48d41ba2f361fe7d7eb8a1d1166fe9db8feb56c76eec538753"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/isolate/backward-1.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/fid028-native-final/input/fidelity-slide-sections/isolate/backward-1.pptx",
+      "sha256": "1879914bf7d40dbe6a14068a8dce53b08a3a0ad446e41b1b4e03db1dce0e17f6"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/isolate/backward-2.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/fid028-native-final/input/fidelity-slide-sections/isolate/backward-2.pptx",
+      "sha256": "a19f6017d08edda393bb1eb20383756860beb93342a8ff4a030bb9922aeeaa70"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/isolate/backward-3.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/fid028-native-final/input/fidelity-slide-sections/isolate/backward-3.pptx",
+      "sha256": "b4a2b8cf490c5acb39e724169b1ccbc9891d988e4361102a7f7264a528d9e504"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/isolate/emptied-1.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/fid028-native-final/input/fidelity-slide-sections/isolate/emptied-1.pptx",
+      "sha256": "a40c4bcf97152aa6662e76707ac99e70bfe7caf7cb5e2028127aae29197d46c0"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/isolate/emptied-2.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/fid028-native-final/input/fidelity-slide-sections/isolate/emptied-2.pptx",
+      "sha256": "d96b1cc1e57788e588dc67ddef7903bb222c1166fdac56f5c512524a8a246555"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/isolate/emptied-3.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/fid028-native-final/input/fidelity-slide-sections/isolate/emptied-3.pptx",
+      "sha256": "7c9f292372ac17fed64dc5559dc50b1b350f7f1501f32e97d178af85481f4d4e"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/isolate/forward-1.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/fid028-native-final/input/fidelity-slide-sections/isolate/forward-1.pptx",
+      "sha256": "b24ad9bdc5b7a8443b724daa7b2e21a7da7386a5096226dabff8a7f9a7c8f491"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/isolate/forward-2.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/fid028-native-final/input/fidelity-slide-sections/isolate/forward-2.pptx",
+      "sha256": "49f138d6281dcb8030c0dc8a926fdbef646953f15987d99a48368ebaf619d400"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/isolate/forward-3.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/fid028-native-final/input/fidelity-slide-sections/isolate/forward-3.pptx",
+      "sha256": "38290b768e65e3ac1e1421a0c58e8f67967cd13999f36596d8fe759edc2ce30a"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/isolate/source.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/fid028-native-final/input/fidelity-slide-sections/isolate/source.pptx",
+      "sha256": "fbbaacf2b6bbc657568bb3e507e062a949ce5304d2f77fb51bd3c9f3ec5bb39c"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/isolate/unchanged-1.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/fid028-native-final/input/fidelity-slide-sections/isolate/unchanged-1.pptx",
+      "sha256": "e9cfb7891c794100528f78fceec5ecb71c88aa1abb30012a01214accf9951dbf"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/isolate/unchanged-2.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/fid028-native-final/input/fidelity-slide-sections/isolate/unchanged-2.pptx",
+      "sha256": "680ab0918dd4ce98ca17707009cc2ba5866f7afc1c4911376da7ac5fe5aac8d8"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/isolate/unchanged-3.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/fid028-native-final/input/fidelity-slide-sections/isolate/unchanged-3.pptx",
+      "sha256": "4d26fe8f282ae57f1c5916df74cc5e2735447747d3782c47e3369e89a00f9332"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/isolate/within-1.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/fid028-native-final/input/fidelity-slide-sections/isolate/within-1.pptx",
+      "sha256": "041e0acfa0ad80ff935789007cf3be6ba05c7f57b057878be740d7062cbe5624"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/isolate/within-2.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/fid028-native-final/input/fidelity-slide-sections/isolate/within-2.pptx",
+      "sha256": "e83aad9f3d52d4b7397babdd7dba51a3301f7715a7e0791173a80120130b765f"
+    },
+    {
+      "source": "/workspace/scratch/e445bd9b965c/quds_office_suite/packages/quds_office_engine/build/fidelity-slide-sections/isolate/within-3.pptx",
+      "file": "/workspace/scratch/e445bd9b965c/validation/fid028-native-final/input/fidelity-slide-sections/isolate/within-3.pptx",
+      "sha256": "93ebbacee402726c0a0724c15d754ecb50f9fcc3a4db29c0793eaa148ac47a36"
+    }
+  ]
+}

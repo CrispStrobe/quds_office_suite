@@ -1,0 +1,2165 @@
+{
+  "renderer": "LibreOffice 24.2.7.2 ee3885777aa7032db5a9b65deec9457448a91162 (LibreOfficeKit embedding API)",
+  "files": 32,
+  "rendered_files": 32,
+  "visual_input_files": 32,
+  "native_schema_only_files": 0,
+  "native_schema_only": [],
+  "schema_report": "/workspace/scratch/e445bd9b965c/validation/fid028-native-final/schema-report.json",
+  "pixel_fingerprint": "SHA-256 of big-endian uint32 width/height followed by RGB bytes",
+  "cycle_groups": 10,
+  "cycle_comparisons": [
+    {
+      "case": "fidelity-slide-sections/direct/backward.pptx",
+      "expected_cycles": [
+        1,
+        2,
+        3
+      ],
+      "actual_cycles": [
+        1,
+        2,
+        3
+      ],
+      "files": [
+        "fidelity-slide-sections/direct/backward-1.pptx",
+        "fidelity-slide-sections/direct/backward-2.pptx",
+        "fidelity-slide-sections/direct/backward-3.pptx"
+      ],
+      "baseline": "fidelity-slide-sections/direct/source.pptx",
+      "baseline_candidate": "fidelity-slide-sections/direct/source.pptx",
+      "baseline_page_order": [
+        1,
+        6,
+        2,
+        3,
+        4,
+        5
+      ],
+      "passed": true
+    },
+    {
+      "case": "fidelity-slide-sections/direct/emptied.pptx",
+      "expected_cycles": [
+        1,
+        2,
+        3
+      ],
+      "actual_cycles": [
+        1,
+        2,
+        3
+      ],
+      "files": [
+        "fidelity-slide-sections/direct/emptied-1.pptx",
+        "fidelity-slide-sections/direct/emptied-2.pptx",
+        "fidelity-slide-sections/direct/emptied-3.pptx"
+      ],
+      "baseline": "fidelity-slide-sections/direct/source.pptx",
+      "baseline_candidate": "fidelity-slide-sections/direct/source.pptx",
+      "baseline_page_order": [
+        3,
+        1,
+        2,
+        4,
+        5,
+        6
+      ],
+      "passed": true
+    },
+    {
+      "case": "fidelity-slide-sections/direct/forward.pptx",
+      "expected_cycles": [
+        1,
+        2,
+        3
+      ],
+      "actual_cycles": [
+        1,
+        2,
+        3
+      ],
+      "files": [
+        "fidelity-slide-sections/direct/forward-1.pptx",
+        "fidelity-slide-sections/direct/forward-2.pptx",
+        "fidelity-slide-sections/direct/forward-3.pptx"
+      ],
+      "baseline": "fidelity-slide-sections/direct/source.pptx",
+      "baseline_candidate": "fidelity-slide-sections/direct/source.pptx",
+      "baseline_page_order": [
+        2,
+        3,
+        4,
+        1,
+        5,
+        6
+      ],
+      "passed": true
+    },
+    {
+      "case": "fidelity-slide-sections/direct/unchanged.pptx",
+      "expected_cycles": [
+        1,
+        2,
+        3
+      ],
+      "actual_cycles": [
+        1,
+        2,
+        3
+      ],
+      "files": [
+        "fidelity-slide-sections/direct/unchanged-1.pptx",
+        "fidelity-slide-sections/direct/unchanged-2.pptx",
+        "fidelity-slide-sections/direct/unchanged-3.pptx"
+      ],
+      "baseline": "fidelity-slide-sections/direct/source.pptx",
+      "baseline_candidate": "fidelity-slide-sections/direct/source.pptx",
+      "baseline_page_order": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "passed": true
+    },
+    {
+      "case": "fidelity-slide-sections/direct/within.pptx",
+      "expected_cycles": [
+        1,
+        2,
+        3
+      ],
+      "actual_cycles": [
+        1,
+        2,
+        3
+      ],
+      "files": [
+        "fidelity-slide-sections/direct/within-1.pptx",
+        "fidelity-slide-sections/direct/within-2.pptx",
+        "fidelity-slide-sections/direct/within-3.pptx"
+      ],
+      "baseline": "fidelity-slide-sections/direct/source.pptx",
+      "baseline_candidate": "fidelity-slide-sections/direct/source.pptx",
+      "baseline_page_order": [
+        2,
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "passed": true
+    },
+    {
+      "case": "fidelity-slide-sections/isolate/backward.pptx",
+      "expected_cycles": [
+        1,
+        2,
+        3
+      ],
+      "actual_cycles": [
+        1,
+        2,
+        3
+      ],
+      "files": [
+        "fidelity-slide-sections/isolate/backward-1.pptx",
+        "fidelity-slide-sections/isolate/backward-2.pptx",
+        "fidelity-slide-sections/isolate/backward-3.pptx"
+      ],
+      "baseline": "fidelity-slide-sections/isolate/source.pptx",
+      "baseline_candidate": "fidelity-slide-sections/isolate/source.pptx",
+      "baseline_page_order": [
+        1,
+        6,
+        2,
+        3,
+        4,
+        5
+      ],
+      "passed": true
+    },
+    {
+      "case": "fidelity-slide-sections/isolate/emptied.pptx",
+      "expected_cycles": [
+        1,
+        2,
+        3
+      ],
+      "actual_cycles": [
+        1,
+        2,
+        3
+      ],
+      "files": [
+        "fidelity-slide-sections/isolate/emptied-1.pptx",
+        "fidelity-slide-sections/isolate/emptied-2.pptx",
+        "fidelity-slide-sections/isolate/emptied-3.pptx"
+      ],
+      "baseline": "fidelity-slide-sections/isolate/source.pptx",
+      "baseline_candidate": "fidelity-slide-sections/isolate/source.pptx",
+      "baseline_page_order": [
+        3,
+        1,
+        2,
+        4,
+        5,
+        6
+      ],
+      "passed": true
+    },
+    {
+      "case": "fidelity-slide-sections/isolate/forward.pptx",
+      "expected_cycles": [
+        1,
+        2,
+        3
+      ],
+      "actual_cycles": [
+        1,
+        2,
+        3
+      ],
+      "files": [
+        "fidelity-slide-sections/isolate/forward-1.pptx",
+        "fidelity-slide-sections/isolate/forward-2.pptx",
+        "fidelity-slide-sections/isolate/forward-3.pptx"
+      ],
+      "baseline": "fidelity-slide-sections/isolate/source.pptx",
+      "baseline_candidate": "fidelity-slide-sections/isolate/source.pptx",
+      "baseline_page_order": [
+        2,
+        3,
+        4,
+        1,
+        5,
+        6
+      ],
+      "passed": true
+    },
+    {
+      "case": "fidelity-slide-sections/isolate/unchanged.pptx",
+      "expected_cycles": [
+        1,
+        2,
+        3
+      ],
+      "actual_cycles": [
+        1,
+        2,
+        3
+      ],
+      "files": [
+        "fidelity-slide-sections/isolate/unchanged-1.pptx",
+        "fidelity-slide-sections/isolate/unchanged-2.pptx",
+        "fidelity-slide-sections/isolate/unchanged-3.pptx"
+      ],
+      "baseline": "fidelity-slide-sections/isolate/source.pptx",
+      "baseline_candidate": "fidelity-slide-sections/isolate/source.pptx",
+      "baseline_page_order": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "passed": true
+    },
+    {
+      "case": "fidelity-slide-sections/isolate/within.pptx",
+      "expected_cycles": [
+        1,
+        2,
+        3
+      ],
+      "actual_cycles": [
+        1,
+        2,
+        3
+      ],
+      "files": [
+        "fidelity-slide-sections/isolate/within-1.pptx",
+        "fidelity-slide-sections/isolate/within-2.pptx",
+        "fidelity-slide-sections/isolate/within-3.pptx"
+      ],
+      "baseline": "fidelity-slide-sections/isolate/source.pptx",
+      "baseline_candidate": "fidelity-slide-sections/isolate/source.pptx",
+      "baseline_page_order": [
+        2,
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "passed": true
+    }
+  ],
+  "baseline_comparisons": 10,
+  "page_order_comparisons": 10,
+  "render_only_files": [],
+  "failures": [],
+  "reports": [
+    {
+      "file": "fidelity-slide-sections/direct/backward-1.pptx",
+      "pages": 6,
+      "text": "            Section slide A\n\u2022 Independent body A\n\f             Section slide F\n\u2022 Independent body F\n\f            Section slide B\n\u2022 Independent body B\n\f            Section slide C\n\u2022 Independent body C\n\f            Section slide D\n\u2022 Independent body D\n\f             Section slide E\n\u2022 Independent body E\n\f",
+      "pixel_sha256": [
+        "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b",
+        "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd",
+        "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5",
+        "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1",
+        "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32",
+        "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+      ],
+      "pdf": "000/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "000/page-0001.png",
+          "pixel_sha256": "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b"
+        },
+        {
+          "page": 2,
+          "width": 720,
+          "height": 540,
+          "png": "000/page-0002.png",
+          "pixel_sha256": "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+        },
+        {
+          "page": 3,
+          "width": 720,
+          "height": 540,
+          "png": "000/page-0003.png",
+          "pixel_sha256": "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5"
+        },
+        {
+          "page": 4,
+          "width": 720,
+          "height": 540,
+          "png": "000/page-0004.png",
+          "pixel_sha256": "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1"
+        },
+        {
+          "page": 5,
+          "width": 720,
+          "height": 540,
+          "png": "000/page-0005.png",
+          "pixel_sha256": "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32"
+        },
+        {
+          "page": 6,
+          "width": 720,
+          "height": 540,
+          "png": "000/page-0006.png",
+          "pixel_sha256": "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-sections/direct/backward-2.pptx",
+      "pages": 6,
+      "text": "            Section slide A\n\u2022 Independent body A\n\f             Section slide F\n\u2022 Independent body F\n\f            Section slide B\n\u2022 Independent body B\n\f            Section slide C\n\u2022 Independent body C\n\f            Section slide D\n\u2022 Independent body D\n\f             Section slide E\n\u2022 Independent body E\n\f",
+      "pixel_sha256": [
+        "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b",
+        "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd",
+        "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5",
+        "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1",
+        "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32",
+        "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+      ],
+      "pdf": "001/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "001/page-0001.png",
+          "pixel_sha256": "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b"
+        },
+        {
+          "page": 2,
+          "width": 720,
+          "height": 540,
+          "png": "001/page-0002.png",
+          "pixel_sha256": "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+        },
+        {
+          "page": 3,
+          "width": 720,
+          "height": 540,
+          "png": "001/page-0003.png",
+          "pixel_sha256": "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5"
+        },
+        {
+          "page": 4,
+          "width": 720,
+          "height": 540,
+          "png": "001/page-0004.png",
+          "pixel_sha256": "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1"
+        },
+        {
+          "page": 5,
+          "width": 720,
+          "height": 540,
+          "png": "001/page-0005.png",
+          "pixel_sha256": "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32"
+        },
+        {
+          "page": 6,
+          "width": 720,
+          "height": 540,
+          "png": "001/page-0006.png",
+          "pixel_sha256": "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-sections/direct/backward-3.pptx",
+      "pages": 6,
+      "text": "            Section slide A\n\u2022 Independent body A\n\f             Section slide F\n\u2022 Independent body F\n\f            Section slide B\n\u2022 Independent body B\n\f            Section slide C\n\u2022 Independent body C\n\f            Section slide D\n\u2022 Independent body D\n\f             Section slide E\n\u2022 Independent body E\n\f",
+      "pixel_sha256": [
+        "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b",
+        "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd",
+        "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5",
+        "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1",
+        "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32",
+        "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+      ],
+      "pdf": "002/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "002/page-0001.png",
+          "pixel_sha256": "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b"
+        },
+        {
+          "page": 2,
+          "width": 720,
+          "height": 540,
+          "png": "002/page-0002.png",
+          "pixel_sha256": "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+        },
+        {
+          "page": 3,
+          "width": 720,
+          "height": 540,
+          "png": "002/page-0003.png",
+          "pixel_sha256": "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5"
+        },
+        {
+          "page": 4,
+          "width": 720,
+          "height": 540,
+          "png": "002/page-0004.png",
+          "pixel_sha256": "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1"
+        },
+        {
+          "page": 5,
+          "width": 720,
+          "height": 540,
+          "png": "002/page-0005.png",
+          "pixel_sha256": "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32"
+        },
+        {
+          "page": 6,
+          "width": 720,
+          "height": 540,
+          "png": "002/page-0006.png",
+          "pixel_sha256": "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-sections/direct/emptied-1.pptx",
+      "pages": 6,
+      "text": "            Section slide C\n\u2022 Independent body C\n\f            Section slide A\n\u2022 Independent body A\n\f            Section slide B\n\u2022 Independent body B\n\f            Section slide D\n\u2022 Independent body D\n\f             Section slide E\n\u2022 Independent body E\n\f             Section slide F\n\u2022 Independent body F\n\f",
+      "pixel_sha256": [
+        "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1",
+        "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b",
+        "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5",
+        "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32",
+        "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089",
+        "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+      ],
+      "pdf": "003/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "003/page-0001.png",
+          "pixel_sha256": "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1"
+        },
+        {
+          "page": 2,
+          "width": 720,
+          "height": 540,
+          "png": "003/page-0002.png",
+          "pixel_sha256": "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b"
+        },
+        {
+          "page": 3,
+          "width": 720,
+          "height": 540,
+          "png": "003/page-0003.png",
+          "pixel_sha256": "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5"
+        },
+        {
+          "page": 4,
+          "width": 720,
+          "height": 540,
+          "png": "003/page-0004.png",
+          "pixel_sha256": "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32"
+        },
+        {
+          "page": 5,
+          "width": 720,
+          "height": 540,
+          "png": "003/page-0005.png",
+          "pixel_sha256": "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+        },
+        {
+          "page": 6,
+          "width": 720,
+          "height": 540,
+          "png": "003/page-0006.png",
+          "pixel_sha256": "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-sections/direct/emptied-2.pptx",
+      "pages": 6,
+      "text": "            Section slide C\n\u2022 Independent body C\n\f            Section slide A\n\u2022 Independent body A\n\f            Section slide B\n\u2022 Independent body B\n\f            Section slide D\n\u2022 Independent body D\n\f             Section slide E\n\u2022 Independent body E\n\f             Section slide F\n\u2022 Independent body F\n\f",
+      "pixel_sha256": [
+        "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1",
+        "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b",
+        "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5",
+        "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32",
+        "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089",
+        "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+      ],
+      "pdf": "004/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "004/page-0001.png",
+          "pixel_sha256": "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1"
+        },
+        {
+          "page": 2,
+          "width": 720,
+          "height": 540,
+          "png": "004/page-0002.png",
+          "pixel_sha256": "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b"
+        },
+        {
+          "page": 3,
+          "width": 720,
+          "height": 540,
+          "png": "004/page-0003.png",
+          "pixel_sha256": "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5"
+        },
+        {
+          "page": 4,
+          "width": 720,
+          "height": 540,
+          "png": "004/page-0004.png",
+          "pixel_sha256": "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32"
+        },
+        {
+          "page": 5,
+          "width": 720,
+          "height": 540,
+          "png": "004/page-0005.png",
+          "pixel_sha256": "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+        },
+        {
+          "page": 6,
+          "width": 720,
+          "height": 540,
+          "png": "004/page-0006.png",
+          "pixel_sha256": "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-sections/direct/emptied-3.pptx",
+      "pages": 6,
+      "text": "            Section slide C\n\u2022 Independent body C\n\f            Section slide A\n\u2022 Independent body A\n\f            Section slide B\n\u2022 Independent body B\n\f            Section slide D\n\u2022 Independent body D\n\f             Section slide E\n\u2022 Independent body E\n\f             Section slide F\n\u2022 Independent body F\n\f",
+      "pixel_sha256": [
+        "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1",
+        "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b",
+        "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5",
+        "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32",
+        "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089",
+        "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+      ],
+      "pdf": "005/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "005/page-0001.png",
+          "pixel_sha256": "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1"
+        },
+        {
+          "page": 2,
+          "width": 720,
+          "height": 540,
+          "png": "005/page-0002.png",
+          "pixel_sha256": "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b"
+        },
+        {
+          "page": 3,
+          "width": 720,
+          "height": 540,
+          "png": "005/page-0003.png",
+          "pixel_sha256": "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5"
+        },
+        {
+          "page": 4,
+          "width": 720,
+          "height": 540,
+          "png": "005/page-0004.png",
+          "pixel_sha256": "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32"
+        },
+        {
+          "page": 5,
+          "width": 720,
+          "height": 540,
+          "png": "005/page-0005.png",
+          "pixel_sha256": "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+        },
+        {
+          "page": 6,
+          "width": 720,
+          "height": 540,
+          "png": "005/page-0006.png",
+          "pixel_sha256": "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-sections/direct/forward-1.pptx",
+      "pages": 6,
+      "text": "            Section slide B\n\u2022 Independent body B\n\f            Section slide C\n\u2022 Independent body C\n\f            Section slide D\n\u2022 Independent body D\n\f            Section slide A\n\u2022 Independent body A\n\f             Section slide E\n\u2022 Independent body E\n\f             Section slide F\n\u2022 Independent body F\n\f",
+      "pixel_sha256": [
+        "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5",
+        "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1",
+        "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32",
+        "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b",
+        "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089",
+        "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+      ],
+      "pdf": "006/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "006/page-0001.png",
+          "pixel_sha256": "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5"
+        },
+        {
+          "page": 2,
+          "width": 720,
+          "height": 540,
+          "png": "006/page-0002.png",
+          "pixel_sha256": "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1"
+        },
+        {
+          "page": 3,
+          "width": 720,
+          "height": 540,
+          "png": "006/page-0003.png",
+          "pixel_sha256": "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32"
+        },
+        {
+          "page": 4,
+          "width": 720,
+          "height": 540,
+          "png": "006/page-0004.png",
+          "pixel_sha256": "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b"
+        },
+        {
+          "page": 5,
+          "width": 720,
+          "height": 540,
+          "png": "006/page-0005.png",
+          "pixel_sha256": "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+        },
+        {
+          "page": 6,
+          "width": 720,
+          "height": 540,
+          "png": "006/page-0006.png",
+          "pixel_sha256": "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-sections/direct/forward-2.pptx",
+      "pages": 6,
+      "text": "            Section slide B\n\u2022 Independent body B\n\f            Section slide C\n\u2022 Independent body C\n\f            Section slide D\n\u2022 Independent body D\n\f            Section slide A\n\u2022 Independent body A\n\f             Section slide E\n\u2022 Independent body E\n\f             Section slide F\n\u2022 Independent body F\n\f",
+      "pixel_sha256": [
+        "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5",
+        "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1",
+        "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32",
+        "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b",
+        "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089",
+        "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+      ],
+      "pdf": "007/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "007/page-0001.png",
+          "pixel_sha256": "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5"
+        },
+        {
+          "page": 2,
+          "width": 720,
+          "height": 540,
+          "png": "007/page-0002.png",
+          "pixel_sha256": "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1"
+        },
+        {
+          "page": 3,
+          "width": 720,
+          "height": 540,
+          "png": "007/page-0003.png",
+          "pixel_sha256": "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32"
+        },
+        {
+          "page": 4,
+          "width": 720,
+          "height": 540,
+          "png": "007/page-0004.png",
+          "pixel_sha256": "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b"
+        },
+        {
+          "page": 5,
+          "width": 720,
+          "height": 540,
+          "png": "007/page-0005.png",
+          "pixel_sha256": "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+        },
+        {
+          "page": 6,
+          "width": 720,
+          "height": 540,
+          "png": "007/page-0006.png",
+          "pixel_sha256": "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-sections/direct/forward-3.pptx",
+      "pages": 6,
+      "text": "            Section slide B\n\u2022 Independent body B\n\f            Section slide C\n\u2022 Independent body C\n\f            Section slide D\n\u2022 Independent body D\n\f            Section slide A\n\u2022 Independent body A\n\f             Section slide E\n\u2022 Independent body E\n\f             Section slide F\n\u2022 Independent body F\n\f",
+      "pixel_sha256": [
+        "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5",
+        "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1",
+        "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32",
+        "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b",
+        "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089",
+        "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+      ],
+      "pdf": "008/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "008/page-0001.png",
+          "pixel_sha256": "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5"
+        },
+        {
+          "page": 2,
+          "width": 720,
+          "height": 540,
+          "png": "008/page-0002.png",
+          "pixel_sha256": "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1"
+        },
+        {
+          "page": 3,
+          "width": 720,
+          "height": 540,
+          "png": "008/page-0003.png",
+          "pixel_sha256": "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32"
+        },
+        {
+          "page": 4,
+          "width": 720,
+          "height": 540,
+          "png": "008/page-0004.png",
+          "pixel_sha256": "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b"
+        },
+        {
+          "page": 5,
+          "width": 720,
+          "height": 540,
+          "png": "008/page-0005.png",
+          "pixel_sha256": "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+        },
+        {
+          "page": 6,
+          "width": 720,
+          "height": 540,
+          "png": "008/page-0006.png",
+          "pixel_sha256": "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-sections/direct/source.pptx",
+      "pages": 6,
+      "text": "            Section slide A\n\u2022 Independent body A\n\f            Section slide B\n\u2022 Independent body B\n\f            Section slide C\n\u2022 Independent body C\n\f            Section slide D\n\u2022 Independent body D\n\f             Section slide E\n\u2022 Independent body E\n\f             Section slide F\n\u2022 Independent body F\n\f",
+      "pixel_sha256": [
+        "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b",
+        "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5",
+        "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1",
+        "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32",
+        "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089",
+        "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+      ],
+      "pdf": "009/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "009/page-0001.png",
+          "pixel_sha256": "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b"
+        },
+        {
+          "page": 2,
+          "width": 720,
+          "height": 540,
+          "png": "009/page-0002.png",
+          "pixel_sha256": "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5"
+        },
+        {
+          "page": 3,
+          "width": 720,
+          "height": 540,
+          "png": "009/page-0003.png",
+          "pixel_sha256": "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1"
+        },
+        {
+          "page": 4,
+          "width": 720,
+          "height": 540,
+          "png": "009/page-0004.png",
+          "pixel_sha256": "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32"
+        },
+        {
+          "page": 5,
+          "width": 720,
+          "height": 540,
+          "png": "009/page-0005.png",
+          "pixel_sha256": "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+        },
+        {
+          "page": 6,
+          "width": 720,
+          "height": 540,
+          "png": "009/page-0006.png",
+          "pixel_sha256": "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-sections/direct/unchanged-1.pptx",
+      "pages": 6,
+      "text": "            Section slide A\n\u2022 Independent body A\n\f            Section slide B\n\u2022 Independent body B\n\f            Section slide C\n\u2022 Independent body C\n\f            Section slide D\n\u2022 Independent body D\n\f             Section slide E\n\u2022 Independent body E\n\f             Section slide F\n\u2022 Independent body F\n\f",
+      "pixel_sha256": [
+        "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b",
+        "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5",
+        "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1",
+        "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32",
+        "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089",
+        "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+      ],
+      "pdf": "010/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "010/page-0001.png",
+          "pixel_sha256": "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b"
+        },
+        {
+          "page": 2,
+          "width": 720,
+          "height": 540,
+          "png": "010/page-0002.png",
+          "pixel_sha256": "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5"
+        },
+        {
+          "page": 3,
+          "width": 720,
+          "height": 540,
+          "png": "010/page-0003.png",
+          "pixel_sha256": "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1"
+        },
+        {
+          "page": 4,
+          "width": 720,
+          "height": 540,
+          "png": "010/page-0004.png",
+          "pixel_sha256": "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32"
+        },
+        {
+          "page": 5,
+          "width": 720,
+          "height": 540,
+          "png": "010/page-0005.png",
+          "pixel_sha256": "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+        },
+        {
+          "page": 6,
+          "width": 720,
+          "height": 540,
+          "png": "010/page-0006.png",
+          "pixel_sha256": "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-sections/direct/unchanged-2.pptx",
+      "pages": 6,
+      "text": "            Section slide A\n\u2022 Independent body A\n\f            Section slide B\n\u2022 Independent body B\n\f            Section slide C\n\u2022 Independent body C\n\f            Section slide D\n\u2022 Independent body D\n\f             Section slide E\n\u2022 Independent body E\n\f             Section slide F\n\u2022 Independent body F\n\f",
+      "pixel_sha256": [
+        "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b",
+        "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5",
+        "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1",
+        "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32",
+        "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089",
+        "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+      ],
+      "pdf": "011/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "011/page-0001.png",
+          "pixel_sha256": "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b"
+        },
+        {
+          "page": 2,
+          "width": 720,
+          "height": 540,
+          "png": "011/page-0002.png",
+          "pixel_sha256": "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5"
+        },
+        {
+          "page": 3,
+          "width": 720,
+          "height": 540,
+          "png": "011/page-0003.png",
+          "pixel_sha256": "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1"
+        },
+        {
+          "page": 4,
+          "width": 720,
+          "height": 540,
+          "png": "011/page-0004.png",
+          "pixel_sha256": "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32"
+        },
+        {
+          "page": 5,
+          "width": 720,
+          "height": 540,
+          "png": "011/page-0005.png",
+          "pixel_sha256": "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+        },
+        {
+          "page": 6,
+          "width": 720,
+          "height": 540,
+          "png": "011/page-0006.png",
+          "pixel_sha256": "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-sections/direct/unchanged-3.pptx",
+      "pages": 6,
+      "text": "            Section slide A\n\u2022 Independent body A\n\f            Section slide B\n\u2022 Independent body B\n\f            Section slide C\n\u2022 Independent body C\n\f            Section slide D\n\u2022 Independent body D\n\f             Section slide E\n\u2022 Independent body E\n\f             Section slide F\n\u2022 Independent body F\n\f",
+      "pixel_sha256": [
+        "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b",
+        "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5",
+        "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1",
+        "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32",
+        "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089",
+        "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+      ],
+      "pdf": "012/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "012/page-0001.png",
+          "pixel_sha256": "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b"
+        },
+        {
+          "page": 2,
+          "width": 720,
+          "height": 540,
+          "png": "012/page-0002.png",
+          "pixel_sha256": "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5"
+        },
+        {
+          "page": 3,
+          "width": 720,
+          "height": 540,
+          "png": "012/page-0003.png",
+          "pixel_sha256": "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1"
+        },
+        {
+          "page": 4,
+          "width": 720,
+          "height": 540,
+          "png": "012/page-0004.png",
+          "pixel_sha256": "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32"
+        },
+        {
+          "page": 5,
+          "width": 720,
+          "height": 540,
+          "png": "012/page-0005.png",
+          "pixel_sha256": "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+        },
+        {
+          "page": 6,
+          "width": 720,
+          "height": 540,
+          "png": "012/page-0006.png",
+          "pixel_sha256": "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-sections/direct/within-1.pptx",
+      "pages": 6,
+      "text": "            Section slide B\n\u2022 Independent body B\n\f            Section slide A\n\u2022 Independent body A\n\f            Section slide C\n\u2022 Independent body C\n\f            Section slide D\n\u2022 Independent body D\n\f             Section slide E\n\u2022 Independent body E\n\f             Section slide F\n\u2022 Independent body F\n\f",
+      "pixel_sha256": [
+        "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5",
+        "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b",
+        "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1",
+        "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32",
+        "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089",
+        "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+      ],
+      "pdf": "013/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "013/page-0001.png",
+          "pixel_sha256": "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5"
+        },
+        {
+          "page": 2,
+          "width": 720,
+          "height": 540,
+          "png": "013/page-0002.png",
+          "pixel_sha256": "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b"
+        },
+        {
+          "page": 3,
+          "width": 720,
+          "height": 540,
+          "png": "013/page-0003.png",
+          "pixel_sha256": "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1"
+        },
+        {
+          "page": 4,
+          "width": 720,
+          "height": 540,
+          "png": "013/page-0004.png",
+          "pixel_sha256": "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32"
+        },
+        {
+          "page": 5,
+          "width": 720,
+          "height": 540,
+          "png": "013/page-0005.png",
+          "pixel_sha256": "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+        },
+        {
+          "page": 6,
+          "width": 720,
+          "height": 540,
+          "png": "013/page-0006.png",
+          "pixel_sha256": "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-sections/direct/within-2.pptx",
+      "pages": 6,
+      "text": "            Section slide B\n\u2022 Independent body B\n\f            Section slide A\n\u2022 Independent body A\n\f            Section slide C\n\u2022 Independent body C\n\f            Section slide D\n\u2022 Independent body D\n\f             Section slide E\n\u2022 Independent body E\n\f             Section slide F\n\u2022 Independent body F\n\f",
+      "pixel_sha256": [
+        "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5",
+        "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b",
+        "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1",
+        "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32",
+        "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089",
+        "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+      ],
+      "pdf": "014/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "014/page-0001.png",
+          "pixel_sha256": "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5"
+        },
+        {
+          "page": 2,
+          "width": 720,
+          "height": 540,
+          "png": "014/page-0002.png",
+          "pixel_sha256": "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b"
+        },
+        {
+          "page": 3,
+          "width": 720,
+          "height": 540,
+          "png": "014/page-0003.png",
+          "pixel_sha256": "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1"
+        },
+        {
+          "page": 4,
+          "width": 720,
+          "height": 540,
+          "png": "014/page-0004.png",
+          "pixel_sha256": "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32"
+        },
+        {
+          "page": 5,
+          "width": 720,
+          "height": 540,
+          "png": "014/page-0005.png",
+          "pixel_sha256": "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+        },
+        {
+          "page": 6,
+          "width": 720,
+          "height": 540,
+          "png": "014/page-0006.png",
+          "pixel_sha256": "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-sections/direct/within-3.pptx",
+      "pages": 6,
+      "text": "            Section slide B\n\u2022 Independent body B\n\f            Section slide A\n\u2022 Independent body A\n\f            Section slide C\n\u2022 Independent body C\n\f            Section slide D\n\u2022 Independent body D\n\f             Section slide E\n\u2022 Independent body E\n\f             Section slide F\n\u2022 Independent body F\n\f",
+      "pixel_sha256": [
+        "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5",
+        "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b",
+        "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1",
+        "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32",
+        "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089",
+        "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+      ],
+      "pdf": "015/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "015/page-0001.png",
+          "pixel_sha256": "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5"
+        },
+        {
+          "page": 2,
+          "width": 720,
+          "height": 540,
+          "png": "015/page-0002.png",
+          "pixel_sha256": "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b"
+        },
+        {
+          "page": 3,
+          "width": 720,
+          "height": 540,
+          "png": "015/page-0003.png",
+          "pixel_sha256": "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1"
+        },
+        {
+          "page": 4,
+          "width": 720,
+          "height": 540,
+          "png": "015/page-0004.png",
+          "pixel_sha256": "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32"
+        },
+        {
+          "page": 5,
+          "width": 720,
+          "height": 540,
+          "png": "015/page-0005.png",
+          "pixel_sha256": "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+        },
+        {
+          "page": 6,
+          "width": 720,
+          "height": 540,
+          "png": "015/page-0006.png",
+          "pixel_sha256": "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-sections/isolate/backward-1.pptx",
+      "pages": 6,
+      "text": "            Section slide A\n\u2022 Independent body A\n\f             Section slide F\n\u2022 Independent body F\n\f            Section slide B\n\u2022 Independent body B\n\f            Section slide C\n\u2022 Independent body C\n\f            Section slide D\n\u2022 Independent body D\n\f             Section slide E\n\u2022 Independent body E\n\f",
+      "pixel_sha256": [
+        "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b",
+        "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd",
+        "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5",
+        "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1",
+        "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32",
+        "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+      ],
+      "pdf": "016/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "016/page-0001.png",
+          "pixel_sha256": "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b"
+        },
+        {
+          "page": 2,
+          "width": 720,
+          "height": 540,
+          "png": "016/page-0002.png",
+          "pixel_sha256": "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+        },
+        {
+          "page": 3,
+          "width": 720,
+          "height": 540,
+          "png": "016/page-0003.png",
+          "pixel_sha256": "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5"
+        },
+        {
+          "page": 4,
+          "width": 720,
+          "height": 540,
+          "png": "016/page-0004.png",
+          "pixel_sha256": "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1"
+        },
+        {
+          "page": 5,
+          "width": 720,
+          "height": 540,
+          "png": "016/page-0005.png",
+          "pixel_sha256": "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32"
+        },
+        {
+          "page": 6,
+          "width": 720,
+          "height": 540,
+          "png": "016/page-0006.png",
+          "pixel_sha256": "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-sections/isolate/backward-2.pptx",
+      "pages": 6,
+      "text": "            Section slide A\n\u2022 Independent body A\n\f             Section slide F\n\u2022 Independent body F\n\f            Section slide B\n\u2022 Independent body B\n\f            Section slide C\n\u2022 Independent body C\n\f            Section slide D\n\u2022 Independent body D\n\f             Section slide E\n\u2022 Independent body E\n\f",
+      "pixel_sha256": [
+        "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b",
+        "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd",
+        "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5",
+        "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1",
+        "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32",
+        "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+      ],
+      "pdf": "017/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "017/page-0001.png",
+          "pixel_sha256": "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b"
+        },
+        {
+          "page": 2,
+          "width": 720,
+          "height": 540,
+          "png": "017/page-0002.png",
+          "pixel_sha256": "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+        },
+        {
+          "page": 3,
+          "width": 720,
+          "height": 540,
+          "png": "017/page-0003.png",
+          "pixel_sha256": "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5"
+        },
+        {
+          "page": 4,
+          "width": 720,
+          "height": 540,
+          "png": "017/page-0004.png",
+          "pixel_sha256": "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1"
+        },
+        {
+          "page": 5,
+          "width": 720,
+          "height": 540,
+          "png": "017/page-0005.png",
+          "pixel_sha256": "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32"
+        },
+        {
+          "page": 6,
+          "width": 720,
+          "height": 540,
+          "png": "017/page-0006.png",
+          "pixel_sha256": "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-sections/isolate/backward-3.pptx",
+      "pages": 6,
+      "text": "            Section slide A\n\u2022 Independent body A\n\f             Section slide F\n\u2022 Independent body F\n\f            Section slide B\n\u2022 Independent body B\n\f            Section slide C\n\u2022 Independent body C\n\f            Section slide D\n\u2022 Independent body D\n\f             Section slide E\n\u2022 Independent body E\n\f",
+      "pixel_sha256": [
+        "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b",
+        "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd",
+        "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5",
+        "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1",
+        "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32",
+        "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+      ],
+      "pdf": "018/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "018/page-0001.png",
+          "pixel_sha256": "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b"
+        },
+        {
+          "page": 2,
+          "width": 720,
+          "height": 540,
+          "png": "018/page-0002.png",
+          "pixel_sha256": "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+        },
+        {
+          "page": 3,
+          "width": 720,
+          "height": 540,
+          "png": "018/page-0003.png",
+          "pixel_sha256": "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5"
+        },
+        {
+          "page": 4,
+          "width": 720,
+          "height": 540,
+          "png": "018/page-0004.png",
+          "pixel_sha256": "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1"
+        },
+        {
+          "page": 5,
+          "width": 720,
+          "height": 540,
+          "png": "018/page-0005.png",
+          "pixel_sha256": "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32"
+        },
+        {
+          "page": 6,
+          "width": 720,
+          "height": 540,
+          "png": "018/page-0006.png",
+          "pixel_sha256": "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-sections/isolate/emptied-1.pptx",
+      "pages": 6,
+      "text": "            Section slide C\n\u2022 Independent body C\n\f            Section slide A\n\u2022 Independent body A\n\f            Section slide B\n\u2022 Independent body B\n\f            Section slide D\n\u2022 Independent body D\n\f             Section slide E\n\u2022 Independent body E\n\f             Section slide F\n\u2022 Independent body F\n\f",
+      "pixel_sha256": [
+        "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1",
+        "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b",
+        "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5",
+        "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32",
+        "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089",
+        "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+      ],
+      "pdf": "019/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "019/page-0001.png",
+          "pixel_sha256": "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1"
+        },
+        {
+          "page": 2,
+          "width": 720,
+          "height": 540,
+          "png": "019/page-0002.png",
+          "pixel_sha256": "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b"
+        },
+        {
+          "page": 3,
+          "width": 720,
+          "height": 540,
+          "png": "019/page-0003.png",
+          "pixel_sha256": "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5"
+        },
+        {
+          "page": 4,
+          "width": 720,
+          "height": 540,
+          "png": "019/page-0004.png",
+          "pixel_sha256": "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32"
+        },
+        {
+          "page": 5,
+          "width": 720,
+          "height": 540,
+          "png": "019/page-0005.png",
+          "pixel_sha256": "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+        },
+        {
+          "page": 6,
+          "width": 720,
+          "height": 540,
+          "png": "019/page-0006.png",
+          "pixel_sha256": "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-sections/isolate/emptied-2.pptx",
+      "pages": 6,
+      "text": "            Section slide C\n\u2022 Independent body C\n\f            Section slide A\n\u2022 Independent body A\n\f            Section slide B\n\u2022 Independent body B\n\f            Section slide D\n\u2022 Independent body D\n\f             Section slide E\n\u2022 Independent body E\n\f             Section slide F\n\u2022 Independent body F\n\f",
+      "pixel_sha256": [
+        "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1",
+        "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b",
+        "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5",
+        "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32",
+        "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089",
+        "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+      ],
+      "pdf": "020/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "020/page-0001.png",
+          "pixel_sha256": "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1"
+        },
+        {
+          "page": 2,
+          "width": 720,
+          "height": 540,
+          "png": "020/page-0002.png",
+          "pixel_sha256": "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b"
+        },
+        {
+          "page": 3,
+          "width": 720,
+          "height": 540,
+          "png": "020/page-0003.png",
+          "pixel_sha256": "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5"
+        },
+        {
+          "page": 4,
+          "width": 720,
+          "height": 540,
+          "png": "020/page-0004.png",
+          "pixel_sha256": "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32"
+        },
+        {
+          "page": 5,
+          "width": 720,
+          "height": 540,
+          "png": "020/page-0005.png",
+          "pixel_sha256": "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+        },
+        {
+          "page": 6,
+          "width": 720,
+          "height": 540,
+          "png": "020/page-0006.png",
+          "pixel_sha256": "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-sections/isolate/emptied-3.pptx",
+      "pages": 6,
+      "text": "            Section slide C\n\u2022 Independent body C\n\f            Section slide A\n\u2022 Independent body A\n\f            Section slide B\n\u2022 Independent body B\n\f            Section slide D\n\u2022 Independent body D\n\f             Section slide E\n\u2022 Independent body E\n\f             Section slide F\n\u2022 Independent body F\n\f",
+      "pixel_sha256": [
+        "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1",
+        "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b",
+        "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5",
+        "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32",
+        "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089",
+        "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+      ],
+      "pdf": "021/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "021/page-0001.png",
+          "pixel_sha256": "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1"
+        },
+        {
+          "page": 2,
+          "width": 720,
+          "height": 540,
+          "png": "021/page-0002.png",
+          "pixel_sha256": "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b"
+        },
+        {
+          "page": 3,
+          "width": 720,
+          "height": 540,
+          "png": "021/page-0003.png",
+          "pixel_sha256": "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5"
+        },
+        {
+          "page": 4,
+          "width": 720,
+          "height": 540,
+          "png": "021/page-0004.png",
+          "pixel_sha256": "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32"
+        },
+        {
+          "page": 5,
+          "width": 720,
+          "height": 540,
+          "png": "021/page-0005.png",
+          "pixel_sha256": "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+        },
+        {
+          "page": 6,
+          "width": 720,
+          "height": 540,
+          "png": "021/page-0006.png",
+          "pixel_sha256": "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-sections/isolate/forward-1.pptx",
+      "pages": 6,
+      "text": "            Section slide B\n\u2022 Independent body B\n\f            Section slide C\n\u2022 Independent body C\n\f            Section slide D\n\u2022 Independent body D\n\f            Section slide A\n\u2022 Independent body A\n\f             Section slide E\n\u2022 Independent body E\n\f             Section slide F\n\u2022 Independent body F\n\f",
+      "pixel_sha256": [
+        "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5",
+        "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1",
+        "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32",
+        "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b",
+        "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089",
+        "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+      ],
+      "pdf": "022/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "022/page-0001.png",
+          "pixel_sha256": "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5"
+        },
+        {
+          "page": 2,
+          "width": 720,
+          "height": 540,
+          "png": "022/page-0002.png",
+          "pixel_sha256": "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1"
+        },
+        {
+          "page": 3,
+          "width": 720,
+          "height": 540,
+          "png": "022/page-0003.png",
+          "pixel_sha256": "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32"
+        },
+        {
+          "page": 4,
+          "width": 720,
+          "height": 540,
+          "png": "022/page-0004.png",
+          "pixel_sha256": "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b"
+        },
+        {
+          "page": 5,
+          "width": 720,
+          "height": 540,
+          "png": "022/page-0005.png",
+          "pixel_sha256": "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+        },
+        {
+          "page": 6,
+          "width": 720,
+          "height": 540,
+          "png": "022/page-0006.png",
+          "pixel_sha256": "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-sections/isolate/forward-2.pptx",
+      "pages": 6,
+      "text": "            Section slide B\n\u2022 Independent body B\n\f            Section slide C\n\u2022 Independent body C\n\f            Section slide D\n\u2022 Independent body D\n\f            Section slide A\n\u2022 Independent body A\n\f             Section slide E\n\u2022 Independent body E\n\f             Section slide F\n\u2022 Independent body F\n\f",
+      "pixel_sha256": [
+        "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5",
+        "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1",
+        "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32",
+        "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b",
+        "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089",
+        "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+      ],
+      "pdf": "023/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "023/page-0001.png",
+          "pixel_sha256": "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5"
+        },
+        {
+          "page": 2,
+          "width": 720,
+          "height": 540,
+          "png": "023/page-0002.png",
+          "pixel_sha256": "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1"
+        },
+        {
+          "page": 3,
+          "width": 720,
+          "height": 540,
+          "png": "023/page-0003.png",
+          "pixel_sha256": "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32"
+        },
+        {
+          "page": 4,
+          "width": 720,
+          "height": 540,
+          "png": "023/page-0004.png",
+          "pixel_sha256": "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b"
+        },
+        {
+          "page": 5,
+          "width": 720,
+          "height": 540,
+          "png": "023/page-0005.png",
+          "pixel_sha256": "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+        },
+        {
+          "page": 6,
+          "width": 720,
+          "height": 540,
+          "png": "023/page-0006.png",
+          "pixel_sha256": "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-sections/isolate/forward-3.pptx",
+      "pages": 6,
+      "text": "            Section slide B\n\u2022 Independent body B\n\f            Section slide C\n\u2022 Independent body C\n\f            Section slide D\n\u2022 Independent body D\n\f            Section slide A\n\u2022 Independent body A\n\f             Section slide E\n\u2022 Independent body E\n\f             Section slide F\n\u2022 Independent body F\n\f",
+      "pixel_sha256": [
+        "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5",
+        "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1",
+        "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32",
+        "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b",
+        "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089",
+        "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+      ],
+      "pdf": "024/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "024/page-0001.png",
+          "pixel_sha256": "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5"
+        },
+        {
+          "page": 2,
+          "width": 720,
+          "height": 540,
+          "png": "024/page-0002.png",
+          "pixel_sha256": "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1"
+        },
+        {
+          "page": 3,
+          "width": 720,
+          "height": 540,
+          "png": "024/page-0003.png",
+          "pixel_sha256": "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32"
+        },
+        {
+          "page": 4,
+          "width": 720,
+          "height": 540,
+          "png": "024/page-0004.png",
+          "pixel_sha256": "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b"
+        },
+        {
+          "page": 5,
+          "width": 720,
+          "height": 540,
+          "png": "024/page-0005.png",
+          "pixel_sha256": "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+        },
+        {
+          "page": 6,
+          "width": 720,
+          "height": 540,
+          "png": "024/page-0006.png",
+          "pixel_sha256": "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-sections/isolate/source.pptx",
+      "pages": 6,
+      "text": "            Section slide A\n\u2022 Independent body A\n\f            Section slide B\n\u2022 Independent body B\n\f            Section slide C\n\u2022 Independent body C\n\f            Section slide D\n\u2022 Independent body D\n\f             Section slide E\n\u2022 Independent body E\n\f             Section slide F\n\u2022 Independent body F\n\f",
+      "pixel_sha256": [
+        "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b",
+        "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5",
+        "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1",
+        "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32",
+        "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089",
+        "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+      ],
+      "pdf": "025/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "025/page-0001.png",
+          "pixel_sha256": "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b"
+        },
+        {
+          "page": 2,
+          "width": 720,
+          "height": 540,
+          "png": "025/page-0002.png",
+          "pixel_sha256": "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5"
+        },
+        {
+          "page": 3,
+          "width": 720,
+          "height": 540,
+          "png": "025/page-0003.png",
+          "pixel_sha256": "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1"
+        },
+        {
+          "page": 4,
+          "width": 720,
+          "height": 540,
+          "png": "025/page-0004.png",
+          "pixel_sha256": "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32"
+        },
+        {
+          "page": 5,
+          "width": 720,
+          "height": 540,
+          "png": "025/page-0005.png",
+          "pixel_sha256": "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+        },
+        {
+          "page": 6,
+          "width": 720,
+          "height": 540,
+          "png": "025/page-0006.png",
+          "pixel_sha256": "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-sections/isolate/unchanged-1.pptx",
+      "pages": 6,
+      "text": "            Section slide A\n\u2022 Independent body A\n\f            Section slide B\n\u2022 Independent body B\n\f            Section slide C\n\u2022 Independent body C\n\f            Section slide D\n\u2022 Independent body D\n\f             Section slide E\n\u2022 Independent body E\n\f             Section slide F\n\u2022 Independent body F\n\f",
+      "pixel_sha256": [
+        "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b",
+        "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5",
+        "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1",
+        "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32",
+        "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089",
+        "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+      ],
+      "pdf": "026/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "026/page-0001.png",
+          "pixel_sha256": "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b"
+        },
+        {
+          "page": 2,
+          "width": 720,
+          "height": 540,
+          "png": "026/page-0002.png",
+          "pixel_sha256": "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5"
+        },
+        {
+          "page": 3,
+          "width": 720,
+          "height": 540,
+          "png": "026/page-0003.png",
+          "pixel_sha256": "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1"
+        },
+        {
+          "page": 4,
+          "width": 720,
+          "height": 540,
+          "png": "026/page-0004.png",
+          "pixel_sha256": "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32"
+        },
+        {
+          "page": 5,
+          "width": 720,
+          "height": 540,
+          "png": "026/page-0005.png",
+          "pixel_sha256": "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+        },
+        {
+          "page": 6,
+          "width": 720,
+          "height": 540,
+          "png": "026/page-0006.png",
+          "pixel_sha256": "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-sections/isolate/unchanged-2.pptx",
+      "pages": 6,
+      "text": "            Section slide A\n\u2022 Independent body A\n\f            Section slide B\n\u2022 Independent body B\n\f            Section slide C\n\u2022 Independent body C\n\f            Section slide D\n\u2022 Independent body D\n\f             Section slide E\n\u2022 Independent body E\n\f             Section slide F\n\u2022 Independent body F\n\f",
+      "pixel_sha256": [
+        "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b",
+        "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5",
+        "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1",
+        "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32",
+        "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089",
+        "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+      ],
+      "pdf": "027/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "027/page-0001.png",
+          "pixel_sha256": "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b"
+        },
+        {
+          "page": 2,
+          "width": 720,
+          "height": 540,
+          "png": "027/page-0002.png",
+          "pixel_sha256": "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5"
+        },
+        {
+          "page": 3,
+          "width": 720,
+          "height": 540,
+          "png": "027/page-0003.png",
+          "pixel_sha256": "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1"
+        },
+        {
+          "page": 4,
+          "width": 720,
+          "height": 540,
+          "png": "027/page-0004.png",
+          "pixel_sha256": "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32"
+        },
+        {
+          "page": 5,
+          "width": 720,
+          "height": 540,
+          "png": "027/page-0005.png",
+          "pixel_sha256": "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+        },
+        {
+          "page": 6,
+          "width": 720,
+          "height": 540,
+          "png": "027/page-0006.png",
+          "pixel_sha256": "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-sections/isolate/unchanged-3.pptx",
+      "pages": 6,
+      "text": "            Section slide A\n\u2022 Independent body A\n\f            Section slide B\n\u2022 Independent body B\n\f            Section slide C\n\u2022 Independent body C\n\f            Section slide D\n\u2022 Independent body D\n\f             Section slide E\n\u2022 Independent body E\n\f             Section slide F\n\u2022 Independent body F\n\f",
+      "pixel_sha256": [
+        "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b",
+        "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5",
+        "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1",
+        "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32",
+        "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089",
+        "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+      ],
+      "pdf": "028/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "028/page-0001.png",
+          "pixel_sha256": "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b"
+        },
+        {
+          "page": 2,
+          "width": 720,
+          "height": 540,
+          "png": "028/page-0002.png",
+          "pixel_sha256": "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5"
+        },
+        {
+          "page": 3,
+          "width": 720,
+          "height": 540,
+          "png": "028/page-0003.png",
+          "pixel_sha256": "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1"
+        },
+        {
+          "page": 4,
+          "width": 720,
+          "height": 540,
+          "png": "028/page-0004.png",
+          "pixel_sha256": "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32"
+        },
+        {
+          "page": 5,
+          "width": 720,
+          "height": 540,
+          "png": "028/page-0005.png",
+          "pixel_sha256": "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+        },
+        {
+          "page": 6,
+          "width": 720,
+          "height": 540,
+          "png": "028/page-0006.png",
+          "pixel_sha256": "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-sections/isolate/within-1.pptx",
+      "pages": 6,
+      "text": "            Section slide B\n\u2022 Independent body B\n\f            Section slide A\n\u2022 Independent body A\n\f            Section slide C\n\u2022 Independent body C\n\f            Section slide D\n\u2022 Independent body D\n\f             Section slide E\n\u2022 Independent body E\n\f             Section slide F\n\u2022 Independent body F\n\f",
+      "pixel_sha256": [
+        "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5",
+        "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b",
+        "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1",
+        "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32",
+        "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089",
+        "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+      ],
+      "pdf": "029/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "029/page-0001.png",
+          "pixel_sha256": "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5"
+        },
+        {
+          "page": 2,
+          "width": 720,
+          "height": 540,
+          "png": "029/page-0002.png",
+          "pixel_sha256": "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b"
+        },
+        {
+          "page": 3,
+          "width": 720,
+          "height": 540,
+          "png": "029/page-0003.png",
+          "pixel_sha256": "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1"
+        },
+        {
+          "page": 4,
+          "width": 720,
+          "height": 540,
+          "png": "029/page-0004.png",
+          "pixel_sha256": "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32"
+        },
+        {
+          "page": 5,
+          "width": 720,
+          "height": 540,
+          "png": "029/page-0005.png",
+          "pixel_sha256": "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+        },
+        {
+          "page": 6,
+          "width": 720,
+          "height": 540,
+          "png": "029/page-0006.png",
+          "pixel_sha256": "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-sections/isolate/within-2.pptx",
+      "pages": 6,
+      "text": "            Section slide B\n\u2022 Independent body B\n\f            Section slide A\n\u2022 Independent body A\n\f            Section slide C\n\u2022 Independent body C\n\f            Section slide D\n\u2022 Independent body D\n\f             Section slide E\n\u2022 Independent body E\n\f             Section slide F\n\u2022 Independent body F\n\f",
+      "pixel_sha256": [
+        "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5",
+        "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b",
+        "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1",
+        "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32",
+        "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089",
+        "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+      ],
+      "pdf": "030/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "030/page-0001.png",
+          "pixel_sha256": "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5"
+        },
+        {
+          "page": 2,
+          "width": 720,
+          "height": 540,
+          "png": "030/page-0002.png",
+          "pixel_sha256": "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b"
+        },
+        {
+          "page": 3,
+          "width": 720,
+          "height": 540,
+          "png": "030/page-0003.png",
+          "pixel_sha256": "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1"
+        },
+        {
+          "page": 4,
+          "width": 720,
+          "height": 540,
+          "png": "030/page-0004.png",
+          "pixel_sha256": "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32"
+        },
+        {
+          "page": 5,
+          "width": 720,
+          "height": 540,
+          "png": "030/page-0005.png",
+          "pixel_sha256": "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+        },
+        {
+          "page": 6,
+          "width": 720,
+          "height": 540,
+          "png": "030/page-0006.png",
+          "pixel_sha256": "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+        }
+      ]
+    },
+    {
+      "file": "fidelity-slide-sections/isolate/within-3.pptx",
+      "pages": 6,
+      "text": "            Section slide B\n\u2022 Independent body B\n\f            Section slide A\n\u2022 Independent body A\n\f            Section slide C\n\u2022 Independent body C\n\f            Section slide D\n\u2022 Independent body D\n\f             Section slide E\n\u2022 Independent body E\n\f             Section slide F\n\u2022 Independent body F\n\f",
+      "pixel_sha256": [
+        "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5",
+        "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b",
+        "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1",
+        "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32",
+        "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089",
+        "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+      ],
+      "pdf": "031/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 540,
+          "png": "031/page-0001.png",
+          "pixel_sha256": "de1c15b04c4a98dce82c2e6c2d8af4f42640d2863ebc824b576e7cb79c6755e5"
+        },
+        {
+          "page": 2,
+          "width": 720,
+          "height": 540,
+          "png": "031/page-0002.png",
+          "pixel_sha256": "bf7d88340112a3124bf1ba04ecc563fd6d31f976bbf8da85ef9b3ae349cb1c2b"
+        },
+        {
+          "page": 3,
+          "width": 720,
+          "height": 540,
+          "png": "031/page-0003.png",
+          "pixel_sha256": "54435cf9cb556bee1165c0fe70bc5200cd6d16393fb1ed85b97d53db3baed9a1"
+        },
+        {
+          "page": 4,
+          "width": 720,
+          "height": 540,
+          "png": "031/page-0004.png",
+          "pixel_sha256": "e7f6140fc425ab9e78b40db7d4d246a7bc22c57e4a40cc02d7e66428fe941f32"
+        },
+        {
+          "page": 5,
+          "width": 720,
+          "height": 540,
+          "png": "031/page-0005.png",
+          "pixel_sha256": "ec1aa1e72bb7d7f8c1904334a3b121780ee5f9fbfd8d76b157117d743f71d089"
+        },
+        {
+          "page": 6,
+          "width": 720,
+          "height": 540,
+          "png": "031/page-0006.png",
+          "pixel_sha256": "a00a245cfa5b9cc4430d9c05e61845421de9fc46e7adec2e8f6fad225341cccd"
+        }
+      ]
+    }
+  ]
+}

@@ -4,6 +4,11 @@ All notable changes to `quds_office_engine` are documented here.
 
 ## Unreleased
 
+- Retain native slide placeholder type/index bindings on save so layout/master
+  inheritance keeps title alignment and bullets. The section corpus now compares
+  each first export's page text and RGB fingerprints with an independently
+  authored source-page permutation, in addition to three-save stability.
+
 - Add reference-aware worksheet renaming across formulas, names, native rules,
   links, charts and pivot sources. Preserve strings, structured references and
   external workbook qualifiers/cache data. Reversible edits preflight stale

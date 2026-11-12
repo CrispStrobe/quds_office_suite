@@ -1,0 +1,122 @@
+{
+  "status": "passed",
+  "base_commit": "90e49659e86a78a978b65d70000f6db289d42d5e",
+  "pending_source_sha256": {
+    "packages/quds_office_engine/lib/src/slide/shapes/drawingml.dart": "be6a6831c9e910b3056b3f4b7627bbb36e6911f4988cf63a476b6b49fe9b03c1",
+    "packages/quds_office_engine/test/slide_section_fidelity_test.dart": "205c65b324cf406daddea223e1dddc2a8b675c9dd1468848dbf1249f3ff55e53",
+    "packages/quds_office_engine/tool/fidelity/slide_sections_oracle.py": "88e3ac49ae50d978cf6ca78eb6b23bebb34150cdc2bd23ab866ee98e876787aa",
+    "packages/quds_office_engine/tool/fidelity/test_slide_sections_oracle.py": "5bea0ef7bab10ed6cc92920f448d41bb790bdc487af4fafa75603f50b1a4d167",
+    "tool/office-validation/render.py": "a6918966d591cef510bd46c6e9d25f8ec7ace37dbfe6f1fb94404c3d6bd9cd3f",
+    "tool/office-validation/test_render.py": "abc1e59fe44a30942d94d59157ff7b4f96538b205b7cad12aaa484f9d040f5a7"
+  },
+  "inputs": 32,
+  "schema_files": 32,
+  "schema_failures": 0,
+  "rendered_files": 32,
+  "rendered_pages": 192,
+  "native_schema_only_files": 0,
+  "cycle_groups": 10,
+  "baseline_comparisons": 10,
+  "page_order_comparisons": 10,
+  "failures": [],
+  "native_elapsed_seconds": 31.740109184000175,
+  "controls": {
+    "engine_compatibility_passed": 83,
+    "section_tests": 33,
+    "independent_xml_mutation_controls_passed": 18,
+    "renderer_controls_passed": 39
+  },
+  "fixture_changed": false,
+  "supported_source_page_orders": {
+    "fidelity-slide-sections/direct/backward.pptx": [
+      1,
+      6,
+      2,
+      3,
+      4,
+      5
+    ],
+    "fidelity-slide-sections/direct/emptied.pptx": [
+      3,
+      1,
+      2,
+      4,
+      5,
+      6
+    ],
+    "fidelity-slide-sections/direct/forward.pptx": [
+      2,
+      3,
+      4,
+      1,
+      5,
+      6
+    ],
+    "fidelity-slide-sections/direct/unchanged.pptx": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "fidelity-slide-sections/direct/within.pptx": [
+      2,
+      1,
+      3,
+      4,
+      5,
+      6
+    ],
+    "fidelity-slide-sections/isolate/backward.pptx": [
+      1,
+      6,
+      2,
+      3,
+      4,
+      5
+    ],
+    "fidelity-slide-sections/isolate/emptied.pptx": [
+      3,
+      1,
+      2,
+      4,
+      5,
+      6
+    ],
+    "fidelity-slide-sections/isolate/forward.pptx": [
+      2,
+      3,
+      4,
+      1,
+      5,
+      6
+    ],
+    "fidelity-slide-sections/isolate/unchanged.pptx": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "fidelity-slide-sections/isolate/within.pptx": [
+      2,
+      1,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  "reports_sha256": {
+    "input-manifest.json": "ccf98988c5281cfadbf4256056783fd42ddcf22c0852de6bbd9228b15e78d8f2",
+    "schema-report.json": "305e38abd44c7bdcb53a701906883e642659388cfba5a73ac1f9970d67ba6693",
+    "render/render-report.json": "7fd7cc1714a5ccc787fb00c2ea86e9e1918f0f1d8d72cfce9ae37dbdeee29d7e",
+    "renderer-provenance.json": "1f45a23c8e74b7e5c217e7b345dc921948a5ff2dd33d12a2213e25a157489211",
+    "command-results.json": "3588d930885cb4a8a009a02c677e9b0b2e5210146307e0b6a43e85f6c4ccbf49",
+    "sdk_selftest.log": "4945b06eb2eda6b4b7dd4ab50752ac76d91e73af5045d5bb39b3ecda55e25c56"
+  },
+  "preserved_failed_proof": "/workspace/scratch/e445bd9b965c/validation/fid028-native-proof",
+  "causal_placeholder_probe": "/workspace/scratch/e445bd9b965c/validation/fid028-placeholder-probe/render/probe-report.json"
+}
