@@ -1,0 +1,112 @@
+{
+  "source_commit": "12799e2a6b371226012163a092fab866c133f967",
+  "analysis": "passed",
+  "full_suite": {
+    "passed": 1425,
+    "skipped": 1,
+    "skip_reason": "Existing multi-face PDF test: Latin face already covers Arabic; cannot force F3"
+  },
+  "collection": {
+    "receipt": "/workspace/scratch/dcd413fa34f4/quds_office_suite/packages/quds_office_engine/coverage/vm-workflows-final-2/collection-receipt.json",
+    "receipt_sha256": "4186af88d4dacf1685e9102efedc25d709bc72198bec337a20dbe20a16d93ec1",
+    "inputs": 572,
+    "coverage_files": 116,
+    "input_tree_sha256": "f60e6be31ae2cf6a594b49b4e1c1db425ebb38c6b732d1a8ca2c5c105291f99d",
+    "runtime": {
+      "executable": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.44/bin/cache/dart-sdk/bin/dart",
+      "sha256": "ed337b83548875e554717f01616d0445387cf20453e66c7f55cfa93c97404495",
+      "version": "Dart SDK version: 3.12.0 (stable) (Fri May 8 01:51:14 2026 -0700) on \"linux_x64\""
+    }
+  },
+  "feature_matrix": {
+    "receipt": "/workspace/scratch/dcd413fa34f4/quds_office_suite/packages/quds_office_engine/build/fidelity-features/comments-drawings-endnotes-footnotes-headings-images-paragraphs-placement-references-slides-spreadsheets-styles-tables-textflow-tocs.json",
+    "status": "passed",
+    "features": 15,
+    "outputs": 214,
+    "dart_tests": 565,
+    "python_controls": 205,
+    "commands": 38,
+    "oracles": 19,
+    "input_tree_sha256": "f60e6be31ae2cf6a594b49b4e1c1db425ebb38c6b732d1a8ca2c5c105291f99d"
+  },
+  "portable_gate": {
+    "dart_tests": 963,
+    "python_controls": 389,
+    "operations": 67,
+    "expected_outputs": 305,
+    "verified_outputs": 305,
+    "inventory_errors": []
+  },
+  "coverage": {
+    "measurement": "executed instrumented lines; not branch coverage",
+    "collection": {
+      "verified": true,
+      "receipt_sha256": "4186af88d4dacf1685e9102efedc25d709bc72198bec337a20dbe20a16d93ec1",
+      "input_tree_sha256": "f60e6be31ae2cf6a594b49b4e1c1db425ebb38c6b732d1a8ca2c5c105291f99d",
+      "input_files": 572,
+      "coverage_files": 116,
+      "command": [
+        "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.44/bin/cache/dart-sdk/bin/dart",
+        "test",
+        "--reporter",
+        "expanded",
+        "--coverage=/workspace/scratch/dcd413fa34f4/quds_office_suite/packages/quds_office_engine/coverage/vm-workflows-final-2"
+      ],
+      "runtime": {
+        "executable": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.44/bin/cache/dart-sdk/bin/dart",
+        "sha256": "ed337b83548875e554717f01616d0445387cf20453e66c7f55cfa93c97404495",
+        "version": "Dart SDK version: 3.12.0 (stable) (Fri May 8 01:51:14 2026 -0700) on \"linux_x64\""
+      },
+      "started_at": "2026-11-12T14:32:42.188022+00:00",
+      "completed_at": "2026-11-12T14:35:33.565533+00:00",
+      "scope": "Engine lib, tests/fixtures, tools, imported examples, sibling fonts and resolution files; source/output identity, not branch correctness or a hermetic environment."
+    },
+    "source_tree_sha256": "96c3e18e8bb4dd65966de7cab5c55cde59e789d8237d753b20b1bec0604d6333",
+    "components": {
+      "word": {
+        "covered_lines": 9491,
+        "instrumented_lines": 11193,
+        "uninstrumented_files": []
+      },
+      "sheet": {
+        "covered_lines": 3835,
+        "instrumented_lines": 4664,
+        "uninstrumented_files": []
+      },
+      "slide": {
+        "covered_lines": 2040,
+        "instrumented_lines": 2515,
+        "uninstrumented_files": []
+      },
+      "pdf": {
+        "covered_lines": 11834,
+        "instrumented_lines": 15289,
+        "uninstrumented_files": [
+          "lib/src/pdf/templates/suite_index.dart"
+        ]
+      },
+      "reports": {
+        "covered_lines": 9588,
+        "instrumented_lines": 11295,
+        "uninstrumented_files": []
+      }
+    },
+    "uninstrumented_files": [
+      "lib/pdf_file.dart",
+      "lib/pdf_templates.dart",
+      "lib/pdf_widgets.dart",
+      "lib/pdf_widgets_samples.dart",
+      "lib/quds_office_engine.dart",
+      "lib/quds_office_engine_optional.dart",
+      "lib/quds_reports.dart",
+      "lib/src/opc/office_isolate_run.dart",
+      "lib/src/opc/office_isolate_spawn.dart",
+      "lib/src/pdf/templates/suite_index.dart"
+    ],
+    "covered_lines": 44326,
+    "instrumented_lines": 53898,
+    "status": "complete",
+    "source_git_commit": "12799e2a6b371226012163a092fab866c133f967",
+    "source_git_dirty": false
+  }
+}

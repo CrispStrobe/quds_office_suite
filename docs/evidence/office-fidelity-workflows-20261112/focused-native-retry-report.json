@@ -1,0 +1,286 @@
+{
+  "scope": "Focused serial conversion retry of the six original SIGKILL files only; no full-corpus, baseline or repeated-save acceptance is claimed.",
+  "state": "completed",
+  "source_report": "/workspace/scratch/dcd413fa34f4/verification-workflows-20261112/suite-native/render-report.json",
+  "source_report_sha256": "4e31e0a7ae42f23848687f42dc33ab87b3e11b727149f2b59783a24b473c3e42",
+  "source_root": "/workspace/scratch/dcd413fa34f4/verification-workflows-20261112/suite-evidence",
+  "renderer_module_sha256": "060d8aae6c59ff7f216e90a5898b5955a9d3d719608f8e4b6ac248e0b9c6bf78",
+  "renderer": "LibreOfficeDev 26.8.0.0.alpha0 2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+  "started_at": "2026-11-12T14:53:44.722058+00:00",
+  "results": [
+    {
+      "file": "quds_office_engine/fidelity-native/native-sheet-imported-1.xlsx",
+      "original_failure": {
+        "file": "quds_office_engine/fidelity-native/native-sheet-imported-1.xlsx",
+        "error": "Command '['/opt/codex/runtimes/codex-primary-runtime/dependencies/bin/override/soffice', '-env:UserInstallation=file:///workspace/scratch/dcd413fa34f4/verification-workflows-20261112/suite-native/render-144-wu1xbwf3/profile', '--headless', '--convert-to', 'pdf', '--outdir', '/workspace/scratch/dcd413fa34f4/verification-workflows-20261112/suite-native/render-144-wu1xbwf3', '/workspace/scratch/dcd413fa34f4/verification-workflows-20261112/suite-evidence/quds_office_engine/fidelity-native/native-sheet-imported-1.xlsx']' died with <Signals.SIGKILL: 9>.",
+        "returncode": -9,
+        "stdout": "",
+        "stderr": ""
+      },
+      "input_sha256_before": "6b3997c2f9cc63f08472d402d0412966199aaeeff3b919d662d085247f7d72aa",
+      "status": "rendered",
+      "render_record": {
+        "file": "quds_office_engine/fidelity-native/native-sheet-imported-1.xlsx",
+        "pages": 3,
+        "text": "Region            Value          Total\nNorth                     2.00            6\nSouth                        5           15                  Regional values\n                                              6.00\nNative workbook\n                                              5.00\n\n                                              4.00\n\n                                              3.00\n\n                                              2.00\n\n                                              1.00\n\n                                              0.00\n                                                     North\n\fRegional values\n\n\n\n                          Value\n\n\n\n\n                  South\n\fRegion    Sum of Value\nNorth          2.00\nSouth          5.00\nTotal Resul    7.00\n\f",
+        "pixel_sha256": [
+          "25ab1a44b2143f540b490e52479ad006a8e7eca090baa72f568af55a753f3616",
+          "5906c1ed31d7e8cb5d43ebfae2322d2603735e4df4b93a881b0f174e63d72987",
+          "9d2a25cadda5fd3600b1b40383466bcdb5a647fbe2f8958a6234e4ca8b815086"
+        ],
+        "pdf": "000/document.pdf",
+        "page_artifacts": [
+          {
+            "page": 1,
+            "width": 596,
+            "height": 842,
+            "png": "000/page-0001.png",
+            "pixel_sha256": "25ab1a44b2143f540b490e52479ad006a8e7eca090baa72f568af55a753f3616"
+          },
+          {
+            "page": 2,
+            "width": 596,
+            "height": 842,
+            "png": "000/page-0002.png",
+            "pixel_sha256": "5906c1ed31d7e8cb5d43ebfae2322d2603735e4df4b93a881b0f174e63d72987"
+          },
+          {
+            "page": 3,
+            "width": 596,
+            "height": 842,
+            "png": "000/page-0003.png",
+            "pixel_sha256": "9d2a25cadda5fd3600b1b40383466bcdb5a647fbe2f8958a6234e4ca8b815086"
+          }
+        ]
+      },
+      "input_sha256_after": "6b3997c2f9cc63f08472d402d0412966199aaeeff3b919d662d085247f7d72aa",
+      "input_unchanged": true,
+      "seconds": 19.55
+    },
+    {
+      "file": "quds_office_engine/fidelity-schema/column-metadata-1.xlsx",
+      "original_failure": {
+        "file": "quds_office_engine/fidelity-schema/column-metadata-1.xlsx",
+        "error": "Command '['/opt/codex/runtimes/codex-primary-runtime/dependencies/bin/override/soffice', '-env:UserInstallation=file:///workspace/scratch/dcd413fa34f4/verification-workflows-20261112/suite-native/render-186-ehq5s7_x/profile', '--headless', '--convert-to', 'pdf', '--outdir', '/workspace/scratch/dcd413fa34f4/verification-workflows-20261112/suite-native/render-186-ehq5s7_x', '/workspace/scratch/dcd413fa34f4/verification-workflows-20261112/suite-evidence/quds_office_engine/fidelity-schema/column-metadata-1.xlsx']' died with <Signals.SIGKILL: 9>.",
+        "returncode": -9,
+        "stdout": "",
+        "stderr": ""
+      },
+      "input_sha256_before": "e5816354c42d40048f785f301e6394bff3b5cb1118cf4200e1149e597451844a",
+      "status": "rendered",
+      "render_record": {
+        "file": "quds_office_engine/fidelity-schema/column-metadata-1.xlsx",
+        "pages": 2,
+        "text": "              Regional values\n6\n\n5\n\n4\n                                Series1\n3\n\n2\n\n1\n\n0\n    Series1\n\fRegion    Sum of Value\nNorth          2.00\nSouth          5.00\nTotal Resul    7.00\n\f",
+        "pixel_sha256": [
+          "b7143f3781a301ef2d3bf6f3ad5fd72fe81402284fac66e000c2eb8b8b488dd4",
+          "9d2a25cadda5fd3600b1b40383466bcdb5a647fbe2f8958a6234e4ca8b815086"
+        ],
+        "pdf": "001/document.pdf",
+        "page_artifacts": [
+          {
+            "page": 1,
+            "width": 596,
+            "height": 842,
+            "png": "001/page-0001.png",
+            "pixel_sha256": "b7143f3781a301ef2d3bf6f3ad5fd72fe81402284fac66e000c2eb8b8b488dd4"
+          },
+          {
+            "page": 2,
+            "width": 596,
+            "height": 842,
+            "png": "001/page-0002.png",
+            "pixel_sha256": "9d2a25cadda5fd3600b1b40383466bcdb5a647fbe2f8958a6234e4ca8b815086"
+          }
+        ]
+      },
+      "input_sha256_after": "e5816354c42d40048f785f301e6394bff3b5cb1118cf4200e1149e597451844a",
+      "input_unchanged": true,
+      "seconds": 15.03
+    },
+    {
+      "file": "quds_office_engine/fidelity-schema/column-metadata-2.xlsx",
+      "original_failure": {
+        "file": "quds_office_engine/fidelity-schema/column-metadata-2.xlsx",
+        "error": "Command '['/opt/codex/runtimes/codex-primary-runtime/dependencies/bin/override/soffice', '-env:UserInstallation=file:///workspace/scratch/dcd413fa34f4/verification-workflows-20261112/suite-native/render-187-zsgiv5rm/profile', '--headless', '--convert-to', 'pdf', '--outdir', '/workspace/scratch/dcd413fa34f4/verification-workflows-20261112/suite-native/render-187-zsgiv5rm', '/workspace/scratch/dcd413fa34f4/verification-workflows-20261112/suite-evidence/quds_office_engine/fidelity-schema/column-metadata-2.xlsx']' died with <Signals.SIGKILL: 9>.",
+        "returncode": -9,
+        "stdout": "",
+        "stderr": ""
+      },
+      "input_sha256_before": "df9ba7a53d98592a89e8a4db464e23d1551a8d62d9e4fdb1dd2c03de211daa98",
+      "status": "rendered",
+      "render_record": {
+        "file": "quds_office_engine/fidelity-schema/column-metadata-2.xlsx",
+        "pages": 2,
+        "text": "              Regional values\n6\n\n5\n\n4\n                                Series1\n3\n\n2\n\n1\n\n0\n    Series1\n\fRegion    Sum of Value\nNorth          2.00\nSouth          5.00\nTotal Resul    7.00\n\f",
+        "pixel_sha256": [
+          "b7143f3781a301ef2d3bf6f3ad5fd72fe81402284fac66e000c2eb8b8b488dd4",
+          "9d2a25cadda5fd3600b1b40383466bcdb5a647fbe2f8958a6234e4ca8b815086"
+        ],
+        "pdf": "002/document.pdf",
+        "page_artifacts": [
+          {
+            "page": 1,
+            "width": 596,
+            "height": 842,
+            "png": "002/page-0001.png",
+            "pixel_sha256": "b7143f3781a301ef2d3bf6f3ad5fd72fe81402284fac66e000c2eb8b8b488dd4"
+          },
+          {
+            "page": 2,
+            "width": 596,
+            "height": 842,
+            "png": "002/page-0002.png",
+            "pixel_sha256": "9d2a25cadda5fd3600b1b40383466bcdb5a647fbe2f8958a6234e4ca8b815086"
+          }
+        ]
+      },
+      "input_sha256_after": "df9ba7a53d98592a89e8a4db464e23d1551a8d62d9e4fdb1dd2c03de211daa98",
+      "input_unchanged": true,
+      "seconds": 13.33
+    },
+    {
+      "file": "quds_office_engine/fidelity-schema/column-metadata-3.xlsx",
+      "original_failure": {
+        "file": "quds_office_engine/fidelity-schema/column-metadata-3.xlsx",
+        "error": "Command '['/opt/codex/runtimes/codex-primary-runtime/dependencies/bin/override/soffice', '-env:UserInstallation=file:///workspace/scratch/dcd413fa34f4/verification-workflows-20261112/suite-native/render-188-dwwuy2_s/profile', '--headless', '--convert-to', 'pdf', '--outdir', '/workspace/scratch/dcd413fa34f4/verification-workflows-20261112/suite-native/render-188-dwwuy2_s', '/workspace/scratch/dcd413fa34f4/verification-workflows-20261112/suite-evidence/quds_office_engine/fidelity-schema/column-metadata-3.xlsx']' died with <Signals.SIGKILL: 9>.",
+        "returncode": -9,
+        "stdout": "",
+        "stderr": ""
+      },
+      "input_sha256_before": "fb5d32d6dc8ea8f1d1d4fde459b7e0381e5062598a55a52ce49d51cf1c4be266",
+      "status": "rendered",
+      "render_record": {
+        "file": "quds_office_engine/fidelity-schema/column-metadata-3.xlsx",
+        "pages": 2,
+        "text": "              Regional values\n6\n\n5\n\n4\n                                Series1\n3\n\n2\n\n1\n\n0\n    Series1\n\fRegion    Sum of Value\nNorth          2.00\nSouth          5.00\nTotal Resul    7.00\n\f",
+        "pixel_sha256": [
+          "b7143f3781a301ef2d3bf6f3ad5fd72fe81402284fac66e000c2eb8b8b488dd4",
+          "9d2a25cadda5fd3600b1b40383466bcdb5a647fbe2f8958a6234e4ca8b815086"
+        ],
+        "pdf": "003/document.pdf",
+        "page_artifacts": [
+          {
+            "page": 1,
+            "width": 596,
+            "height": 842,
+            "png": "003/page-0001.png",
+            "pixel_sha256": "b7143f3781a301ef2d3bf6f3ad5fd72fe81402284fac66e000c2eb8b8b488dd4"
+          },
+          {
+            "page": 2,
+            "width": 596,
+            "height": 842,
+            "png": "003/page-0002.png",
+            "pixel_sha256": "9d2a25cadda5fd3600b1b40383466bcdb5a647fbe2f8958a6234e4ca8b815086"
+          }
+        ]
+      },
+      "input_sha256_after": "fb5d32d6dc8ea8f1d1d4fde459b7e0381e5062598a55a52ce49d51cf1c4be266",
+      "input_unchanged": true,
+      "seconds": 15.85
+    },
+    {
+      "file": "quds_office_engine/fidelity-schema/sheet-style-1.xlsx",
+      "original_failure": {
+        "file": "quds_office_engine/fidelity-schema/sheet-style-1.xlsx",
+        "error": "Command '['/opt/codex/runtimes/codex-primary-runtime/dependencies/bin/override/soffice', '-env:UserInstallation=file:///workspace/scratch/dcd413fa34f4/verification-workflows-20261112/suite-native/render-189-oypjqwx_/profile', '--headless', '--convert-to', 'pdf', '--outdir', '/workspace/scratch/dcd413fa34f4/verification-workflows-20261112/suite-native/render-189-oypjqwx_', '/workspace/scratch/dcd413fa34f4/verification-workflows-20261112/suite-evidence/quds_office_engine/fidelity-schema/sheet-style-1.xlsx']' died with <Signals.SIGKILL: 9>.",
+        "returncode": -9,
+        "stdout": "",
+        "stderr": ""
+      },
+      "input_sha256_before": "ecbd2fc62203a282212d4b2b2ba6570c2233bf6adee4e983be3d51facbddc216",
+      "status": "rendered",
+      "render_record": {
+        "file": "quds_office_engine/fidelity-schema/sheet-style-1.xlsx",
+        "pages": 3,
+        "text": "Region            Value       Total\nNorth             2.0000               6\nSouth                     5           15                    Regional values\n                                           6.0000\nNative workbook\n                                           5.0000\n\n                                           4.0000\n\n                                           3.0000\n\n                                           2.0000\n\n                                           1.0000\n\n                                           0.0000\n                                                    North\n\fRegional values\n\n\n\n                          Value\n\n\n\n\n                  South\n\fRegion    Sum of Value\nNorth        2.0000\nSouth        5.0000\nTotal Resul 7.0000\n\f",
+        "pixel_sha256": [
+          "c31bb4fd4e190486e0657f371e31d337980bfa5a501c734d6fa003d5aa66856c",
+          "bacc8122a35242d33a120fb271f42cc3bfb05856e411c7db541c8d135e97a53c",
+          "45b9525821baa7b9e73da21556fdfbc3000b80f76755d2238f0c1642c8cb3345"
+        ],
+        "pdf": "004/document.pdf",
+        "page_artifacts": [
+          {
+            "page": 1,
+            "width": 596,
+            "height": 842,
+            "png": "004/page-0001.png",
+            "pixel_sha256": "c31bb4fd4e190486e0657f371e31d337980bfa5a501c734d6fa003d5aa66856c"
+          },
+          {
+            "page": 2,
+            "width": 596,
+            "height": 842,
+            "png": "004/page-0002.png",
+            "pixel_sha256": "bacc8122a35242d33a120fb271f42cc3bfb05856e411c7db541c8d135e97a53c"
+          },
+          {
+            "page": 3,
+            "width": 596,
+            "height": 842,
+            "png": "004/page-0003.png",
+            "pixel_sha256": "45b9525821baa7b9e73da21556fdfbc3000b80f76755d2238f0c1642c8cb3345"
+          }
+        ]
+      },
+      "input_sha256_after": "ecbd2fc62203a282212d4b2b2ba6570c2233bf6adee4e983be3d51facbddc216",
+      "input_unchanged": true,
+      "seconds": 15.07
+    },
+    {
+      "file": "quds_office_engine/fidelity-schema/sheet-style-2.xlsx",
+      "original_failure": {
+        "file": "quds_office_engine/fidelity-schema/sheet-style-2.xlsx",
+        "error": "Command '['/opt/codex/runtimes/codex-primary-runtime/dependencies/bin/override/soffice', '-env:UserInstallation=file:///workspace/scratch/dcd413fa34f4/verification-workflows-20261112/suite-native/render-190-hf0g0whx/profile', '--headless', '--convert-to', 'pdf', '--outdir', '/workspace/scratch/dcd413fa34f4/verification-workflows-20261112/suite-native/render-190-hf0g0whx', '/workspace/scratch/dcd413fa34f4/verification-workflows-20261112/suite-evidence/quds_office_engine/fidelity-schema/sheet-style-2.xlsx']' died with <Signals.SIGKILL: 9>.",
+        "returncode": -9,
+        "stdout": "",
+        "stderr": ""
+      },
+      "input_sha256_before": "bfe5ab7725b01cd24e7201e43dc12f62200bc673966bda8259a565b00d604af7",
+      "status": "rendered",
+      "render_record": {
+        "file": "quds_office_engine/fidelity-schema/sheet-style-2.xlsx",
+        "pages": 3,
+        "text": "Region            Value       Total\nNorth             2.0000               6\nSouth                     5           15                    Regional values\n                                           6.0000\nNative workbook\n                                           5.0000\n\n                                           4.0000\n\n                                           3.0000\n\n                                           2.0000\n\n                                           1.0000\n\n                                           0.0000\n                                                    North\n\fRegional values\n\n\n\n                          Value\n\n\n\n\n                  South\n\fRegion    Sum of Value\nNorth        2.0000\nSouth        5.0000\nTotal Resul 7.0000\n\f",
+        "pixel_sha256": [
+          "c31bb4fd4e190486e0657f371e31d337980bfa5a501c734d6fa003d5aa66856c",
+          "bacc8122a35242d33a120fb271f42cc3bfb05856e411c7db541c8d135e97a53c",
+          "45b9525821baa7b9e73da21556fdfbc3000b80f76755d2238f0c1642c8cb3345"
+        ],
+        "pdf": "005/document.pdf",
+        "page_artifacts": [
+          {
+            "page": 1,
+            "width": 596,
+            "height": 842,
+            "png": "005/page-0001.png",
+            "pixel_sha256": "c31bb4fd4e190486e0657f371e31d337980bfa5a501c734d6fa003d5aa66856c"
+          },
+          {
+            "page": 2,
+            "width": 596,
+            "height": 842,
+            "png": "005/page-0002.png",
+            "pixel_sha256": "bacc8122a35242d33a120fb271f42cc3bfb05856e411c7db541c8d135e97a53c"
+          },
+          {
+            "page": 3,
+            "width": 596,
+            "height": 842,
+            "png": "005/page-0003.png",
+            "pixel_sha256": "45b9525821baa7b9e73da21556fdfbc3000b80f76755d2238f0c1642c8cb3345"
+          }
+        ]
+      },
+      "input_sha256_after": "bfe5ab7725b01cd24e7201e43dc12f62200bc673966bda8259a565b00d604af7",
+      "input_unchanged": true,
+      "seconds": 17.03
+    }
+  ],
+  "source_report_unchanged": true,
+  "rendered_files": 6,
+  "failed_files": 0,
+  "completed_at": "2026-11-12T14:55:20.587329+00:00"
+}
