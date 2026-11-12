@@ -275,24 +275,12 @@ void applyStep(
       final at = s.integer('offset', max: p.text.length);
       _boundary(p, at);
       final container = _container(doc, p);
-      WmlRunEdit.splitAt(p, at);
-      var offset = 0;
-      var cut = p.inlines.length;
-      for (var i = 0; i < p.inlines.length; i++) {
-        if (offset >= at) {
-          cut = i;
-          break;
-        }
-        final inline = p.inlines[i];
-        if (inline is WmlRun) offset += inline.text.length;
-      }
       final tail = WmlParagraph(
         properties: p.properties.copy()
           ..bookmarkName = null
           ..listRestart = null,
-        inlines: p.inlines.sublist(cut),
+        inlines: WmlRunEdit.splitParagraphInlines(p, at),
       );
-      p.inlines.removeRange(cut, p.inlines.length);
       _noteHint(p);
       _noteHint(tail);
       container.insert(container.indexOf(p) + 1, tail);

@@ -79,6 +79,7 @@ abstract class OfficeController extends ChangeNotifier {
   OfficeSurfaceConfig _config;
   var _dirty = false;
   var _disposed = false;
+  var _contentRevision = 0;
 
   /// config API.
   OfficeSurfaceConfig get config => _config;
@@ -91,6 +92,12 @@ abstract class OfficeController extends ChangeNotifier {
 
   /// isDirty API.
   bool get isDirty => _dirty;
+
+  /// Monotonic revision for controller-observed document changes. Hosts can
+  /// capture this after committing pending edits and compare it after an
+  /// asynchronous save. Caret, viewport and layout notifications do not advance
+  /// it; immediate note-pane edits do, before their undo command is committed.
+  int get contentRevision => _contentRevision;
 
   /// canUndo API.
   bool get canUndo => commands.canUndo;
@@ -377,6 +384,7 @@ abstract class OfficeController extends ChangeNotifier {
   }
 
   void _onCommands() {
+    _contentRevision++;
     _dirty = true;
     notifyListeners();
   }
@@ -834,6 +842,7 @@ class WordEditorController extends OfficeController {
   @override
   /// saveBytes API.
   Uint8List saveBytes({String? password}) {
+    commitNoteEdits();
     final Uint8List bytes = WordSerializer().writeBytes(
       document,
       password: password,
@@ -845,6 +854,7 @@ class WordEditorController extends OfficeController {
   @override
   /// saveBytesAsync API.
   Future<Uint8List> saveBytesAsync({String? password}) {
+    commitNoteEdits();
     return OfficeIsolateSave.word(document, password: password);
   }
 
@@ -2926,7 +2936,7 @@ class WordEditorController extends OfficeController {
         }
         final WmlBlock block = clones[i];
         if (block is WmlParagraph) {
-          _insertSpansAtCaret(_spansOfParagraph(block));
+          _insertInlinesAtCaret(block.inlines);
         }
       }
     } else if (_wordBodyIsBlank()) {
@@ -2941,22 +2951,14 @@ class WordEditorController extends OfficeController {
     notifyListeners();
   }
 
-  List<OfficeClipboardSpan> _spansOfParagraph(WmlParagraph para) {
-    return <OfficeClipboardSpan>[
-      for (final WmlInline inline in para.inlines)
-        if (inline is WmlRun)
-          OfficeClipboardSpan(
-            text: inline.text,
-            props: inline.properties.copy(),
-          ),
-    ];
-  }
-
   bool _wordBodyIsBlank() {
     for (final WmlSection section in document.sections) {
       for (final WmlBlock block in section.blocks) {
         if (block is WmlParagraph) {
-          if (block.text.isNotEmpty) {
+          if (block.text.isNotEmpty ||
+              block.inlines.any(
+                (WmlInline inline) => inline is WmlZeroWidthInline,
+              )) {
             return false;
           }
         } else {
@@ -3011,7 +3013,7 @@ class WordEditorController extends OfficeController {
     final WmlParagraphProps destProps = dest.properties.copy();
     final WmlBlock first = blocks.first;
     if (first is WmlParagraph) {
-      _insertSpansAtCaret(_spansOfParagraph(first));
+      _insertInlinesAtCaret(first.inlines);
       if (destEmpty) {
         commands.commit(
           _CallbackCommand(
@@ -3078,23 +3080,29 @@ class WordEditorController extends OfficeController {
   }
 
   void _insertSpansAtCaret(List<OfficeClipboardSpan> spans) {
-    if (spans.isEmpty) {
+    _insertInlinesAtCaret(<WmlInline>[
+      for (final OfficeClipboardSpan span in spans) span.toRun(),
+    ]);
+  }
+
+  void _insertInlinesAtCaret(List<WmlInline> inlines) {
+    if (inlines.isEmpty) {
       return;
     }
     final WmlParagraph para = _activeParagraph;
     final int start = caret.logicalIndex.clamp(0, para.text.length);
     final List<WmlInline> before = _cloneInlines(para);
-    final List<WmlRun> runs = <WmlRun>[
-      for (final OfficeClipboardSpan span in spans) span.toRun(),
-    ];
-    final int added = runs.fold<int>(0, (int n, WmlRun r) => n + r.text.length);
+    final int added = inlines.whereType<WmlRun>().fold<int>(
+      0,
+      (int n, WmlRun r) => n + r.text.length,
+    );
     commands.commit(
       _CallbackCommand(
         executeFn: () {
           para.inlines
             ..clear()
             ..addAll(_cloneInlinesFrom(before));
-          WmlRunEdit.insertRuns(para, start, runs);
+          WmlRunEdit.insertInlines(para, start, inlines);
         },
         undoFn: () {
           para.inlines
@@ -3111,20 +3119,14 @@ class WordEditorController extends OfficeController {
     final WmlParagraph para = _activeParagraph;
     final int index = caret.logicalIndex.clamp(0, para.text.length);
     final List<WmlInline> before = _cloneInlines(para);
-    final List<WmlRun> tail = WmlRunEdit.extractRuns(
-      para,
-      index,
-      para.text.length,
-    );
+    final WmlParagraph split = WmlParagraph(inlines: _cloneInlinesFrom(before));
+    final List<WmlInline> tail = WmlRunEdit.splitParagraphInlines(split, index);
     commands.commit(
       _CallbackCommand(
         executeFn: () {
           para.inlines
             ..clear()
-            ..addAll(_cloneInlinesFrom(before));
-          if (index < para.text.length) {
-            WmlRunEdit.replaceRange(para, index, para.text.length, '');
-          }
+            ..addAll(_cloneInlinesFrom(split.inlines));
           final WmlParagraph next = WmlParagraph(
             properties: para.properties.copy()
               ..bookmarkName = null
@@ -3268,20 +3270,7 @@ class WordEditorController extends OfficeController {
       _cloneInlinesFrom(para.inlines);
 
   static List<WmlInline> _cloneInlinesFrom(List<WmlInline> source) {
-    return <WmlInline>[
-      for (final WmlInline inline in source)
-        if (inline is WmlRun)
-          WmlRun(
-            text: inline.text,
-            properties: inline.properties.copy(),
-            hyperlink: inline.hyperlink,
-            commentIds: List<int>.from(inline.commentIds),
-            noteRefId: inline.noteRefId,
-            noteRefEndnote: inline.noteRefEndnote,
-          )
-        else
-          inline,
-    ];
+    return WmlClone.inlines(source);
   }
 
   /// insertText API.
@@ -6651,6 +6640,8 @@ class WordEditorController extends OfficeController {
     if (!config.allowsMutation) {
       return;
     }
+    final List<String> beforeText = note.paragraphs.map((p) => p.text).toList();
+    if (WordNotes.editableText(note) == text) return;
     for (final WmlNote other in _noteEditStart.keys.toList()) {
       if (!identical(other, note)) {
         commitNoteEdit(other);
@@ -6661,6 +6652,10 @@ class WordEditorController extends OfficeController {
       () => <WmlBlock>[for (final WmlBlock b in note.blocks) WmlClone.block(b)],
     );
     WordNotes.editText(note, text);
+    if (listEquals(beforeText, note.paragraphs.map((p) => p.text).toList())) {
+      return;
+    }
+    _contentRevision++;
     _dirty = true;
     relayout();
     notifyListeners();

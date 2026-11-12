@@ -1,6 +1,7 @@
 import '../properties/wml_properties.dart';
 import 'wml_document.dart';
 import 'wml_run_edit.dart';
+import 'word_bookmarks.dart';
 
 /// Bookmark names, link look, and heading cross-references.
 abstract final class WordLink {
@@ -57,6 +58,13 @@ abstract final class WordLink {
       return null;
     }
     final List<WmlParagraph> paras = document.paragraphs.toList();
+    for (int i = 0; i < paras.length; i++) {
+      if (paras[i].inlines.whereType<WmlBookmarkStart>().any(
+        (WmlBookmarkStart marker) => marker.name == name,
+      )) {
+        return i;
+      }
+    }
     for (int i = 0; i < paras.length; i++) {
       if (paras[i].properties.bookmarkName == name) {
         return i;
