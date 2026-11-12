@@ -1,0 +1,60 @@
+{
+  "status": "producer_and_schema_passed_native_pending",
+  "recorded_utc": "2026-11-12T15:42:54.395101+00:00",
+  "implementation_commit": "1d19150ff35e95374fa3c11e0b6a43d187d24024",
+  "shared_source_commit": "1d19150ff35e95374fa3c11e0b6a43d187d24024",
+  "sdk_files": 375,
+  "sdk_failures": 0,
+  "native_status": "pending",
+  "artifacts": {
+    "engine--acceptance.json.gz": {
+      "sha256": "f20f705e10789e210704d964cfccd72944b3808eff59ac19529d113efae6b1fc",
+      "original_path": "engine/acceptance.json",
+      "original_sha256": "eff60cb053bcc2e6e2a2d67315b1c800c2ea7dfe53897fd8ee6da84984fd202c",
+      "original_bytes": 285334
+    },
+    "editor--acceptance.json.gz": {
+      "sha256": "97005ee64407d7a54600fdf7bfe3098194d45449cc3bf386fcfae42c303db65b",
+      "original_path": "editor/acceptance.json",
+      "original_sha256": "ea1e9135453e5026e0ee423126cc847580a6d5f8ca754634ba6f5c04c007bcae",
+      "original_bytes": 284039
+    },
+    "engine--inventory.json.gz": {
+      "sha256": "62565117dea2aad63ace31f55e85119b8a08bc6a7c21e1356b61b169eb94fe40",
+      "original_path": "engine/inventory.json",
+      "original_sha256": "ee6dbc73cbc38ff1162f89a998f44397dafad018e58cc4bb77be0dd497e9dee7",
+      "original_bytes": 80816
+    },
+    "editor--inventory.json.gz": {
+      "sha256": "eb43c58d615c9e1bf59e648403bccb4a54018129d27d2e9a59ade622816e5532",
+      "original_path": "editor/inventory.json",
+      "original_sha256": "d562d6f6a894ecc27aff0c102c2e9ed9d8a8d0d640465a3698c7af1418e0f104",
+      "original_bytes": 7099
+    },
+    "engine--coverage-gaps.json.gz": {
+      "sha256": "6f10854a2598a1c4a524e93fa0f0e2386585b6c2c625a090645fce3511ae9147",
+      "original_path": "engine/coverage-gaps.json",
+      "original_sha256": "57dbaa248143d0f7403e9ac41dbc1feaaa86a7126c197dc81d0f8cb7f1523163",
+      "original_bytes": 186620
+    },
+    "engine--collection-receipt.json.gz": {
+      "sha256": "e1a31aa185be9e3fd3afc93ec65afbe004858087b87fe3e7034d6e51174ac5cb",
+      "original_path": "engine/collection-receipt.json",
+      "original_sha256": "1803935ab4e7da6e359311e41f4aded6dac5f75ce3603eac25e60589f1ace1f4",
+      "original_bytes": 87381
+    },
+    "external--input-manifest.json.gz": {
+      "sha256": "863be9b7b1b289bd6162196e77a87bc018bf193ff42b1b1f6452d67dd365f36e",
+      "original_path": "external/input-manifest.json",
+      "original_sha256": "fe772d28d8439b59d296a0ca17a3ad888813373c891f324043a93da7ecfc3590",
+      "original_bytes": 215685
+    },
+    "external--schema-report.json.gz": {
+      "sha256": "802f7eeb4a22bf9441ac5d6cd4598606d2a4b7f9c9fe1dfcd042e66d291e1230",
+      "original_path": "external/schema-report.json",
+      "original_sha256": "9091886b0f4bd1ddf1a3321ef063b559be123ef0b7e4755355e82c874c5b3119",
+      "original_bytes": 105668
+    }
+  },
+  "scope": "Durable completed-stage checkpoint only. Final native acceptance is recorded separately; prior failed and interrupted attempts remain unchanged."
+}

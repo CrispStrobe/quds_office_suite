@@ -1,0 +1,177 @@
+{
+  "created_utc": "2026-11-12T15:34:06.214060+00:00",
+  "current_head": "1d19150ff35e95374fa3c11e0b6a43d187d24024",
+  "expected_inventory": {
+    "engine": {
+      "manifest": "/workspace/scratch/07eb2580faa9/quds-expansion-validation-final/packages/quds_office_engine/tool/fidelity/output_manifest.json",
+      "manifest_sha256": "3995809ba6d473cd0a390e0fbc6aeb7d8770b39b89064c166b435224c65a8be0",
+      "files": 346,
+      "three_cycle_series": 102,
+      "standalone_files": 40
+    },
+    "editor": {
+      "manifest": "/workspace/scratch/07eb2580faa9/quds-expansion-validation-final/packages/quds_office_engine/tool/fidelity/editor_output_manifest.json",
+      "manifest_sha256": "6d478af9a047483c99f1cf306bd860b68e68175e6491bf2611880c6d09b7e9a8",
+      "files": 29,
+      "three_cycle_series": 9,
+      "standalone_files": 2
+    }
+  },
+  "expected_source_aggregate": 375,
+  "commands": {
+    "engine": [
+      [
+        "analyze",
+        [
+          "dart",
+          "analyze"
+        ]
+      ],
+      [
+        "full-tests",
+        [
+          "python3",
+          "tool/fidelity/collect_coverage.py",
+          "coverage/vm",
+          "--",
+          "--reporter",
+          "expanded"
+        ]
+      ],
+      [
+        "feature-workflows",
+        [
+          "python3",
+          "tool/fidelity/feature_matrix.py",
+          "run",
+          "footnotes",
+          "endnotes",
+          "headings",
+          "styles",
+          "paragraphs",
+          "images",
+          "tables",
+          "tocs",
+          "textflow",
+          "placement",
+          "drawings",
+          "references",
+          "comments",
+          "spreadsheets",
+          "slides"
+        ]
+      ],
+      [
+        "mandatory-fidelity",
+        [
+          "bash",
+          "tool/fidelity/check.sh"
+        ]
+      ],
+      [
+        "coverage-report",
+        [
+          "python3",
+          "tool/fidelity/coverage_report.py",
+          "coverage/vm",
+          "--require-receipt"
+        ]
+      ]
+    ],
+    "editor": [
+      [
+        "analyze",
+        [
+          "flutter",
+          "analyze",
+          "--no-pub",
+          "lib"
+        ]
+      ],
+      [
+        "inventory-clean",
+        [
+          "python3",
+          "../quds_office_engine/tool/fidelity/inventory.py",
+          "clean",
+          "--package",
+          "quds_office_editor",
+          "--manifest",
+          "../quds_office_engine/tool/fidelity/editor_output_manifest.json",
+          "--package-root",
+          "."
+        ]
+      ],
+      [
+        "full-tests",
+        [
+          "flutter",
+          "test",
+          "--no-pub",
+          "--reporter",
+          "expanded"
+        ]
+      ],
+      [
+        "corpus-oracle",
+        [
+          "python3",
+          "../quds_office_engine/tool/fidelity/corpus.py",
+          "verify",
+          "build/fidelity"
+        ]
+      ],
+      [
+        "bookmark-oracle",
+        [
+          "python3",
+          "../quds_office_engine/tool/fidelity/bookmarks_oracle.py",
+          "--editor-dir",
+          "build/fidelity-bookmarks-legacy"
+        ]
+      ],
+      [
+        "control-oracle",
+        [
+          "python3",
+          "../quds_office_engine/tool/fidelity/content_controls_oracle.py",
+          "--editor-dir",
+          "build/fidelity-content-controls-legacy"
+        ]
+      ],
+      [
+        "bookmark-copy-oracle",
+        [
+          "python3",
+          "../quds_office_engine/tool/fidelity/bookmark_copy_oracle.py",
+          "--editor",
+          "--root",
+          "build/fidelity-bookmark-copy"
+        ]
+      ],
+      [
+        "inventory-verify",
+        [
+          "python3",
+          "../quds_office_engine/tool/fidelity/inventory.py",
+          "verify",
+          "--package",
+          "quds_office_editor",
+          "--manifest",
+          "../quds_office_engine/tool/fidelity/editor_output_manifest.json",
+          "--package-root",
+          "."
+        ]
+      ]
+    ]
+  },
+  "required_flutter": "3.44.0",
+  "execution_order": [
+    "engine",
+    "editor"
+  ],
+  "editor_prerequisite": "A passed --engine-receipt at the same frozen commit and source fingerprint is required before editor acceptance; editor oracles also read engine outputs.",
+  "fresh_engine_coverage": "Existing coverage/vm moves outside the checkout before the full test run.",
+  "goldens": "No update flag; every tracked source/golden hash must remain unchanged.",
+  "flutter_root": "/home/agent/.codex/skills/remote-skills/office-recovery-0905ba96fd2d/flutter-3.44"
+}

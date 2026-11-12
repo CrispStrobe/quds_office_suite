@@ -123,8 +123,19 @@ expansion corpora have independent appearance baselines and no new exemptions.
 Host acceptance requires **468** engine/actual-host files for schema validation
 and native rendering of **all 122 actual-host captures**. Renderer discovery now
 includes DOCM, DOTX and DOTM, closing a silent omission in the combined workflow.
-Picture-only slide inputs still require the specific authored black-rectangle
-geometry and pixel oracle; arbitrary empty output is not accepted.
+The twelve picture-only slide captures require their specific authored page,
+black-rectangle geometry and pixel oracle. The bounded slide uses a schema-valid
+100 by 72 point page and picture rectangle (10, 7.2, 90, 45).
+
+The six image-only Word GIF/JPEG captures require a separate strict package and
+native pixel oracle. An independently authored reference fixes the A4 page,
+72-point margins, initial empty Arial 11 paragraph with 1.15 line spacing and
+8 points after, followed by a 60 by 30 point inline black image. The package gate
+binds the media type/dimensions and layout; the native gate requires one page,
+the reference-derived placement, a solid black interior and white exterior,
+and matching evidence across both three-save groups. Only these six named Word
+captures can satisfy this image-only path. The renderer suite has 66 controls;
+generic blank output and full Word image parity remain outside this acceptance.
 
 The engine gate runs the full suite with a source-bound coverage collector, all
 15 feature workflows, the curated fidelity producers and package oracles, and the
@@ -140,16 +151,24 @@ pubspec to be restored byte-for-byte after the gate.
 
 ## Evidence and remaining gaps
 
-Final source acceptance passed at implementation
-`2d6529e52f389e8c491ce75331d9efe6bd59a821`: 1,610 full engine tests, 1,147 mandatory
+Current final source acceptance passed at implementation
+`73ad0c42a8ecc81fb11dbde05c6f0cf10b9a1c74`: 1,610 full engine tests, 1,147 mandatory
 engine tests, 436 Python controls, all 15 feature workflows and 521 editor tests.
 The full suites retain their two individually documented existing skips; the
-mandatory cohort has none. All 375 packages pass schema validation. Native
-acceptance covers 368 files and 687 pages, with 109 save-cycle groups, 47
-independent baseline comparisons and 10 page-order comparisons. The seven
-existing comment-control qualifications remain explicit. Fresh engine line
-coverage is 45,186/54,575 (82.80%). See the
-[final source receipt chain](evidence/office-fidelity-expansion-20261112/final-source/README.md).
+mandatory cohort has none. All 375 packages pass schema validation, and all
+66 renderer controls pass. Native acceptance covers 368 files and 687 pages,
+with 109 save-cycle groups, 47 independent baseline comparisons and 10 page-order
+comparisons (included in the baseline count). The seven existing comment-control
+qualifications remain explicit. Fresh engine line coverage is
+45,186/54,575 (82.80%). See the
+[current final source receipt chain](evidence/office-fidelity-expansion-20261112/final-source-complete/README.md).
+
+This complete rerun covers the bounded shared native oracle for the six
+image-only Word GIF/JPEG captures. Both the
+[previous full acceptance at `1d19150`](evidence/office-fidelity-expansion-20261112/final-source-current/README.md)
+and the [original full acceptance at `2d6529e`](evidence/office-fidelity-expansion-20261112/final-source/README.md)
+are retained unchanged. Timestamped remote CI observations are stored separately
+from these local acceptance results.
 
 Focused red/green logs, authored references, source/input hashes and independent
 native receipts are under

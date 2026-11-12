@@ -1,0 +1,562 @@
+{
+  "renderer": "LibreOffice 24.2.7.2 ee3885777aa7032db5a9b65deec9457448a91162 (LibreOfficeKit embedding API)",
+  "files": 6,
+  "rendered_files": 6,
+  "picture_pixel_oracle_files": 6,
+  "visual_input_files": 6,
+  "native_schema_only_files": 0,
+  "native_schema_only": [],
+  "schema_report": null,
+  "pixel_fingerprint": "SHA-256 of big-endian uint32 width/height followed by RGB bytes",
+  "cycle_groups": 2,
+  "cycle_comparisons": [
+    {
+      "case": "fidelity-host/word-picture-gif.docx",
+      "expected_cycles": [
+        1,
+        2,
+        3
+      ],
+      "actual_cycles": [
+        1,
+        2,
+        3
+      ],
+      "files": [
+        "fidelity-host/word-picture-gif-1.docx",
+        "fidelity-host/word-picture-gif-2.docx",
+        "fidelity-host/word-picture-gif-3.docx"
+      ],
+      "baseline": null,
+      "baseline_candidate": null,
+      "baseline_page_order": null,
+      "passed": true
+    },
+    {
+      "case": "fidelity-host/word-picture-jpeg.docx",
+      "expected_cycles": [
+        1,
+        2,
+        3
+      ],
+      "actual_cycles": [
+        1,
+        2,
+        3
+      ],
+      "files": [
+        "fidelity-host/word-picture-jpeg-1.docx",
+        "fidelity-host/word-picture-jpeg-2.docx",
+        "fidelity-host/word-picture-jpeg-3.docx"
+      ],
+      "baseline": null,
+      "baseline_candidate": null,
+      "baseline_page_order": null,
+      "passed": true
+    }
+  ],
+  "baseline_comparisons": 0,
+  "page_order_comparisons": 0,
+  "render_only_files": [],
+  "failures": [],
+  "reports": [
+    {
+      "file": "fidelity-host/word-picture-gif-1.docx",
+      "pages": 1,
+      "text": "\f",
+      "pixel_sha256": [
+        "dc530ef9ce32236d9b67c1778525b87d3d4d70bddbedbd0e065f8ad6351f6fa3"
+      ],
+      "pdf": "000/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 596,
+          "height": 842,
+          "png": "000/page-0001.png",
+          "pixel_sha256": "dc530ef9ce32236d9b67c1778525b87d3d4d70bddbedbd0e065f8ad6351f6fa3"
+        }
+      ],
+      "picture_pixel_evidence": {
+        "oracle": "host-word-black-picture-v1",
+        "case": "word-gif",
+        "dpi": 72,
+        "page_size": [
+          596,
+          842
+        ],
+        "expected_page_size": [
+          595.3,
+          841.9
+        ],
+        "page_size_points": [
+          595.304,
+          841.89
+        ],
+        "expected_rect": [
+          72,
+          94.45,
+          60,
+          30
+        ],
+        "source_geometry": {
+          "page_twips": [
+            11906,
+            16838
+          ],
+          "margin_twips": [
+            1440,
+            1440,
+            1440,
+            1440
+          ],
+          "inline_offset_emu": [
+            0,
+            0
+          ],
+          "extent_emu": [
+            762000,
+            381000
+          ],
+          "media_pixels": [
+            80,
+            40
+          ],
+          "media_format": "gif",
+          "paragraph_font": "Arial",
+          "paragraph_size_half_points": 22,
+          "paragraph_line_240ths": 276,
+          "paragraph_after_twips": 160
+        },
+        "pixel_sha256": "dc530ef9ce32236d9b67c1778525b87d3d4d70bddbedbd0e065f8ad6351f6fa3",
+        "black_pixels": 1860,
+        "white_pixels": 499941,
+        "gray_pixels": 31,
+        "colored_pixels": 0,
+        "outside_nonwhite_pixels": 0,
+        "interior_nonblack_pixels": 0,
+        "black_bbox": [
+          72,
+          94,
+          132,
+          125
+        ]
+      }
+    },
+    {
+      "file": "fidelity-host/word-picture-gif-2.docx",
+      "pages": 1,
+      "text": "\f",
+      "pixel_sha256": [
+        "dc530ef9ce32236d9b67c1778525b87d3d4d70bddbedbd0e065f8ad6351f6fa3"
+      ],
+      "pdf": "001/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 596,
+          "height": 842,
+          "png": "001/page-0001.png",
+          "pixel_sha256": "dc530ef9ce32236d9b67c1778525b87d3d4d70bddbedbd0e065f8ad6351f6fa3"
+        }
+      ],
+      "picture_pixel_evidence": {
+        "oracle": "host-word-black-picture-v1",
+        "case": "word-gif",
+        "dpi": 72,
+        "page_size": [
+          596,
+          842
+        ],
+        "expected_page_size": [
+          595.3,
+          841.9
+        ],
+        "page_size_points": [
+          595.304,
+          841.89
+        ],
+        "expected_rect": [
+          72,
+          94.45,
+          60,
+          30
+        ],
+        "source_geometry": {
+          "page_twips": [
+            11906,
+            16838
+          ],
+          "margin_twips": [
+            1440,
+            1440,
+            1440,
+            1440
+          ],
+          "inline_offset_emu": [
+            0,
+            0
+          ],
+          "extent_emu": [
+            762000,
+            381000
+          ],
+          "media_pixels": [
+            80,
+            40
+          ],
+          "media_format": "gif",
+          "paragraph_font": "Arial",
+          "paragraph_size_half_points": 22,
+          "paragraph_line_240ths": 276,
+          "paragraph_after_twips": 160
+        },
+        "pixel_sha256": "dc530ef9ce32236d9b67c1778525b87d3d4d70bddbedbd0e065f8ad6351f6fa3",
+        "black_pixels": 1860,
+        "white_pixels": 499941,
+        "gray_pixels": 31,
+        "colored_pixels": 0,
+        "outside_nonwhite_pixels": 0,
+        "interior_nonblack_pixels": 0,
+        "black_bbox": [
+          72,
+          94,
+          132,
+          125
+        ]
+      }
+    },
+    {
+      "file": "fidelity-host/word-picture-gif-3.docx",
+      "pages": 1,
+      "text": "\f",
+      "pixel_sha256": [
+        "dc530ef9ce32236d9b67c1778525b87d3d4d70bddbedbd0e065f8ad6351f6fa3"
+      ],
+      "pdf": "002/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 596,
+          "height": 842,
+          "png": "002/page-0001.png",
+          "pixel_sha256": "dc530ef9ce32236d9b67c1778525b87d3d4d70bddbedbd0e065f8ad6351f6fa3"
+        }
+      ],
+      "picture_pixel_evidence": {
+        "oracle": "host-word-black-picture-v1",
+        "case": "word-gif",
+        "dpi": 72,
+        "page_size": [
+          596,
+          842
+        ],
+        "expected_page_size": [
+          595.3,
+          841.9
+        ],
+        "page_size_points": [
+          595.304,
+          841.89
+        ],
+        "expected_rect": [
+          72,
+          94.45,
+          60,
+          30
+        ],
+        "source_geometry": {
+          "page_twips": [
+            11906,
+            16838
+          ],
+          "margin_twips": [
+            1440,
+            1440,
+            1440,
+            1440
+          ],
+          "inline_offset_emu": [
+            0,
+            0
+          ],
+          "extent_emu": [
+            762000,
+            381000
+          ],
+          "media_pixels": [
+            80,
+            40
+          ],
+          "media_format": "gif",
+          "paragraph_font": "Arial",
+          "paragraph_size_half_points": 22,
+          "paragraph_line_240ths": 276,
+          "paragraph_after_twips": 160
+        },
+        "pixel_sha256": "dc530ef9ce32236d9b67c1778525b87d3d4d70bddbedbd0e065f8ad6351f6fa3",
+        "black_pixels": 1860,
+        "white_pixels": 499941,
+        "gray_pixels": 31,
+        "colored_pixels": 0,
+        "outside_nonwhite_pixels": 0,
+        "interior_nonblack_pixels": 0,
+        "black_bbox": [
+          72,
+          94,
+          132,
+          125
+        ]
+      }
+    },
+    {
+      "file": "fidelity-host/word-picture-jpeg-1.docx",
+      "pages": 1,
+      "text": "\f",
+      "pixel_sha256": [
+        "dc530ef9ce32236d9b67c1778525b87d3d4d70bddbedbd0e065f8ad6351f6fa3"
+      ],
+      "pdf": "003/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 596,
+          "height": 842,
+          "png": "003/page-0001.png",
+          "pixel_sha256": "dc530ef9ce32236d9b67c1778525b87d3d4d70bddbedbd0e065f8ad6351f6fa3"
+        }
+      ],
+      "picture_pixel_evidence": {
+        "oracle": "host-word-black-picture-v1",
+        "case": "word-jpeg",
+        "dpi": 72,
+        "page_size": [
+          596,
+          842
+        ],
+        "expected_page_size": [
+          595.3,
+          841.9
+        ],
+        "page_size_points": [
+          595.304,
+          841.89
+        ],
+        "expected_rect": [
+          72,
+          94.45,
+          60,
+          30
+        ],
+        "source_geometry": {
+          "page_twips": [
+            11906,
+            16838
+          ],
+          "margin_twips": [
+            1440,
+            1440,
+            1440,
+            1440
+          ],
+          "inline_offset_emu": [
+            0,
+            0
+          ],
+          "extent_emu": [
+            762000,
+            381000
+          ],
+          "media_pixels": [
+            80,
+            40
+          ],
+          "media_format": "jpeg",
+          "paragraph_font": "Arial",
+          "paragraph_size_half_points": 22,
+          "paragraph_line_240ths": 276,
+          "paragraph_after_twips": 160
+        },
+        "pixel_sha256": "dc530ef9ce32236d9b67c1778525b87d3d4d70bddbedbd0e065f8ad6351f6fa3",
+        "black_pixels": 1860,
+        "white_pixels": 499941,
+        "gray_pixels": 31,
+        "colored_pixels": 0,
+        "outside_nonwhite_pixels": 0,
+        "interior_nonblack_pixels": 0,
+        "black_bbox": [
+          72,
+          94,
+          132,
+          125
+        ]
+      }
+    },
+    {
+      "file": "fidelity-host/word-picture-jpeg-2.docx",
+      "pages": 1,
+      "text": "\f",
+      "pixel_sha256": [
+        "dc530ef9ce32236d9b67c1778525b87d3d4d70bddbedbd0e065f8ad6351f6fa3"
+      ],
+      "pdf": "004/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 596,
+          "height": 842,
+          "png": "004/page-0001.png",
+          "pixel_sha256": "dc530ef9ce32236d9b67c1778525b87d3d4d70bddbedbd0e065f8ad6351f6fa3"
+        }
+      ],
+      "picture_pixel_evidence": {
+        "oracle": "host-word-black-picture-v1",
+        "case": "word-jpeg",
+        "dpi": 72,
+        "page_size": [
+          596,
+          842
+        ],
+        "expected_page_size": [
+          595.3,
+          841.9
+        ],
+        "page_size_points": [
+          595.304,
+          841.89
+        ],
+        "expected_rect": [
+          72,
+          94.45,
+          60,
+          30
+        ],
+        "source_geometry": {
+          "page_twips": [
+            11906,
+            16838
+          ],
+          "margin_twips": [
+            1440,
+            1440,
+            1440,
+            1440
+          ],
+          "inline_offset_emu": [
+            0,
+            0
+          ],
+          "extent_emu": [
+            762000,
+            381000
+          ],
+          "media_pixels": [
+            80,
+            40
+          ],
+          "media_format": "jpeg",
+          "paragraph_font": "Arial",
+          "paragraph_size_half_points": 22,
+          "paragraph_line_240ths": 276,
+          "paragraph_after_twips": 160
+        },
+        "pixel_sha256": "dc530ef9ce32236d9b67c1778525b87d3d4d70bddbedbd0e065f8ad6351f6fa3",
+        "black_pixels": 1860,
+        "white_pixels": 499941,
+        "gray_pixels": 31,
+        "colored_pixels": 0,
+        "outside_nonwhite_pixels": 0,
+        "interior_nonblack_pixels": 0,
+        "black_bbox": [
+          72,
+          94,
+          132,
+          125
+        ]
+      }
+    },
+    {
+      "file": "fidelity-host/word-picture-jpeg-3.docx",
+      "pages": 1,
+      "text": "\f",
+      "pixel_sha256": [
+        "dc530ef9ce32236d9b67c1778525b87d3d4d70bddbedbd0e065f8ad6351f6fa3"
+      ],
+      "pdf": "005/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 596,
+          "height": 842,
+          "png": "005/page-0001.png",
+          "pixel_sha256": "dc530ef9ce32236d9b67c1778525b87d3d4d70bddbedbd0e065f8ad6351f6fa3"
+        }
+      ],
+      "picture_pixel_evidence": {
+        "oracle": "host-word-black-picture-v1",
+        "case": "word-jpeg",
+        "dpi": 72,
+        "page_size": [
+          596,
+          842
+        ],
+        "expected_page_size": [
+          595.3,
+          841.9
+        ],
+        "page_size_points": [
+          595.304,
+          841.89
+        ],
+        "expected_rect": [
+          72,
+          94.45,
+          60,
+          30
+        ],
+        "source_geometry": {
+          "page_twips": [
+            11906,
+            16838
+          ],
+          "margin_twips": [
+            1440,
+            1440,
+            1440,
+            1440
+          ],
+          "inline_offset_emu": [
+            0,
+            0
+          ],
+          "extent_emu": [
+            762000,
+            381000
+          ],
+          "media_pixels": [
+            80,
+            40
+          ],
+          "media_format": "jpeg",
+          "paragraph_font": "Arial",
+          "paragraph_size_half_points": 22,
+          "paragraph_line_240ths": 276,
+          "paragraph_after_twips": 160
+        },
+        "pixel_sha256": "dc530ef9ce32236d9b67c1778525b87d3d4d70bddbedbd0e065f8ad6351f6fa3",
+        "black_pixels": 1860,
+        "white_pixels": 499941,
+        "gray_pixels": 31,
+        "colored_pixels": 0,
+        "outside_nonwhite_pixels": 0,
+        "interior_nonblack_pixels": 0,
+        "black_bbox": [
+          72,
+          94,
+          132,
+          125
+        ]
+      }
+    }
+  ]
+}

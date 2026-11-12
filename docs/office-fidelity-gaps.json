@@ -1160,7 +1160,7 @@
       ]
     },
     {
-      "id": "FID-094",
+      "id": "FID-096",
       "status": "closed",
       "area": "Native-valid minimum slide fixture",
       "finding": "Independent SDK validation caught that the new 100 by 60 point bounds fixture violated the native one-inch minimum height. The authored input and pixel oracle now use a legal 100 by 72 point canvas, retaining the same 90 by 45 point proportional image at x10/y7.2. The 20 host picture tests, all twelve picture-package SDK validations and native pixels pass.",
@@ -1169,10 +1169,11 @@
         "tool/office-validation/render.py",
         "tool/office-validation/test_render.py"
       ],
-      "limits": "The invalid fixture was corrected; schema checks were not disabled and no renderer exemption was added."
+      "limits": "The invalid fixture was corrected; schema checks were not disabled and no renderer exemption was added.",
+      "integration_previous_id": "FID-094"
     },
     {
-      "id": "FID-095",
+      "id": "FID-097",
       "status": "closed",
       "area": "Interrupted native conversion recovery",
       "finding": "Repeated full native runs exposed intermittent SIGKILL termination of otherwise valid spreadsheet conversions. Only a SOFFICE conversion killed by SIGKILL may retry, at most three attempts, each with a fresh profile/output and the original input hash. Every attempt remains in the success or failure report. Normal converter errors, timeouts, downstream rendering failures, semantic mismatches and mutated inputs cannot use this recovery.",
@@ -1182,7 +1183,27 @@
         "docs/evidence/office-fidelity-workflows-20261112/initial-native-failed-report.json",
         "docs/evidence/office-fidelity-workflows-20261112/serial-native-interruption-report.json"
       ],
-      "limits": "The process termination cause is not established. Bounded retry does not turn an exhausted conversion or a failed schema/text/pixel comparison into acceptance. Platforms without SIGKILL do not enable this recovery."
+      "limits": "The process termination cause is not established. Bounded retry does not turn an exhausted conversion or a failed schema/text/pixel comparison into acceptance. Platforms without SIGKILL do not enable this recovery.",
+      "integration_previous_id": "FID-095"
+    },
+    {
+      "id": "FID-098",
+      "status": "closed",
+      "area": "Native evidence for image-only Word GIF/JPEG captures",
+      "finding": "The six authored Word GIF/JPEG exports now require strict package/media validation and measured native page and image content. An independent hand-authored DOCX reference uses opaque black 80x40 media, A4 with 72-point margins, an initial empty Arial 11 paragraph with 1.15 automatic line spacing and 8 points after, then a 60x30-point inline picture. Its native reference fixes the expected top-left position at (72, 94.45) points. The oracle checks the authored layout, native media format/dimensions, single page, empty text, black rectangle bounds and solid interior, white exterior, and identical validated evidence across both three-save groups. All six focused native exports match their independently authored references in complete RGB pixels.",
+      "evidence": [
+        "tool/office-validation/render.py",
+        "tool/office-validation/test_render.py",
+        "docs/evidence/office-fidelity-expansion-20261112/word-picture-oracle/summary.json",
+        "docs/evidence/office-fidelity-expansion-20261112/word-picture-oracle/author_reference.py",
+        "docs/evidence/office-fidelity-expansion-20261112/word-picture-oracle/reference-geometry.json",
+        "docs/evidence/office-fidelity-expansion-20261112/word-picture-oracle/renderer-provenance.json",
+        "docs/evidence/office-fidelity-expansion-20261112/final-source-complete/summary.json",
+        "CrispCloud:test/widget/office_picture_fidelity_test.dart",
+        "CrispCloud:tool/office_host_evidence.json"
+      ],
+      "limits": "Exactly word-picture-gif-[123].docx and word-picture-jpeg-[123].docx under fidelity-host, with the authored A4/Arial 11 layout and recorded native runtime provenance. Physical page rounding is bounded by 0.03 point and raster edges by one pixel. This adds no generic blank-document allowance and does not certify full Word image parity, other image layouts or arbitrary font environments. Additional host authoring controls remain open in FID-089; FID-090 retains its separate twelve-slide scope.",
+      "integration_previous_id": "FID-093"
     }
   ],
   "evidence_path_convention": "Unprefixed paths are relative to quds_office_suite; CrispCloud: paths are relative to the host repository."

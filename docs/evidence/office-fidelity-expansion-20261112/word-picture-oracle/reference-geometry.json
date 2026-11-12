@@ -1,0 +1,41 @@
+{
+  "author": "Independent hand-authored DOCX and Pillow encoding; no Quds serializer/export XML read by the authoring script.",
+  "page_twips": [
+    11906,
+    16838
+  ],
+  "margins_twips": [
+    1440,
+    1440,
+    1440,
+    1440
+  ],
+  "image_pixels": [
+    80,
+    40
+  ],
+  "display_points": [
+    60,
+    30
+  ],
+  "first_empty_paragraph": {
+    "font": "Arial",
+    "size_points": 11,
+    "line_multiple": 1.15,
+    "space_after_points": 8
+  },
+  "literal_expected_native_rectangle_points": [
+    72,
+    94.45,
+    60,
+    30
+  ],
+  "reference_pdf_measured_rectangle_points": [
+    72,
+    94.45074462890625,
+    132,
+    124.45074462890625
+  ],
+  "reference_pdf_sha256": "88300d49225cd41dca13b402e03a68bb946de8d301b1b503549347cbda3fe383",
+  "reference_authoring_script_sha256": "35260de329c98c54d4980191281bb11df2c17b993649736182ec1c2322e5ae97"
+}

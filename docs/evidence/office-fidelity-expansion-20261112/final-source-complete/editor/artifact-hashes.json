@@ -1,0 +1,42 @@
+{
+  "acceptance.json": {
+    "bytes": 284087,
+    "sha256": "eeeedfda16bdf28906c15c80a400ab97edd6759f868ca7b7c4ecc4ddbd8b40a2"
+  },
+  "analyze.log.gz": {
+    "bytes": 72,
+    "sha256": "e3980666f1688e986956ac3b6609e3f826d8848977287998165e7c0466df5978"
+  },
+  "bookmark-copy-oracle.log.gz": {
+    "bytes": 571,
+    "sha256": "9d1d17dbd53ead600146d2c8958bdc54ac6a61068384eae85c91f9f5948c0646"
+  },
+  "bookmark-oracle.log.gz": {
+    "bytes": 81,
+    "sha256": "a7952ae57e5a16c98412451b0a14033c03c2f3718e5f4c3d52b48bb8bcdac71d"
+  },
+  "control-oracle.log.gz": {
+    "bytes": 136,
+    "sha256": "9ed83f8c3f685d6450f199ab7eb418402f9e6438a45a4788062a929303e93e28"
+  },
+  "corpus-oracle.log.gz": {
+    "bytes": 102,
+    "sha256": "8baa4eeba9ae15dad6b0c8c45dfe1809c64e0c167e54a97fc384937772a829f5"
+  },
+  "full-tests.log.gz": {
+    "bytes": 4356,
+    "sha256": "00c11513d3034252b7650276ae378747214a435be25d2578d2c37928557e8a95"
+  },
+  "inventory-clean.log.gz": {
+    "bytes": 137,
+    "sha256": "a7ed98d2839d0834d11b43138853a3f7860ddfc74767ef86c4527e5124d12b2e"
+  },
+  "inventory-verify.log.gz": {
+    "bytes": 157,
+    "sha256": "d5b5925e5aa7cbd8a1d37fc752fb99ac816df04722c7a9e467858d47aa5f78d2"
+  },
+  "inventory.json": {
+    "bytes": 7099,
+    "sha256": "c78097671c8ef3df9f43d9b46d7c33e5a1d3e0140c4e861ece8627a4b53dc4ec"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "observed_at_utc": "2026-11-12 15:40:47 UTC",
+  "scope": "Read-only exact implementation-pin Office CI observation. Local acceptance results are separate.",
+  "source": {
+    "repository": "CrispStrobe/quds_office_suite",
+    "implementation_commit": "1d19150ff35e95374fa3c11e0b6a43d187d24024",
+    "pull_request": {
+      "number": 3,
+      "url": "https://github.com/CrispStrobe/quds_office_suite/pull/3",
+      "state": "open",
+      "draft": true,
+      "head": "feature/office-fidelity-expansion-20261112",
+      "head_sha": "1d19150ff35e95374fa3c11e0b6a43d187d24024",
+      "base": "feature/office-fidelity-followup-20261112"
+    },
+    "ci_observed_at_utc": "2026-11-12 15:38:01 UTC",
+    "office_runs": [
+      {
+        "id": 43249035902,
+        "event": "push",
+        "status": "completed",
+        "conclusion": "cancelled",
+        "head_sha": "1d19150ff35e95374fa3c11e0b6a43d187d24024",
+        "url": "https://github.com/CrispStrobe/quds_office_suite/actions/runs/43249035902"
+      },
+      {
+        "id": 43249051639,
+        "event": "pull_request",
+        "status": "completed",
+        "conclusion": "cancelled",
+        "head_sha": "1d19150ff35e95374fa3c11e0b6a43d187d24024",
+        "url": "https://github.com/CrispStrobe/quds_office_suite/actions/runs/43249051639"
+      }
+    ],
+    "job_facts": "Both Office jobs ended cancelled before any steps ran.",
+    "cancellation_reason": "Unknown. Run metadata exposes no cancellation reason or cancellation-actor field.",
+    "cancellation_context": "Push and PR runs use different concurrency groups. The complete 19-run branch listing contained no newer run. The general CI run also cancelled before steps although it has no concurrency setting; no checkpoint push or PR body edit is established as the cause."
+  },
+  "host": {
+    "repository": "CrispStrobe/CrispCloud",
+    "implementation_commit": "561f486b9f13248f90dba679bdbf60bf8dc8ffcf",
+    "source_pin": "1d19150ff35e95374fa3c11e0b6a43d187d24024",
+    "pull_request": {
+      "number": 85,
+      "url": "https://github.com/CrispStrobe/CrispCloud/pull/85",
+      "state": "open",
+      "draft": true,
+      "head": "feature/office-fidelity-expansion-20261112",
+      "head_sha": "561f486b9f13248f90dba679bdbf60bf8dc8ffcf",
+      "base": "feature/office-fidelity-followup-20261112"
+    },
+    "ci_observed_at_utc": "2026-11-12 15:39:34 UTC",
+    "office_runs": [
+      {
+        "id": 43249243053,
+        "event": "pull_request",
+        "status": "queued",
+        "conclusion": null,
+        "head_sha": "561f486b9f13248f90dba679bdbf60bf8dc8ffcf",
+        "url": "https://github.com/CrispStrobe/CrispCloud/actions/runs/43249243053"
+      },
+      {
+        "id": 43249231055,
+        "event": "push",
+        "status": "queued",
+        "conclusion": null,
+        "head_sha": "561f486b9f13248f90dba679bdbf60bf8dc8ffcf",
+        "url": "https://github.com/CrispStrobe/CrispCloud/actions/runs/43249231055"
+      }
+    ],
+    "job_facts": "Both Office jobs were queued with no steps at the 15:36:19 UTC job inspection; both runs remained queued at the later CI observation."
+  },
+  "conclusion": "No completed remote green result for either implementation pin is established. Source cancellation is distinct from test failure; current host checks remain queued.",
+  "focused_oracle_publication_check": {
+    "source_commit": "1d19150ff35e95374fa3c11e0b6a43d187d24024",
+    "status": "passed",
+    "evidence_files": 13,
+    "renderer_code_files": 2,
+    "verification": "Exact GitHub blob identities and sizes match local committed/worktree bytes; recorded SHA-256 inventories match.",
+    "tests_rerun": false
+  },
+  "mutations_performed": []
+}

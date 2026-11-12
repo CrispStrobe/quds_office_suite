@@ -1,0 +1,30 @@
+{
+  "recorded_utc": "2026-11-12T16:10:11.627513+00:00",
+  "base_commit": "1d19150ff35e95374fa3c11e0b6a43d187d24024",
+  "tested_source_sha256": {
+    "tool/office-validation/render.py": "9904db8edf604d94779f0ee36a57167601ff80974ba57fb06c3044cf4373deca",
+    "tool/office-validation/test_render.py": "02cb01530a9f8a20ae6bcf854d662e25bb6b9bc36f48bf759367edd4bb16f7fb"
+  },
+  "old_renderer_sha256": "80ece704bac7215e2ae72f05e59df32472fc5ec9c767cb8af94f21e56530c9a6",
+  "artifacts": {
+    "README.md": "7964b0f7b8cbe703278ba739cbf1b6a363069e09e1eda28749ce808d804c675b",
+    "archive-manifest.json": "dfe3fa7f99d029895a065c715088016db242d1dd11ec62a706c63a4c52012fd2",
+    "author_reference.py": "35260de329c98c54d4980191281bb11df2c17b993649736182ec1c2322e5ae97",
+    "green-controls.log.gz": "2adab184642a6b7f60224cdba5d37c1984c71babac05574ee98a878d6972c210",
+    "input-manifest.json": "ff8c09c1d29a3c971ec5effdf850f5d8ea6f3c6c9ee34eddc0ea4f0eb7392d49",
+    "native-proof.tar.gz": "f1aa83b4c1b7c5bcdafb0177910a752fc24788227994d3327568e8eaae6223e4",
+    "native-report.json": "70c62d479320ad349c4ab65e08880e5b54567a6871663753d0c0606d66f3d105",
+    "native.log.gz": "54949363f5f5a08f457284d19415b60d02d167060355fa2e5e811f1d3337715c",
+    "red-controls.log.gz": "9c4aef5044fd32674817d41408960e2be6bd94e5197dba162e7d0da82d1fd3d4",
+    "red-full-host-native-report.json.gz": "310e4141372aec61e4ab499e13031b11254dc731feb2a742e7ddf4c07b2a0960",
+    "red-full-host-summary.json": "aa0ecf1e8a48a87b30d731f7cbe79296278e261d1ee7726cdac388f4ba24536c",
+    "reference-geometry.json": "111f5c0523726a1c9daee1e6002496f1258f2a8faa2bfd6e7ec09d509c6803e7",
+    "reference-schema.json": "796b98c032fb45a9d7ff4416c90e8942a1392019c3ad43b6a708a3be097a0ea5",
+    "reference-schema.log.gz": "1e4529b11f1af41dac45e4405233867046e77b3b35699474381394653efd8ae8",
+    "renderer-provenance.json": "0ccd0f13183f25bc77e9f805dfa10db8e78056ea80a68da9bd3ef3db188ad891",
+    "schema-report.json": "a86475db2d47c91b267826f5614aa9477462f351ad5c8061bac6f4a987369a7e",
+    "schema.log.gz": "473b63002cfdbdf3d6ff6e9ee17d5097be6a74b06476cd00ef6305ad5da8b03a",
+    "summary.json": "e81725f74868ee0f9c31c56940502d34296939b621a1d543f5e503aa0fae42c4",
+    "validator-build-receipt.json": "17e857813747994eaf69a5e05cc242bea546471bc00965ff13634661b37e5367"
+  }
+}

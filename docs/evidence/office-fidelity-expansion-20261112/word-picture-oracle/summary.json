@@ -1,0 +1,126 @@
+{
+  "status": "passed",
+  "finished_utc": "2026-11-12T16:09:04.574182+00:00",
+  "elapsed_seconds": 12.475631716999487,
+  "base_commit": "1d19150ff35e95374fa3c11e0b6a43d187d24024",
+  "source_sha256": {
+    "tool/office-validation/render.py": "9904db8edf604d94779f0ee36a57167601ff80974ba57fb06c3044cf4373deca",
+    "tool/office-validation/test_render.py": "02cb01530a9f8a20ae6bcf854d662e25bb6b9bc36f48bf759367edd4bb16f7fb"
+  },
+  "source_unchanged_during_final_checks": true,
+  "renderer_control_tests": 66,
+  "sdk_files": 6,
+  "sdk_failures": 0,
+  "independent_reference_sdk_files": 2,
+  "native_files": 6,
+  "native_pages": 6,
+  "native_cycle_groups": 2,
+  "native_schema_only_files": 0,
+  "all_input_hashes_unchanged": true,
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool/office-validation",
+        "-p",
+        "test_*.py"
+      ],
+      "exit_code": 0,
+      "log": "final-controls.log",
+      "log_sha256": "6fd033da1542e8d4614c2f874e5329f5ea1fe66cc34eb9acb35763f8d0e83a31"
+    },
+    {
+      "command": [
+        "dotnet",
+        "/workspace/scratch/07eb2580faa9/runtime/validator/OfficeValidation.dll",
+        "/workspace/scratch/07eb2580faa9/validation/word-picture-oracle/inputs",
+        "/workspace/scratch/07eb2580faa9/validation/word-picture-oracle/final-schema.json"
+      ],
+      "exit_code": 0,
+      "log": "final-schema.log",
+      "log_sha256": "b2029aab87a4f4c2f8a0fd04e6b5d9f0ed81c16fe0be723a47f9ca07d6197276"
+    },
+    {
+      "command": [
+        "python3",
+        "tool/office-validation/render.py",
+        "/workspace/scratch/07eb2580faa9/validation/word-picture-oracle/inputs",
+        "/workspace/scratch/07eb2580faa9/validation/word-picture-oracle/final-native"
+      ],
+      "exit_code": 0,
+      "log": "final-native.log",
+      "log_sha256": "ebe48dddc8f8c984841af1b1704112a194cb8b04c4da891608ce833833411745"
+    }
+  ],
+  "input_sha256": {
+    "fidelity-host/word-picture-gif-1.docx": "c4a9a1d30bffbea0d3747c0cd211535b30b12871292913dbdc3fbaa15afd1d14",
+    "fidelity-host/word-picture-gif-2.docx": "f189fd24987144a03b0e679c96b3111f725da52e5f9e9a020f54b508bf300851",
+    "fidelity-host/word-picture-gif-3.docx": "466768a669088b885efadef3c7efc013d0aa087e83904c47d0b5639afefe445c",
+    "fidelity-host/word-picture-jpeg-1.docx": "6e87f7dfec9884a920e438dd09e13aa893cd6d8aacd4a4d62656caeb92bf9ef8",
+    "fidelity-host/word-picture-jpeg-2.docx": "fa3b76a19a93cf2aeba376072c9953222efa6281eddfc81eeb939db4a7e422bb",
+    "fidelity-host/word-picture-jpeg-3.docx": "20fec4335389334934ab94dff9b7f72749e11c0caa500f8b5107b18b6c7de686"
+  },
+  "independent_reference_comparisons": [
+    {
+      "file": "fidelity-host/word-picture-gif-1.docx",
+      "reference": "references/expected-gif.docx",
+      "reference_png_sha256": "665af0fc97531eb8553efbbf9f50678699b204901478cfae03699d95ffd03085",
+      "reference_pixel_sha256": "dc530ef9ce32236d9b67c1778525b87d3d4d70bddbedbd0e065f8ad6351f6fa3",
+      "full_page_pixels_match": true,
+      "pages": 1,
+      "text": "\f"
+    },
+    {
+      "file": "fidelity-host/word-picture-gif-2.docx",
+      "reference": "references/expected-gif.docx",
+      "reference_png_sha256": "665af0fc97531eb8553efbbf9f50678699b204901478cfae03699d95ffd03085",
+      "reference_pixel_sha256": "dc530ef9ce32236d9b67c1778525b87d3d4d70bddbedbd0e065f8ad6351f6fa3",
+      "full_page_pixels_match": true,
+      "pages": 1,
+      "text": "\f"
+    },
+    {
+      "file": "fidelity-host/word-picture-gif-3.docx",
+      "reference": "references/expected-gif.docx",
+      "reference_png_sha256": "665af0fc97531eb8553efbbf9f50678699b204901478cfae03699d95ffd03085",
+      "reference_pixel_sha256": "dc530ef9ce32236d9b67c1778525b87d3d4d70bddbedbd0e065f8ad6351f6fa3",
+      "full_page_pixels_match": true,
+      "pages": 1,
+      "text": "\f"
+    },
+    {
+      "file": "fidelity-host/word-picture-jpeg-1.docx",
+      "reference": "references/expected-jpeg.docx",
+      "reference_png_sha256": "665af0fc97531eb8553efbbf9f50678699b204901478cfae03699d95ffd03085",
+      "reference_pixel_sha256": "dc530ef9ce32236d9b67c1778525b87d3d4d70bddbedbd0e065f8ad6351f6fa3",
+      "full_page_pixels_match": true,
+      "pages": 1,
+      "text": "\f"
+    },
+    {
+      "file": "fidelity-host/word-picture-jpeg-2.docx",
+      "reference": "references/expected-jpeg.docx",
+      "reference_png_sha256": "665af0fc97531eb8553efbbf9f50678699b204901478cfae03699d95ffd03085",
+      "reference_pixel_sha256": "dc530ef9ce32236d9b67c1778525b87d3d4d70bddbedbd0e065f8ad6351f6fa3",
+      "full_page_pixels_match": true,
+      "pages": 1,
+      "text": "\f"
+    },
+    {
+      "file": "fidelity-host/word-picture-jpeg-3.docx",
+      "reference": "references/expected-jpeg.docx",
+      "reference_png_sha256": "665af0fc97531eb8553efbbf9f50678699b204901478cfae03699d95ffd03085",
+      "reference_pixel_sha256": "dc530ef9ce32236d9b67c1778525b87d3d4d70bddbedbd0e065f8ad6351f6fa3",
+      "full_page_pixels_match": true,
+      "pages": 1,
+      "text": "\f"
+    }
+  ],
+  "schema_report_sha256": "a86475db2d47c91b267826f5614aa9477462f351ad5c8061bac6f4a987369a7e",
+  "native_report_sha256": "70c62d479320ad349c4ab65e08880e5b54567a6871663753d0c0606d66f3d105",
+  "bounds": "Exactly six named image-only Word GIF/JPEG fixtures with fixed A4/margins/Arial11/default paragraph flow,60x30pt inline extent,80x40px static native media and a full measured black rectangle. Other blank documents remain rejected."
+}
