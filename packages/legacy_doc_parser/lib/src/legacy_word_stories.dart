@@ -83,7 +83,7 @@ extension _WordStories on _StructuredWordParser {
         endCp: end,
         blocks: List.unmodifiable(blocks),
         plainText: _plainText(blocks),
-        safeHtml: _renderBlocks(blocks),
+        safeHtml: '', // Filled after media references are resolved.
         sectionIndex: sectionIndex,
         headerFooterType: headerFooterType,
       ),
@@ -395,8 +395,23 @@ extension _WordStories on _StructuredWordParser {
     if (plc == null ||
         plc.count < 1 ||
         plc.cps.first != 0 ||
-        plc.cps.last > length) {
+        plc.cps.last <= plc.cps[plc.count - 1]) {
       throw const FormatException('Missing or invalid Word textbox ranges.');
+    }
+    if (plc.cps.last > length) {
+      // MS-DOC PlcftxbxTxt ignores the final spare range's text. Independent
+      // Word exports can terminate that range with the document-wide final
+      // sentinel (all stories + 1), rather than a textbox-relative endpoint.
+      // Recover only the observed main-story case with exactly one unused
+      // terminal character. _plc has already bounded every real endpoint;
+      // all real ranges, CRs, shape references and chains still validate.
+      if (header ||
+          plc.count < 2 ||
+          plc.cps[plc.count - 1] != length - 1 ||
+          plc.cps.last != source.totalLength + 1) {
+        throw const FormatException('Missing or invalid Word textbox ranges.');
+      }
+      warnings.add(LegacyWordWarning.recoveredGlobalTextboxSentinel);
     }
     final anchorLength = header ? source.storyLengths[1] : source.bodyLength;
     final anchorBase = header ? _storyBase(1) : 0;
@@ -466,7 +481,7 @@ extension _WordStories on _StructuredWordParser {
       final key = (drawing.headerStory, id);
       final index = references[key];
       if (index == null ||
-          chainIndex >= textboxReferences[index].chainLength ||
+          chainIndex >= 4096 ||
           !used.add((drawing.headerStory, id, chainIndex))) {
         throw const FormatException(
           'Invalid Word drawing-to-textbox reference.',
@@ -494,16 +509,37 @@ extension _WordStories on _StructuredWordParser {
       final reference = textboxReferences[index];
       final anchors = entry.value
         ..sort((a, b) => a.chainIndex.compareTo(b.chainIndex));
-      if (anchors.length != reference.chainLength ||
-          anchors.first.chainIndex != 0) {
+      if (anchors.length > 4096 || anchors.first.chainIndex != 0) {
+        throw const FormatException('Incomplete Word textbox shape chain.');
+      }
+      final recoverDeclaredOne =
+          reference.chainLength == 1 && anchors.length > 1;
+      if (anchors.length != reference.chainLength && !recoverDeclaredOne) {
         throw const FormatException('Incomplete Word textbox shape chain.');
       }
       for (var i = 0; i < anchors.length; i++) {
+        if (anchors[i].chainIndex != i) {
+          throw const FormatException('Incomplete Word textbox shape chain.');
+        }
         final next = anchors[i].nextShapeId;
+        // LibreOffice's authored binary bridge can write cTxbx=1 for a
+        // multi-shape chain. Recover only when *every* link corroborates the
+        // contiguous ClientTextbox indices and the original first shape.
+        // Missing links may be valid in a conforming chain, but cannot prove
+        // the intended replacement for a contradictory declared length.
+        if (recoverDeclaredOne &&
+            i + 1 < anchors.length &&
+            next != anchors[i + 1].shapeId) {
+          throw const FormatException('Unresolved Word textbox chain length.');
+        }
         if (next == null || next == 0) continue;
         if (i + 1 >= anchors.length || next != anchors[i + 1].shapeId) {
           throw const FormatException('Invalid Word textbox next-shape chain.');
         }
+      }
+      if (recoverDeclaredOne) {
+        warnings.add(LegacyWordWarning.recoveredTextboxChainLength);
+        warnings.add(LegacyWordWarning.unsupportedFormatting);
       }
       textboxReferences[index] = LegacyWordTextboxReference(
         id: reference.id,
@@ -511,7 +547,8 @@ extension _WordStories on _StructuredWordParser {
         inHeaderFooter: reference.inHeaderFooter,
         anchorCp: reference.anchorCp,
         shapeId: reference.shapeId,
-        chainLength: reference.chainLength,
+        chainLength: anchors.length,
+        declaredChainLength: recoverDeclaredOne ? reference.chainLength : null,
         anchors: List.unmodifiable(anchors),
       );
     }

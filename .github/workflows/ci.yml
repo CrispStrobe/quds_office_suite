@@ -23,6 +23,12 @@ jobs:
       - name: Resolve workspace
         working-directory: .
         run: flutter pub get
+      - name: Analyze vendored legacy DOC parser
+        working-directory: packages/legacy_doc_parser
+        run: dart analyze
+      - name: Test vendored legacy DOC parser
+        working-directory: packages/legacy_doc_parser
+        run: dart test
       - run: dart analyze --fatal-infos
       - run: dart test
 

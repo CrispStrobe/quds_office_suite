@@ -18,6 +18,8 @@ extension _WordTables on _StructuredWordParser {
       final start = paragraphs[cursor].paragraph.startCp;
       var end = start;
       final rows = <LegacyWordTableRow>[];
+      _Props? tableProperties;
+      var rowCursor = cursor, lastRowEnd = start;
       final cells = <List<LegacyWordBlock>>[];
       var cell = <LegacyWordBlock>[];
       while (cursor < paragraphs.length) {
@@ -55,8 +57,34 @@ extension _WordTables on _StructuredWordParser {
               'Word table cell count does not match its row.',
             );
           }
+          if (tableProperties != null &&
+              !_sameTableRows(tableProperties, properties)) {
+            cursor = rowCursor;
+            cells.clear();
+            cell = [];
+            end = lastRowEnd;
+            break;
+          }
+          tableProperties ??= properties;
           rows.add(
             LegacyWordTableRow(
+              alignment: _tableAlignment(properties),
+              autoFit: properties['tableAutoFit'] == true,
+              originTwips:
+                  properties['tableOrigin'] as int? ?? definition.edges.first,
+              tableStyleId: _resolvedTableStyleId(
+                properties['tableStyleId'] as int?,
+              ),
+              styleOptions: properties['tableStyleOptions'] as int? ?? 0x600,
+              halfGapTwips: properties['tableGapHalf'] as int? ?? 0,
+              heightTwips: properties['tableRowHeight'] as int?,
+              cantSplit:
+                  properties['tableCantSplit'] as bool? ??
+                  properties['tableCantSplit90'] as bool?,
+              borders:
+                  properties['tableBorders']
+                      as Map<LegacyWordTableBorderSide, LegacyWordBorder>? ??
+                  const {},
               // Only leading, contiguous rows are repeating headers.
               isHeader:
                   properties['rowHeader'] == true &&
@@ -69,19 +97,51 @@ extension _WordTables on _StructuredWordParser {
                       cells[i].whereType<LegacyWordParagraph>(),
                     ),
                     widthTwips: definition.edges[i + 1] - definition.edges[i],
+                    formatting: _mergeTableCellFormat(
+                      i < definition.formats.length
+                          ? definition.formats[i]
+                          : const LegacyWordTableCellFormat(),
+                      LegacyWordTableCellFormat(
+                        verticalAlignment:
+                            (properties['cellAlignment']
+                                    as Map<int, int>?)?[i] ==
+                                null
+                            ? null
+                            : LegacyWordCellAlignment
+                                  .values[(properties['cellAlignment']
+                                  as Map<int, int>)[i]!],
+                        margins: Map.unmodifiable({
+                          ...?properties['tableMargins']
+                              as Map<LegacyWordBorderSide, int?>?,
+                          ...?(properties['cellMargins']
+                              as Map<
+                                int,
+                                Map<LegacyWordBorderSide, int?>
+                              >?)?[i],
+                        }),
+                      ),
+                    ),
                     mergeStart: (definition.flags[i] & 3) >= 2,
                     mergeContinue: (definition.flags[i] & 3) == 1,
                     verticalMergeStart: ((definition.flags[i] >> 5) & 3) >= 2,
                     verticalMergeContinue:
                         ((definition.flags[i] >> 5) & 3) == 1,
                     shading:
-                        (properties['cellShading']
+                        (properties[source.version > 0xd9 &&
+                                    _resolvedTableStyleId(
+                                          properties['tableStyleId'] as int?,
+                                        ) !=
+                                        null
+                                ? 'cellShadingRaw'
+                                : 'cellShading']
                             as Map<int, LegacyWordShading>?)?[i],
                   ),
               ]),
             ),
           );
           cells.clear();
+          rowCursor = cursor;
+          lastRowEnd = end;
         } else {
           cell.add(paragraph);
           if (cellEnd) {
@@ -100,7 +160,12 @@ extension _WordTables on _StructuredWordParser {
       return LegacyWordTable(
         startCp: start,
         endCp: end,
-        rows: List.unmodifiable(rows),
+        rows: List.unmodifiable(_resolveTableStyleCells(rows)),
+        rightToLeft:
+            tableProperties?['tableRtl'] == true ||
+            tableProperties?['tableRtl90'] == true,
+        autoFit: tableProperties?['tableAutoFit'] == true,
+        alignment: _tableAlignment(tableProperties ?? const {}),
       );
     }
 

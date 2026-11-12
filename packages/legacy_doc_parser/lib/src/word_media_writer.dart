@@ -22,6 +22,12 @@ extension _WordMedia on _StructuredWordWriter {
     }
     for (final picture in media.pictures) {
       final owner = _storyAt(picture.cp);
+      _preserveInk(picture.shape, {
+        'pictureId': picture.id,
+        'cp': picture.cp,
+        'story': owner,
+        'officeArtArtifactId': picture.officeArtArtifactId,
+      });
       final asset = _mediaAssets[picture.imageId];
       if (owner == null ||
           !_displayPosition(picture.cp) ||
@@ -68,6 +74,12 @@ extension _WordMedia on _StructuredWordWriter {
         throw const FormatException('Duplicate Word drawing identity.');
       }
       final owner = _storyAt(drawing.anchorCp);
+      _preserveInk(drawing.shape, {
+        'shapeId': drawing.shapeId,
+        'cp': drawing.anchorCp,
+        'story': owner,
+        'officeArtArtifactId': drawing.officeArtArtifactId,
+      });
       final asset = _mediaAssets[drawing.imageId];
       if (textboxShapes.contains((drawing.headerStory, drawing.shapeId)) ||
           textboxStories.contains((
@@ -82,6 +94,16 @@ extension _WordMedia on _StructuredWordWriter {
           _drawingMetadata(drawing)
             ..['reason'] = 'textbox drawing has no resolved text story',
         );
+      }
+      if (owner != null &&
+          _displayPosition(drawing.anchorCp) &&
+          drawing.imageId == null &&
+          drawing.textboxId == null &&
+          !drawing.shapeDeleted &&
+          _validDrawing(drawing, allowLine: true) &&
+          _canWriteShape(drawing.shape)) {
+        _event(owner, drawing.anchorCp, 50, () => _shapeDrawing(drawing));
+        continue;
       }
       if (owner == null ||
           !_displayPosition(drawing.anchorCp) ||
@@ -196,6 +218,9 @@ extension _WordMedia on _StructuredWordWriter {
         'source': _sourceMetadata(notice.source),
       });
       switch (notice.issue) {
+        case LegacyWordMediaIssue.recoveredVertexArrayLength:
+        case LegacyWordMediaIssue.recoveredBlipStoreCount:
+          limitations.add(LegacyWordConversionLimitation.partialFormatting);
         case LegacyWordMediaIssue.unsupportedImage:
           limitations.add(LegacyWordConversionLimitation.images);
         case LegacyWordMediaIssue.externalPictureNotFetched:
@@ -210,6 +235,43 @@ extension _WordMedia on _StructuredWordWriter {
         case LegacyWordMediaIssue.oleFieldMetadataIncomplete:
           limitations.add(LegacyWordConversionLimitation.embeddedObjects);
       }
+    }
+  }
+
+  void _preserveInk(
+    LegacyWordOfficeArtShape? shape,
+    Map<String, Object?> occurrence,
+  ) {
+    final ink = shape?.ink;
+    if (ink == null) return;
+    limitations.add(LegacyWordConversionLimitation.embeddedObjects);
+    if (ink.annotation == true) {
+      limitations.add(LegacyWordConversionLimitation.notesComments);
+    }
+    final bytes = ink.data;
+    final metadata = <String, Object?>{
+      ...occurrence,
+      'payloadPropertyId': 0x0700,
+      'booleanPropertyId': 0x073f,
+      'annotation': ink.annotation,
+      'hitTestInk': ink.hitTestInk,
+      'renderShape': ink.renderShape,
+      'renderInk': ink.renderInk,
+      'discussionAnchor': shape!.discussionAnchor,
+      'hasPayload': bytes != null,
+      'format': bytes == null ? null : 'ISF',
+      'headerStatus': ink.headerStatus?.name,
+      'strokeSemanticsDecoded': false,
+      'nativeInkEmitted': false,
+      'reason': bytes == null
+          ? 'ink properties retained without a stored ink payload'
+          : 'inert ISF payload retained; pen-stroke semantics are not reconstructed',
+    };
+    if (bytes == null) {
+      _evidenceRecords.add({'kind': 'officeArtInk', ...metadata});
+    } else {
+      _preserveEvidence('officeArtInk', bytes, metadata);
+      _count('inkPayloads');
     }
   }
 
@@ -263,9 +325,15 @@ extension _WordMedia on _StructuredWordWriter {
     _count('pictureReferences');
   }
 
-  bool _validDrawing(LegacyWordDrawing drawing) =>
-      drawing.rightTwips > drawing.leftTwips &&
-      drawing.bottomTwips > drawing.topTwips &&
+  bool _validDrawing(LegacyWordDrawing drawing, {bool allowLine = false}) =>
+      ((drawing.rightTwips > drawing.leftTwips &&
+              drawing.bottomTwips > drawing.topTwips) ||
+          (allowLine &&
+              drawing.shape?.geometry?.preset == 'line' &&
+              drawing.rightTwips >= drawing.leftTwips &&
+              drawing.bottomTwips >= drawing.topTwips &&
+              (drawing.rightTwips > drawing.leftTwips ||
+                  drawing.bottomTwips > drawing.topTwips))) &&
       [
         drawing.leftTwips,
         drawing.topTwips,
@@ -285,18 +353,15 @@ extension _WordMedia on _StructuredWordWriter {
     final width = (drawing.rightTwips - drawing.leftTwips) * 635;
     final height = (drawing.bottomTwips - drawing.topTwips) * 635;
     final id = ++_drawingId;
-    final horizontal = ['margin', 'page', 'column'][drawing.horizontalOrigin];
-    final vertical = ['margin', 'page', 'paragraph'][drawing.verticalOrigin];
     _mediaStart(drawing.presentation);
     _xml.add(
       '<w:drawing><wp:anchor distT="0" distB="0" distL="0" distR="0" '
       'simplePos="0" relativeHeight="$id" behindDoc="${drawing.behindText ? 1 : 0}" '
       'locked="${drawing.anchorLocked ? 1 : 0}" layoutInCell="1" allowOverlap="1">'
-      '<wp:simplePos x="0" y="0"/>'
-      '<wp:positionH relativeFrom="$horizontal"><wp:posOffset>${drawing.leftTwips * 635}</wp:posOffset></wp:positionH>'
-      '<wp:positionV relativeFrom="$vertical"><wp:posOffset>${drawing.topTwips * 635}</wp:posOffset></wp:positionV>'
-      '<wp:extent cx="$width" cy="$height"/>',
+      '<wp:simplePos x="0" y="0"/>',
     );
+    _officeArtDrawingPosition(drawing);
+    _xml.add('<wp:extent cx="$width" cy="$height"/>');
     if (drawing.wrapMode == 3) {
       _xml.add('<wp:wrapNone/>');
     } else if (drawing.wrapMode == 1) {
@@ -480,7 +545,9 @@ extension _WordMedia on _StructuredWordWriter {
           'kind': 'textboxChain',
           'id': reference.id,
           'story': reference.storyId,
-          'declaredLength': reference.chainLength,
+          'declaredLength':
+              reference.declaredChainLength ?? reference.chainLength,
+          'resolvedLength': reference.chainLength,
           'anchors': [
             for (final anchor in reference.anchors)
               {
@@ -648,6 +715,15 @@ Map<String, Object?> _drawingMetadata(LegacyWordDrawing drawing) => {
   ],
   'horizontalOrigin': drawing.horizontalOrigin,
   'verticalOrigin': drawing.verticalOrigin,
+  if (drawing.shape?.position case final position?)
+    'officeArtPosition': {
+      'horizontalMode': position.horizontalMode,
+      'verticalMode': position.verticalMode,
+      'horizontalRelativeTo': position.horizontalRelativeTo,
+      'verticalRelativeTo': position.verticalRelativeTo,
+      'semantics': 'WordFoptZeroBased',
+      'unsupportedProperties': drawing.shape!.unsupportedProperties,
+    },
   'wrapMode': drawing.wrapMode,
   'wrapSide': drawing.wrapSide,
   'behindText': drawing.behindText,

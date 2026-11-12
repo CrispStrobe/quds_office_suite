@@ -82,6 +82,31 @@ bool _applySectionLayout(
       output['lineNumberDistance'] = bounded(value.u16(0), 0, 31680);
     case 0x3011:
       output['restartPageNumbering'] = _boolean(value);
+    case 0x3012:
+      output['suppressEndnotes'] = !_boolean(value);
+    case 0x303b:
+      output['footnotePosition'] = bounded(value.u8(0), 1, 2);
+    case 0x303c:
+      output['footnoteRestart'] = bounded(value.u8(0), 0, 2);
+    case 0x303e:
+      output['endnoteRestart'] = bounded(value.u8(0), 0, 1);
+    case 0x503f:
+    case 0x5041:
+      output[operation.code == 0x503f
+          ? 'footnoteContinuousOffset'
+          : 'endnoteContinuousOffset'] = bounded(
+        value.u16(0),
+        0,
+        16383,
+      );
+    case 0x5040:
+    case 0x5042:
+      _applyNoteNumberFormat(
+        output,
+        operation.code == 0x5040 ? 'footnote' : 'endnote',
+        value.u16(0),
+        warnings,
+      );
     case 0x501c:
       output['pageNumberStart'] = value.u16(0);
     case 0x7044:
@@ -99,6 +124,7 @@ bool _applySectionLayout(
         output['pageNumberFormat'] = formats[index];
       } else {
         output.remove('pageNumberFormat');
+        output['_unsupportedSection'] = true;
         warnings.add(LegacyWordWarning.unsupportedFormatting);
       }
     case 0x5032:
@@ -162,5 +188,100 @@ LegacyWordSectionLayout _sectionLayout(_Props properties) {
     grid: grid,
     gridLinePitchTwips: properties['gridLinePitch'] as int?,
     gridCharacterSpace: properties['gridCharacterSpace'] as int?,
+    footnoteNumbering: _noteNumbering(properties, 'footnote'),
+    endnoteNumbering: _noteNumbering(properties, 'endnote'),
+    footnotePosition: switch (properties['footnotePosition'] as int? ?? 1) {
+      0 => LegacyWordFootnotePosition.sectEnd,
+      1 => LegacyWordFootnotePosition.pageBottom,
+      _ => LegacyWordFootnotePosition.beneathText,
+    },
+    endnotePosition: switch (properties['endnotePosition']) {
+      0 => LegacyWordEndnotePosition.sectEnd,
+      3 => LegacyWordEndnotePosition.docEnd,
+      _ => null,
+    },
+    suppressEndnotes: properties['suppressEndnotes'] == true,
   );
+}
+
+void _applyNoteNumberFormat(
+  _Props output,
+  String kind,
+  int code,
+  Set<LegacyWordWarning> warnings,
+) {
+  // MS-DOC 2.6.4 / Dop97 use the fixed MSONFC table. Word substitutes decimal
+  // for bullet note labels (MS-OE376 2.1.310). The legacy 0x28 code also maps
+  // to decimal in MS-OSHARED; retain a limitation rather than claim its
+  // application-specific appearance was recovered.
+  final fallback = code == 0x17 || code == 0x28;
+  final format = code == 0xff
+      ? 'none'
+      : fallback
+      ? 'decimal'
+      : code < legacyWordMsonfcFormats.length
+      ? legacyWordMsonfcFormats[code]
+      : null;
+  output['${kind}FormatCode'] = code;
+  output['${kind}Format'] = format;
+  output['${kind}FormatFallback'] = fallback;
+  if (format == null || fallback) {
+    output['_unsupportedSection'] = true;
+    warnings.add(LegacyWordWarning.unsupportedFormatting);
+    warnings.add(LegacyWordWarning.unsupportedNoteNumberFormat);
+  }
+}
+
+LegacyWordNoteNumbering _noteNumbering(_Props properties, String kind) {
+  final restart =
+      LegacyWordNoteRestart.values[properties['${kind}Restart'] as int? ?? 0];
+  final offset = properties['${kind}ContinuousOffset'] as int?;
+  return LegacyWordNoteNumbering(
+    format: properties.containsKey('${kind}Format')
+        ? properties['${kind}Format'] as String?
+        : kind == 'footnote'
+        ? 'decimal'
+        : 'lowerRoman',
+    start: restart == LegacyWordNoteRestart.continuous && offset != null
+        ? offset
+        : properties['${kind}Start'] as int? ?? 1,
+    restart: restart,
+    sourceFormatCode: properties['${kind}FormatCode'] as int?,
+    sourceContinuousOffset: offset,
+    usesDecimalFallback: properties['${kind}FormatFallback'] == true,
+  );
+}
+
+extension _DocumentNoteSettings on _StructuredWordParser {
+  _Props _documentNoteProperties() {
+    final (offset, length) = source.pair(31);
+    if (length == 0) return {};
+    final dop = _Bytes(source.table.slice(offset, length));
+    final endPosition = dop.u16(54) & 3;
+    if (endPosition != 0 && endPosition != 3) {
+      throw const FormatException('Invalid Word endnote placement.');
+    }
+    final result = <String, Object?>{'endnotePosition': endPosition};
+    // The older document-wide fields are reserved for later versions. Do not
+    // allow stale bytes to override the section SPRMs of Word 2002 or later.
+    final version = source.compatibility.sourceFibNewVersion ?? source.version;
+    if (version > 0x00d9) return result;
+    final footPosition = (dop.u8(0) >> 5) & 3;
+    final foot = dop.u16(2), end = dop.u16(52);
+    if (footPosition == 3 || (foot & 3) == 3 || (end & 3) == 3) {
+      throw const FormatException('Invalid Word document note numbering.');
+    }
+    result.addAll({
+      'footnotePosition': footPosition,
+      'footnoteRestart': foot & 3,
+      'footnoteStart': foot >> 2,
+      'endnoteRestart': end & 3,
+      'endnoteStart': end >> 2,
+    });
+    if (length >= 500) {
+      _applyNoteNumberFormat(result, 'footnote', dop.u16(492), warnings);
+      _applyNoteNumberFormat(result, 'endnote', dop.u16(494), warnings);
+    }
+    return result;
+  }
 }

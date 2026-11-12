@@ -40,6 +40,38 @@ enum LegacyWordLineNumberRestart { newPage, newSection, continuous }
 
 enum LegacyWordDocumentGrid { none, linesAndChars, lines, snapToChars }
 
+enum LegacyWordNoteRestart { continuous, eachSect, eachPage }
+
+enum LegacyWordFootnotePosition { pageBottom, beneathText, sectEnd }
+
+enum LegacyWordEndnotePosition { sectEnd, docEnd }
+
+/// Resolved automatic note labels. Custom reference marks remain on their
+/// individual references. A source section offset is retained even when the
+/// restart mode makes it inactive, as required by MS-DOC 2.6.4.
+class LegacyWordNoteNumbering {
+  const LegacyWordNoteNumbering({
+    this.format = 'decimal',
+    this.start = 1,
+    this.restart = LegacyWordNoteRestart.continuous,
+    this.sourceFormatCode,
+    this.sourceContinuousOffset,
+    this.usesDecimalFallback = false,
+  });
+
+  /// Native OOXML numbering format, or null for an unknown binary format.
+  /// `none` is an explicit no-label instruction, distinct from null.
+  final String? format;
+  final int start;
+  final LegacyWordNoteRestart restart;
+  final int? sourceFormatCode;
+  final int? sourceContinuousOffset;
+
+  /// The source requested bullet or the legacy 0x28 format, for which the
+  /// conversion uses decimal and retains the original code with a diagnostic.
+  final bool usesDecimalFallback;
+}
+
 /// A source column's width and the space following it, in twips.
 class LegacyWordPageColumn {
   const LegacyWordPageColumn({
@@ -66,6 +98,11 @@ class LegacyWordSectionLayout {
     this.grid = LegacyWordDocumentGrid.none,
     this.gridLinePitchTwips,
     this.gridCharacterSpace,
+    this.footnoteNumbering = const LegacyWordNoteNumbering(),
+    this.endnoteNumbering = const LegacyWordNoteNumbering(format: 'lowerRoman'),
+    this.footnotePosition = LegacyWordFootnotePosition.pageBottom,
+    this.endnotePosition,
+    this.suppressEndnotes = false,
   });
   final bool equalColumnWidths;
   final List<LegacyWordPageColumn> columns;
@@ -85,4 +122,9 @@ class LegacyWordSectionLayout {
 
   /// Difference in character pitch, in 1/4096 point, including its sign.
   final int? gridCharacterSpace;
+  final LegacyWordNoteNumbering footnoteNumbering;
+  final LegacyWordNoteNumbering endnoteNumbering;
+  final LegacyWordFootnotePosition footnotePosition;
+  final LegacyWordEndnotePosition? endnotePosition;
+  final bool suppressEndnotes;
 }

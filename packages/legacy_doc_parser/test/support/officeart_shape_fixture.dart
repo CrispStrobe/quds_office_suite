@@ -7,6 +7,7 @@ import 'structured_word_fixture.dart';
 Uint8List shapePropertyRecord({
   Map<int, int> values = const {},
   Map<int, Uint8List> complex = const {},
+  Map<int, int> complexLengths = const {},
 }) => officeArtRecord(
   0xf00b,
   [
@@ -16,7 +17,7 @@ Uint8List shapePropertyRecord({
     ],
     for (final property in complex.entries) ...[
       ...wordU16(property.key | 0x8000),
-      ...wordU32(property.value.length),
+      ...wordU32(complexLengths[property.key] ?? property.value.length),
     ],
     for (final data in complex.values) ...data,
   ],
@@ -48,6 +49,7 @@ Uint8List officeArtShapeWordFixture({
   List<Uint8List> additionalProperties = const [],
   List<int> characterProperties = const [],
   Uint8List? rawPropertyRecord,
+  (int, int, int, int) anchorBounds = (120, 240, 1560, 960),
 }) {
   final shape = officeArtRecord(0xf004, [
     ...officeArtRecord(
@@ -75,7 +77,15 @@ Uint8List officeArtShapeWordFixture({
   ]);
   return StructuredWordFixture(
     pieces: const [WordFixturePiece('A\x08B\r')],
-    extraTablePairs: {40: drawingAnchor(), 50: drawings},
+    extraTablePairs: {
+      40: drawingAnchor(
+        left: anchorBounds.$1,
+        top: anchorBounds.$2,
+        right: anchorBounds.$3,
+        bottom: anchorBounds.$4,
+      ),
+      50: drawings,
+    },
     characterRuns: [
       WordFixtureFkpRun(
         8192,

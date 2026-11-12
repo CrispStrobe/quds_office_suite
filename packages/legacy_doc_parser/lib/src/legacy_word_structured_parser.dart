@@ -5,6 +5,8 @@ import 'dart:typed_data';
 import 'bounded_cfb_reader.dart';
 import 'compound/cfbf_writer.dart';
 import 'legacy_word_metafile.dart';
+import 'legacy_word_number_formats.dart';
+import 'legacy_word_numbering.dart';
 import 'legacy_word_structured_model.dart';
 import 'legacy_word_structured_render.dart';
 
@@ -19,6 +21,9 @@ part 'legacy_word_stories.dart';
 part 'legacy_word_fields.dart';
 part 'legacy_word_lists.dart';
 part 'legacy_word_tables.dart';
+part 'legacy_word_table_operations.dart';
+part 'legacy_word_table_styles.dart';
+part 'legacy_word_table_text.dart';
 part 'legacy_word_media_parser.dart';
 part 'legacy_word_officeart_parser.dart';
 
@@ -48,8 +53,10 @@ class _StructuredWordParser {
   int runCount = 0;
   int paragraphCount = 0;
   int fieldTextUnits = 0;
-  int renderedHtmlBytes = 0;
   final _fieldResults = <bool>[];
+  final _fieldIndicesByStart = <int, int>{};
+  final _activeFieldIndices = <int>[];
+  final _displayFieldRevisions = <int, _DisplayFieldRevisionCapture>{};
   final _privateFieldSeparators = <int>{};
   final _fieldFlags = <int, int>{};
   List<(int, int)> _invisibleMediaRanges = const [];
@@ -68,6 +75,8 @@ class _StructuredWordParser {
   final numbering = <LegacyWordNumberingDefinition>[];
   final _numberingById = <int, LegacyWordNumberingDefinition>{};
   final _listLevels = <(int, int), _ListLevelData>{};
+  final _tableStyles = <int, LegacyWordTableStyle>{};
+  final _tableTextOperations = <int, _TableTextOperations>{};
   late final Uint16List body;
   late final List<LegacyWordSection> sections;
   late final Set<int> sectionEnds;
@@ -110,6 +119,7 @@ class _StructuredWordParser {
     _validateUnicode(body);
     _readFonts();
     _readStyles();
+    _readTableStyles();
     _readAuthors();
     characterFormatting = _readFkp(paragraph: false);
     paragraphFormatting = _readFkp(paragraph: true);
@@ -129,13 +139,37 @@ class _StructuredWordParser {
     _resolveReferencePresentations();
     final media = _readMediaCatalog(mediaRuns);
     _linkTextboxDrawings(media);
+    final renderer = LegacyWordHtmlRenderer(
+      numberingDefinitions: numbering,
+      defaultTabStopTwips: source.defaultTabStopTwips,
+      media: media,
+    );
+    final previews = renderer.renderAll([
+      blocks,
+      for (final story in stories) story.blocks,
+    ]);
+    final mainHtml = previews.first;
+    for (var i = 0; i < stories.length; i++) {
+      final story = stories[i];
+      stories[i] = LegacyWordStory(
+        id: story.id,
+        kind: story.kind,
+        startCp: story.startCp,
+        endCp: story.endCp,
+        blocks: story.blocks,
+        plainText: story.plainText,
+        safeHtml: previews[i + 1],
+        sectionIndex: story.sectionIndex,
+        headerFooterType: story.headerFooterType,
+      );
+    }
     final orderedWarnings = warnings.toList()
       ..sort((a, b) => a.index.compareTo(b.index));
     return LegacyWordDocument(
       blocks: List.unmodifiable(blocks),
       sections: List.unmodifiable(sections),
       plainText: _plainText(blocks),
-      safeHtml: _renderBlocks(blocks),
+      safeHtml: mainHtml,
       warnings: List.unmodifiable(orderedWarnings),
       stories: List.unmodifiable(stories),
       noteReferences: List.unmodifiable(noteReferences),
@@ -144,6 +178,7 @@ class _StructuredWordParser {
       bookmarks: List.unmodifiable(bookmarks),
       fields: List.unmodifiable(fields),
       numbering: List.unmodifiable(numbering),
+      tableStyles: List.unmodifiable(_tableStyles.values),
       media: media,
       evenAndOddHeaders: source.evenAndOddHeaders,
       defaultTabStopTwips: source.defaultTabStopTwips,
@@ -155,16 +190,23 @@ class _StructuredWordParser {
     if (first == limit) return const [];
     final priorFields = fields.length;
     _collectFields(first, limit, storyId);
+    _prepareFieldRevisions(priorFields);
     _invisibleMediaRanges = _fieldHiddenMediaRanges(priorFields);
     _fieldResults.clear();
-    final paragraphs = <_Paragraph>[];
+    final segments = <(int, int, int, int, _PreparedParagraph)>[];
     var start = first;
     for (var cp = first; cp < limit; cp++) {
       final unit = body[cp];
       if (unit == 13 ||
           unit == 7 ||
           (unit == 12 && sectionEnds.contains(cp + 1))) {
-        paragraphs.add(_paragraph(start, cp, cp + 1, unit));
+        segments.add((
+          start,
+          cp,
+          cp + 1,
+          unit,
+          _prepareParagraph(start, cp + 1),
+        ));
         start = cp + 1;
         if (++paragraphCount > 50000) {
           throw const FormatException(
@@ -179,11 +221,42 @@ class _StructuredWordParser {
           'Word paragraphs exceed the preview complexity limit.',
         );
       }
-      paragraphs.add(_paragraph(start, limit, limit, 0));
+      segments.add((start, limit, limit, 0, _prepareParagraph(start, limit)));
     }
+    // Discover row/cell conditions before reading any character runs. A
+    // structural prepass has no field, media, revision, or reference effects.
+    final contexts = _tableTextOperations.values.any((v) => v.isNotEmpty)
+        ? _tableTextContexts(
+            _assembleTables([
+              for (final segment in segments)
+                _Paragraph(
+                  LegacyWordParagraph(
+                    startCp: segment.$1,
+                    endCp: segment.$3,
+                    runs: const [],
+                    style: const LegacyWordParagraphStyle(),
+                  ),
+                  segment.$5.properties,
+                  segment.$4,
+                ),
+            ]),
+          )
+        : const <int, _TableTextContext>{};
+    final paragraphs = [
+      for (final segment in segments)
+        _paragraph(
+          segment.$1,
+          segment.$2,
+          segment.$3,
+          segment.$4,
+          segment.$5,
+          contexts[segment.$1],
+        ),
+    ];
     if (_fieldResults.isNotEmpty) {
       throw const FormatException('Unclosed Word field.');
     }
+    _finishFieldRevisions();
     return _assembleTables(paragraphs);
   }
 
@@ -214,31 +287,6 @@ class _StructuredWordParser {
 
     content(blocks, 0);
     return plain.toString();
-  }
-
-  String _renderBlocks(List<LegacyWordBlock> blocks) {
-    final html = renderLegacyWordHtml(
-      blocks,
-      numberingDefinitions: numbering,
-      defaultTabStopTwips: source.defaultTabStopTwips,
-    );
-    // The renderer enforces a per-story limit; also cap their combined output
-    // without allocating a second encoded copy of every generated string.
-    for (final rune in html.runes) {
-      renderedHtmlBytes += rune <= 0x7f
-          ? 1
-          : rune <= 0x7ff
-          ? 2
-          : rune <= 0xffff
-          ? 3
-          : 4;
-      if (renderedHtmlBytes > 64 * 1024 * 1024) {
-        throw const FormatException(
-          'Word story previews exceed the output limit.',
-        );
-      }
-    }
-    return html;
   }
 
   void _storyWarnings() {
@@ -272,6 +320,7 @@ class _StructuredWordParser {
     final operations = _decodeSprms(
       bytes,
       budget,
+      stopAtTableProperties: true,
       onPapxOrphanByte: recoverPapxOrphanByte
           ? () {
               warnings.add(LegacyWordWarning.recoveredNonconformingProperties);
@@ -291,9 +340,8 @@ class _StructuredWordParser {
     }
 
     for (final operation in operations) {
-      if ((const {0x3668, 0x3239}.contains(operation.code) &&
-              operation.data.u8(0) != 0) ||
-          const {0xd667, 0xd243}.contains(operation.code)) {
+      if ((operation.code == 0x3668 && operation.data.u8(0) != 0) ||
+          operation.code == 0xd667) {
         warnings.add(LegacyWordWarning.revisionMetadataIncomplete);
       }
       if (operation.code != 0x6646 &&
@@ -303,20 +351,27 @@ class _StructuredWordParser {
         continue;
       }
       final offset = operation.data.u32(0);
+      final data = source.data;
+      final length = data.u16(offset);
+      if (operation.code == 0x646b && length < 10) {
+        throw const FormatException('Invalid Word indirect table properties.');
+      }
       final cached = _indirectProperties[offset];
       if (cached != null) {
         append(cached);
+        if (operation.code == 0x646b) break;
         continue;
       }
       if (!_indirectActive.add(offset)) {
         throw const FormatException('Cyclic Word indirect properties.');
       }
-      final data = source.data;
-      final length = data.u16(offset);
       final nested = _readProperties(data.slice(offset + 2, length), depth + 1);
       _indirectActive.remove(offset);
       _indirectProperties[offset] = nested;
       append(nested);
+      // PTableProps replaces the remainder of its containing array; older
+      // table properties after it are intended for readers without styles.
+      if (operation.code == 0x646b) break;
     }
     return output;
   }
@@ -338,25 +393,35 @@ class _StructuredWordParser {
     },
   );
 
-  _Paragraph _paragraph(int start, int contentEnd, int end, int terminator) {
+  _Paragraph _paragraph(
+    int start,
+    int contentEnd,
+    int end,
+    int terminator,
+    _PreparedParagraph prepared,
+    _TableTextContext? tableContext,
+  ) {
     final terminalCp = end > start ? end - 1 : start;
-    final terminalPiece = source.pieceAt(terminalCp);
-    final papx = paragraphFormatting.at(terminalPiece.fc(terminalCp));
-    final prm = _pieceProperties(terminalPiece);
-    final initial = _resolveStyle(papx.styleIndex);
-    final properties = <String, Object?>{
-      ...initial.paragraph,
-      'styleIndex': papx.styleIndex,
-    };
-    _applyParagraph(
-      [...papx.operations, ...prm],
-      properties,
-      budget,
-      warnings,
-      resolveParagraphStyle: (index) => _resolveStyle(index).paragraph,
-    );
-    final styleIndex = properties['styleIndex'] as int? ?? papx.styleIndex;
-    final resolved = _resolveStyle(styleIndex);
+    _ResolvedStyle resolve(int index) => tableContext == null
+        ? _resolveStyle(index)
+        : _resolveStyleOverTable(index, tableContext);
+    final properties = tableContext == null
+        ? prepared.properties
+        : <String, Object?>{
+            ...resolve(prepared.styleIndex).paragraph,
+            'styleIndex': prepared.styleIndex,
+          };
+    if (tableContext != null) {
+      _applyParagraph(
+        prepared.operations,
+        properties,
+        budget,
+        warnings,
+        resolveParagraphStyle: (index) => resolve(index).paragraph,
+      );
+    }
+    final styleIndex = properties['styleIndex'] as int? ?? prepared.styleIndex;
+    final resolved = resolve(styleIndex);
     final characterBase = _applyListFormatting(properties, resolved.character);
     final style = _paragraphStyle(properties, styleIndex);
     final formattingRevision = _paragraphRevision(properties);
@@ -468,6 +533,7 @@ class _StructuredWordParser {
 
       while (cp < spanEnd) {
         final unit = body[cp];
+        _captureFieldRevision(cp, unit, character, runStyle.hidden);
         if (_referenceAnchors.contains(cp)) {
           _referenceCharacterStyles[cp] = runStyle;
           _referencePresentations[cp] = LegacyWordMediaPresentation(
@@ -563,6 +629,7 @@ class _StructuredWordParser {
         runs: List.unmodifiable(runs),
         style: style,
         formattingRevision: formattingRevision,
+        numberingRevision: _numberingRevision(properties),
         mark: mark,
         revisionSaveId: properties['paragraphSaveId'] as int?,
       ),
@@ -663,8 +730,13 @@ class _StructuredWordParser {
     );
   }
 
-  LegacyWordCharacterStyle _characterStyle(_Props properties) {
-    final fontIndex = properties['fontIndex'] as int? ?? defaultFont;
+  LegacyWordCharacterStyle _characterStyle(
+    _Props properties, {
+    bool useDocumentDefaultFont = true,
+  }) {
+    final fontIndex =
+        properties['fontIndex'] as int? ??
+        (useDocumentDefaultFont ? defaultFont : null);
     String? font;
     if (fontIndex != null) {
       if (fontIndex >= 0 && fontIndex < fonts.length) {
@@ -685,6 +757,7 @@ class _StructuredWordParser {
       hidden: properties['hidden'] == true,
       fontName: font,
       fontSizeHalfPoints: properties['fontSize'] as int?,
+      kerningThresholdHalfPoints: properties['kerning'] as int? ?? 0,
       colorHex: properties['color'] as String?,
       highlightHex: properties['highlight'] as String?,
       verticalAlign: switch (properties['verticalAlign']) {

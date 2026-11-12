@@ -13,7 +13,14 @@ class _OfficeArtProperties {
       final old = values[entry.key];
       var value = entry.value;
       if (old != null &&
-          const {0x00bf, 0x017f, 0x01bf, 0x01ff, 0x023f}.contains(entry.key)) {
+          const {
+            0x00bf,
+            0x017f,
+            0x01bf,
+            0x01ff,
+            0x023f,
+            0x073f,
+          }.contains(entry.key)) {
         final used = value ~/ 65536;
         final inherited = old ~/ 65536;
         value =
@@ -37,8 +44,68 @@ class _OfficeArtShapeReader {
   final unsupported = <int>{};
   Map<int, int> get p => properties.values;
   int pointCount = 0;
+  late final Uint8List? _inkData = _readInkData();
+  int get inkByteLength => _inkData?.length ?? 0;
+
+  Uint8List? _readInkData() {
+    if (properties.complex.containsKey(0x073f)) {
+      throw const FormatException(
+        'OfficeArt ink Boolean properties are complex.',
+      );
+    }
+    if ((p[0x0700] ?? 0) != 0) {
+      throw const FormatException('Noncomplex OfficeArt ink must be absent.');
+    }
+    final bytes = properties.complex[0x0700];
+    if (bytes == null) return null;
+    // MS-ODRAW IMsoInkData: GUID, uint32 cbBlob, then exactly cbBlob ISF bytes.
+    // pInkData is an envelope, not a bare ISF stream or an arbitrary freeform.
+    const guid = [
+      0x34,
+      0x1a,
+      0x7c,
+      0x93,
+      0x1d,
+      0x15,
+      0x10,
+      0x46,
+      0x9c,
+      0xa6,
+      0xa8,
+      0xcc,
+      0x9b,
+      0xdb,
+      0x5d,
+      0x83,
+    ];
+    if (bytes.length < 20 ||
+        bytes.length > LegacyWordOfficeArtInk.maxDataLength + 20) {
+      throw const FormatException('Invalid OfficeArt ink envelope extent.');
+    }
+    for (var i = 0; i < guid.length; i++) {
+      if (bytes[i] != guid[i]) {
+        throw const FormatException('Invalid OfficeArt ink envelope identity.');
+      }
+    }
+    final input = _Bytes(bytes), length = input.u32(16);
+    if (length != bytes.length - 20) {
+      throw const FormatException('Invalid OfficeArt ink envelope byte count.');
+    }
+    return input.slice(20, length);
+  }
 
   LegacyWordOfficeArtShape read() {
+    final inkData = _inkData;
+    final ink =
+        inkData != null || p.containsKey(0x073f) || p.containsKey(0x0700)
+        ? LegacyWordOfficeArtInk(
+            data: inkData,
+            annotation: _used(0x073f, 3),
+            hitTestInk: _used(0x073f, 2),
+            renderShape: _used(0x073f, 1),
+            renderInk: _used(0x073f, 0),
+          )
+        : null;
     final fill = p.keys.any((id) => id >= 0x0180 && id <= 0x01bf)
         ? LegacyWordOfficeArtFill(
             enabled: _used(0x01bf, 4),
@@ -85,6 +152,24 @@ class _OfficeArtShapeReader {
             autoTextMargin: _used(0x00bf, 3),
           )
         : null;
+    const positionProperties = {0x038f, 0x0390, 0x0391, 0x0392};
+    final position =
+        positionProperties.any(
+          (id) => p.containsKey(id) || properties.complex.containsKey(id),
+        )
+        ? LegacyWordOfficeArtPosition(
+            horizontalMode: p[0x038f],
+            horizontalRelativeTo: p[0x0390],
+            verticalMode: p[0x0391],
+            verticalRelativeTo: p[0x0392],
+          )
+        : null;
+    for (final id in positionProperties) {
+      final maximum = id == 0x038f || id == 0x0391 ? 5 : 3;
+      if (properties.complex.containsKey(id) || (p[id] ?? 0) > maximum) {
+        unsupported.add(id);
+      }
+    }
     final geometry = _geometry();
     if (fill?.type != null && fill!.type != 0) unsupported.add(0x0180);
     if (line?.type != null && line!.type != 0) unsupported.add(0x01c4);
@@ -120,6 +205,17 @@ class _OfficeArtShapeReader {
       if (id >= 0x0140 && id <= 0x02ff && !mapped.contains(id)) {
         unsupported.add(id);
       }
+      // WordArt and unmodeled shape/group properties can
+      // change appearance or placement. Plain name/description metadata does
+      // not. Do not turn such a shape into an apparently complete plain path.
+      if ((id >= 0x00c0 && id <= 0x00ff) ||
+          (id >= 0x0300 &&
+              id <= 0x07ff &&
+              id != 0x0380 &&
+              id != 0x0381 &&
+              !positionProperties.contains(id))) {
+        unsupported.add(id);
+      }
     }
     // Fill rectangles, recoloring, and inset/background-line styles alter
     // appearance beyond the direct solid-color subset.
@@ -131,6 +227,7 @@ class _OfficeArtShapeReader {
     }
     return LegacyWordOfficeArtShape(
       type: type,
+      sourceFlags: flags,
       rotationFixed16: (p[0x0004] ?? 0).toSigned(32),
       flipHorizontal: (flags & 0x40) != 0,
       flipVertical: (flags & 0x80) != 0,
@@ -139,6 +236,9 @@ class _OfficeArtShapeReader {
       line: line,
       shadow: shadow,
       text: text,
+      position: position,
+      ink: ink,
+      discussionAnchor: p[0x0307] == 1,
       unsupportedProperties: unsupported.toList()..sort(),
     );
   }
@@ -228,6 +328,18 @@ class _OfficeArtShapeReader {
     final points = <LegacyWordOfficeArtPoint>[];
     pointCount = array.$2;
     for (var i = 0; i < array.$2; i++) {
+      if (array.$3 == 4) {
+        // pVertices' 0xFFF0 form stores two signed 16-bit coordinates. Both
+        // native DOC playback and an independently implemented OfficeArt
+        // producer confirm this POINT-specific interpretation of IMsoArray.
+        points.add(
+          LegacyWordOfficeArtPoint(
+            array.$1.i16(i * 4),
+            array.$1.i16(i * 4 + 2),
+          ),
+        );
+        continue;
+      }
       final x = array.$1.u32(i * 8), y = array.$1.u32(i * 8 + 4);
       if ((x >= 0x80000000 && x <= 0x8000007f) ||
           (y >= 0x80000000 && y <= 0x8000007f)) {
@@ -354,7 +466,7 @@ class _OfficeArtShapeReader {
     return LegacyWordOfficeArtGeometry(bounds: bounds, path: path);
   }
 
-  (_Bytes, int)? _array(Uint8List bytes, int id, int size, int limit) {
+  (_Bytes, int, int)? _array(Uint8List bytes, int id, int size, int limit) {
     final input = _Bytes(bytes);
     final count = input.u16(0), allocated = input.u16(2);
     final storedSize = input.u16(4);
@@ -365,10 +477,14 @@ class _OfficeArtShapeReader {
     if (actualSize == 0 || input.length != 6 + count * actualSize) {
       throw const FormatException('Invalid OfficeArt array extent.');
     }
-    if (storedSize != size) {
-      unsupported.add(id); // Truncated POINT encoding is retained, not guessed.
+    final packedPoints = id == 0x0145 && storedSize == 0xfff0;
+    if ((storedSize != size && !packedPoints) || (packedPoints && type == 19)) {
+      // Arc presets use a different unsigned packed-coordinate convention in
+      // native readers. Keep that unverified case inert instead of applying
+      // the signed custom-path interpretation to it.
+      unsupported.add(id);
       return null;
     }
-    return (_Bytes(input.slice(6, input.length - 6)), count);
+    return (_Bytes(input.slice(6, input.length - 6)), count, actualSize);
   }
 }

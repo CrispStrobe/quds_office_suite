@@ -44,6 +44,10 @@ class _StructuredWordWriter {
   final _headerFooters = <int, List<(bool, String, String)>>{};
   final _storyParts = <String, String>{};
   final _numberingIds = <int>{};
+  final _numberingReferences = <int, int>{};
+  final _resolvedParagraphNumbering = <LegacyWordParagraph, int>{};
+  final _numberingInstances = <int, _WordNumberingInstance>{};
+  final _tableStyleDefinitions = <int, LegacyWordTableStyle>{};
   var _tableDepth = 0;
   final _fields = <int, LegacyWordField>{};
   final _fieldChildren = <int, List<LegacyWordField>>{};
@@ -65,7 +69,9 @@ class _StructuredWordWriter {
   var _breaks = 0;
 
   Uint8List convert() {
+    _prepareTableStyleDefinitions();
     _prepareStories();
+    _prepareNumbering();
     _prepareMedia();
     _prepareSemantics();
     _sortEvents();
@@ -155,8 +161,7 @@ class _StructuredWordWriter {
     _package.relate('', _officeDocumentRelationship, 'word/document.xml');
     _writeAuxiliaryStories();
     _writeNumbering();
-    _writeEvidence();
-    if (_styles.isNotEmpty) {
+    if (_styles.isNotEmpty || document.tableStyles.isNotEmpty) {
       final styles = _styleDefinitions();
       if (_xml.byteEstimate + styles.byteEstimate > kLegacyWordDocxXmlLimit) {
         _tooComplex();
@@ -168,6 +173,9 @@ class _StructuredWordWriter {
         'styles.xml',
       );
     }
+    // Style serialization can add preservation counts and fallback evidence.
+    // Serialize that evidence only once every native style has been emitted.
+    _writeEvidence();
     _summarizeLimitations();
     return _package.encode();
   }
@@ -187,16 +195,7 @@ class _StructuredWordWriter {
     _bool('keepLines', style.keepTogether);
     _bool('pageBreakBefore', style.pageBreakBefore);
     _bool('widowControl', style.layout.widowControl);
-    final listId = style.listId?.abs();
-    if (listId != null && listId != 0) {
-      if (_numberingIds.contains(listId)) {
-        _xml.add(
-          '<w:numPr><w:ilvl w:val="${style.listLevel ?? 0}"/><w:numId w:val="$listId"/></w:numPr>',
-        );
-      } else {
-        limitations.add(LegacyWordConversionLimitation.fieldsLists);
-      }
-    }
+    _paragraphNumbering(paragraph);
     _bool('suppressLineNumbers', style.layout.suppressLineNumbers);
     _paragraphDecorations(style, _xml, paragraph.startCp);
     _paragraphLayoutBeforeSpacing(style.layout);
@@ -246,98 +245,6 @@ class _StructuredWordWriter {
     _count('paragraphs');
   }
 
-  void _table(LegacyWordTable table) {
-    if (++_tableDepth > 63) {
-      throw const FormatException('Word tables are nested too deeply.');
-    }
-    _count('tables');
-    _xml.add(
-      '<w:tbl><w:tblPr><w:tblW w:w="0" w:type="auto"/>'
-      '</w:tblPr>',
-    );
-    // Use all row edges so differently split rows share a valid table grid.
-    final grid = <int>{0};
-    var canWriteGrid = table.rows.isNotEmpty;
-    for (final row in table.rows) {
-      var offset = 0;
-      for (final cell in row.cells) {
-        final width = cell.widthTwips;
-        if (width == null || width <= 0) {
-          canWriteGrid = false;
-          break;
-        }
-        offset += width;
-        grid.add(offset);
-      }
-    }
-    final edges = grid.toList()..sort();
-    final edgeIndices = {for (var i = 0; i < edges.length; i++) edges[i]: i};
-    if (canWriteGrid) {
-      _xml.add('<w:tblGrid>');
-      for (var i = 1; i < edges.length; i++) {
-        _xml.add('<w:gridCol w:w="${edges[i] - edges[i - 1]}"/>');
-      }
-      _xml.add('</w:tblGrid>');
-    }
-    for (final row in table.rows) {
-      _countBreak();
-      _xml.add('<w:tr>');
-      if (row.isHeader) _xml.add('<w:trPr><w:tblHeader/></w:trPr>');
-      var offset = 0;
-      for (final cell in row.cells) {
-        _countBreak();
-        _count('cells');
-        _xml.add('<w:tc><w:tcPr>');
-        final width = cell.widthTwips;
-        if (width != null && width > 0) {
-          _xml.add('<w:tcW w:w="$width" w:type="dxa"/>');
-          if (canWriteGrid) {
-            final start = edgeIndices[offset]!;
-            final end = edgeIndices[offset + width]!;
-            if (end - start > 1) {
-              _xml.add('<w:gridSpan w:val="${end - start}"/>');
-            }
-          }
-          offset += width;
-        }
-        if (cell.mergeStart || cell.mergeContinue) {
-          _xml.add(
-            '<w:hMerge w:val="${cell.mergeStart ? 'restart' : 'continue'}"/>',
-          );
-        }
-        if (cell.verticalMergeStart || cell.verticalMergeContinue) {
-          _xml.add(
-            '<w:vMerge w:val="${cell.verticalMergeStart ? 'restart' : 'continue'}"/>',
-          );
-        }
-        if (cell.shading != null) {
-          _shading(
-            cell.shading!,
-            _xml,
-            'tableCell',
-            cell.blocks.isEmpty ? null : cell.blocks.first.startCp,
-          );
-        }
-        _xml.add('</w:tcPr>');
-        for (final block in cell.blocks) {
-          switch (block) {
-            case LegacyWordParagraph():
-              _paragraph(block);
-            case LegacyWordTable():
-              _table(block);
-          }
-        }
-        if (cell.blocks.isEmpty || cell.blocks.last is LegacyWordTable) {
-          _xml.add('<w:p/>');
-        }
-        _xml.add('</w:tc>');
-      }
-      _xml.add('</w:tr>');
-    }
-    _xml.add('</w:tbl>');
-    _tableDepth--;
-  }
-
   void _writeRun(LegacyWordRun run) {
     if (run.inserted) _revisionStart('ins', run);
     if (run.deleted) _revisionStart('del', run);
@@ -381,6 +288,7 @@ class _StructuredWordWriter {
     if (style.spacingTwips != null || resetDefaults) {
       _xml.add('<w:spacing w:val="${style.spacingTwips ?? 0}"/>');
     }
+    _xml.add('<w:kern w:val="${_kerningThreshold(style)}"/>');
     if (style.positionHalfPoints != null || resetDefaults) {
       _xml.add('<w:position w:val="${style.positionHalfPoints ?? 0}"/>');
     }
@@ -401,6 +309,14 @@ class _StructuredWordWriter {
       );
     }
     _xml.add('<w:vertAlign w:val="${style.verticalAlign.name}"/>');
+  }
+
+  static int _kerningThreshold(LegacyWordCharacterStyle style) {
+    final value = style.kerningThresholdHalfPoints;
+    if (value < 0 || value > 3276) {
+      throw const FormatException('Invalid Word kerning threshold.');
+    }
+    return value;
   }
 
   void _writeRunText(LegacyWordRun run) {
@@ -443,14 +359,33 @@ class _StructuredWordWriter {
   void _section(LegacyWordSection section) {
     final breakBefore =
         _sectionBreaks[section] ?? LegacyWordSectionBreak.newPage;
-    _xml.add('<w:sectPr>');
-    final sectionIndex = _sectionIndices[section] ?? 0;
-    final references = _headerFooters[sectionIndex] ?? const [];
-    for (final reference in references) {
-      _xml.add(
-        '<w:${reference.$1 ? 'header' : 'footer'}Reference w:type="${reference.$2}" r:id="${reference.$3}"/>',
-      );
+    _xml.add('<w:sectPr');
+    _revisionSaveAttribute('rsidR', section.revisionSaveId);
+    _xml.add('>');
+    _sectionProperties(section, breakBefore, includeReferences: true);
+    _sectionFormattingRevision(section, breakBefore);
+    _xml.add('</w:sectPr>');
+    _count('sections');
+  }
+
+  void _sectionProperties(
+    LegacyWordSection section,
+    LegacyWordSectionBreak breakBefore, {
+    bool includeReferences = false,
+    bool historical = false,
+  }) {
+    // CT_SectPrBase (inside sectPrChange) cannot contain header/footer
+    // references or a nested change record.
+    if (includeReferences) {
+      final sectionIndex = _sectionIndices[section] ?? 0;
+      final references = _headerFooters[sectionIndex] ?? const [];
+      for (final reference in references) {
+        _xml.add(
+          '<w:${reference.$1 ? 'header' : 'footer'}Reference w:type="${reference.$2}" r:id="${reference.$3}"/>',
+        );
+      }
     }
+    _sectionNotes(section, historical: historical);
     _xml.add(
       '<w:type w:val="${switch (breakBefore) {
         LegacyWordSectionBreak.continuous => 'continuous',
@@ -460,7 +395,9 @@ class _StructuredWordWriter {
         LegacyWordSectionBreak.oddPage => 'oddPage',
       }}"/>',
     );
-    if (section.pageWidthTwips != null || section.pageHeightTwips != null) {
+    if (section.pageWidthTwips != null ||
+        section.pageHeightTwips != null ||
+        section.landscape) {
       _xml.add('<w:pgSz');
       _optional('w', section.pageWidthTwips);
       _optional('h', section.pageHeightTwips);
@@ -490,12 +427,11 @@ class _StructuredWordWriter {
     }
     _sectionNumbering(section.layout);
     _sectionColumns(section);
+    if (section.layout.suppressEndnotes) _xml.add('<w:noEndnote/>');
     if (section.titlePage) {
       _xml.add('<w:titlePg/>');
     }
     _sectionGrid(section.layout);
-    _xml.add('</w:sectPr>');
-    _count('sections');
   }
 
   void _optional(String name, int? value) {
@@ -534,6 +470,7 @@ class _StructuredWordWriter {
       // shared style that could affect other paragraphs with the same index.
       xml.add('</w:style>');
     }
+    _tableStyleXml(xml);
     xml.add('</w:styles>');
     return xml;
   }

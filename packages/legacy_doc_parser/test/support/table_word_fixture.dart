@@ -25,11 +25,15 @@ class TableFixtureParagraph {
   final List<int> character;
 }
 
-List<int> tableFixtureDefinition(List<int> widths, {List<int>? flags}) {
-  var edge = 0;
+List<int> tableFixtureDefinition(
+  List<int> widths, {
+  List<int>? flags,
+  int origin = 0,
+}) {
+  var edge = origin;
   final body = <int>[
     widths.length,
-    ...wordU16(0),
+    ...wordU16(origin),
     for (final width in widths) ...wordU16(edge += width),
     for (var i = 0; i < widths.length; i++) ...[
       ...wordU16(flags?[i] ?? 0),
@@ -44,6 +48,8 @@ Uint8List tableFixture(
   Map<int, WordFixtureStyle> styles = const {
     0: WordFixtureStyle(name: 'Normal', builtinId: 0),
   },
+  List<WordFixtureSection> sections = const [],
+  Map<int, List<int>> extraTablePairs = const {},
 }) {
   var offset = 8192;
   final paragraphRuns = <WordFixtureFkpRun>[];
@@ -78,5 +84,7 @@ Uint8List tableFixture(
     paragraphRuns: paragraphRuns,
     characterRuns: characterRuns,
     styles: styles,
+    sections: sections,
+    extraTablePairs: extraTablePairs,
   ).build();
 }
