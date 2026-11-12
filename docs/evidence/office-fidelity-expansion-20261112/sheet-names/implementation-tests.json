@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "command": "dart test test/sheet_qualified_names_test.dart test/sheet_formula_cache_fidelity_test.dart test/sheet_formula_test.dart test/sheet_rename_fidelity_test.dart test/sheet_rename_adversarial_test.dart --reporter expanded",
+  "passed": 152,
+  "failed": 0,
+  "analyzer": "No issues found: lib/src/sheet and two cache/name test files",
+  "current_rename_oracle": "passed across all three saves; 19 Python controls passed",
+  "new_qualified_name_exports": [
+    {
+      "path": "packages/quds_office_engine/build/fidelity-sheet-qualified-names/recalculated-1.xlsx",
+      "sha256": "c4fa52c78f004ccbcaba782d72abd673aa46a84585cf15b86c27a730a1a349cf"
+    },
+    {
+      "path": "packages/quds_office_engine/build/fidelity-sheet-qualified-names/recalculated-2.xlsx",
+      "sha256": "c3f75281234a1068d659f5f03eabbd2010be479c5c91882efeb5bbd775f160d3"
+    },
+    {
+      "path": "packages/quds_office_engine/build/fidelity-sheet-qualified-names/recalculated-3.xlsx",
+      "sha256": "d462e993d71869bd6fe74ba9172a6dfc6a28824214a3c0c6718566fd5d86943c"
+    },
+    {
+      "path": "packages/quds_office_engine/build/fidelity-sheet-qualified-names/renamed-1.xlsx",
+      "sha256": "37308248e1d94dc391cc86e03e6dc699ca2dd9ca4ddcbc4622e56756ebd64e27"
+    },
+    {
+      "path": "packages/quds_office_engine/build/fidelity-sheet-qualified-names/renamed-2.xlsx",
+      "sha256": "c2521837da04db528fc88ebc4eee61e42c9725c813e4b92a9a91d70e641a9c5e"
+    },
+    {
+      "path": "packages/quds_office_engine/build/fidelity-sheet-qualified-names/renamed-3.xlsx",
+      "sha256": "a22b8db0c0a72d08247517fd3313cf45a84863c38ddebad87b4157b24434a067"
+    },
+    {
+      "path": "packages/quds_office_engine/build/fidelity-sheet-qualified-names/source.xlsx",
+      "sha256": "aeb3b6c808a4d4ad43b61e45e8e04664e9cc3581c65c6d94eac8590030ff0d8f"
+    }
+  ],
+  "native_schema_render_status": "pending independent external acceptance",
+  "semantic_limit": "Explicit qualification resolves worksheet-local names only. Computed/relative/external/3D/whole-row-column definitions and OFFSET of scoped names retain authored typed caches."
+}

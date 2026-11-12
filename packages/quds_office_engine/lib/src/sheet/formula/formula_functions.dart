@@ -24,10 +24,18 @@ abstract final class FormulaFunctions {
     final List<Object?> vals = args
         .map((FormulaNode a) => a.eval(ctx))
         .toList();
-    // Text-producing functions must not stringify an actual error into
-    // ordinary text. Literal strings with the same spelling remain strings.
+    // Aggregators must not ignore native errors as nonnumeric text, and text
+    // functions must not turn them into ordinary strings. Error-looking text
+    // remains text, including when returned by a named scalar constant.
     if (ctx.tracksErrorTypes &&
         <String>{
+          'SUM',
+          'AVERAGE',
+          'MIN',
+          'MAX',
+          'PRODUCT',
+          'SUMPRODUCT',
+          'SUMSQ',
           'CONCAT',
           'CONCATENATE',
           'TEXTJOIN',
@@ -552,7 +560,7 @@ abstract final class FormulaFunctions {
         if (_aliases.containsKey(n)) {
           return call(_aliases[n]!, args, ctx);
         }
-        return const FormulaErrorValue('#NAME?');
+        return const FormulaErrorValue('#NAME?', isUnsupported: true);
     }
   }
 
@@ -1221,6 +1229,12 @@ abstract final class FormulaFunctions {
     } else if (first is RangeNode) {
       origin = first.range.start;
     } else if (first is NamedRangeNode) {
+      final definition = first.resolve(ctx.workbook, ctx.sheet);
+      if (first.sheetName != null || definition?.localSheetId != null) {
+        // OFFSET requires dynamic target dependencies beyond a name's range.
+        // Do not accidentally extend it by the new scoped-name parser.
+        throw UnsupportedError('OFFSET of scoped names is not evaluated');
+      }
       final SmlNamedRange? named = ctx.workbook.namedRange(first.name);
       origin = named?.range.start;
     }

@@ -40,6 +40,7 @@ class FormulaDepGraph {
     rebuild();
     final List<String> order = <String>[];
     final Set<String> visiting = <String>{};
+    final List<String> path = <String>[];
     final Set<String> visited = <String>{};
 
     void visit(String node) {
@@ -47,13 +48,17 @@ class FormulaDepGraph {
         return;
       }
       if (!visiting.add(node)) {
-        circular.add(node);
+        // Every participant must be marked before any old numeric cache is
+        // consulted; marking only the first would leave stale values in peers.
+        circular.addAll(path.skip(path.indexOf(node)));
         return;
       }
+      path.add(node);
       for (final String d in _deps[node] ?? const <String>{}) {
         visit(d);
       }
       visiting.remove(node);
+      path.removeLast();
       visited.add(node);
       order.add(node);
     }
@@ -80,9 +85,8 @@ class FormulaDepGraph {
       );
       if (keepCachedOnUnsupported &&
           result is FormulaErrorValue &&
-          _unsupported(result.code) &&
-          cached != null &&
-          !(cell.type == SmlCellType.error && _unsupported(cached))) {
+          result.isUnsupported &&
+          cached != null) {
         continue;
       }
       cell.value = FormulaErrorValue.unwrap(result);
@@ -105,40 +109,71 @@ class FormulaDepGraph {
 
   Set<String> _collect(String formula, SmlWorksheet sheet) {
     final Set<String> out = <String>{};
-    void walk(FormulaNode node) {
+    void walk(FormulaNode node, [Set<String> bindings = const {}]) {
       switch (node) {
         case CellNode(:final SmlCellRef ref, :final String? sheetName):
-          final SmlWorksheet target = sheetName == null
+          final SmlWorksheet? target = sheetName == null
               ? sheet
-              : (workbook.sheetByName(sheetName) ?? sheet);
-          out.add(_key(target, ref));
+              : workbook.sheetByName(sheetName);
+          if (target != null) out.add(_key(target, ref));
         case RangeNode(:final SmlRange range, :final String? sheetName):
-          final SmlWorksheet target = sheetName == null
+          final SmlWorksheet? target = sheetName == null
               ? sheet
-              : (workbook.sheetByName(sheetName) ?? sheet);
-          for (final SmlCellRef ref in range.cells) {
-            out.add(_key(target, ref));
+              : workbook.sheetByName(sheetName);
+          if (target != null) {
+            for (final SmlCellRef ref in range.cells) {
+              out.add(_key(target, ref));
+            }
           }
         case BinaryNode(:final FormulaNode left, :final FormulaNode right):
-          walk(left);
-          walk(right);
+          walk(left, bindings);
+          walk(right, bindings);
         case UnaryNode(:final FormulaNode expr):
-          walk(expr);
-        case CallNode(:final List<FormulaNode> args):
+          walk(expr, bindings);
+        case CallNode(:final String name, :final List<FormulaNode> args):
+          if (name == 'LET' && args.length >= 3 && args.length.isOdd) {
+            final local = {...bindings};
+            for (var i = 0; i < args.length - 1; i += 2) {
+              walk(args[i + 1], local);
+              final binding = args[i];
+              if (binding is NamedRangeNode && binding.sheetName == null) {
+                local.add(binding.name.toUpperCase());
+              }
+            }
+            walk(args.last, local);
+            break;
+          }
           for (final FormulaNode a in args) {
-            walk(a);
+            walk(a, bindings);
           }
         case LiteralNode():
           break;
-        case NamedRangeNode(:final String name):
-          final SmlNamedRange? named = workbook.namedRange(name);
-          if (named == null) {
+        case NamedRangeNode():
+          if (node.sheetName == null &&
+              bindings.contains(node.name.toUpperCase())) {
             break;
           }
-          final SmlWorksheet target =
-              workbook.sheetByName(named.sheetName) ?? sheet;
-          for (final SmlCellRef ref in named.range.cells) {
-            out.add(_key(target, ref));
+          final named = node.resolve(workbook, sheet);
+          if (named is! SmlNamedRange) {
+            if (named is SmlFormulaName || node.sheetName != null) {
+              // Validate only scalar/opaque definitions. An unsupported name
+              // means the whole expression must keep its authored cache, not
+              // acquire partial dependencies that could manufacture a cycle.
+              node.eval(
+                FormulaContext(
+                  workbook: workbook,
+                  sheet: sheet,
+                  origin: const SmlCellRef(0, 0),
+                ),
+              );
+            }
+            break;
+          }
+          final target = workbook.sheetByName(named.sheetName);
+          if (target != null) {
+            for (final SmlCellRef ref in named.range.cells) {
+              out.add(_key(target, ref));
+            }
           }
       }
     }
@@ -146,13 +181,11 @@ class FormulaDepGraph {
     try {
       walk(parseFormula(formula));
     } on Object {
-      // Broken formula — no deps.
+      // Broken or unsupported formula: discard every partial dependency.
+      out.clear();
     }
     return out;
   }
-
-  static bool _unsupported(Object? value) =>
-      value is String && (value == '#NAME?' || value.startsWith('#ERROR!'));
 
   static String _key(SmlWorksheet sheet, SmlCellRef ref) =>
       '${sheet.name}!${ref.a1}';
