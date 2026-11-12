@@ -1,0 +1,24 @@
+{
+  "scope": "Renderer format discovery smoke test using earlier verified actual-host uploads; final expansion gate will regenerate these exports.",
+  "app_commit": "b7edb919def85ef78d6d34ba6eb7c74d61e0bd4d",
+  "files": [
+    {
+      "path": "word-docm-save.docm",
+      "sha256": "dfea2efdce22d886e46fe67af9eab18eb77b44e90e717d220599a88c97e97124",
+      "bytes": 5992,
+      "original_path": "build/fidelity-host/word-docm-save.docm"
+    },
+    {
+      "path": "word-dotm-save.dotm",
+      "sha256": "51ef170f7fb8f466b0a3026eef2d650a7d1659f072822b76ae5fbe824df3d8b6",
+      "bytes": 5999,
+      "original_path": "build/fidelity-host/word-dotm-save.dotm"
+    },
+    {
+      "path": "word-dotx-save.dotx",
+      "sha256": "1e4aae812f7cbfb2bf82d03b489801e8a7de2e0d48de7f54638ed11bcc437a38",
+      "bytes": 5119,
+      "original_path": "build/fidelity-host/word-dotx-save.dotx"
+    }
+  ]
+}

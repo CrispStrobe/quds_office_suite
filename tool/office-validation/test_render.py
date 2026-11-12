@@ -18,6 +18,32 @@ def record(name, *, text='Known document text', pixels=None, pages=1):
             'pixel_sha256': ['1' * 64] * pages if pixels is None else pixels}
 
 
+class OfficePackageDiscoveryTests(unittest.TestCase):
+    def test_word_templates_and_macro_packages_are_required_native_inputs(self):
+        # These are host save formats in the authored inventory. A successful
+        # native run must not silently leave them out of its input set.
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            expected = ['word.docx', 'macro.docm', 'template.dotx',
+                        'macro-template.dotm', 'UPPER.DOTM',
+                        'nested/sheet.xlsx', 'nested/slides.pptx']
+            for name in expected + ['legacy.doc', 'legacy.xls', 'notes.txt']:
+                path = root / name
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_bytes(b'input-discovery-control')
+            (root / 'directory.docm').mkdir()
+            self.assertEqual(
+                [path.relative_to(root).as_posix()
+                 for path in render.discover_inputs(root)], sorted(expected))
+
+    def test_template_only_capture_is_not_an_empty_corpus(self):
+        for extension in ('.docm', '.dotx', '.dotm'):
+            with self.subTest(extension=extension), tempfile.TemporaryDirectory() as folder:
+                source = Path(folder) / ('host-save' + extension)
+                source.write_bytes(b'input-discovery-control')
+                self.assertEqual(render.discover_inputs(folder), [source])
+
+
 class PixelEvidenceTests(unittest.TestCase):
     def test_binary_whitespace_and_hash_pixels_are_not_header_text(self):
         rgb = b'\n# '

@@ -1,0 +1,26 @@
+{
+  "scope": "Native discovery includes all host Word package formats. This smoke run validates discovery/import of three earlier verified host captures; the final gate regenerates and validates the complete expansion corpus.",
+  "red_base_commit": "c694bbfa9f21d725246d88993e5c43ece3443ed7",
+  "regressions": {
+    "tests": 2,
+    "old_behavior": "Mixed corpus silently omitted DOCM, DOTX and DOTM; variant-only inputs were rejected as an empty corpus.",
+    "red_exit_code": 1
+  },
+  "renderer_controls": {
+    "passed": 53
+  },
+  "native_smoke": {
+    "files": 3,
+    "rendered_files": 3,
+    "pages": 3,
+    "failures": []
+  },
+  "runtime": "LibreOffice24.2.7.2 via frozen LibreOfficeKit embedding adapter",
+  "renderer_source_sha256": "f330ca3b3c0cfdebaffebaa2912b63c725a1aa0370771df5912dec9919a882de",
+  "evidence_sha256": {
+    "discovery-red.txt": "616063ed3749bd8384abddf75d42948d9cebce855ab51109599a8e2ce9f6390b",
+    "input-manifest.json": "37fce969dfc3167aa9e257ccc21982c27a210216feaf5350366af02596c9744a",
+    "renderer-controls.txt": "07faa8df7ed5b3e80b67cf6b461890be4207e3405c22fc93d3e29774501a9bb8",
+    "smoke-native-report.json": "dd0708c32b0663ddaca9088c8b60ba42d86c49888c7fd250df4d7039e66dc416"
+  }
+}
