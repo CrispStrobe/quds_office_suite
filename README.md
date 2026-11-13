@@ -18,6 +18,14 @@
 
 The core suite has an engine, reports library, Flutter editor and desktop app. This fork also carries the maintained standalone legacy DOC parser.
 
+Hosts can register their actual font families and styles for shared Word
+layout, painting and PDF export. Unloaded families retain their names in the
+document but paint with an explicit bundled fallback; they do not claim
+unrelated font metrics. Font substitution, unsupported table topology and
+unmodeled legacy DOC constructs remain fidelity boundaries, not guarantees of
+pixel-identical Microsoft Office rendering. The parser mirror includes the
+current compound-file, Unicode, field, embedded-object and numbering audits.
+
 > **1.0 is out.** Both packages are stable and follow semantic versioning.
 > See *What 1.0 brings* in the [engine](packages/quds_office_engine#what-10-brings)
 > and [editor](packages/quds_office_editor#what-10-brings) READMEs.

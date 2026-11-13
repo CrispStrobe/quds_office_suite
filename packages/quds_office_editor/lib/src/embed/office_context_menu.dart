@@ -1385,12 +1385,18 @@ class _OfficeContextItemState extends State<_OfficeContextItem> {
                 ),
                 if (action.shortcut != null) ...<Widget>[
                   const SizedBox(width: 16),
-                  Text(
-                    action.shortcut!,
-                    style: TextStyle(
-                      fontSize: 11.5,
-                      color: action.enabled ? palette.muted : palette.disabled,
-                      height: 1.2,
+                  Flexible(
+                    child: Text(
+                      action.shortcut!,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        fontSize: 11.5,
+                        color: action.enabled
+                            ? palette.muted
+                            : palette.disabled,
+                        height: 1.2,
+                      ),
                     ),
                   ),
                 ],

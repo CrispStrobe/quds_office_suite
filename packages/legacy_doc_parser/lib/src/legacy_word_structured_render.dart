@@ -192,17 +192,11 @@ class _HtmlWriter {
 
   String? _listText(LegacyWordResolvedNumbering marker) {
     final level = marker.level;
-    if (level.format == 'none') return '';
     if (level.format == 'bullet') return level.text;
-    const formats = {
-      'decimal',
-      'decimalZero',
-      'upperRoman',
-      'lowerRoman',
-      'upperLetter',
-      'lowerLetter',
-    };
-    if (!formats.contains(level.format)) return null;
+    // Only referenced placeholders need a numeric formatter. An otherwise
+    // unsupported format can still have a literal or ancestor-only label,
+    // and fLegal can replace its numeric formatting with decimal (MS-DOC
+    // 2.4.6.3 and LVLF). Check each required substitution below.
     final output = StringBuffer();
     for (var i = 0; i < level.text.length; i++) {
       final unit = level.text.codeUnitAt(i);
@@ -625,6 +619,13 @@ class _HtmlWriter {
 
   void _run(LegacyWordRun run, {String? text}) {
     final style = run.style;
+    final symbol = run.symbol;
+    final symbolCode = symbol?.hexadecimalCode;
+    if (symbol != null &&
+        (run.text.isEmpty ||
+            run.text.codeUnits.any((value) => value != 0xfffc))) {
+      throw const FormatException('Invalid Word symbol preview text.');
+    }
     final kerning = style.kerningThresholdHalfPoints;
     if (kerning < 0 || kerning > 3276) {
       throw const FormatException('Invalid Word preview kerning threshold.');
@@ -656,7 +657,7 @@ class _HtmlWriter {
       if (style.positionHalfPoints case final position? when position != 0)
         'position:relative;top:${-position / 2}pt',
     ];
-    final font = style.fontName;
+    final font = symbol?.fontName ?? style.fontName;
     if (font != null && font.isNotEmpty && font.length <= 256) {
       // Hex escapes inside one quoted CSS string cannot terminate it or
       // introduce a url(), even if the original font name contains quotes.
@@ -685,7 +686,7 @@ class _HtmlWriter {
     }
     if (css.isNotEmpty) {
       _write(
-        '<span${unresolvedKerning ? ' data-word-kerning="threshold-unresolved" data-word-kerning-threshold-half-points="$kerning"' : ''} style="${css.join(';')}">',
+        '<span${symbolCode == null ? '' : ' data-word-symbol="$symbolCode"'}${unresolvedKerning ? ' data-word-kerning="threshold-unresolved" data-word-kerning-threshold-half-points="$kerning"' : ''} style="${css.join(';')}">',
       );
     }
     if (style.underline) {
@@ -729,7 +730,16 @@ class _HtmlWriter {
         '${heavy ? 'text-decoration-thickness:0.12em;' : ''}">',
       );
     }
-    _text(text ?? run.text);
+    var visibleText = text ?? run.text;
+    if (symbol != null) {
+      final code = symbol.characterCode;
+      // Font-specific UTF-16 values need not be legal standalone HTML text.
+      // Preserve their operand in metadata and keep an opaque glyph position.
+      if (code >= 0x20 && code < 0xfffe && (code < 0xd800 || code > 0xdfff)) {
+        visibleText = String.fromCharCode(code) * visibleText.length;
+      }
+    }
+    _text(visibleText);
     if (style.underline) _write('</span>');
     if (css.isNotEmpty) _write('</span>');
     if (run.inserted) _write('</ins>');
