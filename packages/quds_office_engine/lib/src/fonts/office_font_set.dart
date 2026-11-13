@@ -66,11 +66,14 @@ class OfficeFontDiagnostics {
     }
   }
 
-  void _substituted(String? requested, String actual) {
+  /// Records a family used to paint a glyph. Resolvers do not call this while
+  /// probing fonts for measurement or unused document content.
+  void reportSubstitution(String? requested, String actual) {
     if (requested == null ||
         requested.trim().isEmpty ||
-        requested.trim().toLowerCase() == actual.trim().toLowerCase())
+        requested.trim().toLowerCase() == actual.trim().toLowerCase()) {
       return;
+    }
     String bounded(String value) =>
         value.length > 256 ? value.substring(0, 256) : value;
     final value = OfficeFontSubstitution(bounded(requested), bounded(actual));
@@ -141,8 +144,9 @@ class OfficeFontSet {
       var bestScore = 1 << 30;
       for (final candidate in candidates) {
         if (!candidate.font.hasTable('glyf') ||
-            candidate.font.glyphIdFor(codePoint) == 0)
+            candidate.font.glyphIdFor(codePoint) == 0) {
           continue;
+        }
         final score =
             (candidate.italic == italic ? 0 : 10000) +
             (candidate.weight - weight).abs();
@@ -185,9 +189,6 @@ class OfficeFontSet {
         );
         if (selected != null) break;
       }
-    }
-    if (selected != null && faces.isNotEmpty) {
-      diagnostics?._substituted(family, selected.family);
     }
     return selected;
   }
