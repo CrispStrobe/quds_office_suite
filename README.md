@@ -523,3 +523,5 @@ frame geometry. Literal binary anchors and independent header occurrences
 remain covered by regressions. The upstream parser passes 931 Dart tests and
 retains schema/native fidelity boundaries; the consumed revision is recorded
 in `packages/legacy_doc_parser/UPSTREAM.json`.
+
+The maintained legacy DOC parser now retains explicit Line Number styles, integer-twip picture sizing, supported textbox paint and labelled OLE placeholders. Unsupported geometry and object activation remain guarded; see the [parser capabilities and limits](packages/legacy_doc_parser/README.md).
