@@ -69,14 +69,18 @@ class OfficeFontDiagnostics {
   /// Records a family used to paint a glyph. Resolvers do not call this while
   /// probing fonts for measurement or unused document content.
   void reportSubstitution(String? requested, String actual) {
-    if (requested == null ||
-        requested.trim().isEmpty ||
-        requested.trim().toLowerCase() == actual.trim().toLowerCase()) {
-      return;
-    }
+    if (requested == null) return;
+    // Bound work as well as retained bytes: a source font name is untrusted
+    // and may be referenced by every glyph in a large document.
     String bounded(String value) =>
         value.length > 256 ? value.substring(0, 256) : value;
-    final value = OfficeFontSubstitution(bounded(requested), bounded(actual));
+    final wanted = bounded(requested);
+    final resolved = bounded(actual);
+    if (wanted.trim().isEmpty ||
+        wanted.trim().toLowerCase() == resolved.trim().toLowerCase()) {
+      return;
+    }
+    final value = OfficeFontSubstitution(wanted, resolved);
     if (_substitutions.contains(value)) return;
     if (_substitutions.length >= maxSubstitutions) {
       truncated = true;

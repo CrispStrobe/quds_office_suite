@@ -247,10 +247,56 @@ final theme = OfficeDocumentTheme.custom(
 );
 ```
 
-For PDF, embed a covering TrueType `glyf` face (or an `OfficeFontSet` with
-fallbacks). Without one, Latin may fall back to Helvetica and other scripts
-will not appear. A rotated watermark is one shaped string, not a letter split
-along the diagonal — Arabic cannot be cut glyph by glyph and still join.
+For PDF, supply covering TrueType `glyf` faces. Latin can fall back to
+Standard 14 Helvetica; unsupported Unicode receives a visible box. A rotated
+watermark is one shaped string, not a letter split along the diagonal — Arabic
+cannot be cut glyph by glyph and still join.
+
+### Named Office fonts and coverage
+
+Use `OfficeFontFace` for each real regular, bold, italic or bold-italic cut.
+The host owns the bytes, so an application can reuse its existing assets:
+
+```dart
+final diagnostics = OfficeFontDiagnostics();
+final fonts = OfficeFontSet(
+  defaultFamily: 'Carlito',
+  diagnostics: diagnostics,
+  faces: [
+    OfficeFontFace(font: carlitoRegular, family: 'Carlito', aliases: ['Calibri']),
+    OfficeFontFace(font: carlitoBold, family: 'Carlito', weight: 700,
+        aliases: ['Calibri']),
+    OfficeFontFace(font: liberationSerif, family: 'Liberation Serif',
+        aliases: ['Times New Roman']),
+    OfficeFontFace(font: notoNaskhArabic, family: 'Noto Naskh Arabic'),
+  ],
+);
+final pdf = OfficePdfExport.word(document, fonts: fonts);
+// Localize a notice from diagnostics.missingCodePoints / substitutions.
+```
+
+Here the face variables are `SfntFont.parse(...)` results from host-provided
+font bytes. Declare verified aliases on every cut of a family, and include
+italic and bold-italic cuts when available. Resolution first tries the requested
+family/style, then the declared default, the legacy coverage list, and remaining
+named families in order. A face must actually contain the glyph. CFF faces are
+not supported by this PDF embedder.
+
+Word resolves family, weight and slant per run before line breaking. PDF
+emission uses the same source face and does not apply synthetic bold/slant over
+a real bold/italic cut. Worksheet export reads the retained native font family
+and italic flag as well as the model's bold/size properties. Slide export uses
+the shared coverage resolver; the current slide shape model still does not
+expose every rich-run typeface as editable scalar properties.
+
+`OfficeFontSet(primary: ..., fallbacks: ...)` remains supported with its original
+coverage ordering. Font selection does not rewrite source font metadata.
+Only actually painted substitutions enter diagnostics, so measuring unused
+pages does not produce warnings. Diagnostics retain at most 256 missing code
+points and 128 family substitutions; `truncated` indicates additional entries.
+Missing glyphs preserve their layout advance and paint a box, including when
+no supplied font can paint a replacement character. Neither the resolver nor
+the editor downloads fonts automatically.
 
 ---
 

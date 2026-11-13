@@ -101,11 +101,12 @@ void main() {
       );
       expect(glyphs[i].glyph.glyphId, expected[i].glyphIdFor(0x57));
       expect(glyphs[i].fontFamily, properties[i].asciiFont);
-      if (i > 0)
+      if (i > 0) {
         expect(
           glyphs[i].x,
           closeTo(glyphs[i - 1].x + glyphs[i - 1].advance, 1e-8),
         );
+      }
     }
     final narrow = _doc([
       WmlRun(text: 'a ', properties: WmlRunProps(fontSizeHalfPoints: 16)),

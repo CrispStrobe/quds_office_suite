@@ -735,11 +735,33 @@ void main() async {
 }
 ```
 
-Aliases such as Helvetica, Arial, Calibri, Times New Roman, and Courier New
-resolve to those faces. When a PDF embeds its own `/FontFile2`, that face
-wins for glyph shape and advances. Raw CFF is wrapped as OTTO for the host
-loader. The engine does not rasterize CFF outlines itself. JPEG2000 stays
-unsupported. JBIG2 MMR generic regions decode; other JBIG2 stays a placeholder.
+Verified aliases include Helvetica, Arial, Times New Roman and Courier New.
+Calibri, Carlito, Roboto and Georgia are not aliases for the bundled Liberation
+faces. A host may register its existing assets without adding another copy to
+this package:
+
+```dart
+await OfficeHostFonts.registerFamily(
+  family: 'Carlito',
+  aliases: ['Calibri'],
+  faces: [carlitoRegular, carlitoBold, carlitoItalic, carlitoBoldItalic],
+  hasItalic: true,
+);
+```
+
+The supplied values are `ByteData`, for example from `rootBundle.load(...)`.
+Only declare aliases whose metrics the host has verified. Registration awaits
+the built-ins, is idempotent per name, and permits adding aliases later. It
+rejects attempts to replace an existing alias with an unrelated family.
+`registeredFamily` returns the actual registered family for reliable metrics;
+unknown names and unavailable italic styles remain unresolved. Supply the
+corresponding parsed `OfficeFontFace` records to the engine's `OfficeFontSet`
+when exporting PDF, so editor and PDF can share the same face bytes.
+
+When a PDF embeds its own `/FontFile2`, that face wins for glyph shape and
+advances. Raw CFF is wrapped as OTTO for the host loader. The engine does not
+rasterize CFF outlines itself. JPEG2000 stays unsupported. JBIG2 MMR generic
+regions decode; other JBIG2 stays a placeholder.
 
 ---
 

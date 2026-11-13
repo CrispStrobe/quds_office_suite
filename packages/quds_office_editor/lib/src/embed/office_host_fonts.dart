@@ -13,12 +13,13 @@ abstract final class OfficeHostFonts {
   static Future<void>? _inflight;
   static final Map<String, (String, bool)> _registeredFaces = {};
   static final Map<String, Future<void>> _extensionLoads = {};
+  static final Map<String, String> _extensionOwners = {};
 
   /// The actual bundled family behind a successfully loaded name or alias.
   /// Unknown/unloaded names and unavailable italic faces stay unresolved;
   /// callers must not silently measure a platform fallback as that font.
   static String? registeredFamily(String family, {bool italic = false}) {
-    final face = _registeredFaces[family.toLowerCase()];
+    final face = _registeredFaces[family.trim().toLowerCase()];
     if (face == null || (italic && !face.$2)) return null;
     return face.$1;
   }
@@ -37,8 +38,9 @@ abstract final class OfficeHostFonts {
   ///
   /// The host supplies real face bytes (regular/bold/italic/bold-italic when
   /// available) and only verified aliases. For example, Carlito may be supplied
-  /// with a Calibri alias. Registration is idempotent by family; replacing a
-  /// previously registered family/alias with unrelated bytes is not supported.
+  /// with a Calibri alias. Registration is idempotent per name; additional
+  /// aliases may be registered later. Replacing a previously registered face
+  /// with different bytes or styles is not supported.
   static Future<void> registerFamily({
     required String family,
     required List<ByteData> faces,
@@ -57,19 +59,39 @@ abstract final class OfficeHostFonts {
       throw ArgumentError('Invalid host font family or face collection.');
     }
     await ensureRegistered();
-    final key = family.trim().toLowerCase();
-    final names = <String>{family, ...aliases};
+    final canonical = family.trim();
+    final key = canonical.toLowerCase();
+    final names = <String>{canonical, ...aliases.map((name) => name.trim())};
     for (final name in names) {
-      final existing = _registeredFaces[name.toLowerCase()];
-      if (existing != null && existing.$1.toLowerCase() != key) {
+      final normalized = name.toLowerCase();
+      final existing =
+          _registeredFaces[normalized]?.$1.toLowerCase() ??
+          _extensionOwners[normalized];
+      if (existing != null && existing != key) {
         throw StateError('Font alias is already registered to another family.');
       }
     }
-    return _extensionLoads.putIfAbsent(key, () async {
-      for (final name in names) {
-        await _face(name, faces, resolvedFamily: family, hasItalic: hasItalic);
+    // Reserve every alias before the first font-loader await, so simultaneous
+    // extension calls cannot claim the same name for unrelated faces.
+    for (final name in names) {
+      _extensionOwners[name.toLowerCase()] = key;
+    }
+    for (final name in names) {
+      final normalized = name.toLowerCase();
+      final pending = _extensionLoads.putIfAbsent(
+        normalized,
+        () =>
+            _face(name, faces, resolvedFamily: canonical, hasItalic: hasItalic),
+      );
+      try {
+        await pending;
+      } on Object {
+        if (identical(_extensionLoads[normalized], pending)) {
+          _extensionLoads.remove(normalized);
+        }
+        rethrow;
       }
-    });
+    }
   }
 
   static Future<void> _register() async {
@@ -164,6 +186,6 @@ abstract final class OfficeHostFonts {
       loader.addFont(Future<ByteData>.value(data));
     }
     await loader.load();
-    _registeredFaces[family.toLowerCase()] = (resolvedFamily, hasItalic);
+    _registeredFaces[family.trim().toLowerCase()] = (resolvedFamily, hasItalic);
   }
 }
