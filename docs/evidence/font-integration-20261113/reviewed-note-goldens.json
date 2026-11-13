@@ -1,0 +1,17 @@
+{
+  "reason": "Per-run italic and size measurement before wrapping changes continuation line boundaries. Page count and save-cycle invariants remain tested. Only the two affected continuation goldens are updated from the reviewed Linux rendering; no Mac baselines are installed.",
+  "images": [
+    {
+      "golden": "packages/quds_office_editor/test/goldens/continued_notes_1.png",
+      "sha256": "de7d5cc76e02c0538a41677cf3a7a9f01544e971aa0d3c73f5d31926bf41dd45",
+      "source_run": 43416958976,
+      "source_commit": "e82c997b6df8746fe86fb83b9f416a89bb3e3b80"
+    },
+    {
+      "golden": "packages/quds_office_editor/test/goldens/continued_notes_2.png",
+      "sha256": "fb1d494296878d69d1d9eff91e62ce3a54435a0601bf31af71b998cd92c817a4",
+      "source_run": 43416958976,
+      "source_commit": "e82c997b6df8746fe86fb83b9f416a89bb3e3b80"
+    }
+  ]
+}
