@@ -516,3 +516,10 @@ The final parser refresh retains corroborated shared header shapes with their or
 The completed continuation also recovers bounded native header/footer stories ending in closed tables. The combined canonical parser passes 826 Dart tests, 162 Python controls and 222 independently validated DOCX outputs. Branch-native corpus and engine acceptance receipts are retained alongside the current parser pin.
 
 The current canonical parser refresh includes floating-table anchors, exact note endings, independent shared header/footer textbox instances, bounded internal hyperlink fields, separate script font slots, explicit drawing wrap clearances and corrected floating-table origin and padding semantics. Parser-side validation retains the existing ambiguous-shape and revision guards. Its rewritten [README](https://github.com/CrispStrobe/legacy-doc-parser) describes current capabilities and remaining fidelity limits; `packages/legacy_doc_parser/UPSTREAM.json` records the exact consumed source.
+
+The November 13 parser refresh preserves section and gutter direction,
+manual-break justification compatibility and bounded explicit textbox border
+frame geometry. Literal binary anchors and independent header occurrences
+remain covered by regressions. The upstream parser passes 931 Dart tests and
+retains schema/native fidelity boundaries; the consumed revision is recorded
+in `packages/legacy_doc_parser/UPSTREAM.json`.
