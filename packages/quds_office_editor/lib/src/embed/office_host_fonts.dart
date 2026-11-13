@@ -12,6 +12,7 @@ abstract final class OfficeHostFonts {
   static var _done = false;
   static Future<void>? _inflight;
   static final Map<String, (String, bool)> _registeredFaces = {};
+  static final Map<String, Future<void>> _extensionLoads = {};
 
   /// The actual bundled family behind a successfully loaded name or alias.
   /// Unknown/unloaded names and unavailable italic faces stay unresolved;
@@ -29,6 +30,45 @@ abstract final class OfficeHostFonts {
     }
     return _inflight ??= _register().whenComplete(() {
       _inflight = null;
+    });
+  }
+
+  /// Adds a host-owned family without copying its assets into this package.
+  ///
+  /// The host supplies real face bytes (regular/bold/italic/bold-italic when
+  /// available) and only verified aliases. For example, Carlito may be supplied
+  /// with a Calibri alias. Registration is idempotent by family; replacing a
+  /// previously registered family/alias with unrelated bytes is not supported.
+  static Future<void> registerFamily({
+    required String family,
+    required List<ByteData> faces,
+    List<String> aliases = const <String>[],
+    bool hasItalic = false,
+  }) async {
+    bool valid(String name) =>
+        name.trim().isNotEmpty &&
+        name.length <= 256 &&
+        !name.contains(RegExp(r'[\x00-\x1f\x7f]'));
+    if (!valid(family) ||
+        aliases.any((name) => !valid(name)) ||
+        aliases.length > 64 ||
+        faces.isEmpty ||
+        faces.length > 16) {
+      throw ArgumentError('Invalid host font family or face collection.');
+    }
+    await ensureRegistered();
+    final key = family.trim().toLowerCase();
+    final names = <String>{family, ...aliases};
+    for (final name in names) {
+      final existing = _registeredFaces[name.toLowerCase()];
+      if (existing != null && existing.$1.toLowerCase() != key) {
+        throw StateError('Font alias is already registered to another family.');
+      }
+    }
+    return _extensionLoads.putIfAbsent(key, () async {
+      for (final name in names) {
+        await _face(name, faces, resolvedFamily: family, hasItalic: hasItalic);
+      }
     });
   }
 
@@ -52,9 +92,6 @@ abstract final class OfficeHostFonts {
       'Liberation Sans',
       'Helvetica',
       'Arial',
-      'Calibri',
-      'Carlito',
-      'Roboto',
       'SansSerif',
     ];
     for (final String name in sansAliases) {
@@ -71,7 +108,6 @@ abstract final class OfficeHostFonts {
       'Times New Roman',
       'Times',
       'Times-Roman',
-      'Georgia',
       'Serif',
     ];
     for (final String name in serifAliases) {
