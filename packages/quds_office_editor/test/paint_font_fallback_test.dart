@@ -1,6 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:quds_office_editor/quds_office_editor.dart';
-import 'package:quds_office_editor/src/editor_word/paint_run_text.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
