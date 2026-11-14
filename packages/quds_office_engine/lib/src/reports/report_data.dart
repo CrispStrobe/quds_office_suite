@@ -556,7 +556,12 @@ abstract final class ReportCsv {
     if (quoted) {
       throw const ReportDataException('Unterminated quoted CSV cell');
     }
-    if (cell.isNotEmpty || row.isNotEmpty) {
+    if (cell.isNotEmpty ||
+        row.isNotEmpty ||
+        (keepEmptyRows &&
+            s.isNotEmpty &&
+            !s.endsWith('\n') &&
+            !s.endsWith('\r'))) {
       row.add(cell.toString());
       out.add(row);
     }

@@ -59,6 +59,22 @@ void main() {
     );
     expect(sheet.cell(const SmlCellRef(0, 0)).value, 'existing');
   });
+  test(
+    'a final quoted empty record is retained without adding a phantom row',
+    () {
+      expect(ReportCsv.parse('""', keepEmptyRows: true), [
+        [''],
+      ]);
+      expect(ReportCsv.parse('a\n""', keepEmptyRows: true), [
+        ['a'],
+        [''],
+      ]);
+      expect(ReportCsv.parse('a\n', keepEmptyRows: true), [
+        ['a'],
+      ]);
+      expect(ReportCsv.parse('', keepEmptyRows: true), isEmpty);
+    },
+  );
   test('parsed rows honor the starting cell', () {
     final sheet = SmlWorkbook().sheets.single;
     SmlPowerQuery.fromRows(
