@@ -533,3 +533,5 @@ retains schema/native fidelity boundaries; the consumed revision is recorded
 in `packages/legacy_doc_parser/UPSTREAM.json`.
 
 The maintained legacy DOC parser now retains explicit Line Number styles, integer-twip picture sizing, supported textbox paint and labelled OLE placeholders. Unsupported geometry and object activation remain guarded; see the [parser capabilities and limits](packages/legacy_doc_parser/README.md).
+
+The shared legacy DOC parser is pinned to its completed 14 November audit. Current contracts cover bounded section geometry, cell shading, bookmark/story validation and textbox ownership; exact Word pagination and unmodeled drawing semantics remain qualified gaps. Parser implementation and tests are mirrored unchanged, with only workspace dependency adaptations.
