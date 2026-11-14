@@ -535,3 +535,9 @@ in `packages/legacy_doc_parser/UPSTREAM.json`.
 The maintained legacy DOC parser now retains explicit Line Number styles, integer-twip picture sizing, supported textbox paint and labelled OLE placeholders. Unsupported geometry and object activation remain guarded; see the [parser capabilities and limits](packages/legacy_doc_parser/README.md).
 
 The shared legacy DOC parser is pinned to its completed 14 November audit. Current contracts cover bounded section geometry, cell shading, bookmark/story validation and textbox ownership; exact Word pagination and unmodeled drawing semantics remain qualified gaps. Parser implementation and tests are mirrored unchanged, with only workspace dependency adaptations.
+
+Delimited spreadsheet imports support quoted CSV/TSV fields, escaped quotes,
+embedded line breaks and blank rows. `SmlPowerQuery.fromCsv` accepts
+`detectNumbers: false` for exact identifiers and literal text;
+`SmlPowerQuery.fromRows` accepts already parsed cells. Report CSV callers retain
+their existing blank-row default unless `keepEmptyRows` is requested.
