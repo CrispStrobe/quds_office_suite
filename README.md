@@ -133,6 +133,14 @@ fork by a file-hash manifest). Two consequences drove the work here:
 
 ### What we changed
 
+- **Office preservation and edit admission.** Unsupported spreadsheet formulas
+  retain typed caches through dependent calculations; formatting edits preserve
+  imported SpreadsheetML style namespaces and properties. Word keeps native
+  restriction modes and password metadata, with undoable tracking/protection
+  changes. Signed XLSX/PPTX packages are refused for editing so a save cannot
+  silently discard their signatures. Password verification and independent
+  first-save rendering acceptance remain outside this increment; see
+  [the recovery record](docs/office-recovery-20261114.md).
 - **Word round-trip fidelity.** Footnote/endnote identity, source styles,
   numbering definitions, table styles and borders, hyperlinks in notes and
   headers, and explicit direct formatting (black / 11pt / zero spacing / left)
