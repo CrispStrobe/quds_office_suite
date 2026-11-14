@@ -38,3 +38,24 @@ receipt for the exact source under test. Remaining limitations stay explicit.
 
 - Recovery plan: repository baselines and bounded acceptance tasks recorded.
 - Implementation and fresh results will be appended as increments complete.
+
+## Integration validation on macOS
+
+The integrator merged checkpoint `67139a78207393f6eb2e8c35569e6a3d644403fd`
+onto the previous main `b0335829428d50968258219c4fdced15d546f7c9`, using
+Flutter 3.47.8 / Dart 3.13.7. REC-01–04 now have implementation and executed
+regression coverage; REC-05–07 are coordinated with the CrispCloud host.
+REC-08 remains open. These checkpoints do not establish native Office signature
+verification or new independent schema/render certification.
+
+- Complete engine suite: **1,728 passed, three conditional skips**.
+- Complete editor suite: **520 passed, one conditional skip, 17 existing golden
+  failures** on this Mac. The same 17 tests fail at the previous main; all
+  **27 retained actual golden-render PNGs are byte-identical** between baseline
+  and integration. Goldens were not regenerated or accepted as new references.
+- Protection/history cohort after removing an unnecessary accessor override:
+  **11 passed**. Both library analyzers are checked separately during integration.
+
+The macOS golden mismatch remains a separate baseline issue; the full editor
+suite is not reported as green. Host save/recovery tests and exact vendored
+source verification are recorded in CrispCloud's matching continuation record.
