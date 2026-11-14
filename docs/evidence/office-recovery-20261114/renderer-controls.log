@@ -1,0 +1,19 @@
+..........................................source.docx: Command '['/opt/codex/runtimes/codex-primary-runtime/dependencies/bin/override/soffice', '-env:UserInstallation=file:///workspace/scratch/fd11a5f593e0/CrispCloud/tmp7ixfgtfl/output/render-000-attempt-3-zwmvvd9n/profile', '--headless', '--convert-to', 'pdf', '--outdir', '/workspace/scratch/fd11a5f593e0/CrispCloud/tmp7ixfgtfl/output/render-000-attempt-3-zwmvvd9n', '/workspace/scratch/fd11a5f593e0/CrispCloud/tmp7ixfgtfl/input/source.docx']' died with <Signals.SIGKILL: 9>.
+........fidelity-aux-controls/edited-1.docx: native_schema_only; no visual certification
+fidelity-aux-controls/edited-2.docx: native_schema_only; no visual certification
+fidelity-aux-controls/edited-3.docx: native_schema_only; no visual certification
+fidelity-aux-controls/imported-1.docx: native_schema_only; no visual certification
+fidelity-aux-controls/imported-2.docx: native_schema_only; no visual certification
+fidelity-aux-controls/imported-3.docx: native_schema_only; no visual certification
+fidelity-aux-controls/source.docx: native_schema_only; no visual certification
+..............ordinary.docx: LibreOffice did not produce a nonempty PDF
+ordinary.docx: LibreOffice did not produce a nonempty PDF
+....direct/forward-1.pptx: rendered 6 pages
+direct/forward-2.pptx: rendered 6 pages
+direct/forward-3.pptx: rendered 6 pages
+direct/source.pptx: rendered 6 pages
+...........
+----------------------------------------------------------------------
+Ran 79 tests in 9.069s
+
+OK

@@ -1,0 +1,2085 @@
+Removed 350 manifest artifacts/receipts from /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_engine/build
+00:00 +0: loading test/legacy_word_document_test.dart
+00:00 +0: test/legacy_word_document_test.dart: reads body CPs from compressed and Unicode pieces in logical order
+00:00 +1: test/legacy_word_document_test.dart: uses the selected 0Table and excludes trailing non-body stories
+00:00 +2: test/legacy_word_document_test.dart: decodes documented compressed punctuation and table cells
+00:00 +3: test/legacy_word_document_test.dart: shows field results without instruction text, including nested fields
+00:00 +4: test/legacy_word_document_test.dart: does not fall back to a same-named embedded Word stream
+00:00 +5: test/legacy_word_document_test.dart: rejects encrypted Word input before decoding tables
+00:00 +6: test/legacy_word_document_test.dart: rejects missing, truncated, nonmonotonic and oversized text tables
+00:00 +7: test/bounded_cfb_reader_test.dart: bounded compound reader directory owners are distinct and lookups are immutable
+00:00 +8: test/bounded_cfb_reader_test.dart: bounded compound reader rejects at construction when two storages share a child tree
+00:00 +9: test/bounded_cfb_reader_test.dart: bounded compound reader rejects at construction when a sibling points to itself
+00:00 +10: test/bounded_cfb_reader_test.dart: bounded compound reader rejects at construction when a child points to the root storage
+00:00 +11: test/bounded_cfb_reader_test.dart: bounded compound reader rejects at construction when a stream owns children
+00:00 +12: test/bounded_cfb_reader_test.dart: bounded compound reader rejects at construction when the root has a sibling
+00:00 +13: test/bounded_cfb_reader_test.dart: bounded compound reader rejects at construction when a referenced child is empty
+00:00 +14: test/bounded_cfb_reader_test.dart: bounded compound reader rejects at construction when a sibling is outside the directory
+00:00 +15: test/bounded_cfb_reader_test.dart: bounded compound reader rejects at construction when siblings have duplicate case-insensitive names
+00:00 +16: test/bounded_cfb_reader_test.dart: bounded compound reader small and regular streams retain exact contents
+00:00 +17: test/legacy_word_conversion_test.dart: converts Word 97 body text to an editable new DOCX
+00:00 +18: test/legacy_word_conversion_test.dart: converts Word 97 body text to an editable new DOCX
+00:00 +19: test/legacy_word_conversion_test.dart: converts Word 97 body text to an editable new DOCX
+00:00 +20: test/legacy_word_conversion_test.dart: converts Word 97 body text to an editable new DOCX
+00:00 +21: test/legacy_word_conversion_test.dart: converts Word 97 body text to an editable new DOCX
+00:00 +22: test/legacy_word_conversion_test.dart: converts Word 97 body text to an editable new DOCX
+00:00 +23: test/opc_word_kind_test.dart: DOTX recognizes the exact relocated mixed-case main part
+00:00 +24: test/legacy_word_conversion_test.dart: empty main story creates a valid blank DOCX
+00:00 +25: test/opc_word_kind_test.dart: DOCM recognizes the exact relocated mixed-case main part
+00:00 +26: test/legacy_word_conversion_test.dart: rejects encrypted and malformed DOC without changing its bytes
+00:00 +27: test/opc_word_kind_test.dart: DOTM recognizes the exact relocated mixed-case main part
+00:00 +28: test/opc_word_kind_test.dart: DOTM recognizes the exact relocated mixed-case main part
+00:00 +29: test/legacy_word_conversion_test.dart: malformed UTF-16 is rejected by the parser before conversion
+00:00 +30: test/legacy_word_conversion_test.dart: malformed UTF-16 is rejected by the parser before conversion
+00:00 +31: test/legacy_word_conversion_test.dart: rejects excessive structural expansion before splitting text
+00:00 +32: test/legacy_word_conversion_test.dart: proposed and accepted copy names cannot redirect storage
+00:00 +33: test/word_package_preservation_test.dart: docm retains native main part and opaque bytes over three edits: word/document.xml
+00:00 +34: test/word_package_preservation_test.dart: docm retains native main part and opaque bytes over three edits: word/document.xml
+00:00 +35: test/word_package_preservation_test.dart: docm retains native main part and opaque bytes over three edits: word/document.xml
+00:00 +36: test/word_package_preservation_test.dart: docm retains native main part and opaque bytes over three edits: word/document.xml
+00:00 +37: test/word_package_preservation_test.dart: docm retains native main part and opaque bytes over three edits: word/document.xml
+00:00 +38: test/word_package_preservation_test.dart: docm retains native main part and opaque bytes over three edits: word/document.xml
+00:00 +39: test/word_package_preservation_test.dart: docm retains native main part and opaque bytes over three edits: word/document.xml
+00:00 +40: test/office_signed_package_guard_test.dart: sheet refuses path before opening or serializing
+00:00 +41: test/office_signed_package_guard_test.dart: sheet refuses path before opening or serializing
+00:00 +42: test/word_package_preservation_test.dart: docm retains native main part and opaque bytes over three edits: content/manuscript%20draft.xml
+00:00 +43: test/word_package_preservation_test.dart: docm retains native main part and opaque bytes over three edits: content/manuscript%20draft.xml
+00:00 +44: test/office_signed_package_guard_test.dart: sheet refuses mime before opening or serializing
+00:00 +45: test/word_package_preservation_test.dart: dotm retains native main part and opaque bytes over three edits: word/document.xml
+00:00 +46: test/word_package_preservation_test.dart: dotm retains native main part and opaque bytes over three edits: word/document.xml
+00:00 +47: test/word_package_preservation_test.dart: dotm retains native main part and opaque bytes over three edits: word/document.xml
+00:00 +48: test/word_package_preservation_test.dart: dotm retains native main part and opaque bytes over three edits: word/document.xml
+00:00 +49: test/office_signed_package_guard_test.dart: sheet unsigned payloads remain lazy and editable
+00:00 +50: test/office_signed_package_guard_test.dart: sheet unsigned payloads remain lazy and editable
+00:00 +51: test/word_protection_mode_test.dart: native readOnly enforcement=true survives three saves
+00:00 +52: test/word_protection_mode_test.dart: native readOnly enforcement=true survives three saves
+00:00 +53: test/word_protection_mode_test.dart: native readOnly enforcement=true survives three saves
+00:00 +54: test/word_protection_mode_test.dart: native readOnly enforcement=true survives three saves
+00:00 +55: test/word_protection_mode_test.dart: native readOnly enforcement=true survives three saves
+00:00 +56: test/word_protection_mode_test.dart: native readOnly enforcement=true survives three saves
+00:00 +57: test/word_protection_mode_test.dart: native readOnly enforcement=true survives three saves
+00:00 +58: test/word_protection_mode_test.dart: native readOnly enforcement=true survives three saves
+00:00 +59: test/word_protection_mode_test.dart: native readOnly enforcement=true survives three saves
+00:00 +60: test/word_protection_mode_test.dart: native readOnly enforcement=true survives three saves
+00:00 +61: test/word_protection_mode_test.dart: native readOnly enforcement=true survives three saves
+00:00 +62: test/word_protection_mode_test.dart: native readOnly enforcement=true survives three saves
+00:00 +63: test/word_protection_mode_test.dart: native readOnly enforcement=true survives three saves
+00:00 +64: test/word_protection_mode_test.dart: native readOnly enforcement=true survives three saves
+00:00 +65: test/word_protection_mode_test.dart: native readOnly enforcement=true survives three saves
+00:00 +66: test/word_protection_mode_test.dart: native readOnly enforcement=true survives three saves
+00:00 +67: test/word_protection_mode_test.dart: native readOnly enforcement=true survives three saves
+00:00 +68: test/word_protection_mode_test.dart: native readOnly enforcement=true survives three saves
+00:00 +69: test/word_protection_mode_test.dart: native readOnly enforcement=true survives three saves
+00:00 +70: test/word_protection_mode_test.dart: native readOnly enforcement=true survives three saves
+00:00 +71: test/word_protection_mode_test.dart: native readOnly enforcement=true survives three saves
+00:00 +72: test/word_protection_mode_test.dart: native readOnly enforcement=true survives three saves
+00:00 +73: test/word_protection_mode_test.dart: native readOnly enforcement=true survives three saves
+00:00 +74: test/word_protection_mode_test.dart: native readOnly enforcement=true survives three saves
+00:00 +75: test/word_protection_mode_test.dart: native readOnly enforcement=true survives three saves
+00:00 +76: test/word_protection_mode_test.dart: native readOnly enforcement=true survives three saves
+00:00 +77: test/word_protection_mode_test.dart: native readOnly enforcement=true survives three saves
+00:00 +78: test/word_protection_mode_test.dart: native readOnly enforcement=true survives three saves
+00:00 +79: test/word_protection_mode_test.dart: native readOnly enforcement=true survives three saves
+00:00 +80: test/word_protection_mode_test.dart: native readOnly enforcement=true survives three saves
+00:00 +81: test/word_protection_mode_test.dart: native readOnly enforcement=true survives three saves
+00:00 +82: test/word_protection_mode_test.dart: native readOnly enforcement=true survives three saves
+00:00 +83: test/word_protection_mode_test.dart: native readOnly enforcement=true survives three saves
+00:00 +84: test/word_protection_mode_test.dart: native readOnly enforcement=true survives three saves
+00:00 +85: test/word_protection_mode_test.dart: native readOnly enforcement=true survives three saves
+00:00 +86: test/word_protection_mode_test.dart: native readOnly enforcement=false survives three saves
+00:01 +87: test/drawing_line_style_test.dart: explicit native widths retain exact point values, including zero
+00:01 +88: test/word_protection_mode_test.dart: native comments enforcement=true survives three saves
+00:01 +89: test/word_protection_mode_test.dart: native comments enforcement=true survives three saves
+00:01 +90: test/word_protection_mode_test.dart: native comments enforcement=true survives three saves
+00:01 +91: test/word_protection_mode_test.dart: native comments enforcement=true survives three saves
+00:01 +92: test/word_protection_mode_test.dart: native comments enforcement=true survives three saves
+00:01 +93: test/word_protection_mode_test.dart: native comments enforcement=true survives three saves
+00:01 +94: test/word_protection_mode_test.dart: native comments enforcement=true survives three saves
+00:01 +95: test/drawing_line_style_test.dart: native preset lgDashDot exposes proportions independent of width
+00:01 +96: test/word_protection_mode_test.dart: native comments enforcement=false survives three saves
+00:01 +97: test/word_protection_mode_test.dart: native comments enforcement=false survives three saves
+00:01 +98: test/word_protection_mode_test.dart: native comments enforcement=false survives three saves
+00:01 +99: test/word_protection_mode_test.dart: native comments enforcement=false survives three saves
+00:01 +100: test/word_protection_mode_test.dart: native comments enforcement=false survives three saves
+00:01 +101: test/word_protection_mode_test.dart: native comments enforcement=false survives three saves
+00:01 +102: test/word_protection_mode_test.dart: native comments enforcement=false survives three saves
+00:01 +103: test/word_protection_mode_test.dart: native comments enforcement=false survives three saves
+00:01 +104: test/word_protection_mode_test.dart: native comments enforcement=false survives three saves
+00:01 +105: test/word_protection_mode_test.dart: native comments enforcement=false survives three saves
+00:01 +106: test/word_protection_mode_test.dart: native comments enforcement=false survives three saves
+00:01 +107: test/drawing_line_style_test.dart: foreign attributes, child decoys and nested styles do not override native properties
+00:01 +108: test/word_protection_mode_test.dart: native forms enforcement=true survives three saves
+00:01 +109: test/word_protection_mode_test.dart: native forms enforcement=true survives three saves
+00:01 +110: test/word_protection_mode_test.dart: native forms enforcement=true survives three saves
+00:01 +111: test/word_protection_mode_test.dart: native forms enforcement=true survives three saves
+00:01 +112: test/word_protection_mode_test.dart: native forms enforcement=true survives three saves
+00:01 +113: test/word_protection_mode_test.dart: native forms enforcement=true survives three saves
+00:01 +114: test/word_protection_mode_test.dart: native forms enforcement=true survives three saves
+00:01 +115: test/word_protection_mode_test.dart: native forms enforcement=true survives three saves
+00:01 +116: test/drawing_line_style_test.dart: invalid numeric properties cannot create nonfinite or negative styles
+00:01 +117: test/word_protection_mode_test.dart: native forms enforcement=false survives three saves
+00:01 +118: test/word_protection_mode_test.dart: native forms enforcement=false survives three saves
+00:01 +119: test/word_protection_mode_test.dart: native forms enforcement=false survives three saves
+00:01 +120: test/word_protection_mode_test.dart: native forms enforcement=false survives three saves
+00:01 +121: test/drawing_line_style_test.dart: direct saves preserve raw preset properties through three real edits
+00:01 +122: test/drawing_line_style_test.dart: direct saves preserve raw preset properties through three real edits
+00:01 +123: test/drawing_line_style_test.dart: direct saves preserve raw preset properties through three real edits
+00:01 +124: test/drawing_line_style_test.dart: direct saves preserve raw preset properties through three real edits
+00:01 +125: test/drawing_line_style_test.dart: direct saves preserve raw preset properties through three real edits
+00:01 +126: test/drawing_line_style_test.dart: direct saves preserve raw preset properties through three real edits
+00:01 +127: test/drawing_line_style_test.dart: direct saves preserve raw preset properties through three real edits
+00:01 +128: test/drawing_line_style_test.dart: direct saves preserve raw preset properties through three real edits
+00:01 +129: test/drawing_line_style_test.dart: direct saves preserve raw preset properties through three real edits
+00:01 +130: test/table_grid_steps_test.dart: historical or foreign width cannot replace the current native width: <w:tcPrChange w:id="15" w:author="Author"><w:tcPr><w:tcW w:w="7200" w:type="dxa"/></w:tcPr></w:tcPrChange>
+00:01 +131: test/drawing_line_style_test.dart: direct saves preserve raw custom properties through three real edits
+00:01 +132: test/xml_namespace_capture_test.dart: captured w:w survives inherited xmlns:w
+00:01 +133: test/xml_namespace_capture_test.dart: captured w:w survives inherited xmlns:w
+00:01 +134: test/xml_namespace_capture_test.dart: captured w:w survives inherited xmlns:w
+00:01 +135: test/drawing_line_style_test.dart: isolate saves preserve raw preset properties through three real edits
+00:01 +136: test/drawing_line_style_test.dart: isolate saves preserve raw preset properties through three real edits
+00:01 +137: test/drawing_line_style_test.dart: isolate saves preserve raw preset properties through three real edits
+00:01 +138: test/table_grid_steps_test.dart: native width namespace does not depend on the w prefix
+00:01 +139: test/table_grid_steps_test.dart: native width namespace does not depend on the w prefix
+00:01 +140: test/table_grid_steps_test.dart: native preferred cell widths survive import and deep clone
+00:01 +141: test/table_grid_steps_test.dart: unmerge redistributes preferred widths from the logical grid
+00:01 +142: test/table_grid_steps_test.dart: merge produces the combined logical-grid preferred width
+00:01 +143: test/table_grid_steps_test.dart: invalid preferred width NaN rejects before mutating package parts
+00:01 +144: test/table_grid_steps_test.dart: invalid preferred width Infinity rejects before mutating package parts
+00:01 +145: test/table_grid_steps_test.dart: invalid preferred width -1.0 rejects before mutating package parts
+00:01 +146: test/table_grid_steps_test.dart: inspect exposes physical cells, logical ranges and merge owners
+00:01 +147: test/table_grid_steps_test.dart: inspect retains omitted-grid coordinates while logical edits reject
+00:01 +148: test/table_grid_steps_test.dart: logical selection edits the visible owner and nested actual cells
+00:01 +149: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +150: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +151: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +152: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +153: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +154: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +155: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +156: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +157: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +158: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +159: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +160: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +161: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +162: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +163: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +164: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +165: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +166: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +167: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +168: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +169: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +170: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +171: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +172: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +173: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +174: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +175: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +176: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +177: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +178: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +179: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +180: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +181: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +182: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +183: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +184: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +185: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +186: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +187: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +188: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +189: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +190: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +191: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +192: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +193: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +194: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +195: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +196: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +197: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +198: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +199: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +200: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +201: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +202: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +203: test/word_contained_text_wrap_test.dart: unchanged nested cells display complete words through both save paths
+00:01 +204: test/table_grid_steps_test.dart: isolate authored grid scripts survive three saves
+00:01 +205: test/table_grid_steps_test.dart: isolate authored grid scripts survive three saves
+00:01 +206: test/table_grid_steps_test.dart: isolate authored grid scripts survive three saves
+00:01 +207: test/table_grid_steps_test.dart: isolate authored grid scripts survive three saves
+00:01 +208: test/table_grid_steps_test.dart: isolate authored grid scripts survive three saves
+00:01 +209: test/table_grid_steps_test.dart: isolate authored grid scripts survive three saves
+00:01 +210: test/table_grid_steps_test.dart: isolate authored grid scripts survive three saves
+00:01 +211: test/table_grid_steps_test.dart: isolate authored grid scripts survive three saves
+00:01 +212: test/table_grid_steps_test.dart: isolate authored grid scripts survive three saves
+00:01 +213: test/table_grid_steps_test.dart: isolate authored grid scripts survive three saves
+00:01 +214: test/table_grid_steps_test.dart: isolate authored grid scripts survive three saves
+00:01 +215: test/table_grid_steps_test.dart: isolate authored grid scripts survive three saves
+00:01 +216: test/table_grid_steps_test.dart: isolate authored grid scripts survive three saves
+00:01 +217: test/table_grid_steps_test.dart: isolate authored grid scripts survive three saves
+00:01 +218: test/table_grid_steps_test.dart: isolate authored grid scripts survive three saves
+00:01 +219: test/table_grid_steps_test.dart: isolate authored grid scripts survive three saves
+00:01 +220: test/table_grid_steps_test.dart: isolate authored grid scripts survive three saves
+00:01 +221: test/table_grid_steps_test.dart: isolate authored grid scripts survive three saves
+00:01 +222: test/table_grid_steps_test.dart: isolate authored grid scripts survive three saves
+00:01 +223: test/table_grid_steps_test.dart: isolate authored grid scripts survive three saves
+00:01 +224: test/table_grid_steps_test.dart: isolate authored grid scripts survive three saves
+00:01 +225: test/table_grid_steps_test.dart: isolate authored grid scripts survive three saves
+00:01 +226: test/table_grid_steps_test.dart: isolate authored grid scripts survive three saves
+00:01 +227: test/word_contained_text_wrap_test.dart: replace nested cells display complete words through both save paths
+00:01 +228: test/word_contained_text_wrap_test.dart: replace nested cells display complete words through both save paths
+00:01 +229: test/office_fidelity_oracle_test.dart: mixed note references and all note paragraphs appear on the page
+00:02 +230: test/office_fidelity_oracle_test.dart: mixed note references and all note paragraphs appear on the page
+00:02 +231: test/office_fidelity_oracle_test.dart: mixed note references and all note paragraphs appear on the page
+00:02 +232: test/office_fidelity_oracle_test.dart: mixed note references and all note paragraphs appear on the page
+00:02 +233: test/word_contained_text_wrap_test.dart: Indic cell clusters keep their owners through direct and isolate saves
+00:02 +234: test/word_contained_text_wrap_test.dart: Indic cell clusters keep their owners through direct and isolate saves
+00:02 +235: test/word_contained_text_wrap_test.dart: Indic cell clusters keep their owners through direct and isolate saves
+00:02 +236: test/office_fidelity_oracle_test.dart: custom numbering definitions preserve visible labels after export
+00:02 +237: test/office_fidelity_oracle_test.dart: custom numbering definitions preserve visible labels after export
+00:02 +238: test/office_fidelity_oracle_test.dart: custom numbering definitions preserve visible labels after export
+00:02 +239: test/office_fidelity_oracle_test.dart: custom numbering definitions preserve visible labels after export
+00:02 +240: test/office_fidelity_oracle_test.dart: custom numbering definitions preserve visible labels after export
+00:02 +241: test/office_fidelity_oracle_test.dart: custom numbering definitions preserve visible labels after export
+00:02 +242: test/office_fidelity_oracle_test.dart: custom numbering definitions preserve visible labels after export
+00:02 +243: test/office_fidelity_oracle_test.dart: custom numbering definitions preserve visible labels after export
+00:02 +244: test/office_fidelity_oracle_test.dart: custom numbering definitions preserve visible labels after export
+00:02 +245: test/office_fidelity_oracle_test.dart: custom numbering definitions preserve visible labels after export
+00:02 +246: test/office_fidelity_oracle_test.dart: custom numbering definitions preserve visible labels after export
+00:02 +247: test/office_fidelity_oracle_test.dart: custom numbering definitions preserve visible labels after export
+00:02 +248: test/office_fidelity_oracle_test.dart: custom numbering definitions preserve visible labels after export
+00:02 +249: test/office_fidelity_oracle_test.dart: custom numbering definitions preserve visible labels after export
+00:02 +250: test/office_fidelity_oracle_test.dart: custom numbering definitions preserve visible labels after export
+00:02 +251: test/office_steps_test.dart: scripted multi-feature edits survive export and reopen
+00:02 +252: test/office_steps_test.dart: scripted multi-feature edits survive export and reopen
+00:02 +253: test/office_steps_test.dart: scripted multi-feature edits survive export and reopen
+00:02 +254: test/office_steps_test.dart: scripted multi-feature edits survive export and reopen
+00:02 +255: test/office_steps_test.dart: scripted multi-feature edits survive export and reopen
+00:02 +256: test/office_steps_test.dart: scripted multi-feature edits survive export and reopen
+00:02 +257: test/office_steps_test.dart: scripted multi-feature edits survive export and reopen
+00:02 +258: test/office_steps_test.dart: scripted multi-feature edits survive export and reopen
+00:02 +259: test/office_steps_test.dart: scripted multi-feature edits survive export and reopen
+00:02 +260: test/office_steps_test.dart: scripted multi-feature edits survive export and reopen
+00:02 +261: test/office_steps_test.dart: scripted multi-feature edits survive export and reopen
+00:02 +262: test/office_steps_test.dart: scripted multi-feature edits survive export and reopen
+00:02 +263: test/office_steps_test.dart: scripted multi-feature edits survive export and reopen
+00:02 +264: test/office_steps_test.dart: scripted multi-feature edits survive export and reopen
+00:02 +265: test/office_steps_test.dart: scripted multi-feature edits survive export and reopen
+00:02 +266: test/office_steps_test.dart: scripted multi-feature edits survive export and reopen
+00:02 +267: test/office_steps_test.dart: scripted multi-feature edits survive export and reopen
+00:02 +268: test/office_steps_test.dart: scripted multi-feature edits survive export and reopen
+00:02 +269: test/office_steps_test.dart: scripted multi-feature edits survive export and reopen
+00:02 +270: test/office_steps_test.dart: scripted multi-feature edits survive export and reopen
+00:02 +271: test/office_steps_test.dart: scripted multi-feature edits survive export and reopen
+00:02 +272: test/office_steps_test.dart: scripted multi-feature edits survive export and reopen
+00:02 +273: test/office_steps_test.dart: scripted multi-feature edits survive export and reopen
+00:02 +274: test/office_steps_test.dart: scripted multi-feature edits survive export and reopen
+00:02 +275: test/office_steps_test.dart: scripted multi-feature edits survive export and reopen
+00:02 +276: test/office_steps_test.dart: scripted multi-feature edits survive export and reopen
+00:02 +277: test/office_steps_test.dart: scripted multi-feature edits survive export and reopen
+00:02 +278: test/office_steps_test.dart: scripted multi-feature edits survive export and reopen
+00:02 +279: test/office_steps_test.dart: scripted multi-feature edits survive export and reopen
+00:02 +280: test/office_steps_test.dart: scripted multi-feature edits survive export and reopen
+00:02 +281: test/office_steps_test.dart: scripted multi-feature edits survive export and reopen
+00:02 +282: test/office_steps_test.dart: scripted multi-feature edits survive export and reopen
+00:02 +283: test/scripted_workflows_test.dart: docx: script and three async export/reopen cycles
+00:02 +284: test/scripted_workflows_test.dart: docx: script and three async export/reopen cycles
+00:02 +285: test/scripted_workflows_test.dart: docx: script and three async export/reopen cycles
+00:02 +286: test/scripted_workflows_test.dart: docx: script and three async export/reopen cycles
+00:02 +287: test/scripted_workflows_test.dart: docx: script and three async export/reopen cycles
+00:02 +288: test/scripted_workflows_test.dart: docx: script and three async export/reopen cycles
+00:02 +289: test/scripted_workflows_test.dart: docx: script and three async export/reopen cycles
+00:02 +290: test/scripted_workflows_test.dart: docx: script and three async export/reopen cycles
+00:02 +291: test/scripted_workflows_test.dart: docx: script and three async export/reopen cycles
+00:02 +292: test/scripted_workflows_test.dart: docx: script and three async export/reopen cycles
+00:02 +293: test/scripted_workflows_test.dart: docx: script and three async export/reopen cycles
+00:02 +294: test/scripted_workflows_test.dart: docx: script and three async export/reopen cycles
+00:02 +295: test/numbering_collision_test.dart: new bullet list avoids imported IDs
+00:02 +296: test/list_restart_fidelity_test.dart: restart and continuation survive three asynchronous save cycles
+00:02 +297: test/list_restart_fidelity_test.dart: restart and continuation survive three asynchronous save cycles
+00:02 +298: test/list_restart_fidelity_test.dart: restart and continuation survive three asynchronous save cycles
+00:02 +299: test/scripted_workflows_test.dart: xlsx: script and three async export/reopen cycles
+00:02 +300: test/rich_note_test.dart: dense body reserves footnotes and continues long notes without loss
+00:02 +301: test/rich_note_test.dart: dense body reserves footnotes and continues long notes without loss
+00:02 +302: test/rich_note_test.dart: dense body reserves footnotes and continues long notes without loss
+00:02 +303: test/rich_note_test.dart: dense body reserves footnotes and continues long notes without loss
+00:02 +304: test/scripted_workflows_test.dart: pptx: script and three async export/reopen cycles
+00:02 +305: test/scripted_workflows_test.dart: pptx: script and three async export/reopen cycles
+00:02 +306: test/scripted_workflows_test.dart: pptx: script and three async export/reopen cycles
+00:02 +307: test/scripted_workflows_test.dart: pptx: script and three async export/reopen cycles
+00:02 +308: test/scripted_workflows_test.dart: pptx: script and three async export/reopen cycles
+00:02 +309: test/scripted_workflows_test.dart: pptx: script and three async export/reopen cycles
+00:02 +310: test/rich_note_test.dart: rich note blocks, run styles and part-owned media survive editing
+00:02 +311: test/rich_note_test.dart: rich note blocks, run styles and part-owned media survive editing
+00:02 +312: test/rich_note_test.dart: rich note blocks, run styles and part-owned media survive editing
+00:02 +313: test/rich_note_test.dart: rich note blocks, run styles and part-owned media survive editing
+00:02 +314: test/rich_note_test.dart: rich note blocks, run styles and part-owned media survive editing
+00:02 +315: test/rich_note_test.dart: rich note blocks, run styles and part-owned media survive editing
+00:02 +316: test/rich_note_test.dart: rich note blocks, run styles and part-owned media survive editing
+00:02 +317: test/rich_note_test.dart: rich note blocks, run styles and part-owned media survive editing
+00:02 +318: test/rich_note_test.dart: rich note blocks, run styles and part-owned media survive editing
+00:02 +319: test/rich_note_test.dart: rich note blocks, run styles and part-owned media survive editing
+00:02 +320: test/rich_note_test.dart: rich note blocks, run styles and part-owned media survive editing
+00:02 +321: test/rich_note_test.dart: rich note blocks, run styles and part-owned media survive editing
+00:02 +322: test/rich_note_test.dart: rich note blocks, run styles and part-owned media survive editing
+00:02 +323: test/rich_note_test.dart: rich note blocks, run styles and part-owned media survive editing
+00:02 +324: test/rich_note_test.dart: rich note blocks, run styles and part-owned media survive editing
+00:02 +325: test/rich_note_test.dart: rich note blocks, run styles and part-owned media survive editing
+00:02 +326: test/rich_note_test.dart: rich note blocks, run styles and part-owned media survive editing
+00:02 +327: test/rich_note_test.dart: rich note blocks, run styles and part-owned media survive editing
+00:02 +328: test/rich_note_test.dart: rich note blocks, run styles and part-owned media survive editing
+00:02 +329: test/rich_note_test.dart: rich note blocks, run styles and part-owned media survive editing
+00:03 +330: test/rich_note_test.dart: rich note blocks, run styles and part-owned media survive editing
+00:03 +331: test/rich_note_test.dart: rich note blocks, run styles and part-owned media survive editing
+00:03 +332: test/rich_note_test.dart: rich note blocks, run styles and part-owned media survive editing
+00:03 +333: test/rich_note_test.dart: rich note blocks, run styles and part-owned media survive editing
+00:03 +334: test/rich_note_test.dart: rich note blocks, run styles and part-owned media survive editing
+00:03 +335: test/rich_note_test.dart: rich note blocks, run styles and part-owned media survive editing
+00:03 +336: test/rich_note_test.dart: rich note blocks, run styles and part-owned media survive editing
+00:03 +337: test/rich_note_test.dart: rich note blocks, run styles and part-owned media survive editing
+00:03 +338: test/native_presentation_test.dart: independent deck retains templates, distinct visuals, notes and sections
+00:03 +339: test/native_presentation_test.dart: independent deck retains templates, distinct visuals, notes and sections
+00:03 +340: test/native_presentation_test.dart: independent deck retains templates, distinct visuals, notes and sections
+00:03 +341: test/native_presentation_test.dart: independent deck retains templates, distinct visuals, notes and sections
+00:03 +342: test/native_presentation_test.dart: independent deck retains templates, distinct visuals, notes and sections
+00:03 +343: test/native_presentation_test.dart: independent deck retains templates, distinct visuals, notes and sections
+00:03 +344: test/native_presentation_test.dart: independent deck retains templates, distinct visuals, notes and sections
+00:03 +345: test/native_presentation_test.dart: independent deck retains templates, distinct visuals, notes and sections
+00:03 +346: test/native_presentation_test.dart: independent deck retains templates, distinct visuals, notes and sections
+00:03 +347: test/native_presentation_test.dart: independent deck retains templates, distinct visuals, notes and sections
+00:03 +348: test/native_presentation_test.dart: independent deck retains templates, distinct visuals, notes and sections
+00:03 +349: test/native_presentation_test.dart: independent deck retains templates, distinct visuals, notes and sections
+00:03 +350: test/native_presentation_test.dart: independent deck retains templates, distinct visuals, notes and sections
+00:03 +351: test/native_presentation_test.dart: independent deck retains templates, distinct visuals, notes and sections
+00:03 +352: test/native_presentation_test.dart: independent deck retains templates, distinct visuals, notes and sections
+00:03 +353: test/native_presentation_test.dart: independent deck retains templates, distinct visuals, notes and sections
+00:03 +354: test/native_spreadsheet_test.dart: independent workbook keeps style details charts pivots and relationships
+00:03 +355: test/slide_arrange_fidelity_test.dart: direct flat group membership and unique native IDs survive three saves
+00:03 +356: test/slide_arrange_fidelity_test.dart: direct flat group membership and unique native IDs survive three saves
+00:03 +357: test/slide_arrange_fidelity_test.dart: direct flat group membership and unique native IDs survive three saves
+00:03 +358: test/slide_arrange_fidelity_test.dart: direct flat group membership and unique native IDs survive three saves
+00:03 +359: test/slide_arrange_fidelity_test.dart: direct flat group membership and unique native IDs survive three saves
+00:03 +360: test/slide_section_fidelity_test.dart: direct within retains section identity and membership through three saves
+00:03 +361: test/slide_arrange_fidelity_test.dart: isolate flat group membership and unique native IDs survive three saves
+00:03 +362: test/slide_arrange_fidelity_test.dart: isolate flat group membership and unique native IDs survive three saves
+00:03 +363: test/slide_arrange_fidelity_test.dart: isolate flat group membership and unique native IDs survive three saves
+00:03 +364: test/slide_arrange_fidelity_test.dart: isolate flat group membership and unique native IDs survive three saves
+00:03 +365: test/slide_arrange_fidelity_test.dart: isolate flat group membership and unique native IDs survive three saves
+00:03 +366: test/slide_arrange_fidelity_test.dart: isolate flat group membership and unique native IDs survive three saves
+00:03 +367: test/slide_arrange_fidelity_test.dart: isolate flat group membership and unique native IDs survive three saves
+00:03 +368: test/slide_arrange_fidelity_test.dart: isolate flat group membership and unique native IDs survive three saves
+00:03 +369: test/slide_arrange_fidelity_test.dart: isolate flat group membership and unique native IDs survive three saves
+00:03 +370: test/slide_arrange_fidelity_test.dart: isolate flat group membership and unique native IDs survive three saves
+00:03 +371: test/slide_arrange_fidelity_test.dart: isolate flat group membership and unique native IDs survive three saves
+00:03 +372: test/slide_arrange_fidelity_test.dart: isolate flat group membership and unique native IDs survive three saves
+00:03 +373: test/slide_arrange_fidelity_test.dart: isolate flat group membership and unique native IDs survive three saves
+00:03 +374: test/slide_arrange_fidelity_test.dart: isolate flat group membership and unique native IDs survive three saves
+00:03 +375: test/slide_section_fidelity_test.dart: direct forward retains section identity and membership through three saves
+00:03 +376: test/slide_section_fidelity_test.dart: direct forward retains section identity and membership through three saves
+00:03 +377: test/slide_section_fidelity_test.dart: direct forward retains section identity and membership through three saves
+00:03 +378: test/slide_section_fidelity_test.dart: direct forward retains section identity and membership through three saves
+00:03 +379: test/slide_section_fidelity_test.dart: direct forward retains section identity and membership through three saves
+00:03 +380: test/slide_section_fidelity_test.dart: direct forward retains section identity and membership through three saves
+00:03 +381: test/slide_section_fidelity_test.dart: direct forward retains section identity and membership through three saves
+00:03 +382: test/slide_section_fidelity_test.dart: direct forward retains section identity and membership through three saves
+00:03 +383: test/slide_section_fidelity_test.dart: direct forward retains section identity and membership through three saves
+00:03 +384: test/slide_section_fidelity_test.dart: direct forward retains section identity and membership through three saves
+00:03 +385: test/slide_section_fidelity_test.dart: direct forward retains section identity and membership through three saves
+00:03 +386: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:03 +387: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:04 +388: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:04 +389: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:04 +390: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:04 +391: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:04 +392: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:04 +393: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:04 +394: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:04 +395: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:04 +396: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:04 +397: test/sheet_rename_fidelity_test.dart: independent native formula owners survive three saves
+00:04 +398: test/slide_section_fidelity_test.dart: direct emptied retains section identity and membership through three saves
+00:04 +399: test/slide_section_fidelity_test.dart: direct emptied retains section identity and membership through three saves
+00:04 +400: test/slide_section_fidelity_test.dart: direct emptied retains section identity and membership through three saves
+00:04 +401: test/slide_section_fidelity_test.dart: direct emptied retains section identity and membership through three saves
+00:04 +402: test/slide_section_fidelity_test.dart: direct emptied retains section identity and membership through three saves
+00:04 +403: test/slide_section_fidelity_test.dart: direct emptied retains section identity and membership through three saves
+00:04 +404: test/slide_section_fidelity_test.dart: direct emptied retains section identity and membership through three saves
+00:04 +405: test/slide_section_fidelity_test.dart: direct emptied retains section identity and membership through three saves
+00:04 +406: test/slide_section_fidelity_test.dart: direct emptied retains section identity and membership through three saves
+00:04 +407: test/sheet_rename_fidelity_test.dart: unknown XML sheet attribute rejects without any model or native mutation
+00:04 +408: test/sheet_rename_fidelity_test.dart: unknown XML sheet attribute rejects without any model or native mutation
+00:04 +409: test/sheet_rename_fidelity_test.dart: unknown XML sheet attribute rejects without any model or native mutation
+00:04 +410: test/sheet_rename_fidelity_test.dart: unknown XML sheet attribute rejects without any model or native mutation
+00:04 +411: test/sheet_rename_fidelity_test.dart: unknown XML sheet attribute rejects without any model or native mutation
+00:04 +412: test/slide_section_fidelity_test.dart: isolate unchanged retains section identity and membership through three saves
+00:04 +413: test/slide_section_fidelity_test.dart: isolate unchanged retains section identity and membership through three saves
+00:04 +414: test/slide_section_fidelity_test.dart: isolate unchanged retains section identity and membership through three saves
+00:04 +415: test/slide_section_fidelity_test.dart: isolate unchanged retains section identity and membership through three saves
+00:04 +416: test/slide_section_fidelity_test.dart: isolate unchanged retains section identity and membership through three saves
+00:04 +417: test/slide_section_fidelity_test.dart: isolate unchanged retains section identity and membership through three saves
+00:04 +418: test/slide_section_fidelity_test.dart: isolate unchanged retains section identity and membership through three saves
+00:04 +419: test/slide_section_fidelity_test.dart: isolate unchanged retains section identity and membership through three saves
+00:04 +420: test/slide_section_fidelity_test.dart: isolate unchanged retains section identity and membership through three saves
+00:04 +421: test/slide_section_fidelity_test.dart: isolate unchanged retains section identity and membership through three saves
+00:04 +422: test/slide_section_fidelity_test.dart: isolate unchanged retains section identity and membership through three saves
+00:04 +423: test/slide_section_fidelity_test.dart: isolate unchanged retains section identity and membership through three saves
+00:04 +424: test/slide_section_fidelity_test.dart: isolate unchanged retains section identity and membership through three saves
+00:04 +425: test/slide_section_fidelity_test.dart: isolate unchanged retains section identity and membership through three saves
+00:04 +426: test/slide_section_fidelity_test.dart: isolate unchanged retains section identity and membership through three saves
+00:04 +427: test/slide_section_fidelity_test.dart: isolate unchanged retains section identity and membership through three saves
+00:04 +428: test/slide_section_fidelity_test.dart: isolate unchanged retains section identity and membership through three saves
+00:04 +429: test/slide_section_fidelity_test.dart: isolate unchanged retains section identity and membership through three saves
+00:04 +430: test/slide_section_fidelity_test.dart: isolate unchanged retains section identity and membership through three saves
+00:04 +431: test/slide_section_fidelity_test.dart: isolate unchanged retains section identity and membership through three saves
+00:04 +432: test/sheet_qualified_names_test.dart: scoped caches and native definitions survive three saves and rename
+00:04 +433: test/sheet_qualified_names_test.dart: scoped caches and native definitions survive three saves and rename
+00:04 +434: test/sheet_qualified_names_test.dart: scoped caches and native definitions survive three saves and rename
+00:04 +435: test/sheet_qualified_names_test.dart: scoped caches and native definitions survive three saves and rename
+00:04 +436: test/sheet_qualified_names_test.dart: scoped caches and native definitions survive three saves and rename
+00:04 +437: test/sheet_qualified_names_test.dart: scoped caches and native definitions survive three saves and rename
+00:04 +438: test/sheet_qualified_names_test.dart: scoped caches and native definitions survive three saves and rename
+00:04 +439: test/sheet_qualified_names_test.dart: scoped caches and native definitions survive three saves and rename
+00:04 +440: test/sheet_qualified_names_test.dart: scoped caches and native definitions survive three saves and rename
+00:04 +441: test/sheet_qualified_names_test.dart: scoped caches and native definitions survive three saves and rename
+00:04 +442: test/sheet_qualified_names_test.dart: scoped caches and native definitions survive three saves and rename
+00:04 +443: test/sheet_qualified_names_test.dart: scoped caches and native definitions survive three saves and rename
+00:04 +444: test/sheet_qualified_names_test.dart: scoped caches and native definitions survive three saves and rename
+00:04 +445: test/sheet_qualified_names_test.dart: scoped caches and native definitions survive three saves and rename
+00:04 +446: test/sheet_qualified_names_test.dart: scoped caches and native definitions survive three saves and rename
+00:04 +447: test/sheet_qualified_names_test.dart: scoped caches and native definitions survive three saves and rename
+00:04 +448: test/sheet_qualified_names_test.dart: scoped caches and native definitions survive three saves and rename
+00:04 +449: test/sheet_qualified_names_test.dart: scoped caches and native definitions survive three saves and rename
+00:04 +450: test/sheet_qualified_names_test.dart: scoped caches and native definitions survive three saves and rename
+00:04 +451: test/sheet_qualified_names_test.dart: scoped caches and native definitions survive three saves and rename
+00:04 +452: test/sheet_qualified_names_test.dart: scoped caches and native definitions survive three saves and rename
+00:04 +453: test/sheet_qualified_names_test.dart: scoped caches and native definitions survive three saves and rename
+00:04 +454: test/sheet_qualified_names_test.dart: scoped caches and native definitions survive three saves and rename
+00:04 +455: test/sheet_qualified_names_test.dart: scoped caches and native definitions survive three saves and rename
+00:04 +456: test/sheet_qualified_names_test.dart: scoped caches and native definitions survive three saves and rename
+00:04 +457: test/sheet_qualified_names_test.dart: scoped caches and native definitions survive three saves and rename
+00:04 +458: test/slide_section_fidelity_test.dart: isolate within retains section identity and membership through three saves
+00:04 +459: test/slide_section_fidelity_test.dart: isolate within retains section identity and membership through three saves
+00:04 +460: test/slide_section_fidelity_test.dart: isolate within retains section identity and membership through three saves
+00:04 +461: test/slide_section_fidelity_test.dart: isolate within retains section identity and membership through three saves
+00:04 +462: test/slide_section_fidelity_test.dart: isolate within retains section identity and membership through three saves
+00:04 +463: test/slide_section_fidelity_test.dart: isolate within retains section identity and membership through three saves
+00:04 +464: test/slide_section_fidelity_test.dart: isolate within retains section identity and membership through three saves
+00:04 +465: test/slide_section_fidelity_test.dart: isolate within retains section identity and membership through three saves
+00:04 +466: test/slide_section_fidelity_test.dart: isolate within retains section identity and membership through three saves
+00:04 +467: test/slide_section_fidelity_test.dart: isolate within retains section identity and membership through three saves
+00:04 +468: test/slide_section_fidelity_test.dart: isolate within retains section identity and membership through three saves
+00:04 +469: test/slide_section_fidelity_test.dart: isolate within retains section identity and membership through three saves
+00:04 +470: test/slide_section_fidelity_test.dart: isolate within retains section identity and membership through three saves
+00:04 +471: test/slide_section_fidelity_test.dart: isolate within retains section identity and membership through three saves
+00:04 +472: test/sheet_rename_fidelity_test.dart: modified native conditional projection is guarded atomically
+00:04 +473: test/sheet_rename_fidelity_test.dart: modified native conditional projection is guarded atomically
+00:04 +474: test/sheet_rename_fidelity_test.dart: modified native conditional projection is guarded atomically
+00:04 +475: test/sheet_rename_fidelity_test.dart: modified native conditional projection is guarded atomically
+00:04 +476: test/sheet_rename_fidelity_test.dart: modified native conditional projection is guarded atomically
+00:04 +477: test/sheet_rename_fidelity_test.dart: modified native conditional projection is guarded atomically
+00:04 +478: test/sheet_rename_fidelity_test.dart: modified native conditional projection is guarded atomically
+00:04 +479: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +480: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +481: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +482: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +483: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +484: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +485: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +486: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +487: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +488: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +489: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +490: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +491: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +492: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +493: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +494: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +495: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +496: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +497: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +498: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +499: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +500: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +501: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +502: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +503: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +504: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +505: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +506: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +507: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +508: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +509: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +510: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +511: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +512: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +513: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +514: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +515: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +516: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +517: test/slide_section_fidelity_test.dart: isolate forward retains section identity and membership through three saves
+00:04 +518: test/sheet_qualified_name_error_test.dart: numeric named errors retain error caches through three direct/isolate saves
+00:04 +519: test/sheet_rename_fidelity_test.dart: edited native formula =Data!B2+1 remains owned by the model across save and undo
+00:04 +520: test/slide_section_fidelity_test.dart: isolate backward retains section identity and membership through three saves
+00:04 +521: test/sheet_rename_adversarial_test.dart: prepared rename preserves newer state atomically apply rejects newer formula
+00:04 +522: test/sheet_rename_adversarial_test.dart: prepared rename preserves newer state atomically apply rejects newer formula
+00:04 +523: test/sheet_rename_adversarial_test.dart: prepared rename preserves newer state atomically apply rejects newer formula
+00:04 +524: test/sheet_rename_adversarial_test.dart: prepared rename preserves newer state atomically apply rejects newer formula
+00:04 +525: test/sheet_rename_adversarial_test.dart: prepared rename preserves newer state atomically apply rejects newer formula
+00:04 +526: test/slide_section_fidelity_test.dart: isolate emptied retains section identity and membership through three saves
+00:04 +527: test/slide_section_fidelity_test.dart: isolate emptied retains section identity and membership through three saves
+00:04 +528: test/sheet_rename_adversarial_test.dart: prepared rename preserves newer state atomically apply rejects newer native extension
+00:04 +529: test/slide_section_fidelity_test.dart: a planned cross-section move restores exact boundaries on undo and redo
+00:04 +530: test/sheet_rename_adversarial_test.dart: prepared rename preserves newer state atomically apply rejects newer name collision
+00:04 +531: test/slide_section_fidelity_test.dart: a stale plan rejects changed section state without touching slides
+00:04 +532: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +533: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +534: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +535: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +536: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +537: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +538: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +539: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +540: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +541: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +542: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +543: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +544: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +545: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +546: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +547: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +548: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +549: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +550: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +551: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +552: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +553: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +554: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +555: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +556: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +557: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +558: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +559: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +560: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +561: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +562: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +563: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +564: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +565: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +566: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +567: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +568: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +569: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +570: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +571: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +572: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +573: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +574: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +575: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +576: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +577: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +578: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +579: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +580: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +581: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +582: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +583: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +584: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +585: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +586: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +587: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +588: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +589: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +590: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +591: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +592: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +593: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: '[Remote.xlsx]Data'!B2
+00:04 +594: test/sheet_formula_dependency_cache_test.dart: imported scalar cache types survive three direct/isolate saves
+00:04 +595: test/sheet_formula_dependency_cache_test.dart: imported scalar cache types survive three direct/isolate saves
+00:05 +596: test/sheet_formula_dependency_cache_test.dart: imported scalar cache types survive three direct/isolate saves
+00:05 +597: test/sheet_formula_dependency_cache_test.dart: imported scalar cache types survive three direct/isolate saves
+00:05 +598: test/sheet_formula_dependency_cache_test.dart: imported scalar cache types survive three direct/isolate saves
+00:05 +599: test/sheet_formula_dependency_cache_test.dart: imported scalar cache types survive three direct/isolate saves
+00:05 +600: test/sheet_formula_dependency_cache_test.dart: imported scalar cache types survive three direct/isolate saves
+00:05 +601: test/sheet_formula_dependency_cache_test.dart: imported scalar cache types survive three direct/isolate saves
+00:05 +602: test/sheet_formula_dependency_cache_test.dart: imported scalar cache types survive three direct/isolate saves
+00:05 +603: test/sheet_formula_dependency_cache_test.dart: imported scalar cache types survive three direct/isolate saves
+00:05 +604: test/sheet_formula_dependency_cache_test.dart: imported scalar cache types survive three direct/isolate saves
+00:05 +605: test/sheet_formula_dependency_cache_test.dart: imported scalar cache types survive three direct/isolate saves
+00:05 +606: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: SUM('Data:Summary'!B2)
+00:05 +607: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: SUM('Data:Summary'!B2)
+00:05 +608: test/sheet_rename_adversarial_test.dart: duplicate-source native chart series survive rename and three saves
+00:05 +609: test/sheet_rename_adversarial_test.dart: duplicate-source native chart series survive rename and three saves
+00:05 +610: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: SUM('Data':'Summary'!B2)
+00:05 +611: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: SUM('Data':'Summary'!B2)
+00:05 +612: test/slide_section_fidelity_test.dart: moving a native entry preserves a prefix scoped to its original section
+00:05 +613: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: SUM(Data!A:B)
+00:05 +614: test/slide_section_fidelity_test.dart: opaque attributes sharing native local names are not rewritten
+00:05 +615: test/slide_section_fidelity_test.dart: opaque attributes sharing native local names are not rewritten
+00:05 +616: test/slide_section_fidelity_test.dart: opaque attributes sharing native local names are not rewritten
+00:05 +617: test/slide_section_fidelity_test.dart: opaque attributes sharing native local names are not rewritten
+00:05 +618: test/slide_section_fidelity_test.dart: opaque attributes sharing native local names are not rewritten
+00:05 +619: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: SUM(Data!1:3)
+00:05 +620: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: SUM(Data!1:3)
+00:05 +621: test/sheet_formula_cache_fidelity_test.dart: unsupported evaluation retains imported cache: SUM(Data!1:3)
+00:05 +622: test/slide_section_fidelity_test.dart: optional native name and GUID absence survives a section-aware move
+00:05 +623: test/slide_section_fidelity_test.dart: optional native name and GUID absence survives a section-aware move
+00:05 +624: test/slide_section_fidelity_test.dart: optional native name and GUID absence survives a section-aware move
+00:05 +625: test/slide_section_fidelity_test.dart: optional native name and GUID absence survives a section-aware move
+00:05 +626: test/slide_section_fidelity_test.dart: optional native name and GUID absence survives a section-aware move
+00:05 +627: test/slide_section_fidelity_test.dart: optional native name and GUID absence survives a section-aware move
+00:05 +628: test/slide_section_fidelity_test.dart: optional native name and GUID absence survives a section-aware move
+00:05 +629: test/slide_section_fidelity_test.dart: optional native name and GUID absence survives a section-aware move
+00:05 +630: test/slide_section_fidelity_test.dart: optional native name and GUID absence survives a section-aware move
+00:05 +631: test/slide_section_fidelity_test.dart: optional native name and GUID absence survives a section-aware move
+00:05 +632: test/slide_section_fidelity_test.dart: optional native name and GUID absence survives a section-aware move
+00:05 +633: test/slide_section_fidelity_test.dart: optional native name and GUID absence survives a section-aware move
+00:05 +634: test/slide_section_fidelity_test.dart: optional native name and GUID absence survives a section-aware move
+00:05 +635: test/sheet_explicit_style_fidelity_test.dart: explicit native style zero survives three direct and isolate saves
+00:05 +636: test/sheet_explicit_style_fidelity_test.dart: explicit native style zero survives three direct and isolate saves
+00:05 +637: test/sheet_explicit_style_fidelity_test.dart: explicit native style zero survives three direct and isolate saves
+00:05 +638: test/sheet_explicit_style_fidelity_test.dart: explicit native style zero survives three direct and isolate saves
+00:05 +639: test/sheet_explicit_style_fidelity_test.dart: explicit native style zero survives three direct and isolate saves
+00:05 +640: test/slide_section_fidelity_test.dart: unmodeled native membership is preserved when slide order is unchanged
+00:05 +641: test/slide_section_fidelity_test.dart: unmodeled native membership is preserved when slide order is unchanged
+00:05 +642: test/slide_section_fidelity_test.dart: unmodeled native membership is preserved when slide order is unchanged
+00:05 +643: test/slide_section_fidelity_test.dart: unmodeled native membership is preserved when slide order is unchanged
+00:05 +644: test/slide_section_fidelity_test.dart: unmodeled native membership is preserved when slide order is unchanged
+00:05 +645: test/slide_section_fidelity_test.dart: unmodeled native membership is preserved when slide order is unchanged
+00:05 +646: test/sheet_formula_cache_fidelity_test.dart: formula cache keeps its native scalar type: Data!LocalRange
+00:05 +647: test/sheet_formula_cache_fidelity_test.dart: formula cache keeps its native scalar type: Data!LocalRange
+00:05 +648: test/sheet_formula_cache_fidelity_test.dart: formula cache keeps its native scalar type: Data!LocalRange
+00:05 +649: test/sheet_formula_cache_fidelity_test.dart: formula cache keeps its native scalar type: IF(Data!B2>0,"Data!A1 ""quoted""","unused")
+00:05 +650: test/sheet_formula_cache_fidelity_test.dart: formula cache keeps its native scalar type: IF(Data!B2>0,"0012","0099")
+00:05 +651: test/sheet_style_namespace_fidelity_test.dart: edits retain native styles and extension nodes: default namespace
+00:05 +652: test/sheet_formula_cache_fidelity_test.dart: formula cache keeps its native scalar type: IF(Data!B2>0,"#literal","unused")
+00:05 +653: test/sheet_formula_cache_fidelity_test.dart: formula cache keeps its native scalar type: IF(Data!B2>0,"#literal","unused")
+00:05 +654: test/sheet_formula_cache_fidelity_test.dart: formula cache keeps its native scalar type: IF(Data!B2>0,"#literal","unused")
+00:05 +655: test/sheet_formula_cache_fidelity_test.dart: formula cache keeps its native scalar type: IF(Data!B2>0,"#literal","unused")
+00:05 +656: test/sheet_formula_cache_fidelity_test.dart: formula cache keeps its native scalar type: IF(Data!B2>0,"#literal","unused")
+00:05 +657: test/sheet_formula_cache_fidelity_test.dart: formula cache keeps its native scalar type: IF(Data!B2>0,"#literal","unused")
+00:05 +658: test/sheet_formula_cache_fidelity_test.dart: formula cache keeps its native scalar type: IF(Data!B2>0,"#literal","unused")
+00:05 +659: test/sheet_formula_cache_fidelity_test.dart: formula cache keeps its native scalar type: IF(Data!B2>0,"#literal","unused")
+00:05 +660: test/sheet_formula_cache_fidelity_test.dart: formula cache keeps its native scalar type: IF(Data!B2>0,"#literal","unused")
+00:05 +661: test/sheet_style_namespace_fidelity_test.dart: explicit equal RGB replaces native theme without style growth on repeated save
+00:05 +662: test/sheet_formula_cache_fidelity_test.dart: formula cache keeps its native scalar type: Data!B2>0
+00:06 +663: test/sheet_style_namespace_fidelity_test.dart: explicit equal RGB intent survives isolate serialization
+00:06 +664: test/sheet_formula_cache_fidelity_test.dart: formula cache keeps its native scalar type: Data!B2<0
+00:06 +665: test/sheet_formula_cache_fidelity_test.dart: formula cache keeps its native scalar type: Data!B2<0
+00:06 +666: test/sheet_formula_cache_fidelity_test.dart: formula cache keeps its native scalar type: Data!B2<0
+00:06 +667: test/style_cascade_test.dart: scripts apply character/table styles and edit table run definitions
+00:06 +668: test/style_cascade_test.dart: scripts apply character/table styles and edit table run definitions
+00:06 +669: test/style_cascade_test.dart: scripts apply character/table styles and edit table run definitions
+00:06 +670: test/style_cascade_test.dart: scripts apply character/table styles and edit table run definitions
+00:06 +671: test/style_cascade_test.dart: scripts apply character/table styles and edit table run definitions
+00:06 +672: test/style_cascade_test.dart: scripts apply character/table styles and edit table run definitions
+00:06 +673: test/story_media_fidelity_test.dart: all six stories retain owned media over three asynchronous save cycles
+00:06 +674: test/story_media_fidelity_test.dart: all six stories retain owned media over three asynchronous save cycles
+00:06 +675: test/story_media_fidelity_test.dart: all six stories retain owned media over three asynchronous save cycles
+00:06 +676: test/story_media_fidelity_test.dart: all six stories retain owned media over three asynchronous save cycles
+00:06 +677: test/story_media_fidelity_test.dart: all six stories retain owned media over three asynchronous save cycles
+00:06 +678: test/story_media_fidelity_test.dart: all six stories retain owned media over three asynchronous save cycles
+00:06 +679: test/story_media_fidelity_test.dart: all six stories retain owned media over three asynchronous save cycles
+00:06 +680: test/story_media_fidelity_test.dart: all six stories retain owned media over three asynchronous save cycles
+00:06 +681: test/story_media_fidelity_test.dart: all six stories retain owned media over three asynchronous save cycles
+00:06 +682: test/word_part_routing_test.dart: edits use the actual main and note parts over asynchronous save cycles
+00:06 +683: test/word_part_routing_test.dart: edits use the actual main and note parts over asynchronous save cycles
+00:06 +684: test/word_part_routing_test.dart: edits use the actual main and note parts over asynchronous save cycles
+00:06 +685: test/word_part_routing_test.dart: edits use the actual main and note parts over asynchronous save cycles
+00:06 +686: test/word_part_routing_test.dart: edits use the actual main and note parts over asynchronous save cycles
+00:06 +687: test/sheet_formula_cache_fidelity_test.dart: error spelling is text when returned by literal: #NAME?
+00:06 +688: test/sheet_formula_cache_fidelity_test.dart: error spelling is text when returned by IF: #NAME?
+00:06 +689: test/sheet_schema_fidelity_test.dart: absolute drawing targets remain a single relationship on save
+00:06 +690: test/sheet_schema_fidelity_test.dart: absolute drawing targets remain a single relationship on save
+00:06 +691: test/sheet_schema_fidelity_test.dart: absolute drawing targets remain a single relationship on save
+00:06 +692: test/sheet_schema_fidelity_test.dart: absolute drawing targets remain a single relationship on save
+00:06 +693: test/slide_text_fidelity_test.dart: native text point sizes survive unchanged asynchronous export
+00:06 +694: test/slide_text_fidelity_test.dart: native text point sizes survive unchanged asynchronous export
+00:06 +695: test/slide_text_fidelity_test.dart: native text point sizes survive unchanged asynchronous export
+00:06 +696: test/slide_text_fidelity_test.dart: native text point sizes survive unchanged asynchronous export
+00:06 +697: test/slide_text_fidelity_test.dart: native text point sizes survive unchanged asynchronous export
+00:06 +698: test/slide_text_fidelity_test.dart: native text point sizes survive unchanged asynchronous export
+00:06 +699: test/slide_text_fidelity_test.dart: native text point sizes survive unchanged asynchronous export
+00:06 +700: test/slide_text_fidelity_test.dart: native text point sizes survive unchanged asynchronous export
+00:06 +701: test/slide_text_fidelity_test.dart: native text point sizes survive unchanged asynchronous export
+00:06 +702: test/slide_text_fidelity_test.dart: native text point sizes survive unchanged asynchronous export
+00:06 +703: test/slide_text_fidelity_test.dart: native text point sizes survive unchanged asynchronous export
+00:06 +704: test/slide_text_fidelity_test.dart: native text point sizes survive unchanged asynchronous export
+00:06 +705: test/slide_text_fidelity_test.dart: native text point sizes survive unchanged asynchronous export
+00:06 +706: test/slide_text_fidelity_test.dart: native text point sizes survive unchanged asynchronous export
+00:06 +707: test/slide_text_fidelity_test.dart: native text point sizes survive unchanged asynchronous export
+00:06 +708: test/slide_text_fidelity_test.dart: native text point sizes survive unchanged asynchronous export
+00:07 +709: test/slide_text_fidelity_test.dart: native text point sizes survive unchanged asynchronous export
+00:07 +710: test/slide_text_fidelity_test.dart: native text point sizes survive unchanged asynchronous export
+00:07 +711: test/slide_text_fidelity_test.dart: native text point sizes survive unchanged asynchronous export
+00:07 +712: test/slide_text_fidelity_test.dart: native text point sizes survive unchanged asynchronous export
+00:07 +713: test/slide_text_fidelity_test.dart: native text point sizes survive unchanged asynchronous export
+00:07 +714: test/slide_text_fidelity_test.dart: native text point sizes survive unchanged asynchronous export
+00:07 +715: test/slide_text_fidelity_test.dart: native text point sizes survive unchanged asynchronous export
+00:07 +716: test/word_compatibility_fidelity_test.dart: source section properties survive modeled edits over three saves
+00:07 +717: test/slide_text_fidelity_test.dart: moving rich text keeps run formats body settings and bullets
+00:07 +718: test/slide_text_fidelity_test.dart: moving rich text keeps run formats body settings and bullets
+00:07 +719: test/word_referenced_styles_and_breaks_test.dart: referenced built-ins and ancestors join an imported sparse style catalog
+00:07 +720: test/word_referenced_styles_and_breaks_test.dart: referenced built-ins and ancestors join an imported sparse style catalog
+00:07 +721: test/word_referenced_styles_and_breaks_test.dart: referenced built-ins and ancestors join an imported sparse style catalog
+00:07 +722: test/word_referenced_styles_and_breaks_test.dart: referenced built-ins and ancestors join an imported sparse style catalog
+00:07 +723: test/word_referenced_styles_and_breaks_test.dart: referenced built-ins and ancestors join an imported sparse style catalog
+00:07 +724: test/comment_thread_fidelity_test.dart: comment threads join last paragraph IDs rather than numeric comment IDs
+00:07 +725: test/word_altchunk_fidelity_test.dart: import retains opaque positions and immutable resolved provenance
+00:07 +726: test/word_altchunk_fidelity_test.dart: import retains opaque positions and immutable resolved provenance
+00:07 +727: test/comment_thread_fidelity_test.dart: comment thread imports survive three async saves
+00:07 +728: test/opaque_word_test.dart: unmodeled body XML and its relationship survive edits copies and saves
+00:07 +729: test/opaque_word_test.dart: unmodeled body XML and its relationship survive edits copies and saves
+00:07 +730: test/opaque_word_test.dart: unmodeled body XML and its relationship survive edits copies and saves
+00:07 +731: test/opaque_word_test.dart: unmodeled body XML and its relationship survive edits copies and saves
+00:07 +732: test/opaque_word_test.dart: unmodeled body XML and its relationship survive edits copies and saves
+00:07 +733: test/opaque_word_test.dart: unmodeled body XML and its relationship survive edits copies and saves
+00:07 +734: test/opaque_word_test.dart: unmodeled body XML and its relationship survive edits copies and saves
+00:07 +735: test/opaque_word_test.dart: unmodeled body XML and its relationship survive edits copies and saves
+00:07 +736: test/opaque_word_test.dart: unmodeled body XML and its relationship survive edits copies and saves
+00:07 +737: test/opaque_word_test.dart: unmodeled body XML and its relationship survive edits copies and saves
+00:07 +738: test/opaque_word_test.dart: unmodeled body XML and its relationship survive edits copies and saves
+00:07 +739: test/opaque_word_test.dart: unmodeled body XML and its relationship survive edits copies and saves
+00:07 +740: test/opaque_word_test.dart: unmodeled body XML and its relationship survive edits copies and saves
+00:07 +741: test/note_edit_test.dart: editing a rich note keeps formatting, tables, pictures and links
+00:07 +742: test/note_edit_test.dart: added and removed lines become styled paragraphs
+00:07 +743: test/note_edit_test.dart: edited note text survives save and reopen
+00:07 +744: test/note_marker_merge_test.dart: incoming note text edits preserve bookmark and automatic-marker positions through Enter and join
+00:08 +745: test/word_section_clone_fidelity_test.dart: cloned section histories receive distinct stable IDs over three saves
+00:08 +746: test/word_section_clone_fidelity_test.dart: cloned section histories receive distinct stable IDs over three saves
+00:08 +747: test/word_section_clone_fidelity_test.dart: cloned section histories receive distinct stable IDs over three saves
+00:08 +748: test/word_section_clone_fidelity_test.dart: cloned section histories receive distinct stable IDs over three saves
+00:08 +749: test/word_section_clone_fidelity_test.dart: cloned section histories receive distinct stable IDs over three saves
+00:08 +750: test/word_section_clone_fidelity_test.dart: cloned section histories receive distinct stable IDs over three saves
+00:08 +751: test/word_section_clone_fidelity_test.dart: cloned section histories receive distinct stable IDs over three saves
+00:08 +752: test/note_separator_fidelity_test.dart: inserting notes reserves native special IDs through three saves: endnote=false relocatedMain=false
+00:08 +753: test/note_separator_fidelity_test.dart: inserting notes reserves native special IDs through three saves: endnote=false relocatedMain=false
+00:08 +754: test/note_separator_fidelity_test.dart: inserting notes reserves native special IDs through three saves: endnote=false relocatedMain=false
+00:08 +755: test/note_separator_fidelity_test.dart: inserting notes reserves native special IDs through three saves: endnote=false relocatedMain=false
+00:08 +756: test/note_separator_fidelity_test.dart: inserting notes reserves native special IDs through three saves: endnote=false relocatedMain=false
+00:08 +757: test/note_separator_fidelity_test.dart: inserting notes reserves native special IDs through three saves: endnote=false relocatedMain=false
+00:08 +758: test/note_separator_fidelity_test.dart: inserting notes reserves native special IDs through three saves: endnote=false relocatedMain=false
+00:08 +759: test/note_chrome_fidelity_test.dart: footnote absent separator definitions stay absent through direct saves
+00:08 +760: test/note_chrome_fidelity_test.dart: footnote absent separator definitions stay absent through direct saves
+00:08 +761: test/note_chrome_fidelity_test.dart: footnote absent separator definitions stay absent through direct saves
+00:08 +762: test/note_chrome_fidelity_test.dart: footnote absent separator definitions stay absent through direct saves
+00:08 +763: test/note_chrome_fidelity_test.dart: footnote absent separator definitions stay absent through direct saves
+00:08 +764: test/note_chrome_fidelity_test.dart: footnote absent separator definitions stay absent through direct saves
+00:08 +765: test/note_chrome_fidelity_test.dart: footnote absent separator definitions stay absent through direct saves
+00:08 +766: test/note_chrome_fidelity_test.dart: footnote absent separator definitions stay absent through direct saves
+00:08 +767: test/note_separator_fidelity_test.dart: native separator definitions preserve absence, metadata and owner through clone/edit/save: endnote=false custom=false aliases=false
+00:08 +768: test/note_separator_fidelity_test.dart: native separator definitions preserve absence, metadata and owner through clone/edit/save: endnote=false custom=false aliases=false
+00:08 +769: test/note_separator_fidelity_test.dart: native separator definitions preserve absence, metadata and owner through clone/edit/save: endnote=false custom=false aliases=false
+00:08 +770: test/note_chrome_fidelity_test.dart: footnote custom separators retain namespace context: direct/
+00:08 +771: test/note_separator_fidelity_test.dart: native separator definitions preserve absence, metadata and owner through clone/edit/save: endnote=false custom=true aliases=false
+00:08 +772: test/note_chrome_fidelity_test.dart: footnote newly authored part gets one standard pair: direct
+00:08 +773: test/note_chrome_fidelity_test.dart: footnote newly authored part gets one standard pair: direct
+00:08 +774: test/note_chrome_fidelity_test.dart: footnote newly authored part gets one standard pair: direct
+00:08 +775: test/note_chrome_fidelity_test.dart: footnote newly authored part gets one standard pair: direct
+00:08 +776: test/note_separator_fidelity_test.dart: native separator definitions preserve absence, metadata and owner through clone/edit/save: endnote=false custom=true aliases=true
+00:08 +777: test/note_chrome_fidelity_test.dart: footnote absent separator definitions stay absent through isolate saves
+00:08 +778: test/note_separator_fidelity_test.dart: imported note spacing remains exact: endnote=false prefix=[]
+00:08 +779: test/note_separator_fidelity_test.dart: imported note spacing remains exact: endnote=false prefix=[]
+00:08 +780: test/note_separator_fidelity_test.dart: imported note spacing remains exact: endnote=false prefix=[]
+00:08 +781: test/note_separator_fidelity_test.dart: imported note spacing remains exact: endnote=false prefix=[]
+00:08 +782: test/note_chrome_fidelity_test.dart: footnote newly authored part gets one standard pair: isolate
+00:08 +783: test/note_separator_fidelity_test.dart: imported note spacing remains exact: endnote=false prefix=[32]
+00:08 +784: test/note_separator_fidelity_test.dart: imported note spacing remains exact: endnote=false prefix=[32]
+00:08 +785: test/note_chrome_fidelity_test.dart: endnote custom separators retain namespace context: direct/w
+00:08 +786: test/note_separator_fidelity_test.dart: imported note spacing remains exact: endnote=false prefix=[32, 32]
+00:08 +787: test/note_separator_fidelity_test.dart: imported note spacing remains exact: endnote=false prefix=[32, 32]
+00:08 +788: test/styleless_import_fidelity_test.dart: missing styles and direct properties remain absent after unrelated edits
+00:08 +789: test/styleless_import_fidelity_test.dart: missing styles and direct properties remain absent after unrelated edits
+00:08 +790: test/styleless_import_fidelity_test.dart: missing styles and direct properties remain absent after unrelated edits
+00:08 +791: test/styleless_import_fidelity_test.dart: missing styles and direct properties remain absent after unrelated edits
+00:08 +792: test/styleless_import_fidelity_test.dart: missing styles and direct properties remain absent after unrelated edits
+00:08 +793: test/styleless_import_fidelity_test.dart: missing styles and direct properties remain absent after unrelated edits
+00:08 +794: test/styleless_import_fidelity_test.dart: missing styles and direct properties remain absent after unrelated edits
+00:08 +795: test/styleless_import_fidelity_test.dart: missing styles and direct properties remain absent after unrelated edits
+00:08 +796: test/styleless_import_fidelity_test.dart: missing styles and direct properties remain absent after unrelated edits
+00:08 +797: test/styleless_import_fidelity_test.dart: missing styles and direct properties remain absent after unrelated edits
+00:08 +798: test/styleless_import_fidelity_test.dart: missing styles and direct properties remain absent after unrelated edits
+00:08 +799: test/styleless_import_fidelity_test.dart: missing styles and direct properties remain absent after unrelated edits
+00:08 +800: test/table_border_fidelity_test.dart: native imported table borders survive three async saves
+00:08 +801: test/table_border_fidelity_test.dart: native imported table borders survive three async saves
+00:08 +802: test/table_border_fidelity_test.dart: native imported table borders survive three async saves
+00:08 +803: test/table_border_fidelity_test.dart: native imported table borders survive three async saves
+00:08 +804: test/table_border_fidelity_test.dart: native imported table borders survive three async saves
+00:08 +805: test/table_border_fidelity_test.dart: native imported table borders survive three async saves
+00:08 +806: test/table_border_fidelity_test.dart: native imported table borders survive three async saves
+00:08 +807: test/table_border_fidelity_test.dart: native imported table borders survive three async saves
+00:08 +808: test/table_border_fidelity_test.dart: native imported table borders survive three async saves
+00:08 +809: test/table_border_fidelity_test.dart: native imported table borders survive three async saves
+00:08 +810: test/table_border_fidelity_test.dart: native imported table borders survive three async saves
+00:08 +811: test/table_border_fidelity_test.dart: native imported table borders survive three async saves
+00:08 +812: test/note_separator_fidelity_test.dart: imported note spacing remains exact: endnote=true prefix=[32]
+00:08 +813: test/table_border_fidelity_test.dart: native edited table borders survive three async saves
+00:08 +814: test/note_separator_fidelity_test.dart: imported note spacing remains exact: endnote=true prefix=[32, 32]
+00:08 +815: test/note_separator_fidelity_test.dart: imported note spacing remains exact: endnote=true prefix=[32, 32]
+00:08 +816: test/word_picture_distance_fidelity_test.dart: imported inline omitted distances remain exact for three cycles
+00:08 +817: test/word_picture_distance_fidelity_test.dart: imported inline omitted distances remain exact for three cycles
+00:08 +818: test/word_picture_distance_fidelity_test.dart: imported inline omitted distances remain exact for three cycles
+00:08 +819: test/word_picture_distance_fidelity_test.dart: imported inline omitted distances remain exact for three cycles
+00:08 +820: test/word_picture_distance_fidelity_test.dart: imported inline omitted distances remain exact for three cycles
+00:08 +821: test/word_picture_distance_fidelity_test.dart: imported inline omitted distances remain exact for three cycles
+00:09 +822: test/note_marker_legacy_fidelity_test.dart: native note markers retain imported positions over three saves
+00:09 +823: test/note_marker_legacy_fidelity_test.dart: native note markers retain imported positions over three saves
+00:09 +824: test/note_marker_legacy_fidelity_test.dart: native note markers retain imported positions over three saves
+00:09 +825: test/bookmark_fidelity_test.dart: native bookmarks keep imported boundaries over three cycles
+00:09 +826: test/bookmark_fidelity_test.dart: native bookmarks keep imported boundaries over three cycles
+00:09 +827: test/bookmark_fidelity_test.dart: native bookmarks keep imported boundaries over three cycles
+00:09 +828: test/bookmark_fidelity_test.dart: native bookmarks keep imported boundaries over three cycles
+00:09 +829: test/bookmark_fidelity_test.dart: native bookmarks keep imported boundaries over three cycles
+00:09 +830: test/bookmark_fidelity_test.dart: native bookmarks keep imported boundaries over three cycles
+00:09 +831: test/bookmark_fidelity_test.dart: native bookmarks keep imported boundaries over three cycles
+00:09 +832: test/bookmark_fidelity_test.dart: native bookmarks keep imported boundaries over three cycles
+00:09 +833: test/bookmark_fidelity_test.dart: native bookmarks keep imported boundaries over three cycles
+00:09 +834: test/bookmark_fidelity_test.dart: native bookmarks keep imported boundaries over three cycles
+00:09 +835: test/bookmark_fidelity_test.dart: native bookmarks keep imported boundaries over three cycles
+00:09 +836: test/bookmark_fidelity_test.dart: native bookmarks keep imported boundaries over three cycles
+00:09 +837: test/bookmark_fidelity_test.dart: native bookmarks keep imported boundaries over three cycles
+00:09 +838: test/bookmark_fidelity_test.dart: native bookmarks keep imported boundaries over three cycles
+00:09 +839: test/word_bookmark_copy_test.dart: authored complete copy remaps only native identities over three saves
+00:09 +840: test/word_bookmark_copy_test.dart: authored complete copy remaps only native identities over three saves
+00:09 +841: test/word_bookmark_copy_test.dart: authored complete copy remaps only native identities over three saves
+00:09 +842: test/word_bookmark_copy_test.dart: authored complete copy remaps only native identities over three saves
+00:09 +843: test/bookmark_fidelity_test.dart: split boundary keeps collapsed and overlapping ranges ordered
+00:09 +844: test/word_bookmark_copy_test.dart: noncolliding endpoints retain their independent decimal spelling and XML
+00:09 +845: test/bookmark_fidelity_test.dart: generated heading identities avoid native IDs and do not duplicate after reopen
+00:09 +846: test/bookmark_fidelity_test.dart: generated heading identities avoid native IDs and do not duplicate after reopen
+00:09 +847: test/bookmark_fidelity_test.dart: generated heading identities avoid native IDs and do not duplicate after reopen
+00:09 +848: test/bookmark_fidelity_test.dart: generated heading identities avoid native IDs and do not duplicate after reopen
+00:09 +849: test/bookmark_fidelity_test.dart: generated heading identities avoid native IDs and do not duplicate after reopen
+00:09 +850: test/bookmark_fidelity_test.dart: generated heading identities avoid native IDs and do not duplicate after reopen
+00:09 +851: test/bookmark_fidelity_test.dart: generated heading identities avoid native IDs and do not duplicate after reopen
+00:09 +852: test/bookmark_fidelity_test.dart: generated heading identities avoid native IDs and do not duplicate after reopen
+00:09 +853: test/bookmark_fidelity_test.dart: generated heading identities avoid native IDs and do not duplicate after reopen
+00:09 +854: test/bookmark_fidelity_test.dart: generated heading identities avoid native IDs and do not duplicate after reopen
+00:09 +855: test/bookmark_fidelity_test.dart: generated heading identities avoid native IDs and do not duplicate after reopen
+00:09 +856: test/bookmark_fidelity_test.dart: generated heading identities avoid native IDs and do not duplicate after reopen
+00:09 +857: test/bookmark_fidelity_test.dart: generated heading identities avoid native IDs and do not duplicate after reopen
+00:09 +858: test/bookmark_fidelity_test.dart: generated heading identities avoid native IDs and do not duplicate after reopen
+00:09 +859: test/bookmark_fidelity_test.dart: generated heading identities avoid native IDs and do not duplicate after reopen
+00:09 +860: test/bookmark_fidelity_test.dart: generated heading identities avoid native IDs and do not duplicate after reopen
+00:09 +861: test/bookmark_fidelity_test.dart: generated heading identities avoid native IDs and do not duplicate after reopen
+00:09 +862: test/bookmark_fidelity_test.dart: generated heading identities avoid native IDs and do not duplicate after reopen
+00:09 +863: test/bookmark_fidelity_test.dart: generated heading identities avoid native IDs and do not duplicate after reopen
+00:09 +864: test/bookmark_fidelity_test.dart: unmodeled block-level bookmark endpoints fail import explicitly
+00:09 +865: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:09 +866: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:09 +867: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:09 +868: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:09 +869: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:09 +870: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:09 +871: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:09 +872: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:09 +873: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:09 +874: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:09 +875: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:09 +876: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:09 +877: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:09 +878: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:09 +879: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:09 +880: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:09 +881: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:09 +882: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:09 +883: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:09 +884: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:09 +885: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:09 +886: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:09 +887: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:09 +888: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:09 +889: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:09 +890: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:09 +891: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:09 +892: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:09 +893: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:09 +894: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:09 +895: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:09 +896: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:09 +897: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:09 +898: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:09 +899: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:09 +900: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:09 +901: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +902: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +903: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +904: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +905: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +906: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +907: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +908: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +909: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +910: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +911: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +912: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +913: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +914: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +915: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +916: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +917: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +918: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +919: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +920: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +921: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +922: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +923: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +924: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +925: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +926: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +927: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +928: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +929: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +930: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +931: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +932: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +933: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +934: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +935: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +936: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +937: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +938: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +939: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +940: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +941: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +942: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +943: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +944: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +945: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +946: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +947: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +948: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +949: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +950: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:10 +951: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +952: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +953: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +954: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +955: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +956: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +957: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +958: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +959: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +960: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +961: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +962: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +963: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +964: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +965: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +966: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +967: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +968: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +969: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +970: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +971: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +972: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +973: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +974: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +975: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +976: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +977: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +978: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +979: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +980: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +981: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +982: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +983: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +984: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +985: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +986: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +987: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +988: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +989: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +990: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +991: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +992: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +993: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +994: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +995: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +996: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +997: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +998: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +999: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +1000: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +1001: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +1002: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +1003: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +1004: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +1005: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +1006: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +1007: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +1008: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +1009: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +1010: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +1011: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +1012: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +1013: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +1014: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +1015: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +1016: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:11 +1017: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1018: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1019: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1020: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1021: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1022: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1023: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1024: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1025: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1026: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1027: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1028: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1029: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1030: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1031: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1032: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1033: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1034: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1035: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1036: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1037: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1038: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1039: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1040: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1041: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1042: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1043: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1044: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1045: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1046: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1047: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1048: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1049: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1050: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1051: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1052: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1053: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1054: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1055: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:12 +1056: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1057: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1058: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1059: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1060: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1061: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1062: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1063: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1064: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1065: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1066: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1067: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1068: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1069: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1070: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1071: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1072: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1073: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1074: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1075: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1076: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1077: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1078: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1079: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1080: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1081: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1082: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1083: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1084: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1085: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1086: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1087: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1088: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1089: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1090: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1091: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1092: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1093: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1094: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1095: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1096: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1097: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1098: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1099: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1100: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1101: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1102: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1103: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1104: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1105: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1106: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1107: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1108: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1109: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1110: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1111: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1112: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:13 +1113: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1114: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1115: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1116: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1117: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1118: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1119: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1120: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1121: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1122: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1123: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1124: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1125: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1126: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1127: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1128: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1129: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1130: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1131: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1132: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1133: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1134: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1135: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1136: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1137: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1138: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1139: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1140: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1141: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1142: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1143: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1144: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1145: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1146: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1147: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1148: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1149: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1150: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1151: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1152: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1153: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1154: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1155: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1156: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1157: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1158: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1159: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1160: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1161: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1162: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1163: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1164: test/bookmark_fidelity_test.dart: CLI destructive endpoint deletion preserves an existing output on failure
+00:14 +1165: test/content_control_fidelity_test.dart: CLI rejects an inline control split before replacing an existing output
+00:14 +1166: test/content_control_fidelity_test.dart: CLI rejects an inline control split before replacing an existing output
+00:14 +1167: test/content_control_fidelity_test.dart: CLI rejects an inline control split before replacing an existing output
+00:14 +1168: test/content_control_fidelity_test.dart: CLI rejects an inline control split before replacing an existing output
+00:14 +1169: test/content_control_fidelity_test.dart: CLI rejects an inline control split before replacing an existing output
+00:14 +1170: test/content_control_fidelity_test.dart: CLI rejects an inline control split before replacing an existing output
+00:14 +1171: test/content_control_fidelity_test.dart: CLI rejects an inline control split before replacing an existing output
+00:14 +1172: test/content_control_fidelity_test.dart: CLI rejects an inline control split before replacing an existing output
+00:14 +1173: test/content_control_fidelity_test.dart: CLI rejects an inline control split before replacing an existing output
+00:14 +1174: test/content_control_fidelity_test.dart: CLI rejects an inline control split before replacing an existing output
+00:14 +1175: test/content_control_fidelity_test.dart: CLI rejects an inline control split before replacing an existing output
+00:14 +1176: test/word_table_picture_pagination_test.dart: live 500pt inline picture fits at table depth 1
+00:14 +1177: test/word_table_picture_pagination_test.dart: live 500pt inline picture fits at table depth 1
+00:14 +1178: test/word_table_tall_frame_layout_test.dart: reopened tall-row page frame at a later source position keeps absolute coordinates, child identity and its footnote page
+00:14 +1179: test/word_table_tall_frame_layout_test.dart: reopened tall-row page frame at a later source position keeps absolute coordinates, child identity and its footnote page
+00:14 +1180: test/word_table_tall_frame_layout_test.dart: reopened tall-row page frame at a later source position keeps absolute coordinates, child identity and its footnote page
+00:15 +1181: test/word_table_tall_frame_layout_test.dart: reopened tall-row page frame at a later source position keeps absolute coordinates, child identity and its footnote page
+00:15 +1182: test/word_table_tall_frame_layout_test.dart: reopened tall-row page frame at a later source position keeps absolute coordinates, child identity and its footnote page
+00:15 +1183: test/word_table_tall_frame_layout_test.dart: reopened tall-row page frame at a later source position keeps absolute coordinates, child identity and its footnote page
+00:15 +1184: test/word_auxiliary_content_control_test.dart: a native PAGE wrapper without sdtPr survives three saves
+00:15 +1185: test/word_auxiliary_content_control_test.dart: a native PAGE wrapper without sdtPr survives three saves
+00:15 +1186: test/word_auxiliary_content_control_test.dart: a native PAGE wrapper without sdtPr survives three saves
+00:15 +1187: test/word_auxiliary_content_control_test.dart: a native PAGE wrapper without sdtPr survives three saves
+00:15 +1188: test/word_auxiliary_content_control_test.dart: a native PAGE wrapper without sdtPr survives three saves
+00:15 +1189: test/word_auxiliary_content_control_test.dart: a native PAGE wrapper without sdtPr survives three saves
+00:15 +1190: test/word_auxiliary_content_control_test.dart: a native PAGE wrapper without sdtPr survives three saves
+00:15 +1191: test/word_auxiliary_content_control_test.dart: a native PAGE wrapper without sdtPr survives three saves
+00:15 +1192: test/word_auxiliary_content_control_test.dart: a native PAGE wrapper without sdtPr survives three saves
+00:15 +1193: test/word_auxiliary_content_control_test.dart: a native PAGE wrapper without sdtPr survives three saves
+00:15 +1194: test/word_auxiliary_content_control_test.dart: a native PAGE wrapper without sdtPr survives three saves
+00:15 +1195: test/word_native_presentation_test.dart: native TOC bookmark keeps exact title/page range false through three saves
+00:15 +1196: test/word_native_presentation_test.dart: native TOC bookmark keeps exact title/page range false through three saves
+00:15 +1197: test/word_native_presentation_test.dart: native TOC bookmark keeps exact title/page range false through three saves
+00:15 +1198: test/word_native_presentation_test.dart: native TOC bookmark keeps exact title/page range false through three saves
+00:15 +1199: test/word_native_presentation_test.dart: native TOC bookmark keeps exact title/page range false through three saves
+00:15 +1200: test/word_native_presentation_test.dart: native TOC bookmark keeps exact title/page range false through three saves
+00:15 +1201: test/word_auxiliary_content_control_test.dart: single-paragraph auxiliary controls retain live fields and native shells (wrapped comment: true)
+00:15 +1202: test/word_auxiliary_content_control_test.dart: single-paragraph auxiliary controls retain live fields and native shells (wrapped comment: true)
+00:15 +1203: test/word_auxiliary_content_control_test.dart: single-paragraph auxiliary controls retain live fields and native shells (wrapped comment: true)
+00:15 +1204: test/word_auxiliary_content_control_test.dart: single-paragraph auxiliary controls retain live fields and native shells (wrapped comment: true)
+00:15 +1205: test/word_auxiliary_content_control_test.dart: single-paragraph auxiliary controls retain live fields and native shells (wrapped comment: true)
+00:15 +1206: test/word_auxiliary_content_control_test.dart: single-paragraph auxiliary controls retain live fields and native shells (wrapped comment: true)
+00:15 +1207: test/word_style_introduction_test.dart: new TOC link appearance survives its first export
+00:15 +1208: test/word_style_introduction_test.dart: new TOC link appearance survives its first export
+00:15 +1209: test/word_style_introduction_test.dart: new TOC link appearance survives its first export
+00:15 +1210: test/word_style_introduction_test.dart: new TOC link appearance survives its first export
+00:15 +1211: test/word_style_introduction_test.dart: new TOC link appearance survives its first export
+00:15 +1212: test/word_style_introduction_test.dart: new TOC link appearance survives its first export
+00:15 +1213: test/word_style_introduction_test.dart: new TOC link appearance survives its first export
+00:15 +1214: test/word_style_introduction_test.dart: new TOC link appearance survives its first export
+00:15 +1215: test/word_style_introduction_test.dart: new TOC link appearance survives its first export
+00:15 +1216: test/word_style_introduction_test.dart: new TOC link appearance survives its first export
+00:15 +1217: test/word_style_introduction_test.dart: new TOC link appearance survives its first export
+00:15 +1218: test/word_style_introduction_test.dart: new TOC link appearance survives its first export
+00:15 +1219: test/word_style_introduction_test.dart: new TOC link appearance survives its first export
+00:15 +1220: test/word_style_introduction_test.dart: new TOC link appearance survives its first export
+00:15 +1221: test/word_style_introduction_test.dart: new TOC link appearance survives its first export
+00:15 +1222: test/word_table_direction_test.dart: table direction uses native on/off values across edits and saves
+00:15 +1223: test/word_table_direction_test.dart: table direction uses native on/off values across edits and saves
+00:15 +1224: test/word_table_direction_test.dart: table direction uses native on/off values across edits and saves
+00:15 +1225: test/word_table_direction_test.dart: table direction uses native on/off values across edits and saves
+00:15 +1226: test/word_table_direction_test.dart: table direction uses native on/off values across edits and saves
+00:15 +1227: test/word_table_direction_test.dart: table direction uses native on/off values across edits and saves
+00:15 +1228: test/word_table_direction_test.dart: table direction uses native on/off values across edits and saves
+00:15 +1229: test/word_table_direction_test.dart: table direction uses native on/off values across edits and saves
+00:15 +1230: test/word_table_direction_test.dart: table direction uses native on/off values across edits and saves
+00:15 +1231: test/word_table_direction_test.dart: table direction uses native on/off values across edits and saves
+00:15 +1232: test/word_table_direction_test.dart: table direction uses native on/off values across edits and saves
+00:15 +1233: test/word_table_direction_test.dart: table direction uses native on/off values across edits and saves
+00:15 +1234: test/word_table_direction_test.dart: table direction uses native on/off values across edits and saves
+00:15 +1235: test/word_table_direction_test.dart: table direction uses native on/off values across edits and saves
+00:15 +1236: test/word_table_direction_test.dart: table direction uses native on/off values across edits and saves
+00:15 +1237: test/word_table_direction_test.dart: table direction uses native on/off values across edits and saves
+00:15 +1238: test/word_table_direction_test.dart: table direction uses native on/off values across edits and saves
+00:15 +1239: test/word_table_direction_test.dart: table direction uses native on/off values across edits and saves
+00:15 +1240: test/word_table_direction_test.dart: table direction uses native on/off values across edits and saves
+00:15 +1241: test/word_table_direction_test.dart: table direction uses native on/off values across edits and saves
+00:15 +1242: test/word_table_direction_test.dart: table direction uses native on/off values across edits and saves
+00:15 +1243: test/word_table_direction_test.dart: table direction uses native on/off values across edits and saves
+00:15 +1244: test/scripted_transitions_test.dart: list clear suppresses imported numbering for three cycles, inherited=false
+00:15 +1245: test/scripted_transitions_test.dart: list clear suppresses imported numbering for three cycles, inherited=true
+00:15 +1246: test/scripted_transitions_test.dart: new styled paragraph keeps explicit list removal during refresh
+00:15 +1247: test/scripted_transitions_test.dart: runFormat rejects empty ranges and empty paragraphs without typing state
+00:16 +1248: test/scripted_transitions_test.dart: empty range reports its indexed CLI step and leaves output untouched
+00:16 +1249: test/scripted_transitions_test.dart: image add is observable before removal and preserves the original
+00:16 +1250: test/scripted_transitions_test.dart: split retains the right half of a formatted hyperlink run
+00:16 +1251: test/scripted_transitions_test.dart: explicit false and default values survive subsequent style refresh
+00:16 +1252: test/scripted_transitions_test.dart: style edit binds Word namespace in aliased source, existing=false
+00:16 +1253: test/scripted_transitions_test.dart: style edit binds Word namespace in aliased source, existing=true
+00:16 +1254: test/scripted_transitions_test.dart: heading split keeps one bookmark identity through three exports
+00:16 +1255: test/scripted_transitions_test.dart: splitting a restarted list continues numbering in the new paragraph
+00:16 +1256: All tests passed!
+Wrote six DOCX exports to build/fidelity.
+edited-1.docx: PASS
+edited-2.docx: PASS
+edited-3.docx: PASS
+unchanged-1.docx: PASS
+unchanged-2.docx: PASS
+unchanged-3.docx: PASS
+All 6 exports match independent goldens and package oracles.
+Wrote twelve XLSX/PPTX import/edit/reopen exports.
+sheet-edited-1.xlsx: PASS
+sheet-edited-2.xlsx: PASS
+sheet-edited-3.xlsx: PASS
+sheet-imported-1.xlsx: PASS
+sheet-imported-2.xlsx: PASS
+sheet-imported-3.xlsx: PASS
+slide-edited-1.pptx: PASS
+slide-edited-2.pptx: PASS
+slide-edited-3.pptx: PASS
+slide-imported-1.pptx: PASS
+slide-imported-2.pptx: PASS
+slide-imported-3.pptx: PASS
+edited-1.docx: PASS
+edited-2.docx: PASS
+edited-3.docx: PASS
+source.docx: PASS
+unchanged-1.docx: PASS
+unchanged-2.docx: PASS
+unchanged-3.docx: PASS
+build/fidelity-styles/edited-1.docx: PASS
+build/fidelity-styles/edited-2.docx: PASS
+build/fidelity-styles/edited-3.docx: PASS
+build/fidelity-styles/unchanged-1.docx: PASS
+build/fidelity-styles/unchanged-2.docx: PASS
+build/fidelity-styles/unchanged-3.docx: PASS
+created-pivot-1.xlsx: PASS
+created-pivot-2.xlsx: PASS
+created-pivot-3.xlsx: PASS
+native-sheet-edited-1.xlsx: PASS
+native-sheet-edited-2.xlsx: PASS
+native-sheet-edited-3.xlsx: PASS
+native-sheet-imported-1.xlsx: PASS
+native-sheet-imported-2.xlsx: PASS
+native-sheet-imported-3.xlsx: PASS
+native-slides-1.pptx: PASS
+native-slides-2.pptx: PASS
+native-slides-3.pptx: PASS
+native-slides-edited-1.pptx: PASS
+native-slides-edited-2.pptx: PASS
+native-slides-edited-3.pptx: PASS
+{"exports": 32, "cycles": 3, "scenarios": ["unchanged", "within", "forward", "backward", "emptied"], "failures": []}
+{
+  "status": "passed",
+  "files_verified": 7,
+  "direct_cycles": 3,
+  "isolate_cycles": 3,
+  "fixture_sha256": "6d86b24c22bdaac9d2e57167f7f506626029b4060eb793f523bfe86bfe266b50",
+  "groups": [
+    [
+      "Card 1",
+      "Card 2"
+    ],
+    [
+      "Card 3",
+      "Card 4"
+    ]
+  ],
+  "ungrouped": [
+    "Card 5"
+  ],
+  "checks": [
+    "exact source bytes and seven-file inventory",
+    "literal five-card geometry and text",
+    "two flat ordered native groups",
+    "unchanged ungrouped card",
+    "unique uint32 root/group/shape IDs",
+    "identity group coordinate transforms",
+    "stable native identities across direct and isolate saves"
+  ],
+  "files": [
+    {
+      "name": "source.pptx",
+      "sha256": "6d86b24c22bdaac9d2e57167f7f506626029b4060eb793f523bfe86bfe266b50",
+      "native_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "name": "direct-1.pptx",
+      "sha256": "e436ebf071bb36ce82c5cb50677d0065eb594e9dad86605b2d91680c0ef8ad61",
+      "native_ids": [
+        1,
+        7,
+        2,
+        3,
+        8,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "name": "direct-2.pptx",
+      "sha256": "6e16551b879f00cd6ef299ecd75098ed9f21d11662d1731ad247ee8fb57a1cd1",
+      "native_ids": [
+        1,
+        7,
+        2,
+        3,
+        8,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "name": "direct-3.pptx",
+      "sha256": "ce59f4dac57344db68a193ebaa49dcfcebbabe15015729de16a0062d99bfa9c4",
+      "native_ids": [
+        1,
+        7,
+        2,
+        3,
+        8,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "name": "isolate-1.pptx",
+      "sha256": "95a6f247958ed75994e6e3ee780bbe0f2f4ff5b2baeb45802dbc70691d1e74ae",
+      "native_ids": [
+        1,
+        7,
+        2,
+        3,
+        8,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "name": "isolate-2.pptx",
+      "sha256": "2509085f1101c42a86de80f32d40ba606310dcccd4c08c624c57f895195e708b",
+      "native_ids": [
+        1,
+        7,
+        2,
+        3,
+        8,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "name": "isolate-3.pptx",
+      "sha256": "bd6605218d83601dcfc4314bca9bca0ad83d5fa3681b76c1c217ccda168bd5d6",
+      "native_ids": [
+        1,
+        7,
+        2,
+        3,
+        8,
+        4,
+        5,
+        6
+      ]
+    }
+  ]
+}
+Native sheet-rename references passed across all three saves.
+Qualified names: 120 typed caches, exact definitions/scopes, six save cycles, and two authored references passed.
+9 Word story-media exports: PASS
+Verified 3 independent list restart exports.
+sheet/edited.xlsx: PASS
+sheet/roundtrip-1.xlsx: PASS
+sheet/roundtrip-2.xlsx: PASS
+sheet/roundtrip-3.xlsx: PASS
+slide/edited.pptx: PASS
+slide/roundtrip-1.pptx: PASS
+slide/roundtrip-2.pptx: PASS
+slide/roundtrip-3.pptx: PASS
+word/edited.docx: PASS
+word/roundtrip-1.docx: PASS
+word/roundtrip-2.docx: PASS
+word/roundtrip-3.docx: PASS
+6 compatibility/section exports: PASS
+Comment thread oracle: authored source copy and all 6 import/edit cycle exports passed
+6 opaque-content exports: PASS
+replaced-1.docx: PASS
+replaced-2.docx: PASS
+replaced-3.docx: PASS
+opaque-1.docx: PASS
+opaque-2.docx: PASS
+opaque-3.docx: PASS
+Table border oracle: authored source and all 6 import/edit cycle exports passed
+Table grid oracle: 28 packages passed.
+Note marker oracle: authored source and all 6 imported/edited cycle exports passed
+Bookmark oracle: authored source and all six cycle exports passed
+Content-control oracle: exact authored source copy, six native exports and three legacy conversion exports passed
+{
+  "status": "passed",
+  "documents": {
+    "direct-1.docx": {
+      "text": "Before (Ada 2026) between (Grace 2025) after",
+      "fields": [
+        [
+          "CITATION PAGE",
+          "(Ada 2026)"
+        ],
+        [
+          "CITATION TIME",
+          "(Grace 2025)"
+        ]
+      ],
+      "ordinary_runs": 3
+    },
+    "direct-2.docx": {
+      "text": "Before (Ada 2026) between (Grace 2025) after",
+      "fields": [
+        [
+          "CITATION PAGE",
+          "(Ada 2026)"
+        ],
+        [
+          "CITATION TIME",
+          "(Grace 2025)"
+        ]
+      ],
+      "ordinary_runs": 3
+    },
+    "direct-3.docx": {
+      "text": "Before (Ada 2026) between (Grace 2025) after",
+      "fields": [
+        [
+          "CITATION PAGE",
+          "(Ada 2026)"
+        ],
+        [
+          "CITATION TIME",
+          "(Grace 2025)"
+        ]
+      ],
+      "ordinary_runs": 3
+    },
+    "isolate-1.docx": {
+      "text": "Before (Ada 2026) between (Grace 2025) after",
+      "fields": [
+        [
+          "CITATION PAGE",
+          "(Ada 2026)"
+        ],
+        [
+          "CITATION TIME",
+          "(Grace 2025)"
+        ]
+      ],
+      "ordinary_runs": 3
+    },
+    "isolate-2.docx": {
+      "text": "Before (Ada 2026) between (Grace 2025) after",
+      "fields": [
+        [
+          "CITATION PAGE",
+          "(Ada 2026)"
+        ],
+        [
+          "CITATION TIME",
+          "(Grace 2025)"
+        ]
+      ],
+      "ordinary_runs": 3
+    },
+    "isolate-3.docx": {
+      "text": "Before (Ada 2026) between (Grace 2025) after",
+      "fields": [
+        [
+          "CITATION PAGE",
+          "(Ada 2026)"
+        ],
+        [
+          "CITATION TIME",
+          "(Grace 2025)"
+        ]
+      ],
+      "ordinary_runs": 3
+    }
+  }
+}
+Verified 12 structural exports against authored expectations.
+{
+  "status": "passed",
+  "documents": {
+    "direct-1.docx": {
+      "Body": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Header-default": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Header-first": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Header-even": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Footer-default": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Footer-first": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Footer-even": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Footnote": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Endnote": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Comment": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      }
+    },
+    "direct-2.docx": {
+      "Body": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Header-default": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Header-first": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Header-even": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Footer-default": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Footer-first": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Footer-even": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Footnote": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Endnote": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Comment": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      }
+    },
+    "direct-3.docx": {
+      "Body": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Header-default": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Header-first": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Header-even": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Footer-default": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Footer-first": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Footer-even": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Footnote": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Endnote": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Comment": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      }
+    },
+    "isolate-1.docx": {
+      "Body": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Header-default": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Header-first": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Header-even": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Footer-default": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Footer-first": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Footer-even": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Footnote": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Endnote": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Comment": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      }
+    },
+    "isolate-2.docx": {
+      "Body": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Header-default": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Header-first": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Header-even": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Footer-default": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Footer-first": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Footer-even": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Footnote": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Endnote": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Comment": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      }
+    },
+    "isolate-3.docx": {
+      "Body": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Header-default": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Header-first": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Header-even": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Footer-default": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Footer-first": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Footer-even": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Footnote": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Endnote": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      },
+      "Comment": {
+        "paragraphs": 2,
+        "inserted": " added",
+        "deleted": " removed"
+      }
+    }
+  }
+}
+{
+  "status": "passed",
+  "documents": {
+    "direct-1.docx": {
+      "owned_source_part": "customXml/catalog42.xml",
+      "editable_sources": 2,
+      "unmodeled_sources": 1,
+      "unrelated_parts_preserved": 3
+    },
+    "direct-2.docx": {
+      "owned_source_part": "customXml/catalog42.xml",
+      "editable_sources": 2,
+      "unmodeled_sources": 1,
+      "unrelated_parts_preserved": 3
+    },
+    "direct-3.docx": {
+      "owned_source_part": "customXml/catalog42.xml",
+      "editable_sources": 2,
+      "unmodeled_sources": 1,
+      "unrelated_parts_preserved": 3
+    },
+    "isolate-1.docx": {
+      "owned_source_part": "customXml/catalog42.xml",
+      "editable_sources": 2,
+      "unmodeled_sources": 1,
+      "unrelated_parts_preserved": 3
+    },
+    "isolate-2.docx": {
+      "owned_source_part": "customXml/catalog42.xml",
+      "editable_sources": 2,
+      "unmodeled_sources": 1,
+      "unrelated_parts_preserved": 3
+    },
+    "isolate-3.docx": {
+      "owned_source_part": "customXml/catalog42.xml",
+      "editable_sources": 2,
+      "unmodeled_sources": 1,
+      "unrelated_parts_preserved": 3
+    }
+  }
+}
+Verified 10 note-marker packages against authored XML.
+{"status": "passed", "documents": 12}
+{
+  "status": "passed",
+  "documents": {
+    "direct-1.docx": {
+      "phase": "edited",
+      "block_controls": 7,
+      "inline_controls": 12,
+      "stories": 10,
+      "images": 1,
+      "equations": 1,
+      "native_tocs": 1,
+      "binding_metadata_preserved": true,
+      "frame_fallback_matches": true
+    },
+    "direct-2.docx": {
+      "phase": "edited",
+      "block_controls": 7,
+      "inline_controls": 12,
+      "stories": 10,
+      "images": 1,
+      "equations": 1,
+      "native_tocs": 1,
+      "binding_metadata_preserved": true,
+      "frame_fallback_matches": true
+    },
+    "direct-3.docx": {
+      "phase": "edited",
+      "block_controls": 7,
+      "inline_controls": 12,
+      "stories": 10,
+      "images": 1,
+      "equations": 1,
+      "native_tocs": 1,
+      "binding_metadata_preserved": true,
+      "frame_fallback_matches": true
+    },
+    "imported-1.docx": {
+      "phase": "imported",
+      "block_controls": 7,
+      "inline_controls": 12,
+      "stories": 10,
+      "images": 1,
+      "equations": 1,
+      "native_tocs": 1,
+      "binding_metadata_preserved": true,
+      "frame_fallback_matches": true
+    },
+    "imported-2.docx": {
+      "phase": "imported",
+      "block_controls": 7,
+      "inline_controls": 12,
+      "stories": 10,
+      "images": 1,
+      "equations": 1,
+      "native_tocs": 1,
+      "binding_metadata_preserved": true,
+      "frame_fallback_matches": true
+    },
+    "imported-3.docx": {
+      "phase": "imported",
+      "block_controls": 7,
+      "inline_controls": 12,
+      "stories": 10,
+      "images": 1,
+      "equations": 1,
+      "native_tocs": 1,
+      "binding_metadata_preserved": true,
+      "frame_fallback_matches": true
+    },
+    "isolate-1.docx": {
+      "phase": "edited",
+      "block_controls": 7,
+      "inline_controls": 12,
+      "stories": 10,
+      "images": 1,
+      "equations": 1,
+      "native_tocs": 1,
+      "binding_metadata_preserved": true,
+      "frame_fallback_matches": true
+    },
+    "isolate-2.docx": {
+      "phase": "edited",
+      "block_controls": 7,
+      "inline_controls": 12,
+      "stories": 10,
+      "images": 1,
+      "equations": 1,
+      "native_tocs": 1,
+      "binding_metadata_preserved": true,
+      "frame_fallback_matches": true
+    },
+    "isolate-3.docx": {
+      "phase": "edited",
+      "block_controls": 7,
+      "inline_controls": 12,
+      "stories": 10,
+      "images": 1,
+      "equations": 1,
+      "native_tocs": 1,
+      "binding_metadata_preserved": true,
+      "frame_fallback_matches": true
+    },
+    "source.docx": {
+      "phase": "source",
+      "block_controls": 7,
+      "inline_controls": 12,
+      "stories": 10,
+      "images": 1,
+      "equations": 1,
+      "native_tocs": 1,
+      "binding_metadata_preserved": true,
+      "frame_fallback_matches": null
+    }
+  }
+}
+{"status": "passed", "documents": 14, "native_control_counts": [14, 12], "stories_per_document": 7}
+Verified 14 bookmark packages against authored endpoints.
+{
+  "status": "passed",
+  "producer": "engine",
+  "files_verified": 5,
+  "files": [
+    {
+      "name": "source.docx",
+      "sha256": "7634d9c2fc37a187b134e618a806f787fb8277ae6fd082f937e085662a3fe6ca"
+    },
+    {
+      "name": "copied-expected.docx",
+      "sha256": "4813413bbe1ac7b1cd927d0b40b07752c0944dc272d849a4274c627ce4d969b3"
+    },
+    {
+      "name": "copied-1.docx",
+      "sha256": "91dae19043ed41c9fbd7b5445587ed9ed5c25f83502cb828980cde73596a743a"
+    },
+    {
+      "name": "copied-2.docx",
+      "sha256": "9f588887820e34aca36718784c667b4880155b8a96f69e0ffd1f198812a6733e"
+    },
+    {
+      "name": "copied-3.docx",
+      "sha256": "453c098644a8925acf4a1d664166b584976dae30defa62d0411c509f5e19a23f"
+    }
+  ],
+  "checks": [
+    "exact marker order and native attributes",
+    "unchanged source IDs",
+    "explicit free copy IDs and names",
+    "UTF-16 and empty ranges",
+    "cross-paragraph overlapping range text",
+    "unchanged REF and hyperlink targets",
+    "source bold formatting"
+  ],
+  "bounds": [
+    "complete editable ranges only",
+    "opaque and native TOC cache copies rejected",
+    "partial ranges rejected before mutation",
+    "no reference target retargeting"
+  ]
+}
+content-control: source_structure_preserved
+bookmark-ranges: source_structure_preserved
+0 open data-loss probes; report: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_engine/build/fidelity-unsupported-probes/report.json
+All 67 public operations have committed executable scenarios.
+Inventory: 350/350 verified; 0 failures; receipt /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_engine/build/fidelity-inventory.json
+........................................................................................................................................................................................................................................................................................................................................................................................................................................................
+----------------------------------------------------------------------
+Ran 440 tests in 1.429s
+
+OK

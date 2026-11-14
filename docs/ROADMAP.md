@@ -12,6 +12,14 @@ Work is saved incrementally to `codex/office-recovery-20261114` in this reposito
 and CrispCloud. Earlier test counts and coverage reports remain evidence only
 for their recorded source snapshots.
 
+The canonical formula, spreadsheet-style, Word-protection and signed-package
+tasks (REC-01–04) are implemented and validated. The current source receipt
+records 1,256 engine tests, 539 editor tests, 440 fidelity-tool controls, all 350
+engine output files, and zero OpenXML schema errors in those 350 files. One
+existing editor comparison test needs a local PDF fixture and remains skipped.
+App lifecycle, actual-save workflows and their external comparisons are tracked
+separately in the scoped plan; source tests do not establish those outcomes.
+
 ## Wave 1 — PDF correctness (done)
 
 - Print ranges, Excel geometry, outline bookmarks, notes links, list/TOC paint

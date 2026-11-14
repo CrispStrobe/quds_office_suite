@@ -1,0 +1,36 @@
+{
+  "Files": 6,
+  "Failures": 0,
+  "Reports": [
+    {
+      "File": "CrispCloud/test/fixtures/office_native_workflows/native-sheet-expected.xlsx",
+      "Sha256": "5acb9d1a879577a309cf42beb08b2e5a663af36eacbf8c33d8bdeeff0a6b16d3",
+      "Errors": []
+    },
+    {
+      "File": "CrispCloud/test/fixtures/office_native_workflows/native-sheet-source.xlsx",
+      "Sha256": "548cf28efce66d0b4e3b9abb5a4f7f24f282ecadd7749cd65a5afa6ed0b5ba49",
+      "Errors": []
+    },
+    {
+      "File": "CrispCloud/test/fixtures/office_native_workflows/native-slide-expected.pptx",
+      "Sha256": "022e48e176f5d1149578cfcc15015dc4f81129d18485e5ee6b77f26f9e972af1",
+      "Errors": []
+    },
+    {
+      "File": "CrispCloud/test/fixtures/office_native_workflows/native-slide-source.pptx",
+      "Sha256": "048c0939a1b5c53f08503092fa8b4176df532be75bf4d87f5e4e8242a4ac04c2",
+      "Errors": []
+    },
+    {
+      "File": "CrispCloud/test/fixtures/office_native_workflows/native-word-expected.docx",
+      "Sha256": "d95d0e28e2783ef4b1055fc0f63fd2000cf853365c7431f5d3107622228c6fc3",
+      "Errors": []
+    },
+    {
+      "File": "CrispCloud/test/fixtures/office_native_workflows/native-word-source.docx",
+      "Sha256": "824365f3aef2925bd80dcd76e8f91c3aa63291f5e5eff6052e2e8251783ecee9",
+      "Errors": []
+    }
+  ]
+}
