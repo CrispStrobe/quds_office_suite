@@ -1,0 +1,26 @@
+{
+  "Files": 4,
+  "Failures": 0,
+  "Reports": [
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/namespace/fidelity-schema/namespace-style-1.xlsx",
+      "Sha256": "a5c2c35441a45ca1a0a45e5059c0b6ac03d39f4439e761bfcf534244d43c939e",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/namespace/fidelity-schema/namespace-style-2.xlsx",
+      "Sha256": "167dfcbc2557c13242b4dcc739f1d07806771cd26c11446b037b42d63f3b7756",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/namespace/fidelity-schema/namespace-style-3.xlsx",
+      "Sha256": "bdf420a5f1b34dd9cb4466ccf4e5dbf32be1e2f733e9ee106ce627e3ff2b2426",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/namespace/fidelity-schema/namespace-style-reference.xlsx",
+      "Sha256": "7605dce14b8c4a37e1c5a051d916399ce17e2ce2d3ae8de16220147880f952aa",
+      "Errors": []
+    }
+  ]
+}

@@ -4,11 +4,14 @@
 It records the tested implementation commit, runtime versions, gate results,
 commands, bounds and SHA-256 hashes of the supporting files.
 
-The full engine gate and editor suite ran against the code at
-`36e652014d0e1aade20011309cd84a7f9c1f90a6`. Documentation added afterward does
-not change that tested implementation. The engine and editor inventories retain
-the exact saved-file hashes. `engine-schema-report.json` validates the 350 engine
-files staged only after verifying those inventory hashes.
+The implementation was validated at
+`36e652014d0e1aade20011309cd84a7f9c1f90a6`. The full engine gate and all 350
+engine schema checks were repeated at
+`c85c9f0a81a75a4afb5103d397c1816f0140eb00`, after improving the namespace
+fixture's native theme and column width so its rotated text is visibly rendered.
+Production libraries and editor tests are unchanged between those commits;
+the 539-test editor result retains its original source identity. The inventories
+retain the exact saved-file hashes, checked before staging for validation.
 
 The .NET CLI cannot initialize its named NuGet migration mutex in this workspace.
 The unchanged validator source was compiled with the official .NET 8.0.428
@@ -26,5 +29,8 @@ workspace `TMPDIR`, and the workspace Pub cache. These supported CI settings
 avoid cloud-machine metadata detection during Flutter startup.
 
 Actual app-host outputs and independent LibreOffice comparisons are separate
-evidence. Their final receipts must identify the app inputs, canonical pin,
+evidence under `external/`. Its collector binds the app inputs, canonical pin,
 exact exported bytes, independent expected documents and external runtime.
+The namespace fixture also has a narrowly scoped blue-text visibility guard;
+the two previously clipped rendered examples are rejecting controls. Matching
+empty-looking pages cannot satisfy this witness.

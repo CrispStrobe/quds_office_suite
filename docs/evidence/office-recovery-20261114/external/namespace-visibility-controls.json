@@ -1,0 +1,76 @@
+{
+  "scope": "Namespace visible-text safeguard; independent exact text/pixel baseline checks remain mandatory.",
+  "collector_sha256": "fb38ffff562a63ca6c1aa77dd853f648ddb018cee4785b0210b87f39d61c8d49",
+  "positive_controls": 1,
+  "rejected_negative_controls": 2,
+  "checks": [
+    {
+      "source_stage": "namespace-theme-visible",
+      "file": "fidelity-schema/namespace-style-1.xlsx",
+      "input_sha256": "90d4a8e3cb15199cc0fcdc08746da5add65e81d0095547b3d50958dfddbd23da",
+      "pixel_sha256": "d7b4168b7e7ae1541dfeee473f70142ae64ccda1efe749b44e14f825252ec1cb",
+      "expected": "visible_text",
+      "blue_ink_pixels": 1519,
+      "minimum_blue_ink_pixels": 100,
+      "blue_ink_definition": "blue >= red + 16 and blue >= green + 8",
+      "passed": true
+    },
+    {
+      "source_stage": "namespace-theme-validation",
+      "file": "fidelity-schema/namespace-style-1.xlsx",
+      "input_sha256": "005e51925bb2a2a24ac6bdb6643d63a4dabb8b58684e66a60aea8553d8a99bd0",
+      "pixel_sha256": "95bca1ec9522a476f7640a6839a2862c37a0ad1ee6b228cc306ac92fe6fe57f5",
+      "expected": "reject_clipped_text",
+      "error": "Namespace theme text is not visibly painted: 0 blue pixels",
+      "passed": true
+    },
+    {
+      "source_stage": "external-final-20261114",
+      "file": "fidelity-schema/namespace-style-1.xlsx",
+      "input_sha256": "93b5cca297864fc306460f6fb39a63ada1fbec08638f81b0d58bb1934d6a280f",
+      "pixel_sha256": "95bca1ec9522a476f7640a6839a2862c37a0ad1ee6b228cc306ac92fe6fe57f5",
+      "expected": "reject_clipped_text",
+      "error": "Namespace theme text is not visibly painted: 0 blue pixels",
+      "passed": true
+    }
+  ],
+  "commands": [
+    [
+      "pdftoppm",
+      "-r",
+      "72",
+      "-f",
+      "1",
+      "-l",
+      "1",
+      "/workspace/scratch/fd11a5f593e0/tmp/namespace-theme-visible/render/000/document.pdf"
+    ],
+    [
+      "pdftoppm",
+      "-r",
+      "72",
+      "-f",
+      "1",
+      "-l",
+      "1",
+      "/workspace/scratch/fd11a5f593e0/tmp/namespace-theme-validation/render/000/document.pdf"
+    ],
+    [
+      "pdftoppm",
+      "-r",
+      "72",
+      "-f",
+      "1",
+      "-l",
+      "1",
+      "/workspace/scratch/fd11a5f593e0/tmp/external-final-20261114/render/012/document.pdf"
+    ]
+  ],
+  "preserved_controls": {
+    "file": "namespace-visibility-controls.zip",
+    "bytes": 32456,
+    "sha256": "262d1ee567a631b10940380f8f8da62409084fe70624d4daf28b7f50ff4c5f15",
+    "entries": 13,
+    "replay": "Extract archive; pass each case record.json to collect.namespace_visible_ink with render_root set to extracted archive root and the checked-in renderer module. The visible case must pass; both clipped cases must reject. Exact XLSX/PDF/PNG bytes are retained."
+  }
+}

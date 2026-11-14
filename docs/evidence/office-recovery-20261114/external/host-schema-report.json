@@ -1,0 +1,751 @@
+{
+  "Files": 149,
+  "Failures": 0,
+  "Reports": [
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-custom-tabs/host-tabs-1.docx",
+      "Sha256": "b9f6d0dfce783bd4bb3794446ec97f75785e2f49f84c5b0539c50fb7b785b5df",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-custom-tabs/host-tabs-2.docx",
+      "Sha256": "95a46477ea1965f67364ed2b99432ef13639898d649939077c46ef442bc88d74",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-custom-tabs/host-tabs-3.docx",
+      "Sha256": "cb7064837c3e51fa53961fe6b79fe2ec7718cee56c1ff26d8b70ea2ed4996319",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/after-late-edits.docx",
+      "Sha256": "2db9c61b9cee0306be5626277e39a641da91153e0d6252388b95cce000d750a4",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/back-save-later-revision.docx",
+      "Sha256": "7735b9f21fd47511718fcdac91d5f06b429c1fb1b3816966a0c229efb6f34f93",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/back-save.docx",
+      "Sha256": "1842cee06ba8279fe68918d3bd9acb6cd499be1ca2de136002fc8c8ed5e65515",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/before-late-edits.docx",
+      "Sha256": "3f987476f55ca56c5ec8b6f26f1d1a1561de34e1067fa387dccb59aa9a199147",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/close-after-late-edit.docx",
+      "Sha256": "50373bf579bd1d2f406f5c11c1709ba4ae78c9ea629384bc8b66aec133842f1a",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/close-before-late-edit.docx",
+      "Sha256": "d83c4e75b2ea6eae19b3c2746b1b4db6791b1da39c75ee5441ba837b21cb3531",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/comment-action-1.docx",
+      "Sha256": "47bfc0292f9398a8de9de5cbc6e80353862fb262d45fc52129caacf793cb9767",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/comment-action-2.docx",
+      "Sha256": "1b0783f05c756c7cc9471c46c5b5a6cc571ce4b3ed41e8a14a5316a21e6c95ff",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/comment-action-3.docx",
+      "Sha256": "a7074e7b27d06e8b14a493471765352442a79110073418dd45d407eb0d2f0567",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/failed-upload-attempt.docx",
+      "Sha256": "d7c0977b40375a416d1caec307c132ef66acfb3436ce35f87ee0c0ed255de654",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/font-family-1.docx",
+      "Sha256": "eac9e79b7f58eaad4a9fbd1a37384126ded5f27e04fe5828b0e2b7de6ff33465",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/font-family-2.docx",
+      "Sha256": "ac7940ffb304eef76bfb1bd0909ec453bd8cbce9864ba1929fdf6bfed69e4145",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/font-family-3.docx",
+      "Sha256": "0327eac7753e7fe157f71fb135f7e81afc30e3af296b3085752039319fb5f060",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/font-family-current-1.docx",
+      "Sha256": "844a42cd6632d520afac3dc173496964b389b2191c186d799a14234afd09a32b",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/font-family-current-2.docx",
+      "Sha256": "0494df3b44e0f97bdd90b39584d5932eca33a880316bb0ff97dee8640284c010",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/font-family-current-3.docx",
+      "Sha256": "da5074a236714cf868fa3add9a6292cca815898b98ef6c6c0cca132bc8a06fe0",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/font-italic-1.docx",
+      "Sha256": "d50496433a0604bd745f1554de0362f5f6968c0cd8448a70785807a456ffdc66",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/font-italic-2.docx",
+      "Sha256": "202000ea1e91b6c553a7ece4358be7e429303ffdbc83741a1863b767c2c14a7b",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/font-italic-3.docx",
+      "Sha256": "03858995ad0ebbeda6c57d8fb4ee27c23a26cb396ea1cd33b852e5d724ec05ea",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/font-noop-14-1.docx",
+      "Sha256": "15b1712310ae0276923cc45acd513035ded827f050fac1307ddd264d22b71dcf",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/font-noop-14-2.docx",
+      "Sha256": "4fd5491a49b4eb3198237f04ef5775b3550b0a14e615875eb82365965fbe73f1",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/font-noop-14-3.docx",
+      "Sha256": "8a7af16262fcc634dfa45df7e047a0ee231d691bed4ea5d0be3ce153c7d345ea",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/font-noop-21-1.docx",
+      "Sha256": "50889832c01510f7980caedac6b4ac22fa824d9d323932e52ff73bb79b146441",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/font-noop-21-2.docx",
+      "Sha256": "d394a610091cd8d3477c2bb97054f7ed0ee2b6494b36b5dab199a8548cd305d2",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/font-noop-21-3.docx",
+      "Sha256": "6b2a84e6476d64f431c1f10d2eaa3fbaaee4e8160005f2e9131230e58f4f44f6",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/font-noop-288-1.docx",
+      "Sha256": "9de36832bddf6944c5967760df073a39e16b5d8c1e0685de316fe55318ef5cf6",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/font-noop-288-2.docx",
+      "Sha256": "8b04e0bb61e350cf8c22168860bcb1efede50e0236f91f72f22c2ba500723459",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/font-noop-288-3.docx",
+      "Sha256": "5b42b982db6bee6fda036474b84573b99ed51c757678a4f86ce4f7a625848f2b",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/font-size-1.docx",
+      "Sha256": "7f35feb5e8a43a6b3b7897dd384bbee2d55ffc663a7fef1bb7b44ba5be7fd4b2",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/font-size-2.docx",
+      "Sha256": "ae6e312236e1679e0838fae0dfa0524ccbf9cfdc07376d2c0dd35789a585ea4e",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/font-size-3.docx",
+      "Sha256": "bb0b980fefaa8a79ffedc96363e0365c1ced10a6ec8887983f17fdf89280d1be",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/font-size-current-1.docx",
+      "Sha256": "efd6ed14feb3f7a9777b91b983a4062cd1be375cc1755d988c345afdb45fdaac",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/font-size-current-2.docx",
+      "Sha256": "e10f5a836bb819dcd51c51eef31187aeea8bce28e6dea6fe35541d624df1ae15",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/font-size-current-3.docx",
+      "Sha256": "9b3c8f8ee996043b857684238d6e8c1e7c6c16540418059fe7cdf44e7a027ec2",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/font-underline-current-1.docx",
+      "Sha256": "0606b7f5077e839b349e359bce8a32078f3079a60c2e8251094b57b7bfbb3558",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/font-underline-current-2.docx",
+      "Sha256": "370e74a993697cd0f70e72fc95ba532c8dfdebd245876b44efaf9afff3b4b9ba",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/font-underline-current-3.docx",
+      "Sha256": "f6a32ceec0eb88aef343cbb69e3e6ffff2af9551927155be780bdfe6e0a3f388",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/header-font-1.docx",
+      "Sha256": "47e0957fce6c0bac9b22b0583f985ab6e0b8284cd413d099e90c1ffca8700335",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/header-font-2.docx",
+      "Sha256": "480bfff259abf6f0e0e6eb17c096401595d972d38a014f16a97204738b68589f",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/header-font-3.docx",
+      "Sha256": "4a19df92f6f8b0c08335005072ba828841d90acf5974f5afb499e3decd1ef948",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/header-paragraph-edit-1.docx",
+      "Sha256": "75b72e5390094911c73d07cf46446c3081dd620596be7f88055aebccde46221c",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/header-paragraph-edit-2.docx",
+      "Sha256": "05176bac82f1db9d55280b88dafcd70ea6a1ca9580409020590c6e32f76c5090",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/header-paragraph-edit-3.docx",
+      "Sha256": "c66a432d6c5002e16dfd840400b267fe73d09fc6653f95c19877e8bb9c93ddc6",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/hyperlink-selection-1.docx",
+      "Sha256": "ec1553f6afac096283ee680ac762e05346eafa72b0da89ff573e00e5c8af816b",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/hyperlink-selection-2.docx",
+      "Sha256": "ff8d1bfd371afb488d42a96da36094bd398509147674d92f574d1f38ff97a223",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/hyperlink-selection-3.docx",
+      "Sha256": "bb91a6b2b8f96770f914eabe01be1f9b40fdcaceb52016dc73c69b75b94cfded",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/margins-edit-1.docx",
+      "Sha256": "45c9f62d2a547b5c4fdb54cd75bf910d6368f3e36c5f8c763c15b9f498c150b7",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/margins-edit-2.docx",
+      "Sha256": "969bf074287eab94f4335396e1948872068bfd16fcf5749e6e7f04491f2c92b4",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/margins-edit-3.docx",
+      "Sha256": "1ccba9a57ea57bc85a5203a19613b2f7f1ff711c8494c2d9fe32af8f9d7a7f27",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/margins-noop-1.docx",
+      "Sha256": "1b11d848d9580a7e470c8af37e314dfbdc3d193ef4d5a3bac833d8091c18b965",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/margins-noop-2.docx",
+      "Sha256": "43fdc6e1ba4a2ff77b0ce1e1485f21f366cf925c010fae543386bd0dacd68c12",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/margins-noop-3.docx",
+      "Sha256": "a39d92d4d414cc52e88c08189764c05706b0bf967485ed2d25337211c29af006",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/native-sheet-1.xlsx",
+      "Sha256": "7748183357bc519069b604d24008f0f51bf9c6dce56a6126227af86b2b9528dc",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/native-sheet-2.xlsx",
+      "Sha256": "021cac1e5441317d0d9eafc9ed1143f08c30227cbc29fdf67c925a6a64e50f1b",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/native-sheet-3.xlsx",
+      "Sha256": "3d43f87d90d44799185c8ed2651f20d35f301c3ed71f13c1918c6e7275168e69",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/native-slide-1.pptx",
+      "Sha256": "59b4dafa3ccb0c5f347febee1f197a7f17310829b027a91699da8fd7339ac242",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/native-slide-2.pptx",
+      "Sha256": "d0bd376f308135c234fee28284f4a0da0514469eac66cecb82fa2ccbddc7b972",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/native-slide-3.pptx",
+      "Sha256": "4c42d718dea8ba11d03ed117b08705e4483e1ce92d4b7d5c39f5ca082151ea67",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/native-word-1.docx",
+      "Sha256": "9dca73e1ac797368cbecc11eae22a298e1fef9de55c589ce8783e809d55227c0",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/native-word-2.docx",
+      "Sha256": "ea2d46d1566fc688caf03f02e06cef52ab837b0fc8e313b10a34f475aea076cb",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/native-word-3.docx",
+      "Sha256": "e22d0cc8c2e762fcc337a6516154c79e8d64228db210b127dc0a874e018e911b",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/paragraph-edit-1.docx",
+      "Sha256": "00381bc99f697d4be47869ca3b72b286f39daaf6a26028c2b00b42850d75efec",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/paragraph-edit-2.docx",
+      "Sha256": "d73907d44ecbb0d9eb6b59f89a77cd96a48ed6108b86a0bf4c5b04e215d7cd72",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/paragraph-edit-3.docx",
+      "Sha256": "fb486a2ac5e1d7bfa34e804ae3a1a87393e506ca61644addb786d085b4f46943",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/paragraph-noop-1.docx",
+      "Sha256": "06c7ea04d4175321ebcffe4fc8fb870ae5604e2bf8702ef28d9a4d3b2024d0ef",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/paragraph-noop-2.docx",
+      "Sha256": "4071922e64601b493e27c39075b8ae08c0f6c8f20d284061b9aec9e6f19d3913",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/paragraph-noop-3.docx",
+      "Sha256": "33d7f0d4b2ad5f28885fab290f648dc545920f14c65764f6a45b6f0a4dcfbafa",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/pending-cell-after-save.xlsx",
+      "Sha256": "584e742b48d6090d92d02614d1578e5fb8bb75bf09f68115313f526851a512ec",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/pending-cell-before-save.xlsx",
+      "Sha256": "5b7c118b2d5f1d27d5566fae587a0507937a832dffa7a7284ab59586f7d653a7",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/pending-cell-close-after-save.xlsx",
+      "Sha256": "188c24bcd2c7474e11b23adae0e1c17fb99f3db2797e7d41d7b97115152ea7f1",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/pending-cell-close-before-save.xlsx",
+      "Sha256": "07cfd7ffae0bf96ce2a317a0b42d7a0740cdafda50edfc41c5ff6ec146eb635f",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/pending-note-after-save.docx",
+      "Sha256": "c4403f23b2ee433eefdad54a2fe78fd05c13336f8c462b7b4f7231cefaf69f7d",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/pending-note-before-save.docx",
+      "Sha256": "65b60797d4c49e9f14633df5f9bdca9f4017dcb6f02c44d13d67e0e3d5bdc55a",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/pending-note-close-after-save.docx",
+      "Sha256": "ae0004861d47b5a8ae08cb206f3a1adb0914afc2c2c4d5472cfd02815f4f2c62",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/pending-note-close-before-save.docx",
+      "Sha256": "4fe7169835b2dd31f3f0d01bef8bc47c06f338bc46185a90e5998fca03672419",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/pending-slide-after-save.pptx",
+      "Sha256": "a63e9dc4ffa4124edbcef00df55ffe5e7e7e300d03fd9776f8f74265822bdb08",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/pending-slide-before-save.pptx",
+      "Sha256": "85fa5ac96c73137d18b6506c8d959735afb2a326d724d8ddf86148d6bb2b26c3",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/pending-slide-close-after-save.pptx",
+      "Sha256": "d57f400458aa2416e045a37bc533e9341eef30b7daa90013724230023b7c9681",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/pending-slide-close-before-save.pptx",
+      "Sha256": "6c5cc0e20c0d3786451b4ef914a0a227fc619bd5364c5e66a346ebc369676a31",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/protection-after-late-change.docx",
+      "Sha256": "78476a2a14ca84ece24d0855634efe8f14d9da8f1c25c55c98037219a7692659",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/protection-before-late-change.docx",
+      "Sha256": "4b824c4ca1f8ec6aabdfa459bdd50a18d8e406a20c9cb4691db930176dcb2c9f",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/protection-undo-save.docx",
+      "Sha256": "172500766ebe854e422167811c0c3be616c49aedb4be09e2d18b053f76a01d6a",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/recovery-cancel-retry.docx",
+      "Sha256": "f4352e6212bf4c8ed7539dc60df8e17e8debbe9f6108d35fe266f531bb1fd2f9",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/recovery-disconnected-copy.docx",
+      "Sha256": "ecb32c8088becf7342ceace1ab73f88583c34545cda95de919b754b1d9bff92d",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/recovery-error-retry.docx",
+      "Sha256": "b77aa9d8a0546f2e405e734c550b395e4bb42c29cc0d4131ae915506ed91d933",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/recovery-pending-cell.xlsx",
+      "Sha256": "0d908b93cb4fa91981bd7b30e617fdc48d74137ab69aaf91deb6b4f187df02d4",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/recovery-pending-slide.pptx",
+      "Sha256": "2a91a14191ae6ab59856d87c784872fe7ed3ff20d53302674644a2bac74990ac",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/recovery-picker-copy.docx",
+      "Sha256": "8a541b0837a4505d07395c2b9b400a98dd25be53696aba8a0ebc45c06c985123",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/recovery-picker-later-save.docx",
+      "Sha256": "87b34580e3272a435be4b69315a26f7789cc2b540cb754404c066cd239216c40",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/reference/native-sheet-expected.xlsx",
+      "Sha256": "5acb9d1a879577a309cf42beb08b2e5a663af36eacbf8c33d8bdeeff0a6b16d3",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/reference/native-slide-expected.pptx",
+      "Sha256": "022e48e176f5d1149578cfcc15015dc4f81129d18485e5ee6b77f26f9e972af1",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/reference/native-word-expected.docx",
+      "Sha256": "d95d0e28e2783ef4b1055fc0f63fd2000cf853365c7431f5d3107622228c6fc3",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/retry-after-failure.docx",
+      "Sha256": "a5929f2dc81286f0a734a9066a4fcc4d7c56263bc717c300d1c5ea2ae1633763",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/ribbon-edits-1.docx",
+      "Sha256": "e4522272334fb2e3e9fb36973dc4b87655b3799f265bac2d8e4a9f69d0c9fbf3",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/ribbon-edits-2.docx",
+      "Sha256": "3411ce4f5e7c98e52fbcb6449cd3b8bba81346599baf019dd64ba2fcdaffe5f1",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/ribbon-edits-3.docx",
+      "Sha256": "04f878aa126b5eb0f8e1dc49482dca7402dba4e0761c02fa87d768be967db926",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/sections-1.docx",
+      "Sha256": "e0d1239d5b1b32619c8aa05f682f2b342a878da2824c9aabe0b3ed9e20794f9a",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/sections-2.docx",
+      "Sha256": "1447bc6cbd5ff09a3177559381e23631bb026f29c789c608c3866e4df0195153",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/sections-3.docx",
+      "Sha256": "b316e2d4ad542ed6415b5987ef1ea76a20e2886ec0c7d280f8e59494b3467b5e",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/selection-save.docx",
+      "Sha256": "76e354bfd3db58056eec9971be6976ec6ee79a45859f4a3f402c366cf4127847",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/slide-picture-bounds-1.pptx",
+      "Sha256": "cd65fbbd65b2e6b75e01684ede8dcf777744f074bf6ff76ac383b716442eafc6",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/slide-picture-bounds-2.pptx",
+      "Sha256": "c66840777006cae764d6c86576dc2970860229ed925040099e96b1079d5597cc",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/slide-picture-bounds-3.pptx",
+      "Sha256": "c649bf8a2ad2f9bcdde2c19d3c5824e9cb741016101e16986b1ad2fccec15fe8",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/slide-picture-landscape-1.pptx",
+      "Sha256": "51ba3d88a9f1bbd3d101385a776a6ebb4748f129e0edf4787889dbcf86f19122",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/slide-picture-landscape-2.pptx",
+      "Sha256": "68633566d5045807214b63d5b29b524e7733437bcaa16fbad88b3f902fc86da4",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/slide-picture-landscape-3.pptx",
+      "Sha256": "a9921817e15746d5a699856fb6e9a1fd94b9ec2ab5300add44e50b5478e96c42",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/slide-picture-portrait-1.pptx",
+      "Sha256": "07a7dca41f5a4a4bc1a99406dfce011897bd48a158e4ae699e3e57b2932e857f",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/slide-picture-portrait-2.pptx",
+      "Sha256": "4bb6ac63e8b0be7617dd9f893a8429f96ffba520ce71843bd42fda871177e719",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/slide-picture-portrait-3.pptx",
+      "Sha256": "1078929ae9670a4bb8ee7dff9ecaa5811f2791804b18fcfa1b3dcb9129098862",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/slide-picture-square-1.pptx",
+      "Sha256": "4d6dcb4ff36743ff2ed96930920c41405f21a6c08f6ddb54160fbc8271b49748",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/slide-picture-square-2.pptx",
+      "Sha256": "d2fbafd1b7faa280ccf63f86ac7afe30480a747d7c82692a095a0f2c7601ee60",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/slide-picture-square-3.pptx",
+      "Sha256": "d597b69e663eb572f1203e77ed92caafdfe80a470c985cb7a2ce74d41c4466ab",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/table-action-1.docx",
+      "Sha256": "c1370f90d20f43328425be5df18ec810c9a5792b5f737ec795cf3f1ba7b2ce20",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/table-action-2.docx",
+      "Sha256": "5a6adbddfc833c520fd47288a615a8ea098011fb344e336ef244e05955cff750",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/table-action-3.docx",
+      "Sha256": "66417bdd75bc11fed755feee11724f4824504e64b68de4275fc60d822d47db07",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/text-breaks-1.docx",
+      "Sha256": "3172244064e973c3532d7ca642b72af9889355f409fb26e6a8ce93128ef137a5",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/text-breaks-2.docx",
+      "Sha256": "3916e16e7c96eb57a0283d4498b532bc7b18aee59d2dae07d3dcef4a3044fcea",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/text-breaks-3.docx",
+      "Sha256": "645fe85410026b56cab2d2f4fbb75bf39dba03fa78dfb89b8c184fc435b06918",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/toc-action-1.docx",
+      "Sha256": "044c86925f754240d71f2fb76acf02a6d04e418e7cd3d36f592afb2137cbeab2",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/toc-action-2.docx",
+      "Sha256": "4a9237d6aa6316e2a3c695294c71b54139d4622801e0e34ff9c613fb8b232d9e",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/toc-action-3.docx",
+      "Sha256": "04b34853a9f5e2faa9ba41c2af96852f20f508a94829cbf882a2c1d6929daeae",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/tracking-enabled-save.docx",
+      "Sha256": "527b773b917924a6f5e05af6e8ce91bfa649464f62db96555c9458ef5bf82428",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/tracking-redo-save.docx",
+      "Sha256": "14fd4be39f8871fbfa7aa055759ad88cef2290dc63a436d44b81abc77e0e2b41",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/tracking-undo-save.docx",
+      "Sha256": "ea58eab3b90f3f84137f8ee03ea20e6e0a65a35ccea142778764e2dbe3a6c410",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/word-docm-save.docm",
+      "Sha256": "a50a2fdcc7cf9c88b5d86fc33a1b56d631700c1175647b9b2387faf72ae408ed",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/word-dotm-save.dotm",
+      "Sha256": "516857555370cf4dc7ba5634eceff4805edd58ba0ce9a7240474903d51d2597b",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/word-dotx-save.dotx",
+      "Sha256": "35ffa6a48e5aad19f8b5997094465a113c562d42fb01129a7b5307be2fc43e7f",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/word-picture-bounds-1.docx",
+      "Sha256": "fa5d9c79385f09d3eacfbcb21b4f11bc723c5a86483b3c089e171610162017f0",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/word-picture-bounds-2.docx",
+      "Sha256": "9ecf9979dd56082cabd48599c2014c7c15b3e85fef6cabb20ecf92e802533c8e",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/word-picture-bounds-3.docx",
+      "Sha256": "46e265dcd30734467c075717ee1b0ed3509ccdb34f4769274dda044d0496e5a1",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/word-picture-gif-1.docx",
+      "Sha256": "a7c31c6a3b2725b06829c0835691387dfb729a2da35ebc529cde8b6c81ede459",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/word-picture-gif-2.docx",
+      "Sha256": "3b0e5a7612b333d9a60f4c3a6de11f09d92b9fa28072d83ddbe24db74e8f5c24",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/word-picture-gif-3.docx",
+      "Sha256": "14fa08f6ee99b2d875d8bf6d83fcef2ef2103bfefa6e4908ebda1ee0f720bd5d",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/word-picture-jpeg-1.docx",
+      "Sha256": "bec33ad58bc41f41ad9c323ae58a4ecc0872cd548a82678dcf89d4c5eec8fac3",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/word-picture-jpeg-2.docx",
+      "Sha256": "b1f71df70d79c3c9795c98aa7b87555ea0f62671f79db964ccf08753d329562c",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/word-picture-jpeg-3.docx",
+      "Sha256": "deac34867d14dd8ae8d3704e6057bb57b003bfeb1ae00f1ed0f38f7e1167dab9",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/word-picture-landscape-1.docx",
+      "Sha256": "2b152465f7cf9ece4baac54fb39f69b88de75bb8bd220abfeafb97d4c0971af6",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/word-picture-landscape-2.docx",
+      "Sha256": "3f6b8eef6ebef215968ca8e51707e04f52dce810afa5a26ae8ea931f11091836",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/word-picture-landscape-3.docx",
+      "Sha256": "415dac4178c00ef06216297506b6a2b4fb5461b387a17d0d5c799294b56fd502",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/word-picture-portrait-1.docx",
+      "Sha256": "1b847789e7bc21713133ebf4e13dfc018c34d6a65c998ad0d5183c2c0304c6dd",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/word-picture-portrait-2.docx",
+      "Sha256": "d4dc08a4f352d1f8d1b6b9cc14d4897edde33500e137e5070dc4208e996ae7ad",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/word-picture-portrait-3.docx",
+      "Sha256": "c9bc88c1e5592ac6524bd0b4e39d5946fc8c0c3d5373f19354dbef9add99bbe4",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/word-picture-square-1.docx",
+      "Sha256": "666e1758062039e07938a2cb8de9e1229913748f08c35157a3c5b6f66e9abdf7",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/word-picture-square-2.docx",
+      "Sha256": "c77944cee24527221ca11fd1f71ace1331b17c72641f51e220590df3f6f5c22d",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity-host/word-picture-square-3.docx",
+      "Sha256": "59c2036e414faab9db061c1df8092bf5c99fd264a7050cd3d3f3bc7e0af70ab1",
+      "Errors": []
+    },
+    {
+      "File": "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host/build/fidelity/unchanged-controller.docx",
+      "Sha256": "a7c814eab629ad127ec6eae388acdd41501d5be4e3103cdceec81b175876866b",
+      "Errors": []
+    }
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "completed_at": "2026-11-14T18:01:59.056877+00:00",
+  "source": {
+    "suite_commit": "c85c9f0a81a75a4afb5103d397c1816f0140eb00",
+    "app_commit": "05905b86ca3a7fc8db3df131620842da3e134061",
+    "app_pinned_suite_commit": "c85c9f0a81a75a4afb5103d397c1816f0140eb00",
+    "app_pin_manifest_sha256": "ef0d7b7f5d6a12e7ab040f67b0aa7f1ed2b6545744248bc16e83b1701c63b722",
+    "restored_input_files": 4732,
+    "restored_input_tree_sha256": "f0e6efb1d31c1f12b1bc68a4ad53ca48be3db7e7969b94ed52e6fa7f2189d100",
+    "collected_input_tree_sha256": "a56bd6cf2d3d23de6336cb6193084421fff4649867e1fd82ab37ed6549cd4490",
+    "collection_receipt_sha256": "964c498cbca211574b16438a532881e9822e7eed9992f30c207f9098ed8de385",
+    "completed_gate_inventory_sha256": "ef8ac089e4703b848054ab68defc0855d0a0a54d10a8708f7ad07f30b5d02e08",
+    "sqlite_test_view": {
+      "only_changed_path": [
+        "pubspec.yaml"
+      ],
+      "original_pubspec_sha256": "76799433117b092fc22766cc7a3557434813ee2d53b6ba61aa705f0532373441",
+      "collected_pubspec_sha256": "e7d7e583ce3898624498471c1ffaf28d87b82a396ac4b9d4dfcacba688262fbf",
+      "exact_reconstructed_hooked_pubspec_sha256": "e7d7e583ce3898624498471c1ffaf28d87b82a396ac4b9d4dfcacba688262fbf",
+      "transformation": "original.rstrip(b'\\r\\n') + b'\\n' + checked-in HOOK",
+      "all_other_inputs_equal": true
+    }
+  },
+  "scope": {
+    "host_schema": {
+      "files": 149,
+      "failures": 0,
+      "actual_outputs": 146,
+      "independent_references": 3
+    },
+    "namespace_schema": {
+      "files": 4,
+      "failures": 0,
+      "actual_outputs": 3,
+      "independent_references": 1
+    },
+    "render": {
+      "files": 16,
+      "actual_native_host_outputs": 9,
+      "native_references": 3,
+      "namespace_outputs": 3,
+      "namespace_reference": 1,
+      "three_save_groups": 4,
+      "independent_first_save_baselines": 4,
+      "equal_page_text_and_rgb_pixels": true,
+      "failures": 0
+    },
+    "boundary": "Only these sixteen files are rendered here. The separate source schema receipt covers 350 engine files; this receipt makes no whole-engine or whole-host visual claim."
+  },
+  "tools_sha256": {
+    "collector": "fb38ffff562a63ca6c1aa77dd853f648ddb018cee4785b0210b87f39d61c8d49",
+    "renderer": "3a30da15086073f80b46ac1a6f8eabbf87194acd948b334b0b044d27bfc5c1ed",
+    "schema_source": "4d41f286855ed11a12ecdf0641773c33285847180a3e5cdbf43ce2385a099880",
+    "schema_assembly": "034ea59036b34233719a871024e28b6315029d3ddabba763bf728892255f4339",
+    "host_inventory_tool": "1ea14e6dea214baa93c13e580d973f7ff85f93d5742f933385968a95c2afe873",
+    "host_source_snapshot_tool": "0dbffdfb320a98cae7a7c1c27cab2dd972f8e1b7b6e45e8b83f5dca31a26af95",
+    "sqlite_wrapper": "c47c0767392478e32c856b12e4f704682edc84d04b55dc2374e680a535ac1806",
+    "native_fixture_author": "44f4e16ab65d32c8d7b3732c62b0973f4c25eef3338f9b9048d7e29ca1f155d4",
+    "native_fixture_manifest": "197f93c3ac28baec21e51f954efd10ede1683129b0134217fcc24b138b57e556",
+    "namespace_fixture_producer": "56c25d5e174c2bfc6089e0db2236c9ce97475e1f75ced91ba1d9793250de4c16",
+    "libreoffice_launcher": "4087cfbf62a50717804ce883618227756dfe3d41d5cf7ab9f11f0e849c2653df",
+    "libreoffice_kit_adapter": "66d2347ae7ad317b854bd856baaccb296378fe1d4cdb6677aa7cf2efb6d545e7",
+    "libreoffice_engine": "b482c62fa4a1f064ca4a07422c7164827d6c1a3b5c9a0850a21609f5ec9ac540",
+    "schema_dependency/documentformat.openxml.3.3.0.nupkg": "53a74167552d886f0e312540db12c86a6133a83bd698795f3be6e25fc091b9e7",
+    "schema_dependency/DocumentFormat.OpenXml.dll": "72e8f6e3e3527d7e6ee29f2f9182ef1b39a4de6da355a33013c0940efb24d87e",
+    "schema_dependency/documentformat.openxml.framework.3.3.0.nupkg": "5f539f1602b642198ec6ed3ec567eac3fff62309f6ec65e28db2751a488ec30d",
+    "schema_dependency/DocumentFormat.OpenXml.Framework.dll": "5b8c2b9ca1aa70539af0b8054d649bd09fdce4dec812b263ab511b13789c8589",
+    "schema_dependency/system.io.packaging.8.0.1.nupkg": "c5fd0101fa90bc84e89a906cbdfa7188bb6cffab11404cdd8cd0377ffabfbd8e",
+    "schema_dependency/System.IO.Packaging.dll": "12ddc8bff279fad856551a74894dc52b80fa437d5d2b32722e70ae6899217b7c",
+    "libreoffice_kit/lok_convert.c": "1f23398b945320057ca8695a6f9a9fe3db87e232998800691dacd571d87fc496",
+    "libreoffice_kit/lok_convert": "66d2347ae7ad317b854bd856baaccb296378fe1d4cdb6677aa7cf2efb6d545e7",
+    "libreoffice_kit/include/LibreOfficeKit/LibreOfficeKit.h": "af1f5c90f39a885bd0f2ba50bb5c68f40cf2fac88cfcc6b6a76a4522fab0b676",
+    "libreoffice_kit/include/LibreOfficeKit/LibreOfficeKitEnums.h": "9217e7849fc0f7de580638733395007991bbea36e30156a3335b733ccea61ea7",
+    "libreoffice_kit/include/LibreOfficeKit/LibreOfficeKitInit.h": "16feb15e51651387d223f3e156bc876d5d9826078651cfb12e4f035dcc0d2dc0",
+    "libreoffice_kit/include/LibreOfficeKit/LibreOfficeKitTypes.h": "64eee50e2e74d2d33368e1a7b50683fe2e5fec9f3fd4952ebea24195f3dffa43",
+    "pdfinfo": "fee70ade670fb025343aca2b5c3a2aacacb8ed9edce1b716b233b5de924b6bf5",
+    "pdftoppm": "de772e88ab9977ccde25def9b403bf42675d75f5dd82b19fbd7d8123ad183159",
+    "pdftotext": "7fe3559cac3ba61dd93650a1ba90499b9fc488184ef8d0f2f1305ddf52c0378b"
+  },
+  "versions": {
+    "pdfinfo": "pdfinfo version 26.05.0",
+    "pdftoppm": "pdftoppm version 26.05.0",
+    "pdftotext": "pdftotext version 25.03.0",
+    "libreoffice": "LibreOffice 24.2.7.2 ee3885777aa7032db5a9b65deec9457448a91162 (LibreOfficeKit embedding API)",
+    "dotnet": "8.0.428",
+    "font_resolutions": {
+      "Calibri": {
+        "family": "OpenAI Sans",
+        "file": "/usr/share/fonts/openai-sans/OpenAISans-Regular.woff2",
+        "sha256": "6b99d0284d5ed15733ea855fdacc8503d1f5e1b3945b02317d27773daa21d9dc"
+      },
+      "Cambria": {
+        "family": "Noto Serif",
+        "file": "/usr/share/fonts/truetype/noto/NotoSerif-Regular.ttf",
+        "sha256": "9d7583b7dc9e812afd32a14280c5cac3160012efe50c8d08938f4fea266ff67f"
+      },
+      "Arial": {
+        "family": "Liberation Sans",
+        "file": "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf",
+        "sha256": "bade59d822652f76e6941aa87b40a87c13d1cc70db98ededb5011127efafd1d3"
+      },
+      "Noto Sans": {
+        "family": "Noto Sans",
+        "file": "/usr/share/fonts/truetype/noto/NotoSans-Regular.ttf",
+        "sha256": "89c3c497f618fdaa0b2d1e98fef93582f28c71debd2c4a8cdf41f190ced2909d"
+      },
+      "Noto Serif": {
+        "family": "Noto Serif",
+        "file": "/usr/share/fonts/truetype/noto/NotoSerif-Regular.ttf",
+        "sha256": "9d7583b7dc9e812afd32a14280c5cac3160012efe50c8d08938f4fea266ff67f"
+      },
+      "Liberation Sans": {
+        "family": "Liberation Sans",
+        "file": "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf",
+        "sha256": "bade59d822652f76e6941aa87b40a87c13d1cc70db98ededb5011127efafd1d3"
+      },
+      "Liberation Sans:style=Bold": {
+        "family": "Liberation Sans",
+        "file": "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
+        "sha256": "1b5f2da6f4cadce4c05b9ecebe3a6fcd374eb95ae443605e799f4c3287978939"
+      },
+      "Liberation Sans:style=Italic": {
+        "family": "Liberation Sans",
+        "file": "/usr/share/fonts/truetype/liberation/LiberationSans-Italic.ttf",
+        "sha256": "93ff5260834141b6f9d8f2b846d427f3a5dc492dbdce8ebdad406e38a38f34bb"
+      },
+      "Liberation Sans:style=Bold Italic": {
+        "family": "Liberation Sans",
+        "file": "/usr/share/fonts/truetype/liberation/LiberationSans-BoldItalic.ttf",
+        "sha256": "352e9dc2be89f210dbd3c0fd5dfaf97135de70e0beb5f22378601861462493a7"
+      }
+    }
+  },
+  "commands": [
+    [
+      "/workspace/scratch/fd11a5f593e0/toolchain/dotnet/dotnet",
+      "/workspace/scratch/fd11a5f593e0/toolchain/validator/OfficeValidation.dll",
+      "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/host",
+      "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/host-schema-report.json"
+    ],
+    [
+      "/workspace/scratch/fd11a5f593e0/toolchain/dotnet/dotnet",
+      "/workspace/scratch/fd11a5f593e0/toolchain/validator/OfficeValidation.dll",
+      "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/schema-inputs/namespace",
+      "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/namespace-schema-report.json"
+    ],
+    [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "/workspace/scratch/fd11a5f593e0/quds_office_suite/tool/office-validation/render.py",
+      "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render-inputs",
+      "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render"
+    ],
+    [
+      "pdftoppm",
+      "-r",
+      "72",
+      "-f",
+      "1",
+      "-l",
+      "1",
+      "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render/012/document.pdf"
+    ],
+    [
+      "pdftoppm",
+      "-r",
+      "72",
+      "-f",
+      "1",
+      "-l",
+      "1",
+      "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render/013/document.pdf"
+    ],
+    [
+      "pdftoppm",
+      "-r",
+      "72",
+      "-f",
+      "1",
+      "-l",
+      "1",
+      "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render/014/document.pdf"
+    ],
+    [
+      "pdftoppm",
+      "-r",
+      "72",
+      "-f",
+      "1",
+      "-l",
+      "1",
+      "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render/015/document.pdf"
+    ]
+  ],
+  "renderer_input_sha256": {
+    "fidelity-host/native-sheet-1.xlsx": "7748183357bc519069b604d24008f0f51bf9c6dce56a6126227af86b2b9528dc",
+    "fidelity-host/native-sheet-2.xlsx": "021cac1e5441317d0d9eafc9ed1143f08c30227cbc29fdf67c925a6a64e50f1b",
+    "fidelity-host/native-sheet-3.xlsx": "3d43f87d90d44799185c8ed2651f20d35f301c3ed71f13c1918c6e7275168e69",
+    "fidelity-host/native-slide-1.pptx": "59b4dafa3ccb0c5f347febee1f197a7f17310829b027a91699da8fd7339ac242",
+    "fidelity-host/native-slide-2.pptx": "d0bd376f308135c234fee28284f4a0da0514469eac66cecb82fa2ccbddc7b972",
+    "fidelity-host/native-slide-3.pptx": "4c42d718dea8ba11d03ed117b08705e4483e1ce92d4b7d5c39f5ca082151ea67",
+    "fidelity-host/native-word-1.docx": "9dca73e1ac797368cbecc11eae22a298e1fef9de55c589ce8783e809d55227c0",
+    "fidelity-host/native-word-2.docx": "ea2d46d1566fc688caf03f02e06cef52ab837b0fc8e313b10a34f475aea076cb",
+    "fidelity-host/native-word-3.docx": "e22d0cc8c2e762fcc337a6516154c79e8d64228db210b127dc0a874e018e911b",
+    "fidelity-host/reference/native-word-expected.docx": "d95d0e28e2783ef4b1055fc0f63fd2000cf853365c7431f5d3107622228c6fc3",
+    "fidelity-host/reference/native-sheet-expected.xlsx": "5acb9d1a879577a309cf42beb08b2e5a663af36eacbf8c33d8bdeeff0a6b16d3",
+    "fidelity-host/reference/native-slide-expected.pptx": "022e48e176f5d1149578cfcc15015dc4f81129d18485e5ee6b77f26f9e972af1",
+    "fidelity-schema/namespace-style-1.xlsx": "a5c2c35441a45ca1a0a45e5059c0b6ac03d39f4439e761bfcf534244d43c939e",
+    "fidelity-schema/namespace-style-2.xlsx": "167dfcbc2557c13242b4dcc739f1d07806771cd26c11446b037b42d63f3b7756",
+    "fidelity-schema/namespace-style-3.xlsx": "bdf420a5f1b34dd9cb4466ccf4e5dbf32be1e2f733e9ee106ce627e3ff2b2426",
+    "fidelity-schema/namespace-style-reference.xlsx": "7605dce14b8c4a37e1c5a051d916399ce17e2ce2d3ae8de16220147880f952aa"
+  },
+  "namespace_visible_text": [
+    {
+      "file": "fidelity-schema/namespace-style-1.xlsx",
+      "blue_ink_pixels": 1519,
+      "minimum_blue_ink_pixels": 100,
+      "blue_ink_definition": "blue >= red + 16 and blue >= green + 8",
+      "pixel_sha256": "d7b4168b7e7ae1541dfeee473f70142ae64ccda1efe749b44e14f825252ec1cb"
+    },
+    {
+      "file": "fidelity-schema/namespace-style-2.xlsx",
+      "blue_ink_pixels": 1519,
+      "minimum_blue_ink_pixels": 100,
+      "blue_ink_definition": "blue >= red + 16 and blue >= green + 8",
+      "pixel_sha256": "d7b4168b7e7ae1541dfeee473f70142ae64ccda1efe749b44e14f825252ec1cb"
+    },
+    {
+      "file": "fidelity-schema/namespace-style-3.xlsx",
+      "blue_ink_pixels": 1519,
+      "minimum_blue_ink_pixels": 100,
+      "blue_ink_definition": "blue >= red + 16 and blue >= green + 8",
+      "pixel_sha256": "d7b4168b7e7ae1541dfeee473f70142ae64ccda1efe749b44e14f825252ec1cb"
+    },
+    {
+      "file": "fidelity-schema/namespace-style-reference.xlsx",
+      "blue_ink_pixels": 1519,
+      "minimum_blue_ink_pixels": 100,
+      "blue_ink_definition": "blue >= red + 16 and blue >= green + 8",
+      "pixel_sha256": "d7b4168b7e7ae1541dfeee473f70142ae64ccda1efe749b44e14f825252ec1cb"
+    }
+  ],
+  "replay_after_archive_extraction": [
+    "dotnet OfficeValidation.dll schema-inputs/host host-schema-replayed.json",
+    "dotnet OfficeValidation.dll schema-inputs/namespace namespace-schema-replayed.json",
+    "SAL_USE_VCLPLUGIN=svp python3 <suite>/tool/office-validation/render.py render-inputs render-replayed"
+  ],
+  "archive": {
+    "file": "external-artifacts.zip",
+    "bytes": 1909538,
+    "sha256": "ec6911d1ee449e1927d2c1045dd5ff6a81a2b6db181129ce8d0560ac616908cc",
+    "manifest_sha256": "a592179432e18f10e8c40fb8e22f106701aa2d0e0b8cd59f69c8b4d67add5e51"
+  },
+  "reports_sha256": {
+    "host-schema-report.json": "3222488acedafb5e51ffafa7e84a465af69868bddbfc34a7aa2d153b8ae70983",
+    "namespace-schema-report.json": "4a187f39e7c6a22ac08492a03e4cc9a751bea9d57c4222777aac951d2ac0c426",
+    "host-inventory.json": "ef8ac089e4703b848054ab68defc0855d0a0a54d10a8708f7ad07f30b5d02e08",
+    "archive-manifest.json": "a592179432e18f10e8c40fb8e22f106701aa2d0e0b8cd59f69c8b4d67add5e51",
+    "render-report.json": "ff8a30d1b4f93f3ed4b9ca1e2999733f228e9fc7c1b49972b969abd049e39d3b"
+  }
+}

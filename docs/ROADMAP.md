@@ -17,8 +17,11 @@ tasks (REC-01–04) are implemented and validated. The current source receipt
 records 1,256 engine tests, 539 editor tests, 440 fidelity-tool controls, all 350
 engine output files, and zero OpenXML schema errors in those 350 files. One
 existing editor comparison test needs a local PDF fixture and remains skipped.
-App lifecycle, actual-save workflows and their external comparisons are tracked
-separately in the scoped plan; source tests do not establish those outcomes.
+App lifecycle and actual-save acceptance also passed: 241 host tests, all 149
+required output/reference files, zero schema errors in those files, and 16
+independent render inputs across four first-save baselines. The scoped plan
+records the exact source identities and the remaining browser/device/authentic
+signature gates. Source and app results retain their separate evidence.
 
 ## Wave 1 — PDF correctness (done)
 

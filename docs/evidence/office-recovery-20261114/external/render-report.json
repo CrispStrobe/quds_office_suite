@@ -1,0 +1,769 @@
+{
+  "renderer": "LibreOffice 24.2.7.2 ee3885777aa7032db5a9b65deec9457448a91162 (LibreOfficeKit embedding API)",
+  "files": 16,
+  "rendered_files": 16,
+  "soffice_retry_policy": {
+    "maximum_attempts": 3,
+    "retry_returncode": -9,
+    "scope": "SOFFICE conversion only; unchanged input and fresh profile/output per attempt"
+  },
+  "picture_pixel_oracle_files": 0,
+  "visual_input_files": 16,
+  "native_schema_only_files": 0,
+  "native_schema_only": [],
+  "schema_report": null,
+  "pixel_fingerprint": "SHA-256 of big-endian uint32 width/height followed by RGB bytes",
+  "cycle_groups": 4,
+  "cycle_comparisons": [
+    {
+      "case": "fidelity-host/native-sheet.xlsx",
+      "expected_cycles": [
+        1,
+        2,
+        3
+      ],
+      "actual_cycles": [
+        1,
+        2,
+        3
+      ],
+      "files": [
+        "fidelity-host/native-sheet-1.xlsx",
+        "fidelity-host/native-sheet-2.xlsx",
+        "fidelity-host/native-sheet-3.xlsx"
+      ],
+      "baseline": "fidelity-host/reference/native-sheet-expected.xlsx",
+      "baseline_candidate": "fidelity-host/reference/native-sheet-expected.xlsx",
+      "baseline_page_order": null,
+      "passed": true
+    },
+    {
+      "case": "fidelity-host/native-slide.pptx",
+      "expected_cycles": [
+        1,
+        2,
+        3
+      ],
+      "actual_cycles": [
+        1,
+        2,
+        3
+      ],
+      "files": [
+        "fidelity-host/native-slide-1.pptx",
+        "fidelity-host/native-slide-2.pptx",
+        "fidelity-host/native-slide-3.pptx"
+      ],
+      "baseline": "fidelity-host/reference/native-slide-expected.pptx",
+      "baseline_candidate": "fidelity-host/reference/native-slide-expected.pptx",
+      "baseline_page_order": null,
+      "passed": true
+    },
+    {
+      "case": "fidelity-host/native-word.docx",
+      "expected_cycles": [
+        1,
+        2,
+        3
+      ],
+      "actual_cycles": [
+        1,
+        2,
+        3
+      ],
+      "files": [
+        "fidelity-host/native-word-1.docx",
+        "fidelity-host/native-word-2.docx",
+        "fidelity-host/native-word-3.docx"
+      ],
+      "baseline": "fidelity-host/reference/native-word-expected.docx",
+      "baseline_candidate": "fidelity-host/reference/native-word-expected.docx",
+      "baseline_page_order": null,
+      "passed": true
+    },
+    {
+      "case": "fidelity-schema/namespace-style.xlsx",
+      "expected_cycles": [
+        1,
+        2,
+        3
+      ],
+      "actual_cycles": [
+        1,
+        2,
+        3
+      ],
+      "files": [
+        "fidelity-schema/namespace-style-1.xlsx",
+        "fidelity-schema/namespace-style-2.xlsx",
+        "fidelity-schema/namespace-style-3.xlsx"
+      ],
+      "baseline": "fidelity-schema/namespace-style-reference.xlsx",
+      "baseline_candidate": "fidelity-schema/namespace-style-reference.xlsx",
+      "baseline_page_order": null,
+      "passed": true
+    }
+  ],
+  "baseline_comparisons": 4,
+  "page_order_comparisons": 0,
+  "render_only_files": [],
+  "failures": [],
+  "reports": [
+    {
+      "file": "fidelity-host/native-sheet-1.xlsx",
+      "pages": 1,
+      "text": "Native budget                 Amount\n\n\n      Approved travel                  135.50\nEquipment                              300.00\nTotal                                  435.50\n\n\n\n\n                Approved for review\n\f",
+      "pixel_sha256": [
+        "aeef6ebcda4ec7e0c4e1028fad65fd2dae9248e46e08b0b49ebfbfa713213566"
+      ],
+      "pdf": "000/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 596,
+          "height": 842,
+          "png": "000/page-0001.png",
+          "pixel_sha256": "aeef6ebcda4ec7e0c4e1028fad65fd2dae9248e46e08b0b49ebfbfa713213566"
+        }
+      ],
+      "input_sha256": "7748183357bc519069b604d24008f0f51bf9c6dce56a6126227af86b2b9528dc",
+      "conversion_attempts": [
+        {
+          "attempt": 1,
+          "command": [
+            "/workspace/scratch/fd11a5f593e0/toolchain/lok242-bin/libreoffice",
+            "-env:UserInstallation=file:///workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render/render-000-attempt-1-nibcbcad/profile",
+            "--headless",
+            "--convert-to",
+            "pdf",
+            "--outdir",
+            "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render/render-000-attempt-1-nibcbcad",
+            "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render-inputs/fidelity-host/native-sheet-1.xlsx"
+          ],
+          "input_sha256_before": "7748183357bc519069b604d24008f0f51bf9c6dce56a6126227af86b2b9528dc",
+          "status": "converted",
+          "returncode": 0,
+          "stdout": "{ \"ProductName\": \"LibreOffice\", \"ProductVersion\": \"24.2\", \"ProductExtension\": \".7.2\", \"BuildId\": \"ee3885777aa7032db5a9b65deec9457448a91162\" }\n",
+          "stderr": "LOK stage: load\nLOK stage: save\nLOK save result: 1\nLOK stage: close document\nLOK stage: finish\n",
+          "input_sha256_after": "7748183357bc519069b604d24008f0f51bf9c6dce56a6126227af86b2b9528dc",
+          "input_unchanged": true
+        }
+      ]
+    },
+    {
+      "file": "fidelity-host/native-sheet-2.xlsx",
+      "pages": 1,
+      "text": "Native budget                 Amount\n\n\n      Approved travel                  135.50\nEquipment                              300.00\nTotal                                  435.50\n\n\n\n\n                Approved for review\n\f",
+      "pixel_sha256": [
+        "aeef6ebcda4ec7e0c4e1028fad65fd2dae9248e46e08b0b49ebfbfa713213566"
+      ],
+      "pdf": "001/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 596,
+          "height": 842,
+          "png": "001/page-0001.png",
+          "pixel_sha256": "aeef6ebcda4ec7e0c4e1028fad65fd2dae9248e46e08b0b49ebfbfa713213566"
+        }
+      ],
+      "input_sha256": "021cac1e5441317d0d9eafc9ed1143f08c30227cbc29fdf67c925a6a64e50f1b",
+      "conversion_attempts": [
+        {
+          "attempt": 1,
+          "command": [
+            "/workspace/scratch/fd11a5f593e0/toolchain/lok242-bin/libreoffice",
+            "-env:UserInstallation=file:///workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render/render-001-attempt-1-b6c9qbr4/profile",
+            "--headless",
+            "--convert-to",
+            "pdf",
+            "--outdir",
+            "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render/render-001-attempt-1-b6c9qbr4",
+            "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render-inputs/fidelity-host/native-sheet-2.xlsx"
+          ],
+          "input_sha256_before": "021cac1e5441317d0d9eafc9ed1143f08c30227cbc29fdf67c925a6a64e50f1b",
+          "status": "converted",
+          "returncode": 0,
+          "stdout": "{ \"ProductName\": \"LibreOffice\", \"ProductVersion\": \"24.2\", \"ProductExtension\": \".7.2\", \"BuildId\": \"ee3885777aa7032db5a9b65deec9457448a91162\" }\n",
+          "stderr": "LOK stage: load\nLOK stage: save\nLOK save result: 1\nLOK stage: close document\nLOK stage: finish\n",
+          "input_sha256_after": "021cac1e5441317d0d9eafc9ed1143f08c30227cbc29fdf67c925a6a64e50f1b",
+          "input_unchanged": true
+        }
+      ]
+    },
+    {
+      "file": "fidelity-host/native-sheet-3.xlsx",
+      "pages": 1,
+      "text": "Native budget                 Amount\n\n\n      Approved travel                  135.50\nEquipment                              300.00\nTotal                                  435.50\n\n\n\n\n                Approved for review\n\f",
+      "pixel_sha256": [
+        "aeef6ebcda4ec7e0c4e1028fad65fd2dae9248e46e08b0b49ebfbfa713213566"
+      ],
+      "pdf": "002/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 596,
+          "height": 842,
+          "png": "002/page-0001.png",
+          "pixel_sha256": "aeef6ebcda4ec7e0c4e1028fad65fd2dae9248e46e08b0b49ebfbfa713213566"
+        }
+      ],
+      "input_sha256": "3d43f87d90d44799185c8ed2651f20d35f301c3ed71f13c1918c6e7275168e69",
+      "conversion_attempts": [
+        {
+          "attempt": 1,
+          "command": [
+            "/workspace/scratch/fd11a5f593e0/toolchain/lok242-bin/libreoffice",
+            "-env:UserInstallation=file:///workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render/render-002-attempt-1-1nijaw0g/profile",
+            "--headless",
+            "--convert-to",
+            "pdf",
+            "--outdir",
+            "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render/render-002-attempt-1-1nijaw0g",
+            "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render-inputs/fidelity-host/native-sheet-3.xlsx"
+          ],
+          "input_sha256_before": "3d43f87d90d44799185c8ed2651f20d35f301c3ed71f13c1918c6e7275168e69",
+          "status": "converted",
+          "returncode": 0,
+          "stdout": "{ \"ProductName\": \"LibreOffice\", \"ProductVersion\": \"24.2\", \"ProductExtension\": \".7.2\", \"BuildId\": \"ee3885777aa7032db5a9b65deec9457448a91162\" }\n",
+          "stderr": "LOK stage: load\nLOK stage: save\nLOK save result: 1\nLOK stage: close document\nLOK stage: finish\n",
+          "input_sha256_after": "3d43f87d90d44799185c8ed2651f20d35f301c3ed71f13c1918c6e7275168e69",
+          "input_unchanged": true
+        }
+      ]
+    },
+    {
+      "file": "fidelity-host/native-slide-1.pptx",
+      "pages": 1,
+      "text": "     Reviewed slide title\n\n\nReference body remains unchanged.\n\f",
+      "pixel_sha256": [
+        "196ab23585dcde4d6b5b3f5ebf5bfb65bd3e281ed8969b25533344a23c446fa2"
+      ],
+      "pdf": "003/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 406,
+          "png": "003/page-0001.png",
+          "pixel_sha256": "196ab23585dcde4d6b5b3f5ebf5bfb65bd3e281ed8969b25533344a23c446fa2"
+        }
+      ],
+      "input_sha256": "59b4dafa3ccb0c5f347febee1f197a7f17310829b027a91699da8fd7339ac242",
+      "conversion_attempts": [
+        {
+          "attempt": 1,
+          "command": [
+            "/workspace/scratch/fd11a5f593e0/toolchain/lok242-bin/libreoffice",
+            "-env:UserInstallation=file:///workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render/render-003-attempt-1-7n2_mphz/profile",
+            "--headless",
+            "--convert-to",
+            "pdf",
+            "--outdir",
+            "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render/render-003-attempt-1-7n2_mphz",
+            "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render-inputs/fidelity-host/native-slide-1.pptx"
+          ],
+          "input_sha256_before": "59b4dafa3ccb0c5f347febee1f197a7f17310829b027a91699da8fd7339ac242",
+          "status": "converted",
+          "returncode": 0,
+          "stdout": "{ \"ProductName\": \"LibreOffice\", \"ProductVersion\": \"24.2\", \"ProductExtension\": \".7.2\", \"BuildId\": \"ee3885777aa7032db5a9b65deec9457448a91162\" }\n",
+          "stderr": "LOK stage: load\nNo language allowlisted, turning off the language support.\nLOK stage: save\nLOK save result: 1\nLOK stage: close document\nLOK stage: finish\n",
+          "input_sha256_after": "59b4dafa3ccb0c5f347febee1f197a7f17310829b027a91699da8fd7339ac242",
+          "input_unchanged": true
+        }
+      ]
+    },
+    {
+      "file": "fidelity-host/native-slide-2.pptx",
+      "pages": 1,
+      "text": "     Reviewed slide title\n\n\nReference body remains unchanged.\n\f",
+      "pixel_sha256": [
+        "196ab23585dcde4d6b5b3f5ebf5bfb65bd3e281ed8969b25533344a23c446fa2"
+      ],
+      "pdf": "004/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 406,
+          "png": "004/page-0001.png",
+          "pixel_sha256": "196ab23585dcde4d6b5b3f5ebf5bfb65bd3e281ed8969b25533344a23c446fa2"
+        }
+      ],
+      "input_sha256": "d0bd376f308135c234fee28284f4a0da0514469eac66cecb82fa2ccbddc7b972",
+      "conversion_attempts": [
+        {
+          "attempt": 1,
+          "command": [
+            "/workspace/scratch/fd11a5f593e0/toolchain/lok242-bin/libreoffice",
+            "-env:UserInstallation=file:///workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render/render-004-attempt-1-zr5zkh20/profile",
+            "--headless",
+            "--convert-to",
+            "pdf",
+            "--outdir",
+            "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render/render-004-attempt-1-zr5zkh20",
+            "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render-inputs/fidelity-host/native-slide-2.pptx"
+          ],
+          "input_sha256_before": "d0bd376f308135c234fee28284f4a0da0514469eac66cecb82fa2ccbddc7b972",
+          "status": "converted",
+          "returncode": 0,
+          "stdout": "{ \"ProductName\": \"LibreOffice\", \"ProductVersion\": \"24.2\", \"ProductExtension\": \".7.2\", \"BuildId\": \"ee3885777aa7032db5a9b65deec9457448a91162\" }\n",
+          "stderr": "LOK stage: load\nNo language allowlisted, turning off the language support.\nLOK stage: save\nLOK save result: 1\nLOK stage: close document\nLOK stage: finish\n",
+          "input_sha256_after": "d0bd376f308135c234fee28284f4a0da0514469eac66cecb82fa2ccbddc7b972",
+          "input_unchanged": true
+        }
+      ]
+    },
+    {
+      "file": "fidelity-host/native-slide-3.pptx",
+      "pages": 1,
+      "text": "     Reviewed slide title\n\n\nReference body remains unchanged.\n\f",
+      "pixel_sha256": [
+        "196ab23585dcde4d6b5b3f5ebf5bfb65bd3e281ed8969b25533344a23c446fa2"
+      ],
+      "pdf": "005/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 406,
+          "png": "005/page-0001.png",
+          "pixel_sha256": "196ab23585dcde4d6b5b3f5ebf5bfb65bd3e281ed8969b25533344a23c446fa2"
+        }
+      ],
+      "input_sha256": "4c42d718dea8ba11d03ed117b08705e4483e1ce92d4b7d5c39f5ca082151ea67",
+      "conversion_attempts": [
+        {
+          "attempt": 1,
+          "command": [
+            "/workspace/scratch/fd11a5f593e0/toolchain/lok242-bin/libreoffice",
+            "-env:UserInstallation=file:///workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render/render-005-attempt-1-wog1nies/profile",
+            "--headless",
+            "--convert-to",
+            "pdf",
+            "--outdir",
+            "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render/render-005-attempt-1-wog1nies",
+            "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render-inputs/fidelity-host/native-slide-3.pptx"
+          ],
+          "input_sha256_before": "4c42d718dea8ba11d03ed117b08705e4483e1ce92d4b7d5c39f5ca082151ea67",
+          "status": "converted",
+          "returncode": 0,
+          "stdout": "{ \"ProductName\": \"LibreOffice\", \"ProductVersion\": \"24.2\", \"ProductExtension\": \".7.2\", \"BuildId\": \"ee3885777aa7032db5a9b65deec9457448a91162\" }\n",
+          "stderr": "LOK stage: load\nNo language allowlisted, turning off the language support.\nLOK stage: save\nLOK save result: 1\nLOK stage: close document\nLOK stage: finish\n",
+          "input_sha256_after": "4c42d718dea8ba11d03ed117b08705e4483e1ce92d4b7d5c39f5ca082151ea67",
+          "input_unchanged": true
+        }
+      ]
+    },
+    {
+      "file": "fidelity-host/native-word-1.docx",
+      "pages": 1,
+      "text": "    Reviewed: Native workflow report\n\nReference paragraph remains unchanged.\n\f",
+      "pixel_sha256": [
+        "da5d081c5f783e96817788253310fb418ab91d0cb35428a6942296f3a57d70b7"
+      ],
+      "pdf": "006/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "006/page-0001.png",
+          "pixel_sha256": "da5d081c5f783e96817788253310fb418ab91d0cb35428a6942296f3a57d70b7"
+        }
+      ],
+      "input_sha256": "9dca73e1ac797368cbecc11eae22a298e1fef9de55c589ce8783e809d55227c0",
+      "conversion_attempts": [
+        {
+          "attempt": 1,
+          "command": [
+            "/workspace/scratch/fd11a5f593e0/toolchain/lok242-bin/libreoffice",
+            "-env:UserInstallation=file:///workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render/render-006-attempt-1-uvn3j1y8/profile",
+            "--headless",
+            "--convert-to",
+            "pdf",
+            "--outdir",
+            "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render/render-006-attempt-1-uvn3j1y8",
+            "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render-inputs/fidelity-host/native-word-1.docx"
+          ],
+          "input_sha256_before": "9dca73e1ac797368cbecc11eae22a298e1fef9de55c589ce8783e809d55227c0",
+          "status": "converted",
+          "returncode": 0,
+          "stdout": "{ \"ProductName\": \"LibreOffice\", \"ProductVersion\": \"24.2\", \"ProductExtension\": \".7.2\", \"BuildId\": \"ee3885777aa7032db5a9b65deec9457448a91162\" }\n",
+          "stderr": "LOK stage: load\nNo language allowlisted, turning off the language support.\nLOK stage: save\nLOK save result: 1\nLOK stage: close document\nLOK stage: finish\n",
+          "input_sha256_after": "9dca73e1ac797368cbecc11eae22a298e1fef9de55c589ce8783e809d55227c0",
+          "input_unchanged": true
+        }
+      ]
+    },
+    {
+      "file": "fidelity-host/native-word-2.docx",
+      "pages": 1,
+      "text": "    Reviewed: Native workflow report\n\nReference paragraph remains unchanged.\n\f",
+      "pixel_sha256": [
+        "da5d081c5f783e96817788253310fb418ab91d0cb35428a6942296f3a57d70b7"
+      ],
+      "pdf": "007/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "007/page-0001.png",
+          "pixel_sha256": "da5d081c5f783e96817788253310fb418ab91d0cb35428a6942296f3a57d70b7"
+        }
+      ],
+      "input_sha256": "ea2d46d1566fc688caf03f02e06cef52ab837b0fc8e313b10a34f475aea076cb",
+      "conversion_attempts": [
+        {
+          "attempt": 1,
+          "command": [
+            "/workspace/scratch/fd11a5f593e0/toolchain/lok242-bin/libreoffice",
+            "-env:UserInstallation=file:///workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render/render-007-attempt-1-2owglykc/profile",
+            "--headless",
+            "--convert-to",
+            "pdf",
+            "--outdir",
+            "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render/render-007-attempt-1-2owglykc",
+            "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render-inputs/fidelity-host/native-word-2.docx"
+          ],
+          "input_sha256_before": "ea2d46d1566fc688caf03f02e06cef52ab837b0fc8e313b10a34f475aea076cb",
+          "status": "converted",
+          "returncode": 0,
+          "stdout": "{ \"ProductName\": \"LibreOffice\", \"ProductVersion\": \"24.2\", \"ProductExtension\": \".7.2\", \"BuildId\": \"ee3885777aa7032db5a9b65deec9457448a91162\" }\n",
+          "stderr": "LOK stage: load\nNo language allowlisted, turning off the language support.\nLOK stage: save\nLOK save result: 1\nLOK stage: close document\nLOK stage: finish\n",
+          "input_sha256_after": "ea2d46d1566fc688caf03f02e06cef52ab837b0fc8e313b10a34f475aea076cb",
+          "input_unchanged": true
+        }
+      ]
+    },
+    {
+      "file": "fidelity-host/native-word-3.docx",
+      "pages": 1,
+      "text": "    Reviewed: Native workflow report\n\nReference paragraph remains unchanged.\n\f",
+      "pixel_sha256": [
+        "da5d081c5f783e96817788253310fb418ab91d0cb35428a6942296f3a57d70b7"
+      ],
+      "pdf": "008/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "008/page-0001.png",
+          "pixel_sha256": "da5d081c5f783e96817788253310fb418ab91d0cb35428a6942296f3a57d70b7"
+        }
+      ],
+      "input_sha256": "e22d0cc8c2e762fcc337a6516154c79e8d64228db210b127dc0a874e018e911b",
+      "conversion_attempts": [
+        {
+          "attempt": 1,
+          "command": [
+            "/workspace/scratch/fd11a5f593e0/toolchain/lok242-bin/libreoffice",
+            "-env:UserInstallation=file:///workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render/render-008-attempt-1-x7lkavj0/profile",
+            "--headless",
+            "--convert-to",
+            "pdf",
+            "--outdir",
+            "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render/render-008-attempt-1-x7lkavj0",
+            "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render-inputs/fidelity-host/native-word-3.docx"
+          ],
+          "input_sha256_before": "e22d0cc8c2e762fcc337a6516154c79e8d64228db210b127dc0a874e018e911b",
+          "status": "converted",
+          "returncode": 0,
+          "stdout": "{ \"ProductName\": \"LibreOffice\", \"ProductVersion\": \"24.2\", \"ProductExtension\": \".7.2\", \"BuildId\": \"ee3885777aa7032db5a9b65deec9457448a91162\" }\n",
+          "stderr": "LOK stage: load\nNo language allowlisted, turning off the language support.\nLOK stage: save\nLOK save result: 1\nLOK stage: close document\nLOK stage: finish\n",
+          "input_sha256_after": "e22d0cc8c2e762fcc337a6516154c79e8d64228db210b127dc0a874e018e911b",
+          "input_unchanged": true
+        }
+      ]
+    },
+    {
+      "file": "fidelity-host/reference/native-sheet-expected.xlsx",
+      "pages": 1,
+      "text": "Native budget                 Amount\n\n\n      Approved travel                  135.50\nEquipment                              300.00\nTotal                                  435.50\n\n\n\n\n                Approved for review\n\f",
+      "pixel_sha256": [
+        "aeef6ebcda4ec7e0c4e1028fad65fd2dae9248e46e08b0b49ebfbfa713213566"
+      ],
+      "pdf": "009/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 596,
+          "height": 842,
+          "png": "009/page-0001.png",
+          "pixel_sha256": "aeef6ebcda4ec7e0c4e1028fad65fd2dae9248e46e08b0b49ebfbfa713213566"
+        }
+      ],
+      "input_sha256": "5acb9d1a879577a309cf42beb08b2e5a663af36eacbf8c33d8bdeeff0a6b16d3",
+      "conversion_attempts": [
+        {
+          "attempt": 1,
+          "command": [
+            "/workspace/scratch/fd11a5f593e0/toolchain/lok242-bin/libreoffice",
+            "-env:UserInstallation=file:///workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render/render-009-attempt-1-s707ebca/profile",
+            "--headless",
+            "--convert-to",
+            "pdf",
+            "--outdir",
+            "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render/render-009-attempt-1-s707ebca",
+            "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render-inputs/fidelity-host/reference/native-sheet-expected.xlsx"
+          ],
+          "input_sha256_before": "5acb9d1a879577a309cf42beb08b2e5a663af36eacbf8c33d8bdeeff0a6b16d3",
+          "status": "converted",
+          "returncode": 0,
+          "stdout": "{ \"ProductName\": \"LibreOffice\", \"ProductVersion\": \"24.2\", \"ProductExtension\": \".7.2\", \"BuildId\": \"ee3885777aa7032db5a9b65deec9457448a91162\" }\n",
+          "stderr": "LOK stage: load\nLOK stage: save\nLOK save result: 1\nLOK stage: close document\nLOK stage: finish\n",
+          "input_sha256_after": "5acb9d1a879577a309cf42beb08b2e5a663af36eacbf8c33d8bdeeff0a6b16d3",
+          "input_unchanged": true
+        }
+      ]
+    },
+    {
+      "file": "fidelity-host/reference/native-slide-expected.pptx",
+      "pages": 1,
+      "text": "     Reviewed slide title\n\n\nReference body remains unchanged.\n\f",
+      "pixel_sha256": [
+        "196ab23585dcde4d6b5b3f5ebf5bfb65bd3e281ed8969b25533344a23c446fa2"
+      ],
+      "pdf": "010/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 720,
+          "height": 406,
+          "png": "010/page-0001.png",
+          "pixel_sha256": "196ab23585dcde4d6b5b3f5ebf5bfb65bd3e281ed8969b25533344a23c446fa2"
+        }
+      ],
+      "input_sha256": "022e48e176f5d1149578cfcc15015dc4f81129d18485e5ee6b77f26f9e972af1",
+      "conversion_attempts": [
+        {
+          "attempt": 1,
+          "command": [
+            "/workspace/scratch/fd11a5f593e0/toolchain/lok242-bin/libreoffice",
+            "-env:UserInstallation=file:///workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render/render-010-attempt-1-ievxpgtx/profile",
+            "--headless",
+            "--convert-to",
+            "pdf",
+            "--outdir",
+            "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render/render-010-attempt-1-ievxpgtx",
+            "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render-inputs/fidelity-host/reference/native-slide-expected.pptx"
+          ],
+          "input_sha256_before": "022e48e176f5d1149578cfcc15015dc4f81129d18485e5ee6b77f26f9e972af1",
+          "status": "converted",
+          "returncode": 0,
+          "stdout": "{ \"ProductName\": \"LibreOffice\", \"ProductVersion\": \"24.2\", \"ProductExtension\": \".7.2\", \"BuildId\": \"ee3885777aa7032db5a9b65deec9457448a91162\" }\n",
+          "stderr": "LOK stage: load\nNo language allowlisted, turning off the language support.\nLOK stage: save\nLOK save result: 1\nLOK stage: close document\nLOK stage: finish\n",
+          "input_sha256_after": "022e48e176f5d1149578cfcc15015dc4f81129d18485e5ee6b77f26f9e972af1",
+          "input_unchanged": true
+        }
+      ]
+    },
+    {
+      "file": "fidelity-host/reference/native-word-expected.docx",
+      "pages": 1,
+      "text": "    Reviewed: Native workflow report\n\nReference paragraph remains unchanged.\n\f",
+      "pixel_sha256": [
+        "da5d081c5f783e96817788253310fb418ab91d0cb35428a6942296f3a57d70b7"
+      ],
+      "pdf": "011/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "011/page-0001.png",
+          "pixel_sha256": "da5d081c5f783e96817788253310fb418ab91d0cb35428a6942296f3a57d70b7"
+        }
+      ],
+      "input_sha256": "d95d0e28e2783ef4b1055fc0f63fd2000cf853365c7431f5d3107622228c6fc3",
+      "conversion_attempts": [
+        {
+          "attempt": 1,
+          "command": [
+            "/workspace/scratch/fd11a5f593e0/toolchain/lok242-bin/libreoffice",
+            "-env:UserInstallation=file:///workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render/render-011-attempt-1-wr7zmjdt/profile",
+            "--headless",
+            "--convert-to",
+            "pdf",
+            "--outdir",
+            "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render/render-011-attempt-1-wr7zmjdt",
+            "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render-inputs/fidelity-host/reference/native-word-expected.docx"
+          ],
+          "input_sha256_before": "d95d0e28e2783ef4b1055fc0f63fd2000cf853365c7431f5d3107622228c6fc3",
+          "status": "converted",
+          "returncode": 0,
+          "stdout": "{ \"ProductName\": \"LibreOffice\", \"ProductVersion\": \"24.2\", \"ProductExtension\": \".7.2\", \"BuildId\": \"ee3885777aa7032db5a9b65deec9457448a91162\" }\n",
+          "stderr": "LOK stage: load\nNo language allowlisted, turning off the language support.\nLOK stage: save\nLOK save result: 1\nLOK stage: close document\nLOK stage: finish\n",
+          "input_sha256_after": "d95d0e28e2783ef4b1055fc0f63fd2000cf853365c7431f5d3107622228c6fc3",
+          "input_unchanged": true
+        }
+      ]
+    },
+    {
+      "file": "fidelity-schema/namespace-style-1.xlsx",
+      "pages": 1,
+      "text": "               m a tting\n              r\n    er   ve fo\nPres\n\f",
+      "pixel_sha256": [
+        "d7b4168b7e7ae1541dfeee473f70142ae64ccda1efe749b44e14f825252ec1cb"
+      ],
+      "pdf": "012/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "012/page-0001.png",
+          "pixel_sha256": "d7b4168b7e7ae1541dfeee473f70142ae64ccda1efe749b44e14f825252ec1cb"
+        }
+      ],
+      "input_sha256": "a5c2c35441a45ca1a0a45e5059c0b6ac03d39f4439e761bfcf534244d43c939e",
+      "conversion_attempts": [
+        {
+          "attempt": 1,
+          "command": [
+            "/workspace/scratch/fd11a5f593e0/toolchain/lok242-bin/libreoffice",
+            "-env:UserInstallation=file:///workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render/render-012-attempt-1-iscpexee/profile",
+            "--headless",
+            "--convert-to",
+            "pdf",
+            "--outdir",
+            "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render/render-012-attempt-1-iscpexee",
+            "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render-inputs/fidelity-schema/namespace-style-1.xlsx"
+          ],
+          "input_sha256_before": "a5c2c35441a45ca1a0a45e5059c0b6ac03d39f4439e761bfcf534244d43c939e",
+          "status": "converted",
+          "returncode": 0,
+          "stdout": "{ \"ProductName\": \"LibreOffice\", \"ProductVersion\": \"24.2\", \"ProductExtension\": \".7.2\", \"BuildId\": \"ee3885777aa7032db5a9b65deec9457448a91162\" }\n",
+          "stderr": "LOK stage: load\nLOK stage: save\nLOK save result: 1\nLOK stage: close document\nLOK stage: finish\n",
+          "input_sha256_after": "a5c2c35441a45ca1a0a45e5059c0b6ac03d39f4439e761bfcf534244d43c939e",
+          "input_unchanged": true
+        }
+      ]
+    },
+    {
+      "file": "fidelity-schema/namespace-style-2.xlsx",
+      "pages": 1,
+      "text": "               m a tting\n              r\n    er   ve fo\nPres\n\f",
+      "pixel_sha256": [
+        "d7b4168b7e7ae1541dfeee473f70142ae64ccda1efe749b44e14f825252ec1cb"
+      ],
+      "pdf": "013/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "013/page-0001.png",
+          "pixel_sha256": "d7b4168b7e7ae1541dfeee473f70142ae64ccda1efe749b44e14f825252ec1cb"
+        }
+      ],
+      "input_sha256": "167dfcbc2557c13242b4dcc739f1d07806771cd26c11446b037b42d63f3b7756",
+      "conversion_attempts": [
+        {
+          "attempt": 1,
+          "command": [
+            "/workspace/scratch/fd11a5f593e0/toolchain/lok242-bin/libreoffice",
+            "-env:UserInstallation=file:///workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render/render-013-attempt-1-d_05vrbj/profile",
+            "--headless",
+            "--convert-to",
+            "pdf",
+            "--outdir",
+            "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render/render-013-attempt-1-d_05vrbj",
+            "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render-inputs/fidelity-schema/namespace-style-2.xlsx"
+          ],
+          "input_sha256_before": "167dfcbc2557c13242b4dcc739f1d07806771cd26c11446b037b42d63f3b7756",
+          "status": "converted",
+          "returncode": 0,
+          "stdout": "{ \"ProductName\": \"LibreOffice\", \"ProductVersion\": \"24.2\", \"ProductExtension\": \".7.2\", \"BuildId\": \"ee3885777aa7032db5a9b65deec9457448a91162\" }\n",
+          "stderr": "LOK stage: load\nLOK stage: save\nLOK save result: 1\nLOK stage: close document\nLOK stage: finish\n",
+          "input_sha256_after": "167dfcbc2557c13242b4dcc739f1d07806771cd26c11446b037b42d63f3b7756",
+          "input_unchanged": true
+        }
+      ]
+    },
+    {
+      "file": "fidelity-schema/namespace-style-3.xlsx",
+      "pages": 1,
+      "text": "               m a tting\n              r\n    er   ve fo\nPres\n\f",
+      "pixel_sha256": [
+        "d7b4168b7e7ae1541dfeee473f70142ae64ccda1efe749b44e14f825252ec1cb"
+      ],
+      "pdf": "014/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "014/page-0001.png",
+          "pixel_sha256": "d7b4168b7e7ae1541dfeee473f70142ae64ccda1efe749b44e14f825252ec1cb"
+        }
+      ],
+      "input_sha256": "bdf420a5f1b34dd9cb4466ccf4e5dbf32be1e2f733e9ee106ce627e3ff2b2426",
+      "conversion_attempts": [
+        {
+          "attempt": 1,
+          "command": [
+            "/workspace/scratch/fd11a5f593e0/toolchain/lok242-bin/libreoffice",
+            "-env:UserInstallation=file:///workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render/render-014-attempt-1-mqd9jvdq/profile",
+            "--headless",
+            "--convert-to",
+            "pdf",
+            "--outdir",
+            "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render/render-014-attempt-1-mqd9jvdq",
+            "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render-inputs/fidelity-schema/namespace-style-3.xlsx"
+          ],
+          "input_sha256_before": "bdf420a5f1b34dd9cb4466ccf4e5dbf32be1e2f733e9ee106ce627e3ff2b2426",
+          "status": "converted",
+          "returncode": 0,
+          "stdout": "{ \"ProductName\": \"LibreOffice\", \"ProductVersion\": \"24.2\", \"ProductExtension\": \".7.2\", \"BuildId\": \"ee3885777aa7032db5a9b65deec9457448a91162\" }\n",
+          "stderr": "LOK stage: load\nLOK stage: save\nLOK save result: 1\nLOK stage: close document\nLOK stage: finish\n",
+          "input_sha256_after": "bdf420a5f1b34dd9cb4466ccf4e5dbf32be1e2f733e9ee106ce627e3ff2b2426",
+          "input_unchanged": true
+        }
+      ]
+    },
+    {
+      "file": "fidelity-schema/namespace-style-reference.xlsx",
+      "pages": 1,
+      "text": "               m a tting\n              r\n    er   ve fo\nPres\n\f",
+      "pixel_sha256": [
+        "d7b4168b7e7ae1541dfeee473f70142ae64ccda1efe749b44e14f825252ec1cb"
+      ],
+      "pdf": "015/document.pdf",
+      "page_artifacts": [
+        {
+          "page": 1,
+          "width": 612,
+          "height": 792,
+          "png": "015/page-0001.png",
+          "pixel_sha256": "d7b4168b7e7ae1541dfeee473f70142ae64ccda1efe749b44e14f825252ec1cb"
+        }
+      ],
+      "input_sha256": "7605dce14b8c4a37e1c5a051d916399ce17e2ce2d3ae8de16220147880f952aa",
+      "conversion_attempts": [
+        {
+          "attempt": 1,
+          "command": [
+            "/workspace/scratch/fd11a5f593e0/toolchain/lok242-bin/libreoffice",
+            "-env:UserInstallation=file:///workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render/render-015-attempt-1-f0wwopwp/profile",
+            "--headless",
+            "--convert-to",
+            "pdf",
+            "--outdir",
+            "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render/render-015-attempt-1-f0wwopwp",
+            "/workspace/scratch/fd11a5f593e0/tmp/external-final-visible-20261114/render-inputs/fidelity-schema/namespace-style-reference.xlsx"
+          ],
+          "input_sha256_before": "7605dce14b8c4a37e1c5a051d916399ce17e2ce2d3ae8de16220147880f952aa",
+          "status": "converted",
+          "returncode": 0,
+          "stdout": "{ \"ProductName\": \"LibreOffice\", \"ProductVersion\": \"24.2\", \"ProductExtension\": \".7.2\", \"BuildId\": \"ee3885777aa7032db5a9b65deec9457448a91162\" }\n",
+          "stderr": "LOK stage: load\nLOK stage: save\nLOK save result: 1\nLOK stage: close document\nLOK stage: finish\n",
+          "input_sha256_after": "7605dce14b8c4a37e1c5a051d916399ce17e2ce2d3ae8de16220147880f952aa",
+          "input_unchanged": true
+        }
+      ]
+    }
+  ]
+}

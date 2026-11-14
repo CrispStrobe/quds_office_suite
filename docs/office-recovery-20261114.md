@@ -21,10 +21,10 @@ baseline. Transcript totals are not current validation evidence.
 | REC-02 | Engine/editor | Preserve SpreadsheetML namespaces and native style properties when editing formatting. | Default/prefixed namespace and foreign-extension regressions pass; horizontal alignment does not introduce vertical centering; explicit color intent survives history. | Implemented; tests, schema and four-file independent render passed |
 | REC-03 | Engine/editor | Preserve native Word restriction modes and make tracking/protection controller changes undoable. | Dirty/revision state, undo/redo, imported restriction modes and hash metadata survive save/reopen; read-only history does not enable ordinary edits. | Implemented; full engine/editor suites passed |
 | REC-04 | Engine | Conservatively refuse editable opens of signed spreadsheets and presentations. | Signature markers and relationships are detected, unsigned packages remain editable, and original bytes remain available to the host. | Implemented; synthetic marker and unsigned controls passed |
-| REC-05 | CrispCloud | Protect unsaved navigation and offer independent recovery copies. | Back/Close Cancel, Discard and Save, pending upload, disconnection, export failure/retry, and original dirty-state regressions pass. | Implemented; host execution in progress |
-| REC-06 | CrispCloud | Derive tracking/protection controls from the current controller. | Imported state, replacement controllers, undo/redo and async confirmation races are covered. Depends on REC-03. | Implemented; host execution in progress |
-| REC-07 | Both | Synchronize canonical suite changes through the exact source manifest and run acceptance gates. | Manifest verification, focused engine/editor/host tests and source-bound receipts are recorded. Depends on REC-01–06. | Source gates passed; app manifest verified; fresh host gate pending |
-| REC-08 | Both | Extend independent first-save Office workflow evidence. | Authored expected documents, exact saved-byte inventory, schema validation and source/render comparisons must pass before claiming closure. | Six fixtures schema-valid; actual host schema/render pending |
+| REC-05 | CrispCloud | Protect unsaved navigation and offer independent recovery copies. | Back/Close Cancel, Discard and Save, pending upload, disconnection, export failure/retry, and original dirty-state regressions pass. | Complete: 19 lifecycle and three native export tests passed within the full host gate |
+| REC-06 | CrispCloud | Derive tracking/protection controls from the current controller. | Imported state, replacement controllers, undo/redo and async confirmation races are covered. Depends on REC-03. | Complete: nine ribbon state/race tests passed within the full host gate |
+| REC-07 | Both | Synchronize canonical suite changes through the exact source manifest and run acceptance gates. | Manifest verification, focused engine/editor/host tests and source-bound receipts are recorded. Depends on REC-01–06. | Complete: 2,168 managed files verified; all source gates and 241-test host gate passed |
+| REC-08 | Both | Extend independent first-save Office workflow evidence. | Authored expected documents, exact saved-byte inventory, schema validation and source/render comparisons must pass before claiming closure. | Complete: 149 host/reference files schema-valid; 16 render inputs and four independent baselines passed |
 
 ## Evidence rules
 
@@ -39,15 +39,22 @@ receipt for the exact source under test. Remaining limitations stay explicit.
 - Recovery plans were remotely saved before implementation in both repositories.
 - Canonical implementation checkpoint:
   `36e652014d0e1aade20011309cd84a7f9c1f90a6`.
+- Visible namespace fixture and repeated engine acceptance checkpoint:
+  `c85c9f0a81a75a4afb5103d397c1816f0140eb00`. Production libraries and editor
+  tests are unchanged; only the adversarial fixture's native theme/geometry
+  and theme-preservation assertion changed.
 - App fixture/evidence checkpoint:
   `f7122f7a3c745b09354c76261977e45ca9e8c3eb`.
+- Final measured app checkpoint:
+  `05905b86ca3a7fc8db3df131620842da3e134061`, pinning source `c85c9f0a`.
 - Later documentation commits do not change the tested implementation identity.
 
 ## Executed canonical validation
 
 The [source receipt](evidence/office-recovery-20261114/suite-validation.json)
-binds the following results to the canonical implementation checkpoint. Logs,
-output inventories, schema results and dependency hashes are stored beside it.
+binds each result to its exact source checkpoint, including the repeated engine
+gate after the visible-fixture refinement. Logs, output inventories, schema
+results and dependency hashes are stored beside it.
 
 | Gate | Executed result |
 | --- | --- |
@@ -63,6 +70,35 @@ output inventories, schema results and dependency hashes are stored beside it.
 Local execution used Flutter 3.47.8 / Dart 3.13.7. The existing source CI still
 uses its pinned Flutter 3.44.0. Historical line-coverage percentages have not
 been relabeled as fresh measurements.
+
+## Completed host and independent acceptance
+
+The final [external receipt](evidence/office-recovery-20261114/external/external-validation.json)
+records 149 app/reference packages validated by OpenXML SDK with zero errors.
+That is 146 actual host outputs and three independently authored references.
+It separately revalidates four namespace XLSX files already included in the
+350-file engine schema scope; those are not additional unique engine cases.
+
+LibreOffice 24.2.7.2 rendered exactly 16 inputs: nine native app uploads across
+Word/Sheet/Slide, their three authored references, and three namespace saves
+plus their authored reference. All four three-save groups and four independent
+first-save baselines matched page count, text and RGB pixels. The namespace
+pages also pass the visible-blue-text safeguard; both real previously clipped
+versions are rejected by that control. The main archive preserves exact Office
+bytes, PDFs, PNGs, tool receipts and 235 independently hashed entries.
+
+The final app gate passed 241 tests across 34 files, with fresh LCOV bound to
+4,732 inputs. Native host line execution is 2,872/4,391 (65.4%); all 16 required
+native source files appear in instrumentation. One browser-only adapter and one
+verified declaration-only file are reported separately. The gate also passed
+41 coverage controls, 16 host-evidence controls, all source synchronization
+checks, the exact 149-file inventory and the controller corpus oracle.
+
+These results close REC-01–08 at their declared scope. Browser runtime,
+physical-device/live-provider journeys and authentic signed Office fixtures
+remain separate open acceptance gates. The app's
+[current recovery report](https://github.com/CrispStrobe/CrispCloud/blob/codex/office-recovery-20261114/docs/office-recovery-20261114.md)
+states their concrete acceptance conditions.
 
 ## Behavior and limits
 
