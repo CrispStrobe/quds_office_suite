@@ -1297,6 +1297,8 @@ abstract final class FormulaFunctions {
     if (vals.isEmpty) {
       return const FormulaErrorValue('#REF!');
     }
+    final errors = flattenValues(vals).whereType<FormulaErrorValue>();
+    if (errors.isNotEmpty) return errors.first;
     if (vals.length > 1 && !_truth(vals[1])) {
       return const FormulaErrorValue(
         '#ERROR! R1C1 INDIRECT is not evaluated',
@@ -1304,6 +1306,13 @@ abstract final class FormulaFunctions {
       );
     }
     final String ref = formulaString(vals[0]).trim();
+    if (ref.contains('[') || ref.contains(']')) {
+      return const FormulaErrorValue(
+        '#ERROR! External or structured INDIRECT references are not evaluated',
+        isUnsupported: true,
+      );
+    }
+    if (ref.startsWith('=')) return const FormulaErrorValue('#REF!');
     try {
       final target = parseFormula(ref);
       if (target is CellNode) {

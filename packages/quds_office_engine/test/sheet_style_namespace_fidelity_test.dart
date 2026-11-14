@@ -101,8 +101,18 @@ void _assertNativeFont(XmlElement font, double size) {
   expect(font.namespaceUri, _x);
   expect(font.firstChild('b', namespaceUri: _x), isNotNull);
   expect(font.firstChild('i', namespaceUri: _x), isNotNull);
-  expect(font.firstChild('u', namespaceUri: _x)!.getAttribute('val'), 'double');
-  expect(font.firstChild('sz', namespaceUri: _x)!.getAttribute('val'), '$size');
+  expect(
+    font
+        .firstChild('u', namespaceUri: _x)!
+        .getAttribute('val', namespaceUri: ''),
+    'double',
+  );
+  expect(
+    font
+        .firstChild('sz', namespaceUri: _x)!
+        .getAttribute('val', namespaceUri: ''),
+    '$size',
+  );
   expect(
     font
         .firstChild('sz', namespaceUri: _x)!
@@ -122,24 +132,39 @@ void _assertNativeFont(XmlElement font, double size) {
     isNull,
   );
   expect(
-    font.firstChild('name', namespaceUri: _x)!.getAttribute('val'),
+    font
+        .firstChild('name', namespaceUri: _x)!
+        .getAttribute('val', namespaceUri: ''),
     'Cambria',
   );
-  expect(font.firstChild('family', namespaceUri: _x)!.getAttribute('val'), '2');
   expect(
-    font.firstChild('charset', namespaceUri: _x)!.getAttribute('val'),
+    font
+        .firstChild('family', namespaceUri: _x)!
+        .getAttribute('val', namespaceUri: ''),
+    '2',
+  );
+  expect(
+    font
+        .firstChild('charset', namespaceUri: _x)!
+        .getAttribute('val', namespaceUri: ''),
     '1',
   );
   expect(
-    font.firstChild('scheme', namespaceUri: _x)!.getAttribute('val'),
+    font
+        .firstChild('scheme', namespaceUri: _x)!
+        .getAttribute('val', namespaceUri: ''),
     'minor',
   );
   expect(
-    font.firstChild('b', namespaceUri: _extension)!.getAttribute('val'),
+    font
+        .firstChild('b', namespaceUri: _extension)!
+        .getAttribute('val', namespaceUri: ''),
     'extension-bold',
   );
   expect(
-    font.firstChild('sz', namespaceUri: _extension)!.getAttribute('val'),
+    font
+        .firstChild('sz', namespaceUri: _extension)!
+        .getAttribute('val', namespaceUri: ''),
     'extension-size',
   );
   expect(font.childElements.where((e) => e.namespaceUri.isEmpty), isEmpty);
@@ -158,7 +183,7 @@ void main() {
           prefix: prefix,
           foreignDefault: foreignDefault,
           rebindFontPrefix: rebindFontPrefix,
-        ),
+        ).replaceAll(RegExp(r'<(?:s:|f:)?b val="0"/>'), ''),
       );
       expect(styles.fontRgbs, hasLength(1));
       expect(styles.fillRgbs, ['', '']);
@@ -333,6 +358,38 @@ void main() {
       expect(SmlStyleSheet.parse(styles.toXml()).fontBolds, [false, true]);
     },
   );
+
+  test('clearing the last direct style properties survives workbook saves', () {
+    final workbook = SmlWorkbook();
+    workbook.firstSheet.cellA1('A1')
+      ..value = 'Clear the style'
+      ..fontBold = true
+      ..fontSize = 18
+      ..fontRgb = '112233'
+      ..fillRgb = '445566'
+      ..horizontalAlign = SmlHAlign.center;
+    var reopened = SheetDeserializer().readBytes(
+      SheetSerializer().writeBytes(workbook),
+    );
+    reopened.firstSheet.cellA1('A1')
+      ..fontBold = false
+      ..fontSize = 11
+      ..fontRgb = ''
+      ..fillRgb = ''
+      ..horizontalAlign = SmlHAlign.general;
+    for (var cycle = 0; cycle < 3; cycle++) {
+      reopened = SheetDeserializer().readBytes(
+        SheetSerializer().writeBytes(reopened),
+      );
+      final cell = reopened.firstSheet.cellA1('A1');
+      expect(cell.value, 'Clear the style');
+      expect(cell.fontBold, isFalse);
+      expect(cell.fontSize, 11);
+      expect(cell.fontRgb, isEmpty);
+      expect(cell.fillRgb, isEmpty);
+      expect(cell.horizontalAlign, SmlHAlign.general);
+    }
+  });
 
   test(
     'prefixed imported styles keep cell formatting through workbook saves',

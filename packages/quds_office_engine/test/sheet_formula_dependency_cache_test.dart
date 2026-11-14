@@ -185,6 +185,7 @@ void main() {
     _formula(sheet, 'D1', 'ISERROR(A1)', false);
     _formula(sheet, 'E1', 'IF(FALSE,UNMODELED(2),8)', 99);
     _formula(sheet, 'F1', 'IFERROR("#REF!",7)', 99);
+    _formula(sheet, 'G1', 'INDIRECT(A1)', 99);
     FormulaDepGraph(book).recalculate();
     expect(sheet.cellA1('A1').value, '#DIV/0!');
     expect(sheet.cellA1('B1').value, '#DIV/0!');
@@ -195,6 +196,8 @@ void main() {
     expect(sheet.cellA1('E1').value, 8);
     expect(sheet.cellA1('F1').value, '#REF!');
     expect(sheet.cellA1('F1').type, SmlCellType.string);
+    expect(sheet.cellA1('G1').value, '#DIV/0!');
+    expect(sheet.cellA1('G1').type, SmlCellType.error);
   });
 
   test(
@@ -243,18 +246,24 @@ void main() {
     });
   }
 
-  test(
-    'unimplemented R1C1 INDIRECT preserves its own and dependent caches',
-    () {
-      final book = SmlWorkbook();
-      final sheet = book.firstSheet;
-      _formula(sheet, 'A1', 'INDIRECT("R2C1",FALSE)', 41);
-      _formula(sheet, 'A2', 'A1+1', 87);
-      FormulaDepGraph(book).recalculate();
-      expect(sheet.cellA1('A1').value, 41);
-      expect(sheet.cellA1('A2').value, 87);
-    },
-  );
+  for (final formula in [
+    'INDIRECT("R2C1",FALSE)',
+    'INDIRECT("[1]Data!B2")',
+    'INDIRECT("Table1[Amount]")',
+  ]) {
+    test(
+      'unsupported dynamic reference preserves dependent caches: $formula',
+      () {
+        final book = SmlWorkbook();
+        final sheet = book.firstSheet;
+        _formula(sheet, 'A1', formula, 41);
+        _formula(sheet, 'A2', 'A1+1', 87);
+        FormulaDepGraph(book).recalculate();
+        expect(sheet.cellA1('A1').value, 41);
+        expect(sheet.cellA1('A2').value, 87);
+      },
+    );
+  }
 
   test(
     'imported scalar cache types survive three direct/isolate saves',
@@ -281,15 +290,15 @@ void main() {
   </sheetData>
 </worksheet>''');
       var book = SheetDeserializer().read(package);
-      final expected = <String, (String?, String)>{
-        'A1': (null, '41'),
-        'A2': (null, '87'),
-        'A3': ('b', '0'),
-        'A4': ('str', '0007'),
-        'A5': ('e', '#N/A'),
-        'A6': ('str', '#REF!'),
-        'A7': ('str', ''),
-        'A8': (null, '101'),
+      final expected = <String, (String?, String, String)>{
+        'A1': (null, '41', 'UNMODELED(2)'),
+        'A2': (null, '87', 'A1*2'),
+        'A3': ('b', '0', 'A1>0'),
+        'A4': ('str', '0007', 'A1&"text"'),
+        'A5': ('e', '#N/A', 'A1+1'),
+        'A6': ('str', '#REF!', 'A1&"error"'),
+        'A7': ('str', '', 'A1&"empty"'),
+        'A8': (null, '101', 'A2+1'),
       };
       for (var cycle = 0; cycle < 3; cycle++) {
         final bytes = cycle == 1
@@ -306,7 +315,12 @@ void main() {
           final cell = cells.singleWhere(
             (cell) => cell.getAttribute('r') == entry.key,
           );
-          final (type, value) = entry.value;
+          final (type, value, formula) = entry.value;
+          expect(
+            cell.firstChild('f')!.text,
+            formula,
+            reason: '${entry.key} cycle $cycle',
+          );
           expect(
             cell.getAttribute('t'),
             type,
