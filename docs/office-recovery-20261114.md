@@ -59,3 +59,24 @@ verification or new independent schema/render certification.
 The macOS golden mismatch remains a separate baseline issue; the full editor
 suite is not reported as green. Host save/recovery tests and exact vendored
 source verification are recorded in CrispCloud's matching continuation record.
+
+## Later colour and independent-reference checkpoint
+
+Checkpoint `36e652014d0e1aade20011309cd84a7f9c1f90a6` adds explicit spreadsheet
+font-colour intent, including clone/history preservation, and independently
+authored save references. The integrated engine rerun passes **1,731 tests**
+with three conditional skips. Two CLI tests had exceeded the default 30-second
+limit during concurrent compilation; the clean rerun used a two-minute limit
+and passed every test. Both library analyzers are clean.
+
+The full editor rerun has **522 passes, one conditional skip and the same 17
+baseline macOS golden failures**. All 27 actual golden-render PNGs still match
+the original main byte for byte. The focused colour/protection cohort passes
+13 tests; the native-render comparison guard passes 72 Python tests.
+
+CrispCloud's coordinated host run passes 55 tests with two platform skips.
+Its nine Word/XLSX/PPTX saves and three independently authored references were
+rendered by LibreOffice 26.8.2.2: **12 files, 12 pages, three save-cycle groups
+and three baseline comparisons, zero failures**. This is scoped first-save
+evidence for those workflows, not completion of every REC-08 scenario or
+physical-platform acceptance.
