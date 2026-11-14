@@ -3,6 +3,15 @@
 Waves 1–4 are implemented in-tree. Later work should keep [STANDARDS.md](STANDARDS.md)
 and [MISSION.md](MISSION.md) honest as coverage changes.
 
+## Office preservation continuation — 14 November 2026
+
+The interrupted session described additional fixes, but those changes were not
+present in remote `main` at `b0335829428d50968258219c4fdced15d546f7c9`.
+The [scoped recovery plan](office-recovery-20261114.md) is the active checklist.
+Work is saved incrementally to `codex/office-recovery-20261114` in this repository
+and CrispCloud. Earlier test counts and coverage reports remain evidence only
+for their recorded source snapshots.
+
 ## Wave 1 — PDF correctness (done)
 
 - Print ranges, Excel geometry, outline bookmarks, notes links, list/TOC paint
