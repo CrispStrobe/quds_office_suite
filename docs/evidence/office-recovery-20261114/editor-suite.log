@@ -1,0 +1,549 @@
+00:00 +0: loading /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_frame_wrap_golden_test.dart
+00:00 +0: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_frame_wrap_golden_test.dart: (setUpAll)
+00:00 +0: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_frame_wrap_golden_test.dart: none frame wrap survives three native saves
+00:00 +1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_copy_test.dart: complete native bookmark copy keeps ranges, history and three exports
+00:00 +2: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_copy_test.dart: complete native bookmark copy keeps ranges, history and three exports
+00:00 +3: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_copy_test.dart: complete native bookmark copy keeps ranges, history and three exports
+00:00 +4: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_copy_test.dart: complete native bookmark copy keeps ranges, history and three exports
+00:00 +5: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_copy_test.dart: complete native bookmark copy keeps ranges, history and three exports
+00:00 +6: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_copy_test.dart: complete native bookmark copy keeps ranges, history and three exports
+00:00 +7: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_copy_test.dart: complete native bookmark copy keeps ranges, history and three exports
+00:00 +8: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_copy_test.dart: complete native bookmark copy keeps ranges, history and three exports
+00:00 +9: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_frame_wrap_golden_test.dart: square frame wrap survives three native saves
+00:00 +10: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_copy_test.dart: pasting the same payload twice allocates a fresh complete set
+00:00 +11: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/slide_section_reorder_test.dart: forward moved active keeps memberships and exact undo/redo state
+00:00 +12: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/slide_section_reorder_test.dart: forward moved active keeps memberships and exact undo/redo state
+00:00 +13: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/slide_section_reorder_test.dart: forward moved active keeps memberships and exact undo/redo state
+00:00 +14: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/slide_section_reorder_test.dart: forward moved active keeps memberships and exact undo/redo state
+00:01 +15: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_frame_wrap_golden_test.dart: topBottom frame wrap survives three native saves
+00:01 +16: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/slide_section_reorder_test.dart: forward unaffected active keeps memberships and exact undo/redo state
+00:01 +17: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/slide_section_reorder_test.dart: backward moved active keeps memberships and exact undo/redo state
+00:01 +18: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/slide_section_reorder_test.dart: backward unaffected active keeps memberships and exact undo/redo state
+00:01 +19: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/slide_section_reorder_test.dart: within section keeps memberships and exact undo/redo state
+00:01 +20: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/slide_section_reorder_test.dart: emptying a source section preserves it across two undo/redo steps
+00:01 +21: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/slide_section_reorder_test.dart: controller direct save retains the redone move through three reopen cycles
+00:01 +22: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/slide_section_reorder_test.dart: controller isolate save retains the redone move through three reopen cycles
+00:01 +23: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_fidelity_golden_test.dart: DOCX import and exported reopen match reviewed page golden
+00:01 +24: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_fidelity_golden_test.dart: DOCX import and exported reopen match reviewed page golden
+00:01 +25: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_fidelity_golden_test.dart: DOCX import and exported reopen match reviewed page golden
+00:01 +26: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_fidelity_golden_test.dart: DOCX import and exported reopen match reviewed page golden
+00:01 +27: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_fidelity_golden_test.dart: DOCX import and exported reopen match reviewed page golden
+00:01 +28: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_fidelity_golden_test.dart: DOCX import and exported reopen match reviewed page golden
+00:01 +29: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_fidelity_golden_test.dart: DOCX import and exported reopen match reviewed page golden
+00:01 +30: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_fidelity_golden_test.dart: DOCX import and exported reopen match reviewed page golden
+00:01 +31: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_fidelity_golden_test.dart: DOCX import and exported reopen match reviewed page golden
+00:01 +32: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_fidelity_golden_test.dart: DOCX import and exported reopen match reviewed page golden
+00:02 +33: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_fidelity_golden_test.dart: DOCX import and exported reopen match reviewed page golden
+00:02 +34: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_fidelity_golden_test.dart: DOCX import and exported reopen match reviewed page golden
+00:02 +35: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_fidelity_golden_test.dart: DOCX import and exported reopen match reviewed page golden
+00:02 +36: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_fidelity_golden_test.dart: DOCX import and exported reopen match reviewed page golden
+00:02 +37: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_fidelity_golden_test.dart: DOCX import and exported reopen match reviewed page golden
+00:02 +38: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_fidelity_golden_test.dart: DOCX import and exported reopen match reviewed page golden
+00:02 +39: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_fidelity_golden_test.dart: DOCX import and exported reopen match reviewed page golden
+00:02 +40: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_fidelity_golden_test.dart: DOCX import and exported reopen match reviewed page golden
+00:02 +41: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_fidelity_golden_test.dart: DOCX import and exported reopen match reviewed page golden
+00:02 +42: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_fidelity_golden_test.dart: DOCX import and exported reopen match reviewed page golden
+00:02 +43: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_fidelity_golden_test.dart: DOCX import and exported reopen match reviewed page golden
+00:02 +44: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_fidelity_golden_test.dart: DOCX import and exported reopen match reviewed page golden
+00:02 +45: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_fidelity_golden_test.dart: DOCX import and exported reopen match reviewed page golden
+00:02 +46: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_fidelity_golden_test.dart: DOCX import and exported reopen match reviewed page golden
+00:02 +47: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_fidelity_golden_test.dart: DOCX import and exported reopen match reviewed page golden
+00:02 +48: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_fidelity_golden_test.dart: DOCX import and exported reopen match reviewed page golden
+00:02 +49: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_fidelity_golden_test.dart: DOCX import and exported reopen match reviewed page golden
+00:02 +50: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_fidelity_golden_test.dart: DOCX import and exported reopen match reviewed page golden
+00:02 +51: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_fidelity_golden_test.dart: DOCX import and exported reopen match reviewed page golden
+00:02 +52: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_fidelity_golden_test.dart: DOCX import and exported reopen match reviewed page golden
+00:02 +53: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_fidelity_golden_test.dart: DOCX import and exported reopen match reviewed page golden
+00:02 +54: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_fidelity_golden_test.dart: DOCX import and exported reopen match reviewed page golden
+00:02 +55: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_fidelity_golden_test.dart: DOCX import and exported reopen match reviewed page golden
+00:02 +56: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_fidelity_golden_test.dart: DOCX import and exported reopen match reviewed page golden
+00:02 +57: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_fidelity_golden_test.dart: DOCX import and exported reopen match reviewed page golden
+00:02 +58: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_revision_story_test.dart: auxiliary revisions do not paint changes over body text
+00:02 +59: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: opening and discarding typed tab drafts never mutates imported stops
+00:02 +60: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: opening and discarding typed tab drafts never mutates imported stops
+00:02 +61: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: opening and discarding typed tab drafts never mutates imported stops
+00:02 +62: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: opening and discarding typed tab drafts never mutates imported stops
+00:02 +63: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: opening and discarding typed tab drafts never mutates imported stops
+00:03 +64: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: opening and discarding typed tab drafts never mutates imported stops
+00:03 +65: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: opening and discarding typed tab drafts never mutates imported stops
+00:03 +66: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: opening and discarding typed tab drafts never mutates imported stops
+00:03 +67: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: opening and discarding typed tab drafts never mutates imported stops
+00:03 +68: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: opening and discarding typed tab drafts never mutates imported stops
+00:03 +69: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: opening and discarding typed tab drafts never mutates imported stops
+00:03 +70: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: opening and discarding typed tab drafts never mutates imported stops
+00:03 +71: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: opening and discarding typed tab drafts never mutates imported stops
+00:03 +72: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: opening and discarding typed tab drafts never mutates imported stops
+00:03 +73: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: opening and discarding typed tab drafts never mutates imported stops
+00:03 +74: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: opening and discarding typed tab drafts never mutates imported stops
+00:03 +75: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: opening and discarding typed tab drafts never mutates imported stops
+00:03 +76: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: opening and discarding typed tab drafts never mutates imported stops
+00:03 +77: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: alignment and leader controls export native values through history and three saves
+00:04 +78: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: alignment and leader controls export native values through history and three saves
+00:04 +79: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: alignment and leader controls export native values through history and three saves
+00:04 +80: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: alignment and leader controls export native values through history and three saves
+00:04 +81: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: alignment and leader controls export native values through history and three saves
+00:04 +82: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: alignment and leader controls export native values through history and three saves
+00:04 +83: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: alignment and leader controls export native values through history and three saves
+00:04 +84: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: alignment and leader controls export native values through history and three saves
+00:04 +85: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: alignment and leader controls export native values through history and three saves
+00:04 +86: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: alignment and leader controls export native values through history and three saves
+00:04 +87: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: alignment and leader controls export native values through history and three saves
+00:04 +88: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: alignment and leader controls export native values through history and three saves
+00:04 +89: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: alignment and leader controls export native values through history and three saves
+00:04 +90: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: alignment and leader controls export native values through history and three saves
+00:04 +91: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: alignment and leader controls export native values through history and three saves
+00:05 +92: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_table_grid_golden_test.dart: unchanged table grid matches authored pixels through three saves
+00:05 +93: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_split_identity_test.dart: clearing an imported style list survives history and reopen
+00:05 +94: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: invalid and duplicate native positions retain draft text and prevent apply
+00:05 +95: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: invalid and duplicate native positions retain draft text and prevent apply
+00:06 +96: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: invalid and duplicate native positions retain draft text and prevent apply
+00:06 +97: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: invalid and duplicate native positions retain draft text and prevent apply
+00:06 +98: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: invalid and duplicate native positions retain draft text and prevent apply
+00:06 +99: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: invalid and duplicate native positions retain draft text and prevent apply
+00:06 +100: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_tab_stops_editor_test.dart: invalid and duplicate native positions retain draft text and prevent apply
+00:06 +101: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_table_grid_golden_test.dart: replace table grid matches authored pixels through three saves
+00:07 +102: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_table_grid_golden_test.dart: replace table grid matches authored pixels through three saves
+00:07 +103: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_notes_editing_test.dart: the notes pane edits, adds and deletes notes
+00:07 +104: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_notes_editing_test.dart: the notes pane edits, adds and deletes notes
+00:07 +105: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_table_grid_golden_test.dart: unmerge table grid matches authored pixels through three saves
+00:08 +106: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_table_grid_golden_test.dart: unmerge table grid matches authored pixels through three saves
+00:08 +107: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: rtl pages match reviewed goldens before and after three exports
+00:08 +108: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: rtl pages match reviewed goldens before and after three exports
+00:09 +109: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: columns_sections pages match reviewed goldens before and after three exports
+00:09 +110: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: columns_sections pages match reviewed goldens before and after three exports
+00:09 +111: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: columns_sections pages match reviewed goldens before and after three exports
+00:09 +112: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: columns_sections pages match reviewed goldens before and after three exports
+00:09 +113: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: columns_sections pages match reviewed goldens before and after three exports
+00:09 +114: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: columns_sections pages match reviewed goldens before and after three exports
+00:09 +115: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: columns_sections pages match reviewed goldens before and after three exports
+00:09 +116: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/pending_edit_save_test.dart: sheet saves the edited cell even if selection changed before commit
+00:10 +117: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/pending_edit_save_test.dart: sheet saves the edited cell even if selection changed before commit
+00:10 +118: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: continued_notes pages match reviewed goldens before and after three exports
+00:10 +119: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: continued_notes pages match reviewed goldens before and after three exports
+00:10 +120: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: continued_notes pages match reviewed goldens before and after three exports
+00:10 +121: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: continued_notes pages match reviewed goldens before and after three exports
+00:10 +122: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: continued_notes pages match reviewed goldens before and after three exports
+00:10 +123: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: continued_notes pages match reviewed goldens before and after three exports
+00:10 +124: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: continued_notes pages match reviewed goldens before and after three exports
+00:10 +125: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: continued_notes pages match reviewed goldens before and after three exports
+00:10 +126: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: continued_notes pages match reviewed goldens before and after three exports
+00:10 +127: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: continued_notes pages match reviewed goldens before and after three exports
+00:10 +128: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: continued_notes pages match reviewed goldens before and after three exports
+00:10 +129: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: continued_notes pages match reviewed goldens before and after three exports
+00:10 +130: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: continued_notes pages match reviewed goldens before and after three exports
+00:10 +131: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: continued_notes pages match reviewed goldens before and after three exports
+00:10 +132: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: continued_notes pages match reviewed goldens before and after three exports
+00:10 +133: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: continued_notes pages match reviewed goldens before and after three exports
+00:10 +134: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: continued_notes pages match reviewed goldens before and after three exports
+00:10 +135: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: continued_notes pages match reviewed goldens before and after three exports
+00:10 +136: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: continued_notes pages match reviewed goldens before and after three exports
+00:10 +137: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: continued_notes pages match reviewed goldens before and after three exports
+00:10 +138: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: continued_notes pages match reviewed goldens before and after three exports
+00:10 +139: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: continued_notes pages match reviewed goldens before and after three exports
+00:10 +140: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: continued_notes pages match reviewed goldens before and after three exports
+00:10 +141: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: continued_notes pages match reviewed goldens before and after three exports
+00:10 +142: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/pending_edit_save_test.dart: slide shape synchronous save commits a draft once with working history
+00:10 +143: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_content_control_history_test.dart: block insertion from a nested table stays inside the enclosing control
+00:10 +144: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_content_control_history_test.dart: block insertion from a nested table stays inside the enclosing control
+00:10 +145: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_content_control_history_test.dart: block insertion from a nested table stays inside the enclosing control
+00:10 +146: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: tall_table pages match reviewed goldens before and after three exports
+00:10 +147: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: tall_table pages match reviewed goldens before and after three exports
+00:11 +148: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: tall_table pages match reviewed goldens before and after three exports
+00:11 +149: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: tall_table pages match reviewed goldens before and after three exports
+00:11 +150: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: tall_table pages match reviewed goldens before and after three exports
+00:11 +151: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: tall_table pages match reviewed goldens before and after three exports
+00:11 +152: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: tall_table pages match reviewed goldens before and after three exports
+00:11 +153: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: tall_table pages match reviewed goldens before and after three exports
+00:11 +154: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: tall_table pages match reviewed goldens before and after three exports
+00:11 +155: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: tall_table pages match reviewed goldens before and after three exports
+00:11 +156: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: tall_table pages match reviewed goldens before and after three exports
+00:11 +157: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: tall_table pages match reviewed goldens before and after three exports
+00:11 +158: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: tall_table pages match reviewed goldens before and after three exports
+00:11 +159: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: tall_table pages match reviewed goldens before and after three exports
+00:11 +160: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: tall_table pages match reviewed goldens before and after three exports
+00:11 +161: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: tall_table pages match reviewed goldens before and after three exports
+00:11 +162: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: tall_table pages match reviewed goldens before and after three exports
+00:11 +163: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: tall_table pages match reviewed goldens before and after three exports
+00:11 +164: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: tall_table pages match reviewed goldens before and after three exports
+00:11 +165: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: tall_table pages match reviewed goldens before and after three exports
+00:11 +166: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: tall_table pages match reviewed goldens before and after three exports
+00:11 +167: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: tall_table pages match reviewed goldens before and after three exports
+00:11 +168: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: tall_table pages match reviewed goldens before and after three exports
+00:11 +169: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: tall_table pages match reviewed goldens before and after three exports
+00:11 +170: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: tall_table pages match reviewed goldens before and after three exports
+00:11 +171: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: tall_table pages match reviewed goldens before and after three exports
+00:11 +172: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: tall_table pages match reviewed goldens before and after three exports
+00:11 +173: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: tall_table pages match reviewed goldens before and after three exports
+00:11 +174: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: tall_table pages match reviewed goldens before and after three exports
+00:11 +175: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_layout_goldens_test.dart: tall_table pages match reviewed goldens before and after three exports
+00:11 +176: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_content_control_history_test.dart: header native paragraph control keeps rich history and guards structural edits
+00:11 +177: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_content_control_history_test.dart: footer native paragraph control keeps rich history and guards structural edits
+00:11 +178: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_history_test.dart: paragraph split at 4 preserves bookmark endpoints exactly once
+00:12 +179: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_history_test.dart: paragraph split at 4 preserves bookmark endpoints exactly once
+00:12 +180: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_history_test.dart: paragraph split at 8 preserves bookmark endpoints exactly once
+00:12 +181: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_history_test.dart: paragraph split at 12 preserves bookmark endpoints exactly once
+00:12 +182: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_history_test.dart: an empty bookmark pair moves together to the new paragraph
+00:12 +183: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_history_test.dart: joining a split bookmark restores its single-paragraph native range
+00:12 +184: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/embed_test.dart: word controller inserts, undoes, and respects viewing mode
+00:13 +185: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/embed_test.dart: word controller inserts, undoes, and respects viewing mode
+00:13 +186: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/embed_test.dart: word controller inserts, undoes, and respects viewing mode
+00:13 +187: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/embed_test.dart: word controller inserts, undoes, and respects viewing mode
+00:13 +188: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_history_test.dart: an orphan endpoint cannot commit another pending note or clear redo
+00:13 +189: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_history_test.dart: an orphan endpoint cannot commit another pending note or clear redo
+00:13 +190: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_history_test.dart: an orphan endpoint cannot commit another pending note or clear redo
+00:13 +191: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: (setUpAll)
+00:13 +192: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: (setUpAll)
+00:13 +193: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: (setUpAll)
+00:13 +194: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: (setUpAll)
+00:13 +194: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_history_test.dart: whole footnote bookmark deletion restores native ranges through history
+00:13 +195: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_history_test.dart: whole footnote bookmark deletion restores native ranges through history
+00:13 +196: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:13 +197: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:13 +198: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:13 +199: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:14 +200: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:14 +201: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:14 +202: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:14 +203: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:14 +204: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:14 +205: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:14 +206: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:14 +207: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:14 +208: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:14 +209: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:14 +210: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:14 +211: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:14 +212: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:14 +213: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:14 +214: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:15 +215: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:15 +216: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:15 +217: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:15 +218: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:15 +219: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:15 +220: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:15 +221: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:15 +222: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:15 +223: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:15 +224: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:15 +225: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:15 +226: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:15 +227: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:15 +228: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:15 +229: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:15 +230: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:15 +231: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:15 +232: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: create structure matches reviewed pages through three saves
+00:15 +233: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_find_replace_history_test.dart: multi-match replacement preserves native ranges and one-step rich history
+00:15 +234: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_find_replace_history_test.dart: multi-match replacement preserves native ranges and one-step rich history
+00:15 +235: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_find_replace_history_test.dart: multi-match replacement preserves native ranges and one-step rich history
+00:15 +236: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_find_replace_history_test.dart: multi-match replacement preserves native ranges and one-step rich history
+00:15 +237: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +238: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +239: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +240: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +241: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +242: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +243: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +244: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +245: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +246: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +247: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +248: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +249: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +250: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +251: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +252: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +253: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +254: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +255: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +256: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +257: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +258: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +259: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +260: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +261: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +262: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +263: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +264: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +265: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +266: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +267: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +268: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +269: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +270: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +271: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +272: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +273: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +274: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +275: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:15 +276: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: edit structure matches reviewed pages through three saves
+00:16 +277: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/embed_test.dart: slide controller loads builder deck notes and word builder bytes
+00:16 +278: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: remove structure matches reviewed pages through three saves
+00:16 +279: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: remove structure matches reviewed pages through three saves
+00:16 +280: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: remove structure matches reviewed pages through three saves
+00:16 +281: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: remove structure matches reviewed pages through three saves
+00:16 +282: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: remove structure matches reviewed pages through three saves
+00:16 +283: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: remove structure matches reviewed pages through three saves
+00:16 +284: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: remove structure matches reviewed pages through three saves
+00:16 +285: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: remove structure matches reviewed pages through three saves
+00:16 +286: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: remove structure matches reviewed pages through three saves
+00:16 +287: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: remove structure matches reviewed pages through three saves
+00:16 +288: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: remove structure matches reviewed pages through three saves
+00:16 +289: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: remove structure matches reviewed pages through three saves
+00:16 +290: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: remove structure matches reviewed pages through three saves
+00:16 +291: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: remove structure matches reviewed pages through three saves
+00:16 +292: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: remove structure matches reviewed pages through three saves
+00:16 +293: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: remove structure matches reviewed pages through three saves
+00:16 +294: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_structure_goldens_test.dart: remove structure matches reviewed pages through three saves
+00:16 +295: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:16 +296: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:16 +297: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:18 +298: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:18 +299: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:18 +300: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:18 +301: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:18 +302: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:18 +303: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:18 +304: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:18 +305: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:18 +306: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:18 +307: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:18 +308: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:18 +309: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:18 +310: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:18 +311: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:18 +312: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:18 +313: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:19 +314: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:19 +315: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:19 +316: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:19 +317: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:19 +318: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:19 +319: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:19 +320: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:19 +321: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:19 +322: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:19 +323: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:19 +324: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:19 +325: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:19 +326: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:19 +327: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:19 +328: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:19 +329: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:19 +330: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:19 +331: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:19 +332: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:19 +333: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:19 +334: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:20 +335: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:20 +335: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/pdf_pixel_compare_render_test.dart: render al_tahreer pages for pixel compare
+  Skip: needs /home/mohammed/Desktop/al_tahreer_profile.pdf (local compare tool)
+00:20 +335 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:20 +336 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:20 +337 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:20 +338 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:21 +339 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: first even and default stories retain reviewed page goldens
+00:21 +340 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_story_golden_test.dart: (tearDownAll)
+00:21 +340 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/sheet_normal_font_auto_test.dart: (setUpAll)
+00:22 +340 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/sheet_normal_font_auto_test.dart: opening uses the actual loaded Normal face instead of fixed width seven
+00:22 +341 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/sheet_normal_font_auto_test.dart: opening uses the actual loaded Normal face instead of fixed width seven
+00:22 +342 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/sheet_normal_font_auto_test.dart: opening uses the actual loaded Normal face instead of fixed width seven
+00:22 +343 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/sheet_normal_font_auto_test.dart: (tearDownAll)
+00:22 +343 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_table_grid_history_test.dart: omitted-grid edits reject before dirty state, selection or history
+00:23 +344 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_table_grid_history_test.dart: omitted-grid edits reject before dirty state, selection or history
+00:23 +345 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_table_grid_history_test.dart: omitted-grid edits reject before dirty state, selection or history
+00:23 +346 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_table_grid_history_test.dart: partial vertical merge rejects without creating an undo step
+00:23 +347 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/sheet_explicit_style_history_test.dart: column history preserves explicit and absent native styles
+00:23 +348 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/sheet_explicit_style_history_test.dart: row history preserves explicit and absent native styles
+00:23 +349 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_operation_history_test.dart: footnote edit replays after insertion
+00:23 +350 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_operation_history_test.dart: footnote edit replays after insertion
+00:24 +351 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_operation_history_test.dart: footnote edit replays after insertion
+00:24 +352 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_operation_history_test.dart: footnote edit replays after insertion
+00:24 +353 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/editor_test.dart: script runs stay in their own paint group and sit off the baseline
+00:24 +354 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_operation_history_test.dart: endnote edit replays after insertion
+00:24 +355 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_operation_history_test.dart: endnote edit replays after insertion
+00:24 +356 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_operation_history_test.dart: endnote edit replays after insertion
+00:24 +357 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/editor_test.dart: justified caret and selection share the same word X
+00:24 +358 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/editor_test.dart: justified caret and selection share the same word X
+00:24 +359 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/editor_test.dart: justified caret and selection share the same word X
+00:24 +360 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:24 +361 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:24 +362 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:24 +363 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:24 +364 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:24 +365 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:24 +366 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:24 +367 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:24 +368 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:24 +369 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:25 +370 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:25 +371 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:25 +372 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:25 +373 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:25 +374 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:25 +375 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:25 +376 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:25 +377 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:25 +378 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:25 +379 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:25 +380 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:25 +381 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:25 +382 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:25 +383 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:25 +384 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:25 +385 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:25 +386 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:25 +387 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:25 +388 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:25 +389 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:25 +390 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:25 +391 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:25 +392 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:25 +393 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_bookmark_fidelity_test.dart: native bookmark split, inside formatting and history keep exact endpoints
+00:25 +394 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart: body rejects a generated bookmark property merge before any mutation
+00:25 +395 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart: body rejects a generated bookmark property merge before any mutation
+00:25 +396 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart: body rejects a generated bookmark property merge before any mutation
+00:25 +397 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart: body rejects a generated bookmark property merge before any mutation
+00:25 +398 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart: body rejects a generated bookmark property merge before any mutation
+00:25 +399 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart: body rejects a generated bookmark property merge before any mutation
+00:25 +400 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/editor_test.dart: header drag keeps whole columns and whole rows
+00:25 +401 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/editor_test.dart: header drag keeps whole columns and whole rows
+00:25 +402 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/editor_test.dart: header drag keeps whole columns and whole rows
+00:25 +403 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart: footer rejects a generated bookmark property merge before any mutation
+00:25 +404 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/editor_test.dart: rtl sheet places column A on the right
+00:25 +405 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/editor_test.dart: rtl sheet places column A on the right
+00:25 +406 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart: comment rejects a generated bookmark property merge before any mutation
+00:25 +407 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart: comment rejects a generated bookmark property merge before any mutation in a later paragraph
+00:25 +408 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/editor_test.dart: sheet scroll and hit-test reach past the used-range window
+00:25 +409 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart: an empty target paragraph retains the generated bookmark and history
+00:25 +410 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart: an empty target paragraph retains the generated bookmark and history
+00:26 +411 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart: an empty target paragraph retains the generated bookmark and history
+00:26 +412 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart: an empty target paragraph retains the generated bookmark and history
+00:26 +413 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart: an empty target paragraph retains the generated bookmark and history
+00:26 +414 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart: an empty target paragraph retains the generated bookmark and history
+00:26 +415 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart: an empty target paragraph retains the generated bookmark and history
+00:26 +416 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart: an empty target paragraph retains the generated bookmark and history
+00:26 +417 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/editor_test.dart: leaving slide text edit does not rotate the shape
+00:26 +418 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart: an empty document retains the generated bookmark and history
+00:26 +419 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart: an empty document retains the generated bookmark and history
+00:26 +420 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart: an empty document retains the generated bookmark and history
+00:26 +421 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart: an empty document retains the generated bookmark and history
+00:26 +422 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/word_generated_bookmark_paste_test.dart: an empty document retains the generated bookmark and history
+00:26 +423 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/editor_test.dart: Word controller inserts and edits an equation
+00:26 +424 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/editor_test.dart: Word controller inserts and edits an equation
+00:26 +425 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/editor_test.dart: Word controller inserts and edits an equation
+00:26 +426 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/editor_test.dart: Word controller inserts and edits an equation
+00:26 +427 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/editor_test.dart: Word equation cells navigate and stay editable after reopen
+00:26 +428 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/editor_test.dart: equation arrows move by character and cross cells at the edges
+00:26 +429 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/editor_test.dart: equation backspace deletes letters then the empty tool
+00:26 +430 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/editor_test.dart: clicking an equation cell routes IME into that cell
+00:26 +431 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/editor_test.dart: Word text frame can be selected, moved, and resized
+00:26 +432 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/sheet_rename_controller_test.dart: rename has one history entry and monotonic content revisions
+00:26 +433 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/sheet_rename_controller_test.dart: rename has one history entry and monotonic content revisions
+00:26 +434 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/sheet_rename_controller_test.dart: rename has one history entry and monotonic content revisions
+00:27 +435 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/editor_test.dart: Word comments can be inserted, edited, and deleted
+00:27 +436 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/host_fonts_test.dart: bundled names resolve only verified metric-compatible aliases
+00:27 +437 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/host_fonts_test.dart: bundled names resolve only verified metric-compatible aliases
+00:27 +438 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/host_fonts_test.dart: bundled names resolve only verified metric-compatible aliases
+00:27 +439 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/sheet_rename_controller_test.dart: invalid name and malformed draft reject before committing input
+00:27 +440 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/editor_test.dart: rejected native TOC refresh preserves heading aliases, selection and history
+00:27 +441 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/editor_test.dart: rejected native TOC refresh preserves heading aliases, selection and history
+00:27 +442 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/editor_test.dart: rejected native TOC refresh preserves heading aliases, selection and history
+00:27 +443 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/editor_test.dart: rejected native TOC refresh preserves heading aliases, selection and history
+00:27 +444 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/sheet_rename_controller_test.dart: unsupported native owners leave the active draft intact
+00:27 +445 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/sheet_rename_controller_test.dart: unsupported native owners leave the active draft intact
+00:27 +446 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/sheet_rename_controller_test.dart: unsupported native owners leave the active draft intact
+00:27 +447 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/sheet_rename_controller_test.dart: unsupported native owners leave the active draft intact
+00:27 +448 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/sheet_rename_controller_test.dart: unsupported native owners leave the active draft intact
+00:27 +449 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/sheet_rename_controller_test.dart: unsupported native owners leave the active draft intact
+00:27 +450 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/sheet_rename_controller_test.dart: unsupported native owners leave the active draft intact
+00:27 +451 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/sheet_rename_controller_test.dart: unsupported native owners leave the active draft intact
+00:27 +452 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/sheet_rename_controller_test.dart: unsupported native owners leave the active draft intact
+00:27 +453 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/sheet_rename_controller_test.dart: unsupported native owners leave the active draft intact
+00:27 +454 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/sheet_rename_controller_test.dart: unsupported native owners leave the active draft intact
+00:27 +455 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/sheet_rename_controller_test.dart: a valid pending formula is committed then renamed and undone in order
+00:27 +456 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/sheet_rename_controller_test.dart: validation rejection retains the draft and original sheet names
+00:27 +457 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/sheet_rename_controller_test.dart: read-only mode cannot rename or create a revision
+00:27 +458 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/sheet_rename_controller_test.dart: native rename survives direct and isolate saves with working undo
+00:27 +459 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/sheet_rename_controller_test.dart: native pending formula remains undoable after the renamed workbook saves
+00:28 +460 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/slide_arrange_history_test.dart: independent groups never share a slide group identity
+00:28 +461 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:28 +462 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:28 +463 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:28 +464 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:28 +465 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:28 +466 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:28 +467 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:28 +468 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:28 +469 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:28 +470 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:28 +471 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:28 +472 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:28 +473 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:28 +474 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:28 +475 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:28 +476 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:28 +477 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:28 +478 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:28 +479 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:28 +480 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:28 +481 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:28 +482 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:28 +483 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:28 +484 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:28 +485 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:28 +486 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:28 +487 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:28 +488 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:28 +489 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:29 +490 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:29 +491 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:29 +492 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:29 +493 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:29 +494 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:29 +495 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:29 +496 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:29 +497 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:29 +498 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:29 +499 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:29 +500 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:30 +501 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:30 +502 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/office_nested_table_golden_test.dart: rich nested cell paints every object through three saves
+00:30 +503 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/report_designer_test.dart: ReportDesignerController ready-made templates load with their sample data
+00:46 +504 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/report_designer_test.dart: ReportDesignerController template files match the built-in catalog they replace
+00:47 +505 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/report_designer_test.dart: ReportDesignerController the library reads templates from an asset bundle
+00:47 +506 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/report_designer_test.dart: ReportDesignerController calculated columns complete with their computed values
+00:47 +507 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/report_designer_test.dart: ReportDesignerController bindings complete from data, functions, and formats
+00:47 +508 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/report_designer_test.dart: ReportDesignerController template variables are typed, renamed, inserted, and previewed
+00:47 +509 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/report_designer_test.dart: ReportDesignerController inspector metadata drives steppers, presets, and pairs
+00:47 +510 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/report_designer_test.dart: ReportDesignerController property editing commits through the inline editor
+00:47 +511 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/report_designer_test.dart: QudsReportDesigner inspector paints sections and the color palette
+00:48 +512 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/report_designer_test.dart: QudsReportDesigner inspector tabs switch pages and the splitter resizes it
+00:48 +513 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/report_designer_test.dart: QudsReportDesigner variables explorer, cards, font picker, and Arabic layout
+00:49 +514 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/report_designer_test.dart: QudsReportDesigner tap selects and drag moves an element as one undo step
+00:49 +515 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/report_designer_test.dart: QudsReportDesigner keyboard nudges and deletes the selection
+00:49 +516 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/report_designer_test.dart: QudsReportDesigner toolbar switches tools and the preview
+00:49 +517 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/report_designer_test.dart: QudsReportDesigner templates menu groups families and asks for a language
+00:49 +518 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/report_designer_test.dart: QudsReportDesigner pinching with two fingers zooms the canvas and the preview
+00:49 +519 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/report_designer_test.dart: QudsReportDesigner problems panel opens, takes the user to a problem, closes
+00:49 +520 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/report_designer_test.dart: QudsReportDesigner print button and Ctrl+P hand the host a PDF
+00:50 +521 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/report_designer_test.dart: QudsReportDesigner creating with a tool adds an element where clicked
+00:50 +522 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/report_designer_test.dart: QudsReportDesigner chart templates paint in design and preview
+00:51 +523 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/report_designer_test.dart: QudsReportDesigner keyboard picks a suggestion while editing on the canvas
+00:51 +524 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/report_designer_test.dart: QudsReportDesigner editor text keeps contrast on dark fills
+00:51 +525 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/report_designer_test.dart: Report package images saves and reopens embedded images with the layout
+00:51 +526 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/report_designer_test.dart: Report package images rename, remove and import are undoable
+00:51 +527 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/report_designer_test.dart: Report package images replacing an image keeps its name and updates its elements
+00:51 +528 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/report_designer_test.dart: Report package images report inspector lists embedded images
+00:51 +529 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/report_designer_test.dart: Report package fonts embeds faces, saves them in the package, and undoes
+00:52 +530 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/report_designer_test.dart: Report package fonts fonts page imports files and embeds installed fonts
+00:52 +531 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/report_designer_test.dart: Element names every element gets a unique name it keeps on rename
+00:52 +532 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/report_designer_test.dart: Report data explorer lists inferred tables and fields; edits create sample data
+00:52 +533 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/report_designer_test.dart: Report data explorer rows, typed and calculated columns, and renames
+00:52 +534 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/report_designer_test.dart: Report data explorer fields, tables, imports and host data
+00:52 +535 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/report_designer_test.dart: Report data explorer designer shows the explorer and edits cells
+00:53 +536 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/report_designer_test.dart: Report data explorer the field tree shows a scrollbar and scrolls
+00:53 +537 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/report_designer_test.dart: Report data explorer a long choice menu scrolls and filters as you type
+00:53 +538 ~1: /workspace/scratch/fd11a5f593e0/quds_office_suite/packages/quds_office_editor/test/report_designer_test.dart: Report data explorer closing a choice menu and opening another does not throw
+00:53 +539 ~1: All tests passed!

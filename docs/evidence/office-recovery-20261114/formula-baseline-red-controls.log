@@ -1,0 +1,55 @@
+00:00 +0: loading test/sheet_formula_dependency_cache_test.dart
+00:00 +0: unsupported dependencies retain every cache; reverse=false
+00:00 +0 -1: unsupported dependencies retain every cache; reverse=false [E]
+  Expected: <83>
+    Actual: <82.0>
+  
+  package:matcher                                     expect
+  test/sheet_formula_dependency_cache_test.dart 34:7  main.<fn>
+  
+00:00 +0 -1: cross-sheet runtime references read fresh values in their own scope
+00:00 +0 -2: cross-sheet runtime references read fresh values in their own scope [E]
+  Expected: <5>
+    Actual: '#REF!'
+  
+  package:matcher                                      expect
+  test/sheet_formula_dependency_cache_test.dart 113:7  main.<fn>
+  
+00:00 +0 -2: runtime cycles invalidate all participating caches: INDIRECT("A1")
+00:00 +0 -3: runtime cycles invalidate all participating caches: INDIRECT("A1") [E]
+  Expected: Set:['Sheet1!A1', 'Sheet1!A2']
+    Actual: Set:[]
+     Which: does not contain 'Sheet1!A1'
+  
+  package:matcher                                      expect
+  test/sheet_formula_dependency_cache_test.dart 156:9  main.<fn>
+  
+00:00 +0 -3: runtime cycles invalidate all participating caches: OFFSET(A2,-1,0)
+00:00 +0 -4: runtime cycles invalidate all participating caches: OFFSET(A2,-1,0) [E]
+  Expected: Set:['Sheet1!A1', 'Sheet1!A2']
+    Actual: Set:['Sheet1!A2']
+     Which: does not contain 'Sheet1!A1'
+  
+  package:matcher                                      expect
+  test/sheet_formula_dependency_cache_test.dart 156:9  main.<fn>
+  
+00:00 +0 -4: imported scalar cache types survive three direct/isolate saves
+00:00 +0 -5: imported scalar cache types survive three direct/isolate saves [E]
+  Expected: <87.0>
+    Actual: <82.0>
+  A2 cycle 0
+  
+  package:matcher                                       expect
+  test/sheet_formula_dependency_cache_test.dart 330:11  main.<fn>
+  
+00:00 +0 -5: Some tests failed.
+
+Failing tests:
+  test/sheet_formula_dependency_cache_test.dart: cross-sheet runtime references read fresh values in their own scope
+  test/sheet_formula_dependency_cache_test.dart: imported scalar cache types survive three direct/isolate saves
+  test/sheet_formula_dependency_cache_test.dart: runtime cycles invalidate all participating caches: INDIRECT("A1")
+  test/sheet_formula_dependency_cache_test.dart: runtime cycles invalidate all participating caches: OFFSET(A2,-1,0)
+  test/sheet_formula_dependency_cache_test.dart: unsupported dependencies retain every cache; reverse=false
+
+Consider enabling the flag chain-stack-traces to receive more detailed exceptions.
+For example, 'dart test --chain-stack-traces'.

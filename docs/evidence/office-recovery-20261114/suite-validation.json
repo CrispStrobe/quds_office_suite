@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "suite_implementation_commit": "36e652014d0e1aade20011309cd84a7f9c1f90a6",
+  "suite_implementation_tree": "3eae283d264b5a1f98be29af0bc032c93fb48e4e",
+  "runtime": {
+    "flutter": "3.47.8",
+    "flutter_revision": "737ba8f885dc774b53b442759999a312c9461e4e",
+    "dart": "3.13.7",
+    "openxml_sdk": "3.3.0",
+    "dotnet_sdk": "8.0.428",
+    "dotnet_runtime": "8.0.34"
+  },
+  "results": {
+    "engine_fidelity_gate": {
+      "exit_code": 0,
+      "dart_tests_passed": 1256,
+      "python_controls_passed": 440,
+      "expected_outputs": 350,
+      "verified_outputs": 350
+    },
+    "engine_analyzer": {
+      "exit_code": 0,
+      "issues": 0
+    },
+    "editor_suite": {
+      "exit_code": 0,
+      "tests_passed": 539,
+      "tests_skipped": 1,
+      "reviewed_goldens": "passed",
+      "skip": "pdf_pixel_compare_render_test.dart requires a user-provided local PDF comparison fixture"
+    },
+    "editor_oracles": {
+      "exit_code": 0,
+      "corpus": "passed",
+      "bookmarks": "passed",
+      "content_controls": "passed",
+      "bookmark_copy": "passed",
+      "expected_outputs": 29,
+      "verified_outputs": 29
+    },
+    "engine_openxml_schema": {
+      "exit_code": 0,
+      "files": 350,
+      "failures": 0,
+      "input_binding": "Every staged file was SHA256-checked against engine-inventory.json before validation."
+    },
+    "authored_native_reference_fixtures": {
+      "files": 6,
+      "schema_failures": 0,
+      "authored_by": "raw OOXML, openpyxl3.1.5, python-pptx1.0.2; no Quds-saved expected files"
+    },
+    "renderer_controls": {
+      "exit_code": 0,
+      "tests_passed": 79
+    },
+    "formula_baseline_controls": {
+      "baseline_commit": "b0335829428d50968258219c4fdced15d546f7c9",
+      "expected_failures": 5,
+      "purpose": "Prove regression cases fail against the remote starting implementation."
+    }
+  },
+  "commands": [
+    "cd packages/quds_office_engine && dart analyze",
+    "cd packages/quds_office_engine && bash tool/fidelity/check.sh",
+    "cd packages/quds_office_editor && flutter test --no-pub",
+    "cd packages/quds_office_editor && python3 ../quds_office_engine/tool/fidelity/corpus.py verify build/fidelity",
+    "cd packages/quds_office_editor && python3 ../quds_office_engine/tool/fidelity/bookmarks_oracle.py --editor-dir build/fidelity-bookmarks-legacy",
+    "cd packages/quds_office_editor && python3 ../quds_office_engine/tool/fidelity/content_controls_oracle.py --editor-dir build/fidelity-content-controls-legacy",
+    "cd packages/quds_office_editor && python3 ../quds_office_engine/tool/fidelity/bookmark_copy_oracle.py --editor --root build/fidelity-bookmark-copy",
+    "cd packages/quds_office_editor && python3 ../quds_office_engine/tool/fidelity/inventory.py verify --package quds_office_editor --manifest ../quds_office_engine/tool/fidelity/editor_output_manifest.json --package-root .",
+    "dotnet OfficeValidation.dll <350 exact engine inventory files> engine-schema-report.json"
+  ],
+  "boundaries": [
+    "No fresh engine line-coverage collection is claimed.",
+    "Independent rendering is separately scoped and recorded.",
+    "App host tests, browser execution, physical devices and genuine cryptographic signatures are separate claims."
+  ],
+  "evidence_sha256": {
+    "engine-gate.log": "0c2ffae8915b24bc45b1e2b5ea3ce8cf8b10b4cf5bd2b76da073e6ea4fa5a8fd",
+    "engine-analyze.log": "c557a0c697cdb937104f1423d3c02d6a1062917cb0bcb2830d91db8cf6192af0",
+    "editor-suite.log": "47ab17eb02e0ff29059fdd3f6f37158a283d9f49d5605c44a15235698bdd0750",
+    "editor-inventory.log": "2605927088fc2474fc98c49be1788f61fce50cb5338523ba387fe19581fbb538",
+    "engine-inventory.json": "9200ad293f9c64e2accfd15900ab5ee0e3cececcded52ba14543c66e5f4b8384",
+    "editor-inventory.json": "a1788b58bf34cce5c675d6fd6812fbb3797df9820dea031491361ac5cfe8f1dc",
+    "engine-schema-report.json": "ebda88231b95ff74b939aa81ac621d32d49e8d7e18e97309a1c798f81b1f77c9",
+    "validator-build-receipt.json": "de5957a3caf061d0d8ba49d1d510ab2238b9cbb78881fec945a6fdd6ee211af9",
+    "native-fixture-schema-report.json": "1e8aa3833f50c053cb3fe9e9b74e44d9362d09907612e9d13e911cf3f02b0e58",
+    "renderer-controls.log": "0902dc551c9159fa490fd83b78b8b71d94820ee32b7650f8a35a092713c068d3",
+    "formula-baseline-red-controls.log": "84d9e2c35faaba916643b2d333d1c83a408600f164039a3074fcadcbf79e7ca8"
+  }
+}
