@@ -1,5 +1,5 @@
-import 'sml_workbook.dart';
 import '../../reports/report_data.dart';
+import 'sml_workbook.dart';
 
 /// Loads a delimited table into a worksheet (CSV helper — not full Power Query).
 abstract final class SmlPowerQuery {
