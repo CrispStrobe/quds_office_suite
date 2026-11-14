@@ -1,7 +1,7 @@
 name: Office fidelity oracles
 on:
   push:
-    branches: [main, crispcloud, 'feature/office-fidelity-*']
+    branches: [main, crispcloud, 'feature/office-fidelity-*', 'codex/office-recovery-*']
     paths:
       - 'packages/quds_office_engine/**'
       - 'packages/quds_office_editor/**'
