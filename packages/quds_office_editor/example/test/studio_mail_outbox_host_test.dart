@@ -807,12 +807,14 @@ void main() {
         firstStore.loadOutbox(),
       )).single;
       expect(frozen.prepared.account, fixture.identity.account);
-      expect(frozen.prepared.account, isNot(firstProvider.account));
+      // Since 45f0e503 EWS/Gmail/Graph derive the live account id from the
+      // stable account settings, so it may equal the durable identity; the
+      // connection is distinguished by its provider instance and session.
       await tester.pumpWidget(const SizedBox.shrink());
       await _pump(tester);
       final secondProvider = await _ews(tester, fixture);
       final secondStore = fixture.adapters.last;
-      expect(secondProvider.account, isNot(firstProvider.account));
+      expect(secondProvider, isNot(same(firstProvider)));
       expect(secondProvider.submissions, isEmpty);
       expect(
         (await awaitOutboxOperation(
@@ -836,7 +838,6 @@ void main() {
       expect(firstProvider.submissions, isEmpty);
       final submitted = secondProvider.submissions.single;
       expect(submitted.account, secondProvider.account);
-      expect(submitted.account, isNot(fixture.identity.account));
       expect(submitted.draftId, frozen.prepared.draftId);
       expect(submitted.draftRevision, frozen.prepared.draftRevision);
       expect(submitted.wire.bytes, frozen.prepared.wire.bytes);

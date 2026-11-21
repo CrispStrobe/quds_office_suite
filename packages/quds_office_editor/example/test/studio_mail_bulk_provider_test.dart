@@ -617,7 +617,11 @@ void main() {
         harness.configure = null;
         await _connect(tester, kind);
         final currentProvider = harness.provider;
-        expect(currentProvider.account, isNot(oldProvider.account));
+        // Since 45f0e503 the account id is derived from the stable account
+        // settings, so a reconnect to the same mailbox reuses it. Isolation
+        // now rests on the per-connection provider and session lease.
+        expect(currentProvider, isNot(same(oldProvider)));
+        expect(oldProvider.leases.single.isCurrent, isFalse);
         gate.complete(_success);
         await _pump(tester);
         oldCallback(MailBulkFlagAction.flag, ids);

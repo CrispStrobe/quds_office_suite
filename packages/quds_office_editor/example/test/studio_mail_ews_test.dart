@@ -1562,9 +1562,18 @@ void main() {
     expect(provider.cursors, hasLength(21));
     expect(_field('ews-load-more'), findsNothing);
     expect(find.text(_strings.mailWorkspaceLimit), findsWidgets);
+    // Since ca5be882 the compact list shows the count and keeps the loaded
+    // scope explanation in its tooltip.
+    final scope = find.text('1000 shown · 1000 loaded');
+    expect(scope, findsOneWidget);
     expect(
-      find.text(
-        '1000 shown · 1000 loaded\n${_strings.mailMessageListStrings.loadedScope}',
+      find.ancestor(
+        of: scope,
+        matching: find.byWidgetPredicate(
+          (widget) =>
+              widget is Tooltip &&
+              widget.message == _strings.mailMessageListStrings.loadedScope,
+        ),
       ),
       findsOneWidget,
     );

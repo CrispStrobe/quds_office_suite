@@ -158,6 +158,15 @@ Future<void> _press(WidgetTester tester, Finder control) async {
   await pumpOutboxWidgets(tester);
 }
 
+Future<void> _settleRealIo(WidgetTester tester) async {
+  for (var i = 0; i < 5; i++) {
+    await tester.runAsync(
+      () => Future<void>.delayed(const Duration(milliseconds: 20)),
+    );
+    await tester.pump();
+  }
+}
+
 Future<SqliteOutboxFixture> _fixture(
   WidgetTester tester,
   MailCloudService service,
@@ -274,6 +283,9 @@ void main() {
         );
         expect(directory.remembered.single.account, fixture.identity.account);
         await _press(tester, find.byTooltip(_strings.disconnect));
+        // Since 4d435f81 disconnect first retires the cached mailbox view's
+        // real SQLite session; the directory opens once that release lands.
+        await _settleRealIo(tester);
         await _press(tester, _key('studio-mail-known-drafts'));
         await _press(
           tester,
@@ -450,7 +462,9 @@ void main() {
         )).single;
         expect(frozen.state, MailOutboxState.queued);
         expect(frozen.prepared.account, fixture.identity.account);
-        expect(frozen.prepared.account, isNot(firstProvider.account));
+        // Since 45f0e503 EWS/Gmail/Graph derive the live account id from the
+        // stable account settings, so it may equal the durable identity; the
+        // connection is distinguished by its provider instance and session.
         expect(frozen.prepared.envelope.sender, _sender);
         expect(frozen.prepared.envelope.recipients, [
           'to@example.test',
@@ -481,7 +495,7 @@ void main() {
         );
         final secondStore = fixture.adapters.last;
         expect(secondStore.account, fixture.identity.account);
-        expect(secondProvider.account, isNot(firstProvider.account));
+        expect(secondProvider, isNot(same(firstProvider)));
         expect(secondProvider.submissions, isEmpty);
         final reopened = (await awaitOutboxOperation(
           tester,
@@ -514,7 +528,6 @@ void main() {
         expect(firstProvider.submissions, isEmpty);
         final submitted = secondProvider.submissions.single;
         expect(submitted.account, secondProvider.account);
-        expect(submitted.account, isNot(fixture.identity.account));
         _sameFrozenContent(submitted, frozen.prepared);
         final committed = (await awaitOutboxOperation(
           tester,
@@ -550,7 +563,6 @@ void main() {
           expectSync(attempt.prepared.account, fixture.identity.account);
           final submitted = provider.submissions.single;
           expectSync(submitted.account, provider.account);
-          expectSync(submitted.account, isNot(fixture.identity.account));
           _sameFrozenContent(submitted, attempt.prepared);
           expectSync(await store.load(), isNull);
           durableBeforeProvider = true;

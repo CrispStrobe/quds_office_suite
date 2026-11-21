@@ -3,6 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:quds_office_editor/quds_office_editor.dart';
+import 'package:quds_office_studio/credentials/biometric_secret_store.dart';
 import 'package:quds_office_studio/studio_chrome.dart';
 import 'package:quds_office_studio/studio_credential_storage.dart';
 import 'package:quds_office_studio/studio_mail.dart';
@@ -490,6 +491,20 @@ void main() {
       // SuiteWorkspace owns the dialog, so isolate its default catalog through
       // the public session backend without opening platform preferences.
       SharedPreferences.setMockInitialValues(<String, Object>{});
+      // Since 38b0dae0 changing the selection on macOS also clears any stale
+      // Touch ID vault key over a platform channel. Answer it here: an
+      // unanswered engine channel never completes inside a widget test.
+      final biometricVault = MethodChannelBiometricSecretStore.defaultChannel;
+      tester.binding.defaultBinaryMessenger.setMockMethodCallHandler(
+        biometricVault,
+        (call) async => null,
+      );
+      addTearDown(
+        () => tester.binding.defaultBinaryMessenger.setMockMethodCallHandler(
+          biometricVault,
+          null,
+        ),
+      );
       final credentialSelection = StudioCredentialStorage.instance;
       final previousMode = credentialSelection.mode;
       final previousPath = credentialSelection.customPath;

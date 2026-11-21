@@ -222,6 +222,14 @@ void main() {
           .onOpen('imap-message-91:2');
       await _pump(tester);
       expect(clients.first.closed, isTrue);
+      // Since ca5be882 every new reader opens in plain text; switch this one
+      // to HTML as the first reader was, so its remote images can be offered.
+      final secondReader = tester
+          .widget<MailMessageView>(find.byType(MailMessageView))
+          .controller;
+      expect(secondReader, isNot(same(firstReader)));
+      secondReader.setPreferHtml(true);
+      await _pump(tester);
       expect(tester.widget<IconButton>(_images).onPressed, isNotNull);
       await tester.tap(_images);
       await _pump(tester);

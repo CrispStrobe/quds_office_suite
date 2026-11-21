@@ -73,11 +73,29 @@ void main() {
       final release = Completer<void>();
       final messenger =
           TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger;
+      // Since 3307415d the system-store probe writes, reads back and deletes
+      // a nonce key; hold the first probe call until the selection changed.
+      final probed = <String, String>{};
       messenger.setMockMethodCallHandler(channel, (call) async {
-        expect(call.method, 'containsKey');
-        entered.complete();
-        await release.future;
-        return false;
+        if (!entered.isCompleted) {
+          entered.complete();
+          await release.future;
+        }
+        final arguments = (call.arguments as Map).cast<String, Object?>();
+        final key = arguments['key'] as String?;
+        switch (call.method) {
+          case 'write':
+            probed[key!] = arguments['value']! as String;
+            return null;
+          case 'read':
+            return probed[key];
+          case 'delete':
+            probed.remove(key);
+            return null;
+          case 'containsKey':
+            return probed.containsKey(key);
+        }
+        fail('Unexpected secure-storage call ${call.method}');
       });
       addTearDown(() {
         if (!release.isCompleted) release.complete();

@@ -47,13 +47,15 @@ void main() {
     expect(picker.calls, 1);
     expect(picker.result.isCompleted, isFalse);
 
+    // Since 9cfad392 the command bar omits its Close while the saved-message
+    // view is shown; that view supplies the single Close for Mail.
     final ribbon = find.descendant(
       of: find.byType(StudioMailDialog),
       matching: find.byType(StudioRibbonStrip),
     );
     expect(ribbon, findsOneWidget);
     final close = find.descendant(
-      of: ribbon,
+      of: find.byType(StudioMailDialog),
       matching: find.byTooltip('Close'),
     );
     expect(close, findsOneWidget);
